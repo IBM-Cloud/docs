@@ -44,7 +44,7 @@ Cloud Foundry roles include the access permissions for organizations and spaces 
 |-------------------|-------------|
 |Manager | Organization managers can create, view, edit, or delete spaces within the organization, view the organization's usage and quota, invite users to the organization, manage who has access to the organization and their roles in the organization, and manage custom domains for the organization. |
 |Billing manager | Billing managers can view runtime and service usage information for the organization on the Usage Dashboard page.  |
-|Auditor | Organization auditors can view application and service content in the organization. Auditors can also view the users in the organization and their assigned roles, and the quota for the organization. |
+|Auditor | Organization auditors can view application and service content in the organization. Auditors can also view the users in the organization and their assigned roles, and the quota for the organization. All users are given the auditor role by default upon invite. You can update this role to manager or billing manager after the user accepts the invitation. |
 {:caption="Table 2. Organization roles and permissions" caption-side="top"}
 
 The following roles can be assigned at the space level:
