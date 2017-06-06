@@ -33,14 +33,14 @@ Für eine **Liberty Cloud Foundry-App** wird das Standardkonsolenprotokoll (cons
 * Das Konsolenprotokoll enthält die umgeleiteten STDOUT- und STDERR-Daten aus dem JVM-Prozess. Die Konsolenausgabe enthält wichtigere Ereignisse und Fehler, wenn Sie die Standardkonfiguration "consoleLogLevel" verwenden. Die Konsolenausgabe enthält außerdem alle Nachrichten, die an die Datenströme "system.out" und "system.err" geschrieben werden, wenn Sie die Standardkonfiguration "copySystemStreams" verwenden. Die Konsolenausgabe enthält immer Nachrichten, die direkt vom JVM-Prozess geschrieben werden, wie zum Beispiel Ausgaben mit der Option "-verbose:gc". Sie können die Protokollstufe von Liberty über die Datei "server.xml" anpassen.
 * Die Konfiguration "consoleLogLevel" legt die Filterebene des Konsolenprotokollhandlers fest. Wenn Sie "consoleLogLevel" auf den Wert INFO setzen, konfigurieren Sie dadurch, dass alle Nachrichten der Protokollstufen INFO, AUDIT, WARNING und ERROR in die Datei "console.log" geschrieben werden. **Hinweis:** Protokolleinträge der Stufen FINE, FINER, FINEST werden nur in die Datei "trace.log" geschrieben.
 
-Weitere Informationen zu Liberty for Java™-Anwendungen finden Sie unter [Liberty Profile: Protokollierung und Trace ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}. 
+Weitere Informationen zu Liberty for Java™-Anwendungen finden Sie unter [Liberty Profile: Protokollierung und Trace ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
 
 Für eine **Node.js-Cloud Foundry-App** können Sie das Protokollierungsmodul "Built in Console" zur Konfiguration der Protokollierung für die Laufzeit in {{site.data.keyword.Bluemix}} verwenden. Sie können Nachrichten an die Standardausgabe (STDOUT) und die Standard-Fehlerausgabe (STDERR) leiten:
 
 * console.log('message') sendet die Nachricht an den STDOUT-Datenstrom.
 * console.error('error_message') sendet die Fehlernachricht an den STDERR-Datenstrom.
 
-Weitere Informationen zu Node.js-Anwendungen finden Sie unter dem Thema zur [Protokollierung in Node.js ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}. 
+Weitere Informationen zu Node.js-Anwendungen finden Sie unter dem Thema zur [Protokollierung in Node.js ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
 
 
 Weitere Informationen zu **Ruby on Rails-Anwendungen** finden Sie unter [The Logger ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.

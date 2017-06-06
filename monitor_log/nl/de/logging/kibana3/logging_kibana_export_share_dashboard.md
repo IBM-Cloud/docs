@@ -22,7 +22,7 @@ Mit Kibana können Sie mit anderen Beteiligten zusammenarbeiten, indem Sie Ihre 
 
 Führen Sie die folgenden Tasks aus, um ein Kibana-Dashboard als JSON-Datei zu exportieren:
 
-1. Klicken Sie auf das Symbol **Speichern** ![Symbol für Speichern](images/logging_save.jpg "Symbol für Speichern") und anschließend auf **Advanced** **>** **Export schema**. 
+1. Klicken Sie auf das Symbol **Speichern** ![Symbol für Speichern](images/logging_save.jpg "Symbol für Speichern") und anschließend auf **Advanced** **>** **Export schema**.
 
     ![Dashboard als JSON-Datei exportieren](images/logging_export_json.jpg "Dashboard als JSON-Datei exportieren")
 

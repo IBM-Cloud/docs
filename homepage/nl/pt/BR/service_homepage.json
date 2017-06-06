@@ -28,6 +28,11 @@
     "href": "containers/container_index.html",
     "category_id": "compute"
   }, {
+    "title": "IBM Cloud Schematics",
+    "img": "homepage/images/schematics_icon.svg",
+    "href": "services/schematics/index.html",
+    "category_id": "compute"
+  },{
     "title": "Analytics for Apache Spark Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/AnalyticsApacheSpark/index.html",

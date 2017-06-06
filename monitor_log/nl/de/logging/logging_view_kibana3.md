@@ -56,7 +56,7 @@ Nach der Anpassung eines Dashboards können Sie beliebige der folgenden Aktionen
 
 * Sie können das Dashboard in eine Webseite integrieren. Ein Benutzer, der ein integriertes Dashboard anzeigen möchte, muss über eine Zugriffsberechtigung für Kibana verfügen.
 
-Weitere Informationen finden Sie in der Dokumentation zu [Kibana ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}. 
+Weitere Informationen finden Sie in der Dokumentation zu [Kibana ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 **Hinweis:** Kibana 4 und Kibana 3 werden unterstützt. Kibana 3 ist veraltet.
 
@@ -76,7 +76,7 @@ Führen Sie die folgenden Schritte aus, um die Protokolle einer Cloud Foundry-An
 
 Wenn keine Protokolle angezeigt werden, passen Sie das Zeitauswahlfeld im Header an.
 
-Weitere Informationen zur Anpassung eines Kibana-Dashboards finden Sie [in diesem Blogbeitrag ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} oder in der Dokumentation zu [Kibana ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}. 
+Weitere Informationen zur Anpassung eines Kibana-Dashboards finden Sie [in diesem Blogbeitrag ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} oder in der Dokumentation zu [Kibana ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 ##  Kibana-Dashboard im Web-Browser aufrufen
 {: #launch_Kibana_from_browser}
@@ -91,7 +91,7 @@ Führen Sie die folgenden Schritte aus, um ein Kibana-Dashboard über einen Brow
 
 Wenn keine Protokolle angezeigt werden, passen Sie das Zeitauswahlfeld im Header an.
 
-Weitere Informationen zur Anpassung eines Kibana-Dashboards finden Sie [in diesem Blogbeitrag ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} oder in der Dokumentation zu [Kibana ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}. 
+Weitere Informationen zur Anpassung eines Kibana-Dashboards finden Sie [in diesem Blogbeitrag ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} oder in der Dokumentation zu [Kibana ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 
 

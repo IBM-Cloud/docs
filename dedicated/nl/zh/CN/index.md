@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -73,7 +73,7 @@ lastupdated: "2017-01-11"
 |IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 12.128.1400 | 此专用实例支持联机事务处理 (OLTP) 工作负载，RAM 为 128 GB，用于数据和日志的 SSD 存储空间为 1.4 TB，并包括一台额外的备用服务器以实现高可用性。 |
 |{{site.data.keyword.Bluemix_dedicated_notm}} 社区服务  | 此环境允许部署和运行社区服务，每个社区服务最多共 50 个实例。  |
 |{{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.cloudant}} 集群实例 | 此可选组件包含您负责为其提供基础架构的 3 节点集群，并且存储和计算能力可以根据您的特定需求来确定。{{site.data.keyword.cloudant}} 提供了对始终启用的完全受管 NoSQL JSON 数据层的访问。此服务兼容 CouchDB，并且可通过易用的 HTTP 接口供移动和 Web 应用程序模型访问。 |
-|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | 该环境提供每个分区高达 10 GB 的发布和订阅消息传递。可保留消息并供使用最多 24 小时。 |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | 该环境提供每个分区高达 10 GB 的发布/预订消息传递，限制为 100 个分区。 |
 |IBM Bluemix Dedicated {{site.data.keyword.mobilepushshort}} | 此环境允许部署和执行 {{site.data.keyword.mobilepushshort}} 实例，每秒能接受 300 个请求。 |
 |{{site.data.keyword.iot_short}} Dedicated 递增增加 | 此环境允许在专用环境中运行 {{site.data.keyword.iot_short}} 的专用版本，容量为 100,000 个并行连接设备或应用程序，数据交换量为 0.5 TB。 |
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - Dedicated Small| 在 {{site.data.keyword.Bluemix_notm}} 上托管的云环境中预配置的 {{site.data.keyword.appserver_short}} Liberty、Traditional Network Deployment 或 Traditional WebSphere Java EE 实例，每月 64 个 vCore、128GB RAM 和 1TB HDD。 |

@@ -52,7 +52,7 @@ lastupdated: "2017-04-21"
       return {payload: 'Hello world'};
   }
   ```
-    {: codeblock}
+  {: codeblock}
 
   JavaScript 파일은 추가 기능을 포함할 수 있습니다. 그러나 편의상 `main`을 호출하는 함수는 조치에 대한 시작점을 제공하기 위해 존재해야 합니다.
 
@@ -61,7 +61,7 @@ lastupdated: "2017-04-21"
   ```
   wsk action create hello hello.js
   ```
-      {: pre}
+  {: pre}
   ```
   ok: created action hello
   ```
@@ -577,62 +577,71 @@ wsk action invoke --blocking --result helloPython --param name World
   }
 ```
 
-### zip 파일에 Python 조치 패키징
+### Python 조치를 Zip 파일에 패키징
 {: #openwhisk_actions_python_zip}
 
-Python 조치 및 종속 모듈을 zip 파일로 패키징할 수 있습니다.
-시작점(예: `main`)을 포함하는 소스 파일의 파일 이름은 `__main__.py`여야 합니다.
-예를 들어, 헬퍼 모듈 `helper.py`로 조치를 작성하려면 먼저 소스 파일이 포함된 아카이브를 작성하십시오.
+Python 조치 및 종속 모듈을 Zip 파일에 패키징할 수 있습니다.
+시작점(예: `main`)이 포함된 소스 파일의 파일 이름은 `__main__.py`여야 합니다.
+`helper.py`라고 하는 헬퍼 모듈로 조치를 작성하려면 우선 소스 파일이 포함된 아카이브를 작성하십시오. 
 
 ```bash
-$ zip -r helloPython.zip **main**.py helper.py
+zip -r helloPython.zip __main__.py helper.py
 ```
+{: pre}
 
 그런 다음 조치를 작성하십시오.
 
-```bash
-$ wsk action create helloPython --kind python:3 helloPython.zip
-```
 
-### 가상 환경에서 Python 조치를 zip 파일로 패키징
+
+```bash
+wsk action create helloPython --kind python:3 helloPython.zip
+```
+{: pre}
+
+### 가상 환경의 Python 조치를 Zip 파일에 패키징
 {: #openwhisk_actions_python_virtualenv}
 
-Python 종속 항목을 패키징하는 다른 방법은 가상 환경(`virtualenv`)을 사용하는 것입니다. 이렇게 하면 예를 들어
-[`pip`](https://packaging.python.org/installing/)를 통해 설치할 수 있는 추가 패키지를 링크할 수 있습니다.
+Python 종속 항목을 패키징하는 다른 방법은 가상 환경(`virtualenv`)을 사용하는 것입니다. 이를 사용하면 예를 들어 [`pip`](https://packaging.python.org/installing/)를 통해 설치할 수 있는 추가 패키지를 링크할 수 있습니다.
 OpenWhisk 컨테이너와의 호환성을 확인하려면 대상 환경에서 virtualenv 내 설치 패키징을 수행해야 합니다.
-따라서 조치를 위한 virtualenv 디렉토리를 작성하려면 Docker 이미지 `openwhisk/python2action` 또는 `openwhisk/python3action`을 사용해야 합니다.
+따라서 Docker 이미지 `openwhisk/python2action` 또는 `openwhisk/python3action`을 사용하여 조치에 대한 virtualenv 디렉토리를 작성해야 합니다. 
 
-기본 zip 파일 지원의 경우와 같이 기본 시작점이 포함된 소스 파일 이름이 `__main__.py`여야 합니다. 또한 virtualenv 디렉토리의 이름을 `virtualenv`로 지정해야 합니다.
+기본 zip 파일 지원에서와 마찬가지로, 기본 시작점이 포함된 소스 파일의 이름은 `__main__.py`여야 합니다. 또한 virtualenv 디렉토리의 이름은 `virtualenv`로 지정되어야 합니다.
 다음은 종속 항목 설치, 이 설치를 virtualenv에 패키징, 호환 가능한 OpenWhisk 조치 작성을 위한 시나리오 예입니다.
 
-1. 설치할 `pip` 모듈 및 버전이 포함된 `requirements.txt` 파일을 고려할 때 다음을 실행하여 종속 항목을 설치하고 호환 가능한 Docker 이미지를 사용하여 virtualenv를 작성하십시오.
-```bash
- $ docker run --rm -v "$PWD:/tmp" openwhisk/python3action sh \
+
+
+1. 설치할 `pip` 모듈 및 버전이 포함된 `requirements.txt` 파일이 제공되면, 다음을 실행하여 종속 항목을 설치하고 호환 가능한 Docker 이미지를 사용하여 virtualenv를 작성하십시오. 
+ ```bash
+ docker run --rm -v "$PWD:/tmp" openwhisk/python3action sh \
    -c "cd tmp; virtualenv virtualenv; source virtualenv/bin/activate; pip install -r requirements.txt;"
  ```
+ {: pre}
 
-2. virtualenv 디렉토리 및 추가 Python 파일을 아카이브하십시오.
+2. virtualenv 디렉토리 및 추가 Python 파일을 아카이브하십시오. 
  ```bash
- $ zip -r helloPython.zip virtualenv **main**.py
+ zip -r helloPython.zip virtualenv __main__.py
  ```
+ {: pre}
 
 3. 조치를 작성하십시오.
-```bash
-$ wsk action create helloPython --kind python:3 helloPython.zip
-```
+  ```bash
+  wsk action create helloPython --kind python:3 helloPython.zip
+  ```
+  {: pre}
 
 Python 3.6의 경우 위의 단계가 표시되면 Python 2.7의 경우와 동일하게 수행할 수 있습니다.
+
+
 
 ## Swift 조치 작성
 
 Swift 조치 작성 프로세스는 JavaScript 조치 작성 프로세스와 유사합니다. 다음 절에서는 단일 Swift 조치를 작성 및 호출하여 해당 조치에 매개변수를 추가하는 방법에 대해 안내합니다.
 
-또한 온라인 [Swift Sandbox](https://swiftlang.ng.bluemix.net)를 사용하여 시스템에 Xcode를 설치하지 않고 Swift 코드를 테스트할 수 있습니다.
+또한 온라인 [Swift 샌드박스](https://swiftlang.ng.bluemix.net)를 사용하여 시스템에 Xcode를 설치할 필요 없이 Swift 코드를 테스트할 수 있습니다.
 
 ### 조치 작성 및 호출
 
-조치는 단순히 최상위 레벨의 Swift 함수입니다. 예를 들어, 다음과 같은
-컨텐츠가 있는 `hello.swift` 파일을 작성하십시오.
+조치는 단순히 최상위 레벨의 Swift 함수입니다. 예를 들어, 다음 컨텐츠를 사용하여 `hello.swift`라는 파일을 작성하십시오.
 
 ```swift
 func main(args: [String:Any]) -> [String:Any] {
@@ -645,19 +654,18 @@ func main(args: [String:Any]) -> [String:Any] {
 ```
 {: codeblock}
 
-Swift 조치는 항상 사전을 이용하고 사전을 생성합니다.
+Swift 조치는 항상 사전을 이용하며 사전을 생성합니다. 
 
-다음과 같이 이 기능에서 `helloSwift`라고 하는 {{site.data.keyword.openwhisk_short}} 조치를
-작성할 수 있습니다.
+다음과 같이 이 함수에서 `helloSwift`라는 {{site.data.keyword.openwhisk_short}} 조치를 작성할 수 있습니다.
 
 ```
 wsk action create helloSwift hello.swift
 ```
 {: pre}
 
-명령행 및 `.swift` 소스 파일을 사용하는 경우 Swift 조치를 작성하도록
-지정하지 않아도 됩니다(JavaScript 조치와 반대로). 도구는 파일
-확장자로부터 이를 판별합니다.
+명령행과 `.swift` 소스 파일을 사용하는 경우 (JavaScript
+조치와 반대로) Swift 조치를 작성 중임을 지정할 필요가 없습니다.
+도구가 파일 확장자에서 이를 판별합니다. 
 
 조치 호출은 JavaScript 호출과 마찬가지로 Swift 호출에 대해서도 동일합니다.
 
@@ -673,29 +681,38 @@ wsk action invoke --blocking --result helloSwift --param name World
 ```
 
 **주의:** Swift 조치는 Linux 환경에서 실행됩니다. Swift on Linux는 아직
-개발 중이며 {{site.data.keyword.openwhisk_short}}에서는 일반적으로 사용 가능한 가장 최신 릴리스를 사용합니다. 이러한 최신 릴리스가 항상 안정적인 것은 아닙니다. 또한 {{site.data.keyword.openwhisk_short}}와 함께 사용되는 Swift의 버전이 MacOS에 있는 XCode의 안정적인 릴리스의 Swift 버전과 일치하지 않을 수 있습니다.
+개발 중이며 {{site.data.keyword.openwhisk_short}}에서는 일반적으로 사용 가능한 가장 최신 릴리스를
+사용합니다. 이러한 최신 릴리스가 항상 안정적인 것은 아닙니다. 또한 {{site.data.keyword.openwhisk_short}}와
+함께 사용되는 Swift의 버전이 XCode on MacOS의 안정적인 릴리스의 Swift 버전과 일치하지 않을 수 있습니다.
 
-### 조치를 Swift 실행 파일로 패키징
+### 조치를 Swift 실행 파일로서 패키징
 {: #openwhisk_actions_swift_zip}
 
-OpenWhisk Swift 조치를 Swift 소스 파일로 작성하는 경우 조치가 실행되기 전에 바이너리로 컴파일해야 합니다. 완료되면 조치를 보관하는 컨테이너가 제거될 때까지 조치에 대한 후속 호출 속도가 훨씬 빠릅니다. 이 지연은 콜드 스타트 지연이라고 합니다.
+Swift 소스 파일로 OpenWhisk Swift 조치를 작성하는 경우, 이는 조치가 실행되기 전에 바이너리로 컴파일되어야 합니다. 완료되면 조치를 보관하는 컨테이너가 제거될 때까지 조치에 대한 후속 호출 속도가 훨씬 빠릅니다. 이 지연은 콜드 스타트 지연이라고 합니다.
+
+
 
 콜드 스타트 지연을 방지하려면 Swift 파일을 바이너리로 컴파일한 다음 zip 파일로 OpenWhisk에 업로드할 수 있습니다. OpenWhisk 스캐폴딩(scaffolding)이 필요할 때 바이너리를 작성하는 가장 쉬운 방법은 파일이 실행되는 동일한 환경 내에 빌드하는 것입니다. 단계는 다음과 같습니다.
 
-- 대화식 Swift 조치 컨테이너를 실행하십시오.
+
+
+- 대화식 Swift 조치 컨테이너를 실행하십시오. 
 ```
 docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
 ```
 {: pre}
 
-    이렇게 하면 Docker 컨테이너 내 bash 쉘에 위치하게 됩니다. 쉘에서 다음 명령을 실행하십시오.
+    그러면 Docker 컨테이너 내의 bash 쉘로 이동됩니다. 쉘에서 다음 명령을 실행하십시오.
 
-- 편의를 위해 zip을 설치하여 바이너리 패키징
+
+
+- 바이너리를 패키징하기 위해 편의상 zip 설치
   ```
   apt-get install -y zip
   ```
   {: pre}
 - 소스 코드 복사 및 빌드 준비
+  
   ```
   cp /owexec/hello.swift /swift3Action/spm-build/main.swift 
   ```
@@ -709,11 +726,13 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   ```
   {: pre}
 - zBuild 및 링크
+  
   ```
   /swift3Action/spm-build/swiftbuildandlink.sh
   ```
   {: pre}
 - zip 아카이브 작성
+  
   ```
   cd /swift3Action/spm-build
   ```
@@ -726,37 +745,39 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   exit
   ```
   {: pre}
-hello.swift와 동일한 디렉토리에 hello.zip을 작성했습니다.
+이는 hello.swift와 동일한 디렉토리에 hello.zip을 작성했습니다.
 -조치 이름 helloSwifty로 OpenWhisk에 업로드하십시오.
   ```
   wsk action update helloSwiftly hello.zip --kind swift:3
   ```
   {: pre}
 - 얼마나 빠른지 확인하려면 다음을 실행하십시오.
+   
   ```
   wsk action invoke helloSwiftly --blocking
   ``` 
   {: pre}
 
-조치를 실행하는 데 걸리는 시간은 "duration" 특성에 있고, hello 조치의 컴파일 단계에서 실행하는 데 걸리는 시간과 비교됩니다.
+조치를 실행하는 데 걸리는 시간은 "duration" 특성에 있으며, 이는 hello 조치의 컴파일 단계에서 실행하는 데 걸리는 시간과 비교됩니다. 
 
 ## Java 조치 작성
 {: #openwhisk_actions_java}
 
-Java 조치 작성 프로세스는 JavaScript 및 Swift 조치의 프로세스와 유사합니다. 다음 절에서는 단일 Java 조치를 작성하고 호출하여 해당 조치에 매개변수를 추가하는 방법에 대해 안내합니다.
+Java 조치 작성 프로세스는 JavaScript 및 Swift 조치 작성 프로세스와 유사합니다.
+다음 절에서는 단일 Java 조치를 작성하고 호출하여 해당 조치에 매개변수를 추가하는 방법에 대해 안내합니다.
 
-Java 파일을 컴파일하고 테스트하고 아카이브하려면 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)이 로컬로 설치되어 있어야 합니다.
+Java 파일을 컴파일, 테스트 및 아카이브하려면 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)이 로컬에 설치되어 있어야 합니다. 
 
 ### 조치 작성 및 호출
 {: #openwhisk_actions_java_invoke}
 
-Java 조치는 다음과 같이 정확한 시그니처가 있는 `main`이라는 메소드가 포함된 Java 프로그램입니다.
+Java 조치는 다음과 같은 정확한 시그니처가 있는 `main`이라는 메소드가 포함된 Java 프로그램입니다. 
 ```java
 public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
 ```
 {: codeblock}
 
-예를 들어, 다음 컨텐츠가 있는 `Hello.java`라는 Java 파일을 작성하십시오.
+예를 들어, 다음 컨텐츠를 사용하여 `Hello.java`라는 Java 파일을 작성하십시오. 
 
 ```java
 import com.google.gson.JsonObject;
@@ -773,7 +794,7 @@ public class Hello {
 ```
 {: codeblock}
 
-그런 다음 `Hello.java`를 다음과 같이 JAR 파일 `hello.jar`로 컴파일하십시오.
+그런 다음 다음과 같이 `Hello.java`를 JAR 파일로 컴파일하십시오. 
 ```
 javac Hello.java
 ```
@@ -783,25 +804,19 @@ jar cvf hello.jar Hello.class
 ```
 {: pre}
 
-**참고:** [google-gson](https://github.com/google/gson)은 Java 파일 컴파일 시 Java CLASSPATH에 있어야 합니다.
+**참고:** [google-gson](https://github.com/google/gson)은 Java 파일을 컴파일할 때 Java CLASSPATH에 있어야 합니다.
 
-다음과 같이 이 JAR 파일에서 OpenWhisk 조치 `helloJava`를 작성할 수
-있습니다.
+다음과 같이 이 JAR 파일에서 `helloJava`라는 OpenWhisk 조치를 작성할 수 있습니다.
 
 ```
 wsk action create helloJava hello.jar --main Hello
 ```
 
-명령행과 `.jar` 소스 파일을 사용하는 경우 Java 조치를
-작성하도록 지정할 필요가 없습니다. 도구가 파일 확장자를
-통해 이를 판별합니다.
+명령행과 `.jar` 소스 파일을 사용하는 경우 Java 조치를 작성하도록 지정할 필요가 없습니다. 도구가 파일 확장자에서 이를 판별합니다. 
 
-`--main`을 사용하여 기본 클래스 이름을 지정해야 합니다. 적합한 기본 클래스는
-위에 설명된 대로 정적 `기본` 메소드를 구현하는 클래스입니다. 클래스가
-기본 패키지에 없는 경우 완전한 Java 클래스 이름(예:
-`--main com.example.MyMain`)을 사용하십시오.
+`--main`을 사용하여 기본 클래스의 이름을 지정해야 합니다. 적합한 기본 클래스는 위에 설명된 대로 정적 `main` 메소드를 구현하는 클래스입니다. 클래스가 기본 패키지에 없는 경우에는 완전한 Java 클래스 이름(예: `--main com.example.MyMain`)을 사용하십시오. 
 
-Java 조치에 대한 조치 호출은 Swift 및 JavaScript 조치에 대한 조치 호출과 동일합니다.
+Java 조치에 대한 조치 호출은 Swift 및 JavaScript 조치에 대한 조치 호출과 동일합니다. 
 
 ```
 wsk action invoke --blocking --result helloJava --param name World
@@ -816,20 +831,20 @@ wsk action invoke --blocking --result helloJava --param name World
 
 ## Docker 조치 작성
 
-{{site.data.keyword.openwhisk_short}} Docker 조치를 사용하면 조치를 어떤 언어로든 작성할 수 있습니다.
+{{site.data.keyword.openwhisk_short}} Docker 조치를 사용하면 사용자의 조치를 어떤 언어로든 작성할 수 있습니다.
 
-사용자의 코드가 실행 가능 바이너리로 컴파일되어 Docker 이미지에 임베드됩니다. 바이너리 프로그램은 `stdin`에서 입력을 가져오고 `stdout`을 통해 응답하여 시스템과 상호작용합니다.
+사용자의 코드가 실행 가능 바이너리로 컴파일되어 Docker 이미지에 임베드됩니다. 2진 프로그램은 `stdin`에서 입력을 가져와서 `stdout`을 통해 응답함으로써 시스템과 상호작용합니다.
 
-전제조건으로, Docker 허브 계정이 있어야 합니다. 무료 Docker ID 및 계정을 설정하려면 [Docker Hub](https://hub.docker.com)로 이동하십시오.
+전제조건으로, Docker 허브 계정이 있어야 합니다. 무료 Docker ID 및 계정을 설정하려면 [Docker 허브](https://hub.docker.com)로 이동하십시오.
 
-다음 지시사항에서는 Docker 사용자 ID가 `janesmith`이고 비밀번호가 `janes_password`라고 가정하십시오. CLI가 이미 설정되었다고 가정하면 {{site.data.keyword.openwhisk_short}}에서 사용할 사용자 정의 바이너리를 설정하는 데 세 단계가 필요합니다. 그런 다음 업로드된 Docker 이미지가 조치로 사용될 수 있습니다.
+다음 지시사항에서는 Docker 사용자 ID가 `janesmith`이고 비밀번호가 `janes_password`라고 가정합니다. CLI가 이미 설정되었다고 가정하면, {{site.data.keyword.openwhisk_short}}에서 사용할 사용자 정의 2진을 설정하는 데 세 단계가 필요합니다. 그런 다음 업로드된 Docker 이미지가 조치로 사용될 수 있습니다.
 
 1. Docker 스켈레톤을 다운로드하십시오. 다음과 같이 CLI를 사용하여 다운로드할 수 있습니다.
 
   ```
   wsk sdk install docker
   ```
- {: pre}
+  {: pre}
   ```
   The Docker skeleton is now installed at the current directory.
   ```

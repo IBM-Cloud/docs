@@ -54,10 +54,15 @@
 		"img": "homepage/images/WhatIsBluemix-icon.svg",
 		"href": "overview/whatisbluemix.html"
     }, {
-		"title": "Configuration de votre compte",
-		"description": "Mettez à jour votre profil, définissez des notifications relatives à votre compte et à vos dépenses, invitez des membres d'équipe ou gérez des organisations et des espaces.",
+		"title": " Gestion de votre compte ",
+		"description": "Mettez à jour votre profil, définissez des notifications relatives à votre compte et à vos dépenses, ou gérez des organisations et des espaces.",
 		"img": "homepage/images/admin.svg",
 		"href": "admin/adminpublic.html"
+	}, {
+		"title": " Gestion de l'identité et de l'accès ",
+		"description": "Gérez l'accès utilisateur ou invitez des membres d'équipe. ",
+		"img": "homepage/images/admin.svg",
+		"href": "iam/iamusermanage.html"
 	}, {
 		"title": "Interface de ligne de commande et outils de développement",
 		"description": "Accédez à des outils tels qu'une interface de ligne de commande (CLI) unifiée et des plug-in d'interface de ligne de commande.",
@@ -91,7 +96,7 @@
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
 	}, {
-		"title": "Tarification",
+		"title": "Gestion de la facturation et de l'utilisation",
 		"description": "Estimez les coûts avec la calculatrice et affichez les coûts réels dans la vue Détails sur l'utilisation.",
 		"img": "homepage/images/pricing.svg",
 		"href": "pricing/index.html"

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-05-25" 
+lastupdated: "2017-06-05" 
 
 ---
 
@@ -55,6 +55,21 @@ New as of: 03 February 2017
 
 ## {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated
 {: #dedicatedandlocal}
+
+### May updates for the administration console
+{: #mayadminconsole}
+New as of: 30 May 2017
+
+With the latest updates and improvements from May, you can use the following new features:
+
+ * Improvements on the Status page including more granular diagnostics on incidents affecting the Bluemix platform and runtimes.
+ * Improvements to the security Reports and Logs page:
+   * Reports are now displayed in a table format, simplyfying the browsing and searching of reports, including the ability to sort by report category, file name, or creation date. 
+   * Enhanced filtering including simultaneous filtering of multiple categories 
+   * Full screen mode for displaying the contents of a report
+   * Capability to delete reports for admin users with "report write" permission
+   * Faster display of report lists, progressively loading on-demand through continuous scrolling, resulting in better overall performance.
+ * Security reports can be requested on-demand within a time range spanning up to one week and starting a maximum of 3 months back from the time of the request. Note that some environment specific configuration is required before this capability is available to admin users. Admin users will require "report write" permission for this capability.
 
 ### April updates for the administration console
 {: #apriladminconsole}
@@ -132,12 +147,28 @@ The Liberty buildpack v3.8 provides new default and monthly Liberty runtime vers
 ## Services
 {: #services_category}
 
+### {{site.data.keyword.sparks}} updates: Stocator-S3 connector includes support for IBM Cloud Object Storage Cross Region service (Beta)
+New as of: 05 June 2017
+
+{{site.data.keyword.sparks}} users can now access and do analytics on data stored in the IBM Cloud Object Storage Cross Region service. This capability is offered as a Beta. IBM Cloud Object Storage offers high-capacity, cost-effective storage for analytics and other applications that is scalable, flexible and simple to use.
+
+The Apache Spark accesses IBM Cloud Object Storage data through a storage connector based on Stocator technology, which is implicitly designed for object storage and thus faster than legacy object storage connectors. As a user, you do not need to change or recompile Apache Spark code.
+
+[Access and Analyze data in IBM Cross Region Cloud Object Storage](https://www.ibm.com/blogs/bluemix/2017/06/access-analyze-data-ibm-cross-region-cloud-object-storage/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") blog post describes usage of IBM Cloud Object Storage data with {{site.data.keyword.sparks}} on {{site.data.keyword.Bluemix_notm}} and the IBM Data Science Experience (DSx).
+
+Please reach out to us at [sparksrv@us.ibm.com](sparksrv@us.ibm.com), if you have any questions or comments. Your input is greatly appreciated!
+
+### New scalable plan available for {{site.data.keyword.dashdbshort}} for Transactions
+New as of: 31 May 2017
+
+A new plan is available for {{site.data.keyword.dashdbshort}} for Transactions that can grow with your database needs. The new Flex plan allows you to start with a small system and grow the power and storage capacity of that system easily and quickly. {{site.data.keyword.dashdbshort}} for Transactions is 100% DB2-compatible and provides a 99.95% SLA on high availability plans.
+
 ### New Updates to  {{site.data.keyword.mobilepush}} service on {{site.data.keyword.Bluemix_notm}}
 New as of: 24 May 2017
 
 The following are the new updates available for {{site.data.keyword.mobilepush}} service on {{site.data.keyword.Bluemix_notm}}
 
-**Lite Plan**: We are introducing a new Lite Plan in addition to the existing Basic Plan for {{site.data.keyword.mobilepush}} service. As per the new plan the users can send upto hundred thousand digital messages for free per month. With this introduction, {{site.data.keyword.mobilepush}} service is now a part of the {{site.data.keyword.Bluemix_notm}} Standard account model where users can use included services without the restriction of 30 days for trial account, but up to the monthly specified limit
+**Lite Plan**: We are introducing a new Lite Plan in addition to the existing Basic Plan for {{site.data.keyword.mobilepush}} Service. As per the new plan the users can send upto hundred thousand digital messages for free per month. While upgrading from Lite plan to basic plan the user will be charged post one million digital messages starting from the count where the Lite plan usage was clipped.
 
 **Monitoring**: You can now get insights on notifications sent and devices registered in the {{site.data.keyword.mobilepush}} Service Console. You can also use REST API's for message level tracking. From message delivery to message dispatching to message receipt, the details can be obtained by configuring webhooks.  See [Monitoring for {{site.data.keyword.mobilepush}}](/docs/services/mobilepush/t_push_monitoring.html#monitor-notifications).
 

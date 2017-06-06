@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-03"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -50,6 +50,7 @@ lastupdated: "2017-04-03"
 |{{site.data.keyword.composeForRethinkDB}} | 米国ダラスでホスト | 英国ロンドンでホスト | オーストラリアのシドニーでホスト | ドイツのフランクフルトでホスト |
 |{{site.data.keyword.composeForScyllaDB}} | 米国ダラスでホスト | 英国ロンドンでホスト | オーストラリアのシドニーでホスト | ドイツのフランクフルトでホスト |
 |{{site.data.keyword.conceptinsightsshort}}	| 米国ダラスでホスト	| 米国ダラスでホスト	| 米国ダラスでホスト | 地域で使用不可 |
+|{{site.data.keyword.contdelivery_short}} | 米国ダラスでホスト | 地域で使用不可 | 地域で使用不可 | 地域で使用不可 |
 |{{site.data.keyword.dashdbshort}} | 米国ダラスでホスト | 英国ロンドンでホスト | シドニーでホスト | ドイツのフランクフルトでホスト |
 |{{site.data.keyword.datacshort}}	| 米国ダラスでホスト	| 英国ロンドンでホスト	| オーストラリアのシドニーでホスト | 地域で使用不可 |
 |{{site.data.keyword.DB2OnCloud_short}}	| 米国ダラスでホスト	| 米国ダラスでホスト	| オーストラリアのシドニーでホスト | 地域で使用不可 |

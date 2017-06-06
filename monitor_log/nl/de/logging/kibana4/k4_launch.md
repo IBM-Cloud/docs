@@ -20,9 +20,9 @@ lastupdated: "2017-04-06"
 Sie können Kibana über die {{site.data.keyword.Bluemix}}-Benutzerschnittstelle oder direkt über einen Browser starten.
 {:shortdesc}
 
-Starten Sie Kibana über {{site.data.keyword.Bluemix_notm}}, um Daten im Kontext der Ressource, von der aus Sie Kibana starten, anzuzeigen und zu analysieren. Sie können Kibana zum Beispiel für bestimmte CF-App-Protokolle im Kontext einer bestimmten App oder für bestimmte Docker-Containerprotokolle im Kontext eines bestimmten Containers starten.  
+Starten Sie Kibana über {{site.data.keyword.Bluemix_notm}}, um Daten im Kontext der Ressource, von der aus Sie Kibana starten, anzuzeigen und zu analysieren. Sie können Kibana zum Beispiel für bestimmte CF-App-Protokolle im Kontext einer bestimmten App oder für bestimmte Docker-Containerprotokolle im Kontext eines bestimmten Containers starten. 
     
-Starten Sie Kibana über einen direkten Browser-Link, wenn Sie aggregierte Protokolldaten aus Services in einem angegebenen {{site.data.keyword.Bluemix_notm}}-Bereich anzeigen möchten. Die Abfrage, durch die die Daten gefiltert werden, die im Dashboard angezeigt werden, ruft Protokolleinträge für einen Bereich in der {{site.data.keyword.Bluemix_notm}}-Organisation ab. Die Protokollinformationen, die in Kibana angezeigt werden, umfassen Einträge für alle Ressourcen, die innerhalb des Bereichs der {{site.data.keyword.Bluemix_notm}}-Organisation bereitgestellt wurden, an der Sie angemeldet sind.  
+Starten Sie Kibana über einen direkten Browser-Link, wenn Sie aggregierte Protokolldaten aus Services in einem angegebenen {{site.data.keyword.Bluemix_notm}}-Bereich anzeigen möchten. Die Abfrage, durch die die Daten gefiltert werden, die im Dashboard angezeigt werden, ruft Protokolleinträge für einen Bereich in der {{site.data.keyword.Bluemix_notm}}-Organisation ab. Die Protokollinformationen, die in Kibana angezeigt werden, umfassen Einträge für alle Ressourcen, die innerhalb des Bereichs der {{site.data.keyword.Bluemix_notm}}-Organisation bereitgestellt wurden, an der Sie angemeldet sind. 
 
 Weitere Informationen zu Kibana finden Sie in der Veröffentlichung [Kibana User Guide ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}.
     
@@ -61,7 +61,7 @@ Führen Sie die folgenden Schritte aus, um Kibana über einen Browser zu starten
 
 2. Wählen Sie die Version von Kibana aus, die Sie zur Analyse Ihrer Protokolle verwenden wollen.
     * Wählen Sie die Registerkarte **Kibana 4** aus, um mit Kibana 4 zu arbeiten. Die Seite 'Discover' wird geöffnet. Weitere Informationen finden Sie unter [logging_kibana_analize_logs_interactively.html#kibana_analize_logs_interactively).
-    * Wählen Sie die Registerkarte **Kibana 3** aus, um mit Kibana 3 zu arbeiten. Das Kibana-Standarddashboard wird geöffnet. Informationen zur Verwendung von Kibana 3 zur Analyse Ihrer Protokolle finden Sie unter [Protokolle in Kibana 3 analysieren (veraltet)](../logging_view_kibana3.html#analyzing_logs_Kibana3). Weitere Informationen zur Anpassung eines Kibana 3-Dashboards finden Sie [in diesem Blogbeitrag ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/). 
+    * Wählen Sie die Registerkarte **Kibana 3** aus, um mit Kibana 3 zu arbeiten. Das Kibana-Standarddashboard wird geöffnet. Informationen zur Verwendung von Kibana 3 zur Analyse Ihrer Protokolle finden Sie unter [Protokolle in Kibana 3 analysieren (veraltet)](../logging_view_kibana3.html#analyzing_logs_Kibana3). Weitere Informationen zur Anpassung eines Kibana 3-Dashboards finden Sie [in diesem Blogbeitrag ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/).
      
         **Hinweis:** Kibana 3 ist veraltet.
 

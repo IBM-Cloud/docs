@@ -102,7 +102,7 @@ Toda entrada de log contém quatro campos. Consulte a lista a seguir para obter 
 
 <dt><strong>AP
 </strong></dt>
-<dd>Aplicativo: o componente APP fornece informações sobre um aplicativo. </dd>
+<dd>Aplicativo: o componente APP fornece informações sobre um aplicativo.</dd>
 
 <dt><strong>API</strong></dt>
 <dd>Cloud Foundry API: o componente API fornece informações sobre as ações internas que resultam da solicitação de um usuário para mudar o estado de um aplicativo.</dd>
@@ -456,7 +456,7 @@ de hardware
 | vCPU | 19 | 57 |
 | Memória | 80 GB | 240 GB |
 | Armazenamento local | 2,98 TB | 8,94 TB |
-{: caption="Tabela 2. Requisitos de hardware de criação de log para {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
+{: caption="Tabela 2. Registrando requisitos de hardware para o {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
 
 ### Configuração
 

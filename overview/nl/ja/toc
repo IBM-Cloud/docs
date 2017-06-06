@@ -18,7 +18,7 @@ Bluemix とは
     {: .navgroup-end}
     
     {: .navgroup id="reference"}
-    [特記事項およびご利用条件](../navigation/notices.html)
+    ../navigation/
     glossary/index.md
-    [新機能](../whatsnew/index.html)
+    ../whatsnew/
     {: .navgroup-end}

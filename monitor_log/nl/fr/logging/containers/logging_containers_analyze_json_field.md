@@ -22,9 +22,9 @@ Dans Kibana, pour analyser les données de journal de votre conteneur, vous pouv
 
 Procédez comme suit pour analyser une zone de type JSON dans Kibana :
 
-1. Pour scinder une zone de message JSON en plusieurs zones, consignez le message au format JSON dans un fichier au lieu de l'envoyer dans la sortie standard (STDOUT).  
+1. Pour scinder une zone de message JSON en plusieurs zones, consignez le message au format JSON dans un fichier au lieu de l'envoyer dans la sortie standard (STDOUT). 
 
-    Lorsque des entrées de journal JSON sont envoyées au fichier de journal Docker d'un conteneur sous la forme de sortie standard STDOUT, elles ne sont pas analysées en tant qu'entrées JSON. Vous ne pouvez pas trier les messages à l'aide de la zone @timestamp pour modifier leur l'ordre d'affichage.   
+    Lorsque des entrées de journal JSON sont envoyées au fichier de journal Docker d'un conteneur sous la forme de sortie standard STDOUT, elles ne sont pas analysées en tant qu'entrées JSON. Vous ne pouvez pas trier les messages à l'aide de la zone @timestamp pour modifier leur l'ordre d'affichage.  
 
 2. Ajoutez le fichier journal à la liste des journaux non définis par défaut qui sont disponibles pour analyse à partir d'un conteneur. Pour plus d'informations, voir [Collecte de données de journaux autres que ceux par défaut d'un conteneur](logging_containers_other_logs.html#logging_containers_collect_data). 
 
@@ -32,7 +32,7 @@ Procédez comme suit pour analyser une zone de type JSON dans Kibana :
 
     **Remarque :** si une zone est déterminée comme étant de type JSON valide, elle est analysée et de nouvelles zones sont créées à partir d'elle. Seules les valeurs de zone de type chaîne peuvent être filtrées et triées dans Kibana.
     
-    La valeur de zone @timestamp affichée correspond à l'horodatage auquel l'entrée de journal a été reçue par ElasticSearch. L'horodatage qui indique le moment où l'entrée de journal a été générée dans le conteneur s'affiche dans le cadre des zones de message. 
+    La valeur de zone @timestamp affichée correspond à l'horodatage auquel l'entrée de journal a été reçue par ElasticSearch. L'horodatage qui indique le moment où l'entrée de journal a été générée dans le conteneur s'affiche dans le cadre des zones de message.
     
 
 

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -30,6 +30,14 @@ puede iniciar una sesión en {{site.data.keyword.Bluemix_notm}} e iniciar su pru
 gratuita de 30 días. {{site.data.keyword.Bluemix_notm}}
 proporciona 2 GB de memoria en tiempo de ejecución y 10 instancias de servicio
 para la prueba gratuita.
+
+
+## Despliegue y desarrollo de apps utilizando cadenas de herramientas y el servicio {{site.data.keyword.contdelivery_short}} 
+{: #ee_cd}
+
+<a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">Añada una cadena de herramientas</a> que incluya el servicio {{site.data.keyword.contdelivery_full}} para su app. 
+A continuación, <a href="docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">utilice la cadena de herramientas</a> para desarrollar y desplegar su app. 
+
 
 ## Creación de una app web mediante la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}
 {: #ee_appui}

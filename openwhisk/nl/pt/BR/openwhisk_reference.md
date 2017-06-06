@@ -440,82 +440,8 @@ Você pode incluir qualquer etapa ou dependência de compilação modificando o 
 
 ## API REST
 {: #openwhisk_ref_restapi}
+Informações sobre a API de REST podem ser localizadas [aqui](openwhisk_rest_api.html)
 
-Todos os recursos no sistema estão disponíveis por meio de uma API REST. Existem terminais de coleção e entidade para ações, acionadores, regras, pacotes, ativações e namespaces.
-
-Estes são os terminais de coleta:
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
-
-O `openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span>' é o nome do host da API OpenWhisk (por exemplo, openwhisk.ng.bluemix.net, 172.17.0.1 e assim por diante).
-
-Para o `{namespace}`, o caractere `_` pode ser
-usado para especificar o *namespace padrão* do usuário (isto é, endereço de e-mail).
-
-É possível executar uma solicitação GET nos terminais de coleção para buscar uma
-lista de entidades na coleção.
-
-Existem terminais de entidade para cada tipo de entidade:
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
-
-
-Os terminais de namespace e ativação suportam apenas solicitações GET. Os terminais
-de ações, acionadores, regras e pacotes suportam solicitações GET, PUT e DELETE. Os
-terminais de ações, acionadores e regras também suportam solicitações POST, que são
-usadas para chamar ações e acionadores e ativar ou desativar as regras. Consulte a [Referência de API](https://console.{DomainName}/apidocs/98)
-para obter detalhes.
-
-Todas as APIs são protegidas com autenticação Básica de HTTP. As credenciais de
-autenticação Básica estão na propriedade `AUTH` em seu arquivo
-`~/.wskprops`, delimitadas por dois pontos. Também é possível recuperar essas credenciais nas [etapas de configuração da CLI](./index.html#openwhisk_start_configure_cli).
-
-Segue um exemplo que usa o comando cURL para obter a lista de todos os pacotes
-no namespace `whisk.system`:
-
-```
-curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
-```
-{: pre}
-```
-[
-  {
-    "name": "slack",
-    "binding": false,
-    "publish": true,
-    "annotations": [
-      {
-        "key": "description",
-        "value": "Package that contains actions to interact with the Slack messaging service"
-      }
-    ],
-    "version": "0.0.9",
-    "namespace": "whisk.system"
-  },
-  ...
-]
-```
-{: screen}
-
-A API OpenWhisk suporta chamadas de solicitação-resposta de Web clients. O OpenWhisk responde para solicitações de `OPTIONS` com cabeçalhos de Compartilhamento de Recurso de Origem
-Cruzada. Atualmente, todas as origens são permitidas (ou seja, a Origem de Permissão de
-Controle de Acesso é "`*`") e os Cabeçalhos de Permissão de Controle de
-Acesso produzem Autorização e Tipo de Conteúdo.
-
-**Atenção:** como o OpenWhisk suporta apenas uma chave por conta
-atualmente, não é recomendado usar CORS além de experimentos simples. Sua chave
-precisaria ser integrada no código do lado do cliente, tornando-a visível para o público. Use
-com cuidado.
 
 ## Limites do sistema
 {: #openwhisk_syslimits}

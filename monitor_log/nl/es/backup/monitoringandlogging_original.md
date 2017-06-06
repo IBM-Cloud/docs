@@ -20,7 +20,7 @@ lastupdated: "2017-02-01"
 Mediante la supervisión de sus apps y la revisión de los registros, puede seguir la ejecución de una aplicación, el flujo de datos y el uso de las aplicaciones para comprender mejor su despliegue. Además, puede reducir el tiempo y el esfuerzo necesario para localizar los problemas y repararlos.
 {:shortdesc}
 
-Las aplicaciones de {{site.data.keyword.Bluemix}} se pueden distribuir ampliamente, pueden ser aplicaciones de múltiples instancias. También es posible compartir la ejecución de las aplicaciones y sus datos a lo largo de muchos servicios. En este entorno complejo, la supervisión de sus apps y la revisión de los registros es importante para gestionar dichas apps. 
+Las aplicaciones de {{site.data.keyword.Bluemix}} se pueden distribuir ampliamente, pueden ser aplicaciones de múltiples instancias. También es posible compartir la ejecución de las aplicaciones y sus datos a lo largo de muchos servicios. En este entorno complejo, la supervisión de sus apps y la revisión de los registros es importante para gestionar dichas apps.
 
 ## Supervisión y creación de registros de apps de Cloud Foundry
 {: #monitoring_logging_bluemix_apps}
@@ -48,7 +48,7 @@ Para supervisar apps de {{site.data.keyword.Bluemix_notm}}, utilice uno de los s
 ### Registro para apps en ejecución en Cloud Foundry
 {: #logging_for_bluemix_apps}
 
-Los archivos de registro se crean de forma automática cuando se utiliza la infraestructura de Cloud Foundry para ejecutar sus apps en {{site.data.keyword.Bluemix_notm}}. Cuando encuentra errores en una etapa, desde la etapa de despliegue a la de tiempo de ejecución, puede comprobar los registros para obtener indicios que le pueden ayudar a resolver dicho problema. 
+Los archivos de registro se crean de forma automática cuando se utiliza la infraestructura de Cloud Foundry para ejecutar sus apps en {{site.data.keyword.Bluemix_notm}}. Cuando encuentra errores en una etapa, desde la etapa de despliegue a la de tiempo de ejecución, puede comprobar los registros para obtener indicios que le pueden ayudar a resolver dicho problema.
 
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
@@ -58,7 +58,7 @@ Los archivos de registro se crean de forma automática cuando se utiliza la infr
 ### Formato de registro y retención
 {: #log_format}
 
-De forma predeterminada, en las apps públicas de Cloud Foundry de {{site.data.keyword.Bluemix_notm}}, los datos de los registros se almacenan durante 7 días. Puede buscar en hasta 1 GB de datos por día. 
+De forma predeterminada, en las apps públicas de Cloud Foundry de {{site.data.keyword.Bluemix_notm}}, los datos de los registros se almacenan durante 7 días. Puede buscar en hasta 1 GB de datos por día.
 
 Los registros de las aplicaciones de {{site.data.keyword.Bluemix_notm}} se muestran en un formato fijo, parecido al del siguiente patrón:
 
@@ -86,11 +86,11 @@ Cada entrada del registro contiene cuatro campos. Consulte la siguiente lista pa
 <p>Columnas: 29 - 40</p>
 <p>El componente que genera registros. </p>
 <p>Cada tipo de componente va seguido de una barra inclinada y un dígito que indica la instancia de la aplicación. 0 es el dígito asignado a la primera instancia, 1 es el dígito asignado a la segunda, y así sucesivamente.</p>
-<p>La siguiente lista destaca los distintos tipos de componentes: </p>
+<p>La siguiente lista destaca los distintos tipos de componentes:</p>
 
 <dl>
 <dt><strong>LGR</strong></dt>
-<dd>Loggregator: El componente LGR proporciona información sobre el servicio de creación de registros. </dd>
+<dd>Loggregator: El componente LGR proporciona información sobre el servicio de creación de registros.</dd>
 
 <dt><strong>RTR</strong></dt>
 <dd>RTR: El componente RTR proporciona información sobre las solicitudes HTTP enviadas a una aplicación.</dd>
@@ -99,21 +99,21 @@ Cada entrada del registro contiene cuatro campos. Consulte la siguiente lista pa
 <dd>Staging: El componente STG proporciona información sobre cómo se transfiere o se vuelve a transferir una aplicación.</dd>
 
 <dt><strong>APP</strong></dt>
-<dd>Application: El componente APP proporciona información sobre una aplicación. </dd>
+<dd>Application: El componente APP proporciona información sobre una aplicación.</dd>
 
 <dt><strong>API</strong></dt>
 <dd>Cloud Foundry API: El componente API proporciona información sobre las acciones internas resultantes de la solicitud de un usuario de cambiar el estado de una aplicación.</dd>
 
 <dt><strong>DEA</strong></dt>
-<dd>Droplet Execution Agent: El componente DEA proporciona información sobre el inicio, detención o bloqueo de una aplicación.
+<dd>Droplet Execution Agent: El componente DEA proporciona información sobre el inicio, detención o bloqueo de una aplicación. 
 <p>Este componente sólo está disponible si la aplicación se ha desplegado en la arquitectura de Cloud Foundry que se basa en DEA.</p></dd>
 
 <dt><strong>CELL</strong></dt>
-<dd>Digo Cell: El componente CELL proporciona información sobre el inicio, detención o bloqueo de una aplicación.
+<dd>Digo Cell: El componente CELL proporciona información sobre el inicio, detención o bloqueo de una aplicación. 
 <p>Este componente sólo está disponible si la aplicación se ha desplegado en la arquitectura de Cloud Foundry que se basa en Diego.</p></dd>
 
 <dt><strong>SSH</strong></dt>
-<dd>SSH: El componente SSH proporciona información cada vez que un usuario accede a una aplicación con el mandato **cf ssh**.
+<dd>SSH: El componente SSH proporciona información cada vez que un usuario accede a una aplicación con el mandato **cf ssh**. 
 <p>Este componente sólo está disponible si la aplicación se ha desplegado en la arquitectura de Cloud Foundry que se basa en Diego.</p></dd>
 
 </dl>
@@ -140,34 +140,34 @@ En la figura siguiente se muestran los distintos componentes (tipos de registro)
 ## Visualización de registros
 {: #viewing_logs}
 
-Los registros de las apps de Cloud Foundry se pueden visualizar en cuatro lugares: 
+Los registros de las apps de Cloud Foundry se pueden visualizar en cuatro lugares:
 
-  * Panel de control de {{site.data.keyword.Bluemix_notm}} 
+  * Panel de control de {{site.data.keyword.Bluemix_notm}}
   * Panel de control de Kibana
   * Interfaz de línea de mandatos
   * Hosts de registros externos
 
-### Visualización de registros desde el panel de control de {{site.data.keyword.Bluemix_notm}} 
+### Visualización de registros desde el panel de control de {{site.data.keyword.Bluemix_notm}}
 {: #viewing_logs_UI}
 
 Para ver los registros de despliegue o de tiempo de ejecución, realice los pasos siguientes:
 1. Inicie una sesión en {{site.data.keyword.Bluemix_notm}} y, a continuación, pulse en el mosaico de su app. Se muestra la página de detalles de la app.
 2. En la barra de navegación, pulse **Registros**.
 
-En la consola **Registros**, puede ver los registros recientes para su app o la parte más reciente de los registros en tiempo real. Además, puede filtrar registros por tipo de registro y canal. 
+En la consola **Registros**, puede ver los registros recientes para su app o la parte más reciente de los registros en tiempo real. Además, puede filtrar registros por tipo de registro y canal.
 
-**Nota:** Los registros no se conservan entre despliegues y cuelgues de app. 
+**Nota:** Los registros no se conservan entre despliegues y cuelgues de app.
 
 
-### Visualización de registros desde el panel de control de Kibana 
+### Visualización de registros desde el panel de control de Kibana
 {: #viewing_logs_Kibana}
 
-Cree un panel de control personalizado para visualizar, de una forma simple o elaborada, los registros de las apps que se ejecutan en un espacio. 
+Cree un panel de control personalizado para visualizar, de una forma simple o elaborada, los registros de las apps que se ejecutan en un espacio.
 
 1. Abra [https://logmet.<span class="keyword" data-hd-keyref="DomainName">NombreDominio</span>](https://logmet.{DomainName}) para iniciar una sesión en la interfaz de usuario de Kibana.
-2. Seleccione el separador **Kibana 3**. 
+2. Seleccione el separador **Kibana 3**.
 3. Si no ve ningún registro, ajuste el selector de tiempo de la cabecera.
-4. Guarde el panel de control como un nuevo panel de control. 
+4. Guarde el panel de control como un nuevo panel de control.
   1. En la barra de herramientas, pulse el icono **Guardar**.
   2. Escriba un nombre para el panel de control.
   3. Junto al campo de nombre, pulse el icono **Guardar**.
@@ -178,18 +178,18 @@ Para obtener más información sobre cómo personalizar un panel de control de K
 ### Visualización de registros desde la interfaz de línea de mandatos
 {: #viewing_logs_cli}
 
-Elija entre las siguientes opciones para visualizar registros desde la interfaz de línea de mandato: 
+Elija entre las siguientes opciones para visualizar registros desde la interfaz de línea de mandato:
 
 <ul>
 <li>Últimos registros al desplegar aplicaciones.
-<p>Utilice el mandato **cf logs** para visualizar registros de su app y de componentes del sistema que interactúan con su app al desplegar apps en {{site.data.keyword.Bluemix_notm}}.  Escriba los siguientes mandatos en la interfaz de línea de mandatos de cf. Para obtener más información sobre los registros de cf, consulte <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target=" _blank">
+<p>Utilice el mandato **cf logs** para visualizar registros de su app y de componentes del sistema que interactúan con su app al desplegar apps en {{site.data.keyword.Bluemix_notm}}. Escriba los siguientes mandatos en la interfaz de línea de mandatos de cf. Para obtener más información sobre los registros de cf, consulte <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target=" _blank">
 Tipos de registro y sus mensajes en Cloud Foundry <img src="../icons/launch-glyph.svg" alt="Icono de enlace externo"></a> </p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">nombreapp</var> --recent</strong></dt>
-<dd>Visualiza registros recientes. </dd>
+<dd>Visualiza registros recientes.</dd>
 
 <dt><strong>cf logs <var class="keyword varname">nombreapp</var></strong></dt>
-<dd>Visualiza registros generados desde el momento que ejecuta este mandato. </dd>
+<dd>Visualiza registros generados desde el momento que ejecuta este mandato.</dd>
 </dl>
 <div class="note tip"><span class="tiptitle">Consejo:</span> Cuando ejecute el mandato <span class="keyword cmdname">cf push</span> o <span class="keyword cmdname">cf
 start</span> en una ventana de línea de mandatos, puede escribir <samp class="ph codeph">cf
@@ -198,13 +198,14 @@ registros en tiempo real. </div>
 </li>
 
 <li>Visualización de registros después de que se hayan desplegado las apps.
-<p>Si la creación de registros de una aplicación está habilitado, podrá ver los siguientes registros de aplicación si encuentra problemas con la app en tiempo de ejecución. Los registros de aplicación pueden ayudar a determinar la causa de los errores. </p>
+
+<p>Si la creación de registros de una aplicación está habilitado, podrá ver los siguientes registros de aplicación si encuentra problemas con la app en tiempo de ejecución. Los registros de aplicación pueden ayudar a determinar la causa de los errores.</p>
 
 <dl><dt><strong>buildpack.log</strong></dt>
 <dd>
 <p>Este archivo de registro registra sucesos informativos detallados para la depuración. Puede utilizar este registro para resolver problemas de ejecución del paquete de compilación.</p>
 <p>Para generar datos en el archivo <span class="ph filepath">buildpack.log</span>, debe habilitar el rastreo del paquete de compilación mediante el siguiente mandato:
-<pre class="pre">cf set-env <var class="keyword varname">nombre_app</var> JBP_LOG_LEVEL DEBUG</pre></p>
+   <pre class="pre">cf set-env <var class="keyword varname">nombre_app</var> JBP_LOG_LEVEL DEBUG</pre></p>
 <p>Especifique el siguiente mandato para visualizar este registro:
 <pre class="pre">cf files <var class="keyword varname">nombre_app</var> app/.buildpack-diagnostics/buildpack.log</pre>
 </p>
@@ -225,9 +226,9 @@ registros en tiempo real. </div>
 {: #viewing_logs_external}
 
 
-Cuando se generan los registros, tras un breve retraso, puede ver los mensajes en el host de registros externo. Los registros son parecidos a los mensajes que se ven desde la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} cf o desde la interfaz de línea de mandatos de cf. Si tiene varias instancias de su app, los registros se agregan y podrá ver todos los registros de su app. Además, los registros se conservan entre despliegues y cuelgues de app. 
+Cuando se generan los registros, tras un breve retraso, puede ver los mensajes en el host de registros externo. Los registros son parecidos a los mensajes que se ven desde la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} cf o desde la interfaz de línea de mandatos de cf.  Si tiene varias instancias de su app, los registros se agregan y podrá ver todos los registros de su app. Además, los registros se conservan entre despliegues y cuelgues de app.
 
-**Nota:** Registros que se visualizan en la interfaz de línea de mandatos no están en el formato syslog, y podrían no coincidir exactamente con los mensajes que se visualizan en su host de registros externo. 
+**Nota:** Registros que se visualizan en la interfaz de línea de mandatos no están en el formato syslog, y podrían no coincidir exactamente con los mensajes que se visualizan en su host de registros externo.
 
 
 
@@ -265,7 +266,7 @@ Para enviar la secuencia de los registros de su app y del sistema a un host de r
 registros a un host de syslog, un host de syslog encriptado con TLS (Seguridad de la capa de transporte) o un punto final POST de HTTPS. Los métodos para
 obtener los puntos finales del registro varían para los distintos hosts de registro.
 
-  2. Cree un a instancia de servicio proporcionada por el usuario.
+  2. Cree una instancia de servicio proporcionada por el usuario.
 
 	 Utilice el mandato `cf create-user-provided-service` (o `cups`, una versión abreviada del mismo)
 para crear una instancia de servicio proporcionado por el usuario:
@@ -330,8 +331,7 @@ para sustituir *punto_final_registro* por su valor:
 ### Ejemplo: Envío de secuencia de registros de aplicaciones de Cloud Foundry a Splunk
 {: #splunk}
 
-En este ejemplo, Jane, una desarrolladora, creará un servidor virtual utilizando IBM Virtual Servers Beta y una imagen Ubuntu. Jane intenta enviar una secuencia de registros de app de Cloud Foundry desde {{site.data.keyword.Bluemix_notm}} a Splunk.
-
+En este ejemplo, Jane, una desarrolladora, creará un servidor virtual utilizando IBM Virtual Servers Beta y una imagen Ubuntu.  Jane intenta enviar una secuencia de registros de app de Cloud Foundry desde {{site.data.keyword.Bluemix_notm}} a Splunk.
 
   1. Lo primero que hace Jane es configurar Splunk.
 
@@ -352,7 +352,6 @@ En este ejemplo, Jane, una desarrolladora, creará un servidor virtual utilizand
 
         A continuación, aplica los parches al complemento, sustituyendo */opt/splunk/etc/apps/rfc5424/default/transforms.conf* con el nuevo archivo *transforms.conf* que contiene el siguiente texto:
 
-
 	    ```
         [rfc5424_host]
         DEST_KEY = MetaData:Host
@@ -366,9 +365,9 @@ En este ejemplo, Jane, una desarrolladora, creará un servidor virtual utilizand
         ```
         {:screen}
 
-     Una vez que Splunk está configurado, Jane debe abrir algunos puertos en la máquina Ubuntu para que acepte la obtención de los syslog entrantes (puerto 5140) y la interfaz de usuario web de Splunk (puerto 8000) porque de forma predeterminada el cortafuegos del servidor virtual de {{site.data.keyword.Bluemix_notm}} está activado. 
+     Una vez que Splunk está configurado, Jane debe abrir algunos puertos en la máquina Ubuntu para que acepte la obtención de los syslog entrantes (puerto 5140) y la interfaz de usuario web de Splunk (puerto 8000) porque de forma predeterminada el cortafuegos del servidor virtual de {{site.data.keyword.Bluemix_notm}} está activado.
 
-	    **Nota:** La configuración de iptable se realiza aquí a efectos de la evaluación que Jane está realizando y es temporal. Para configurar los parámetros del cortafuegos en el servidor virtual Bluemix en producción, consulte la documentación de [Grupos de seguridad de red ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} para obtener información más detallada. 
+	    **Nota:** La configuración de iptable se realiza aquí a efectos de la evaluación que Jane está realizando y es temporal. Para configurar los parámetros del cortafuegos en el servidor virtual Bluemix en producción, consulte la documentación de [Grupos de seguridad de red ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} para obtener información más detallada.
 
 	   ```
 	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
@@ -378,18 +377,17 @@ En este ejemplo, Jane, una desarrolladora, creará un servidor virtual utilizand
 	   ```
 	   {:screen}
 
-	   A continuación, Jane ejecuta Splunk utilizando el siguiente mandato: 
+	   A continuación, Jane ejecuta Splunk utilizando el siguiente mandato:
 
        ```
 	   /opt/splunk/bin/splunk start --accept-license
        ```
 
-  2. Jane configura los valores de Splunk para aceptar la obtención de syslog desde {{site.data.keyword.Bluemix_notm}}. Debe crear una entrada de datos para la obtención de syslog. 
+  2. Jane configura los valores de Splunk para aceptar la obtención de syslog desde {{site.data.keyword.Bluemix_notm}}. Debe crear una entrada de datos para la obtención de syslog.
 
-     a. Desde la interfaz web de Splunk, Jane pulsa **Datos > Entrada de datos**. 
-Se visualizará una lista de tipos de entrada a los que Splunk da soporte. 
+     a. Desde la interfaz web de Splunk, Jane pulsa **Datos > Entrada de datos**. Se visualizará una lista de tipos de entrada a los que Splunk da soporte.
 
-     b. Selecciona **TCP**, porque la obtención de syslog utiliza el protocolo TCP. 
+     b. Selecciona **TCP**, porque la obtención de syslog utiliza el protocolo TCP.
 
      c. En el panel de **TCP**, Jane especifica **5140** en el campo **Puerto**, deja los campos restantes en blanco y, a continuación, pulsa **Siguiente**.
 
@@ -399,19 +397,19 @@ Se visualizará una lista de tipos de entrada a los que Splunk da soporte.
 
      f. En el campo **Índice**, pulsa **Crear un nuevo índice**. Le otorga el nombre "bluemix" al nuevo índice y, a continuación, pulsa **Guardar**.
 
-     g. Por último, en la ventana **Revisar**, confirma que los valores son correctos y pulsa **Enviar** para habilitar esta entrada de datos. 
+     g. Por último, en la ventana **Revisar**, confirma que los valores son correctos y pulsa **Enviar** para habilitar esta entrada de datos.
 
-  3. En {{site.data.keyword.Bluemix_notm}}, Jane crea un servicio de obtención de syslog y vincula el servicio a una app. 
+  3. En {{site.data.keyword.Bluemix_notm}}, Jane crea un servicio de obtención de syslog y vincula el servicio a una app.
 
-     a. Jane crea un servicio de obtención de syslog utilizando el siguiente mandato desde la interfaz de línea de mandatos de cf: 
+     a. Jane crea un servicio de obtención de syslog utilizando el siguiente mandato desde la interfaz de línea de mandatos de cf:
 
      ```
      cf cups splunk -l syslog://dummyhost:5140
      ```
 
-     **Nota:** *dummyhost* no es el nombre real. Se utiliza para ocultar el nombre de host real. 
+     **Nota:** *dummyhost* no es el nombre real. Se utiliza para ocultar el nombre de host real.
 
-     b. Jane vincula el servicio de obtención de syslog a una app en su espacio y, a continuación, reconstruye la app. 
+     b. Jane vincula el servicio de obtención de syslog a una app en su espacio y, a continuación, reconstruye la app.
 
 	 ```
      cf bind-service myapp splunk
@@ -419,13 +417,13 @@ Se visualizará una lista de tipos de entrada a los que Splunk da soporte.
      ```
 
 
-Jane prueba su app y, a continuación, escribe la siguiente serie de consulta en la interfaz web de Splunk: 
+Jane prueba su app y, a continuación, escribe la siguiente serie de consulta en la interfaz web de Splunk:
 
 ```
 source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
-Jane verá una secuencia de registros en su interfaz web de Splunk. A pesar de que la versión de Splunk que Jane instala es Splunk Light, todavía podrá retener hasta 500MB de registros al día. 
+Jane verá una secuencia de registros en su interfaz web de Splunk. A pesar de que la versión de Splunk que Jane instala es Splunk Light, todavía podrá retener hasta 500MB de registros al día.
 
 ## Registro para apps Cloud Foundry en {{site.data.keyword.Bluemix_dedicated_notm}} y {{site.data.keyword.Bluemix_local_notm}}
 {: #hybrid_apps_logs_ov}

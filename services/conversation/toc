@@ -1,0 +1,59 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="conversation" audience="service" href="/docs/services/conversation/getting-started.html"}
+Conversation
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    show-me.md
+    [Demo: Car Dashboard](https://conversation-demo.mybluemix.net/)
+
+    {: .topicgroup}
+    Additional resources
+        [Blog](https://developer.ibm.com/watson/blog/)
+        [Webinars](http://www.ibm.com/watson/building-with-watson-webinar.html)
+        [Watson videos](https://www.youtube.com/user/IBMWatsonSolutions)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [API reference](https://www.ibm.com/watson/developercloud/conversation/api/v1/)
+
+    {: .topicgroup}
+    Sample apps
+        [Cloud Insurance Co. Web](https://github.com/IBM-Bluemix/cloudco-insurance)
+        [WatBot](https://github.com/IBM-Bluemix/chatbot-watson-android) 
+        [Simple chat app](http://conversation-simple.mybluemix.net/)
+        [Text message chatbot](https://text-bot.mybluemix.net/)
+        [Conversation and Discovery](https://conversation-with-discovery-within-ui.mybluemix.net/)
+        [Conversation and Tone Analyzer](https://food-coach.mybluemix.net/)
+
+    {: .topicgroup}
+    Watson SDKs
+        [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
+        [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
+        [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
+        [Swift SDK](https://github.com/watson-developer-cloud/ios-sdk)
+        [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
+
+    [Watson GitHub repos](https://github.com/watson-developer-cloud/)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    External docs
+        [About](https://www.ibm.com/watson/developercloud/doc/conversation/index.html)
+        [Defining intents](https://www.ibm.com/watson/developercloud/doc/conversation/intents.html)
+        [Defining entities](https://www.ibm.com/watson/developercloud/doc/conversation/entities.html)
+        [Building a dialog](https://www.ibm.com/watson/developercloud/doc/conversation/dialog-build.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    [Release notes](https://www.ibm.com/watson/developercloud/doc/conversation/release-notes.html)
+
+    {: .topicgroup}
+    Developer community
+        [StackOverflow](http://stackoverflow.com/questions/tagged/watson-conversation)
+        [developerWorks Answers](https://developer.ibm.com/answers/topics/watson-conversation/)
+        [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
+    {: .navgroup-end}

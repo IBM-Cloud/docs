@@ -20,7 +20,7 @@ Lorsque vous déployez une application dans {{site.data.keyword.Bluemix_notm}} C
 
 Chaque environnement d'exécution, y compris mobile et web, est distinct de celui des autres applications. Les environnements d'exécution sont isolés, même si les applications sont sur la même machine physique. La figure suivante présente le flux de base suivi par {{site.data.keyword.Bluemix_notm}} Cloud Foundry pour gérer le déploiement des applications :
 
-![Déploiement d'une application](images/deploy.png)
+![Déploiement d'une application](images/deploy-diego.png)
 
 Figure 3. Déploiement d'une application
 
@@ -33,7 +33,7 @@ Une fois le serveur virtuel choisi, un gestionnaire d'application sur chaque ser
 
 La figure suivante présente la structure d'un serveur virtuel, aussi appelé agent DEA (Droplet Execution Agent), sur lequel plusieurs applications sont déployées :
 
-![Conception d'un serveur virtuel](images/container.png)
+![Conception d'un serveur virtuel](images/container-diego.png)
 
 Figure 4. Conception d'un serveur virtuel
 
@@ -41,7 +41,7 @@ Sur chaque serveur virtuel, un gestionnaire d'application communique avec le res
 
 Si l'application déployée dispose d'une interface Web (par exemple, une application Web Java) ou de services REST (par exemple, des services mobiles exposés publiquement à l'application mobile), les utilisateurs de cette application peuvent communiquer avec elle via des demandes HTTP normales.
 
-![Appel d'une application {{site.data.keyword.Bluemix_notm}}](images/execute.png)
+![Appel d'une application {{site.data.keyword.Bluemix_notm}}](images/execute-diego.png)
 
 Figure 5. Appel d'une application {{site.data.keyword.Bluemix_notm}}
 
@@ -61,7 +61,7 @@ Les clients, qui peuvent être des applications mobiles, des applications exécu
 
 La figure ci-dessous présente l'architecture générale de {{site.data.keyword.Bluemix_notm}} Cloud Foundry.
 
-![Architecture {{site.data.keyword.Bluemix_notm}}](images/arch.png)
+![Architecture {{site.data.keyword.Bluemix_notm}}](images/arch-diego.png)
 
 Figure 1. Architecture de {{site.data.keyword.Bluemix_notm}} Cloud Foundry
 
@@ -90,7 +90,7 @@ Un préfixe unique est affecté à chaque région. {{site.data.keyword.Bluemix_n
 
 <!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
 
-| **Nom de région** | **Zone géographique** | **Préfixe de région** | **cf API endpoint** | **Console d'interface utilisateur** |
+| **Nom de région** | **Zone géographique** | **Préfixe de région** | **Noeud final d'API cf** | **Console d'interface utilisateur** |
 |-----------------|-------------------------|-------------------|---------------------|----------------|
 | Région Sud des Etats-Unis | Dallas, US | ng | api.ng.bluemix.net | console.ng.bluemix.net |
 | Région Royaume-Uni | Londres, Angleterre | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |

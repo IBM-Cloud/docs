@@ -10,136 +10,136 @@ lastupdated: "2017-3-3"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# About IBM {{site.data.keyword.product-insights_short}}
+# IBM {{site.data.keyword.product-insights_short}} について
 {: #about_product-insights}
 
-{{site.data.keyword.product-insights_full}} is an IBM Bluemix service, which is part of IBM Connect to Cloud. It connects your on-premises IBM software products to your {{site.data.keyword.product-insights_short}} service and provides insights into your running inventory and runtime usage metrics.
+{{site.data.keyword.product-insights_full}} は、IBM Connect to Cloud に含まれている IBM Bluemix サービスです。オンプレミスの IBM ソフトウェア製品を {{site.data.keyword.product-insights_short}} サービスに接続し、実行中の製品インベントリーとランタイム使用量メトリックを洞察できるようにします。
 
 {:shortdesc}
 
-The {{site.data.keyword.product-insights_short}} service is an entry point and more functions may be added in the future.
+{{site.data.keyword.product-insights_short}} サービスはエントリー・ポイントです。将来、機能が追加される可能性があります。
 
-{{site.data.keyword.product-insights_short}} provides the following features:
+{{site.data.keyword.product-insights_short}} には以下の機能が用意されています。
 
-* Registration of your on-premises IBM software products with IBM, specifically with a Bluemix service.
-* Data collection for connected on-premise products and associated usage data.
-* Dashboard for runtime usage data to provide real insights into your product usage and workload.
-
-
-To use the {{site.data.keyword.product-insights_full}} capabilities, complete the following steps:
-
-1. Create at least one service within Bluemix for {{site.data.keyword.product-insights_short}}.
-1. Upgrade your on-premises IBM software products to the required release levels, and add the enablement code for each product installation. 
-1. Configure the software installation with the {{site.data.keyword.bluemix_short}} credentials for your {{site.data.keyword.product-insights_short}} service instance. All of your data is securely stored with these credentials. The data is available only to the individuals with proper permissions to the service.
+* オンプレミスの IBM ソフトウェア製品を IBM (具体的には Bluemix サービス) に登録する。
+* 接続されたオンプレミス製品のデータおよび関連する使用量データを収集する。
+* ランタイム使用量データのダッシュボードにより、製品の使用量とワークロードに関するリアルな洞察を提供する。
 
 
+{{site.data.keyword.product-insights_full}} の機能を利用するには、以下の手順を実行します。
 
-## How it works
+1. {{site.data.keyword.product-insights_short}} 用のサービスを Bluemix 内に 1 つ以上作成します。
+1. オンプレミスの IBM ソフトウェア製品を必要なリリース・レベルにアップグレードし、製品のインストール済み環境ごとに有効化コードを追加します。 
+1. {{site.data.keyword.product-insights_short}} サービス・インスタンスの {{site.data.keyword.bluemix_short}} 資格情報を使用して、ソフトウェアのインストール済み環境を構成します。すべてのデータは、それらの資格情報を使用して安全に保管されます。データを利用できるのは、このサービスに対する適切な権限を持つユーザーのみです。
+
+
+
+## 仕組み
 {: #product-insights_howitworks}
-The {{site.data.keyword.product-insights_full}} service integrates with your on-premises IBM software products to gather and display runtime product information and usage metrics. Initially, a subset of IBM software products is enabled to integrate with this service. When registered and connected, on-premise software products periodically send startup and usage information. The information is stored in relation to this service instance through the configured credentials. You can use the service instance dashboard to view the information within Bluemix.
+{{site.data.keyword.product-insights_full}} サービスは、オンプレミスの IBM ソフトウェア製品と統合することで、ランタイムの製品情報と使用量メトリックを収集して表示します。まずは、IBM ソフトウェア製品のサブセットを、このサービスと統合できるように有効化します。オンプレミスのソフトウェア製品を登録して接続すると、それらの製品は定期的に起動情報と使用量情報を送信するようになります。これらの情報は、構成した資格情報を使用して、このサービス・インスタンスに関連付けて保管されます。この情報を Bluemix でサービス・インスタンス・ダッシュボードを使用して表示することができます。
 
-The {{site.data.keyword.product-insights_short}} solution includes multiple components, as shown in the following graphic:
+以下の図に示すように、{{site.data.keyword.product-insights_short}} ソリューションには複数のコンポーネントが含まれます。
 
-![{{site.data.keyword.product-insights_full}} architecture](images/architecture_product-insights.png "{{site.data.keyword.product-insights_full}} architecture").  
+![{{site.data.keyword.product-insights_full}} アーキテクチャー](images/architecture_product-insights.png "{{site.data.keyword.product-insights_full}} アーキテクチャー")。  
 
 
-## Organizations and spaces
+## 組織とスペース
 {: #product-insights_orgs}
-Your {{site.data.keyword.product-insights_full}} service is associated with a single Bluemix organization and space and has unique credentials. You must set up at least one Bluemix organization and space. If you want to separate the data, for example, to limit access to specific individuals, you can create multiple spaces within an organization with one service instance in each space. Each service instance has unique credentials that you need to provide for your IBM software products.
+{{site.data.keyword.product-insights_full}} サービスには単一の Bluemix 組織およびスペースを関連付けます。また、サービスは固有の資格情報を持ちます。少なくとも 1 つの Bluemix 組織とスペースをセットアップする必要があります。データを分離する必要がある場合は、例えば、アクセスを特定のユーザーに制限したい場合は、1 つの組織内に複数のスペースを作成し、スペースごとに 1 つのサービス・インスタンスを配置することができます。サービス・インスタンスごとに、IBM ソフトウェア製品に提供する必要がある固有の資格情報を持ちます。
 
-Information for the products that are configured with a set of credentials is only visible within the service with those credentials. Multiple services can be created to separate the data if needed, each with unique credentials.
+一式の資格情報を使用して構成された製品の情報は、それらの資格情報を持つサービスでのみ参照できます。必要な場合は、それぞれに固有の資格情報を持つ複数のサービスを作成して、データを分離することができます。
 
 
-## Service dashboard
+## サービス・ダッシュボード
 {: #service_dashboard}
-After you create your service instance, you are directed to the service dashboard. You can always return to the service dashboard by clicking the service icon in your organization dashboard. From the service dashboard, you can access the following items:
+サービス・インスタンスを作成すると、サービス・ダッシュボードが表示されます。組織ダッシュボードのサービス・アイコンをクリックして、いつでもサービス・ダッシュボードに戻ることができます。サービス・ダッシュボードからは以下の項目にアクセスできます。
 
-* The Getting started documentation
-* The service credentials that you need to connecct your on-premises products
-* An inventory of supported products and any runtime instances that are registered to the {{site.data.keyword.product-insights_short}} service instance
-* Usage information for connected runtime instances
-* Product and environment information for connected runtime instances
+* 「概説」資料
+* オンプレミス製品を接続するために必要なサービス資格情報
+* サポート対象製品および {{site.data.keyword.product-insights_short}} サービス・インスタンスに登録されているランタイム・インスタンスのインベントリー
+* 接続されているランタイム・インスタンスの使用量情報
+* 接続されているランタイム・インスタンスの製品情報と環境情報
 
-If there are no products listed in the Manage tab, click **Register a product** to view a list of supported products and access specific details on connecting product instances.
-![Service dashboard with no registered products](images/NoRegisteredProducts.jpg "Service dashboard with no registered products")
+「管理」タブに製品がリストされていない場合は、**「製品の登録 (Register a product)」**をクリックしてサポート対象製品のリストを参照し、製品インスタンスの接続方法に関する具体的な情報を表示してください。
+![登録済みの製品がないサービス・ダッシュボード](images/NoRegisteredProducts.jpg "登録済みの製品がないサービス・ダッシュボード")
 
-## Register a product
+## 製品の登録
 {: #product-insights_register}
-In the **Manage** tab, click **Register a product** to view a list of supported products. Scroll to your product, or use the search field to filter the list of products.
-![Supported products list filtered using search string](images/products-filtered.png "Filtered list of products available to be registered")
+**「管理」**タブで**「製品の登録 (Register a product)」**をクリックして、サポート対象製品のリストを表示します。目的の製品までスクロールするか、検索フィールドを使用して製品リストをフィルタリングします。
+![検索文字列を使用してフィルタリングされたサポート対象製品のリスト](images/products-filtered.png "フィルタリングされた登録可能な製品のリスト")
 
-To view instructions on registering an instance of a product, select it from the list.
+製品のインスタンスを登録する手順を参照するには、リストからその製品を選択します。
 
-When you connect a product instance to the {{site.data.keyword.product-insights_short}} service, it is displayed in the **Manage** tab of the dashboard. A dashboard can list multiple connected product instances across different products.
+製品インスタンスを {{site.data.keyword.product-insights_short}} サービスに接続すると、その製品インスタンスがダッシュボードの**「管理」**タブに表示されます。ダッシュボードには、接続されている複数の製品インスタンスが、製品の種類にかかわらずリストされます。
 
-## Product inventory
+## 製品インベントリー
 {: #product-insights_products}
-After you enable product instances to send data to {{site.data.keyword.product-insights_short}}, you can view your inventory by selecting **Manage** in the service dashboard.
+{{site.data.keyword.product-insights_short}} にデータを送信できるように各製品インスタンスを有効化したら、サービス・ダッシュボードの**「管理」**を選択してインベントリーを表示できます。
 
-![Service dashboard with products and product instances](images/productinstances.png "Service dashboard with products and product instances") 
+![製品と製品インスタンスが表示されたサービス・ダッシュボード](images/productinstances.png "製品と製品インスタンスが表示されたサービス・ダッシュボード") 
 
-For {{site.data.keyword.product-insights_short}}, a product is different from a product instance. A product has a product name, like IBM MQ or IBM WebSphere Application Server Liberty Network Deployment. A product instance is used to represent a product after the product is installed and running. Some products have multiple instances that are run from within the same installation of the product. For example, WebSphere Application Server Liberty Network Deployment can run multiple applications servers that are created from a single installation of the product.
+{{site.data.keyword.product-insights_short}} では、製品と製品インスタンスは異なります。製品には、IBM MQ や IBM WebSphere Application Server Liberty Network Deployment などの製品名があります。製品インスタンスとは、インストールされ、実行されている製品を表すものです。製品によっては、同じインストール環境内から複数のインスタンスを実行できるものがあります。例えば、WebSphere Application Server Liberty Network Deployment は、製品の単一のインストール環境から作成された複数のアプリケーション・サーバーを実行できます。
 
-In the service dashboard, the names of the registered products are shown under the *View all* choice in the **Products** pane. Connected instances are listed in the **Instances** pane. This pane contains instances of the products that are selected in the **Products** pane. In the following example, all of the product instances are shown because the *View all* choice is selected in the Products pane. This example shows six products, some with multiple instances connected. You can filter the list of instances using the **Search Instances** field or by selecting a product entry. To view details for a product instance, select its entry in the **Instances** pane.
+サービス・ダッシュボードでは、**「製品」**ペインの選択項目*「すべて表示」*の下に、登録された製品の名前が表示されます。接続されているインスタンスは、**「インスタンス」**ペインにリストされます。このペインには、**「製品」**ペインで選択した製品のインスタンスが表示されます。以下の例では、「製品」ペインで*「すべて表示」*項目が選択されているため、すべての製品インスタンスが表示されています。この例では 6 つの製品が表示されており、その中には複数のインスタンスが接続されているものがあります。インスタンスのリストをフィルタリングするには、**「インスタンスの検索 (Search Instances)」**フィールドを使用するか、製品の項目を選択します。製品インスタンスの詳細を表示するには、**「インスタンス」**ペインでその項目を選択します。
 
-The list of product instances that are displayed is filtered as you browse. To aid navigation, the browsed path to a selected instance is displayed.
+表示される製品インスタンスのリストは、ユーザーが参照している内容に応じてフィルタリングされます。ナビゲーションに役立つように、選択したインスタンスまでの参照パスが表示されます。
 
-![Service dashboard](images/products.png "Service dashboard") 
+![サービス・ダッシュボード](images/products.png "サービス・ダッシュボード") 
 
 
 
-## Product instance information
+## 製品インスタンスの情報
 {: #product-insights_productinstances}
-When a product instance is selected, the **Instance details** pane is populated. The pane shows usage data, product details, and recommendations for the product instance through an **Advisor** tab.
+製品インスタンスを選択すると、**「インスタンスの詳細」**ペインにデータが表示されます。このペインには、使用量データ、製品の詳細情報、製品インスタンスに関する推奨情報 (これは **「アドバイザー (Advisor)」**タブに表示されます) が示されます。
 
 
-## Usage information
+## 使用量情報
 {: #product-insights_usage}
-The usage information is shown on the **Usage** tab. Use the two drop-down lists to select the metric to display (if the product instance sends more than one metric) and the time period to be displayed.
+使用量情報は**「使用量」**タブに表示されます。2 つのドロップダウン・リストを使用して、表示するメトリック (製品インスタンスが複数のメトリックを送信する場合) と、表示する期間を選択します。
 
-If the product instance sends more than one metric, use the first drop-down to select which metric to display. Select the time period to display from the second drop-down. The options for the time period for the sections are Last 24 hours, 1 week, 1 month, 6 months, 1 year.
+製品インスタンスが複数のメトリックを送信する場合は、1 番目のドロップダウンを使用して、表示するメトリックを選択します。2 番目のドロップダウンでは、表示する期間を選択します。各セクションの期間として選択できるオプションは、過去 24 時間、1 週間、1 カ月、6 カ月、1 年です。
 
-The first section shows the average maximum, average, average minimum, and total of the metric values over the selected time period. The second section shows a graph of the values within the time period with the x-axis period, which changes based on the selected time period. For example, Last 24 hours shows graph points for each hour, while the 1-week display shows graph points for each day within that week). The final section shows the maximum, average, and minimum for the selected graph point. To see the values for another point on the graph, drag the time bar to a new position.
+1 番目のセクションには、選択した期間におけるメトリック値の平均最大値、平均値、平均最小値、合計値が表示されます。2 番目のセクションには、X 軸を期間として対象期間内の値を示すグラフが表示されます。X 軸の期間は、選択した期間に応じて変わります。例えば、過去 24 時間を選択した場合、グラフの点の表示間隔は 1 時間単位になりますが、1 週間を選択した場合はその週の日単位になります。最後のセクションには、選択したグラフ上の点における最大値、平均値、最小値が表示されます。グラフ上の別の点の各値を表示するには、時間バーを新たな位置にドラッグします。
 
-A message is shown if there is no data for that time period. For example, a stopped instance would not provide data and no data will be shown for the time period when it was stopped. Other time periods can have usage to display. Change the time period in the drop-down to see other time periods.
+対象期間にデータが存在しない場合は、メッセージが表示されます。例えば、停止したインスタンスはデータを提供しないため、停止期間のデータは表示されません。他の期間にすると、使用量が表示される可能性があります。他の期間を表示するには、ドロップダウンで期間を変更します。
 
-The **Details** tab shows product instance information, which can include the following items:
+**「詳細」**タブには、以下の項目を含む製品インスタンス情報が表示されます。
 
-* The product name and version
-* The location where the product is installed, including the host name and directory
-* The last time when the instance sent information on startup
-* The instance identifier if the product can have multiple instances within a single directory
+* 製品名およびバージョン
+* 製品がインストールされている場所 (ホスト名とディレクトリーを含む)
+* インスタンスが始動時の情報を最後に送信した時刻
+* インスタンス ID (単一のディレクトリー内に複数のインスタンスを作成できる製品の場合)
 
-![Product instance details](images/instancedetail.png "Product instance details") 
+![製品インスタンスの詳細](images/instancedetail.png "製品インスタンスの詳細") 
 
-The product instance also provides the following optional information:
+製品インスタンスは、以下のオプションの情報も提供します。
 
-* A list of APARs that are installed. 
-* The operating system and its version, which is shown in the **Environment** tab.
-![Product instance details - Environment tab](images/instancedetails-env.png "Product instance details - Environment tab")
-* Components or installed features, which are shown in the **Components** tab. The example does not show the  **Components** tab because the instance of IBM Product XYZ does not provide any additional component information.
-![Product instance details - Component tab](images/instancedetails-comps.png "Product instance details - Component tab")
-* The unique identifier for the product instance, which is a combination of the host name, directory, and instance identifier.
+* インストールされている APAR のリスト。 
+* オペレーティング・システムとそのバージョン。これは**「環境」**タブに表示されます。
+![製品インスタンスの詳細 -「環境」タブ](images/instancedetails-env.png "製品インスタンスの詳細 -「環境」タブ")
+* コンポーネントまたはインストール済みのフィーチャー。これらは**「コンポーネント」**タブに表示されます。この例では、IBM Product XYZ のインスタンスが追加のコンポーネント情報を提供しないため、**「コンポーネント」**タブが表示されていません。
+![製品インスタンスの詳細 -「コンポーネント」タブ](images/instancedetails-comps.png "製品インスタンスの詳細 -「コンポーネント」タブ")
+* 製品インスタンスの固有 ID。これは、ホスト名、ディレクトリー、インスタンス ID を組み合わせたものです。
 
  
 
 
-## Searching 
+## 検索 
 {: #product-insights_search}
-The **Product instance** pane provides a basic search capability to filter the product list. In the search field, type in the string that you want to use for the search. The search can be done only for product instance data (that is, the information in the **Details** tab).
+**「製品のインスタンス」**ペインには、製品リストをフィルタリングするための基本的な検索機能があります。検索フィールドに、検索に使用する文字列を入力します。検索できる対象は、製品インスタンスのデータ (つまり、**「詳細」**タブの情報) のみです。
 
 
 
 <!-- If your service doc doesn't have a troubleshooting topic or section, you can add the following to your About: -->
 <!-- Add a heading and content for how to get help and support. Use this template for beta and GA services:  -->
-## Getting help for {{site.data.keyword.product-insights_short}}
+## {{site.data.keyword.product-insights_short}} 用のヘルプの入手
 {: #gettinghelp}
 
-Detailed information about creating a service, getting the updates to the enabled IBM software products, and installation and configuration steps are found in the [{{site.data.keyword.product-insights_full}} Technical Community](https://developer.ibm.com/product-insights/). If you have problems or questions when you are using {{site.data.keyword.product-insights_short}}, view or post questions in the forums section of the Community. These questions are handled by the development and customer programs team.
+サービスの作成、有効な IBM ソフトウェア製品に対する更新の取得、インストールと構成の手順の詳細については、[{{site.data.keyword.product-insights_full}} Technical Community](https://developer.ibm.com/product-insights/) を参照してください。{{site.data.keyword.product-insights_short}} の使用について問題点または不明な点がある場合は、このコミュニティーのフォーラム・セクションで質問を参照または投稿してください。質問には、開発およびカスタマー・プログラム・チームが対応します。
 
-You can also use Stack Overflow and IBM DeveloperWorks dw Answers forums to view or post questions. For questions about the service and getting start instructions, use IBM developerWorks dW Answers. When you post a question on either of those two forums, apply the following tagging rules so that the Bluemix development teams can easily see your question.
+また、Stack Overflow フォーラムと IBM DeveloperWorks dw Answers フォーラムを利用して、質問を参照または投稿することもできます。サービスや開始手順に関する質問については、IBM developerWorks dW Answers をご利用ください。これら 2 つのフォーラムのいずれかで質問を投稿するときには、Bluemix 開発チームがお客様の質問を簡単に見つけられるように、以下のタグ付けルールを適用してください。
 
-* Click to post on [Stack Overflow](http://stackoverflow.com/search?q=hybrid-connect+ibm-bluemix){:new_window}, tag your question with "ibm-bluemix" and "productinsights".
-* Click to post on [IBM developerWorks dW Answers](https://developer.ibm.com/answers/smartspace/productinsights/){:new_window}, tag your questions with "productinsights" or "hybridconnect".
+* [Stack Overflow](http://stackoverflow.com/search?q=hybrid-connect+ibm-bluemix){:new_window} をクリックして投稿し、質問に「ibm-bluemix」と「productinsights」というタグを付けます。
+* [IBM developerWorks dW Answers](https://developer.ibm.com/answers/smartspace/productinsights/){:new_window} をクリックして投稿し、質問に「productinsights」または「hybridconnect」というタグを付けます。
 
-For more information about using the forums, see the [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help) topic.
+フォーラムの使用方法について詳しくは、[ヘルプの取得](https://www.{DomainName}/docs/support/index.html#getting-help)に関するトピックを参照してください。

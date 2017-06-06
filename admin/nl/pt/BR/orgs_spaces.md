@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-24"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-04-24"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-# Gerenciando organizações e espaços
+# Criando organizações e espaços
 {: #orgsspacesusers}
 
 Como um proprietário da conta, é possível gerenciar suas organizações usando a página
@@ -26,8 +26,8 @@ clique em **Gerenciar** &gt; **Conta** &gt;
 
 **Observação**: deve-se ser o proprietário de uma conta pay-as-you-go para criar uma organização.
 
-## Gerenciando Organizações
-{: #orginfo}
+## Criando Organizações
+{: #createorg}
 
 As organizações podem abranger múltiplas regiões e elas são definidas pelos itens a seguir:
 
@@ -36,11 +36,11 @@ As organizações podem abranger múltiplas regiões e elas são definidas pelos
 <dd>A função com permissão básica em organizações e espaços. Você deve estar designado a
 uma organização para poder receber permissões para os espaços dentro da organização. Para
 obter informações detalhadas, veja
-[Usuários e funções](/docs/admin/users_roles.html#userrolesinfo).</dd>
+[Usuários e funções](/docs/iam/users_roles.html#userrolesinfo).</dd>
 <dt>Domínios</dt>
 <dd>Fornecem a rota na Internet que é alocada para a organização. Uma rota tem um subdomínio e um domínio. Um subdomínio normalmente é o nome do aplicativo. Um
 domínio pode ser um domínio do sistema ou um domínio customizado que você registrou para
-seu aplicativo. Veja [Gerenciando domínios customizados](/docs/admin/orgs_spaces.html#managedomains).<br/>
+seu aplicativo. Veja [Gerenciando domínios customizados](/docs/admin/manageorg.html#managedomains).<br/>
 <p>**Nota:** se um domínio customizado é incluído, deve-se configurar seu servidor DNS para resolver seu domínio customizado para apontar para o domínio de sistema {{site.data.keyword.Bluemix_notm}}. Dessa
 maneira, quando o
 {{site.data.keyword.Bluemix_notm}}
@@ -48,7 +48,7 @@ receber uma solicitação para o domínio customizado, ele poderá roteá-lo cor
 para o aplicativo.</p></dd>
 <dt>Cota</dt>
 <dd>Representa os recursos que estão disponíveis para uma organização, incluindo o número de serviços e a quantia de memória que pode ser alocada para uso pela organização. As cotas são designadas quando as organizações são criadas. Qualquer aplicativo ou serviço em um espaço dentro de uma organização contribui para o uso da cota. Com planos de Pagamento por uso ou de Assinatura, é possível ajustar a sua cota para aplicativos e contêineres do Cloud Foundry
-conforme as necessidades de mudança da sua organização. Consulte [Gerenciando cota](/docs/admin/orgs_spaces.html#managequota). 
+conforme as necessidades de mudança da sua organização. Consulte [Gerenciando cota](/docs/admin/manageorg.html#managequota).
 <p>**Nota:** em uma conta da Assinatura, a cota é um limite definido pelo usuário que aciona notificações de gasto.</p></dd>
 </dl>
 
@@ -67,37 +67,15 @@ Local, então, deverá especificar um novo nome. Depois de criar a organização
 *Gerenciador de organização*, que permite editar o nome da organização, incluir membros da equipe e criar ou excluir espaços na organização.
 
 É possível usar o comando [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) para excluir organizações. Ao excluir uma organização, todos os espaços, aplicativos e serviços
-dentro da organização são excluídos.  
+dentro da organização são excluídos.
 
-As [funções de usuário](/docs/admin/users_roles.html#userrolesinfo) a seguir podem ser designadas para membros da equipe em uma organização:
+As [funções de usuário](/docs/iam/users_roles.html#userrolesinfo) a seguir podem ser designadas para membros da equipe em uma organização:
 
 <ul>
 <li>Gerente da organização</li>
 <li>Gerente de faturamento da organização</li>
 <li>Auditor da organização</li>
 </ul>
-
-<!-- Add info on Manage infrastructure option under a space -->
-
-## Usando Espaços
-{: #spaceinfo}
-
-Dentro de uma organização, é possível usar espaços para agrupar um conjunto de aplicativos, serviços e membros da equipe. Espaços são ligados a uma região específica no
-{{site.data.keyword.Bluemix_notm}}.
-
-Após incluir membros da equipe em uma organização, é possível conceder a eles permissões para os espaços. Semelhantes às organizações, os espaços também têm um conjunto de
-[funções de usuário](/docs/admin/users_roles.html#userrolesinfo) com permissões específicas que são designadas a membros da equipe:
-
-<ul>
-<li>Gerente de espaço</li>
-<li>Desenvolvedor de espaço</li>
-<li>Auditor de espaço</li>
-</ul>
-
-**Nota**: um membro da equipe deve ser designado a pelo menos uma das permissões no espaço.
-
-## Criando organizações e espaços
-{: #createorg}
 
 Somente proprietários da conta com contas de Pagamento por uso podem criar uma organização. É possível criar uma organização concluindo as etapas a seguir:
 
@@ -106,6 +84,25 @@ Somente proprietários da conta com contas de Pagamento por uso podem criar uma 
 2. Clique em **Incluir uma nova organização**.
 3. Insira o nome da organização.
 4. Clique em ** Adicionar**.
+
+<!-- Add info on Manage infrastructure option under a space -->
+
+## Criando Espaços
+{: #spaceinfo}
+
+Dentro de uma organização, é possível usar espaços para agrupar um conjunto de aplicativos, serviços e membros da equipe. Espaços são ligados a uma região específica no
+{{site.data.keyword.Bluemix_notm}}.
+
+Após incluir membros da equipe em uma organização, é possível conceder a eles permissões para os espaços. Semelhantes às organizações, os espaços também têm um conjunto de
+[funções de usuário](/docs/iam/users_roles.html#userrolesinfo) com permissões específicas que são designadas a membros da equipe:
+
+<ul>
+<li>Gerente de espaço</li>
+<li>Desenvolvedor de espaço</li>
+<li>Auditor de espaço</li>
+</ul>
+
+**Nota**: um membro da equipe deve ser designado a pelo menos uma das permissões no espaço.
 
 É possível criar espaços em
 sua organização, por exemplo, um espaço *dev* como
@@ -120,109 +117,3 @@ detalhes**.
 4. Clique em **Incluir um espaço**.
 5. Insira o nome de espaço.
 6. Clique em ** Adicionar**.
-
-## Renomear uma organização
-{: #orgrename}
-
-Conclua as etapas a seguir para renomear sua organização:
-
-1. Clique em **Gerenciar** &gt; **Conta** &gt;
-**Organizações**.
-2. Identifique a organização que deseja editar e selecione **Visualizar detalhes**.
-3. Selecione **Editar organização**.
-4. Selecione **Editar** para o título da organização.
-5. Digite o novo nome da organização.
-6. Clique em **SALVAR**.
-
-## Excluir uma organização ou um espaço existente
-{: #deleteorgs}
-
-Como proprietário da conta, é possível excluir uma organização usando a CLI do {{site.data.keyword.Bluemix_notm}}. Use o comando [`bx iam org-delete`](/docs/cli/reference/bluemix_cli/bx_cli.html#bluemix_iam_org_delete) para excluir organizações. Ao excluir uma organização, todos os espaços, aplicativos e serviços
-dentro da organização são excluídos. 
-
-**Nota**: Não é possível inverter operações de exclusão. Você perderá todos os aplicativos e
-serviços que estiverem associados à organização.
-
-É possível excluir um espaço da página **Gerenciar organizações**:
-
-1. Clique em **Gerenciar** &gt; **Conta** &gt;
-**Organizações**.
-2. Identifique a organização que deseja editar e selecione **Visualizar detalhes**.
-3. Identifique o espaço que você deseja excluir e selecione **Editar espaço**.
-4. Clique em **Excluir espaço**.
-
-## Listando membros
-{: #listmembers}
-
-Conclua as etapas a seguir, para listar os membros para uma organização específica:
-
-1. Clique em **Gerenciar** &gt; **Conta** &gt;
-**Organizações**.
-2. Identifique a organização para a qual deseja visualizar os membros e clique em **Visualizar detalhes**.
-3. Clique em **Editar organização**.
-4. É possível ver os membros de sua organização e suas funções na guia **USUÁRIOS**.
-
-Conclua as etapas a seguir, para listar os membros para um espaço específico:
-
-1. Clique em **Gerenciar** &gt; **Conta** &gt;
-**Organizações**.
-2. Identifique a organização para a qual deseja visualizar os membros e clique em **Visualizar detalhes**.
-3. Identifique o espaço para a qual deseja visualizar os membros e clique em **Editar espaço**.
-4. É possível ver os membros de seu espaço e suas funções na guia **USUÁRIOS**.
-
-## Gerenciando cota
-{: #managequota}
-
-Como um proprietário da conta ou gerenciador de organização do {{site.data.keyword.Bluemix_notm}}, é possível visualizar a cota usada e alocada para uma
-organização. A cota representa os limites de recurso para a organização, a qual é designada quando a organização é criada. Dependendo se você tem uma conta de avaliação
-ou uma conta faturável, os recursos que estão disponíveis para uma organização variam. Qualquer aplicativo ou serviço em um espaço dentro da organização contribui
-para o uso da cota alocada.
-
-Para visualizar a cota usada e alocada para uma organização, conclua as etapas a seguir:
-
-1. Clique em **Gerenciar** &gt; **Conta** &gt;
-**Organizações**.
-2. Identifique a organização para a qual deseja visualizar a cota e clique em **Visualizar detalhes**.
-3. Clique em **Editar organização**.
-4. Se você tiver espaços definidos em mais de uma região, selecione a região específica que deseja visualizar.
-5. Clique em **COTA**. 
-6. Por padrão, a página de cota do **Cloud Foundry** é aberta. É possível visualizar os detalhes da cota para os recursos a seguir:
- * MEMÓRIA
- * SERVIÇOS
- * PLANO
- * PREÇO
-7. Clique em **Contêineres** para visualizar a alocação de cota de contêiner usada e disponível. A alocação de contêiner varia dependendo
-de seu plano de precificação. É possível visualizar os detalhes da cota para os recursos a seguir:
- * MEMÓRIA
- * IP PÚBLICO
- * COMPARTILHAMENTOS DE ARQUIVO
-8. Clique em **Servidores virtuais** para visualizar as máquinas virtuais.
-
-**Nota:** Os contêineres não estão disponíveis na região de Sydney do {{site.data.keyword.Bluemix_notm}}. 
-
-Para obter mais informações sobre contêineres, consulte [Cota](/docs/containers/container_planning.html#container_planning_quota) na
-documentação de Contêineres.
-Para mudar a cota que está alocada para uma organização, deve-se abrir um chamado de suporte. Para obter mais informações sobre como abrir um chamado de suporte,
-consulte [Obtendo suporte ao cliente](/docs/support/index.html#contacting-support). 
-
-## Gerenciando Domínios
-{: #managedomains}
-
-Como um proprietário da conta ou gerenciador de organização, é possível visualizar o domínio do sistema e incluir domínios customizados para aplicativos que são construídos dentro de uma organização e
-de seus espaços. Como um gerenciador de espaço, a guia **Domínios** para um espaço é uma lista somente leitura dos domínios designados ao espaço.
-
-1. Clique em **Gerenciar** &gt; **Conta** &gt;
-**Organizações**.
-2. Identifique a organização para a qual deseja visualizar ou editar domínios.
-3. Selecione **Visualizar detalhes** para essa organização.
-4. Clique em **Editar organização**.
-5. Clique em **DOMÍNIOS**.
-
-Se você incluir um domínio customizado, deverá
-configurar seu servidor DNS para resolver seu domínio customizado para apontar para o
-domínio do sistema {{site.data.keyword.Bluemix_notm}}. Dessa
-maneira, quando o
-{{site.data.keyword.Bluemix_notm}}
-receber uma solicitação para o domínio customizado, ele poderá roteá-lo corretamente
-para o aplicativo. O domínio do sistema está sempre disponível para um espaço e domínios customizados também podem ser alocados para um espaço. Aplicativos criados em um espaço podem usar qualquer um dos
-domínios listados para esse espaço. Para obter mais informações sobre como criar e usar domínios customizados, consulte [Usando um domínio customizado](/docs/manageapps/updapps.html#domain).

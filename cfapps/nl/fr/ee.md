@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -29,8 +29,15 @@ commencer.
 
 Avant de commencer, vous vous inscrivez pour obtenir un IBMid sur
 [https://console.ng.bluemix.net/
-![icône de lien externe](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window}. Ensuite, vous vous connectez à {{site.data.keyword.Bluemix_notm}} et commencez votre essai gratuit de 30 jours. {{site.data.keyword.Bluemix_notm}} fournit une franchise de 2 Go de mémoire d'exécution et 10 instances de
+![Icône de lien externe](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window}. Ensuite, vous vous connectez à {{site.data.keyword.Bluemix_notm}} et commencez votre essai gratuit de 30 jours. {{site.data.keyword.Bluemix_notm}} fournit une franchise de 2 Go de mémoire d'exécution et 10 instances de
 service dans le cadre de votre essai gratuit.
+
+
+## Développement et déploiement d'applications à l'aide de chaînes d'outils et du service {{site.data.keyword.contdelivery_short}} 
+{: #ee_cd}
+
+<a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">Ajoutez une chaîne d'outils</a> qui inclut le service {{site.data.keyword.contdelivery_full}} à votre application. Ensuite, <a href="docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">utilisez-la</a> pour développer et déployer votre application. 
+
 
 ## Création de votre application Web via l'interface utilisateur {{site.data.keyword.Bluemix_notm}}
 {: #ee_appui}

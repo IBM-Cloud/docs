@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-01-09"
+lastupdated: "2017-03-29"
 
 
 ---
@@ -15,38 +15,19 @@ lastupdated: "2017-01-09"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-<!-- staging only content beginning -->
+# Registro en Bluemix 
 
-# Configuración de la cuenta
-{: #account}
-
-Ahora que se ha inscrito para {{site.data.keyword.Bluemix_notm}}, debe configurar su cuenta para que pueda desplazarse rápidamente para suministrar las aplicaciones de infraestructura o de creación.
+Puede registrarse para obtener una cuenta de {{site.data.keyword.Bluemix}} utilizando un ID de IBM existente, creando un nuevo ID de IBM o utilizando un ID federado. Un ID federado es un ID dentro del dominio de una empresa que ha sido registrado con IBM, por lo que el dominio y las credenciales de usuario pueden utilizarse para acceder a aplicaciones web de IBM.
 {:shortdesc}
 
-Cuando inicie por primera vez {{site.data.keyword.Bluemix_notm}}, le interesará configurar el perfil de la cuenta, que incluye la carga de una imagen de perfil. También puede configurar las organizaciones y los espacios para la cuenta, e invitar a los miembros del equipo a cada una de las organizaciones y espacios. 
+Puede registrarse para obtener una cuenta de {{site.data.keyword.Bluemix_notm}} utilizando un ID de IBM existente, creando un nuevo ID de IBM o utilizando un ID federado. Un ID federado es un ID dentro del dominio de una empresa que ha sido registrado con IBM, por lo que el dominio y las credenciales de usuario pueden utilizarse para acceder a aplicaciones web de IBM.  
 
-Puede ver los detalles para cada cuenta de la que sea propietario pulsando el enlace **Cuenta** en la barra de menús. Estos detalles incluyen la información de facturación asociada, la información de uso, un directorio de equipo de los miembros y todas las organizaciones de las que es propietario o que gestiona para cada cuenta, 
+Es posible utilizar un ID federado para registrarse en {{site.data.keyword.Bluemix_notm}} solo si su empresa ya ha trabajado con IBM para el registro.  El registro del dominio de una empresa con IBM permite que los usuarios puedan iniciar sesión en los productos y servicios de IBM utilizando sus credenciales de usuario de empresa existentes. La autenticación la gestiona el proveedor de identidades de la empresa. Al iniciar sesión en
+{{site.data.keyword.Bluemix_notm}} con un ID federado, se le solicita que inicie sesión a través de la página de inicio de sesión de su empresa. Para obtener información sobre la solicitud para registrar el dominio de su empresa u organización con IBM, o para obtener más información sobre el proceso, consulte [Guía de adopción de federación empresarial de ID de IBM ![icono de enlace externo](../icons/launch-glyph.svg)](https://ibm.box.com/v/IBMid-Federation-Guide){: new_window}. Es necesario un patrocinador de IBM, como un abogado de ofertas o un abogado de cliente, al solicitar el registro de ID federados.
 
-Si es un administrador para {{site.data.keyword.Bluemix_notm}} local o {{site.data.keyword.Bluemix_notm}} dedicado, consulte [Gestión de {{site.data.keyword.Bluemix_notm}} local o {{site.data.keyword.Bluemix_notm}} dedicado](/docs/admin/index.html#mng) para obtener detalles sobre cómo gestionar la cuenta utilizando la página Administración.
-
-También es posible que desee iniciar sesión para las notificaciones, comprobar las opciones de soporte para saber dónde obtener ayuda, o incluso proporcionar comentarios a IBM.  
-
-- **Notificaciones** 
-  
-  Regístrese para que se le notifiquen las actualizaciones de mantenimiento para regiones públicas de la plataforma {{site.data.keyword.Bluemix_notm}}, y los servicios asociados, así como incidentes, notificaciones de seguridad, y otros anuncios. Puede apuntar el lector de canales de información RSS en el enlace RSS de la [página de estado de Bluemix ![icono de enlace externo](../icons/launch-glyph.svg)](http://ibm.biz/Bluemixstatus){: new_window} para mantenerse actualizado sobre los cambios realizados en {{site.data.keyword.Bluemix_notm}} Público.  Para obtener más detalles sobre la configuración de notificaciones, consulte [Visualización del estado de Bluemix](/docs/support/index.html#viewing-bluemix-status).
-
-- **Opciones de soporte** 
-  
-  Consulte las opciones de soporte disponibles, para que sepa exactamente dónde ir y qué hacer si se encuentra con problemas. Para obtener más detalles sobre las opciones de soporte, consulte [Obtención de soporte al cliente](/docs/support/index.html#getting-customer-support).
-
-- **Empezar a crear código** 
-  
-  Cree su primera aplicación. Vaya al **Catálogo** para revisar la variedad de cálculo y servicios disponibles con los que se desarrolla y extraiga los contenedores modelo y las aplicaciones de ejemplo disponibles para que le den un inicio rápido en la codificación.
-
-- **Proporcionar comentarios sobre {{site.data.keyword.Bluemix_notm}}** 
-  
-  Puede proporcionar comentarios sobre el producto o la documentación. 
-  
-  Para enviar ideas para {{site.data.keyword.Bluemix_notm}} y las mejoras de servicio, vaya a [IBM Cloud Ideas ![icono de enlace externo](../icons/launch-glyph.svg)](https://ibmcloud.ideas.aha.io){: new_window}. Para obtener más información sobre cómo utilizar el nuevo portal de ideas, consulte [Think, write, submit: New ideas portal for IBM Cloud ![icono de enlace externo](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/10/05/think-write-submit/){: new_window}. 
-  
-  Para proporcionar comentarios sobre la documentación, pulse el enlace **Comentarios** de cada página, o colabore con nosotros pulsando el enlace **Editar en GitHub** tras el título. Para obtener más información sobre cómo colaborar en los documentos, consulte [When it comes to docs, everyone can contribute in Bluemix ![icono de enlace externo](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/01/13/bluemix-docs-now-open-source-on-github/){: new_window}.
+| Métodos de inicio de sesión | Detalles |    
+|-----------------|---------|
+|ID de IBM existente | Si ya tiene un ID de IBM, regístrese en {{site.data.keyword.Bluemix_notm}} con sus credenciales existentes que utilice para otros productos y servicios de IBM. Se le solicitará que especifique un número de teléfono al registrarse. |
+|ID de IBM nuevo | Si no aún no tiene un ID de IBM, puede optar por crear uno. El ID de IBM le permite utilizar un nombre de usuario de inicio de sesión para todos los productos y servicios de IBM que utilice, incluyendo {{site.data.keyword.Bluemix_notm}}. Deberá especificar su información personal, incluyendo su nombre y apellido, número de teléfono y contraseña para las nuevas credenciales. Puede utilizar este ID de IBM para iniciar sesión al utilizar otros productos y servicios de IBM.  |
+|ID federado | Si la empresa ha solicitado registrar las credenciales de usuario desde el dominio de su empresa con IBM, puede registrarse en {{site.data.keyword.Bluemix_notm}} utilizando las credenciales que ya utilice para el inicio de sesión de su empresa. Se le solicitará que especifique un número de teléfono al registrarse. |
+{:caption="Tabla 1. Métodos de inicio de sesión" caption-side="top"}

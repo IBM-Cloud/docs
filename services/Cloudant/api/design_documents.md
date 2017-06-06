@@ -103,7 +103,7 @@ Destination: /recipes/_design/recipelist
 _Example command to copy a design document, using the command line:_
 
 ```sh
-curl "https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/recipes/_design/recipes" \
+curl "https://$ACCOUNT.cloudant.com/recipes/_design/recipes" \
 	-X COPY \
 	-H 'Content-Type: application/json' \
 	-H 'Destination: /recipes/_design/recipelist'
@@ -158,7 +158,7 @@ Destination: recipes/_design/recipelist
 _Example command to copy a specific revision of the design document, using the command line:_
 
 ```sh
-curl "https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/recipes/_design/recipes?rev=1-e23b9e942c19e9fb10ff1fde2e50e0f5" \
+curl "https://$ACCOUNT.cloudant.com/recipes/_design/recipes?rev=1-e23b9e942c19e9fb10ff1fde2e50e0f5" \
 	-X COPY \
 	-H 'Content-Type: application/json' \
 	-H 'Destination: /recipes/_design/recipelist'
@@ -183,7 +183,7 @@ Destination: recipes/_design/recipelist?rev=1-9c65296036141e575d32ba9c034dd3ee
 _Example command to overwrite an existing copy of the design document, using the command line:_
 
 ```sh
-curl "https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/recipes/_design/recipes" \
+curl "https://$ACCOUNT.cloudant.com/recipes/_design/recipes" \
 	-X COPY \
 	-H 'Content-Type: application/json' \
 	-H 'Destination: /recipes/_design/recipelist?rev=1-9c65296036141e575d32ba9c034dd3ee'
@@ -221,7 +221,7 @@ DELETE /recipes/_design/recipes?rev=2-ac58d589b37d01c00f45a4418c5a15a8 HTTP/1.1
 _Example command to delete a design document, using using the command line:_
 
 ```sh
-curl "https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/recipes/_design/recipes?rev=2-ac58d589b37d01c00f45a4418c5a15a8" \
+curl "https://$ACCOUNT.cloudant.com/recipes/_design/recipes?rev=2-ac58d589b37d01c00f45a4418c5a15a8" \
      -X DELETE
 ```
 {:codeblock}
@@ -363,7 +363,7 @@ consider whether any computations done in a list function would be better placed
 
 When you define a list function,
 you use it by sending a `GET` request to
-`https://$USERNAME.cloudant.com/$DATABASE/$DESIGN_ID/_list/$LIST_FUNCTION/$MAPREDUCE_INDEX`.
+`https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_list/$LIST_FUNCTION/$MAPREDUCE_INDEX`.
 In this request:
 
 *	`$LIST_FUNCTION` is the name of list function you defined.
@@ -432,7 +432,6 @@ _Example invocation of a list function, using the command line:_
 
 ```sh
 curl "https://$ACCOUNT.cloudant.com/$DATABASE/$DESIGN_ID/_list/$LIST_FUNCTION/$MAPREDUCE_INDEX" \
-	-u "$USERNAME:$PASSWORD"
 ```
 {:codeblock}
 
@@ -442,7 +441,7 @@ _Example invocation of a list function, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$USERNAME+".cloudant.com");
+var account = nano("https://"+$ACCOUNT+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
 var db = account.use($DATABASE);
 
 db.view_with_list($DESIGN_ID, $MAPREDUCE_INDEX, $LIST_FUNCTION, function (err, body, headers) {
@@ -508,7 +507,7 @@ because they are based on additional factors such as query parameters or the use
 The [`req`](#req) argument corresponds to that used in a [list function](#list-functions).
 
 When you have defined a show function,
-you query it by sending a `GET` request to `https://$USERNAME.cloudant.com/$DATABASE/$DESIGN_ID/_show/$SHOW_FUNCTION/$DOCUMENT_ID`,
+you query it by sending a `GET` request to `https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_show/$SHOW_FUNCTION/$DOCUMENT_ID`,
 where `$SHOW_FUNCTION` is the name of the function that is included in the design document `$DESIGN_ID`.
 
 _Example of a design document with a show function:_
@@ -540,15 +539,14 @@ _Example of a show function query, using HTTP:_
 
 ```http
 GET /$DATABASE/$DESIGN_ID/_show/$SHOW_FUNCTION/$DOCUMENT_ID HTTP/1.1
-Host: $USERNAME.cloudant.com
+Host: $ACCOUNT.cloudant.com
 ```
 {:codeblock}
 
 _Example of a show function query, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/$DESIGN_ID/_show/$SHOW_FUNCTION/$DOCUMENT_ID \
-     -u $USERNAME
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_show/$SHOW_FUNCTION/$DOCUMENT_ID \
 ```
 {:codeblock}
 
@@ -558,7 +556,7 @@ _Example of a show function query, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$USERNAME+".cloudant.com");
+var account = nano("https://"+$ACCOUNT+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
 var db = account.use($DATABASE);
 
 db.show($DESIGN_ID, $SHOW_FUNCTION, $DOCUMENT_ID, function (err, body) {
@@ -599,8 +597,8 @@ There are two methods for querying update handlers:
 
 Method | URL
 -------|------
-`POST` | `https://$USERNAME.cloudant.com/$DATABASE/$DESIGN_ID/_update/$UPDATE_HANDLER`
-`PUT`  | `https://$USERNAME.cloudant.com/$DATABASE/$DESIGN_ID/_update/$UPDATE_HANDLER/$DOCUMENT_ID`
+`POST` | `https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_update/$UPDATE_HANDLER`
+`PUT`  | `https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_update/$UPDATE_HANDLER/$DOCUMENT_ID`
 
 In these methods:
 
@@ -652,10 +650,9 @@ Content-Type: application/json
 _Example of an update handler query, using the command line:_
 
 ```sh
-curl "https://$ACCOUNT.cloudant.com/$DATABASE/$DESIGN_ID/_update/$UPDATE_HANDLER" \
+curl "https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_update/$UPDATE_HANDLER" \
 	-X POST \
 	-H 'Content-Type: application/json' \
-	-u "$USERNAME:$PASSWORD" \
 	-d "$JSON"
 ```
 {:codeblock}
@@ -666,7 +663,7 @@ _Example of an update handler query, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$USERNAME+".cloudant.com");
+var account = nano("https://"+$ACCOUNT+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
 var db = account.use($DATABASE);
 
 db.atomic($DESIGN_ID, $UPDATE_HANDLER, $DOCUMENT_ID, $JSON, function (err, body) {
@@ -754,7 +751,6 @@ _Example of an filter function applied to a `_changes` query, using the command 
 
 ```sh
 curl "https://$ACCOUNT.cloudant.com/$DATABASE/_changes?filter=$DESIGN_ID/$FILTER_FUNCTION" \
-     -u "$USERNAME:$PASSWORD"
 ```
 {:codeblock}
 
@@ -771,7 +767,6 @@ _Example of supplying a `req` argument, using the command line:
 
 ```sh
 curl "https://$ACCOUNT.cloudant.com/$DATABASE/_changes?filter=$DESIGN_ID/$FILTER_FUNCTION&status=new" \
-	-u "$USERNAME:$PASSWORD"
 ```
 {:codeblock}
 
@@ -820,7 +815,6 @@ _Example application of the `_design` filter, using the command line:_
 
 ```sh
 curl "https://$ACCOUNT.cloudant.com/$DATABASE/_changes?filter=_design" \
-     -u "$USERNAME:$PASSWORD"
 ```
 {:codeblock}
 
@@ -872,7 +866,6 @@ _Example application of the `_doc_ids` filter, using the command line:_
 
 ```sh
 curl "https://$ACCOUNT.cloudant.com/$DATABASE/_changes?filter=_doc_ids" \
-     -u "$USERNAME:$PASSWORD"
 ```
 {:codeblock}
 
@@ -928,7 +921,6 @@ _Example application of the `_selector` filter, using the command line:_
 
 ```sh
 curl "https://$ACCOUNT.cloudant.com/$DATABASE/_changes?filter=_selector" \
-     -u "$USERNAME:$PASSWORD"
 ```
 {:codeblock}
 
@@ -1004,7 +996,6 @@ _Example application of the `_view` filter, using the command line:_
 
 ```sh
 curl "https://$ACCOUNT.cloudant.com/$DATABASE/_changes?filter=_view&view=$DESIGNDOC/$VIEWNAME" \
-     -u "$USERNAME:$PASSWORD"
 ```
 {:codeblock}
 
@@ -1108,7 +1099,6 @@ using the command line:_
 
 ```sh
 curl "https://$ACCOUNT.cloudant.com/recipes/_design/recipesdd/_info" \
-     -u "$USERNAME:$PASSWORD"
 ```
 {:codeblock}
 
@@ -1168,8 +1158,7 @@ _Example of getting information about the `description` search,
 defined within the `app` design document stored in the `foundbite` database, using the command line:_
 
 ```sh
-curl "https://$USERNAME.cloudant.com/foundbite/_design/app/_search_info/description" \
-	-u "$USERNAME:$PASSWORD"
+curl "https://$ACCOUNT.cloudant.com/foundbite/_design/app/_search_info/description" \
 ```
 {:codeblock}
 

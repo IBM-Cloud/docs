@@ -59,7 +59,7 @@ Führen Sie die folgenden Tasks aus, um eine Abfrage für Ihre Cloud Foundry-App
 
     ![Abfragefeld mit Löschsymbol](images/logging_delete_query.jpg "Abfragefeld mit Löschsymbol")
 
-7. Zum Speichern dieses Dashboards unter einem wiedererkennbaren Namen klicken Sie auf das Symbol **Speichern** ![Symbol für Speichern](images/logging_save.jpg "Symbol für Speichern") und geben einen Namen für Ihr Dashboard an.  
+7. Zum Speichern dieses Dashboards unter einem wiedererkennbaren Namen klicken Sie auf das Symbol **Speichern** ![Symbol für Speichern](images/logging_save.jpg "Symbol für Speichern") und geben einen Namen für Ihr Dashboard an. 
 
     **Hinweis:** Wenn Sie versuchen, ein Dashboard unter einem Namen zu speichern, der Leerzeichen enthält, wird es nicht gespeichert. Geben Sie einen Namen ohne Leerzeichen ein und klicken Sie auf das Symbol **Speichern**.
 

@@ -68,8 +68,8 @@ Este componente sólo está disponible si la aplicación se ha desplegado en la 
 
 
 En la figura siguiente se muestran los distintos componentes (orígenes de registro) de una arquitectura Cloud Foundry basada en Droplet Execution Agent (DEA):
-![Tipos de registro de una arquitectura DEA.](images/logging_F1.png "Components (log sources")
-de una arquitectura Cloud Foundry basada en Droplet Execution Agent (DEA)")
+![Orígenes de registro en una arquitectura DEA.](images/logging_F1.png "Componentes (orígenes de registro")
+de una arquitectura Cloud Foundry basada en Droplet Execution Agent (DEA)").
 
 
 

@@ -34,7 +34,7 @@ Procédez comme suit pour créer et partager une URL vers un tableau de bord Kib
 
     ![Liste de tableaux de bord](images/logging_list_of_dashboards.jpg "Liste de tableaux de bord")
 
-2. Cliquez sur l'icône de **partage** ![Icône de partage](images/logging_create_url.jpg "Icône de partage") pour le tableau de bord que vous souhaitez partager.  Une URL partageable est créée et s'affiche. 
+2. Cliquez sur l'icône de **partage** ![Icône de partage](images/logging_create_url.jpg "Icône de partage") pour le tableau de bord que vous souhaitez partager. Une URL partageable est créée et s'affiche. 
 
     ![Sous-fenêtre URL partageable](images/logging_shareable_link_popup.jpg "Sous-fenêtre URL partageable")
 

@@ -10,7 +10,7 @@ lastupdated: "2017-01-10"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Requisitos previos 
+# Requisitos previos
 {: #prereqs}
 
 Los requisitos previos para utilizar la plataforma de {{site.data.keyword.Bluemix_notm}} son limitados, pero tenemos algunos.

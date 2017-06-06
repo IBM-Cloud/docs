@@ -20,7 +20,7 @@ lastupdated: "2017-03-20"
 
 モバイルおよび Web の両方を含め、各実行環境は他のアプリの実行環境から分離されています。実行環境は、これらのアプリが同じ物理マシン上にあったとしても互いに分離されます。以下の図は、{{site.data.keyword.Bluemix_notm}} Cloud Foundry でのアプリのデプロイメント管理方法の基本的なフローを示しています。
 
-![アプリのデプロイ](images/deploy.png)
+![アプリのデプロイ](images/deploy-diego.png)
 
 図 3. アプリのデプロイ
 
@@ -34,7 +34,7 @@ Web アプリの場合、クラウドで実行されるコードは、開発者�
 
 以下の図は、複数のアプリがデプロイされている仮想サーバー (Droplet Execution Agent (DEA) とも呼ばれる) の構造を示しています。
 
-![仮想サーバーの設計](images/container.png)
+![仮想サーバーの設計](images/container-diego.png)
 
 図 4. 仮想サーバーの設計
 
@@ -42,7 +42,7 @@ Web アプリの場合、クラウドで実行されるコードは、開発者�
 
 アプリがデプロイされた時、そのアプリに Web インターフェース (Java Web アプリ用など)、またはその他の REST ベースのサービス (モバイル・アプリに公開されているモバイル・サービスなど) が含まれている場合、そのアプリのユーザーは、通常の HTTP 要求を使用してそのインターフェースまたはサービスと通信することができます。
 
-![{{site.data.keyword.Bluemix_notm}} アプリの呼び出し](images/execute.png)
+![{{site.data.keyword.Bluemix_notm}} アプリの呼び出し](images/execute-diego.png)
 
 図 5. {{site.data.keyword.Bluemix_notm}} アプリの呼び出し
 
@@ -63,7 +63,7 @@ Web アプリの場合、クラウドで実行されるコードは、開発者�
 
 次の図は、{{site.data.keyword.Bluemix_notm}} Cloud Foundry アーキテクチャーの概要を示したものです。
 
-![{{site.data.keyword.Bluemix_notm}} アーキテクチャー](images/arch.png)
+![{{site.data.keyword.Bluemix_notm}} アーキテクチャー](images/arch-diego.png)
 
 図 1. {{site.data.keyword.Bluemix_notm}} Cloud Foundry アーキテクチャー
 

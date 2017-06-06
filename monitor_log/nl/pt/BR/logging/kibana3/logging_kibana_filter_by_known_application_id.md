@@ -30,7 +30,7 @@ Conclua as tarefas a seguir para visualizar e filtrar seus logs do app Cloud Fou
 
 2. Acesse o painel do Kibana para seu app. Clique em **Visualização avançada** ![Link da visualização avançada](images/logging_advanced_view.jpg "Link da visualização avançada"). O painel do Kibana é exibido.
 
-3. No painel do Kibana, clique o ícone **Pasta** ![Ícone Pasta](images/logging_folder.jpg "Ícone Pasta") para exibir um menu que lista todos os painéis recentes.  
+3. No painel do Kibana, clique o ícone **Pasta** ![Ícone Pasta](images/logging_folder.jpg "Ícone Pasta") para exibir um menu que lista todos os painéis recentes. 
 
     **Nota:** além dos painéis que você salvou por nome, o menu lista os painéis não nomeados de acordo com o formato a seguir: *ALCH_TENANT_ID_application_id*. 
 

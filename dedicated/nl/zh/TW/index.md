@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -73,7 +73,7 @@ lastupdated: "2017-01-11"
 |IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 12.128.1400 | 支援「線上交易處理 (OLTP)」工作負載的專用實例，具有 128GB RAM 及 1.4 TB SSD 儲存空間來放置資料及日誌，並且包括一部額外的「待命」伺服器來取得高可用性。 |
 |{{site.data.keyword.Bluemix_dedicated_notm}} 社群服務  | 此環境允許部署及執行社群服務，每一個社群服務最多有 50 個實例。  |
 |{{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.cloudant}} 叢集實例 | 此選用元件包括您負責提供基礎架構的 3 節點叢集，以及儲存空間及運算容量（您可以根據您的特定需要來決定）。{{site.data.keyword.cloudant}} 提供對於始終處於開啟狀態之完整受管理 NoSQL JSON 資料層的存取。此服務與 CouchDB 相容，而且可透過方便使用的 HTTP 介面來存取，可用於行動及 Web 應用程式模型。 |
-|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | 提供發佈和訂閱傳訊的環境，每個分割區可提供高達 10 GB 的傳訊。訊息會保留以供使用最多 24 小時。 |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | 提供發佈/訂閱傳訊的環境，每個分割區可提供高達 10 GB 的傳訊，限制為 100 個分割區。 |
 |IBM Bluemix 專用 {{site.data.keyword.mobilepushshort}} | 此環境允許部署及執行每秒可接受 300 個要求的 {{site.data.keyword.mobilepushshort}} 實例。 |
 |{{site.data.keyword.iot_short}} 專用漸進式增加 | 此環境增加允許在專用環境內執行專用版本的 {{site.data.keyword.iot_short}}，其容量為 100,000 台同時連接的裝置或應用程式，以及 0.5 TB 的資料交換。 |
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - 專用小型| {{site.data.keyword.Bluemix_notm}} 的受管理雲端環境中的預先配置 {{site.data.keyword.appserver_short}} Liberty、Traditional Network Deployment 或 Traditional WebSphere Java EE 實例，每個月有 64 個 vCore、128GB RAM 及 1TB HDD。 |
@@ -283,7 +283,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取 {{site.data.keywor
 <dd>一旦環境開始運行，視需要與 IBM 支援團隊合作。這是對「管理」主控台具有「超級使用者」存取權的人員，其可核准並排定 Bluemix 環境的維護更新，而且隨時可在發生重要突發事件時予以協助。指派給這個角色的人員必須具備 Bluemix 環境的技術知識，而且其職位可以聯繫公司內對可能受到影響的區域（例如，網路或安全）具備專業技能的其他人員。</dd>
 </dl>
 
-您的客戶代表會與其他合作的 IBM 專家一起合作，確保您隨時擁有所需的支援。您可以升級至「高階」支援層，以與您帳戶的專用「客戶成功經理 (CSM)」合作。如需不同支援層的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-support)。CSM 會完成下列類型的作業：
+您的客戶代表會與其他合作的 IBM 專家一起合作，確保您隨時擁有所需的支援。您可以升級至「進階」支援層，以與您帳戶的專用「客戶成功經理 (CSM)」合作。如需不同支援層的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-support)。CSM 會完成下列類型的作業：
 
 <ul>
 <li>促成 {{site.data.keyword.Bluemix_dedicated_notm}} 環境的快速採用。</li>

@@ -59,7 +59,7 @@ Procédez comme suit pour créer une requête relative à vos journaux d'applica
 
     ![Zone de requête avec l'icône de suppression](images/logging_delete_query.jpg "Zone de requête avec l'icône de suppression")
 
-7. Pour sauvegarder ce tableau de bord sous un nom significatif, cliquez sur l'icône de **sauvegarde** ![Icône de sauvegarde](images/logging_save.jpg "Icône de sauvegarde") et entrez un nom pour votre tableau de bord.  
+7. Pour sauvegarder ce tableau de bord sous un nom significatif, cliquez sur l'icône de **sauvegarde** ![Icône de sauvegarde](images/logging_save.jpg "Icône de sauvegarde") et entrez un nom pour votre tableau de bord. 
 
     **Remarque :** Si vous tentez de sauvegarder un tableau de bord avec un nom contenant des espaces vides, l'opération échoue. Entrez un nom ne contenant pas d'espaces et cliquez sur l'icône de **sauvegarde**.
 

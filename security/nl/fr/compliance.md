@@ -78,7 +78,7 @@ Etats-Unis. Elle englobe la réglementation de la
 loi de 1996, ainsi que des exigences de confidentialité de la loi Health Information Technology for Economic and Clinical Health (HITECH) Act de 2009. {{site.data.keyword.Bluemix_notm}}
 satisfait toutes les exigences de la loi HIPAA en ce qui concerne les centres de données ou les fournisseurs de services.
 
-Pour plus d'informations ou de l'aide afin d'assurer la conformité à la loi HIPAA pour votre environnement Bluemix, de la certifier et de la conserver, prenez contact avec le [service commercial {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](mailto:cloudplatform_compliance@us.ibm.com){:new_window}. 
+Pour plus d'informations ou de l'aide afin d'assurer la conformité à la loi HIPAA pour votre environnement Bluemix, de la certifier et de la conserver, prenez contact avec le [service commercial {{site.data.keyword.Bluemix_notm}} ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](mailto:cloudplatform_compliance@us.ibm.com){:new_window}.
 
 
 ![ISO 27017](images/icon_ISO27017.png) La norme ISO/IEC 27017:2015 fournit des directives pour les contrôles de sécurité des

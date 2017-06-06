@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2017-01-11"
 #服務
 {: #services}
 
-您可以在 {{site.data.keyword.Bluemix}} 使用者介面的**型錄**中，在**服務**下找到可用的服務。
+您可以在 {{site.data.keyword.Bluemix}} 主控台的**型錄**中，在**服務**下找到可用的服務。
 {:shortdesc}
 
 
@@ -51,7 +51,7 @@ lastupdated: "2017-01-11"
 
 實驗性服務可能不穩定，且可能變更而與舊版不相容。不建議在正式作業環境中使用這些服務。實驗性服務支援是透過「{{site.data.keyword.Bluemix_notm}} Developers 社群」所提供。如果是由 IBM 調查問題，且該問題經判定為實驗性服務中的錯誤，則 IBM 不負責提供修正程式。
 
-若要在 {{site.data.keyword.Bluemix_notm}} 使用者介面、cf 指令行介面、IBM {{site.data.keyword.Bluemix_notm}} DevOps Services 或任何支援的工具中使用服務，請採取下列步驟：
+若要在 {{site.data.keyword.Bluemix_notm}} 主控台、cf 指令行介面、IBM {{site.data.keyword.Bluemix_notm}} DevOps Services 或任何支援的工具中使用服務，請採取下列步驟：
 
 1. 建立服務的實例。在大部分情況下，您建立應用程式時可以建立服務實例。
 
@@ -60,90 +60,6 @@ lastupdated: "2017-01-11"
 
 
 3. 在應用程式中撰寫自己的程式碼，以便與服務互動。
-
-##各地區的服務
-
-並非所有服務都能在每個 {{site.data.keyword.Bluemix_notm}} 地區使用。下表顯示 IBM 所提供的服務。
-
-
-
-|服務	|可在美國南部地區使用	|可在歐洲英國地區使用 |可在澳洲雪梨地區使用|
-|:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.activedeployshort}}	|是		|是		|否|
-|{{site.data.keyword.alchemyapishort}} 		|是	   	|是  		|是|
-|{{site.data.keyword.appsecshort}}		|是		|否		|否|
-|{{site.data.keyword.alertnotificationshort}}|是		|否			|否		|
-|{{site.data.keyword.APS_DA}}			|是		|否		|否|
-|{{site.data.keyword.APS_MA}}			|是		|否		|否|
-|{{site.data.keyword.amashort}}			|是		|是		|是|
-|{{site.data.keyword.hadoopst}}			|是		|否		|否|
-|{{site.data.keyword.APIM}}			|是		|是		|否|
-|{{site.data.keyword.autoscaling}}		|是		|是		|是|
-|{{site.data.keyword.bigicloudst}}		|是		|否		|否|
-|{{site.data.keyword.blockstorageshort}}        |否             |是            |否 |
-|{{site.data.keyword.rules_short}}		|是		|是		|否|
-|{{site.data.keyword.cloudint}}			|是		|是		|否|
-|{{site.data.keyword.cloudant}}			|是		|是		|否|
-|{{site.data.keyword.conceptexpansionshort}}	|是		|是		|是|
-|{{site.data.keyword.conceptinsightsshort}}	|是		|是		|是|
-|{{site.data.keyword.dashdbshort}}		|是		|是		|否|
-|{{site.data.keyword.datacshort}}		|是		|是		|是|
-|{{site.data.keyword.DB2OnCloud_short}}		|是		|是		|是|
-|{{site.data.keyword.deliverypipeline}}		|是		|是		|否|
-|{{site.data.keyword.dialogshort}}		|是		|是		|是|
-|{{site.data.keyword.documentconversionshort}}	|是		|是		|是|
-|{{site.data.keyword.creshort}}			|是		|否		|否|
-|{{site.data.keyword.game}}			|是		|是		|是|
-|{{site.data.keyword.geospatialshort_Geospatial}}	|是	|是		|否|
-|{{site.data.keyword.globalizationshort}}	|是		|否		|否|
-|{{site.data.keyword.dataworks_short}}		|是		|是		|否|
-|{{site.data.keyword.twittershort}}		|是		|是		|是|
-|{{site.data.keyword.weather_short}}		|是		|是		|是|
-|{{site.data.keyword.IntegrationTestingshort}}	|是		|是		|否|
-|{{site.data.keyword.iot_short}}		|是		|否		|否|
-|{{site.data.keyword.keymanagementserviceshort}}|否		|是		|否|
-|{{site.data.keyword.languagetranslationshort}}	|是		|是		|否|
-|{{site.data.keyword.messagehub}}		|是		|是		|否|
-|{{site.data.keyword.messageresonanceshort}}	|是		|是		|否|
-|{{site.data.keyword.APS_MAiOS}} 		|是		|否		|否|
-|{{site.data.keyword.macm_short}}		|是		|是		|是|
-|{{site.data.keyword.mobilemam}}		|是		|是		|否|
-|{{site.data.keyword.mobiledata}}		|是		|是		|否|
-|{{site.data.keyword.manda}}			|是		|是		|否|
-|{{site.data.keyword.mqa}}			|是		|是		|否|
-|{{site.data.keyword.mql}}			|是		|是		|否|
-|{{site.data.keyword.nlclassifierlshort}} 	|是 		|是 		|是|
-|{{site.data.keyword.objectstorageshort}}	|是		|否		|否|
-|{{site.data.keyword.personalityinsightsshort}}	|是		|是		|是|
-|{{site.data.keyword.mobilepush}}		|是		|是		|否|
-|Push for iOS 8					|是		|是		|否|
-|{{site.data.keyword.questionandanswershort}}	|是		|是		|是|
-|{{site.data.keyword.rapidApps}}		|是		|是		|否|
-|{{site.data.keyword.relationshipextractionshort}}	|是	|是		|是|
-|{{site.data.keyword.retrieveandrankshort}}	|是 		|是 		|是|
-|{{site.data.keyword.SecureGateway}}		|是		|是		|否|
-|{{site.data.keyword.sescashort}}		|是		|是		|是|
-|{{site.data.keyword.ssofull}}			|是		|否		|否|
-|{{site.data.keyword.speechtotextshort}}	|是 		|是	 	|是|
-|{{site.data.keyword.sqldb}}			|是		|是		|否|
-|{{site.data.keyword.staticanalyzershort}}	|是		|是		|否|
-|{{site.data.keyword.streaminganalyticsshort}}	|是		|否		|否|
-|{{site.data.keyword.texttospeechshort}} 	|是 		|是	 	|是|
-|{{site.data.keyword.times}}			|是		|是		|否|
-|{{site.data.keyword.toneanalyzershort}} 	|是 		|是 		|是|
-|{{site.data.keyword.trackplan}}		|是		|是		|否|
-|{{site.data.keyword.tradeoffanalyticsshort}}	|是		|是		|是|
-|{{site.data.keyword.visualinsightsshort}}	|是		|是		|是|
-|{{site.data.keyword.visualizationrenderingshort}} |是		|是		|否|
-|{{site.data.keyword.workflow}}			|是		|是		|否|
-|{{site.data.keyword.workloadscheduler}}	|是		|是		|否|
-|{{site.data.keyword.xpagesservice_short}}	|是		|是		|否|
-*表 2. 服務可用性*
-
-
-{: caption="表 2. 服務可用性" caption-side="top"}
-
-
 
 # 將服務新增至您的應用程式
 {: #add_service}
@@ -172,11 +88,11 @@ lastupdated: "2017-01-11"
 ## 要求新的服務實例
 {: #req_instance}
 
-若要要求新的服務實例，您必須使用 {{site.data.keyword.Bluemix_notm}} 使用者介面或 cf 指令行介面。
+若要要求新的服務實例，您必須使用 {{site.data.keyword.Bluemix_notm}} 主控台或 cf 指令行介面。
 
 **附註：**當您指定服務名稱時，請避免使用非英文字母或數值字元的字元，因為結果可能無法預期。
 
-如果您使用 {{site.data.keyword.Bluemix_notm}} 使用者介面來要求服務實例，請完成下列步驟：
+如果您使用 {{site.data.keyword.Bluemix_notm}} 主控台來要求服務實例，請完成下列步驟：
 
 1. 在 {{site.data.keyword.Bluemix_notm}} **型錄**中，按一下您要新增之服務的磚。
 即會開啟「服務詳細資料」頁面。

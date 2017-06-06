@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -26,6 +26,13 @@ lastupdated: "2017-01-11"
 {: #ee_start}
 
 시작하기 전에 [https://console.ng.bluemix.net/ ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window}에서 IBM ID를 등록해야 합니다. 그 다음에 {{site.data.keyword.Bluemix_notm}}에 로그인하고 30일 무료 평가판 사용을 시작하십시오. {{site.data.keyword.Bluemix_notm}}에서는 무료 평가판에 대해 2GB의 런타임 메모리와 10개의 서비스 인스턴스 사용을 허용합니다. 
+
+
+## 도구 체인 및 {{site.data.keyword.contdelivery_short}} 서비스를 사용한 앱 개발 및 배치
+{: #ee_cd}
+
+앱에 {{site.data.keyword.contdelivery_full}} 서비스가 포함된 <a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">도구 체인을 추가</a>합니다. 그리고 <a href="docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">도구 체인을 사용</a>하여 앱을 개발하고 배치합니다. 
+
 
 ## {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용한 웹 앱 작성
 {: #ee_appui}
@@ -49,7 +56,8 @@ lastupdated: "2017-01-11"
 ## {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용한 서비스 바인딩
 {: #ee_bindui}
 
-앱을 작성한 후에는 앱으로 데이터베이스에 연결하고자 할 수 있습니다. 이러한 방식으로 데이터베이스 조회 언어를 사용하여 앱 데이터를 저장하고 관찰할 수 있습니다. 이 시나리오에서는 {{site.data.keyword.Bluemix_notm}}에서 제공하는 {{site.data.keyword.cloudant}} 서비스를 사용하기로 결정합니다. 
+앱을 작성한 후에는 앱으로 데이터베이스에 연결하고자 할 수 있습니다. 
+이러한 방식으로 데이터베이스 조회 언어를 사용하여 앱 데이터를 저장하고 관찰할 수 있습니다. 이 시나리오에서는 {{site.data.keyword.Bluemix_notm}}에서 제공하는 {{site.data.keyword.cloudant}} 서비스를 사용하기로 결정합니다. 
 
 애플리케이션 내에서 서비스를 사용하려면 서비스 인스턴스를 작성하고 애플리케이션을 서비스 인스턴스에 바인딩해야 합니다. 이를 위해서는 다음 단계를 수행하십시오. 
   1. 앱 개요 페이지에서 **서비스 또는 API 추가**를 클릭하십시오.
@@ -88,7 +96,8 @@ lastupdated: "2017-01-11"
 
   1. 우선 앱의 코드를 다운로드하고 개발하십시오. 
 
-    1. 앱의 코딩 시작 페이지로 이동하십시오. **스타터 코드 다운로드** 단추를 클릭하여 앱 코드를 다운로드하십시오.
+    1. 앱의 코딩 시작 페이지로 이동하십시오. 
+**스타터 코드 다운로드** 단추를 클릭하여 앱 코드를 다운로드하십시오. 
     2. 다운로드한 파일을 디렉토리(예: `C:\test`)로 추출하십시오. 
     3. 로컬 통합 개발 환경에서 코드를 개발하십시오. 
 
@@ -117,7 +126,9 @@ lastupdated: "2017-01-11"
   cf login -u your_user_ID -p ***** -o your_org_name -s your_space_name
   ```
 
-  5. {{site.data.keyword.Bluemix_notm}}에 로그인한 후에는 {{site.data.keyword.Bluemix_notm}}로 다시 앱을 배치할 준비가 됩니다. 앱 디렉토리 `C:\test`에서 다음 명령을 입력하십시오. 
+  5. {{site.data.keyword.Bluemix_notm}}에 로그인한 후에는
+{{site.data.keyword.Bluemix_notm}}로 다시 앱을 배치할 준비가 됩니다.
+앱 디렉토리 `C:\test`에서 다음 명령을 입력하십시오. 
 
   ```
   cf push TestNode

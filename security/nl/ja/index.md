@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2014, 2017
 
-lastupdated: "2017-01-10" 
+lastupdated: "2017-01-10"
 
 ---
 
@@ -208,9 +208,9 @@ Single Sign On サービスでは、以下に示すように、ユーザーの�
 
 ### アプリケーション・セキュリティー・テスト用の IBM UrbanCode プラグイン
 
-IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} プラグインを使用すれば、{{site.data.keyword.Bluemix_notm}} でホストされている Web アプリや Android アプリに対してセキュリティー・スキャンを実行できるようになります。このプラグインは、IBM UrbanCode™ Deploy Community が IBM Bluemix DevOps Services プラットフォーム上で開発とサポートを行っています。
+IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} プラグインを使用すれば、{{site.data.keyword.Bluemix_notm}} でホストされている Web アプリや Android アプリに対してセキュリティー・スキャンを実行できるようになります。このプラグインは、 プラットフォームで IBM UrbanCode™ Deploy Community によって開発され、サポートされています。
 
-詳しくは、[IBM Application Security Testing for Bluemix ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window} にアクセスしてください。 
+詳しくは、[IBM Application Security Testing for Bluemix ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window} にアクセスしてください。
 
 ### dashDB
 

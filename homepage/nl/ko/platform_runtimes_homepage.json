@@ -54,10 +54,15 @@
 		"img": "homepage/images/WhatIsBluemix-icon.svg",
 		"href": "overview/whatisbluemix.html"
     }, {
-		"title": "계정 설정",
-		"description": "프로파일을 업데이트하고 계정 및 지출 알림을 설정하며 팀 구성원을 초대하거나 조직과 영역을 관리합니다.",
+		"title": " 계정 관리",
+		"description": "프로파일을 업데이트하고, 계정 및 지출 알림을 설정하거나, 조직 및 영역을 관리합니다. ",
 		"img": "homepage/images/admin.svg",
 		"href": "admin/adminpublic.html"
+	}, {
+		"title": " ID 및 액세스 관리",
+		"description": "사용자 액세스를 관리하거나 팀 구성원을 초대합니다. ",
+		"img": "homepage/images/admin.svg",
+		"href": "iam/iamusermanage.html"
 	}, {
 		"title": "CLI 및 개발 도구",
 		"description": "액세스 도구(예: 통합 명령행 인터페이스 및 CLI 플러그인)입니다.",
@@ -91,7 +96,7 @@
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
 	}, {
-		"title": "가격 책정",
+		"title": "청구 및 사용량 관리",
 		"description": "계산기를 사용하여 비용을 추정하고 사용량 세부사항 보기를 통해 실제 비용을 확인합니다.",
 		"img": "homepage/images/pricing.svg",
 		"href": "pricing/index.html"

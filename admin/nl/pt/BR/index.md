@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-13"
+lastupdated: "2017-05-02"
 
 ---
 
@@ -346,7 +346,7 @@ Na seção **Uso de recurso**, é possível visualizar as informações a seguir
 {{site.data.keyword.Bluemix_notm}} nos últimos 10 minutos,
 hora e dia.
 
-#### Memória, disco e detalhes da CPU
+#### Memória do sistema, disco e detalhes da CPU
 {: #resourceusagedetails}
 
 Na seção **Uso de recursos**, é possível ver um resumo das quantias **Reservado** e **Físico** para sua memória e disco.    
@@ -373,6 +373,13 @@ Para ver informações mais detalhadas sobre sua memória física e reservada ou
 	<dt><strong>Física</strong></dt>
 	<dd>A Área física mostra a quantia de memória ou espaço em disco que realmente está sendo usado.</dd>
 	</dl>
+
+#### Detalhes de uso do serviço
+{: #servicesresourceusage}
+
+A guia **Serviço** mostra o uso total de serviço em relação à capacidade máxima que você tem para um serviço dedicado. Por exemplo, se você tiver um serviço Cloudant dedicado e estiver usando 500 GB de sua capacidade de 1.000 GB, você verá um gráfico mostrando que usou 50% de sua capacidade total. A cor do gráfico muda com base em sua proximidade do limite de capacidade. Amarelo será mostrado quando você tiver usado de 70% a 84% de sua capacidade e vermelho será usado quando você tiver atingido 85% ou mais da capacidade disponível.
+
+**Nota**: as informações de consumo de serviço poderão não estar disponíveis em todos os ambientes neste momento. Esse recurso está disponível para o Cloudant, o MessageHub, o API Connect e o Session Cache.
 
 
 ### Uso de conta
@@ -771,11 +778,7 @@ a organização.
 
 ### Criando Espaços
 
-É possível criar espaços em
-sua organização, por exemplo, um espaço *dev* como
-um ambiente de desenvolvimento, um espaço *test* como um ambiente
-de teste e um espaço *production* como um ambiente de
-produção. Em seguida, é possível associar os apps aos espaços. Conclua as etapas a seguir para criar um espaço:
+É possível criar espaços em sua organização, por exemplo, um espaço *dev* como um ambiente de desenvolvimento, um espaço *test* como um ambiente de teste e um espaço *production* como um ambiente de produção. Em seguida, é possível associar os apps aos espaços. Conclua as etapas a seguir para criar um espaço:
 
 1. Na barra de menus, clique em **Conta** &gt; **Gerenciar organizações**.
 2. Selecione a organização na qual deseja incluir um espaço.

@@ -325,7 +325,7 @@ mediante el mandato **cf env** o desde la interfaz de usuario {{site.data.keywor
 
 También tiene acceso a las variables de entorno establecidas por DEA y los paquetes de compilación.
 
-Diego define las siguientes variables: 
+Diego define las siguientes variables:
 
 <dl>
   <dt><strong>HOME</strong></dt>
@@ -418,7 +418,7 @@ Las variables definidas por un paquete de compilación varían según cada paque
 	  <dt><strong>IBM_JAVA_OPTIONS</strong></dt>
 	  <dd>Las opciones de SDK de Java que se utilizarán cuando se ejecute la app.</dd>
 	  <dt><strong>IBM_JAVA_COMMAND_LINE</strong></dt>
-	  <dd>El mandato Java para iniciar una instancia de servidor de un perfil de Liberty en Diego. </dd>
+	  <dd>El mandato Java para iniciar una instancia de servidor de un perfil de Liberty en Diego.</dd>
 	  <dt><strong>WLP_USR_DIR</strong></dt>
 	  <dd>La ubicación de recursos compartidos y de las definiciones de servidor al iniciar una instancia de servidor de un perfil de Liberty en Diego.</dd>
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>

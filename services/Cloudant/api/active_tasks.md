@@ -41,8 +41,8 @@ GET /_active_tasks HTTP/1.1
 _Example request to retrieve list of active tasks, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/_active_tasks \
-	-u $USERNAME
+curl https://$ACCOUNT.cloudant.com/_active_tasks \
+	-u $ACCOUNT
 ```
 {:codeblock}
 
@@ -52,7 +52,7 @@ _Example request to retrieve list of active tasks using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano('https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com');
+var account = nano('https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com');
 account.request({
 	path: '_active_tasks'
 }, function (err, body) {

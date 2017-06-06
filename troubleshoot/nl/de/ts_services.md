@@ -36,5 +36,5 @@ Wenn Sie versuchen, eine Serviceinstanz zu löschen, wird die folgende Service-B
 Dieses Problem tritt auf, wenn die Serviceinstanz bereits vom Cloud-Controller gelöscht wurde.
 {: tsCauses}
 
-Erstellen Sie eine Serviceinstanz mit demselben Namen und binden Sie sie an Ihre Anwendungen. Anschließend können Sie die Serviceinstanz und die Anwendungen löschen, die den Service verwenden.    
+Erstellen Sie eine Serviceinstanz mit demselben Namen und binden Sie sie an Ihre Anwendungen. Anschließend können Sie die Serviceinstanz und die Anwendungen löschen, die den Service verwenden.   
 {: tsResolve}

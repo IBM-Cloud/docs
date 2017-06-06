@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-14"
+lastupdated: "2017-05-31"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -42,9 +42,10 @@ To deploy a template, follow these steps:
 <p>For the starter templates, a tag identifies the type of provider to which you can deploy the template. You can also filter the starter templates by clicking <strong>Filter</strong> and selecting one or more cloud provider types.</p></li>
 <li>Run one of the following procedures:
 <ul><li>If you are creating a template from scratch, run the following steps:
- <ol><li>Specify the instance name, the template format (JSON or HCL), and the type of the cloud provider where you want to deploy the template.</li> 
+ <ol><li>Specify the instance name, the template format (HCL or JSON), and the type of the cloud provider where you want to deploy the template.
+ <p><strong>Note:</strong> Using JSON templates is deprecated because of known Terraform issues. Use HCL templates instead.</p></li> 
  <li>Click <strong>Next</strong>.</li> 
- <li>Enter the template code or import it from a file or from a URL by clicking <strong>Import Source File</strong>. The template must be in HCL or JSON format depending on what you specified in the previous pane.</li>
+ <li>Enter the template code or import it from a file or from a URL by clicking <strong>Import Source File</strong>. The template must be in the format that you specified in the previous pane.</li>
  <li>Click <strong>Next</strong>.</li>
  <li>Enter the required deployment parameters as, for example, the connection to the cloud provider where you want to deploy the template.
  <p>The cloud connection list only contains the connections defined for the type of cloud provider where you can deploy the template. For information about cloud connections, see <a href="https://console.{DomainName}/docs/services/CloudAutomationManager/cam_managing_connections.html" target="_blank">Managing connections</a>.</p>

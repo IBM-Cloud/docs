@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-26"
+lastupdated: "2017-6-5"
 
 ---
 
@@ -22,6 +22,8 @@ You can upgrade your project or wait for it to be automatically upgraded. For th
 - [My JazzHub project is associated with the UK region, but my toolchain will be in the US South region. How will this work?](#faq_region)
 - [What will happen to my work items and dashboards in Track &amp; Plan when I upgrade?](#faq_tp)
 - [What will happen to my code repo when I upgrade?](#faq_repo)
+- [What will happen to my build definitions in my project when I upgrade to a toolchain?](#faq_build)
+- [I need to create an organization for my project that will be upgraded to a toolchain. I understand that I need to add a credit card to my account before I can create an organization. Will my credit card be charged?](#faq_charges)
 
 ## Toolchains
 {: #compare_toolchains}
@@ -206,7 +208,7 @@ To additionally purchase Build Automation and Source Code Management, [Rational 
 ### What will happen to my code repo when I upgrade?
 {: #faq_repo}
 
-If your project uses a public repo on github.com, the toolchain will be connected to the same GitHub repo. If your project uses a Git repo that is hosted on JazzHub, the contents of that repo will be cloned to a new repo in {{site.data.keyword.gitrepos}}, which is part of {{site.data.keyword.contdelivery_short}} and hosted by IBM.
+After you upgrade, your new Git service will be comparable to what you had before. If you used github.com with your JazzHub project, your toolchain will be connected to the same GitHub repo. If your JazzHub project used IBM Hosted Git, the contents of that repo will be cloned to a new repo in {{site.data.keyword.gitrepos}}, which is part of {{site.data.keyword.contdelivery_short}} and hosted by IBM.
 
 For full details about how each type of repo is treated in the upgrade process, see the following table.
 
@@ -216,13 +218,16 @@ For full details about how each type of repo is treated in the upgrade process, 
 |hub.jazz.net/git		|Private or public 		|A new private or public repo in {{site.data.keyword.gitrepos}} with {{site.data.keyword.Bluemix_notm}} Public.	|
 {: caption="Table 1. Project repos mapped to toolchain repos" caption-side="top"}
 
+
 ### What will happen to my build definitions in my project when I upgrade to a toolchain?
+{: #faq_build}
 
 If you're building your source code by using Jazz instead of Delivery Pipeline, you must manually migrate your build definitions to Delivery Pipeline in your toolchain. 
 
 If you're using Jazz SCM as a source repo and using Delivery Pipeline to build your code, the source in Jazz SCM will be automatically moved to a Git repo. Your Delivery Pipeline configuration will remain the same except it will consume the source from the Git repo instead of the source from Jazz SCM.
 
 ### I need to create an organization for my project that will be upgraded to a toolchain. I understand that I need to add a credit card to my account before I can create an organization. Will my credit card be charged?
+{: #faq_charges}
 
 As a [Pay As You Go customer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}, if you use any runtime, service, or component beyond the free allotments that are listed for it in the Bluemix catalog, you will be charged. For a usage estimate, see the [pricing sheet ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}. For current pricing for Continuous Delivery, see the [Bluemix catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}.
 

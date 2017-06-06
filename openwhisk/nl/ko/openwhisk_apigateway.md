@@ -33,7 +33,7 @@ apihost `wsk property set --apihost openwhisk.ng.bluemix.net`을 사용하여 Op
 `wsk api`를 사용하려면 CLI 구성 파일 `~/.wskprops`에 Bluemix 액세스 토큰이 있어야 합니다.
 액세스 토큰을 가져오려면 CLI 명령 `wsk bluemix login`을 사용하십시오. 명령에 대한 자세한 정보를 보려면 `wsk bluemix login -h`를 실행하십시오.
 
-**참고:** 명령 오류에 싱글 사인온(sso)이 필요한 경우 현재 지원되지 않습니다. 임시 해결책으로 `cf login`을 사용하여 Cloud Foundry CLI로 로그인한 다음 홈 디렉토리 구성 파일 `~/.cf/config.json`의 액세스 토큰을 `~/.wskprops` 파일에 특성 `APIGW_ACCESS_TOKEN="value of AccessToken`으로 복사하십시오. 액세스 토큰 문자열을 복사할 때 접두부 `Bearer`를 제거하십시오.
+**참고:** 명령 오류에 싱글 사인온(sso)이 필요한 경우 현재 지원되지 않습니다. 임시 해결책으로 `bluemix login`을 사용하여 Bluemix CLI로 로그인한 후에 HOME 디렉토리 구성 파일 `~/.bluemix/.cf/config.json`의 액세스 토큰을 `APIGW_ACCESS_TOKEN="value of AccessToken` 특성으로 `~/.wskprops` 파일에 복사하십시오. 액세스 토큰 문자열을 복사할 때 접두부 `Bearer`를 제거하십시오.
 
 **참고:** `wsk api-experimental`을 사용하여 작성한 API는 계속 짧은 기간 동안 작동하지만 웹 조치로 API 마이그레이션을 시작하고 새 CLI 명령 `wsk api`를 사용하여 기존 apis를 재구성해야 합니다.
 
@@ -64,18 +64,18 @@ apihost `wsk property set --apihost openwhisk.ng.bluemix.net`을 사용하여 Op
   ```
   ```
   ok: created API /hello/world GET for action /_/hello
-  https://${APIHOST}:9001/api/21ef035/hello/world
+  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world
   ```
   새 URL은 **GET** HTTP 메소드를 통해 `hello` 조치를 표시하여 생성됩니다.
   
 4. HTTP 요청을 URL로 전송하여 이를 시도해 보십시오. 
   
   ```
-  $ curl https://${APIHOST}:9001/api/21ef035/hello/world?name=OpenWhisk
+  $ curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world?name=OpenWhisk
   ```
   ```json
-{
-    "payload": "Hello world OpenWhisk"
+  {
+  "payload": "Hello world OpenWhisk"
   }
   ```
   웹 조치 `hello`가 호출되었으며 조회 매개변수를 통해 보낸 매개변수 `name`이 포함된 JSON 오브젝트를 다시 리턴했습니다. 단순 조회 매개변수를 통해 또는 요청 본문을 통해 매개변수를 조치에 전달할 수 있습니다. 웹 조치를 사용하면 OpenWhisk 권한 부여 API 키 없이 공용 방식으로 조치를 호출할 수 있습니다.
@@ -117,8 +117,8 @@ apihost `wsk property set --apihost openwhisk.ng.bluemix.net`을 사용하여 Op
   ```
   {: pre}
   ```json
-{
-    "payload": "Hello world Serverless API"
+  {
+  "payload": "Hello world Serverless API"
   }
   ```
   이제 API를 완전히 제어할 수 있으므로 HTML 리턴과 같이 컨텐츠를 제어하거나 찾을 수 없음(404), 권한 없음(401) 또는 내부 오류(500)와 같은 내용에 대한 상태 코드를 설정할 수 있습니다.

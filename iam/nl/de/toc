@@ -1,0 +1,21 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix-iam" audience="platform" href="/docs/iam/iamusermanage.html"}
+Identity and Access verwalten
+
+    {: .navgroup id="learn"}
+    users_roles.md
+    {: .navgroup-end}
+    
+    {: .navgroup id="howto"}
+    iamuserinv.md
+    assignaccess.md
+    iamusermanage.md
+    
+    {: .topicgroup}
+    API-Schlüssel
+        apikeys.md
+    {: .navgroup-end}
+
+    

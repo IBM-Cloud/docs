@@ -17,9 +17,10 @@ lastupdated: "2017-04-06"
 # Navegación al panel de control de Kibana
 {: #k4_launch}
 
-Inicie Kibana desde la interfaz de usuario de {{site.data.keyword.Bluemix}} o directamente desde un navegador web. {:shortdesc}
+Inicie Kibana desde la interfaz de usuario de {{site.data.keyword.Bluemix}} o directamente desde un navegador web.
+{:shortdesc}
 
-Inicie Kibana desde {{site.data.keyword.Bluemix_notm}} para ver y analizar datos en el contexto del recurso desde el que inicia Kibana. Por ejemplo, puede iniciar Kibana para sus registros de app de CF específicos, en el contexto de dicha app específica o puede iniciar Kibana para sus registros de contenedor de Docker específicos, en el contexto de dicho contenedor específico.  
+Inicie Kibana desde {{site.data.keyword.Bluemix_notm}} para ver y analizar datos en el contexto del recurso desde el que inicia Kibana. Por ejemplo, puede iniciar Kibana para sus registros de app de CF específicos, en el contexto de dicha app específica o puede iniciar Kibana para sus registros de contenedor de Docker específicos, en el contexto de dicho contenedor específico. 
     
 Inicie Kibana desde un enlace directo de navegador si desea ver datos de registros agregados desde los servicios dentro de un espacio de {{site.data.keyword.Bluemix_notm}} concreto. La consulta que se utiliza para filtrar los datos que aparecen en el panel de control recupera las entradas de registro correspondientes a un espacio de la organización {{site.data.keyword.Bluemix_notm}}. La información de registro que muestra Kibana incluye registros correspondientes a todos los recursos desplegados dentro del espacio de la organización {{site.data.keyword.Bluemix_notm}} en la que ha iniciado la sesión. 
 
@@ -60,7 +61,7 @@ Siga los pasos siguientes para iniciar Kibana desde un navegador:
 
 2. Seleccione la versión de Kibana que desea utilizar para analizar los registros.
     * Seleccione el separador **Kibana 4** para trabajar con Kibana 4. Se abrirá la página Descubrir. Para obtener más información, consulte [logging_kibana_analize_logs_interactively.html#kibana_analize_logs_interactively).
-    * Seleccione el separador **Kibana 3** para trabajar con Kibana 3. Se abrirá el panel de control de Kibana predeterminado. Para obtener información sobre cómo utilizar Kibana 3 para analizar registros, consulte [Análisis de registros en Kibana 3 (en desuso)](../logging_view_kibana3.html#analyzing_logs_Kibana3). Para obtener más información sobre cómo personalizar un panel de control de Kibana 3, consulte [este artículo del blog ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/). 
+    * Seleccione el separador **Kibana 3** para trabajar con Kibana 3. Se abrirá el panel de control de Kibana predeterminado. Para obtener información sobre cómo utilizar Kibana 3 para analizar registros, consulte [Análisis de registros en Kibana 3 (en desuso)](../logging_view_kibana3.html#analyzing_logs_Kibana3). Para obtener más información sobre cómo personalizar un panel de control de Kibana 3, consulte [este artículo del blog ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/).
      
         **Nota:** Kibana 3 está en desuso.
 

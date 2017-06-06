@@ -72,7 +72,7 @@ Como empleado de IBM, antes de poder iniciar una sesión en {{site.data.keyword.
 {: tsResolve} 
 
   1. En la página [Central Sign-on ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window}, pulse **Mis inicios de sesión**.
-  2. En la página de Mis inicios de sesión, pulse **Enlazar ID**, y especifique su IBMid y contraseña en la página de inicio de sesión en {{site.data.keyword.Bluemix_notm}}. Después de esto, su ID de intranet y su IBMid estarán enlazados de forma automática. 
+  2. En la página de Mis inicios de sesión, pulse **Enlazar ID**, y especifique su IBMid y contraseña en la página de inicio de sesión en {{site.data.keyword.Bluemix_notm}}. Después de esto, su ID de intranet y su IBMid estarán enlazados de forma automática.
   
 
 <!-- end STAGING ONLY -->
@@ -252,7 +252,7 @@ Puede llevar a cabo una o varias de estas acciones si es necesario:
   * Finalice la sesión de {{site.data.keyword.Bluemix_notm}} y vuélvala a iniciar.
   * Utilice la modalidad de navegación privada del navegador. 
   * Borre las cookies y la memoria caché del navegador.
-  * Utilice otro navegador. Para obtener información sobre las versiones de los navegadores a las que da soporte {{site.data.keyword.Bluemix_notm}}, consulte [Requisitos previos de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}. 
+  * Utilice otro navegador. Para obtener información sobre las versiones de los navegadores a las que da soporte {{site.data.keyword.Bluemix_notm}}, consulte [Requisitos previos de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}.
   * Si ha instalado la interfaz de línea de mandatos cf, escriba el mandato `cf
 apps` para ver si la app se está ejecutando.
   
@@ -524,7 +524,7 @@ Si cree que algún servicio de {{site.data.keyword.Bluemix_notm}} no está dispo
 	* Utilice otro navegador.
 	* Rearranque el direccionador, el módem y el sistema. Rearrancar estos dispositivos puede borrar varios errores que provocan el error 502. 
   * Espere y vuelva a intentarlo más adelante. En algunas instancias, pueden ocurrir problemas temporales en el proveedor de servicios de Internet o en los servicios de {{site.data.keyword.Bluemix_notm}}. Puede esperar a que se resuelvan los problemas temporales.
-  * Si el problema todavía existe, póngase en contacto con el equipo de soporte de {{site.data.keyword.Bluemix_notm}}. Consulte [Cómo ponerse en contacto con el soporte de {{site.data.keyword.Bluemix_notm}} ](/docs/support/index.html#contacting-bluemix-support) para obtener más información.  
+  * Si el problema todavía existe, póngase en contacto con el equipo de soporte de {{site.data.keyword.Bluemix_notm}}. Consulte [Cómo ponerse en contacto con el soporte de {{site.data.keyword.Bluemix_notm}} ](/docs/support/index.html#contacting-bluemix-support) para obtener más información. 
 
 
 
@@ -643,7 +643,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## El límite memoria de la organización se ha excedido
 {: #ts_outofmemory}
 
-Si es usuario de una cuenta de prueba, es posible que no pueda desplegar una app en {{site.data.keyword.Bluemix_notm}} si ha excedido el límite de memoria de su organización. Puede reducir la memoria que utilizan las apps o aumentar la cuota de memoria de su cuenta. El máximo de cuota de memoria para una cuenta de prueba es de 2 GB y únicamente se puede incrementar pasando a una cuenta de pago. 
+Si es usuario de una cuenta de prueba, es posible que no pueda desplegar una app en {{site.data.keyword.Bluemix_notm}} si ha excedido el límite de memoria de su organización. Puede reducir la memoria que utilizan las apps o aumentar la cuota de memoria de su cuenta. El máximo de cuota de memoria para una cuenta de prueba es de 2 GB y únicamente se puede incrementar pasando a una cuenta de pago.
 
 
 
@@ -694,8 +694,7 @@ Una app no se reinicia automáticamente si el servicio que ha enlazado a la app 
 	  
  
 
-Si se bloquea un servicio enlazado con una app, se pueden producir problemas en la app como paradas, excepciones o intentos de reconexión.
-{{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la app para solucionar los problemas.
+Si se bloquea un servicio enlazado con una app, se pueden producir problemas en la app como paradas, excepciones o intentos de reconexión. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la app para solucionar los problemas.
 {: tsSymptoms}
 
 
@@ -792,17 +791,17 @@ Debería habilitar la característica de depuración de su app configurando la v
 La característica Debug no se puede habilitar en estas situaciones:
 {: tsCauses} 
 
-  * Cuando `manifest.yml` contiene el atributo command. 
+  * Cuando `manifest.yml` contiene el atributo command.
   * Cuando utiliza la opción **-c** para enviar por push la app a {{site.data.keyword.Bluemix_notm}}
 
  
   
-Utilice una de las siguientes opciones para resolver este problema:
+Utilice una de las siguientes opciones para resolver este problema: 
 {: tsResolve}
 
-  * La práctica recomendada es utilizar el paquete de compilación IBM Node.js para iniciar la app. Para obtener más información, consulte la sección del mandato Startup del tema [Desplegar una aplicación Node.js en {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime).  
+  * La práctica recomendada es utilizar el paquete de compilación IBM Node.js para iniciar la app. Para obtener más información, consulte la sección del mandato Startup del tema [Desplegar una aplicación Node.js en {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime). 
   * Inhabilite el mandato para su app existente revisando el atributo command en su archivo `manifest.yml` para command: nulo o editándolo para que el mandato push incluya `-c null`. 
-  * Elimine el atributo **command** de `manifest.yml`. A continuación suprima la app actual de {{site.data.keyword.Bluemix_notm}} y envíe por push la app de nuevo. 
+  * Elimine el atributo **command** de `manifest.yml`. A continuación suprima la app actual de {{site.data.keyword.Bluemix_notm}} y envíe por push la app de nuevo.
   
 <!-- end STAGING ONLY -->  
   
@@ -1501,7 +1500,7 @@ Si el paquete de compilación que utiliza no ofrece un mecanismo para cargar los
 	
 
 
-## AVISO mensajes del paquete de compilación PHP
+## Mensajes de AVISO del paquete de compilación PHP
 {: #ts_phplog}
 
 Puede que vea mensajes que contengan AVISOS procedentes de los registros. Puede detener el registro de estos mensajes cambiando el nivel de registro.	
@@ -1734,8 +1733,7 @@ Puede solucionar este problema con uno de estos métodos:
 ## Los objetos del registrador Log4js no se visualizan en la ventana emergente de rastreo de Node.js
 {: #ts_logger}
 
-Los objetos del registrador Log4js no se visualizan en la ventana emergente de rastreo de Node.js cuando en su app se utilizan al mismo tiempo los módulos log4js e ibmbluemix.
- 	
+Los objetos del registrador Log4js no se visualizan en la ventana emergente de rastreo de Node.js cuando en su app se utilizan al mismo tiempo los módulos log4js e ibmbluemix. 	
 
  
 Los objetos del registrador Log4js no se visualizan en la ventana emergente de rastreo de Node.js cuando en su app se utilizan al mismo tiempo los módulos log4js, winston e ibmbluemix.
@@ -1760,7 +1758,7 @@ Este comportamiento es el esperado.
 ## El recuadro de selección de Aplicar valores de rastreo a todas las instancias de una aplicación está inhabilitado
 {: #ts_bunyan}
 
-El recuadro de selección **Aplicar valores de rastreo a todas las instancias de una aplicación** no está seleccionado y aparece inhabilitado en la ventana emergente de rastreo de Node.js al modificar los niveles del registrador de Bunyan. 
+El recuadro de selección **Aplicar valores de rastreo a todas las instancias de una aplicación** no está seleccionado y aparece inhabilitado en la ventana emergente de rastreo de Node.js al modificar los niveles del registrador de Bunyan.
 
 
 

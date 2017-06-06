@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="1465.3375"
+   height="711.51501"
+   id="svg2"
+   xml:space="preserve"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="classifier_process.svg"><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="838"
+     id="namedview122"
+     showgrid="false"
+     inkscape:zoom="0.66337321"
+     inkscape:cx="862.11197"
+     inkscape:cy="381.52039"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" /><metadata
+     id="metadata8"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+     id="defs6"><inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 355.75751 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1465.3375 : 355.75751 : 1"
+       inkscape:persp3d-origin="732.66876 : 237.17167 : 1"
+       id="perspective124" /><clipPath
+       id="clipPath36"><path
+         d="m 0,569.212 1172.27,0 L 1172.27,0 0,0 0,569.212 z"
+         id="path38" /></clipPath><clipPath
+       id="clipPath70"><path
+         d="m 0,569.212 1172.27,0 L 1172.27,0 0,0 0,569.212 z"
+         id="path72" /></clipPath><clipPath
+       id="clipPath96"><path
+         d="m 0,569.212 1172.27,0 L 1172.27,0 0,0 0,569.212 z"
+         id="path98" /></clipPath><clipPath
+       id="clipPath210"><path
+         d="m 0,569.212 1172.27,0 L 1172.27,0 0,0 0,569.212 z"
+         id="path212" /></clipPath></defs><g
+     transform="matrix(1.25,0,0,-1.25,0,711.515)"
+     id="g10"
+     style="display:inline"><path
+   d="m 1013.137,69.746 -188.765,0 0,399.328 188.765,0 0,-399.328 z"
+   id="path12"
+   style="fill:#f4f4f4;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
+   d="m 791.843,69.746 -188.765,0 0,399.328 188.765,0 0,-399.328 z"
+   id="path14"
+   style="fill:#f4f4f4;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
+   transform="translate(876.1617,523.9404)"
+   id="g20"><path
+     d="M 0,0 252.993,0 0,0 z"
+     id="path22"
+     style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g><g
+   transform="translate(37.8207,523.9404)"
+   id="g24"><path
+     d="M 0,0 247.521,0 0,0 z"
+     id="path26"
+     style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g><path
+   d="m 348.098,69.746 -188.765,0 0,399.328 188.765,0 0,-399.328 z"
+   id="path28"
+   style="fill:#f4f4f4;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
+   d="m 198.852,433.33 55.371,0 0,-87 -55.371,0 0,87 z m -4,5 0,-16 0,-80 120,0 0,80 0,16 -120,0 z"
+   id="path30"
+   style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
+   id="g32"><g
+     clip-path="url(#clipPath36)"
+     id="g34"><g
+       transform="translate(302.1063,404.1542)"
+       id="g40"><path
+         d="m 0,0 -8.806,-8.806 -1.511,0 -2.579,0 0,-2.58 0,-1.51 -2.325,-2.324 -1.093,-1.094 0.448,-1.48 c 0.259,-0.853 0.39,-1.734 0.39,-2.619 0,-4.978 -4.05,-9.027 -9.027,-9.027 -4.977,0 -9.027,4.049 -9.027,9.027 0,4.978 4.05,9.027 9.027,9.027 0.885,0 1.767,-0.131 2.62,-0.389 l 1.478,-0.449 1.093,1.093 L -4.091,4.09 0,4.09 0,0 z M -5.159,6.669 -21.135,-9.307 c -1.066,0.323 -2.197,0.501 -3.368,0.501 -6.41,0 -11.607,-5.197 -11.607,-11.607 0,-6.41 5.197,-11.607 11.607,-11.607 6.41,0 11.607,5.197 11.607,11.607 0,1.172 -0.178,2.302 -0.502,3.368 l 3.081,3.08 0,2.579 2.579,0 10.317,10.317 0,7.738 -7.738,0 z"
+         id="path42"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g><g
+       transform="translate(275.0241,383.7412)"
+       id="g44"><path
+         d="m 0,0 c -1.424,0 -2.579,-1.155 -2.579,-2.579 0,-1.425 1.155,-2.58 2.579,-2.58 1.424,0 2.579,1.155 2.579,2.58 C 2.579,-1.155 1.424,0 0,0"
+         id="path46"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g><g
+       transform="translate(292.2451,397.4713)"
+       id="g48"><path
+         d="M 0,0 7.738,7.738 6.826,8.65 -0.912,0.912 0,0 z"
+         id="path50"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g><path
+       d="m 246.153,401.458 -40,0 0,-4 40,0 0,4 z"
+       id="path52"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
+       d="m 246.153,417.415 -40,0 0,-4 40,0 0,4 z"
+       id="path54"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
+       d="m 246.153,385.5 -40,0 0,-4 40,0 0,4 z"
+       id="path56"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
+       d="m 246.153,369.543 -40,0 0,-4 40,0 0,4 z"
+       id="path58"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g></g><g
+   id="g66"><g
+     clip-path="url(#clipPath70)"
+     id="g68"><path
+       d="m 569.843,69.746 -188.765,0 0,399.328 188.765,0 0,-399.328 z"
+       id="path74"
+       style="fill:#f4f4f4;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g></g><g
+   id="g92"><g
+     clip-path="url(#clipPath96)"
+     id="g94"><g
+       transform="translate(938.9902,396.6732)"
+       id="g100"><path
+         d="m 0,0 17.171,-17.172 5.658,5.657 L 0,11.313 l -40,-40 -17.171,17.172 -5.658,-5.657 L -40,-40 0,0 z"
+         id="path102"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g><path
+       d="m 974.99,346.33 -112,0 0,72 112,0 0,-72 z m -116,92 0,-16 0,-80 120,0 0,80 0,16 -120,0 z"
+       id="path104"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
+       transform="translate(688.2606,380.4909)"
+       id="g106"><path
+         d="M 0,0 -12.53,12.53 -17.91,7.148 0,-10.762 33.13,22.368 27.75,27.75 0,0 z"
+         id="path108"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g><g
+       transform="translate(695.8706,340.8652)"
+       id="g110"><path
+         d="m 0,0 c -27.275,0 -49.465,22.19 -49.465,49.465 0,27.275 22.19,49.464 49.465,49.464 27.275,0 49.465,-22.189 49.465,-49.464 C 49.465,22.19 27.275,0 0,0 m 0,102.734 c -29.416,0 -53.27,-23.851 -53.27,-53.269 0,-29.418 23.854,-53.27 53.27,-53.27 29.418,0 53.27,23.852 53.27,53.27 0,29.418 -23.852,53.269 -53.27,53.269"
+         id="path112"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g><g
+       transform="translate(462.1252,395.3914)"
+       id="g114"><path
+         d="m 0,0 c 0,-0.72 -0.174,-1.327 -0.52,-1.82 -0.347,-0.494 -0.78,-0.9 -1.3,-1.22 -0.52,-0.32 -1.074,-0.547 -1.66,-0.68 -0.587,-0.134 -1.134,-0.2 -1.64,-0.2 -0.4,0 -0.847,0.04 -1.34,0.12 -0.494,0.08 -0.947,0.22 -1.36,0.42 -0.414,0.2 -0.767,0.473 -1.06,0.82 -0.294,0.346 -0.44,0.773 -0.44,1.28 0,0.586 0.1,1.086 0.3,1.5 0.2,0.413 0.473,0.746 0.82,1 0.346,0.253 0.746,0.453 1.2,0.6 0.453,0.146 0.92,0.26 1.4,0.34 1.013,0.186 2.026,0.326 3.04,0.42 C -1.547,2.673 -0.694,2.946 0,3.4 L 0,0 z m 5.64,-3.92 c -0.427,0 -0.714,0.12 -0.86,0.36 -0.147,0.24 -0.22,0.64 -0.22,1.2 l 0,10.64 c 0,1.093 -0.24,2.02 -0.72,2.78 -0.48,0.76 -1.114,1.38 -1.9,1.86 -0.787,0.48 -1.674,0.826 -2.66,1.04 -0.987,0.213 -1.987,0.32 -3,0.32 -1.147,0 -2.267,-0.107 -3.36,-0.32 -1.094,-0.214 -2.074,-0.587 -2.94,-1.12 -0.867,-0.534 -1.58,-1.24 -2.14,-2.12 -0.56,-0.88 -0.88,-1.987 -0.96,-3.32 l 4.56,0 c 0.106,1.12 0.573,1.946 1.4,2.48 0.826,0.533 1.88,0.8 3.16,0.8 0.453,0 0.933,-0.034 1.44,-0.1 0.506,-0.067 0.966,-0.2 1.38,-0.4 0.413,-0.2 0.76,-0.487 1.04,-0.86 C 0.14,8.946 0.28,8.466 0.28,7.88 0.28,7.213 0.113,6.713 -0.22,6.38 -0.554,6.046 -1.007,5.8 -1.58,5.64 -2.154,5.48 -2.814,5.366 -3.56,5.3 -4.307,5.233 -5.094,5.12 -5.92,4.96 -6.88,4.853 -7.834,4.7 -8.78,4.5 -9.727,4.3 -10.58,3.973 -11.34,3.52 -12.1,3.066 -12.714,2.44 -13.18,1.64 c -0.467,-0.8 -0.7,-1.84 -0.7,-3.12 0,-1.014 0.193,-1.9 0.58,-2.66 0.386,-0.76 0.906,-1.387 1.56,-1.88 0.653,-0.494 1.406,-0.867 2.26,-1.12 0.853,-0.253 1.746,-0.38 2.68,-0.38 1.226,0 2.5,0.2 3.82,0.6 1.32,0.4 2.433,1.04 3.34,1.92 0.186,-0.934 0.586,-1.587 1.2,-1.96 0.613,-0.373 1.386,-0.56 2.32,-0.56 0.186,0 0.413,0.014 0.68,0.04 0.266,0.027 0.533,0.067 0.8,0.12 0.266,0.054 0.526,0.114 0.78,0.18 0.253,0.067 0.46,0.127 0.62,0.18 l 0,3.16 C 6.52,-3.893 6.306,-3.92 6.12,-3.92 l -0.48,0 z"
+         id="path116"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g><g
+       transform="translate(487.3449,396.0916)"
+       id="g118"><path
+         d="M 0,0 C -0.2,-0.867 -0.534,-1.64 -1,-2.32 -1.467,-3 -2.06,-3.554 -2.78,-3.98 c -0.72,-0.427 -1.6,-0.64 -2.64,-0.64 -0.934,0 -1.754,0.186 -2.46,0.56 -0.707,0.373 -1.314,0.88 -1.82,1.52 -0.507,0.64 -0.887,1.406 -1.14,2.3 -0.254,0.893 -0.38,1.86 -0.38,2.9 0,2.213 0.486,3.986 1.46,5.32 0.973,1.333 2.42,2 4.34,2 0.933,0 1.76,-0.207 2.48,-0.62 C -2.22,8.946 -1.62,8.4 -1.14,7.72 -0.66,7.04 -0.3,6.26 -0.06,5.38 0.18,4.5 0.3,3.593 0.3,2.66 0.3,1.753 0.2,0.866 0,0 m 2.46,10.36 c -0.8,1 -1.807,1.786 -3.02,2.36 -1.214,0.573 -2.634,0.86 -4.26,0.86 -1.334,0 -2.574,-0.26 -3.72,-0.78 -1.147,-0.52 -2.04,-1.38 -2.68,-2.58 l -0.08,0 0,2.8 -4.32,0 0,-28.32 4.56,0 0,10.32 0.08,0 c 0.346,-0.56 0.78,-1.047 1.3,-1.46 0.52,-0.414 1.086,-0.754 1.7,-1.02 0.613,-0.267 1.253,-0.46 1.92,-0.58 0.666,-0.12 1.333,-0.18 2,-0.18 1.52,0 2.84,0.3 3.96,0.9 1.12,0.6 2.046,1.4 2.78,2.4 0.733,1 1.28,2.153 1.64,3.46 0.36,1.306 0.54,2.653 0.54,4.04 0,1.52 -0.2,2.946 -0.6,4.28 -0.4,1.333 -1,2.5 -1.8,3.5"
+         id="path120"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g><path
+       d="m 496.164,412.672 4.56,0 0,4.32 -4.56,0 0,-4.32 z"
+       id="path122"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
+       d="m 496.164,388.431 4.56,0 0,20.68 -4.56,0 0,-20.68 z"
+       id="path124"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /><path
+       d="m 427.125,438.33 96,0 0,-80 -96,0 0,80 z m -4,4 0,-88 0,-16 104,0 0,16 0,88 -104,0 z"
+       id="path126"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g></g><text
+   transform="matrix(1,0,0,-1,178.1592,194.7891)"
+   id="text128"><tspan
+     x="0"
+     y="0"
+     id="tspan130"
+     style="font-size:14px;font-variant:normal;font-weight:300;font-stretch:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica 45 Light;-inkscape-font-specification:HelveticaNeue-Light">●</tspan></text>
+
+<text
+   transform="matrix(1,0,0,-1,178.1592,161.1891)"
+   id="text136"><tspan
+     x="0"
+     y="0"
+     id="tspan138"
+     style="font-size:14px;font-variant:normal;font-weight:300;font-stretch:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica 45 Light;-inkscape-font-specification:HelveticaNeue-Light">●</tspan></text>
+
+<text
+   transform="scale(1,-1)"
+   id="text146"
+   x="178.15919"
+   y="-129.98911"><tspan
+     x="178.15919"
+     y="-129.98911"
+     id="tspan148"
+     style="font-size:14px;font-variant:normal;font-weight:300;font-stretch:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica 45 Light;-inkscape-font-specification:HelveticaNeue-Light">●</tspan></text>
+
+<text
+   transform="matrix(1,0,0,-1,399.1632,194.7891)"
+   id="text154"><tspan
+     x="0"
+     y="0"
+     id="tspan156"
+     style="font-size:14px;font-variant:normal;font-weight:300;font-stretch:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica 45 Light;-inkscape-font-specification:HelveticaNeue-Light">●</tspan></text>
+
+<text
+   transform="matrix(1,0,0,-1,622.1692,194.7891)"
+   id="text164"><tspan
+     x="0"
+     y="0"
+     id="tspan166"
+     style="font-size:14px;font-variant:normal;font-weight:300;font-stretch:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica 45 Light;-inkscape-font-specification:HelveticaNeue-Light">●</tspan></text>
+
+<text
+   transform="matrix(1,0,0,-1,841.9832,194.7891)"
+   id="text182"><tspan
+     x="0"
+     y="0"
+     id="tspan184"
+     style="font-size:14px;font-variant:normal;font-weight:300;font-stretch:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica 45 Light;-inkscape-font-specification:HelveticaNeue-Light">●</tspan></text>
+
+<text
+   transform="matrix(1,0,0,-1,841.9832,127.5891)"
+   id="text194"><tspan
+     x="0"
+     y="0"
+     id="tspan196"
+     style="font-size:14px;font-variant:normal;font-weight:300;font-stretch:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica 45 Light;-inkscape-font-specification:HelveticaNeue-Light">●</tspan></text>
+
+<g
+   id="g206"><g
+     clip-path="url(#clipPath210)"
+     id="g208"><path
+       d="m 366.087,227.272 -187,0 0,1 187,0 0,-1 z"
+       id="path214"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
+       transform="translate(356.5733,217.5502)"
+       id="g216"><path
+         d="M 0,0 -0.707,0.707 8.807,10.222 -0.707,19.736 0,20.443 10.221,10.222 0,0 z"
+         id="path218"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g><path
+       d="m 587.087,227.272 -187,0 0,1 187,0 0,-1 z"
+       id="path220"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
+       transform="translate(577.5733,217.5502)"
+       id="g222"><path
+         d="M 0,0 -0.707,0.707 8.807,10.222 -0.707,19.736 0,20.443 10.221,10.222 0,0 z"
+         id="path224"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g><path
+       d="m 809.087,227.272 -187,0 0,1 187,0 0,-1 z"
+       id="path226"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /><g
+       transform="translate(799.5733,217.5502)"
+       id="g228"><path
+         d="M 0,0 -0.707,0.707 8.807,10.222 -0.707,19.736 0,20.443 10.221,10.222 0,0 z"
+         id="path230"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g><g
+       transform="translate(37.8203,36.3835)"
+       id="g232"><path
+         d="M 0,0 1091.334,0"
+         id="path234"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" /></g></g></g><text
+   xml:space="preserve"
+   style="font-size:32px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+   x="190.11038"
+   y="-126.62553"
+   id="text2976"
+   transform="scale(1,-1)"><tspan
+     sodipodi:role="line"
+     id="tspan2978"
+     x="190.11038"
+     y="-126.62553"
+     style="font-size:16px;font-family:SimSun;-inkscape-font-specification:SimSun">将类与文本匹配</tspan></text>
+</g><g
+     id="layer1"
+     style="display:inline"><text
+   transform="matrix(1.25,0,0,1.25,400.19038,70.854)"
+   id="text16"><tspan
+     x="390.01199 396.564 411.20801 425.23599 434.392 440.328 454.29999 468.328 478.18399 491.65201 498.20401 510.57999"
+     id="tspan18"
+     style="font-size:28px;font-variant:normal;font-weight:500;font-stretch:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Myriad Pro;-inkscape-font-specification:HelvNeueMediumforIBM" /></text>
+
+<text
+   transform="matrix(1.25,0,0,1.25,277.90775,333.29725)"
+   id="text60" />
+
+<text
+   transform="matrix(1.25,0,0,1.25,238.6415,468.02863)"
+   id="text132"><tspan
+     x="30.072001 32.661999 36.287998 42.77 46.661999 53.928001 56.518002 63.784 70.517998 77.251999 81.143997 83.734001 91 99.036003 106.302 108.892"
+     id="tspan134"
+     style="font-size:14px;font-variant:normal;font-weight:300;font-stretch:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica 45 Light;-inkscape-font-specification:HelveticaNeue-Light" /></text>
+
+<text
+   transform="matrix(1.25,0,0,1.25,238.6415,510.02862)"
+   id="text140" />
+
+<text
+   transform="matrix(1.25,0,0,1.25,238.6415,573.02862)"
+   id="text150"><tspan
+     x="48.846001 51.436001 58.702 65.435997 72.169998 79.435997 86.169998 90.061996 94.206001 101.99 105.882 110.026 117.292 124.026 128.17"
+     id="tspan152"
+     style="font-size:14px;font-variant:normal;font-weight:300;font-stretch:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica 45 Light;-inkscape-font-specification:HelveticaNeue-Light" /></text>
+
+<text
+   transform="matrix(1.25,0,0,1.25,511.43375,333.29725)"
+   id="text76" />
+
+<text
+   transform="matrix(1.25,0,0,1.25,514.8965,468.02863)"
+   id="text158" />
+
+<text
+   transform="matrix(1.25,0,0,1.25,537.66175,550.265)"
+   id="text236" />
+
+<text
+   transform="matrix(1.25,0,0,1.25,793.654,468.02863)"
+   id="text168" />
+
+<text
+   transform="matrix(1.25,0,0,1.25,782.5765,552.02862)"
+   id="text174" />
+
+<text
+   transform="matrix(1.25,0,0,1.25,1068.4215,468.02863)"
+   id="text186" />
+
+<text
+   transform="matrix(1.25,0,0,1.25,1068.4215,552.02862)"
+   id="text198" />
+
+</g><text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="388.03943"
+     y="64.820221"
+     id="text2930"><tspan
+       sodipodi:role="line"
+       id="tspan2932"
+       x="388.03943"
+       y="64.820221"><tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan2960">使用</tspan> Natural Language Classifer <tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan2962">服务</tspan></tspan></text>
+<text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="257.40005"
+     y="352.59366"
+     id="text2934"><tspan
+       sodipodi:role="line"
+       id="tspan2936"
+       x="257.40005"
+       y="352.59366"
+       style="font-size:20px;font-family:SimHei;-inkscape-font-specification:SimHei">准备培训数据</tspan></text>
+<text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="515.92029"
+     y="351.23517"
+     id="text2942"><tspan
+       sodipodi:role="line"
+       id="tspan2944"
+       x="515.92029"
+       y="351.23517"
+       style="font-size:20px;font-family:SimHei;-inkscape-font-specification:SimHei">创建并培训分类器</tspan><tspan
+       sodipodi:role="line"
+       x="515.92029"
+       y="376.23517"
+       id="tspan2946" /></text>
+<text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="776.33521"
+     y="349.72772"
+     id="text2952"><tspan
+       sodipodi:role="line"
+       id="tspan2954"
+       x="776.33521"
+       y="349.72772"
+       style="font-size:20px;font-family:SimHei;-inkscape-font-specification:SimHei">查询经过培训的分类器</tspan></text>
+<text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="1039.1375"
+     y="352.7724"
+     id="text2956"><tspan
+       sodipodi:role="line"
+       id="tspan2958"
+       x="1039.1375"
+       y="352.7724"
+       style="font-size:20px;font-family:SimHei;-inkscape-font-specification:SimHei">评估结果并更新培训数据</tspan></text>
+<text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="238.78833"
+     y="471.24902"
+     id="text2964"><tspan
+       sodipodi:role="line"
+       id="tspan2966"
+       x="238.78833"
+       y="471.24902"
+       style="font-size:20px;font-family:SimSun;-inkscape-font-specification:SimSun">标识类标签</tspan></text>
+<text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="236.32559"
+     y="513.4873"
+     id="text2968"><tspan
+       sodipodi:role="line"
+       id="tspan2970"
+       x="236.32559"
+       y="513.4873"
+       style="font-size:20px;font-family:SimSun;-inkscape-font-specification:SimSun">收集有代表性的文本</tspan></text>
+<text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="265.31067"
+     y="557.75543"
+     id="text2972"><tspan
+       sodipodi:role="line"
+       id="tspan2974"></tspan></text>
+<text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="514.12878"
+     y="468.2937"
+     id="text2980"><tspan
+       sodipodi:role="line"
+       id="tspan2982"
+       x="514.12878"
+       y="468.2937"><tspan
+         style="font-size:20px;font-family:SimSun;-inkscape-font-specification:SimSun"
+         id="tspan2984">使用该</tspan><tspan
+         style="font-size:20"
+         id="tspan2990"> API</tspan><tspan
+         style="font-size:20px;font-family:SimSun;-inkscape-font-specification:SimSun"
+         id="tspan2988"> 上传</tspan></tspan></text>
+<text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="512.80011"
+     y="490.38306"
+     id="text2992"><tspan
+       sodipodi:role="line"
+       id="tspan2994"
+       x="512.80011"
+       y="490.38306"
+       style="font-size:20px;font-family:SimSun;-inkscape-font-specification:SimSun">培训数据</tspan></text>
+<text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="515.69586"
+     y="556.12878"
+     id="text2996"><tspan
+       sodipodi:role="line"
+       id="tspan2998"
+       x="515.69586"
+       y="556.12878"
+       style="font-size:20px;font-family:SimSun;-inkscape-font-specification:SimSun">培训将立即开始</tspan></text>
+<text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="796.60333"
+     y="469.80115"
+     id="text3000"><tspan
+       sodipodi:role="line"
+       id="tspan3002"
+       x="796.60333"
+       y="469.80115"
+       style="font-size:20px"><tspan
+   style="font-size:20px;font-family:SimSun;-inkscape-font-specification:SimSun"
+   id="tspan3004">使用该</tspan> API <tspan
+   style="font-size:20px;font-family:SimSun;-inkscape-font-specification:SimSun"
+   id="tspan3006">将文本</tspan></tspan><tspan
+       sodipodi:role="line"
+       x="796.60333"
+       y="469.80115"
+       style="font-size:20px"
+       id="tspan3008"><tspan
+         style="font-size:20px;font-family:SimSun;-inkscape-font-specification:SimSun"
+         id="tspan3010">发送到分类器</tspan></tspan></text>
+<text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="759.99164"
+     y="554.65118"
+     id="text3012"><tspan
+       sodipodi:role="line"
+       id="tspan3014"
+       x="759.99164"
+       y="554.65118"
+       style="font-size:20px;font-family:SimSun;-inkscape-font-specification:SimSun">此服务会返回匹配度最高</tspan><tspan
+       sodipodi:role="line"
+       x="759.99164"
+       y="579.65118"
+       style="font-size:20px;font-family:SimSun;-inkscape-font-specification:SimSun"
+       id="tspan3016">的类和其他可能的匹配项</tspan></text>
+<text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="1069.9438"
+     y="469.21924"
+     id="text3018"><tspan
+       sodipodi:role="line"
+       id="tspan3020"
+       x="1069.9438"
+       y="469.21924"
+       style="font-size:20px;font-family:SimSun;-inkscape-font-specification:SimSun">基于分类结果</tspan><tspan
+       sodipodi:role="line"
+       x="1069.9438"
+       y="494.21924"
+       style="font-size:20px;font-family:SimSun;-inkscape-font-specification:SimSun"
+       id="tspan3022">更新培训数据</tspan></text>
+<text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="1066.0034"
+     y="553.60645"
+     id="text3024"><tspan
+       sodipodi:role="line"
+       id="tspan3026"
+       x="1066.0034"
+       y="553.60645"
+       style="font-size:20px;font-family:SimSun;-inkscape-font-specification:SimSun">使用更新后的培训数据</tspan><tspan
+       sodipodi:role="line"
+       x="1066.0034"
+       y="578.60645"
+       style="font-size:20px;font-family:SimSun;-inkscape-font-specification:SimSun"
+       id="tspan3028">创建并培训分类器</tspan></text>
+</svg>

@@ -102,7 +102,7 @@ Para crear una suscripción de correo electrónico o webhook desde la página **
 | Cuerpo | Especifique el texto del cuerpo del mensaje que se debe enviar en el correo electrónico. Puede utilizar los valores de carga útil de IBM para rellenar la notificación por correo electrónico con información pertinente. Consulte la tabla [Valores de la sección de carga útil de mantenimiento e incidentes](index.html#payload) para identificar qué valores puede utilizar. Utilice etiquetas HTML básicas para estructurar el correo electrónico. Este campo es necesario. |
 | Para | Especifique la dirección o direcciones de correo electrónico utilizando una lista separada por comas de los destinatarios de notificación por correo electrónico. Expanda las opciones "C/o" o "C/co" para enviar una copia del mensaje a otros destinatarios. Este campo es necesario. |
 | Descripción | Añada una descripción única para la suscripción que está creando. |
-{: caption="Tabla 3. Campos para suscripciones a notificaciones por correo electrónico sobre los umbrales " caption-side="top"}
+{: caption="Tabla 3. Campos para suscripciones a notificaciones por correo electrónico sobre los umbrales" caption-side="top"}
 
 
 {: #emailnottrhesh}
@@ -121,7 +121,6 @@ Para crear una suscripción de correo electrónico o webhook desde la página **
 | Cuerpo de mensaje | Especifique el texto del cuerpo del mensaje que se debe enviar en el correo electrónico. Puede utilizar los valores de carga útil de IBM para rellenar la notificación por correo electrónico con información pertinente. Consulte la tabla [Valores de la sección de carga útil](index.html#threshpayload) para identificar qué valores puede utilizar. Utilice etiquetas HTML básicas para estructurar el correo electrónico. Este campo es necesario. |
 | Para | Especifique la dirección o direcciones de correo electrónico utilizando una lista separada por comas de los destinatarios de notificación por correo electrónico. Expanda las opciones "C/o" o "C/co" para enviar una copia del mensaje a otros destinatarios. Este campo es necesario. |
 {: caption="Tabla 4. Campos para suscripciones a notificaciones por correo electrónico sobre las actualizaciones o los incidentes de mantenimiento" caption-side="top"}
-
 
 Los datos del umbral se recopilan una vez cada 6 horas. Solamente se enviará una notificación una vez cuando el valor sobrepase el valor de umbral que haya establecido. Si elige ascendente, no se envía una nueva notificación a menos que el valor caiga por debajo del umbral y, a continuación, aumente de nuevo por encima del umbral. Del mismo modo, si ha elegido descendente, sólo se le notificará si el valor sube por encima del umbral establecido y, a continuación, cae por debajo del umbral de nuevo. 
 
@@ -154,7 +153,6 @@ Una notificación de umbral de Cuota de organización incluye sólo las organiza
 {: caption="Tabla 5. Campos de formulario para una suscripción a notificaciones de webhook sobre el mantenimiento o los incidentes" caption-side="top"}
 
 
-
 {: #webhooknotthresh}
 
 | **Campo** | **Descripción** |
@@ -173,7 +171,6 @@ Una notificación de umbral de Cuota de organización incluye sólo las organiza
 | Método | Seleccione **GET**, **POST** o **PUT**. |
 | URL | Especificar el URL al que conectar su servicio web. |
 {: caption="Tabla 6. Campos de formulario para una suscripción a notificaciones de webhook sobre umbrales" caption-side="top"}
-
 
 Los datos del umbral se recopilan una vez cada 6 horas. Solamente se enviará una notificación una vez cuando el valor sobrepase el valor de umbral que haya establecido. No se enviará una notificación nueva a menos que el valor caiga por debajo del umbral, si ha elegido ascendente y, a continuación, aumenta por encima del umbral de nuevo. Del mismo modo, si ha elegido descendente, sólo se le volverá a notificar si el valor sube por encima del umbral establecido y, a continuación, cae por debajo del umbral de nuevo. 
 
@@ -199,7 +196,6 @@ Una notificación de umbral de Cuota de organización incluye sólo las organiza
 {: caption="Tabla 7. Valores de la sección de carga útil de incidencia y de mantenimiento" caption-side="top"}
 
 
-
 {: #threshpayload}
 
 | **Valor de IBM** | **Descripción** | **Tipo de suceso** |
@@ -210,7 +206,6 @@ Una notificación de umbral de Cuota de organización incluye sólo las organiza
 | {{content.reserved_disk}} | Umbral de disco reservado | Umbral |
 | {{content.reserved_memory}} | Umbral de memoria reservada | Umbral |
 {: caption="Tabla 8. Valores de la sección de carga útil del umbral" caption-side="top"}
-
 
 Cuando se guarda su suscripción de notificaciones, recibe notificaciones a través del método que haya configurado. Las notificaciones se siguen publicando en las siguientes ubicaciones:  
  * En la página Estado para incidencias
@@ -230,7 +225,7 @@ Puede ver las actualizaciones de mantenimiento planificadas y pendientes, si tie
 <dt>Actualizaciones no disruptivas</dt>
 <dd>Una actualización no disruptiva no afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Este tipo de actualización no requiere aprobación caso por caso y se aplicará durante las ventanas de mantenimiento disponibles y con aprobación previa que establece desde la página Actualizaciones del sistema.</dd>
 <dt>Actualizaciones disruptivas</dt>
-<dd>Una actualización disruptiva puede afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Debe planificar y aprobar cada una de estas ventanas de mantenimiento dentro de la ventana de mantenimiento de 21 días asignada. Puede seleccionar la fecha y hora de despliegue sugeridas, la opción para cualquier ventana ya aprobada, o bien abrir el calendario y seleccionar tres fechas y horas específicas para que IBM pueda elegir la planificación de la actualización.</dd>
+<dd>Una actualización disruptiva puede afectar al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Debe planificar y aprobar cada una de estas ventanas de mantenimiento dentro de la ventana de mantenimiento de 21 días asignada. Puede seleccionar la fecha y hora de despliegue sugeridas, la opción para cualquier ventana ya aprobada, o bien abrir el calendario y seleccionar tres fechas y horas específicas para que IBM pueda elegir la planificación de la actualización.</dd>
 </dl>
 
 
@@ -279,7 +274,7 @@ Para ver los detalles para una actualización no disruptiva, realice los siguien
 2. Identifique todas las filas que tengan **Planificación de cliente necesaria** establecida en **No**.
 3. Seleccione la fila para esa actualización para ver los detalles.
 
-Una actualización disruptiva puede afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Debe planificar y aprobar cada una de estas ventanas de mantenimiento dentro de la ventana de mantenimiento de 21 días asignada. Puede seleccionar la fecha y hora de despliegue sugeridas, la opción para cualquier ventana ya aprobada, o bien abrir el calendario y seleccionar tres fechas y horas específicas para que IBM pueda elegir la planificación de la actualización.
+Una actualización disruptiva puede afectar al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Debe planificar y aprobar cada una de estas ventanas de mantenimiento dentro de la ventana de mantenimiento de 21 días asignada. Puede seleccionar la fecha y hora de despliegue sugeridas, la opción para cualquier ventana ya aprobada, o bien abrir el calendario y seleccionar tres fechas y horas específicas para que IBM pueda elegir la planificación de la actualización.
 
 Para las actualizaciones disruptivas que no requieran su aprobación, realice los siguientes pasos:
 
@@ -311,7 +306,7 @@ que requieren acción por su parte. Hay dos tipos que se pueden ver:
 <dt>Actualizaciones no disruptivas</dt>
 <dd>Una actualización no disruptiva no afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. Este tipo de actualización no requiere aprobación caso por caso. Estas actualizaciones se aplican en las ventanas de mantenimiento disponibles y con aprobación previa que establece desde la página Actualizaciones del sistema.</dd>
 <dt>Actualizaciones disruptivas</dt>
-<dd>Una actualización disruptiva puede afecta al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. El usuario tiene la capacidad de planificar y aprobar cada una de estas actualizaciones de mantenimiento con la ventana de mantenimiento de 21 días asignada para asegurarse de que la actualización no se aplica durante las horas empresariales críticas. Puede seleccionar una fecha y hora de despliegue sugerida basándose en las ventanas de actualización con aprobación previa, o puede seleccionar dos horas y fechas adicionales para que IBM elija una de ellas para aplicar la actualización.</dd>
+<dd>Una actualización disruptiva puede afectar al entorno, a las aplicaciones en ejecución o al acceso de los usuarios a las aplicaciones. El usuario tiene la capacidad de planificar y aprobar cada una de estas actualizaciones de mantenimiento con la ventana de mantenimiento de 21 días asignada para asegurarse de que la actualización no se aplica durante las horas empresariales críticas. Puede seleccionar una fecha y hora de despliegue sugerida basándose en las ventanas de actualización con aprobación previa, o puede seleccionar dos horas y fechas adicionales para que IBM elija una de ellas para aplicar la actualización.</dd>
 </dl>
 
 Para obtener más información sobre el establecimiento de ventanas de mantenimiento preaprobadas y el establecimiento de fechas no disponibles específicas para mantenimiento, consulte [Actualizaciones de mantenimiento](index.html#oc_schedulemaintenance).
@@ -354,7 +349,8 @@ En la sección **Uso de recursos**, puede ver la siguiente información:
 - Promedio de transacciones por segundo para {{site.data.keyword.Bluemix_notm}} durante los últimos 10
 minutos, hora y día.
 
-#### Detalles de memoria, disco y CPU
+
+#### Detalles de memoria, disco y CPU del sistema
 {: #resourceusagedetails}
 
 En la sección **Uso de recursos**, puede ver un resumen de las cantidades **Reservadas** y **Físicas** para la memoria y el disco.    
@@ -381,6 +377,13 @@ Para ver información más detallada sobre el uso de memoria física y reservada
 	<dt><strong>Físico</strong></dt>
 	<dd>El área Físico muestra la cantidad de memoria o espacio de disco que se está utilizando en realidad.</dd>
 	</dl>
+	
+#### Detalles de utilización del servicio
+{: #servicesresourceusage}
+
+El separador **Servicio** muestra la utilización total del servicio con relación a la capacidad máxima que tiene para un servicio dedicado. Por ejemplo, si tiene un servicio Cloudant dedicado, y está utilizando 500 GB de los 1000 GB que tiene como capacidad disponible, verá un gráfico que mostrará que está utilizando un 50% del total de su capacidad. El color del gráfico cambia en base a lo cerca que está a su límite de capacidad. El color amarillo indica que ha utilizado entre el 70% y el 84% de su capacidad, y el color rojo se utiliza cuando llega al 85% o más de su capacidad disponible. 
+
+**Nota**: Actualmente, la información de consumo del servicio podría no estar disponible en todos los entornos. Esta característica está disponible para Cloudant, MessageHub, API Connect y Session Cache. 
 
 
 ### Uso de cuenta
@@ -2057,7 +2060,7 @@ Content-Type: application/json
 Puede gestionar usuarios del entorno de
 {{site.data.keyword.Bluemix_notm}} mediante la interfaz
 de línea de mandatos de Cloud Foundry con el plug-in CLI de
-administración de {{site.data.keyword.Bluemix_notm}}. Debe descargar este plugin para su interfaz de línea de mandatos de Cloud Foundry. 
+administración de {{site.data.keyword.Bluemix_notm}}. Debe descargar este plugin para su interfaz de línea de mandatos de Cloud Foundry.
 
 Antes de empezar, instale la interfaz de línea de mandatos cf. El plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}} necesita
 cf versión 6.11.2 o posterior. [Descargue la interfaz de línea de mandatos
@@ -2099,7 +2102,7 @@ cf plugins
 ```
 {: codeblock}
 
-Para ver una lista de los grupos de mandatos disponibles para el plugin {{site.data.keyword.Bluemix_notm}} Admin, ejecute el siguiente mandato: 
+Para ver una lista de los grupos de mandatos disponibles para el plugin {{site.data.keyword.Bluemix_notm}} Admin, ejecute el siguiente mandato:
 
 ```
 cf ba

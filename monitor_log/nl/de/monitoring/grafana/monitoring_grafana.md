@@ -21,7 +21,7 @@ Sie können ein angepasstes Grafana-Dashboard erstellen, um Metriken für alle C
 
 Führen Sie zum Erstellen eines Grafana-Dashboards die folgenden Schritte aus:
 
-1. Starten Sie Grafana in einem Web-Browser. Weitere Informationen finden Sie unter [Zum Grafana-Dashboard über einen Web-Browser navigieren](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser). 
+1. Starten Sie Grafana in einem Web-Browser. Weitere Informationen finden Sie unter [Zum Grafana-Dashboard über einen Web-Browser navigieren](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
 
 2. Speichern Sie das Standarddashboard.
 

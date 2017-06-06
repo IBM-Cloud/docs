@@ -61,7 +61,7 @@ Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=
 _Example including basic authentication credentials in a request, using the command line:_
 
 ```sh
-curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com
+curl https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com
 ```
 {:codeblock}
 
@@ -71,7 +71,7 @@ _Example including basic authentication credentials in a request, using Javascri
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com");
+var account = nano("https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com");
 account.request(function (err, body) {
 	if (!err) {
 		console.log(body);
@@ -137,10 +137,10 @@ name=USERNAME&password=PASSWORD
 _Example of requesting a cookie, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/_session \
+curl https://$ACCOUNT.cloudant.com/_session \
 	-X POST \
 	-c /path/to/cookiefile
-	-d "name=$USERNAME&password=$PASSWORD"
+	-d "name=$ACCOUNT&password=$PASSWORD"
 ```
 {:codeblock}
 
@@ -150,14 +150,14 @@ _Example of requesting a cookie, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var cloudant = nano("https://"+$USERNAME+".cloudant.com");
+var cloudant = nano("https://"+$ACCOUNT+".cloudant.com");
 var cookies = {}
-cloudant.auth($USERNAME, $PASSWORD, function (err, body, headers) {
+cloudant.auth($ACCOUNT, $PASSWORD, function (err, body, headers) {
 	if (!err) {
-		cookies[$USERNAME] = headers['set-cookie'];
+		cookies[$ACCOUNT] = headers['set-cookie'];
 		cloudant = nano({
-			url: "https://"+$USERNAME+".cloudant.com",
-			cookie: cookies[$USERNAME] 
+			url: "https://"+$ACCOUNT+".cloudant.com",
+			cookie: cookies[$ACCOUNT] 
 		});
 		// ping to ensure we're logged in
 		cloudant.request({
@@ -238,7 +238,7 @@ Accept: application/json
 _Example request for cookie information, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/_session \
+curl https://$ACCOUNT.cloudant.com/_session \
 	-X GET \
 	-b /path/to/cookiefile
 ```
@@ -292,7 +292,7 @@ Accept: application/json
 _Example cookie `DELETE` request, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/_session \
+curl https://$ACCOUNT.cloudant.com/_session \
 	-X DELETE \
 	-b /path/to/cookiefile
 ```

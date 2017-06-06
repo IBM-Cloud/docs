@@ -23,7 +23,7 @@ lastupdated: "2017-04-19"
 開始前に、以下のことを行ってください。
   1. {{site.data.keyword.Bluemix}} コマンド・ライン・インターフェースをインストールします。
 
-  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(新規タブまたはウィンドウで開きます)"><img class="image" src="images/btn_bx_commandline.svg" alt="{{site.data.keyword.Bluemix}} コマンド・ライン・インターフェースのダウンロード" /> </a> 
+  <a class="xref" href="http://clis.ng.bluemix.net/ui/home.html" target="_blank" title="(新規タブまたはウィンドウで開きます)"><img class="image" src="images/btn_bx_commandline.svg" alt="{{site.data.keyword.Bluemix}} コマンド・ライン・インターフェースのダウンロード" /> </a>
 
   2. {{site.data.keyword.Bluemix}} に接続します。
 
@@ -51,10 +51,7 @@ lastupdated: "2017-04-19"
 
   **ヒント:** **bluemix app push** コマンドを使用すると、このコマンドは、すべてのファイルとディレクトリーを現行ディレクトリーから Bluemix にコピーします。アプリケーション・ディレクトリーには必要なファイルだけを保管しておくようにしてください。
 
-  
+
   2. アプリケーションを変更した場合、`bluemix app push` コマンドを再度入力することで、それらの変更をアップロードすることができます。このコマンドでは、ユーザーの前回のオプションとプロンプトに対する応答を使用して、アプリケーションの実行中のインスタンスを新規コードで更新します。
 
 {{site.data.keyword.Bluemix}} CLI では、cf cli はインストール済み環境にバンドルされていました。`bluemix app push` コマンドは実際には、`cf push` を呼び出して、アプリケーションを {{site.data.keyword.Bluemix_notm}} にアップロードしてデプロイします。cf push について詳しくは、『[cf コマンド](/docs/cli/reference/cfcommands/index.html)』を参照してください。ビルドパックについては、『[コミュニティー・ビルドパックの使用](/docs/cfapps/byob.html)』を参照してください。
-
-
-**ヒント:** また、DevOps Services からもアプリケーションのアップロードとデプロイを行うことができます。『[Developing a {{site.data.keyword.Bluemix_notm}} application in Node.js with the Web IDE](https://hub.jazz.net/tutorials/devopsweb/){: new_window}』を参照してください。

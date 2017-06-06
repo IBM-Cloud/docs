@@ -71,7 +71,7 @@ En tant qu'employé IBM, avant de pouvoir vous connecter à {{site.data.keyword.
 {: tsResolve} 
 
   1. Sur la page [Central Sign-on ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window}, cliquez sur **My Sign-ons**.
-  2. Sur la page My Sign-ons, cliquez sur **Link IDs**, puis entrez votre IBMid et votre mot de passe sur la page {{site.data.keyword.Bluemix_notm}} Sign in. Après cela, votre ID intranet et votre IBMid sont automatiquement liés. 
+  2. Sur la page My Sign-ons, cliquez sur **Link IDs**, puis entrez votre IBMid et votre mot de passe sur la page {{site.data.keyword.Bluemix_notm}} Sign in. Après cela, votre ID intranet et votre IBMid sont automatiquement liés.
   
 
 <!-- end STAGING ONLY -->
@@ -440,7 +440,7 @@ Vérifiez que vous avez créé un espace dans votre organisation.  Pour créer u
   * Cliquez sur l'icône {{site.data.keyword.avatar}} ![icône Avatar](images/account_support.svg) pour ouvrir le widget Compte et support, sélectionnez l'organisation dans laquelle vous souhaitez créer l'espace, puis cliquez sur **Créer un espace**.
   * Dans l'interface de ligne de commande cf, tapez `cf create-space <nom_espace> -o <nom_organisation>`.
 
-Essayez à nouveau. Si ce message réapparaît, accédez à la page de [statut Bluemix ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} pour déterminer si un service ou un composant présente un problème. 
+Essayez à nouveau. Si ce message réapparaît, accédez à la page de [statut Bluemix ![Icône de lien externe](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} pour déterminer si un service ou un composant présente un problème.
 
 
 
@@ -587,7 +587,7 @@ Si vous suspectez l'arrêt d'un service {{site.data.keyword.Bluemix_notm}}, cons
 unités peut éliminer diverses erreurs à l'origine de l'erreur 502. 
   * Attendez et recommencez ultérieurement. Dans certaines instances, des problèmes temporaires peuvent se produire
 avec votre fournisseur d'accès Internet ou les services {{site.data.keyword.Bluemix_notm}}. Vous pouvez attendre jusqu'à ce que les problèmes temporaires soient résolus.
-  * Si le problème existe toujours, contactez le support {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Contacter le support {{site.data.keyword.Bluemix_notm}}](/docs/support/index.html#contacting-bluemix-support).  
+  * Si le problème existe toujours, contactez le support {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Contacter le support {{site.data.keyword.Bluemix_notm}}](/docs/support/index.html#contacting-bluemix-support). 
 
 
 
@@ -734,7 +734,6 @@ cf push appname -p chemin_app -c ./RunMeNow -b https://github.com/ryandotsmith/n
 Si vous possédez un compte d'essai, il se peut que vous ne puissiez pas déployer une application dans {{site.data.keyword.Bluemix_notm}} si
 vous avez
 atteint la limite de mémoire définie pour votre organisation. Vous pouvez réduire la quantité de mémoire que vos applications utilisent ou augmenter le quota de mémoire de votre compte. Le quota de mémoire maximal pour un compte d'essai est 2 Go. Il ne peut être augmenté qu'en passant à un compte payant.
-
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-28"
+lastupdated: "2017-5-25"
 
 ---
 
@@ -35,14 +35,14 @@ Complete these steps to set up a {{site.data.keyword.deliverypipeline}} for an e
 1. From the menu on the {{site.data.keyword.Bluemix_notm}} menu bar, click **Services**, and then click **DevOps**.
 1. Click **Pipelines**, and then click **Create a Pipeline**.
 
-To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} that is configured to deploy a Cloud Foundry application, follow these steps:
+To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} that is configured to deploy a Cloud Foundry application, follow these steps:
 
 1. Click **Cloud Foundry**.
 1. If you want to use a different name for the pipeline, change its default name.
 1. If you want to use a different name for the application, change its default name. This name is the application that the pipeline deploys to.
-1. If you don't have a toolchain, a toolchain with a default name is created for you. If you want to use a different name for the toolchain, change its name. With the toolchain, you can extend the capabilities of your pipeline by integrating with other tools and services. For more information about toolchains, see [Working with toolchains](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}.
+1. If you don't have a toolchain, a toolchain with a default name is created for you. If you want to use a different name for the toolchain, change its name. With the toolchain, you can extend the capabilities of your pipeline by integrating with other tools and services. For more information about toolchains, see [Creating toolchains](/docs/services/ContinuousDelivery/toolchains_working.html){: new_window}.
 
- **Tip**: Pipelines and toolchains belong to organizations (orgs). If you belong to an org that has toolchains, you can be added to the access control list for any of its associated toolchains. After you are added to the access control list for a toolchain, you can use that toolchain and any associated pipelines, even if you didn't create them. For more information about access control for toolchains, see [Managing access](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}.
+ **Tip**: Pipelines and toolchains belong to organizations (orgs). If you belong to an org that has toolchains, you can be added to the access control list for any of its associated toolchains. After you are added to the access control list for a toolchain, you can view that toolchain and any associated pipelines, even if you didn't create them. If you are granted admin privileges, you can also modify and delete the toolchain. For more information about access control for toolchains, see [Managing access](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}.
 
 1. Either select the toolchain that you want to use or type a name for the new toolchain that you want to create.
 1. Select your Git provider.
@@ -62,7 +62,7 @@ To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "Extern
  ![Pipeline card](images/cd_pipeline.png)
 1. If you created a pipeline in toolchain that contains a composite pipeline, the new pipeline is added to the composite pipeline. Modify the deployment plan to include deployment tasks for the new pipeline. See [Creating Delivery Pipeline tasks](/docs/services/ContinuousDelivery/pipeline_deployment_plan.html#tasks_pipelineCD){: new_window}.
 
-To create an [empty pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} without any preconfigured stages:
+To create an [empty pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} without any preconfigured stages:
 
 1. Click **Custom**.
 1. If you want to use a different name for the pipeline, change its default name.

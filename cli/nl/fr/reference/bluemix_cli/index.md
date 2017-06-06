@@ -16,13 +16,13 @@ lastupdated: "2017-03-08"
 # Initiation à l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 {: #getting-started}
 
-L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} vous permet d'interagir avec vos applications, vos conteneurs et d'autres services via une interface de ligne de commande.  
+L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} vous permet d'interagir avec vos applications, vos conteneurs et d'autres services via une interface de ligne de commande. 
 
 **Restriction** : l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} n'est pas prise en charge par Cygwin. Ne l'utilisez donc pas dans la fenêtre de ligne de commande Cygwin.
 
 **Remarque** : si votre réseau comporte un serveur proxy HTTP entre l'hôte qui exécute l'interface de ligne de commande et {{site.data.keyword.Bluemix_notm}}, vous devez spécifier le nom d'hôte ou l'adresse IP du serveur proxy dans la variable d'environnement HTTP_PROXY.
 
-**Remarque :** L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} a intégré une interface de ligne de commande Cloud Foundry dans son installation. Toutefois, il est interdit d'utiliser en même temps des commandes d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} `bx xxx` et des commandes d'interface de ligne de commande Cloud Foundry `cf xxx` si vous disposez de votre propre installation d'interface de ligne de commande CF. A la place, exécutez `bluemix cf` si vous souhaitez utiliser l'interface de ligne de commande CF pour gérer des ressources Cloud Foundry. En arrière-plan, elle exécute des commandes de l'interface de ligne de commande Cloud Foundry intégrée dans un contexte partagé avec l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. De plus, `bluemix cf api/login/logout/target` n'est pas admis, utilisez `bluemix api/login/logout/target` à la place. 
+**Remarque :** L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} a intégré une interface de ligne de commande Cloud Foundry dans son installation. Toutefois, il est interdit d'utiliser en même temps des commandes d'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} `bx xxx` et des commandes d'interface de ligne de commande Cloud Foundry `cf xxx` si vous disposez de votre propre installation d'interface de ligne de commande CF. A la place, exécutez `bluemix cf` si vous souhaitez utiliser l'interface de ligne de commande CF pour gérer des ressources Cloud Foundry. En arrière-plan, elle exécute des commandes de l'interface de ligne de commande Cloud Foundry intégrée dans un contexte partagé avec l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.  De plus, `bluemix cf api/login/logout/target` n'est pas admis, utilisez `bluemix api/login/logout/target` à la place.
 
 ## Installation de l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}
 {: #install_bluemix_cli}
@@ -64,7 +64,7 @@ Vous pouvez maintenant commencer à utiliser l'interface de ligne de commande {{
 ## Installation d'un plug-in
 {: #install_plug-in}
 
-L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} prend en charge une infrastructure d'extension de plug-in permettant d'ajouter des commandes aux commandes intégrées. 
+L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} prend en charge une infrastructure d'extension de plug-in permettant d'ajouter des commandes aux commandes intégrées.
 
 
 Vous pouvez installer un plug-in depuis le référentiel, localement ou à partir d'un serveur distant. {{site.data.keyword.Bluemix_notm}}
@@ -160,4 +160,4 @@ distante à l'aide de la commande `bluemix plugin install`. Par exemple :
   ```
 
 
-Vous êtes désormais prêt à utiliser les lignes de commande {{site.data.keyword.Bluemix_notm}}. Exécutez `bluemix help` pour afficher la liste de commandes et de descriptions.  
+Vous êtes désormais prêt à utiliser les lignes de commande {{site.data.keyword.Bluemix_notm}}. Exécutez `bluemix help` pour afficher la liste de commandes et de descriptions. 

@@ -18,7 +18,7 @@
     {: .navgroup-end}
     
     {: .navgroup id="reference"}
-    [注意事項及使用條款](../navigation/notices.html)
+    ../navigation/
     glossary/index.md
-    [新增功能](../whatsnew/index.html)
+    ../whatsnew/
     {: .navgroup-end}

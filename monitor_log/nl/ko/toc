@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="bluemix-monitor-log" audience="platform" href="/docs/monitor_log/monitoringandlogging.html"}
-Monitoring and Logging
+모니터링 및 로깅
 
     {: .navgroup id="learn"}
     monitoringandlogging.md
@@ -80,3 +80,4 @@ Monitoring and Logging
         logging/qa/logging_qa_kibana.md
         logging/qa/kibana_formats.md
     {: .navgroup-end}
+    

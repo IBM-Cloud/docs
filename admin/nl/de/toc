@@ -1,14 +1,28 @@
-{: .toc}
-Cloud Foundry-Apps  
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
 
-    [Eigenes Konto einrichten](/docs/admin/adminpublic.html)
+{: .toc subcollection="bluemix-account" audience="platform" href="/docs/admin/adminpublic.html"}
+Eigenes Konto verwalten
+
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    Kontoeinrichtung
         adminpublic.md
         profile.md
-        account.md
-        iamuserinv.md
-        iamusermanage.md
-        users_roles.md
+    
+    softlayerlink.md
+
+    {: .topicgroup}
+    Organisationen
         orgs_spaces.md
-        apikeys.md
+        manageorg.md
+        
+    notifications.md
+    {: .navgroup-end}
+
+    {: .navgroup id="learn"}
+    {: .topicgroup}  
+    Bewährte Verfahren
         patterns.md
-        softlayerlink.md
+        
+    {: .navgroup-end}

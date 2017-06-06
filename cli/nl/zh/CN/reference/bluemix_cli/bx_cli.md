@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -27,7 +27,8 @@ lastupdated: "2017-04-20"
 <dt>端点</dt>
 <dd>使用命令前，必须通过 <code>bluemix api</code> 设置 API 端点。</dd>
 <dt>登录</dt>
-<dd>使用此命令之前，必须使用 <code>bluemix login</code> 命令登录。<b>如果使用联合标识登录，请使用“--sso”选项对一次性密码进行认证，或者使用“--apikey”对 API 密钥进行认证</b>。转至 {{site.data.keyword.Bluemix_notm}} 控制台的“管理”->“安全性”->“Bluemix API 密钥”以创建 API 密钥</dd>
+<dd>使用此命令之前，必须使用 <code>bluemix login</code> 命令登录。如果使用联合标识登录，请使用“--sso”选项通过一次性密码进行认证，或者使用“--apikey”通过 API 密钥进行认证。转至 {{site.data.keyword.Bluemix_notm}} 控制台的**管理** &gt; **安全性** &gt; **Bluemix API 密钥**以创建 API 密钥。
+</dd>
 <dt>目标</dt>
 <dd>使用命令前，必须通过 <code>bluemix target</code> 命令设置组织和空间。</dd>
 <dt>Docker</dt>

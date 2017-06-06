@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -27,7 +27,9 @@ L'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} fournit un e
 <dt>Noeud final</dt>
 <dd>Un noeud final d'API doit être défini via <code>bluemix api</code> avant l'utilisation de la commande.</dd>
 <dt>Connexion</dt>
-<dd>La connexion avec la commande <code>bluemix login</code> est requise avant l'utilisation de cette commande. <b>Si vous vous connectez à l'aide d'un ID fédéré, utilisez l'option '--sso' pour vous authentifier avec un code d'accès unique ou utilisez l'option '--apikey' pour vous authentifier avec une clé d'API</b>. Accédez à la console {{site.data.keyword.Bluemix_notm}} "Gérer" -> "Sécurité" -> "Clés d'API Bluemix" pour créer des clés d'API. </dd>
+<dd>La connexion avec la commande <code>bluemix login</code> est requise avant l'utilisation de cette commande.
+Si vous vous connectez avec un ID fédéré, utilisez l'option '--sso' pour vous authentifier avec un code d'accès unique ou utilisez l'option '--apikey' pour vous authentifier avec une clé d'API. Dans la console {{site.data.keyword.Bluemix_notm}}, sélectionnez **Gérer** &gt; **Sécurité** &gt; **Clés d'API Bluemix** pour créer des clés d'API.
+</dd>
 <dt>Cible</dt>
 <dd>La commande <code>bluemix target</code> doit être utilisée pour définir une organisation et un espace avant l'utilisation de cette commande.</dd>
 <dt>Docker</dt>
@@ -296,7 +298,7 @@ bluemix api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
    <dt>--unset (facultatif)</dt>
    <dd>Supprimer le paramètre de noeud final d'API.</dd>
    <dt>--skip-ssl-validation (facultatif)</dt>
-   <dd>Ignorer la validation SSL des demandes HTTP. </dd>
+   <dd>Ignorer la validation SSL des demandes HTTP.</dd>
    </dl>
 <strong>Exemples</strong> :
 
@@ -340,19 +342,19 @@ bluemix login [OPTIONS...]
   <dd> Noeud final de l'API (par exemple : api.ng.bluemix.net)</dd>
   <dt> --apikey <i>API_KEY ou @API_KEY_FILE_PATH</i>
   <dd> Contenu de clé d'API ou chemin d'un fichier de clés d'API indiqué par @</dd>
-  <dt> --sso (facultatif)</dt>
+  <dt> --sso (facultatif) </dt>
   <dd> Utiliser un code d'accès unique pour se connecter </dd>
   <dt> -u <i>USERNAME</i> (facultatif)</dt>
   <dd> Nom d'utilisateur</dd>
   <dt> -p <i>PASSWORD</i> (facultatif)</dt>
   <dd> Mot de passe</dd>
-  <dt> -c <i>ACCOUNT_ID</i> (facultatif)</dt>
+  <dt> -c <i>ACCOUNT_ID</i> (facultatif) </dt>
   <dd> ID du compte cible</dd>
-  <dt> -o <i>ORG_NAME</i> (facultatif)</dt>
-  <dd> Nom de l'organisation cible</dd>
-  <dt> -s <i>SPACE_NAME</i> (facultatif)</dt>
+  <dt> -o <i>ORG_NAME</i> (facultatif) </dt>
+  <dd> Nom de l'organisation cible </dd>
+  <dt> -s <i>SPACE_NAME</i> (facultatif) </dt>
   <dd> Nom de l'espace cible</dd>
-  <dt> --skip-ssl-validation (facultatif)</dt>
+  <dt> --skip-ssl-validation (facultatif) </dt>
   <dd> Ignorer la validation SSL des demandes HTTP. Cette option n'est pas recommandée.</dd>
 </dl>
 
@@ -398,7 +400,7 @@ bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
 bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 ```
 
-<strong>Remarque :</strong> si un compte est associé à la clé d'API, le passage à un autre compte n'est pas autorisé. 
+<strong>Remarque :</strong> si un compte est associé à la clé d'API, le passage à un autre compte n'est pas autorisé.
 
 
 ## bluemix logout
@@ -428,9 +430,9 @@ bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
 <strong>Options de commande</strong> :
    <dl>
    <dt>-c <i>ACCOUNT_ID</i> (facultatif)</dt>
-   <dd>ID du compte à cibler. </dd>
+   <dd>ID du compte à cibler.</dd>
    <dt>-r <i>REGION</i> (facultatif)</dt>
-   <dd>Région vers laquelle basculer. </dd>
+   <dd>Région vers laquelle basculer.</dd>
    <dt>-o <i>ORG_NAME</i> (facultatif)</dt>
    <dd>Nom de l'organisation à cibler.</dd>
    <dt>-s <i>SPACE_NAME</i> (facultatif)</dt>
@@ -440,7 +442,7 @@ Si aucune de ces options n'est spécifiée, le compte, la région, l'organisatio
 
 <strong>Exemples</strong> :
 
-Définissez le compte, l'organisation et l'espace en cours. 
+Définissez le compte, l'organisation et l'espace en cours.
 
 ```
 bluemix target -c MyAccountID -o MyOrg -s MySpace
@@ -542,7 +544,7 @@ bluemix config --locale CLEAR
 {: #bluemix_curl}
 
 Exécutez une demande HTTP brute dans {{site.data.keyword.Bluemix_notm}}. *Content-Type* a pour valeur *application/json* par défaut. Cette
-commande envoie la demande au proxy de contrôle multi-clouds {{site.data.keyword.Bluemix_notm}}. Pour les chemins pris en charge, reportez-vous aux définitions de chemin d'API dans le document [CloudFoundry API ](http://apidocs.cloudfoundry.org/){: new_window} ![icône de lien externe](../../../icons/launch-glyph.svg).
+commande envoie la demande au proxy de contrôle multi-clouds {{site.data.keyword.Bluemix_notm}}. Pour les chemins pris en charge, reportez-vous aux définitions de chemin d'API dans le document [CloudFoundry API ](http://apidocs.cloudfoundry.org/){: new_window} ![Icône de lien externe](../../../icons/launch-glyph.svg).
 
 ```
 bluemix curl CHEMIN [OPTIONS...]
@@ -1132,11 +1134,11 @@ bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
 <strong>Options de commande</strong> :
 <dl>
 <dt>NAME (obligatoire)</dt>
-<dd>Nom de la clé d'API à créer. </dd>
+<dd>Nom de la clé d'API à créer.</dd>
 <dt>-d <i>DESCRIPTION</i> (facultatif)</dt>
 <dd>Description de la clé d'API</dd>
 <dt>-f, -- file <i>FILE</i></dt>
-<dd>Sauvegarder les informations de clé d'API dans un fichier spécifié. Si cette option n'est pas spécifiée, le contenu JSON s'affiche. </dd>
+<dd>Sauvegarder les informations de clé d'API dans un fichier spécifié. Si cette option n'est pas spécifiée, le contenu JSON s'affiche.</dd>
 </dl>
 
 <strong>Exemples</strong> :
@@ -1993,9 +1995,9 @@ bluemix plugin update -r REPO_NAME [PLUGIN NAME [-v VERSION]]
  <dt>-r REPO_NAME (obligatoire)</dt>
  <dd>Nom du référentiel hébergeant le fichier binaire du plug-in.</dd>
  <dt><i>PLUGIN_NAME</i> (facultatif)</dt>
- <dd>Si cette option n'est pas spécifiée, tous les plug-ins disponibles pour la mise à jour dans le référentiel indiqué sont répertoriés pour être sélectionnés. </dd>
+ <dd>Si cette option n'est pas spécifiée, tous les plug-ins disponibles pour la mise à jour dans le référentiel indiqué sont répertoriés pour être sélectionnés.</dd>
  <dt>-v <i>VERSION</i> (facultatif)</dt>
- <dd>Version cible du plug-in pour la mise à jour. Si cette option n'est pas spécifiée, mettez à jour le plugin vers la dernière version disponible. </dd>
+ <dd>Version cible du plug-in pour la mise à jour. Si cette option n'est pas spécifiée, mettez à jour le plugin vers la dernière version disponible.</dd>
 </dl>
 
 <strong>Exemples</strong> :

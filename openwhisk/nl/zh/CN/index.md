@@ -130,5 +130,5 @@ wsk action invoke hello --blocking --result --param name Fred
 ## 相关链接
 {: #general notoc}
 * [Discover: {{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/)
-* [{{site.data.keyword.openwhisk_short}} on IBM developerWorks](https://developer.ibm.com/openwhisk/)
+* [IBM developerWorks 上的 {{site.data.keyword.openwhisk_short}}](https://developer.ibm.com/openwhisk/)
 * [Apache {{site.data.keyword.openwhisk_short}} 项目 Web 站点](http://openwhisk.org)

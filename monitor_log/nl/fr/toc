@@ -8,7 +8,7 @@ Surveillance et journalisation
     monitoringandlogging.md
     
     {: .topicgroup}
-    A propose de la consignation
+    A propos de la journalisation
         logging/logging_bmx_ov.md
         logging/cfapps/logging_cf_apps.md
         logging/containers/logging_containers_ov.md
@@ -16,7 +16,7 @@ Surveillance et journalisation
         logging/dedicated/logging_local_dedicated.md
         
     {: .topicgroup}
-    A propose de la surveillance
+    A propos de la surveillance
         monitoring/monitoring_bmx_ov.md
         monitoring/cf/monitoring_cf_apps.md
         monitoring/containers/monitoring_containers_ov.md
@@ -80,3 +80,4 @@ Surveillance et journalisation
         logging/qa/logging_qa_kibana.md
         logging/qa/kibana_formats.md
     {: .navgroup-end}
+    

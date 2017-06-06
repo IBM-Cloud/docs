@@ -17,7 +17,7 @@ IBM OpenWhisk
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [REST API 문서](./openwhisk_reference.html#openwhisk_ref_restapi)
+    [REST API 문서](./openwhisk_rest_api.html)
     [REST API 참조](https://console.ng.bluemix.net/apidocs/98)
     {: .navgroup-end}
 

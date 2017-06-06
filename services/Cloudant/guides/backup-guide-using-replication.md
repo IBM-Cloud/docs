@@ -90,9 +90,9 @@ do the following steps:
 1.  Find the ID of the checkpoint document for the last replication.
     It is stored in the `_replication_id` field of the replication document,
     found in the `_replicator` database.
-2.  Open the checkpoint document at `/<database>/_local/<_replication_id>`,
-    where the `_replication_id` value is the ID you found in the previous step,
-    and the `database` value is the name of the source or the target database.
+2.  Open the checkpoint document at `/$DATABASE/_local/$REPLICATION_ID`,
+    where `$REPLICATION_ID` is the ID you found in the previous step,
+    and `$DATABASE` is the name of the source or the target database.
     The document usually exists on both databases,
     but might exist only on one.
 3.  Search for the `recorded_seq` field of the first element
@@ -134,7 +134,7 @@ This example shows how to:
 
 ```sh
 # save base URL and the content type in shell variables
-$ url='https://<username>:<password>@<username>.cloudant.com'
+$ url='https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com'
 $ ct='Content-Type: application-json'
 ```
 {:codeblock}

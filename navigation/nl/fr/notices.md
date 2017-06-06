@@ -1,11 +1,11 @@
----
+﻿---
 
 
 
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-07"
+lastupdated: "2017-05-03"
 
 
 ---
@@ -17,8 +17,7 @@ lastupdated: "2017-03-07"
 
 # Remarques
 
-Le présent document a été développé pour des produits et des services proposés aux Etats-Unis et peut être mis à disposition par IBM dans d'autres langues.
-Toutefois, il peut être nécessaire de posséder une copie du produit ou de la version du produit dans cette langue pour pouvoir y accéder.
+Le présent document a été développé pour des produits et des services proposés aux Etats-Unis et peut être mis à disposition par IBM dans d'autres langues. Toutefois, il peut être nécessaire de posséder une copie du produit ou de la version du produit dans cette langue pour pouvoir y accéder.
 {:shortdesc}
 
 Le présent document peut contenir des informations ou des
@@ -45,11 +44,15 @@ par écrit à l'adresse suivante :
   *North Castle Drive, MD-NC119*
   *Armonk, NY 10504-1785*
   *U.S.A.*
+
+Pour le Canada, veuillez adresser votre courrier à :
+
   *IBM Director of Commercial Relations*
   *IBM Canada Ltd.*
   *3600 Steeles Avenue East*
   *Markham, Ontario*
   *L3R 9Z7 Canada*
+
 Les informations sur les licences concernant les produits utilisant un jeu de caractères double octet
 peuvent être obtenues en contactant le Service Propriété Intellectuelle d'IBM dans
 votre pays ou en écrivant à l'adresse suivante :
@@ -167,7 +170,7 @@ Java™, ainsi que tous les logos et toutes les marques incluant Java, sont des 
 
 Les autres noms de sociétés, de produits et de services peuvent appartenir à des tiers.
 
-## Termes {{site.data.keyword.Bluemix_notm}}
+## Dispositions des services cloud 
 {: #terms}
 
 Votre utilisation de {{site.data.keyword.Bluemix_notm}} est régie par les dispositions du

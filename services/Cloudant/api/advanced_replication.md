@@ -59,7 +59,7 @@ _Example of automatic update to replication document, updated once replication s
 ```json
 {
 	"_id": "my_rep",
-	"source": "https://username:password@myserver.com:5984/fromthis",
+	"source": "https://$ACCOUNT:$PASSWORD@SERVER.com:5984/fromthis",
 	"target": "https://username:password@username.cloudant.com/tothat",
 	"create_target": true
 	"_replication_id": "c0ebe9256695ff083347cbf95f93e280",
@@ -78,7 +78,7 @@ _Example of automatic update to replication document, updated once replication s
 ```json
 {
 	"_id": "my_rep",
-	"source": "https://username:password@myserver.com:5984/fromthis",
+	"source": "https://$ACCOUNT:$PASSWORD@SERVER.com:5984/fromthis",
 	"target": "https://username:password@username.cloudant.com/tothat",
 	"create_target": true
 	"_replication_id": "c0ebe9256695ff083347cbf95f93e280",
@@ -256,8 +256,8 @@ _Example delegated replication document:_
 ```json
 {
 	"_id": "my_rep",
-	"source":  "https://username:password@myserver.com:5984/foo",
-	"target":  "https://username:password@username.cloudant.com/bar",
+	"source":  "https://$ACCOUNT:$PASSWORD@$SERVER.com:5984/foo",
+	"target":  "https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com/bar",
 	"continuous":  true,
 	"user_ctx": {
 		"name": "joe",
@@ -331,8 +331,8 @@ _Example of including performance options in a replication document:_
 
 ```json
 {
-	"source": "https://username:password@example.com/example-database",
-	"target": "https://username:password@example.org/example-database",
+	"source": "https://$ACCOUNT:$PASSWORD@example.com/example-database",
+	"target": "https://$ACCOUNT:$PASSWORD@example.org/example-database",
 	"connection_timeout": 60000,
 	"retries_per_request": 20,
 	"http_connections": 30

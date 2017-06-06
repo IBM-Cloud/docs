@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-02-14"
+lastupdated: "2017-05-15"
 
 
 ---
@@ -25,9 +25,9 @@ Mit {{site.data.keyword.Bluemix_short}} haben Sie Zugriff auf leistungsfähige T
 ## ![](./images/CLI.svg) Befehlszeilenschnittstelle (CLI)
 {: #downloads notoc}
 
-Laden Sie das Befehlszeilentool herunter und installieren Sie es, um Ihre Arbeit in {{site.data.keyword.Bluemix_notm}} zu unterstützen. 
+Laden Sie das Befehlszeilentool herunter und installieren Sie es, um Ihre Arbeit in {{site.data.keyword.Bluemix_notm}} zu unterstützen.
 
-Die {{site.data.keyword.Bluemix_notm}}-CLI stellt eine Befehlszeilenbedienung zur Verwaltung Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung bereit. Sie enthält außerdem eine Cloud Foundry-Befehlszeilenschnittstelle (cf) in ihrer Installation, die zur Verwaltung von Cloud Foundry-Anwendungen und -Services verwendet werden kann.  
+Die {{site.data.keyword.Bluemix_notm}}-CLI stellt eine Befehlszeilenbedienung zur Verwaltung Ihrer {{site.data.keyword.Bluemix_notm}}-Umgebung bereit. Sie enthält außerdem eine Cloud Foundry-Befehlszeilenschnittstelle (cf) in ihrer Installation, die zur Verwaltung von Cloud Foundry-Anwendungen und -Services verwendet werden kann. 
 
 Beide CLI-Tools verwenden standardmäßig den Port 443. Wenn sich ein HTTP-Proxy zwischen den CLI-Tools und der {{site.data.keyword.Bluemix_notm}}-Umgebung befindet, müssen Sie die Umgebungsvariable `HTTP_PROXY` mit der tatsächlichen URL und dem Port (falls vorhanden) des HTTP-Proxys konfigurieren. Details hierzu finden Sie in den Informationen zur [Verwendung der CLI mit einem HTTP-Proxy-Server ![Symbol für externen Link](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/cf-cli/http-proxy.html){: new_window}.
 
@@ -43,15 +43,15 @@ Sie können die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle oh
 {: #cli_bluemix_ext notoc}
 
 
-Wenn Sie das {{site.data.keyword.Bluemix_notm}}-CLI-Tool installieren, wird das [CLI-Plug-in-Repository ![Symbol für externen Link](../icons/launch-glyph.svg)](https://plugins.ng.bluemix.net/){: new_window} standardmäßig mit dem Repository-Aliasnamen `Bluemix` vorkonfiguriert. Sie können verfügbare Plug-ins direkt installieren. 
+Wenn Sie das {{site.data.keyword.Bluemix_notm}}-CLI-Tool installieren, wird das [CLI-Plug-in-Repository ![Symbol für externen Link](../icons/launch-glyph.svg)](https://plugins.ng.bluemix.net/){: new_window} standardmäßig mit dem Repository-Aliasnamen `Bluemix` vorkonfiguriert. Sie können verfügbare Plug-ins direkt installieren.
 
 ```
 bluemix plugin install Plug-in-Name -r Bluemix
 ```
 
-| *{{site.data.keyword.activedeployshort}}-CLI* | *{{site.data.keyword.autoscaling}}-CLI* | *IBM Bluemix Container Service*  |
+| *{{site.data.keyword.autoscaling}}-CLI* |  *IBM Bluemix Container Service*  |
 |-----|-----|-----|
-| Plug-in-Name: active-deploy <br> [Dokumentation anzeigen](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in-Name: auto-scaling <br> [Dokumentation anzeigen](/docs/cli/plugins/auto-scaling/index.html) | Plug-in-Name: container-service  <br> [Dokumentation anzeigen](/docs/containers/cs_cli_devtools.html) |
+| Plug-in-Name: auto-scaling <br> [Dokumentation anzeigen](/docs/cli/plugins/auto-scaling/index.html) |  Plug-in-Name: container-service  <br> [Dokumentation anzeigen](/docs/containers/cs_cli_devtools.html) |
 {: caption="Tabelle 2. Plug-ins" caption-side="top"}
 
 |  *Privates Netzpeering* | *VPN*  |
@@ -59,14 +59,14 @@ bluemix plugin install Plug-in-Name -r Bluemix
 | Plug-in-Name: private-network-peering  <br> [Dokumentation anzeigen](/docs/cli/plugins/pnp/index.html) | Plug-in-Name: VPN  <br> [Dokumentation anzeigen](/docs/cli/plugins/bx_vpn/index.html) |
 {: caption="Tabelle 3. Plug-ins" caption-side="top"}
 
-Sie können außerdem Plug-ins aus anderen Repositorys hinzufügen, die mit der {{site.data.keyword.Bluemix_notm}}-CLI-Architektur konform sind. 
-1. Zum Installieren von {{site.data.keyword.Bluemix_notm}}-CLI-Plug-ins aus einem anderen Repository legen Sie den Plug-in-Registry-Endpunkt fest: 
+Sie können außerdem Plug-ins aus anderen Repositorys hinzufügen, die mit der {{site.data.keyword.Bluemix_notm}}-CLI-Architektur konform sind.
+1. Zum Installieren von {{site.data.keyword.Bluemix_notm}}-CLI-Plug-ins aus einem anderen Repository legen Sie den Plug-in-Registry-Endpunkt fest:
 ```
 bluemix plugin repo-add bluemix-other-repo [repo_url]
 ```
 Dabei ist `repo_url` die HTTPS-URL des Plug-in-Repositorys.
 
-2. Führen Sie den folgenden Befehl aus, um ein Plug-in zu installieren: 
+2. Führen Sie den folgenden Befehl aus, um ein Plug-in zu installieren:
 ```
 bluemix plugin install Plug-in-Name -r bluemix-other-repo
 ```
@@ -75,7 +75,7 @@ bluemix plugin install Plug-in-Name -r bluemix-other-repo
 ### Erweitern Sie die Cloud Foundry-Befehlszeilenschnittstelle: bx cf
 {: #cli_cf_ext notoc}
 
-Nach der Installation des {{site.data.keyword.Bluemix_notm}}-Befehlszeilentools ist auch eine Cloud Foundry-Befehlszeilenschnittstelle im Bluemix-CLI-Verzeichnis installiert. Führen Sie die Cloud Foundry-CLI-Befehle mit `bluemix cf` aus. 
+Nach der Installation des {{site.data.keyword.Bluemix_notm}}-Befehlszeilentools ist auch eine Cloud Foundry-Befehlszeilenschnittstelle im Bluemix-CLI-Verzeichnis installiert. Führen Sie die Cloud Foundry-CLI-Befehle mit `bluemix cf` aus.
 
 * Zum Installieren von CLI-Plug-ins über die {{site.data.keyword.Bluemix_notm}}-Registry müssen Sie den Plug-in-Registry-Endpunkt festlegen:
 
@@ -91,9 +91,9 @@ bluemix cf install-plugin Plug-in-Name -r bluemix-cf-repo
 ```
 {: codeblock}
 
-| *Active Deploy* | *Administrationskonsole* |
-|-----------------|-----------------|
-| Plug-in-Name: active-deploy <br>  [Dokumentation anzeigen](/docs/services/ActiveDeploy/cli.html#cli) |  Plug-in-Name: bluemix-admin <br> [Dokumentation anzeigen](/docs/cli/plugins/bluemix_admin/index.html) |
+| *Administrationskonsole* |
+-----------------|
+|  Plug-in-Name: bluemix-admin <br> [Dokumentation anzeigen](/docs/cli/plugins/bluemix_admin/index.html) |
 {: caption="Tabelle 4. Plug-ins" caption-side="top"}
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
@@ -106,7 +106,7 @@ bluemix cf install-plugin Plug-in-Name -r bluemix-cf-repo
 
 Sie können Plug-ins herunterladen und installieren, um Ihre bevorzugten {{site.data.keyword.Bluemix_notm}}-Services zu integrieren.
 
-| *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
-|-------------|----------|----------|----------|----------|----------|
-| [Eclipse-Plug-in EGit ![Symbol für externen Link](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window}  <br> [Eclipse-Plug-in RTC ![Symbol für externen Link](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Eclipse-Plug-in Liberty ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse-Plug-in ![Symbol für externen Link](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse Plug-in](../services/rules/index.html#rulov002) | [Developer Toolkit ![Symbol für externen Link](../icons/launch-glyph.svg)](https://nextstage.torolab.ibm.com/apimanagement/getting-started/ ){: new_window} | [Bluemix Eclipse Plug-in](/docs/manageapps/eclipsetools/eclipsetools.html) |
+| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
+|----------|----------|----------|----------|----------|
+| [Eclipse-Plug-in Liberty ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse-Plug-in ![Symbol für externen Link](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse Plug-in](../services/rules/index.html#rulov002) | [ Developer Toolkit ](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Bluemix Eclipse Plug-in](/docs/manageapps/eclipsetools/eclipsetools.html) |
 {: caption="Tabelle 6. Plug-ins" caption-side="top"}

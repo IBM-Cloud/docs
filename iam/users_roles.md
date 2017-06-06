@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2017-05-17"
+lastupdated: "2017-06-06"
 
 ---
 
@@ -15,10 +15,10 @@ lastupdated: "2017-05-17"
 # User roles and permissions
 {: #userroles}
 
-You can manage users across the {{site.data.keyword.Bluemix_notm}} Platform and Infrastructure services from the **Users** page for your account. A link to the Team Directory page is also available from the Users page, if you want to manage only the platform users' Cloud Foundry access to organizations and spaces. However, you do not have to leave the Users page to manage Cloud Foundry access.
-{:shortdesc}
+<!-- staging only content in the service policy roles table. Do not move entire topic to production -->
 
-To access the Users page, from the {{site.data.keyword.Bluemix_notm}} menu, click **Manage** &gt; **Account** &gt; **Users**. Account owners perform all operations on organizations and spaces, including managing users and their assigned roles. Organization managers and space managers also have access to manage roles. 
+You can manage users across the {{site.data.keyword.Bluemix_notm}} Platform and Infrastructure services from the **Users** page for your account. To access the Users page, from the {{site.data.keyword.Bluemix_notm}} menu, click **Manage** &gt; **Account** &gt; **Users**. Account owners perform all operations on organizations and spaces, including managing users and their assigned roles. Organization managers and space managers also have access to manage roles. 
+{:shortdesc}
 
 If you are a user added to another person's account, and you want to view your assigned roles and permissions, go to **Manage** &gt; **Security** &gt; **Identity & Access** &gt; **Users**, and click on your name.
 
@@ -29,22 +29,22 @@ At the account level, there are two roles that enable access to different accoun
 
 | Account role | Permissions |
 |----------------|---------|
-|Owner | An owner for the account has access to their profile, team directory, billing information, spending notifications, and usage dashboard. From the team directory or users page, the owner can invite new team members and adjust roles. The owner can also add promotional credits, set or change the billing limit, set service access, and manage organizations and spaces. |
-|Member | A member has access to their profile, team directory, and account credits and billing limits in the {{site.data.keyword.Bluemix_notm}} header. However, on the team directory page, a member can only view the team members within the account. |
+|Owner | An owner for the account has access to their profile, users, billing information, spending notifications, and usage dashboard. From the Users page, the owner can invite new users and adjust roles. The owner can also add promotional credits, set or change the billing limit, set service access, and manage organizations and spaces. |
+|Member | A member has access to their profile, the Users page displaying the active users in the account, and account credits and billing limits in the {{site.data.keyword.Bluemix_notm}} header.  |
 {:caption="Table 1. Account roles and permissions" caption-side="top"}
 
-All new users are added as a member of the account. You can assign organization and space roles to invitees to enable specific views and permissions in {{site.data.keyword.Bluemix_notm}}. New team members added to an organization, except in a local or dedicated environment, are assigned the auditor organization role by default. For a specific space, you can choose to assign the developer or auditor role to invitees. Once your invitees accept the invitation and join {{site.data.keyword.Bluemix_notm}}, you can edit their roles on the Users or Team Directory page.
+All new users are added as a member of the account. You can assign organization and space roles to invitees to enable specific views and permissions in {{site.data.keyword.Bluemix_notm}}. Once your invitees accept the invitation and join {{site.data.keyword.Bluemix_notm}}, you can edit their roles on the Users page.
 
 ## Cloud Foundry roles
 {: #cfroles}
 
-Cloud Foundry roles include the access permissions for organizations and spaces defined within the account. The following roles can be assigned at the organization level:
+Cloud Foundry roles include the access permissions for organizations and spaces defined within the account. Cloud Foundry roles do not enable user permissions for completing actions within the context of a service. The following roles can be assigned at the organization level:
 
 | Organization role | Permissions |
 |-------------------|-------------|
-|Manager | Organization managers can create, view, edit, or delete spaces within the organization, view the organization's usage and quota, invite team members to the organization, manage who has access to the organization and their roles in the organization, and manage custom domains for the organization. |
+|Manager | Organization managers can create, view, edit, or delete spaces within the organization, view the organization's usage and quota, invite users to the organization, manage who has access to the organization and their roles in the organization, and manage custom domains for the organization. |
 |Billing manager | Billing managers can view runtime and service usage information for the organization on the Usage Dashboard page.  |
-|Auditor | Organization auditors can view application and service content in the organization. Auditors can also view the users in the organization and their assigned roles, and the quota for the organization. This role is assigned to all invitees, except in local or dedicated environments, by default. |
+|Auditor | Organization auditors can view application and service content in the organization. Auditors can also view the users in the organization and their assigned roles, and the quota for the organization. |
 {:caption="Table 2. Organization roles and permissions" caption-side="top"}
 
 The following roles can be assigned at the space level:
@@ -65,19 +65,15 @@ Account owners are automatically assigned the account access administrator role 
 
 ### Service policies
 
-A policy assigns a user a role or roles to a set of resources by using a combination of attributes to define the applicable set of resources. When you assign a policy to a user, you first specify the service to assign, including an option to assign all available services. Then, you can also select a role, or roles, to assign. Additional configuration options might be available, depending on the service you select.
+A policy assigns a user a role or roles to a set of resources by using a combination of attributes to define the applicable set of resources. When you assign a policy to a user, you first specify the service. Then, you can select a role, or roles, to assign. Additional configuration options might be available, depending on the service you select.
 
-You can assign and manage policies if you have the proper role. The following table shows policy management tasks and the role required for each one.
-
-{: #iamui_table1}
+You can assign and manage policies if you have the proper role. The following table shows policy management tasks and the role required for each.
 
 | Action | Role required |
 |----------|---------|
-| Create a policy on an account | Account access administrator |
-| Create a policy on all services in an account | Account access administrator |
-| Create a policy on all service instances in an account | Account access administrator |
+| Create policies on an account for all services and instances | Account access administrator |
 | Create a policy on a service in an account | Account access administrator or administrator on the service in the account |
-| Create a service instance | Account access administrator or editor or administrator or editor on the service in the account |
+| Create a service instance | Account access administrator or the administrator or editor on the service in the account |
 | Create a policy on a service instance | Account access administrator or administrator on the service in the account or administrator on the service instance |
 {: caption="Table 4. Administrative tasks for managing Identity and access enabled services policies" caption-side="top"}
 
@@ -88,19 +84,19 @@ Roles are a collection of actions; the actions that are mapped to these roles ar
 
 In addition to the descriptions of the roles provided in the console, the following table provides examples of some of the tasks that users assigned each role might be able to do depending on the selected service. 
 
-{: #iamui_table2}
 
 | Role | Description of actions | Example actions|
 |:-----------------|:-----------------|:-----------------|
 | Viewer | Performs actions that do not change state; read only actions | <ul><li>List devices</li><li>Read storage object</li><li>Run queries</li><li>Run searches</li></ul>|
 | Editor | Performs actions that modify the state and create or delete sub-resources |<ul><li>Create or delete virtual machines</li><li>Attach storage</li><li>Reboot</li><li>Start or stop</li><li>Rename</li></ul> |
+| Operator | Performs actions required to configure and operate resources. |<ul><li>Update configuration</li><li>Backup and restore</li><li>Start or stop VMs</li><li>View logs</li></ul> |
 | Administrator | Performs all actions, including the ability to manage access control |<ul><li>Invite users</li><li>Create or delete virtual machines</li><li>Update user access policies</li><li>List devices</li><li>Attach storage</li><li>Reboot</li><li>Start or stop</li><li>Rename</li><li>Back up and restore</li></ul>|
 {: caption="Table 5. Administrative tasks for managing Identity and access enabled services policies" caption-side="top"}
 
 ## Infrastructure permissions
 {: #infrapermissions}
 
-If you have access to assign infrastructure roles, you can set the following permissions for the user: 
+You can set the following permissions when you invite a user: 
 
 | Infrastructure permission | Description of actions |
 |---------------------------|------------------------|
@@ -109,3 +105,4 @@ If you have access to assign infrastructure roles, you can set the following per
 |Super User | Users with this permission can perform all actions available in the system. |
 {:caption="Table 6. Infrastructure permissions" caption-side="top"}
 
+Additional permissions can be set after the user has accepted the invite.

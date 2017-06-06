@@ -183,7 +183,7 @@ Dieser Fehler tritt oft auf, wenn Sie zum ersten Mal versuchen, im Katalog eine 
 Stellen Sie sicher, dass Sie in der derzeitigen Organisation einen Bereich erstellt haben. Verwenden Sie eine der folgenden Methoden, um einen Bereich zu erstellen:
 {: tsResolve}
 
-  * Klicken Sie in der Menüleiste auf **Verwalten > Konto > Organisationen**. Wählen Sie die Organisation aus, in der der Bereich erstellt werden soll, und klicken Sie auf **Bereich erstellen**. 
+  * Klicken Sie in der Menüleiste auf **Verwalten > Konto > Organisationen**. Wählen Sie die Organisation aus, in der der Bereich erstellt werden soll, und klicken Sie auf **Bereich erstellen**.
   * Geben Sie in der Befehlszeilenschnittstelle 'cf' Folgendes ein: `cf create-space <Name des Bereichs> -o <Name der Organisation>`.
 
 Wiederholen Sie den Vorgang. Tritt diese Nachricht erneut auf, rufen Sie die Seite [Bluemix-Status ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixstatus){: new_window} auf und prüfen Sie, ob für einen Service oder eine Komponente ein Problem vorliegt.
@@ -232,7 +232,7 @@ Weitere Informationen zu den Befehlen, die Sie in anderen Programmsprachen verwe
 ## Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix nicht möglich
 {: #ts_bm_tools_facet}
 
-Wird eine nicht unterstützte Facette auf Ihr Eclipse-Projekt angewendet, können Sie Ihre Apps möglicherweise nicht mithilfe von IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} in {{site.data.keyword.Bluemix_notm}} bereitstellen. 
+Wird eine nicht unterstützte Facette auf Ihr Eclipse-Projekt angewendet, können Sie Ihre Apps möglicherweise nicht mithilfe von IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} in {{site.data.keyword.Bluemix_notm}} bereitstellen.
 
 Mit der Cloud Foundry-Befehlszeilenschnittstelle können Sie Ihre App erfolgreich in {{site.data.keyword.Bluemix_notm}} bereitstellen. Allerdings ist es nicht möglich, die App mit IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} in {{site.data.keyword.Bluemix_notm}} bereitzustellen, und es wird die folgende Fehlernachricht angezeigt: `Project facet <facet_name> is not supported. (Projektfacette 'facettenname' wird nicht unterstützt.)` Beispiel:
 {: tsSymptoms}
@@ -284,7 +284,7 @@ Das Standardplattenkontingent, das für eine App zugeordnet wird, beträgt 1 GB.
 Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. Sie können ein maximales Plattenkontingent von 2 GB angeben. Falls 2 GB dennoch nicht genug sein sollten, setzen Sie versuchsweise einen externen Service ein, z. B. [Object Store](/docs/services/ObjectStorage/index.html).
 {: tsResolve}
 
-  * Fügen Sie in der Datei 'manifest.yml' das folgende Element hinzu: 
+  * Fügen Sie in der Datei 'manifest.yml' das folgende Element hinzu:
     ```
 	disk_quota: <disk_quota>
 	```
@@ -312,7 +312,7 @@ Verwenden Sie Services von Drittanbietern, die nicht vom GCM-Service als Ausweic
 ## Für Organisation geltender Grenzwert für Services wurde überschritten
 {: #ts_servicelimit}
 
-Wenn Sie Benutzer eines Testkontos sind, können Sie möglicherweise eine App in {{site.data.keyword.Bluemix_notm}} nicht erstellen, wenn Sie den für Ihre Organisation geltenden Grenzwert für Services überschritten haben. 
+Wenn Sie Benutzer eines Testkontos sind, können Sie möglicherweise eine App in {{site.data.keyword.Bluemix_notm}} nicht erstellen, wenn Sie den für Ihre Organisation geltenden Grenzwert für Services überschritten haben.
 
 Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine App zu erstellen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms}
@@ -328,13 +328,13 @@ Löschen Sie alle nicht benötigten Serviceinstanzen oder entfernen Sie den Gren
   * Zum Löschen einer Serviceinstanz können Sie die {{site.data.keyword.Bluemix_notm}}-Konsole oder die Befehlszeilenschnittstelle verwenden.
 
     Führen Sie die folgenden Schritte aus, um die {{site.data.keyword.Bluemix_notm}}-Konsole zum Löschen einer Serviceinstanz zu verwenden:
-	  1. Klicken Sie im Dashboard 'Services' auf das Menü **Aktionen** für den Service, den Sie löschen wollen. 
-	  2. Klicken Sie auf **Service löschen**. Sie werden dann aufgefordert, für die App, an die die Serviceinstanz gebunden war, ein erneutes Staging durchzuführen. 
+	  1. Klicken Sie im Dashboard 'Services' auf das Menü **Aktionen** für den Service, den Sie löschen wollen.
+	  2. Klicken Sie auf **Service löschen**. Sie werden dann aufgefordert, für die App, an die die Serviceinstanz gebunden war, ein erneutes Staging durchzuführen.
 
     Führen Sie folgende Schritte aus, wenn Sie die Befehlszeilenschnittstelle zum Löschen einer Serviceinstanz verwenden:
 	  1. Heben Sie die Bindung zwischen der Serviceinstanz und der App mit dem folgenden Befehl auf: `cf unbind-service <App-Name> <Serviceinstanzname>`.
 	  2. Löschen Sie die Serviceinstanz durch Eingeben von `cf delete-service <Serviceinstanzname>`.
-	  3. Nach dem Löschen der Serviceinstanz möchten Sie möglicherweise ein erneutes Staging für Ihre App, an die die Serviceinstanz gebunden war, mit dem Befehl `cf restage <App-Name>` durchführen. 
+	  3. Nach dem Löschen der Serviceinstanz möchten Sie möglicherweise ein erneutes Staging für Ihre App, an die die Serviceinstanz gebunden war, mit dem Befehl `cf restage <App-Name>` durchführen.
 
   * Zum Löschen des Grenzwerts für die Anzahl Serviceinstanzen, die für Sie bestehen können, wandeln Sie Ihr Testkonto in ein Zahlungskonto um. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie unter [Vorgehensweise zum Ändern des Plans](/docs/pricing/index.html#changing).
 
@@ -363,7 +363,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## Für Organisation geltende Speicherbegrenzung wurde überschritten
 {: #ts_outofmemory}
 
-Wenn Sie Benutzer eines Testkontos sind, können Sie möglicherweise eine App nicht in {{site.data.keyword.Bluemix_notm}} bereitstellen, wenn Sie die für Ihre Organisation geltende Speicherbegrenzung überschritten haben. Sie können entweder den von Ihren Apps verwendeten Speicherplatz verringern oder das Speicherkontingent Ihres Konto erhöhen. Das Kontingent der maximalen Hauptspeicherkapazität für ein Testkonto beträgt 2 Gigabyte und kann nur durch den Wechsel zu einem gebührenpflichtigen Konto erhöht werden. 
+Wenn Sie Benutzer eines Testkontos sind, können Sie möglicherweise eine App nicht in {{site.data.keyword.Bluemix_notm}} bereitstellen, wenn Sie die für Ihre Organisation geltende Speicherbegrenzung überschritten haben. Sie können entweder den von Ihren Apps verwendeten Speicherplatz verringern oder das Speicherkontingent Ihres Konto erhöhen. Das Kontingent der maximalen Hauptspeicherkapazität für ein Testkonto beträgt 2 Gigabyte und kann nur durch den Wechsel zu einem gebührenpflichtigen Konto erhöht werden.
 
 Wenn Sie eine App unter {{site.data.keyword.Bluemix_notm}} bereitstellen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms}
@@ -436,39 +436,12 @@ Die angegebenen Variablen werden nur gespeichert, wenn Sie sie in der Manifestda
 Wenn Sie eine App aus IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, wählen Sie das Kontrollkästchen **In Manifestdatei speichern** auf der Seite 'Anwendungsdetails' im Assistenten 'Anwendung' aus. Danach werden die Variablen, die Sie im Assistenten angeben, in der Manifestdatei für die Anwendung gespeichert. Beim nächsten Öffnen des Assistenten werden die Variablen automatisch angezeigt.
 {: tsResolve}
 
-
-## Symbole für Bluemix Live Sync werden nicht angezeigt
-{: #ts_llz_lkb_3r}
-
-Sie haben eine App erstellt, aber die Symbole für IBM Bluemix Live Sync werden in der Web-IDE nicht angezeigt.
-
-Wenn Sie eine Node.js-App in der Web-IDE bearbeiten, werden die Symbole für {{site.data.keyword.Bluemix_notm}} Live Edit, für den schnellen Neustart und für das Debugging nicht angezeigt.
-{: tsSymptoms}
-
-Die Symbole stehen unter folgenden Umständen nicht zur Verfügung:
-{: tsCauses}
-
-  * Die Datei `manifest.yml` ist nicht auf der höchsten Ebene Ihres Projekts gespeichert.
-  * Ihre App ist in einem Unterverzeichnis und nicht auf der höchsten Ebene Ihres Projekts gespeichert; der Pfad zum Unterverzeichnis jedoch wird in der Datei `manifest.yml` nicht angegeben.
-  * Die App enthält nicht die Datei `package.json`.
-
-Verwenden Sie eines der folgenden Verfahren:
-{: tsResolve}
-
-  * Ist die Datei `manifest.yml` nicht auf der höchsten Ebene Ihres Projekts gespeichert, speichern Sie sie dort.
-  * Ist Ihre App in einem Unterverzeichnis gespeichert, geben Sie den Pfad zum Unterverzeichnis in der Datei `manifest.yml` an.
-  ```
-   path: path_to_application
-   ```
-  * Erstellen Sie die Datei `package.json` im selben Verzeichnis wie Ihre App.
-
-
 <!-- begin STAGING ONLY -->
 
 ## Bluemix Live Sync Debug wird über die Befehlszeile nicht gestartet
 {: #ts_no_debug}
 
-Sie haben die IBM Bluemix Live Sync Debug-Funktion für Ihre App über die Befehlszeile aktiviert, aber Sie können nicht auf die Debug-Schnittstelle zugreifen.   
+Sie haben die IBM Bluemix Live Sync Debug-Funktion für Ihre App über die Befehlszeile aktiviert, aber Sie können nicht auf die Debug-Schnittstelle zugreifen.  
 
 Sie haben die Debug-Funktion für Ihre App aktiviert, indem Sie die Umgebungsvariable **BLUEMIX_APP_MGMT_ENABLE** festgelegt haben. Sie können jedoch nicht auf die Debug-Benutzerschnittstelle unter `app_url/bluemix-debug/manage` zugreifen.
 {: tsSymptoms}
@@ -476,15 +449,15 @@ Sie haben die Debug-Funktion für Ihre App aktiviert, indem Sie die Umgebungsvar
 Die Debug-Funktion kann in den folgenden Situationen nicht aktiviert werden:
 {: tsCauses}
 
-  * Wenn die Datei `manifest.yml` das Attribut 'command' enthält. 
-  * Wenn Sie die Option **-c** verwenden, um eine App durch eine Push-Operation an {{site.data.keyword.Bluemix_notm}} zu übertragen. 
+  * Wenn die Datei `manifest.yml` das Attribut 'command' enthält.
+  * Wenn Sie die Option **-c** verwenden, um eine App durch eine Push-Operation an {{site.data.keyword.Bluemix_notm}} zu übertragen.
 
 Verwenden Sie eine der folgenden Optionen, um das Problem zu lösen:
 {: tsResolve}
 
-  * Das empfohlene Verfahren besteht darin, das IBM Node.js-Buildpack zum Starten der App zu verwenden. Weitere Informationen finden Sie im Abschnitt zum Startbefehl im Thema über die [Bereitstellung einer Node.js-Anwendung in {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime). 
-  * Inaktivieren Sie den Befehl für Ihre vorhandene App, indem Sie das Attribut 'command' in Ihrer Datei `manifest.yml` in 'command: null' ändern oder indem Sie Ihren Push-Befehl bearbeiten, sodass er die Option `-c null` enthält. 
-  * Entfernen Sie das Attribut **command** aus der Datei `manifest.yml`. Löschen Sie anschließend die aktuelle App aus {{site.data.keyword.Bluemix_notm}} und stellen Sie sie durch eine Push-Operation erneut bereit. 
+  * Das empfohlene Verfahren besteht darin, das IBM Node.js-Buildpack zum Starten der App zu verwenden. Weitere Informationen finden Sie im Abschnitt zum Startbefehl im Thema über die [Bereitstellung einer Node.js-Anwendung in {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime).
+  * Inaktivieren Sie den Befehl für Ihre vorhandene App, indem Sie das Attribut 'command' in Ihrer Datei `manifest.yml` in 'command: null' ändern oder indem Sie Ihren Push-Befehl bearbeiten, sodass er die Option `-c null` enthält.
+  * Entfernen Sie das Attribut **command** aus der Datei `manifest.yml`. Löschen Sie anschließend die aktuelle App aus {{site.data.keyword.Bluemix_notm}} und stellen Sie sie durch eine Push-Operation erneut bereit.
 
 <!-- end STAGING ONLY -->  
 
@@ -516,7 +489,7 @@ Wenn Sie eine Anwendung mithilfe der cf-Befehlszeilenschnittstelle per Push-Oper
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-Wenn Sie eine Anwendung mithilfe von Eclipse Tools mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, müssen Sie zuerst einen {{site.data.keyword.Bluemix_notm}}-Server erstellen und den API-Endpunkt der {{site.data.keyword.Bluemix_notm}}-Region angeben, in der die Organisation erstellt wurde. Weitere Informationen zur Verwendung der Eclipse-Tools finden Sie im Thema zur [Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html).   
+Wenn Sie eine Anwendung mithilfe von Eclipse Tools mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, müssen Sie zuerst einen {{site.data.keyword.Bluemix_notm}}-Server erstellen und den API-Endpunkt der {{site.data.keyword.Bluemix_notm}}-Region angeben, in der die Organisation erstellt wurde. Weitere Informationen zur Verwendung der Eclipse-Tools finden Sie im Thema zur [Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html).  
 
 ## Erstellung von App-Routen nicht möglich
 {: #ts_hostistaken}
@@ -691,22 +664,20 @@ Dieses Problem kann auftreten, wenn Scripts, wie zum Beispiel die Scripts zum Id
 Mit dem Befehl [git update ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://git-scm.com/docs/git-update-index){: new_window} können Sie die Berechtigung für jedes einzelne Script in 'ausführbar' ändern. Sie können zum Beispiel `git update --chmod=+x script.sh` eingeben.
 {: tsResolve}
 
+## Implementieren einer App über die Delivery Pipeline in IBM Bluemix Continuous Delivery nicht möglich
+ {: #ts_devops_to_bm}
 
-## Bereitstellen einer App von DevOps Services in Bluemix nicht möglich
-{: #ts_devops_to_bm}
+ Es kann vorkommen, dass eine App nicht unter Verwendung der {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}} implementiert werden kann, wenn die Datei `manifest.yml` nicht in der App vorhanden ist. 
 
-Es kann vorkommen, dass Apps von Bluemix DevOps Services nicht mit einer Push-Operation zu {{site.data.keyword.Bluemix_notm}} übertragen werden können, wenn die Datei `manifest.yml` nicht in der App vorhanden ist.
-
-Wenn Sie eine App von DevOps Services in {{site.data.keyword.Bluemix_notm}} implementieren, kann die Fehlernachricht `Unable to detect a supported application type` (Ermittlung eines unterstützten Anwendungstyps fehlgeschlagen) angezeigt werden.
+ Wenn Sie eine App unter Verwendung der {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}} implementieren, kann die Fehlernachricht `Unable to detect a supported application type` (Ermittlung eines unterstützten Anwendungstyps fehlgeschlagen) angezeigt werden.
 {: tsSymptoms}
 
-Dieses Problem kann auftreten, weil für DevOps Services die Datei `manifest.yml` zum Implementieren einer App in {{site.data.keyword.Bluemix_notm}} erforderlich ist.
+ Dieses Problem kann auftreten, weil für die Pipeline die Datei `manifest.yml` zum Implementieren einer App in {{site.data.keyword.Bluemix_notm}} erforderlich ist.
 {: tsCauses}
 
-Zum Beheben dieses Problems müssen Sie die Datei `manifest.yml` erstellen. Weitere Informationen zum Erstellen der Datei `manifest.yml` finden Sie im
+ Zum Beheben dieses Problems müssen Sie die Datei `manifest.yml` erstellen. Weitere Informationen zum Erstellen der Datei `manifest.yml` finden Sie im
 [Abschnitt zum Anwendungsmanifest](/docs/manageapps/depapps.html#appmanifest).
-{: tsResolve}
-
+ {: tsResolve}
 
 ## Push-Operation für Meteor-Anwendungen nicht möglich
 {: #ts_meteor}
@@ -730,168 +701,3 @@ Verwenden Sie eine der folgenden Methoden, um ein angepasstes Buildpack für Met
     ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
-
-## Schaltfläche für die Bereitstellung in Bluemix führt nicht zum Bereitstellen einer App
-{: #ts_deploybutton}
-
-Wenn Sie auf die Schaltfläche für die Bereitstellung in {{site.data.keyword.Bluemix_notm}} klicken und feststellen, dass entweder das Git-Repository nicht geklont oder die App nicht bereitgestellt wurde, können Sie für folgende Probleme versuchen, die Fehlerbehebungsmethoden anzuwenden.
-  * [Bluemix DevOps Services-Projekt kann nicht erstellt werden](#ts_project-cant-be-created)
-  * [Git-Repository wurde nicht gefunden und kann in DevOps Services nicht geklont werden](#ts_repo-not-found)
-  * [Git-Repository wird in DevOps Services geklont, aber die App wurde in {{site.data.keyword.Bluemix_notm}}](#ts_repo-cloned-app-not-deployed) nicht bereitgestellt
-
-Weitere Informationen zum Erstellen der Schaltfläche finden Sie in 'Schaltfläche für die Bereitstellung in {{site.data.keyword.Bluemix_notm}} erstellen'.
-
-### Bluemix DevOps Services-Projekt kann nicht erstellt werden
-{: #ts_project-cant-be-created}
-
-Wenn das DevOps Services-Projekt nicht erstellt werden kann, ist möglicherweise Ihr IBM {{site.data.keyword.Bluemix_notm}}-Konto abgelaufen.
-
-Sie klicken auf die Schaltfläche **In Bluemix bereitstellen**, aber der Schritt zum Erstellen eines Projekts wird nicht erfolgreich abgeschlossen.
-{: tsSymptoms}
-
-Möglicherweise ist Ihr {{site.data.keyword.Bluemix_notm}}-Konto abgelaufen.
-{: tsCauses}
-
-Verwenden Sie eines der folgenden Verfahren:
-{: tsResolve}
-
-  * Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und aktualisieren Sie Ihre Kontoinformationen.
-  * Klicken Sie erneut auf die Schaltfläche **In Bluemix bereitstellen**.
-
-### Git-Repository wurde nicht gefunden und kann in DevOps Services nicht geklont werden
-{: #ts_repo-not-found}
-
-Wenn Sie feststellen, dass das Git-Repository nicht geklont wurde, besteht möglicherweise ein Problem mit dem Repository oder mit dem Schaltflächen-Snippet.
-
-Sie klicken auf die Schaltfläche **In Bluemix bereitstellen**, aber das Git-Repository wird nicht gefunden und kann in DevOps Services nicht geklont werden. Der Schritt zum Klonen eines Repositorys wird nicht erfolgreich abgeschlossen. Die App kann daher nicht in {{site.data.keyword.Bluemix_notm}} bereitgestellt werden.
-{: tsSymptoms}
-
-Dieses Problem kann aufgrund folgender Ursachen auftreten:
-{: tsCauses}
-
-  * Das Git-Repository ist möglicherweise nicht vorhanden oder der Zugriff ist nicht möglich.
-  * Möglicherweise besteht ein Problem im HTML- oder Markdown-Code für das Schaltflächen-Snippet.
-  * Möglicherweise besteht das Problem, weil Sonderzeichen, Abfrageparameter oder Fragmente in der URL den ordnungsgemäßen Zugriff auf das Git-Repository verhindern.
-
-Verwenden Sie eines der folgenden Verfahren:
-{: tsResolve}
-
-  * Überprüfen Sie, dass das Git-Repository vorhanden ist, dass der öffentliche Zugriff möglich ist und dass die URL richtig ist.
-  * Überprüfen Sie, dass das Snippet keine Fehler im HTML- oder Markdown-Code enthält.
-  * Wenn Sonderzeichen, Abfrageparameter oder Fragmente ein Problem mit der URL des Git-Repositorys verursachen, codieren Sie die URL im Schaltflächen-Snippet.
-
-### Git-Repository wird in DevOps Services geklont, aber die App wird in Bluemix nicht bereitgestellt
-{: #ts_repo-cloned-app-not-deployed}
-
-Wenn die App nicht bereitgestellt wird, bestehen möglicherweise Probleme mit dem Code im Repository.
-
-Sie klicken auf die Schaltfläche **In Bluemix bereitstellen** und das Git-Repository wird in DevOps Services geklont, die App wird jedoch nicht in {{site.data.keyword.Bluemix_notm}} bereitgestellt. Der Schritt für die Bereitstellung in Bluemix wird nicht erfolgreich abgeschlossen.
-{: tsSymptoms}
-
-Dieses Problem kann aufgrund folgender Ursachen auftreten:
-{: tsCauses}  
-
-  * Möglicherweise ist in Ihrem {{site.data.keyword.Bluemix_notm}}-Bereich nicht ausreichend Speicherplatz zum Bereitstellen einer App vorhanden.
-  * Möglicherweise wurde ein erforderlicher Service nicht in der Datei `manifest.yml` deklariert.
-  * Möglicherweise ist ein erforderlicher Service in der Datei `manifest.yml` deklariert, aber der Service befindet sich bereits im Zielbereich.
-  * Möglicherweise besteht ein Problem mit dem Code im Repository.
-
-Zum Diagnostizieren des Problems überprüfen Sie den Build und stellen Sie Protokolle aus der Bereitstellung (Implementierung) bereit:
-  1. Wenn der Schritt für die Bereitstellung in Bluemix nicht erfolgreich ausgeführt wird, klicken Sie auf den Link im vorherigen Schritt zum Konfigurieren einer Pipeline, um 'Delivery Pipeline' zu öffnen.
-  2. Ermitteln Sie die fehlgeschlagene Build- oder Bereitstellungsphase.
-  3. Klicken Sie in der fehlgeschlagenen Phase auf die Option **Protokolle und Verlauf anzeigen**.
-  4. Suchen Sie nach der Fehlernachricht.
-
-Verwenden Sie eines der folgenden Verfahren:
-{: tsResolve}
-
-  * Wenn in der Fehlernachricht angegeben wird, dass im {{site.data.keyword.Bluemix_notm}}-Bereich nicht genügend Speicherplatz für die Bereitstellung der App vorhanden ist, wählen Sie als Ziel einen anderen Bereich aus.
-  * Wenn in der Fehlernachricht angegeben wird, dass ein erforderlicher Service nicht in der Datei `manifest.yml` deklariert wurde, benachrichtigen Sie den Repository-Eigner darüber, dass der erforderliche Service hinzugefügt werden muss.
-  * Wenn in der Fehlernachricht angegeben wird, dass ein erforderlicher Service im Zielbereich bereits vorhanden ist, wählen Sie aus, dass ein anderer Bereich verwendet werden soll.
-  * Wenn in der Fehlernachricht angegeben wird, dass mit dem Build ein Problem besteht, beheben Sie alle Fehler im Code, die verhindern, dass für die App ein Build erfolgen kann. Zum Überprüfen, dass der Code keine Probleme enthält, erstellen Sie den Code mithilfe von Git-Befehlen:
-    1. Klonen Sie das Git-Repository:
-    ```
-    git clone <URL des Git-Repositorys>
-    ```
-    2. Öffnen Sie das Verzeichnis der App:
-	```
-	cd <appname>
-	```
-    3. Erstellen Sie die App:
-	```
-	<appname> create
-	```
-    4. Stellen Sie Add-ons bereit, falls erforderlich.
-    5. Fügen Sie erforderliche Konfigurationsvariablen hinzu.
-    6. Führen Sie die Push-Operation für den Code durch:
-	```
-	git push <appname> master
-	```
-    7. Überprüfen Sie, dass der Build für die App ordnungsgemäß ausgeführt wird.
-    8. Führen Sie, falls erforderlich, den nach der Bereitstellung auszuführenden Befehl (post deployment) aus:
-	```
-	<appname> run
-	```
-    9. Öffnen Sie die App und prüfen Sie, ob sie ordnungsgemäß ausgeführt wird:
-	```
-	<appname> open
-	```
-
-## Bereitstellung einer App über die Ausführungsleiste schlägt fehl
-{: #ts_runbar}
-
-Die Bereitstellung schlägt mit dem Status 'Nicht synchronisiert' (gelb) fehl.
-{: tsSymptoms}
-
-Die betreffende App verfügt über dieselbe Route wie eine andere App, die aktiv ist.
-{: tsCauses}
-
-Geben Sie eine eindeutige Route an.
-{: tsResolve}
-
-## Ausführungsleiste in Eclipse nicht zu sehen
-{: #ts_runbar-missing}
-
-Wenn die Ausführungsleiste in der Eclipse Orion-{{site.data.keyword.webide}} nicht angezeigt wird, ist eines der folgenden Probleme aufgetreten:
-{: tsCauses}
-
-* {{site.data.keyword.jazzhub}} erkennt das Projekt nicht als Projekt.
-*  {{site.data.keyword.jazzhub_short}} konnte nicht feststellen, in welchem Ordner sich die App befindet.
-* {{site.data.keyword.jazzhub_short}} erkennt nicht, dass die App eine Node.js-App ist.
-
-Verwenden Sie je nach Bedarf eines der folgenden Verfahren:
-{: tsResolve}  
-
-* Falls {{site.data.keyword.jazzhub}} Ihr Projekt nicht als Projekt erkennt, erstellen Sie eine Datei `project.json` im Stammverzeichnis Ihres Projekts.
-* Falls {{site.data.keyword.jazzhub_short}} nicht feststellen konnte, in welchem Ordner sich Ihre App befindet, und Ihre App nicht im Stammverzeichnis des Projekts gespeichert ist, verwenden Sie einen der folgenden Schritte:
-  * Erstellen Sie eine Datei `manifest.yml` im Stammverzeichnis Ihres Projekts und bearbeiten Sie die Datei so, dass sie auf die Position Ihrer App verweist. Beispiel: `path: pfad_ihrer_app`.
-  * Verschieben Sie Ihre App in das Stammverzeichnis Ihres Projekts.
-* Falls {{site.data.keyword.jazzhub_short}} nicht erkennt, dass Ihre App eine Node.js-App ist, erstellen Sie eine Datei `package.json` im App-Ordner Ihres Projekts.
-
-## GitHub-Hook funktioniert nicht
-{: #ts_githubhookisntworking}
-
-Sie haben das GitHub-Projekt so konfiguriert, dass bei der Übertragung von Commits per Push-Operation Links für Arbeitselemente erstellt werden. Die Links funktionieren nicht wie erwartet.
-{: tsSymptoms}
-
-Führen Sie die folgenden Schritte durch, um das Problem zu ermitteln:
-{: tsResolve}
-
-1. Klicken Sie im GitHub-Repository auf **Settings**.
-   ![Link für GitHub-Einstellungen](images/github_settings.png)
-
-2. Klicken Sie auf **Webhooks & Services**.
-   ![Link für GitHub-Web-Hooks und -Services](images/github_webhook.png)
-
-3. Setzen Sie den Mauszeiger auf das {{site.data.keyword.jazzhub}}-Statussymbol, um die Nachricht anzuzeigen.
-   ![Fehlernachricht für Service-Hook](images/github_error.png)
-
-4. Beheben Sie den Fehler gemäß der GitHub-Nachricht.
-
-5. Wenn Sie überprüfen möchten, ob die Korrektur erfolgreich war, können Sie eine weitere Änderung festschreiben (Commit) und per Push-Operation übertragen, oder Sie rufen die Serviceseite für {{site.data.keyword.jazzhub_short}} auf und klicken auf **Test service**.
-   ![Schaltfläche für Test von GitHub-Service](images/github_test.png)
-
-6. Stellen Sie sicher, dass keine Fehler vorliegen, indem Sie das Statussymbol erneut überprüfen.
-   ![Statussymbol ohne Fehler](images/githubResolved_small.png)
-
-Weitere Informationen finden Sie unter [Setting up GitHub for Bluemix DevOps Services projects ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://hub.jazz.net/docs/githubhooks/){: new_window}.

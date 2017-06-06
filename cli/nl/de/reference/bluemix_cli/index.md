@@ -16,13 +16,13 @@ lastupdated: "2017-03-08"
 # Einführung in die {{site.data.keyword.Bluemix_notm}}-CLI
 {: #getting-started}
 
-Die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI) stellt eine einheitliche Möglichkeit zur Interaktion mit Ihren Anwendungen, Containern, Infrastrukturen und weiteren Services über eine Befehlszeilenschnittstelle bereit.  
+Die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI) stellt eine einheitliche Möglichkeit zur Interaktion mit Ihren Anwendungen, Containern, Infrastrukturen und weiteren Services über eine Befehlszeilenschnittstelle bereit. 
 
 **Einschränkung:** Die {{site.data.keyword.Bluemix_notm}}-CLI wird nicht von Cygwin unterstützt. Die {{site.data.keyword.Bluemix_notm}}-CLI darf daher nicht im Fenster mit der Cygwin-Befehlszeile verwendet werden.
 
 **Hinweis:** Wenn sich in Ihrem Netz zwischen dem Host, auf dem die CLI ausgeführt wird, und {{site.data.keyword.Bluemix_notm}} ein HTTP-Proxy-Server befindet, müssen Sie den Hostnamen oder die IP-Adresse des Proxy-Servers in der Umgebungsvariablen HTTP_PROXY angeben.
 
-**Hinweis:** In der Installation des {{site.data.keyword.Bluemix_notm}}-CLI-Tools ist eine Cloud Foundry-Befehlszeilenschnittstelle enthalten. Es ist jedoch nicht zulässig, {{site.data.keyword.Bluemix_notm}}-CLI-Befehle `bx xxx` und Cloud Foundry-CLI-Befehle `cf xxx` gemischt zu verwenden, wenn Sie eine eigene CF-CLI-Installation haben. Verwenden Sie stattdessen `bluemix cf`, wenn Sie Cloud Foundry-Ressourcen mit der CF-CLI verwalten wollen. Dadurch werden im Back-End Befehle aus der enthaltenen Cloud Foundry-CLI in einem gemeinsam genutzten Kontext mit der {{site.data.keyword.Bluemix_notm}}-CLI ausgeführt. Darüber hinaus ist der Befehl `bluemix cf api/login/logout/target` nicht zulässig. Verwenden Sie stattdessen den Befehl `bluemix api/login/logout/target`. 
+**Hinweis:** In der Installation des {{site.data.keyword.Bluemix_notm}}-CLI-Tools ist eine Cloud Foundry-Befehlszeilenschnittstelle enthalten. Es ist jedoch nicht zulässig, {{site.data.keyword.Bluemix_notm}}-CLI-Befehle `bx xxx` und Cloud Foundry-CLI-Befehle `cf xxx` gemischt zu verwenden, wenn Sie eine eigene CF-CLI-Installation haben. Verwenden Sie stattdessen `bluemix cf`, wenn Sie Cloud Foundry-Ressourcen mit der CF-CLI verwalten wollen. Dadurch werden im Back-End Befehle aus der enthaltenen Cloud Foundry-CLI in einem gemeinsam genutzten Kontext mit der {{site.data.keyword.Bluemix_notm}}-CLI ausgeführt.  Darüber hinaus ist der Befehl `bluemix cf api/login/logout/target` nicht zulässig. Verwenden Sie stattdessen den Befehl `bluemix api/login/logout/target`.
 
 ## {{site.data.keyword.Bluemix_notm}}-CLI installieren
 {: #install_bluemix_cli}
@@ -64,7 +64,7 @@ Sie können nun mit der Verwendung der {{site.data.keyword.Bluemix_notm}}-CLI be
 ## Plug-ins installieren
 {: #install_plug-in}
 
-Die {{site.data.keyword.Bluemix_notm}}-CLI unterstützt ein Plug-in-Erweiterungsframework, mit dem über die bereits integrierten Befehle hinaus weitere Befehle integriert werden können. 
+Die {{site.data.keyword.Bluemix_notm}}-CLI unterstützt ein Plug-in-Erweiterungsframework, mit dem über die bereits integrierten Befehle hinaus weitere Befehle integriert werden können.
 
 
 Sie können ein Plug-in aus dem Repository lokal oder von einem fernen Server installieren. {{site.data.keyword.Bluemix_notm}} enthält Repositorys, in denen Plug-ins für die {{site.data.keyword.Bluemix_notm}}-CLI und die Cloud Foundry-CLI gehostet werden:
@@ -150,4 +150,4 @@ Führen Sie die folgenden Schritte aus, um die Installation von einem fernen Ser
   ```
 
 
-Sie können nun die {{site.data.keyword.Bluemix_notm}}-Befehlszeilen verwenden. Führen Sie den Befehl `bluemix help` aus, um eine Liste der Befehle mit Beschreibungen anzuzeigen.  
+Sie können nun die {{site.data.keyword.Bluemix_notm}}-Befehlszeilen verwenden. Führen Sie den Befehl `bluemix help` aus, um eine Liste der Befehle mit Beschreibungen anzuzeigen. 

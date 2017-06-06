@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2014, 2017
 
-lastupdated: "2017-01-10" 
+lastupdated: "2017-01-10"
 
 ---
 
@@ -202,9 +202,9 @@ Single Sign On 服務支援數個儲存使用者認證的身分來源：
 
 ### 用於應用程式安全測試的 IBM UrbanCode 外掛程式
 
-IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} 外掛程式可讓您針對 {{site.data.keyword.Bluemix_notm}} 上管理的 Web 或 Android 應用程式執行安全掃描。此外掛程式由 IBM UrbanCode™ Deploy Community 在 IBM Bluemix DevOps Services 平台上開發及支援。
+IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} 外掛程式可讓您針對 {{site.data.keyword.Bluemix_notm}} 上管理的 Web 或 Android 應用程式執行安全掃描。此外掛程式由 IBM UrbanCode™ Deploy Community 所開發及支援。
 
-如需相關資訊，請移至 [IBM Application Security Testing for Bluemix ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}。 
+如需相關資訊，請移至 [IBM Application Security Testing for Bluemix ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}。
 
 ### dashDB
 

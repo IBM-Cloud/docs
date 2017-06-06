@@ -42,7 +42,7 @@ Procédez comme suit pour afficher et filtrer vos journaux d'application Cloud F
 
 6. Ajoutez un filtre pour inclure ou exclure des informations concernant un composant (type de journal). 
 
-    * Pour ajouter un filtre incluant une valeur de composant, cliquez sur l'icône en forme de **loupe** ![Icône en forme de loupe](images/logging_magnifying_glass.jpg "Icône en forme de loupe") dans la ligne source_id du tableau.  
+    * Pour ajouter un filtre incluant une valeur de composant, cliquez sur l'icône en forme de **loupe** ![Icône en forme de loupe](images/logging_magnifying_glass.jpg "Icône en forme de loupe") dans la ligne source_id du tableau. 
 
         ![Condition de filtre incluant la zone source_id](images/logging_component_filter.png "Condition de filtre incluant la zone source_id") 
 
@@ -66,6 +66,6 @@ Procédez comme suit pour afficher et filtrer vos journaux d'application Cloud F
     
     ![Sauvegarde d'un nom de tableau de bord](images/logging_save_dashboard.jpg "Sauvegarde d'un nom de tableau de bord")
 
-Vous avez créé un tableau de bord qui filtre vos entrées de journal par composant (type de journal). Vous pouvez charger votre tableau de bord sauvegardé à tout moment en cliquant sur l'icône de **dossier** ![Icône de dossier](images/logging_folder.jpg "Icône de dossier") et en sélectionnant votre tableau de bord par nom. 
+Vous avez créé un tableau de bord qui filtre vos entrées de journal par composant (type de journal). Vous pouvez charger votre tableau de bord sauvegardé à tout moment en cliquant sur l'icône de **dossier** ![Icône de dossier](images/logging_folder.jpg "Icône de dossier") et en sélectionnant votre tableau de bord par nom.
 
 

@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="bluemix-overview" audience="platform" href="/docs/overview/whatisbluemix.html"}
-What is Bluemix
+Bluemix의 개념
   
     {: .navgroup id="learn"}
     whatisbluemix.md
@@ -18,7 +18,7 @@ What is Bluemix
     {: .navgroup-end}
     
     {: .navgroup id="reference"}
-    [주의사항 및 이용 약관](../navigation/notices.html)
+    ../navigation/
     glossary/index.md
-    [새로운 기능](../whatsnew/index.html)
+    ../whatsnew/
     {: .navgroup-end}

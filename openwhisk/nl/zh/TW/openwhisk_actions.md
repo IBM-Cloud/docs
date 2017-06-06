@@ -52,7 +52,7 @@ copyright:
       return {payload: 'Hello world'};
   }
   ```
-    {: codeblock}
+  {: codeblock}
 
     JavaScript 檔可能包含其他函數。不過，依慣例，必須要有稱為 `main` 的函數，以提供動作的進入點。
 
@@ -61,7 +61,7 @@ copyright:
   ```
   wsk action create hello hello.js
   ```
-      {: pre}
+  {: pre}
   ```
   ok: created action hello
   ```
@@ -568,24 +568,29 @@ wsk action invoke --blocking --result helloPython --param name World
       "greeting": "Hello World!"
   }
 ```
-{: codeblock}
 
-### 將 Python 動作包裝在 zip 檔案
+### 將 Python 動作包裝在 zip 檔案中
 {: #openwhisk_actions_python_zip}
 
-您可以將 Python 動作及相依模組包裝在 zip 檔案中。包含進入點（例如，`main`）的原始檔的檔名必須是 `__main__.py`。例如，若要建立 helper 模組稱為 `helper.py` 的動作，請先建立包含您原始檔的保存檔：
+您可以將 Python 動作及相依模組包裝在 zip 檔案中。
+包含進入點（例如，`main`）的原始檔檔名必須是 `__main__.py`。
+例如，若要建立 helper 模組稱為 `helper.py` 的動作，請先建立一個包含您原始檔的保存檔：
 
 ```bash
-$ zip -r helloPython.zip **main**.py helper.py
+zip -r helloPython.zip __main__.py helper.py
 ```
+{: pre}
 
 然後建立動作：
 
-```bash
-$ wsk action create helloPython --kind python:3 helloPython.zip
-```
 
-### 使用虛擬環境將 Python 動作包裝在 zip 檔案
+
+```bash
+wsk action create helloPython --kind python:3 helloPython.zip
+```
+{: pre}
+
+### 使用虛擬環境將 Python 動作包裝在 zip 檔案中
 {: #openwhisk_actions_python_virtualenv}
 
 另一種包裝 Python 相依關係的方式是使用虛擬環境 (`virtualenv`)。例如，這可讓您鏈結可透過 [`pip`](https://packaging.python.org/installing/) 安裝的其他套件。
@@ -595,31 +600,40 @@ $ wsk action create helloPython --kind python:3 helloPython.zip
 與基本 zip 檔案支援一樣，包含主要進入點的原始檔的名稱必須是 `__main__.py`。此外，virtualenv 目錄必須命名為 `virtualenv`。
 以下是安裝相依關係、將它們包裝在 virtualenv 中以及建立相容 OpenWhisk 動作的範例情境。
 
-1. 如果 `requirements.txt` 檔案包含要安裝的 `pip` 模組及版本，請執行下列指令來安裝相依關係，以及使用相容的 Docker 映像檔來建立 virtualenv：
+
+
+1. 如果 `requirements.txt` 檔案包含要安裝的 `pip` 模組及版本，請執行下列指令來安裝相依關係，並且使用相容的 Docker 映像檔來建立 virtualenv：
  ```bash
- $ docker run --rm -v "$PWD:/tmp" openwhisk/python3action sh \
+ docker run --rm -v "$PWD:/tmp" openwhisk/python3action sh \
    -c "cd tmp; virtualenv virtualenv; source virtualenv/bin/activate; pip install -r requirements.txt;"
  ```
+ {: pre}
 
 2. 保存 virtualenv 目錄及任何其他 Python 檔案：
  ```bash
- $ zip -r helloPython.zip virtualenv **main**.py
+ zip -r helloPython.zip virtualenv __main__.py
  ```
+ {: pre}
 
 3. 建立動作：
-```bash
-$ wsk action create helloPython --kind python:3 helloPython.zip
-```
+  ```bash
+  wsk action create helloPython --kind python:3 helloPython.zip
+  ```
+  {: pre}
 
 雖然上述步驟是針對 Python 3.6 所顯示，但是您也可以針對 Python 2.7 進行相同步驟。
 
+
+
 ## 建立 Swift 動作
 
-建立 Swift 動作的程序，與建立 JavaScript 動作的程序類似。下列各節會引導您建立及呼叫單一 Swift 動作，以及將參數新增至該動作。您也可以使用線上 [Swift 沙盤推演](https://swiftlang.ng.bluemix.net) 來測試 Swift 程式碼，而不需要在機器上安裝 Xcode。
+建立 Swift 動作的程序，與建立 JavaScript 動作的程序類似。下列各節會引導您建立及呼叫單一 Swift 動作，以及將參數新增至該動作。
+
+您也可以使用線上 [Swift 沙盤推演](https://swiftlang.ng.bluemix.net)來測試 Swift 程式碼，而不需要在機器上安裝 Xcode。
 
 ### 建立及呼叫動作
 
-動作只是最上層 Swift 函數。例如，使用下列內容建立稱為 `hello.swift` 的檔案：
+動作只是最上層 Swift 函數。例如，建立稱為 `hello.swift` 且含有下列內容的檔案：
 
 ```swift
 func main(args: [String:Any]) -> [String:Any] {
@@ -648,7 +662,7 @@ Swift 動作與 JavaScript 動作的動作呼叫相同：
 ```
 wsk action invoke --blocking --result helloSwift --param name World
 ```
-  {: pre}
+{: pre}
 
 ```json
   {
@@ -656,12 +670,14 @@ wsk action invoke --blocking --result helloSwift --param name World
   }
 ```
 
-**注意：** Swift 動作是在 Linux 環境中執行。Swift on Linux 仍在開發中，而且 {{site.data.keyword.openwhisk_short}} 通常會使用最新的可用版本，但此版本不一定是穩定的。此外，與 {{site.data.keyword.openwhisk_short}} 搭配使用的 Swift 版本，可能與 MacOS 上穩定 XCode 版本的 Swift 版本不一致。
+**注意：**Swift 動作是在 Linux 環境中執行。Swift on Linux 仍在開發中，而且 {{site.data.keyword.openwhisk_short}} 通常會使用最新的可用版本，但此版本不一定是穩定的。此外，與 {{site.data.keyword.openwhisk_short}} 搭配使用的 Swift 版本，可能與 MacOS 上穩定 XCode 版本的 Swift 版本不一致。
 
 ### 將動作包裝成 Swift 執行檔
 {: #openwhisk_actions_swift_zip}
 
-當您使用 Swift 原始檔建立 OpenWhisk Swift 動作時，必須先將其編譯成二進位檔，才能執行動作。完成之後，後續呼叫動作時就會快很多，直到清除用來保存動作的容器為止。這項延遲稱為冷啟動延遲。若要避免冷啟動延遲，您可以將 Swift 檔案編譯成二進位檔，然後將它以 zip 檔案形式上傳至 OpenWhisk。當您需要 OpenWhisk 支撐時，建立二進位檔最簡單的方式，就是在要執行檔案的相同環境中建置檔案。步驟如下：
+當您使用 Swift 來源檔建立 OpenWhisk Swift 動作時，必須先將其編譯成二進位檔，才能執行動作。完成之後，後續呼叫動作時就會快很多，直到清除用來保存動作的容器為止。這項延遲稱為冷啟動延遲。
+
+若要避免冷啟動延遲，您可以將 Swift 檔案編譯成二進位檔，然後將它以 zip 檔案形式上傳至 OpenWhisk。當您需要 OpenWhisk 支撐時，建立二進位檔最簡單的方式，就是在要執行檔案的相同環境中建置檔案。步驟如下：
 
 - 執行互動式 Swift 動作容器。
 ```
@@ -670,7 +686,8 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
 {: pre}
 
     這會讓您進入 Docker 容器的 Bash Shell 中。在裡面執行下列指令：
-- 為方便起見，安裝 zip 來包裝二進位檔
+
+- 為了方便起見，安裝 zip 來包裝二進位檔
   ```
   apt-get install -y zip
   ```
@@ -679,11 +696,11 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   ```
   cp /owexec/hello.swift /swift3Action/spm-build/main.swift 
   ```
-
+  {: pre}
   ```
   cat /swift3Action/epilogue.swift >> /swift3Action/spm-build/main.swift
   ```
-
+  {: pre}
   ```
   echo '_run_main(mainFunction:main)' >> /swift3Action/spm-build/main.swift
   ```
@@ -705,24 +722,27 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   ```
   exit
   ```
+  {: pre}
 此作業已在與 hello.swift 相同的目錄中建立 hello.zip。
 - 使用動作名稱 helloSwifty，將它上傳至 OpenWhisk：
   ```
   wsk action update helloSwiftly hello.zip --kind swift:3
   ```
-
-- 若要檢查速度快多少，請執行
+  {: pre}
+- 若要檢查速度快多少，請執行 
   ```
   wsk action invoke helloSwiftly --blocking
-  ```
-
+  ``` 
+  {: pre}
 
 動作所需的執行時間位於 "duration" 內容中，並且與使用 hello 動作中的編譯步驟執行所需的時間進行比較。
 
 ## 建立 Java 動作
 {: #openwhisk_actions_java}
 
-建立 Java 動作的程序，與建立 JavaScript 及 Swift 動作的程序類似。下列各節會引導您建立及呼叫單一 Java 動作，以及將參數新增至該動作。若要編譯、測試及保存 Java 檔案，您必須已在本端安裝 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)。
+建立 Java 動作的程序，與建立 JavaScript 及 Swift 動作的程序類似。下列各節會引導您建立及呼叫單一 Java 動作，以及將參數新增至該動作。
+
+若要編譯、測試及保存 Java 檔案，您必須已在本端安裝 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)。
 
 ### 建立及呼叫動作
 {: #openwhisk_actions_java_invoke}
@@ -754,14 +774,13 @@ public class Hello {
 ```
 javac Hello.java
 ```
-  {: pre}
-
+{: pre}
 ```
 jar cvf hello.jar Hello.class
 ```
-  {: pre}
+{: pre}
 
-**附註：** 編譯 Java 檔案時，[google-gson](https://github.com/google/gson) 必須存在於您的 Java CLASSPATH 中。
+**附註：**當編譯 Java 檔案時，[google-gson](https://github.com/google/gson) 必須存在於您的 Java CLASSPATH 中。
 
 您可以從這個 JAR 檔建立稱為 `helloJava` 的 OpenWhisk 動作，如下所示：
 
@@ -769,7 +788,7 @@ jar cvf hello.jar Hello.class
 wsk action create helloJava hello.jar --main Hello
 ```
 
-使用指令行及 `.jar` 原始檔時，您不需要指定是在建立 Java 動作；工具是透過副檔名來判斷。
+當使用指令行及 `.jar` 原始檔時，您不需要指定您是建立 Java 動作；工具會根據副檔名判定。
 
 您需要使用 `--main` 來指定 main 類別的名稱。合格的 main 類別會如上所述實作 static `main` 方法。如果類別不在預設套件中，請使用 Java 完整類別名稱（例如，`--main com.example.MyMain`）。
 
@@ -778,7 +797,7 @@ wsk action create helloJava hello.jar --main Hello
 ```
 wsk action invoke --blocking --result helloJava --param name World
 ```
-  {: pre}
+{: pre}
 
 ```json
   {
@@ -802,8 +821,9 @@ wsk action invoke --blocking --result helloJava --param name World
   wsk sdk install docker
   ```
   {: pre}
-    Docker 架構現在安裝在現行目錄中。
-  
+  ```
+  Docker 架構現在安裝在現行目錄中。
+  ```
 
   ```
   ls dockerSkeleton/

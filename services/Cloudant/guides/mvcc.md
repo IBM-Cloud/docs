@@ -156,7 +156,7 @@ You identify documents with with conflicts by using the `conflicts=true` option.
 _Example of finding documents with conflicts:_
 
 ```http
-http://$USERNAME.cloudant.com/products/$_ID?conflicts=true
+http://$ACCOUNT.cloudant.com/products/$_ID?conflicts=true
 ```
 {:codeblock}
 
@@ -187,9 +187,9 @@ your application gets all of the versions from the database.
 _Example commands to retrieve all versions of a document from the database:_
 
 ```http
-http://$USERNAME.cloudant.com/products/$_ID
-http://$USERNAME.cloudant.com/products/$_ID?rev=2-61ae00e029d4f5edd2981841243ded13
-http://$USERNAME.cloudant.com/products/$_ID?rev=1-7438df87b632b312c53a08361a7c3299
+http://$ACCOUNT.cloudant.com/products/$_ID
+http://$ACCOUNT.cloudant.com/products/$_ID?rev=2-61ae00e029d4f5edd2981841243ded13
+http://$ACCOUNT.cloudant.com/products/$_ID?rev=1-7438df87b632b312c53a08361a7c3299
 ```
 {:codeblock}
 
@@ -232,14 +232,14 @@ you delete the old revisions by sending a `DELETE` request to the URLs with the 
 _Example request to delete an old document revision, using HTTP:_
 
 ```http
-DELETE https://$USERNAME.cloudant.com/products/$_ID?rev=2-61ae00e029d4f5edd2981841243ded13
+DELETE https://$ACCOUNT.cloudant.com/products/$_ID?rev=2-61ae00e029d4f5edd2981841243ded13
 ```
 {:codeblock}
 
 _Example request to delete an old document revision, using the command line:_
 
 ```sh
-curl "https://$USERNAME.cloudant.com/products/$_ID?rev=2-f796915a291b37254f6df8f6f3389121" -X DELETE
+curl "https://$ACCOUNT.cloudant.com/products/$_ID?rev=2-f796915a291b37254f6df8f6f3389121" -X DELETE
 ```
 {:codeblock}
 

@@ -17,7 +17,8 @@ lastupdated: "2017-02-01"
 # 예: Cloud Foundry 애플리케이션 로그를 Splunk에 스트리밍
 {: #splunk}
 
-이 예에서, 이름이 Jane인 개발자는 IBM Virtual Servers Beta 및 Ubuntu 이미지를 사용하여 가상 서버를 작성합니다. Jane은 {{site.data.keyword.Bluemix_notm}}에서 Splunk로 Cloud Foundry 앱 로그의 스트리밍을 시도합니다. {:shortdesc}
+이 예에서, 이름이 Jane인 개발자는 IBM Virtual Servers Beta 및 Ubuntu 이미지를 사용하여 가상 서버를 작성합니다. Jane은 {{site.data.keyword.Bluemix_notm}}에서 Splunk로 Cloud Foundry 앱 로그의 스트리밍을 시도합니다.
+{:shortdesc}
 
   1. 우선 Jane은 Splunk를 설정합니다. 
 
@@ -39,10 +40,12 @@ cd /opt/splunk/etc/apps
         그리고 Jane은 */opt/splunk/etc/apps/rfc5424/default/transforms.conf*를 다음 텍스트로 구성된 새 *transforms.conf* 파일로 대체하여 추가 기능을 패치합니다. 
 
 	    ```
-[rfc5424_host]
+        [rfc5424_host]
         DEST_KEY = MetaData:Host
         REGEX = <\d+>\d{1}\s{1}\S+\s{1}(\S+)
-        FORMAT = host::$1[rfc5424_header]
+        FORMAT = host::$1
+
+        [rfc5424_header]
         REGEX = <(\d+)>\d{1}\s{1}\S+\s{1}\S+\s{1}(\S+)\s{1}(\S+)\s{1}(\S+)
         FORMAT = prival::$1 appname::$2 procid::$3 msgid::$4
         MV_ADD = true
