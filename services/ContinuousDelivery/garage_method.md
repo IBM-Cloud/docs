@@ -3,7 +3,7 @@
 copyright:
   years: 2017
 
-lastupdated: "2017-4-5"
+lastupdated: "2017-6-5"
 
 ---
 <!-- Copyright info at top of file: REQUIRED
@@ -43,7 +43,17 @@ With [Delivery Pipeline ![External link icon](../../icons/launch-glyph.svg "Exte
 
 [Create and use your first toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}. Learn how to create an open toolchain from a template and use the toolchain to continuously deliver a "Hello World" app.
 
+[Add a toolchain to an app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?=task1){:new_window}. Learn how to add an open toolchain to an app and use the toolchain to continuously deliver the app.
+
 [Create and use a microservices toolchain ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}. Learn how to create a toolchain from a template with three microservices and use the toolchain to continuously deliver a "Hello World" app.
+
+[Create and use a microservices toolchain with {{site.data.keyword.DRA_short}} (v2) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}. Learn how to set up an open toolchain that develops and continuously delivers a microservices app.
+
+[Create a toolchain that uses {{site.data.keyword.gitrepos}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2){:new_window}. Create an open toolchain from a template that includes a Cloud Foundry app and uses {{site.data.keyword.gitrepos}}. Then, use the toolchain to continuously deliver the app.
+
+[Create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline){:new_window}. Learn how to start with a pipeline and create an open toolchain that includes a GitHub repo and the pipeline.
+
+For more tutorials, see the [Learning Lab ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/category/courses){:new_window}.
 
 ## Continuous delivery courses
 {: #gm_cd_courses}
