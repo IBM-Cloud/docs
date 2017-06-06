@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-12"
+lastupdated: "2017-04-13"
 
 ---
 
@@ -31,7 +31,7 @@ You can run the starter application without modification. If you want to experim
 </td>
   </tr>
   <tr>
-    <td><a href="https://developer.ibm.com/streamsdev/videos/getting-started-streaming-analytics-service-using-trades-starter-application/" target="_blank">TUTORIAL</a><br></td>
+    <td><a href="https://developer.ibm.com/streamsdev/videos/getting-started-streaming-analytics-service-using-trades-starter-application/" target="_blank">DEPLOY THE APP</a><br></td>
     <td><a href="https://github.com/IBMStreams/samples/raw/master/QuickStart/TradesApp/starterApp/StockTradesStarterApp.sab" target="_blank">DOWNLOAD</a></td>
   </tr>
 </table>
