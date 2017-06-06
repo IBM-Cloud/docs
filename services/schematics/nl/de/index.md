@@ -15,7 +15,8 @@ lastupdated: "2017-05-16"
 # Einführung in {{site.data.keyword.bpfull_notm}} (Beta)
 {: #gettingstarted}
 
-{{site.data.keyword.bplong}} ist ein Automatisierungstool, das Sie verwenden können, um die Cloudinfrastruktur als eine einzige Einheit definieren und bereitstellen und die Cloudressourcendefinitionen für eine beliebige Anzahl von Umgebungen wiederverwenden zu können.{:shortdesc}
+{{site.data.keyword.bplong}} ist ein Automatisierungstool, das Sie verwenden können, um die Cloudinfrastruktur als eine einzige Einheit definieren und bereitstellen und die Cloudressourcendefinitionen für eine beliebige Anzahl von Umgebungen wiederverwenden zu können.
+{:shortdesc}
 
 {{site.data.keyword.bpshort}} verwendet Terraform von HashiCorp, um die Infrastruktur zu codifizieren. Die Komponenten Ihrer Infrastruktur werden in einzelne Ressourcen heruntergebrochen, bei denen es sich um verschiedenste Ressourcen handeln kann, von physischer Hardware bis hin zu Benutzerkonten. Durch Abstrahieren übergeordneter und untergeordneter Ressourcen können Sie Ihre Infrastruktur wie Ihre eigene Software als Code behandeln. 
 
@@ -29,7 +30,8 @@ Wenn Sie mit {{site.data.keyword.bpshort}} arbeiten, schreiben Sie Konfiguration
 ## Konfiguration erstellen
 {: #configuration}
 
-Wenn Sie eine Konfiguration erstellen, codifizieren Sie die Cloudressourcen, aus denen sich Ihre Umgebung zusammensetzt.{:shortdesc}
+Wenn Sie eine Konfiguration erstellen, codifizieren Sie die Cloudressourcen, aus denen sich Ihre Umgebung zusammensetzt.
+{:shortdesc}
 
 
 Wenn Sie eine Beispielkonfiguration mit {{site.data.keyword.bpshort}} ausprobieren möchten, führen Sie die folgenden Schritte aus. In dem Beispiel können Sie einen SSH-Schlüssel bereitstellen, der in {{site.data.keyword.BluSoftlayer}} verwendet werden soll. 
@@ -94,7 +96,8 @@ Sie können jetzt eine Umgebung aus Ihrer Konfiguration erstellen.
 ## Umgebung erstellen
 {: #environment}
 
-Wenn Sie eine Umgebung erstellen, verweisen Sie den Service auf Ihre Konfiguration, sodass der Service Ihre neuesten Codeänderungen extrahieren kann.{:shortdesc}
+Wenn Sie eine Umgebung erstellen, verweisen Sie den Service auf Ihre Konfiguration, sodass der Service Ihre neuesten Codeänderungen extrahieren kann.
+{:shortdesc}
 
 Führen Sie anhand der Beispielkonfiguration die folgenden Schritte durch, um eine Umgebung zu erstellen.
 

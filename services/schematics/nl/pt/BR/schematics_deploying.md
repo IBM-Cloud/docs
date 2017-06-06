@@ -14,7 +14,8 @@ lastupdated: "2017-05-16"
 # Implementando recursos em seus ambientes
 {: #deploying}
 
-Com o {{site.data.keyword.bplong}}, é possível implementar suas mudanças de código mais recentes diretamente do código-fonte. Ao implementar seu ambiente, você está implementando os recursos definidos por seus arquivos de configuração. Será possível então gerenciar o fornecimento, as orquestrações e o ciclo de vida do ambiente de dentro do {{site.data.keyword.bpshort}}.{:shortdesc}
+Com o {{site.data.keyword.bplong}}, é possível implementar suas mudanças de código mais recentes diretamente do código-fonte. Ao implementar seu ambiente, você está implementando os recursos definidos por seus arquivos de configuração. Será possível então gerenciar o fornecimento, as orquestrações e o ciclo de vida do ambiente de dentro do {{site.data.keyword.bpshort}}.
+{:shortdesc}
 
 ## Implementando em seus ambientes com a GUI
 {: #gui}
