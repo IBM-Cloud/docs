@@ -647,6 +647,7 @@ wsk action create helloPython --kind python:3 helloPython.zip
 While the steps above are shown for Python 3.6, you can do the same for Python 2.7 as well.
 
 ## Creating Swift actions
+{: #openwhisk_actions_swift}
 
 The process of creating Swift actions is similar to that of JavaScript actions. The following sections guide you through creating and invoking a single swift action, and adding parameters to that action.
 
