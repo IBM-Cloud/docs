@@ -19,7 +19,7 @@ lastupdated: "2017-04-06"
 In {{site.data.keyword.Bluemix}}, puoi utilizzare Kibana, una piattaforma di analisi e visualizzazione open source, per monitorare, ricercare, analizzare e visualizzare i tuoi dati in una varietà di grafici, ad esempio, diagrammi e tabelle. Utilizza Kibana per eseguire attività di analisi avanzate.
 {:shortdesc}
 
-Kibana è un'interfaccia basata su browser in cui puoi analizzare i dati interattivamente e personalizzare i dashboard che potrai quindi utilizzare per analizzare i dati di log ed eseguire attività di gestione avanzate. Per ulteriori informazioni, vedi [Kibana User Guide ![icona link esterno](../../../icons/launch-glyph.svg "External link icon")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}.
+Kibana è un'interfaccia basata su browser in cui puoi analizzare i dati interattivamente e personalizzare i dashboard che potrai quindi utilizzare per analizzare i dati di log ed eseguire attività di gestione avanzate. Per ulteriori informazioni, vedi [Kibana User Guide ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}.
 
 I dati visualizzati da una pagina Kibana sono vincolati da una ricerca. La serie di dati predefinita è definita dal modello di indice preconfigurato. Per filtrare le informazioni, puoi aggiungere nuove query di ricerca e applicare i filtri alla serie di dati predefinita. Puoi quindi salvare la ricerca per riutilizzi futuri. 
 
