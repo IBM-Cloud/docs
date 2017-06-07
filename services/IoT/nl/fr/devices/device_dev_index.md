@@ -54,7 +54,7 @@ Pour plus d'informations et pour accéder à des liens vers les guides de progra
 
 Si vous ne trouvez pas le guide de programmation {{site.data.keyword.iot_short_notm}} qui vous convient, vous pouvez écrire votre propre programme et utiliser le protocole MQTT ou HTTP pour connecter votre terminal à {{site.data.keyword.iot_short_notm}}.
 
-MQTT est une norme ouverte gérée par les normes OASIS reconnues par l'ISO. Pour plus d'informations, voir[OASIS Message Queuing Telemetry Transport ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt){: new_window}.
+MQTT est une norme ouverte gérée par les normes OASIS reconnues par l'ISO. Pour plus d'informations, voir [OASIS Message Queuing Telemetry Transport ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt){: new_window}.
 
 Une grande variété de bibliothèques client MQTT est disponible pour de nombreux systèmes, y compris les environnements suivants :
 - http://www.eclipse.org/paho/
