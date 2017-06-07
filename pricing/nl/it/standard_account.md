@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-05-02"
 
 
 ---
@@ -26,7 +26,7 @@ La partecipazione all'utilizzo dell'Account standard beta è solo su invito. Dop
 ## Presentazione dell'Account standard {{site.data.keyword.Bluemix_notm}}
 {: #standardaccount}
 
-Potresti chiederti qual è la differenza tra l'Account standard e l'Account di prova. Nelle seguenti tabelle vengono riepilogati i dettagli chiave relativi all'account standard {{site.data.keyword.Bluemix_notm}}. 
+Potresti chiederti qual è la differenza tra l'Account standard e l'account di prova. Nelle seguenti tabelle vengono riepilogati i dettagli chiave relativi all'account standard {{site.data.keyword.Bluemix_notm}}. 
 
 |Novità in un account standard |    
 |-----------------|
@@ -45,10 +45,10 @@ Potresti chiederti qual è la differenza tra l'Account standard e l'Account di p
 |Il livello di supporto di {{site.data.keyword.Bluemix_notm}} rimane lo stesso. |
 {:caption="Tabella 2. Cosa rimane invariato" caption-side="top"}
 
-**Nota:** se il tuo account di prova non viene convertito, viene visualizzato un messaggio che ne spiega il motivo. Potresti avere più di un'organizzazione nel tuo account di prova esistente o applicazioni che non è possibile trasferire. Effettua l'operazione appropriata e prova a convertire di nuovo l'account.
+**Nota**: se il tuo account di prova non viene convertito, viene visualizzato un messaggio che ne spiega il motivo. Potresti avere più di un'organizzazione nel tuo account di prova esistente o applicazioni che non è possibile trasferire. Effettua l'operazione appropriata e prova a convertire di nuovo l'account.
 
 Se hai eseguito la registrazione per un account standard, puoi invitare i membri del team a collaborare nella tua organizzazione e nei tuoi spazi, visualizzare il tuo utilizzo, creare gli spazi, aggiornare il profilo del tuo account e gestire la tua organizzazione. Per ulteriori
-informazioni, vedi [Configurazione del tuo account](/docs/admin/adminpublic.html#account).
+informazioni, vedi [Gestione del tuo account](/docs/admin/adminpublic.html#account).
 
 ## Piani Lite
 {: #liteplans}
@@ -82,7 +82,8 @@ Quando si raggiungono i limiti di quota, la tua applicazione viene arrestata o i
 
 Puoi eseguire il provisioning di 1 istanza per piano Lite. 
 
-**Nota:** queste limitazioni si applicano solo all'account standard. In qualsiasi momento, puoi effettuare l'aggiornamento a un account Pagamento a consumo o con fatturazione di sottoscrizione. Paghi solo per ciò che utilizzi oltre i limiti concessi dalle franchigie. Per ulteriori informazioni sugli account Pagamento a consumo e Sottoscrizione, consulta [Modalità di fatturazione](/docs/pricing/index.html#pay-accounts).
+**Nota**: queste limitazioni si applicano solo all'Account standard. In qualsiasi momento, puoi effettuare l'aggiornamento a un account Pagamento a consumo o con fatturazione di sottoscrizione. Paghi solo per ciò che utilizzi oltre i limiti concessi dalle franchigie. Per ulteriori informazioni sugli account Pagamento a consumo e Sottoscrizione,
+vedi [Tipi di account](/docs/pricing/index.html#pay-accounts).
 
 ## Attività di sviluppo
 {: #devactivity}
@@ -106,7 +107,7 @@ Per aiutare gli utenti dell'Account standard a gestire al meglio le proprie riso
   * cf enable-ssh
   * cf disable-ssh
 
- **Nota:** se la tua applicazione è già abilitata a ssh, i comandi `cf enable-ssh` e `cf disable-sh` non riattiveranno la tua applicazione. 
+ **Nota**: se la tua applicazione è già abilitata a ssh, i comandi `cf enable-ssh` e `cf disable-sh` non riattiveranno la tua applicazione. 
 
  * I tuoi servizi con piano Lite verranno eliminati in assenza di attività per 30 giorni. Non dovrai quindi eliminare le istanze inattive quando desideri creare una nuova istanza. Al momento, questa funzione è utilizzata solo dalla Piattaforma Internet delle cose. 
  
@@ -115,6 +116,6 @@ Per aiutare gli utenti dell'Account standard a gestire al meglio le proprie riso
 ## Partecipazione all'Account standard beta
 {: #betainvitation}
 
-Se sei stato selezionato per partecipare alla versione Beta, ti viene inviato un invito all'indirizzo e-mail associato al tuo Account di prova {{site.data.keyword.Bluemix_notm}}. Una volta ricevuto l'invito, completa le istruzioni riportate nell'e-mail per registrare l'account standard. 
+Se sei stato selezionato per partecipare alla versione Beta, ti viene inviato un invito all'indirizzo e-mail associato al tuo account di prova {{site.data.keyword.Bluemix_notm}}. Una volta ricevuto l'invito, completa le istruzioni riportate nell'e-mail per registrare l'account standard. 
 
 Sei interessato a partecipare all'offerta dell'Account standard beta? Chiedi ai tuoi amici e colleghi. Se loro sono stati invitati a partecipare alla versione Beta e hanno creato il proprio account standard, potranno invitare anche te. 
