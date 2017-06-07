@@ -131,7 +131,7 @@ modificare il percorso dell'immagine pulsante esterna utilizzata nel frammento i
 	
 	* Se preferisci memorizzare l'immagine localmente, puoi scaricare l'immagine e memorizzarla nel repository Git. Regola il percorso per utilizzare l'ubicazione relativa dell'immagine. 
 	
-	* Se vuoi utilizzare una versione tradotta del pulsante, puoi fare riferimento a esso in remoto oppure scaricarlo da [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button![icona link esterno](../icons/launch-glyph.svg "External link icon")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}. 
+	* Se vuoi utilizzare una versione tradotta del pulsante, puoi fare riferimento a esso in remoto oppure scaricarlo da [ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](ftp://public.dhe.ibm.com/cloud/bluemix/deploy_button){:new_window}. 
 	
 ##Considerazione sul repository per il pulsante {: #button-repo} 
 
@@ -147,12 +147,12 @@ Con il file manifest, puoi specificare:
     <li>Un nome applicazioni univoco.</li>  
     <li>Declared services: un'estensione manifest, che crea o cerca i servizi obbligatori o facoltativi
 di cui è prevista la configurazione prima che venga distribuita l'applicazione, come ad esempio
-il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei piani, delle etichette e dei servizi  {{site.data.keyword.Bluemix_notm}} idonei utilizzando l'<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Si apre in una nuova scheda o finestra)">interfaccia riga di comando CF<img class="image" src="../icons/launch-glyph.svg" alt="icona link esterno"/></a> per eseguire il comando <code>cf marketplace</code> oppure sfogliando il  <a class="xref" href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store" target="_blank" title="(Si apre in una nuova scheda o finestra)"> catalogo {{site.data.keyword.Bluemix_notm}} <img class="image" src="../icons/launch-glyph.svg" alt="icona link esterno"/></a>. 
+il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei piani, delle etichette e dei servizi  {{site.data.keyword.Bluemix_notm}} idonei utilizzando l'<a class="xref" href="https://github.com/cloudfoundry/cli/releases" target="_blank" title="(Si apre in una nuova scheda o finestra)">interfaccia riga di comando CF<img class="image" src="../icons/launch-glyph.svg" alt="Icona link esterno"/></a> per eseguire il comando <code>cf marketplace</code> oppure sfogliando il  <a class="xref" href="https://console.ng.bluemix.net/?ssoLogout=true&cm_mmc=developerWorks-_-dWdevcenter-_-devops-services-_-lp#/store" target="_blank" title="(Si apre in una nuova scheda o finestra)"> catalogo {{site.data.keyword.Bluemix_notm}} <img class="image" src="../icons/launch-glyph.svg" alt="Icona link esterno"/></a>. 
     
         
     <strong>Nota:</strong> è un'estensione IBM del formato manifest Cloud Foundry standard. Questa estensione potrebbe essere modificata in una futura release man mano che la funzione si evolve e viene migliorata.
 	
-	<a class="xref" href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank" title="(Si apre in una nuova scheda o finestra)">Impara come creare un file <code>manifest.yml</code> <img class="image" src="../icons/launch-glyph.svg" alt="icona link esterno"/></a>.  
+	<a class="xref" href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#minimal-manifest" target="_blank" title="(Si apre in una nuova scheda o finestra)">Impara come creare un file <code>manifest.yml</code> <img class="image" src="../icons/launch-glyph.svg" alt="Icona link esterno"/></a>.  
 <pre class="codeblock">
 	---
     #Template manifest.yml
@@ -188,10 +188,10 @@ il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei p
 	
 	Builder supportati: 
 	    <ul>
-		<li> <a class="xref" href="http://ant.apache.org/manual/using.html" target="_blank" title="(Si apre in una nuova scheda o finestra)">Ant:<img class="image" src="../icons/launch-glyph.svg" alt="icona link esterno"/></a> /<code>build.xml</code>, che crea l'output nella cartella <code>./output/</code> </li>
-		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank" title="(Si apre in una nuova scheda o finestra)">Gradle:<img class="image" src="../icons/launch-glyph.svg" alt="icona link esterno"/></a> <code>/build.gradle</code>, che crea l'output in <code>. </code> </li>
-		<li> <a class="xref" href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank" title="(Si apre in una nuova scheda o finestra)">Grunt:<img class="image" src="../icons/launch-glyph.svg" alt="icona link esterno"/></a> <code>/Gruntfile.js</code>, che crea l'output in <code>. </code> </li>
-		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank" title="(Si apre in una nuova scheda o finestra)">Maven:<img class="image" src="../icons/launch-glyph.svg" alt="icona link esterno"/></a> <code>/pom.xml</code>, che crea l'output nella cartella <code>./target/</code></li>
+		<li> <a class="xref" href="http://ant.apache.org/manual/using.html" target="_blank" title="(Si apre in una nuova scheda o finestra)">Ant:<img class="image" src="../icons/launch-glyph.svg" alt="Icona link esterno"/></a> /<code>build.xml</code>, che crea l'output nella cartella <code>./output/</code> </li>
+		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle" target="_blank" title="(Si apre in una nuova scheda o finestra)">Gradle:<img class="image" src="../icons/launch-glyph.svg" alt="Icona link esterno"/></a> <code>/build.gradle</code>, che crea l'output in <code>. </code> </li>
+		<li> <a class="xref" href="http://gruntjs.com/getting-started#the-gruntfile" target="_blank" title="(Si apre in una nuova scheda o finestra)">Grunt:<img class="image" src="../icons/launch-glyph.svg" alt="Icona link esterno"/></a> <code>/Gruntfile.js</code>, che crea l'output in <code>. </code> </li>
+		<li> <a class="xref" href="http://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#maven" target="_blank" title="(Si apre in una nuova scheda o finestra)">Maven:<img class="image" src="../icons/launch-glyph.svg" alt="Icona link esterno"/></a> <code>/pom.xml</code>, che crea l'output nella cartella <code>./target/</code></li>
 	   </ul>
 	</li>	
 	<li>Per configurare la pipeline per il progetto, includi un file <code>pipeline.yml</code> in una directory <code>.bluemix</code>. Puoi creare un file <code>pipeline.yml</code> manualmente oppure puoi generarne uno da un progetto DevOps Services esistente. Per creare un file pipeline.yml da un progetto {{site.data.keyword.jazzhub_short}} e aggiungerlo al tuo repository, completa questa procedura. 
@@ -207,8 +207,8 @@ il servizio di memorizzazione nella cache dei dati. Puoi trovare un elenco dei p
 	<li>Per distribuire un'applicazione in un contenitore tramite <strong>IBM Containers</strong>, devi includere Dockerfile nella directory root del repository e un file <code>pipeline.yml</code> in una directory <code>.bluemix</code>. 
 	<ul>
 	    <li>Il Dockerfile agisce come una sorta di script di build per l'applicazione. Se un Dockerfile viene rilevato nel repository, l'applicazione viene integrata automaticamente in un'immagine prima che venga distribuita in un contenitore. Se la stessa applicazione deve essere creata prima di essere integrata in un'immagine, includi uno script di build per l'applicazione insieme a un Dockerfile, come descritto in precedenza.</li>
-	    <li> Per saperne di più sulla creazione dei Dockerfile, <a class="xref" href="https://docs.docker.com/reference/builder/" target="_blank" title="(Si apre in una nuova scheda o finestra)">vedi la documentazione di Docker<img class="image" src="../icons/launch-glyph.svg" alt="icona link esterno"/></a>. </li>
-	    <li>Puoi creare un file <code>pipeline.yml</code> manualmente oppure puoi generarne uno da un progetto DevOps Services esistente. Per creare manualmente un file <code>pipeline.yml</code> specifico per i contenitori, <a class="xref" href="https://github.com/Puquios/" target="_blank" title="(Si apre in una nuova scheda o finestra)">vedi gli esempi in GitHub<img class="image" src="../icons/launch-glyph.svg" alt="icona link esterno"/></a>. </li>
+	    <li> Per saperne di più sulla creazione dei Dockerfile, <a class="xref" href="https://docs.docker.com/reference/builder/" target="_blank" title="(Si apre in una nuova scheda o finestra)">vedi la documentazione di Docker<img class="image" src="../icons/launch-glyph.svg" alt="Icona link esterno"/></a>. </li>
+	    <li>Puoi creare un file <code>pipeline.yml</code> manualmente oppure puoi generarne uno da un progetto DevOps Services esistente. Per creare manualmente un file <code>pipeline.yml</code> specifico per i contenitori, <a class="xref" href="https://github.com/Puquios/" target="_blank" title="(Si apre in una nuova scheda o finestra)">vedi gli esempi in GitHub<img class="image" src="../icons/launch-glyph.svg" alt="Icona link esterno"/></a>. </li>
         </ul>
 
  </li>
