@@ -53,7 +53,7 @@ Puoi riesaminare i log delle applicazioni in esecuzione in {{site.data.keyword.B
 Per visualizzare i tuoi log delle applicazioni, segui queste istruzioni.
 1. Seleziona un'applicazione in esecuzione.
 2. Fai clic su **Log**. Nella vista **Log**, puoi visualizzare i log dalla tua applicazione in esecuzione.
-4. Fai clic sul pulsante **Vista avanzata**. **Vista avanzata** mostra una vista più dettagliata dei log utilizzando Kibana, uno strumento di visualizzazione che utilizza i log e i dati con data/ora per creare le visualizzazioni personalizzate. Per ulteriori informazioni sull'utilizzo della vista avanzata, vedi [Kibana User Guide ![icona link esterno](../../../icons/launch-glyph.svg "External link icon")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}.
+4. Fai clic sul pulsante **Vista avanzata**. **Vista avanzata** mostra una vista più dettagliata dei log utilizzando Kibana, uno strumento di visualizzazione che utilizza i log e i dati con data/ora per creare le visualizzazioni personalizzate. Per ulteriori informazioni sull'utilizzo della vista avanzata, vedi [Kibana User Guide ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}.
 
 Successivamente, puoi personalizzare un dashboard Kibana. Per ulteriori informazioni, vedi [Analisi log avanzata con Kibana](../kibana4/analyzing_logs_Kibana.html#analyzing_logs_Kibana).
 

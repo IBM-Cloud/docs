@@ -32,4 +32,4 @@ Cloud Foundry.
 
     <a class="xref" href="http://bluemix.net" target="_blank" title="(si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_starter-code.svg" alt="Scarica codice di starter" /> </a>
 
-Per istruzioni dettagliate relative alla distribuzione delle applicazioni, vedi [Distribuzione di applicazioni con IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg)](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}.
+Per istruzioni dettagliate relative alla distribuzione delle applicazioni, vedi [Distribuzione di applicazioni con IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../icons/launch-glyph.svg)](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools){: new_window}.

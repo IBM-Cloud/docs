@@ -1,0 +1,9 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc}
+Informazioni particolari e termini di utilizzo
+  
+    {: .navgroup id="reference"}
+    notices.md
+    {: .navgroup-end}

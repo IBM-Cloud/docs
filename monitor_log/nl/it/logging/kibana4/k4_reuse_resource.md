@@ -262,7 +262,7 @@ Completa la seguente procedura per copiare una visualizzazione utilizzata per l'
     
     * SPACEID: sostituisci questa variabile con l'ID spazio del nuovo spazio.
     * NAME: sostituisci questa variabile se vuoi modificare il nome della visualizzazione nel nuovo spazio.
-    * SEARCHID: sostituisci questa variabile con l'ID ricerca nel nuovo spazio. Questo è l'ID della query che viene utilizzata per filtrare i dati visualizzati attraverso la visualizzazione. 
+    * SEARCHID: sostituisci questa variabile con l'ID ricerca nel nuovo spazio. Questo è l'ID della query che viene utilizzata per filtrare i dati visualizzati attraverso la visualizzazione.
     
        <pre class="pre">
     [

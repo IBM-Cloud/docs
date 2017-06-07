@@ -148,7 +148,7 @@ Debug di {{site.data.keyword.Bluemix_notm}} Live
 include le seguenti funzioni:
 
 * Controllo del runtime dell'applicazione
-* Debug utilizzando [node-inspector![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://github.com/node-inspector/node-inspector){:new_window}
+* Debug utilizzando [node-inspector![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://github.com/node-inspector/node-inspector){:new_window}
 * Accesso shell
 
 ###Controllo del runtime dell'applicazione {: #app-runtime}
@@ -652,4 +652,4 @@ bl stop –l “launchConfigurations/mylaunchconfig.launch”
 ## Link correlati
 {: #general}
 
-* [Eclipse tools for Bluemix![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}
+* [Eclipse tools for Bluemix![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.ng.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html){:new_window}

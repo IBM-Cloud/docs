@@ -18,7 +18,7 @@ lastupdated: "2017-04-17"
 Se si verificano problemi con {{site.data.keyword.Bluemix}}, puoi utilizzare queste informazioni sulla risoluzione dei problemi per identificare e risolvere il problema.
 
 Accedi alla console {{site.data.keyword.Bluemix_notm}}:
-* Per visualizzare lo stato dei runtime e dei servizi in esecuzione, fai clic su **Supporto > Stato** nella barra dei menu. 
+* Per visualizzare lo stato dei runtime e dei servizi in esecuzione, fai clic su **Supporto > Stato** nella barra dei menu.
 * Per visualizzare le notifiche, fai clic su **Gestisci > Account > Notifiche** nella barra dei menu. 
 * Per eseguire ricerche nella documentazione e nei forum di Stack Overflow o developerWorks (dW) Answers per trovare delle risposte o per contattare il supporto, fai clic su **Supporto > Trova risposte** nella barra dei menu.
 

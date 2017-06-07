@@ -303,7 +303,7 @@ OpenWhisk supporta l'esecuzione di azioni Python utilizzando due versioni di run
 
 ### Azioni Python 3
 
-Le azioni Python 3 sono eseguite utilizzando Python 3.6.1. Per utilzizare questo runtime, specifica il parametro CLI `wsk` `--kind python:3` durante la creazione o l'aggiornamento di un'azione.
+Le azioni Python 3 sono eseguite utilizzando Python 3.6.1. Per utilizzare questo runtime, specifica il parametro CLI `wsk` `--kind python:3` durante la creazione o l'aggiornamento di un'azione.
 Le azioni Python possono anche utilizzare i seguenti pacchetti, in aggiunta alle librerie standard Python 3.6.
 
 - aiohttp v1.3.3
@@ -407,68 +407,8 @@ Puoi includere qualsiasi procedura di compilazione o dipendenza modificando il `
 
 ## API REST
 {: #openwhisk_ref_restapi}
+Informazioni relative all'API REST sono disponibili [qui](openwhisk_rest_api.html)
 
-Tutte le capacità nel sistema sono disponibili mediante un'API REST. Sono presenti endpoint di raccolta e di entità per le azioni, i trigger, le regole, i pacchetti, le attivazioni e gli spazi dei nomi.
-
-Gli endpoint di raccolta sono:
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
-
-`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span>` è il nome host dell'API OpenWhisk (ad esempio, openwhisk.ng.bluemix.net, 172.17.0.1 e così via).
-
-Per `{namespace}`, il carattere `_` può essere utilizzato per specificare lo *spazio dei nomi
-predefinito* dell'utente (ovvero, l'indirizzo di posta elettronica).
-
-Puoi effettuare una richiesta GET sugli endpoint di raccolta per richiamare un elenco di entità della raccolta.
-
-Sono presenti endpoint per ciascun tipo di entità:
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
-
-
-Gli endpoint di spazio dei nomi e attivazione supportano solo le richieste GET. Gli endpoint di azioni, trigger, regole e pacchetti supportano le richieste GET, PUT e DELETE. Gli endpoint di azioni, trigger e regole supportano inoltre le richieste POST, che vengono utilizzate per richiamare azioni e trigger e per abilitare o disabilitare le regole. Per informazioni dettagliate, consulta la [Guida di riferimento API](https://console.{DomainName}/apidocs/98).
-
-Tutte le API sono protette tramite autenticazione base HTTP. Le credenziali per l'autenticazione di base si trovano nella proprietà `AUTH` all'interno del file `~/.wskprops`, delimitate da due punti. Puoi richiamarle anche nella [procedura di configurazione della CLI](./index.html#openwhisk_start_configure_cli).
-
-Di seguito viene riportato un esempio che utilizza il comando cURL per richiamare l'elenco di tutti i pacchetti nello spazio dei nomi `whisk.system`:
-
-```
-curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
-```
-{: pre}
-```
-[
-  {
-    "name": "slack",
-    "binding": false,
-    "publish": true,
-    "annotations": [
-      {
-        "key": "description",
-        "value": "Package that contains actions to interact with the Slack messaging service"
-      }
-    ],
-    "version": "0.0.9",
-    "namespace": "whisk.system"
-  },
-  ...
-]
-```
-{: screen}
-
-L'API OpenWhisk supporta chiamate di richiesta-risposta dai client web. OpenWhisk risponde alle richieste `OPTIONS` con le intestazione Cross-Origin Resource Sharing. Al momento, sono consentite tutte le origini (ad esempio, Access-Control-Allow-Origin è "`*`") e Access-Control-Allow-Headers produce Authorization e Content-Type.
-
-**Attenzione:** poiché OpenWhisk supporta al momento una sola chiave per account, non si consiglia di utilizzare CORS al di là di semplici esperimenti. La tua chiave dovrebbe essere incorporata nel codice lato client, il che la rende visibile al pubblico. Utilizzare con cautela.
 
 ## Limiti di sistema
 {: #openwhisk_syslimits}

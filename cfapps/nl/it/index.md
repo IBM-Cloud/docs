@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-04-18"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -42,7 +42,7 @@ per scegliere uno starter, specificare un nome e selezionare come desideri esegu
 la codifica.
   4. Dopo che hai terminato l'esperienza guidata, fai clic su **VISUALIZZA PANORAMICA DELL'APPLICAZIONE**. La Panoramica per la tua applicazione è visualizzata nel Dashboard.
   5. Puoi aggiungere un servizio alla tua applicazione facendo clic su **AGGIUNGI UN SERVIZIO O UNA API** nella Panoramica dell'applicazione nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Cerca e seleziona i servizi dal catalogo o scorri alla fine del catalogo e fai clic su Servizi sperimentali **{{site.data.keyword.Bluemix_notm}}** per visualizzare i servizi sperimentali. In alternativa, puoi utilizzare l'interfaccia riga di comando cf. Vedi Opzioni per gestire le applicazioni.
-  6. Nella Panoramica dell'applicazione, fai clic su Aggiungi Git per salvare la tua origine applicazione in un repository Git e creare un progetto ospitato da Git. Puoi anche distribuire l'applicazione da {{site.data.keyword.jazzhub_title}}.
+  6. Nella pagina Panoramica dell'applicazione, scorri alla scheda "Fornitura continua" e fai clic su **Abilita**. L'origine della tua applicazione verrà salvata in un repository in Repository Git e tracciamento del problema, che è ospitato su Bluemix. Viene creata inoltre una toolchain aperta che utilizza quel repository e una delivery pipeline per sviluppare e distribuire la tua applicazione. Per ulteriori informazioni sul servizio Continuous Delivery, vedi <a href="https://console.ng.bluemix.net/docs/services/ContinuousDelivery/index.html#cd_getting_started">Introduzione a Continuous Delivery</a>.
 
 **Nota:** se un servizio che associ mediante bind a un'applicazione si arresta in modo anomalo, l'applicazione potrebbe interrompere l'esecuzione o provocare errori. {{site.data.keyword.Bluemix_notm}} non
 riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi. Valuta una codifica della tua applicazione per identificare e ripristinare interruzioni, eccezioni ed errori
@@ -59,9 +59,8 @@ servizi ad essa, oltre che per crearla e distribuirla:
 <dd>Usa l'interfaccia utente {{site.data.keyword.Bluemix_notm}} per
 creare la tua applicazione selezionando, tra l'altro, quali servizi e runtime combinare per risolvere i
 tuoi problemi di business.</dd>
-<dt>{{site.data.keyword.jazzhub_title}}</dt>
-<dd>Usa {{site.data.keyword.jazzhub_title}} per
-creare un'applicazione nel cloud e distribuirla a {{site.data.keyword.Bluemix_notm}}. I servizi forniti da {{site.data.keyword.jazzhub_title}} includono Track & Plan e Delivery Pipeline, elencati nel Catalogo {{site.data.keyword.Bluemix_notm}} sotto DevOps, oltre a Web IDE e Git Hosting.</dd>
+<dt>{{site.data.keyword.contdelivery_full}}</dt>
+<dd>Utilizza {{site.data.keyword.contdelivery_short}} per automatizzare le build, i test di unità, le distribuzioni e altro. Modifica e trasmetti il codice tramite la IDE basata sul web avanzato. Crea le toolchain per abilitare integrazioni dello strumento che supportano le attività di sviluppo, distribuzione e funzionamento. Il servizio Continuous Delivery include Delivery Pipeline, Eclipse Orion Web IDE e Git Repos and Issue Tracking. Per ulteriori informazioni, vedi <a href="https://console.ng.bluemix.net/docs/services/ContinuousDelivery/index.html#cd_getting_started">Introduzione a Continuous Delivery</a>.</dd>
 </dl>
 
 ## Suggerimenti

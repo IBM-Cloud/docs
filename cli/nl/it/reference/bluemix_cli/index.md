@@ -16,7 +16,7 @@ lastupdated: "2017-03-08"
 # Introduzione alla CLI {{site.data.keyword.Bluemix_notm}}
 {: #getting-started}
 
-La CLI {{site.data.keyword.Bluemix_notm}} ti offre una modalità unificata per interagire con le tue applicazioni, contenitori, infrastrutture e altri servizi utilizzando un'interfaccia riga di comando.  
+La CLI {{site.data.keyword.Bluemix_notm}} ti offre una modalità unificata per interagire con le tue applicazioni, contenitori, infrastrutture e altri servizi utilizzando un'interfaccia riga di comando. 
 
 **Restrizione**: la CLI {{site.data.keyword.Bluemix_notm}} non è supportata da Cygwin, per cui non utilizzare la CLI {{site.data.keyword.Bluemix_notm}} nella finestra della riga di comando di Cygwin.
 
@@ -71,7 +71,7 @@ La CLI {{site.data.keyword.Bluemix_notm}} supporta un framework di estensione pl
 
 Puoi installare un plug-in dal repository, in locale o da un server remoto. {{site.data.keyword.Bluemix_notm}} dispone di repository che ospitano i plugin della CLI {{site.data.keyword.Bluemix_notm}} e plugin della CLI Cloud Foundry:
 
-   * [Repository di plug-in CLI {{site.data.keyword.Bluemix_notm}} ](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![icona link esterno](../../../icons/launch-glyph.svg), che contiene i plug-in per la CLI {{site.data.keyword.Bluemix_notm}}.
+   * [Repository di plug-in CLI {{site.data.keyword.Bluemix_notm}} ](http://clis.ng.bluemix.net/ui/repository.html#bluemix-plugins){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg), che contiene i plug-in per la CLI {{site.data.keyword.Bluemix_notm}}.
 
 Per l'installazione da un repository, attieniti alla seguente procedura:
 

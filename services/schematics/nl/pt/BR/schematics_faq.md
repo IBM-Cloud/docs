@@ -16,7 +16,8 @@ lastupdated: "2017-05-16"
 # Perguntas Mais Frequentes
 {: #faq}
 
-Respostas a perguntas comuns sobre o serviço {{site.data.keyword.bplong}}.{:shortdesc}
+Respostas a perguntas comuns sobre o serviço {{site.data.keyword.bplong}}.
+{:shortdesc}
 
 ## Quais versões do Terraform são suportadas?
 {: #terraform-versions}

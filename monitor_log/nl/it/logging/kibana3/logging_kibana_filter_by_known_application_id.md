@@ -30,7 +30,7 @@ Completa le seguenti attività per visualizzare e filtrare i log della tua appli
 
 2. Accedi al dashboard Kibana per la tua applicazione. Fai clic su **Vista avanzata** ![link Vista avanzata](images/logging_advanced_view.jpg "Advanced view link"). Viene visualizzato il dashboard Kibana.
 
-3. Nel dashboard Kibana, fai clic sull'icona **Cartella** ![icona Cartella](images/logging_folder.jpg "Folder icon") per visualizzare un menu che elenca tutti i dashboard recenti.  
+3. Nel dashboard Kibana, fai clic sull'icona **Cartella** ![icona Cartella](images/logging_folder.jpg "Folder icon") per visualizzare un menu che elenca tutti i dashboard recenti. 
 
     **Nota:** oltre ai dashboard che hai salvato per nome, il menu elenca i dashboard senza nome in base al seguente formato: *ALCH_TENANT_ID_application_id*. 
 

@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-03"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -50,6 +50,7 @@ Non tutti i servizi sono disponibili per l'acquisto in ogni regione {{site.data.
 |{{site.data.keyword.composeForRethinkDB}} | Ospitato a Dallas,USA | Ospitato a Londra,UK | Ospitato a Sydney,AU | Ospitato a Francoforte, DE |
 |{{site.data.keyword.composeForScyllaDB}} | Ospitato a Dallas,USA | Ospitato a Londra,UK | Ospitato a Sydney,AU | Ospitato a Francoforte, DE |
 |{{site.data.keyword.conceptinsightsshort}}	| Ospitato a Dallas,USA	| Ospitato a Dallas,USA	| Ospitato a Dallas,USA | Non disponibile nella regione |
+|{{site.data.keyword.contdelivery_short}} | Ospitato a Dallas,USA | Non disponibile nella regione | Non disponibile nella regione | Non disponibile nella regione |
 |{{site.data.keyword.dashdbshort}} | Ospitato a Dallas,USA | Ospitato a Londra,UK | Ospitato a Sydney | Ospitato a Francoforte, DE |
 |{{site.data.keyword.datacshort}}	| Ospitato a Dallas,USA	| Ospitato a Londra,UK	| Ospitato a Sydney,AU | Non disponibile nella regione |
 |{{site.data.keyword.DB2OnCloud_short}}	| Ospitato a Dallas,USA	| Ospitato a Dallas,USA	| Ospitato a Sydney,AU | Non disponibile nella regione |

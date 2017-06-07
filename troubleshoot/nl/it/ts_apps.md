@@ -133,7 +133,7 @@ Per controllare la versione di Java eseguita da {{site.data.keyword.eclipsetools
 
 Se il JVM workbench JVM è IBM JVM 7 o 8 o una versione precedente di Oracle JVM 8, completa la seguente procedura per passare a Oracle JVM 8:
 
-  1. Scarica e installa Oracle JVM 8; per i dettagli consulta [Java SE Downloads ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}.
+  1. Scarica e installa Oracle JVM 8; per i dettagli consulta [Java SE Downloads ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}.
   2. Riavvia Eclipse.
   3. Controlla se la proprietà `eclipse.vm` punta alla tua nuova installazione di Oracle JVM 8.
 
@@ -192,7 +192,7 @@ Assicurati di aver creato uno spazio nella tua organizzazione corrente. Per crea
   * Nell'interfaccia riga di comando cf, immetti `cf create-space <nome_spazio>
 -o <nome_organizzazione>`.
 
-Riprova. Se visualizzi di nuovo questo messaggio, vai alla pagina sugli [stati Bluemix ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} per controllare se un servizio o un componente ha qualche problema.
+Riprova. Se visualizzi di nuovo questo messaggio, vai alla pagina sugli [stati Bluemix ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/bluemixstatus){: new_window} per controllare se un servizio o un componente ha qualche problema.
 
 
 ## Impossibile effettuare le azioni richieste
@@ -232,7 +232,7 @@ Invece di impostare come hardcoded le credenziali nella tua applicazione, utiliz
 ```
 process.env.VCAP_SERVICES
 ```
-Per ulteriori informazioni sui comandi che puoi utilizzare in altri linguaggi di programmazione, vedi [Java ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
+Per ulteriori informazioni sui comandi che puoi utilizzare in altri linguaggi di programmazione, vedi [Java ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
 
 
 ## Impossibile distribuire le applicazioni utilizzando IBM Eclipse Tools for Bluemix
@@ -277,7 +277,7 @@ Altre cause meno comuni di un errore Bad Gateway sono
 interruzioni ISP (Internet Service Provider), configurazioni firewall non valide ed
 errori della cache del browser.
 
-Se sospetti che un servizio {{site.data.keyword.Bluemix_notm}} sia inattivo, controlla prima la pagina [Stato di {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window}. Una soluzione potrebbe essere quella di utilizzare il servizio in un'altra regione {{site.data.keyword.Bluemix_notm}}. Informazioni dettagliate sono disponibili in [Utilizzo dei servizi in un'altra regione ![icona link esterno](../icons/launch-glyph.svg "External link icon")](/docs/services/reqnsi.html#cross_region_service){: new_window}. Se lo stato del servizio è normale,
+Se sospetti che un servizio {{site.data.keyword.Bluemix_notm}} sia inattivo, controlla prima la pagina [Stato di {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/bluemixstatus){: new_window}. Una soluzione potrebbe essere quella di utilizzare il servizio in un'altra regione {{site.data.keyword.Bluemix_notm}}. Informazioni dettagliate sono disponibili in [Utilizzo dei servizi in un'altra regione ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/reqnsi.html#cross_region_service){: new_window}. Se lo stato del servizio è normale,
 prova le seguenti operazioni per risolvere il problema:
 {: tsResolve}
 
@@ -289,7 +289,7 @@ pulsante di aggiornamento. Se questa operazione non funziona, cancella la cache 
 dispositivi può cancellare i diversi errori che portano all'errore 502.
   * Attendi e riprova in seguito. In alcuni casi, possono verificarsi dei
 problemi temporanei con il tuo provider dei servizi Internet o con i servizi {{site.data.keyword.Bluemix_notm}}. Puoi attendere finché i problemi non vengono risolti.
-  * Se il problema persiste, contatta il supporto {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [Come contattare il supporto {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg "External link icon")](/docs/support/index.html#contacting-bluemix-support){: new_window}.
+  * Se il problema persiste, contatta il supporto {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [Come contattare il supporto {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/support/index.html#contacting-bluemix-support){: new_window}.
 
 ## Quota disco superata
 {: #ts_disk_quota}
@@ -340,7 +340,7 @@ Il servizio IBM {{site.data.keyword.mobilepushshort}} utilizza il servizio GCM (
 mobili. Nelle regioni in cui le applicazioni Android non possono raggiungere il servizio GCM, tali applicazioni non potranno ricevere {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
-Come soluzione temporanea, utilizza servizi di terze parti che non si basano sul servizio GCM, ad esempio [Pushy ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://pushy.me){: new_window}, [igetui ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://www.getui.com/){: new_window} e [jpush ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://www.jpush.cn/){: new_window}.
+Come soluzione temporanea, utilizza servizi di terze parti che non si basano sul servizio GCM, ad esempio [Pushy ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://pushy.me){: new_window}, [igetui ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://www.getui.com/){: new_window} e [jpush ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
 
 
@@ -437,7 +437,7 @@ accounts](/docs/pricing/index.html#pay-accounts).
 
     Se utilizzi la console {{site.data.keyword.Bluemix_notm}}, completa la seguente procedura:
 
-    1. Nel dashboard Applicazioni, seleziona la tua applicazione.Viene visualizzata la pagina dei dettagli dell'applicazione.
+    1. Nel dashboard Applicazioni, seleziona la tua applicazione. Viene visualizzata la pagina dei dettagli dell'applicazione.
     2. Nel riquadro runtime, puoi ridurre il limite massimo di memoria o il numero di istanze dell'applicazione, o entrambi, per tua applicazione.
 
     Se utilizzi l'interfaccia riga di comando cf, completa la seguente procedura:
@@ -496,35 +496,6 @@ le variabili che hai specificato nella
 procedura guidata vengono
 salvate nel file manifest della tua applicazione. La prossima volta che apri la procedura guidata, le variabili vengono visualizzate automaticamente.
 {: tsResolve}
-
-
-## Le icone di Bluemix Live Sync non vengono visualizzate
-{: #ts_llz_lkb_3r}
-
-Hai creato un'applicazione ma le icone IBM Bluemix Live Sync non sono visualizzate nel Web IDE.
-
-Quando modifichi un'applicazione Node.js iin Web IDE, le icone di le icone di live edit, riavvio rapido e debug di {{site.data.keyword.Bluemix_notm}} non vengono visualizzate.
-{: tsSymptoms}
-
-Le icone non sono disponibili nei seguenti casi:
-{: tsCauses}
-
-  * Il file `manifest.yml` non è memorizzato al livello superiore del tuo progetto.
-  * La tua applicazione è memorizzata in una sottodirectory anziché al livello superiore del tuo progetto, ma il percorso della sottodirectory non è specificato nel file `manifest.yml`.
-  * L'applicazione non contiene un file `package.json`.
-
-Utilizza uno dei seguenti metodi:
-{: tsResolve}
-
-  * Se il file `manifest.yml` non è memorizzato al livello superiore del tuo progetto, memorizzalo lì.
-  * Se la tua applicazione è memorizzata in una sottodirectory, specifica il percorso
-di tale sottodirectory nel file `manifest.yml`.
-  ```
-   path: percorso_alla_applicazione
-   ```
-  * Crea un file `package.json` che si trovi nella stessa
-directory della tua applicazione.
-
 
 <!-- begin STAGING ONLY -->
 
@@ -701,7 +672,7 @@ Utilizza uno dei seguenti metodi in base alla causa del problema:
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-    * Utilizza il file [package.json ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://docs.npmjs.com/json){: new_window}. Per esempio:
+    * Utilizza il file [package.json ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://docs.npmjs.com/json){: new_window}. Per esempio:
 	    ```
 		{
       ...
@@ -741,7 +712,7 @@ Utilizza uno dei seguenti metodi in base alla causa del problema:
  }
     ```
 
-Per ulteriori suggerimenti relativi alle applicazioni Node.js, vedi [Tips for Node.js Applications](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "icona link esterno"){: new_window}.
+Per ulteriori suggerimenti relativi alle applicazioni Node.js, vedi [Tips for Node.js Applications](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"){: new_window}.
 
 
 ## Sono presenti degli errori di configurazione nel file `server.xml` dopo aver importato un'applicazione Bluemix Liberty in Eclipse
@@ -771,26 +742,24 @@ Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}} utilizz
 Questo problema potrebbe verificarsi se gli script, ad esempio lo script di rilevamento, lo script di compilazione e lo script di rilascio, non sono eseguibili.
 {: tsCauses}
 
-Puoi utilizzare il comando [git update ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://git-scm.com/docs/git-update-index){: new_window} per modificare l'autorizzazione di ciascuno script in eseguibile. Ad esempio, puoi immettere `git update --chmod=+x script.sh`.
+Puoi utilizzare il comando [git update ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://git-scm.com/docs/git-update-index){: new_window} per modificare l'autorizzazione di ciascuno script in eseguibile. Ad esempio, puoi immettere `git update --chmod=+x script.sh`.
 {: tsResolve}
 
+## Impossibile distribuire un'applicazione da Delivery Pipeline in IBM Bluemix Continuous Delivery
+ {: #ts_devops_to_bm}
 
-## Impossibile distribuire un'applicazione da DevOps Services a Bluemix
-{: #ts_devops_to_bm}
+ Potresti non riuscire a distribuire la tua applicazione utilizzando {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}} se il file `manifest.yml` non è presente nella tua applicazione.
 
-Potresti non riuscire a distribuire la tua applicazione da IBM Bluemix DevOps Services a {{site.data.keyword.Bluemix_notm}} se il file `manifest.yml` non è presente nella tua applicazione.
+ Quando distribuisci un'applicazione utilizzando {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}}, potresti visualizzare il messaggio di errore `Unable to detect a supported application type`.
+ {: tsSymptoms}
 
-Quando distribuisci un'applicazione da DevOps Services a {{site.data.keyword.Bluemix_notm}}, potrebbe essere visualizzato un messaggio di errore `Unable to detect a supported application type`.
-{: tsSymptoms}
+ Questo problema potrebbe verificarsi perché la pipeline richiede un file `manifest.yml` per distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}}.
+ {: tsCauses}
 
-Questo problema potrebbe verificarsi perché DevOps Services richiede un file `manifest.yml` per distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}}.
-{: tsCauses}
-
-Per risolvere questo problema, devi creare un file `manifest.yml`. Per ulteriori informazioni su come creare un file `manifest.yml`,
+ Per risolvere questo problema, devi creare un file `manifest.yml`. Per ulteriori informazioni su come creare un file `manifest.yml`,
 vedi [Manifest
 dell'applicazione](/docs/manageapps/depapps.html#appmanifest).
-{: tsResolve}
-
+ {: tsResolve}
 
 ## Impossibile distribuire le applicazioni Meteor
 {: #ts_meteor}
@@ -817,179 +786,3 @@ l'opzione **-b**. Per esempio:
     ```
 	cf push nomeapplicazione -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
-
-## Il pulsante Distribuisci a Bluemix non distribuisce un'applicazione
-{: #ts_deploybutton}
-
-Se fai clic sul pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}} e rilevi che il repository Git non viene clonato o che l'applicazione non viene distribuita, prova i metodi di risoluzione per i seguenti problemi.
-  * [Impossibile creare il progetto Bluemix DevOps Services](#ts_project-cant-be-created)
-  * [Il repository Git non viene trovato e non può essere clonato in DevOps Services](#ts_repo-not-found)
-  * [Il repository Git viene clonato in DevOps Services, ma l'applicazione non viene distribuita a {{site.data.keyword.Bluemix_notm}}](#ts_repo-cloned-app-not-deployed)
-
-Per ulteriori informazioni su come creare il pulsante, vedi Creazione di un pulsante Distribuisci a {{site.data.keyword.Bluemix_notm}}.
-
-### Impossibile creare il progetto Bluemix DevOps Services
-{: #ts_project-cant-be-created}
-
-Se non è possibile creare il progetto DevOps Services, il tuo account IBM {{site.data.keyword.Bluemix_notm}} potrebbe essere scaduto.
-
-Fai clic sul pulsante **Distribuisci a Bluemix**, ma il passo "Creazione del progetto" non viene completato correttamente.
-{: tsSymptoms}
-
-Il tuo account {{site.data.keyword.Bluemix_notm}}
-potrebbe essere scaduto.
-{: tsCauses}
-
-Utilizza uno dei seguenti metodi:
-{: tsResolve}
-
-  * Accedi a {{site.data.keyword.Bluemix_notm}} e
-aggiorna le informazioni del tuo account.
-  * Fai di nuovo clic sul pulsante **Distribuisci a Bluemix**.
-
-### Il repository Git non viene trovato e non può essere clonato in DevOps Services
-{: #ts_repo-not-found}
-
-Se noti che il repository Git non viene clonato, potrebbe esistere un problema con il repository o con il frammento di pulsante.
-
-Fai clic sul pulsante **Distribuisci a Bluemix**, ma il repository Git non viene trovato e non può essere clonato in DevOps Services. Il passo "Clonazione del repository" non viene completato correttamente. Di conseguenza, l'applicazione non può essere distribuita a {{site.data.keyword.Bluemix_notm}}.
-{: tsSymptoms}
-
-Questo problema si verifica per i seguenti motivi:
-{: tsCauses}
-
-  * Il repository Git potrebbe non esistere o non essere accessibile.
-  * Potrebbe esistere un problema nell'HTML o markdown per il frammento di pulsante.
-  * Potrebbe esistere un problema in cui dei caratteri speciali, parametri di query
-o frammenti nell'URL impediscono di accedere correttamente al repository
-Git.
-
-Utilizza uno dei seguenti metodi:
-{: tsResolve}
-
-  * Verifica che il repository Git esista e sia accessibile pubblicamente
-e che l'URL sia corretto.
-  * Verifica che il frammento non contenga errori di HTML o markdown.
-  * Se caratteri speciali, parametri di query o frammenti causano problemi con l'URL del repository Git, codifica l'URL nel frammento di pulsante.
-
-### Il repository Git viene clonato in DevOps Services, ma l'applicazione non viene distribuita a Bluemix
-{: #ts_repo-cloned-app-not-deployed}
-
-Se l'applicazione non viene distribuita, potrebbero esistere dei problemi con il codice nel repository.
-
-Fai clic sul pulsante **Distribuisci a Bluemix** e il repository Git viene clonato in DevOps Services, ma l'applicazione non viene distribuita a {{site.data.keyword.Bluemix_notm}}. Il passo "Distribuzione a Bluemix" non viene completato correttamente.
-{: tsSymptoms}
-
-Questo problema si verifica per i seguenti motivi:
-{: tsCauses}  
-
-  * Nel tuo spazio {{site.data.keyword.Bluemix_notm}} potrebbe non esserci spazio sufficiente
-per distribuire un'applicazione.
-  * Un servizio richiesto potrebbe non essere dichiarato nel file `manifest.yml`.
-  * Un servizio richiesto potrebbe essere dichiarato nel file `manifest.yml`,
-ma il servizio si trova già nello spazio di destinazione.
-  * Potrebbe esistere un problema con il codice nel repository.
-
-Per diagnosticare il problema, riesamina i log di creazione e distribuzione
-dalla distribuzione:
-  1. Se il passo "Distribuzione a Bluemix" non viene completato correttamente, fai clic sul link nel precedente passo di "Configurazione della pipeline" per aprire Delivery Pipeline.
-  2. Identifica la fase di creazione o distribuzione non riuscita.
-  3. Nella fase non riuscita, fai clic su **Visualizza log e cronologia**.
-  4. Individua il messaggio di errore.
-
-Utilizza uno dei seguenti metodi:
-{: tsResolve}
-
-  * Se il messaggio di errore indica che nello spazio {{site.data.keyword.Bluemix_notm}}  non vi è spazio sufficiente per distribuire l'applicazione, scegli un altro spazio.
-  * Se il messaggio di errore indica che un servizio richiesto non è dichiarato nel file `manifest.yml`, comunica al proprietario del repository che è necessario aggiungere il servizio richiesto.
-  * Se il messaggio di errore indica che un servizio richiesto esiste
-già nello spazio di destinazione, seleziona un spazio differente da utilizzare.
-  * Se il messaggio di errore indica che esiste un problema con la creazione,
-correggi eventuali problemi con il codice che impediscono la creazione
-dell'applicazione. Per verificare che il codice non contenga alcun problema, crea il codice utilizzando i comandi Git:
-    1. Clona il repository Git:
-    ```
-    git clone <URL_repository_git>
-    ```
-    2. Apri la directory dell'applicazione:
-	```
-	cd <nomeapplicazione>
-	```
-    3. Crea l'applicazione:
-	```
-	<appname> create
-	```
-    4. Se necessario, fornisci componenti aggiuntivi.
-    5. Aggiungi eventuali variabili di configurazione richieste.
-    6. Distribuisci il codice:
-	```
-	git push <nomeapplicazione> master
-	```
-    7. Verifica che l'applicazione venga creata correttamente.
-    8. Se necessario, esegui il comando di post distribuzione:
-	```
-	<appname> run
-	```
-    9. Apri l'applicazione e verifica che funzioni correttamente:
-	```
-	<appname> open
-	```
-
-## Impossibile distribuire un'applicazione dalla barra di esecuzione
-{: #ts_runbar}
-
-La distribuzione non riesce indicando uno stato "non sincronizzato" di colore giallo.
-{: tsSymptoms}
-
-L'applicazione che stai distribuendo ha la stessa rotta di un'altra applicazione in esecuzione.
-{: tsCauses}
-
-Modifica la rotta in modo che sia univoca.
-{: tsResolve}
-
-## Impossibile trovare la barra di esecuzione in Eclipse
-{: #ts_runbar-missing}
-
-Se non visualizzi la barra di esecuzione in Eclipse Orion {{site.data.keyword.webide}}, si è verificato uno dei seguenti problemi:
-{: tsCauses}
-
-* {{site.data.keyword.jazzhub}} non riesce a identificare il tuo progetto.
-*  {{site.data.keyword.jazzhub_short}} non riesce a determinare in quale cartella si trova la tua applicazione.
-* {{site.data.keyword.jazzhub_short}} non riconosce la tua applicazione come applicazione Node.js.
-
-Utilizza uno dei seguenti metodi come appropriato:
-{: tsResolve}  
-
-* Se {{site.data.keyword.jazzhub}} non riesce a identificare il tuo progetto, crea un file `project.json` nella directory root del tuo progetto.
-* Se {{site.data.keyword.jazzhub_short}} non riesce a determinare in quale cartella si trova la tua applicazione, e la tua applicazione non si trova nella directory root del progetto, utilizza uno dei seguenti passi:
-  * Crea un file `manifest.yml` nella directory root del tuo progetto, quindi modifica il file in modo che punti alla posizione della tua applicazione. Ad esempio, `path: path_to_your_app`.
-  * Sposta la tua applicazione nella directory root del progetto.
-* Se {{site.data.keyword.jazzhub_short}} non riconosce la tua applicazione come applicazione Node.js, crea un file `package.json` nella cartella dell'applicazione del tuo progetto.
-
-## L'hook GitHub non funziona
-{: #ts_githubhookisntworking}
-
-Hai configurato il tuo progetto GitHub per creare link dell'elemento di lavoro quando esegui il push di commit e i link non funzionano nel modo previsto
-{: tsSymptoms}
-
-Utilizza la seguente procedura per individuare il problema:
-{: tsResolve}
-
-1. Nel repository GitHub, fai clic su **Impostazioni**.
-   ![Link alle impostazioni GitHub](images/github_settings.png)
-
-2. Fai clic su **Webhook & servizi**.
-   ![Link ai servizi e webhook GitHub](images/github_webhook.png)
-
-3. Per visualizzare il messaggio, passa il puntatore del mouse sull'icona dello stato {{site.data.keyword.jazzhub}}.
-   ![Messaggio di errore sull'hook del servizio](images/github_error.png)
-
-4. Risolvi il problema in base al messaggio GitHub.
-
-5. Per verificare che la correzione abbia funzionato, esegui il commit e il push di un'altra modifica o vai alla pagina del servizio per {{site.data.keyword.jazzhub_short}} e fai clic su **Verifica servizio**.
-   ![Pulsante Verifica servizio GitHub](images/github_test.png)
-
-6. Verifica che non vi siano errori controllando di nuovo l'icona dello stato.
-   ![Icona dello stato senza errori](images/githubResolved_small.png)
-
-Per ulteriori informazioni, vedi [Setting up GitHub for Bluemix DevOps Services projects ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/docs/githubhooks/){: new_window}.

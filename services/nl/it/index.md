@@ -32,8 +32,8 @@ open source.	|Il supporto per i servizi di community viene fornito dalla Communi
 ed è a una fase di sviluppo di prova. Un servizio beta può aiutare i team di sviluppo
 e di marketing a valutare la qualità dei servizi prima di
 renderli generalmente disponibili.	|Viene fornito supporto per i problemi considerati come un difetto in un servizio beta fornito da IBM, tuttavia  IBM non è tenuto a fornire una correzione. Inoltre,
-laddove applicabile, al ticket del problema verrà assegnata una severità 3 o 4. Per informazioni sulla severità dei ticket, vedi [Come contattare il supporto ![icona link esterno](../icons/launch-glyph.svg "External link icon")](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
-{: caption="Tabella 1. Informazioni sul supporto dei servizi Bluemix" caption-side="top"}
+laddove applicabile, al ticket del problema verrà assegnata una severità 3 o 4. Per informazioni sulla severità dei ticket, vedi [Come contattare il supporto ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/support/index.html#contacting-bluemix-support){: new_window}.|
+{: caption="Tabella 1. Informazioni sul supporto dei servizi {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
 
 ##Servizi sperimentali

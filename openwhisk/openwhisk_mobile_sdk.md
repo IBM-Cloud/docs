@@ -1,3 +1,15 @@
+---
+
+copyright:
+  years: 2016, 2017
+lastupdated: "2017-06-06"
+
+---
+
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:pre: .pre}
 
 # Using the OpenWhisk mobile SDK
 
@@ -13,18 +25,19 @@ You can install the mobile SDK by using CocoaPods, Carthage, or from the source 
 
 The OpenWhisk SDK for mobile is available for public distribution through CocoaPods. Assuming CocoaPods is installed, put the following lines into a file called 'Podfile' inside the starter app project directory.
 
-```
+```ruby
 install! 'cocoapods', :deterministic_uuids => false
 use_frameworks!
 
 target 'MyApp' do
-     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
+     pod 'OpenWhisk', :git => 'https://github.com/apache/incubator-openwhisk-client-swift.git', :tag => '0.2.2'
 end
 
 target 'MyApp WatchKit Extension' do 
-     pod 'OpenWhisk', :git => 'https://github.com/openwhisk/openwhisk-client-swift.git', :tag => '0.2.2'
+     pod 'OpenWhisk', :git => 'https://github.com/apache/incubator-openwhisk-client-swift.git', :tag => '0.2.2'
 end
 ```
+{: codeblock}
 
 From the command line, type `pod install`. This command installs the SDK for an iOS app with a watchOS extension.  Use the workspace file CocoaPods creates for your app to open the project in Xcode. 
 
@@ -32,7 +45,7 @@ After installation, open your project workspace.  You may get the following warn
 `Use Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
 This is caused if Cocoapods does not update the Swift version in the Pods project.  To fix, select the Pods project and the OpenWhisk target.  Go to Build Settings and change the setting `Use Legacy Swift Language Version` to `no`. Alternatively, you can add the following post installation instructions at the end of you Podfile:
 
-```
+```ruby
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
@@ -41,6 +54,7 @@ post_install do |installer|
   end
 end
 ```
+{: codeblock}
 
 ### Installing by using Carthage
 
@@ -48,6 +62,7 @@ Create a file in your app's project directory and name it 'Cartfile'. Put the fo
 ```
 github "openwhisk/openwhisk-client-swift.git" ~> 0.2.2 # Or latest version
 ```
+{: pre}
 
 From the command line, type `carthage update --platform ios`. Carthage downloads and builds the SDK, creates a directory called Carthage in your app's project directory, and puts an OpenWhisk.framework file inside Carthage/build/iOS.
 
@@ -55,7 +70,7 @@ You must then add OpenWhisk.framework to the embedded frameworks in your Xcode p
 
 ### Installing from source code
 
-Source code is available at https://github.com/openwhisk/openwhisk-client-swift.git.
+Source code is available at https://github.com/apache/incubator-openwhisk-client-swift.git.
 Open the project by using the `OpenWhisk.xcodeproj` using Xcode.
 The project contains two schemes: "OpenWhisk" (targeted for iOS) and "OpenWhiskWatch" (targeted for watchOS 2).
 Build the project for the targets that you need and add the resulting frameworks to your app (usually in ~/Library/Developer/Xcode/DerivedData/your app name).
@@ -66,15 +81,17 @@ You can use the OpenWhisk CLI to download example code that embeds the OpenWhisk
 
 To install the starter app example, enter the following command:
 ```
-$ wsk sdk install iOS
+wsk sdk install iOS
 ```
+{: pre}
 
 This command downloads a compressed file that contains the starter app. Inside the project directory is a podfile. 
 
 To install the SDK, enter the following command:
 ```
-$ pod install
+pod install
 ```
+{: pre}
 
 ## Getting started with the SDK
 
@@ -86,15 +103,18 @@ For example, use the following example code to create a credentials object:
 let credentialsConfiguration = WhiskCredentials(accessKey: "myKey", accessToken: "myToken")
 let whisk = Whisk(credentials: credentialsConfiguration!)
 ```
+{: pre}
 
 In previous example, you pass in the `myKey` and `myToken` that you get from OpenWhisk. You can retrieve the key and token with the following CLI command:
 
 ```
-$ wsk property get --auth
+wsk property get --auth
 ```
+{: pre}
 ```
 whisk auth        kkkkkkkk-kkkk-kkkk-kkkk-kkkkkkkkkkkk:tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
 ```
+{: pre}
 
 The strings before the colon is your key, and the string after the colon is your token.
 
@@ -122,6 +142,7 @@ do {
     print("Error \(error)")
 }
 ```
+{: codeblock}
 
 In the previous example, you invoke the `helloConsole` action by using the default namespace.
 
@@ -145,6 +166,7 @@ do {
     print("Error \(error)")
 }
 ```
+{: codeblock}
 
 In the previous example, you are firing a trigger that is called `locationChanged`.
 
@@ -167,12 +189,14 @@ do {
     print("Error \(error)")
 }
 ```
+{: codeblock}
 
 By default, the SDK returns only the activation ID and any result that is produced by the invoked action. To get metadata of the entire response object, which includes the HTTP response status code, use the following setting:
 
 ```swift
 whisk.verboseReplies = true
 ```
+{: codeblock}
 
 ## Configuring the SDK
 
@@ -181,6 +205,7 @@ You can configure the SDK to work with different installations of OpenWhisk by u
 ```swift
 whisk.baseURL = "http://localhost:8080"
 ```
+{: codeblock}
 
 In this example, you use an installation that is running at localhost:8080. If you do not specify the baseUrl, the mobile SDK uses the instance that is running at https://openwhisk.ng.bluemix.net.
 
@@ -198,6 +223,7 @@ let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessi
 // set the SDK to use this urlSession instead of the default shared one
 whisk.urlSession = session
 ```
+{: codeblock}
 
 ### Support for qualified names
 
@@ -243,3 +269,4 @@ do {
    print("Error setting up button \(error)")
 }
 ```
+{: codeblock}
