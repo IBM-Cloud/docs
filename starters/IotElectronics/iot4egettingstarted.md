@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-07"
+lastupdated: "2017-06-07"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -40,4 +40,5 @@ See what you can do with {{site.data.keyword.iotelectronics}}.
 - [Explore the starter app](iot4ecreatingappliances.html) to experience how an enterprise manufacturer can monitor appliances that are connected to the {{site.data.keyword.iot_short_notm}}.
 - [Explore the sample mobile app](iotelectronics_config_mobile.html) to experience how appliance owners can register and interact with their appliances.
 - [Explore and manage data](iotelectronics_dashboard.html) for your registered appliances in {{site.data.keyword.iot_short_notm}}.
+- [Customize sample Node-RED flows](iotelectronics_nodeRED_overview.html) to send notifications, validate appliance registration, send commands to your appliances, and more.
 - [Explore the APIs ![External link icon](../../icons/launch-glyph.svg)](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html){:new_window} to see how you can customize and expand your own {{site.data.keyword.iotelectronics}} apps.
