@@ -36,7 +36,7 @@ Lo stato del tuo account {{site.data.keyword.Bluemix_notm}} diventa inattivo qua
 {: tsCauses}
 
 
-Per riattivare il tuo account, contatta il [Supporto {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixsupport.com){: new_window}. Includi le seguenti informazioni nell'e-mail:
+Per riattivare il tuo account, contatta il [Supporto {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/bluemixsupport.com){: new_window}. Includi le seguenti informazioni nell'e-mail:
 {: tsResolve}
 
   * L'ID IBM utilizzato per accedere a {{site.data.keyword.Bluemix_notm}}.
@@ -75,7 +75,7 @@ Questo problema potrebbe verificarsi se assegni la stessa rotta URL per le diver
 
 Ad esempio, esegui il push dell'applicazione myApp1 a {{site.data.keyword.Bluemix_notm}} e imposta il dominio su "mynewapp.stage1.mybluemix.net". Esegui quindi il push di un'altra applicazione myApp2 allo stesso spazio e imposta una delle sue rotte URL su "mynewapp.stage1.mybluemix.net". La rotta è ora associata a entrambe le applicazioni.
 
-Questo è il funzionamento supportato da {{site.data.keyword.Bluemix_notm}} e puoi utilizzare questa procedura affinché non si verifichino tempi di inattività per l'aggiornamento della tua applicazione. Per ulteriori informazioni, vedi [Using Blue-Green Deployment to Reduce Downtime and Risk ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/devguide/deploy-apps/blue-green.html){: new_window}.
+Questo è il funzionamento supportato da {{site.data.keyword.Bluemix_notm}} e puoi utilizzare questa procedura affinché non si verifichino tempi di inattività per l'aggiornamento della tua applicazione. Per ulteriori informazioni, vedi [Using Blue-Green Deployment to Reduce Downtime and Risk ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://docs.cloudfoundry.org/devguide/deploy-apps/blue-green.html){: new_window}.
 {: tsResolve}
   
 
