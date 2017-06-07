@@ -28,7 +28,7 @@ distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}.
 La distribuzione di un'applicazione in {{site.data.keyword.Bluemix_notm}} include
 due fasi, la preparazione dell'applicazione e il suo avvio.
 
-Cloud Foundry supporta Diego, che è la nuova architettura di runtime predefinita che fornisce una serie di funzionalità che migliorano l'esperienza di sviluppo dell'applicazione per l'hosting e la messa a punto delle piattaforme cloud. Questo aggiornamento dell'architettura fornisce una miglioramento nelle prestazioni e operazioni generale della piattaforma Cloud Foundry. La nuova architettura fornisce supporto per diverse tecnologie del contenitore dell'applicazione, inclusi Garden e Windows, un pacchetto SSH che permette l'accesso diretto al contenitore dell'applicazione, e altre modifiche innovative. Per ulteriori informazioni sul recente aggiornamento dell'architettura, consulta [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![icona link esterno](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}.
+Cloud Foundry supporta Diego, che è la nuova architettura di runtime predefinita che fornisce una serie di funzionalità che migliorano l'esperienza di sviluppo dell'applicazione per l'hosting e la messa a punto delle piattaforme cloud. Questo aggiornamento dell'architettura fornisce una miglioramento nelle prestazioni e operazioni generale della piattaforma Cloud Foundry. La nuova architettura fornisce supporto per diverse tecnologie del contenitore dell'applicazione, inclusi Garden e Windows, un pacchetto SSH che permette l'accesso diretto al contenitore dell'applicazione, e altre modifiche innovative. Per ulteriori informazioni sul recente aggiornamento dell'architettura, consulta [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![Icona link esterno](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}.
 
 
 Tutte le nuove applicazioni che crei saranno eseguite su Diego e devi migrare le tue applicazioni esistenti in esecuzione sui DEA alla nuova architettura Diego.
@@ -63,7 +63,7 @@ Come la tua applicazione viene aggiornata dall'architettura DEA a Diego, potrest
 
 Completa la seguente procedura per migrare la tua applicazione a Diego:
 
- 1.  Installa [cf CLI ![icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} e il [Diego-Enabler CLI Plugin ![icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}.
+ 1.  Installa [cf CLI ![Icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} e il [Diego-Enabler CLI Plugin ![Icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}.
  2. Controlla l'[elenco di problemi noti](depapps.html#knownissues).
  3. Configura l'indicatore Diego per modificare la tua applicazione per l'esecuzione su Diego:
   ```
@@ -89,11 +89,11 @@ I seguenti sono i problemi noti che potresti dover risolvere durante la migrazio
   * Il comando **cf files** non è più supportato. Viene sostituito dal comando **cf ssh**. Per ulteriori dettagli sul comando **cf ssh**, consulta [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Alcune applicazioni potrebbero utilizzare un gran numero di descrittori file (inode). Se riscontri questo problema, devi aumentare la quota disco della tua applicazione con il comando `cf scale APP_NAME [-k DISK]`.
 
-Per l'elenco completo dei problemi noti, consulta la pagina della documentazione Cloud Foundry per [Migrating to Diego ![icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}.
+Per l'elenco completo dei problemi noti, consulta la pagina della documentazione Cloud Foundry per [Migrating to Diego ![Icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}.
 
 Finché il supporto per la vecchia architettura DEA non viene rimosso, puoi eseguire il seguente comando per tornare ai DEA: `cf disable-diego APPLICATION_NAME`. Puoi inoltre ancora distribuire nuove applicazioni all'architettura DEA finché non viene rimosso il supporto:
 
-**Nota**: devi avere sia la [cf CLI ![icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} che il [Diego-Enabler CLI Plugin ![icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window} installati per utilizzare il comando `disable-diego`.
+**Nota**: devi avere sia la [cf CLI ![Icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} che il [Diego-Enabler CLI Plugin ![Icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window} installati per utilizzare il comando `disable-diego`.
 
 1. Distribuisci l'applicazione senza avviarla:
 ```
@@ -122,7 +122,7 @@ saranno disponibili per l'uso.
 Se i log della tua applicazione non sono più disponibili e i comandi **cf ssh**, **cf scp** o **cf files** non possono essere più utilizzati per visualizzare la causa degli errori di preparazione nel contenitore dell'applicaizone, puoi invece utilizzare il comando **cf logs**. Il comando **cf
 logs** utilizza l'aggregatore di log di Cloud Foundry per
 raccogliere i dettagli dei tuoi log di applicazione e di sistema e potrai vedere
-ciò che è presente nel buffer all'interno dell'aggregatore di log. Per ulteriori informazioni sull'aggregatore di log, vedi [Logging in Cloud Foundry ![icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.
+ciò che è presente nel buffer all'interno dell'aggregatore di log. Per ulteriori informazioni sull'aggregatore di log, vedi [Logging in Cloud Foundry ![Icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.
 
 **Nota:** la dimensione del buffer è limitata. Se un'applicazione viene eseguita per tanto tempo e non viene riavviata, è possibile quando immetti il comando `cf logs appname --recent` i log non vengano visualizzati perché il buffer dei log potrebbe essere stato cancellato. Pertanto, per eseguire il debug degli errori di preparazione di un'applicazione di grandi dimensioni, puoi immettere il comando `cf logs appname` in una riga di comando diversa dall'interfaccia riga di comando cf per tracciare i log quando distribuisci l'applicazione.
 
@@ -214,7 +214,7 @@ Perché
   }
   ```
 
-  Per ulteriori informazioni sul file `package.json`, consulta [package.json ![icona link esterno](../icons/launch-glyph.svg)](https://www.npmjs.org/doc/files/package.json.html){:new_window}.
+  Per ulteriori informazioni sul file `package.json`, consulta [package.json ![Icona link esterno](../icons/launch-glyph.svg)](https://www.npmjs.org/doc/files/package.json.html){:new_window}.
 
   * Per distribuire applicazioni PHP, Ruby o Python a {{site.data.keyword.Bluemix_notm}},
 utilizza il seguente comando dalla directory che contiene l'origine della tua applicazione:
@@ -325,7 +325,7 @@ un'applicazione {{site.data.keyword.Bluemix_notm}} in esecuzione
 utilizzando il comando **cf env** oppure dall'interfaccia utente
 {{site.data.keyword.Bluemix_notm}}:
 
-  * Variabili definite dall'utente specifiche di un'applicazione. Per informazioni su come aggiungere una variabile definita dall'utente a un'applicazione, vedi [Aggiunta di variabili di ambiente definite dall'utente ![icona link esterno](../icons/launch-glyph.svg)](#ud_env){:new_window}.
+  * Variabili definite dall'utente specifiche di un'applicazione. Per informazioni su come aggiungere una variabile definita dall'utente a un'applicazione, vedi [Aggiunta di variabili di ambiente definite dall'utente ![Icona link esterno](../icons/launch-glyph.svg)](#ud_env){:new_window}.
 
   * La variabile VCAP_SERVICES, che contiene informazioni di connessione per accedere a un'istanza di servizio. Se la tua applicazione è associata a più servizi, la variabile VCAP_SERVICES include le informazioni di connessione per ciascuna istanza di servizio. Ad
 esempio:
@@ -468,7 +468,7 @@ associato all'applicazione distribuita. Ad
 </dl>
 
 Le variabili definite dai pacchetti di build sono diverse
-per ogni pacchetto di build. Consulta [Buildpacks ![icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} per eventuali altri pacchetti di build compatibili.
+per ogni pacchetto di build. Consulta [Buildpacks ![Icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} per eventuali altri pacchetti di build compatibili.
 
 <ul>
     <li>Le seguenti variabili sono definite dal pacchetto di build Liberty:
@@ -509,7 +509,7 @@ if (process.env.VCAP_SERVICES) {
 }
 ```
 
-Per ulteriori informazioni sulle singole variabili di ambiente, vedi [Cloud Foundry Environment Variables ![icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}.
+Per ulteriori informazioni sulle singole variabili di ambiente, vedi [Cloud Foundry Environment Variables ![Icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}.
 
 ## Personalizzazione delle distribuzioni dell'applicazione
 {: #customize_dep}
@@ -615,7 +615,7 @@ tmp/
 ## Link correlati
 {: #general}
 
-* [Deploying with Application Manifests ![icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
-* [CF Manifest Generator ![icona link esterno](../icons/launch-glyph.svg)](http://cfmanigen.mybluemix.net/){:new_window}
-* [Getting Started with cf v6 ![icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}
+* [Deploying with Application Manifests ![Icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
+* [CF Manifest Generator ![Icona link esterno](../icons/launch-glyph.svg)](http://cfmanigen.mybluemix.net/){:new_window}
+* [Getting Started with cf v6 ![Icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}
 * [Getting Started with IBM Continuous Delivery Pipeline for Bluemix](/docs/services/DeliveryPipeline/index.html#getstartwithCD)
