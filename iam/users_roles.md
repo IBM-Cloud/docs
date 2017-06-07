@@ -82,15 +82,16 @@ You can assign and manage policies if you have the proper role. The following ta
 
 Roles are a collection of actions; the actions that are mapped to these roles are service specific. Refer to the documentation for the selected service for additional details about what types of actions each role allows.
 
-In addition to the descriptions of the roles provided in the console, the following table provides examples of some of the tasks that users assigned each role might be able to do depending on the selected service. 
+In addition to the descriptions of the roles provided in the console, the following table provides examples of some of the tasks that users assigned each role might be able to do for the IBM Container service.  
 
+**Note**: The operator role is not available for the IBM Container service at this time. The following example is included for informational purposes only.
 
 | Role | Description of actions | Example actions|
 |:-----------------|:-----------------|:-----------------|
-| Viewer | Performs actions that do not change state; read only actions | <ul><li>List devices</li><li>Read storage object</li><li>Run queries</li><li>Run searches</li></ul>|
-| Editor | Performs actions that modify the state and create or delete sub-resources |<ul><li>Create or delete virtual machines</li><li>Attach storage</li><li>Reboot</li><li>Start or stop</li><li>Rename</li></ul> |
-| Operator | Performs actions required to configure and operate resources. |<ul><li>Update configuration</li><li>Backup and restore</li><li>Start or stop VMs</li><li>View logs</li></ul> |
-| Administrator | Performs all actions, including the ability to manage access control |<ul><li>Invite users</li><li>Create or delete virtual machines</li><li>Update user access policies</li><li>List devices</li><li>Attach storage</li><li>Reboot</li><li>Start or stop</li><li>Rename</li><li>Back up and restore</li></ul>|
+| Viewer | Performs actions that do not change state; read only actions | <ul><li>List clusters</li><li>View details for a cluster</li></ul>|
+| Editor | Performs actions that modify the state and create or delete sub-resources |<ul><li>Add or remove worker nodes</li><li>Reboot or reload worker nodes</li><li>Bind a service to a cluster</li></ul> |
+| Operator | Performs actions required to configure and operate resources. | <ul><li>Add or remove worker nodes</li><li>Reboot or reload worker nodes</li><li>Bind a service to a cluster</li></ul> |
+| Administrator | Performs all actions, including the ability to manage access control |<ul><li>Remove a cluster</li><li>Create a cluster</li><li>Update user access policies</li><li>All actions a viewer and editor can perform</li></ul>|
 {: caption="Table 5. Administrative tasks for managing Identity and access enabled services policies" caption-side="top"}
 
 ## Infrastructure permissions
