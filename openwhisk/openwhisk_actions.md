@@ -711,12 +711,15 @@ To avoid the cold-start delay, you can compile your Swift file into a binary and
   docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   ```
   {: pre}
-  This puts you in a bash shell within the Docker container. Execute the following commands within it:
+  This puts you in a bash shell within the Docker container. 
+
+  Execute the following commands within it:
 - Install zip for convenience, to package the binary
   ```
   apt-get install -y zip
   ```
   {: pre}
+
 - Copy the source code and prepare to build it
   ```
   cp /owexec/hello.swift /swift3Action/spm-build/main.swift 
@@ -730,11 +733,13 @@ To avoid the cold-start delay, you can compile your Swift file into a binary and
   echo '_run_main(mainFunction:main)' >> /swift3Action/spm-build/main.swift
   ```
   {: pre}
+
 - Build and link
   ```
   /swift3Action/spm-build/swiftbuildandlink.sh
   ```
   {: pre}
+
 - Create the zip archive
   ```
   cd /swift3Action/spm-build
@@ -743,17 +748,21 @@ To avoid the cold-start delay, you can compile your Swift file into a binary and
   ```
   zip /owexec/hello.zip .build/release/Action
   ```
+  {: pre}
+
 - Exit the Docker container
   ```
   exit
   ```
   {: pre}
   This has created hello.zip in the same directory as hello.swift. 
--Upload it to OpenWhisk with the action name helloSwifty:
+
+- Upload it to OpenWhisk with the action name helloSwifty:
   ```
   wsk action update helloSwiftly hello.zip --kind swift:3
   ```
   {: pre}
+
 - To check how much faster it is, run 
   ```
   wsk action invoke helloSwiftly --blocking
