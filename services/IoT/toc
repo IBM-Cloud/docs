@@ -18,12 +18,13 @@ Internet of Things Platform
     {: .topicgroup}
     Beta features
         information_management/im_index.md
-        information_management/im_index_split.md
         information_management/im_index_scenario.md
         information_management/im_index_scenario_thing.md
         gateways/gateway-access-control.md
         gateways/gw_intro_api.md
         devices/device_cmd_api.md
+        [Custom domains (Beta)](reference/security/set_up_certificates.html#custom_domains)
+        [Drill-down reporting (Beta)](reference/security/RM_security.html#drill_down)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
