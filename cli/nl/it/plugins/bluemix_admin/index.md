@@ -21,7 +21,7 @@ Puoi gestire gli ambienti {{site.data.keyword.Bluemix_notm}} locale o {{site.dat
 esempio, puoi aggiungere utenti da un registro LDAP. Se stai cercando informazioni sulla gestione del tuo account {{site.data.keyword.Bluemix_notm}} pubblico, vedi [Amministrazione](/docs/admin/adminpublic.html#administer).
 
 Prima di iniziare, installa l'interfaccia riga di comando cf. Il plug-in {{site.data.keyword.Bluemix_notm}} Admin
-CLI richiede cf versione 6.11.2 o successive. [Scarica interfaccia riga di comando Cloud Foundry ![icona link esterno](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
+CLI richiede cf versione 6.11.2 o successive. [Scarica interfaccia riga di comando Cloud Foundry ![Icona link esterno](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
 **Limitazione:** l'interfaccia riga di comando Cloud Foundry non
 è supportata da Cygwin. Utilizza l'interfaccia riga di comando Cloud Foundry
@@ -841,9 +841,9 @@ Per gestire i gruppi di sicurezza dell'applicazione (ASG), devi essere un ammini
 
 I gruppi ASG funzionano come firewall virtuali che controllano il traffico dall'applicazione presente nel tuo ambiente {{site.data.keyword.Bluemix_notm}}. Ogni ASG è costituito da un elenco di regole che consentono un traffico specifico e la comunicazione da e verso la rete esterna. Puoi associare uno o più ASG a una specifica serie di gruppi di sicurezza, ad esempio a una serie di gruppi utilizzata per applicare l'accesso globale, oppure associarli agli spazi all'interno di un'organizzazione nel tuo ambiente {{site.data.keyword.Bluemix_notm}}.
 
-{{site.data.keyword.Bluemix_notm}} è inizialmente impostato con limitazioni a tutti gli accessi alla rete esterna. Due gruppi di sicurezza creati da IBM, `public_networks` e `dns`, abilitano l'accesso globale alla rete esterna quando esegui il bind di tali gruppi alla serie di gruppi di sicurezza Cloud Foundry predefinita. Le due serie di gruppi di sicurezza in Cloud Foundry utilizzate per applicare l'accesso globale sono **Preparazione predefinita** ed **Esecuzione predefinita**. Queste serie di gruppi applicano le regole per consentire il traffico a tutte le applicazioni in esecuzione o a tutte le applicazioni in fase di preparazione. Se non vuoi eseguire il bind a queste due serie di gruppi di sicurezza, puoi annullare il bind alle serie di gruppi Cloud Foundry e quindi associare il gruppo a uno specifico spazio. Per ulteriori informazioni, vedi [Binding Application Security Groups ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+{{site.data.keyword.Bluemix_notm}} è inizialmente impostato con limitazioni a tutti gli accessi alla rete esterna. Due gruppi di sicurezza creati da IBM, `public_networks` e `dns`, abilitano l'accesso globale alla rete esterna quando esegui il bind di tali gruppi alla serie di gruppi di sicurezza Cloud Foundry predefinita. Le due serie di gruppi di sicurezza in Cloud Foundry utilizzate per applicare l'accesso globale sono **Preparazione predefinita** ed **Esecuzione predefinita**. Queste serie di gruppi applicano le regole per consentire il traffico a tutte le applicazioni in esecuzione o a tutte le applicazioni in fase di preparazione. Se non vuoi eseguire il bind a queste due serie di gruppi di sicurezza, puoi annullare il bind alle serie di gruppi Cloud Foundry e quindi associare il gruppo a uno specifico spazio. Per ulteriori informazioni, vedi [Binding Application Security Groups ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
-**Nota**: i seguenti comandi che consentono di gestire i gruppi di sicurezza, si basano su Cloud Foundry versione 1.6. Per ulteriori informazioni, inclusi i campi obbligatori e facoltativi, consulta la sezione Cloud Foundry relativa a [Creating Application Security Groups ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
+**Nota**: i seguenti comandi che consentono di gestire i gruppi di sicurezza, si basano su Cloud Foundry versione 1.6. Per ulteriori informazioni, inclusi i campi obbligatori e facoltativi, consulta la sezione Cloud Foundry relativa a [Creating Application Security Groups ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
 ### Elenco dei gruppi di sicurezza
 {: #clilissecgro}
@@ -877,7 +877,7 @@ cf ba security-groups <gruppo-di-sicurezza>
 ### Creazione di un gruppo di sicurezza
 {: #clicreasecgro}
 
-Per ulteriori informazioni sulla creazione di gruppi di sicurezza e sulle regole che definiscono il traffico in uscita, vedi [Creating Application Security Groups ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
+Per ulteriori informazioni sulla creazione di gruppi di sicurezza e sulle regole che definiscono il traffico in uscita, vedi [Creating Application Security Groups ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#creating-groups){: new_window}.
 
 Per creare un gruppo di sicurezza, utilizza il seguente comando:
 
@@ -940,7 +940,7 @@ cf ba delete-security-group <gruppo-di-sicurezza>
 ### Esecuzione del bind dei gruppi di sicurezza
 {: #clibindsecgro}
 
-Per ulteriori informazioni sull'esecuzione del bind dei gruppi di sicurezza, vedi [Binding Application Security Groups ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
+Per ulteriori informazioni sull'esecuzione del bind dei gruppi di sicurezza, vedi [Binding Application Security Groups ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#binding-groups){: new_window}.
 
 * Per eseguire il bind alla serie di gruppi di sicurezza Preparazione predefinita, utilizza il seguente comando:
 
@@ -994,7 +994,7 @@ cf ba bind-security-group <gruppo-di-sicurezza> <organizzazione> <spazio>
 ### Annullamento del bind dei gruppi di sicurezza
 {: #cliunbindsecgro}
 
-Per ulteriori informazioni sull'annullamento del bind dei gruppi di sicurezza, vedi [Unbinding Application Security Groups ![icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
+Per ulteriori informazioni sull'annullamento del bind dei gruppi di sicurezza, vedi [Unbinding Application Security Groups ![Icona link esterno](../../../icons/launch-glyph.svg)](https://docs.cloudfoundry.org/adminguide/app-sec-groups.html#unbinding-groups){: new_window}.
 
 * Per annullare il bind dalla serie di gruppi di sicurezza Preparazione predefinita, utilizza il seguente comando:
 

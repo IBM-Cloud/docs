@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-05-04"
 
 
 ---
@@ -23,7 +23,7 @@ lastupdated: "2017-01-12"
 L'interfaccia di riga comando (CLI) Cloud Foundry (cf) fornisce una serie di comandi per gestire le tue applicazioni. Le seguenti informazioni elencano i comandi cf più utilizzati per la gestione delle applicazioni e includono i relativi nomi, opzioni, utilizzo, prerequisiti, descrizioni ed esempi. Per elencare tutti i comandi cf e le informazioni di guida associate, utilizza `cf help`. Utilizza `cf nome_comando -h` per visualizzare delle informazioni di guida dettagliate per uno specifico comando.
 {: shortdesc}
 
-**Nota**: se la tua rete contiene un server proxy HTTP tra l'host che esegue i comandi cf e l'endpoint API Cloud Foundry, devi specificare il nome host o l'indirizzo IP del server proxy impostando la variabile di ambiente `HTTP_PROXY`. Per i dettagli,vedi [Utilizzo della CLI cf con un server proxy HTTP ![icona link esterno](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
+**Nota**: se la tua rete contiene un server proxy HTTP tra l'host che esegue i comandi cf e l'endpoint API Cloud Foundry, devi specificare il nome host o l'indirizzo IP del server proxy impostando la variabile di ambiente `HTTP_PROXY`. Per i dettagli,vedi [Utilizzo della CLI cf con un server proxy HTTP ![Icona link esterno](../../../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/http-proxy.html){: new_window}.
 
 
 ## Indice dei comandi della CLI Cloud Foundry
@@ -393,9 +393,9 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Ti fa accedere a {{site.data.keyword.Bluemix_notm}}.
+Ti fa accedere a {{site.data.keyword.Bluemix_notm}}. Se stai eseguendo l'accesso con un [ID federato](/docs/admin/account.html#signup), devi utilizzare il parametro SSO (single sign-on) per accedere. 
 
-**Nota**: se stai eseguendo l'accesso con un [ID federato](/docs/admin/account.html#signup), devi utilizzare il parametro SSO (single sign-on) per accedere.
+**Nota**: per accedere, puoi anche utilizzare una chiave API della piattaforma {{site.data.keyword.Bluemix_notm}}. Utilizza il nome utente `apikey` e il valore della tua chiave API come password. Per ulteriori informazioni sulla creazione di una chiave API, vedi [Gestione delle chiavi API](/docs/iam/apikeys.html).
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -449,6 +449,12 @@ cf login -a https://api.ng.bluemix.net -u nome_utente
 Accedi a {{site.data.keyword.Bluemix_notm}} con un endpoint definito di `https://api.ng.bluemix.net`, un nome utente `nome_utente`, nessuna password specificata per motivi di sicurezza e un nome organizzazione `nome_organizzazione` e nome spazio `nome_spazio`.
 ```
 cf login -a https://api.ng.bluemix.net -u nome_utente -o nome_organizzazione -s nome_spazio
+```
+{: codeblock}
+
+Accedi a {{site.data.keyword.Bluemix_notm}} con un endpoint definito di `https://api.ng.bluemix.net` utilizzando una chiave API. Utilizza `apikey` come nome utente e la chiave API reale come password.
+```
+cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
 ```
 {: codeblock}
 
@@ -828,7 +834,7 @@ cf -v
 ## Link correlati
 {: #general}
 
-* [Scarica CLI Cloud Foundry ![icona link esterno](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
+* [Scarica CLI Cloud Foundry ![Icona link esterno](../../../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases)
 {: new_window}
-* [Quick Reference Card - cf commands ![icona link esterno](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
+* [Quick Reference Card - cf commands ![Icona link esterno](../../../icons/launch-glyph.svg)](ftp://public.dhe.ibm.com/cloud/bluemix/cf_cli_refcard.html)
 {: new_window}
