@@ -13,7 +13,7 @@ lastupdated: "2016-09-06"
 # 監視及記載 Cloud Foundry 應用程式
 {: #monitoring_logging_cloud_foundry_apps}
 
-{{site.data.keyword.Bluemix_notm}} 具有內建記載機制，可產生執行中應用程式的日誌檔。在日誌中，您可以檢視針對應用程式所產生的錯誤、警告及參考訊息。此外，您也可以配置應用程式將日誌訊息寫入日誌檔中。如需日誌格式及日誌檢視方式的相關資訊，請參閱 [Cloud Foundry 上執行之應用程式的記載](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps)。
+{{site.data.keyword.Bluemix_notm}} 具有內建記載機制，可產生執行中應用程式的日誌檔。在日誌中，您可以檢視針對應用程式所產生的錯誤、警告及參考訊息。此外，您也可以配置應用程式將日誌訊息寫入日誌檔中。如需日誌格式及日誌檢視方式的相關資訊，請參閱 [Cloud Foundry 上執行之應用程式的記載功能](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps)。
 
 監視應用程式可讓您查看及控制應用程式部署。運用監視，您可以完成下列作業：
 

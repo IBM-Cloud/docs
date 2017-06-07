@@ -1,14 +1,28 @@
-{: .toc}
-Cloud Foundry Apps  
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
 
-    [계정 설정](/docs/admin/adminpublic.html)
+{: .toc subcollection="bluemix-account" audience="platform" href="/docs/admin/adminpublic.html"}
+계정 관리
+
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    계정 설정
         adminpublic.md
         profile.md
-        account.md
-        iamuserinv.md
-        iamusermanage.md
-        users_roles.md
+    
+    softlayerlink.md
+
+    {: .topicgroup}
+    조직
         orgs_spaces.md
-        apikeys.md
+        manageorg.md
+        
+    notifications.md
+    {: .navgroup-end}
+
+    {: .navgroup id="learn"}
+    {: .topicgroup}  
+    우수 사례
         patterns.md
-        softlayerlink.md
+        
+    {: .navgroup-end}

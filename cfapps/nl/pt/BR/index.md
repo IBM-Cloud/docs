@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-04-18"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -53,8 +53,7 @@ para escolher um iniciador, especificar um nome e selecionar como deseja codific
   4. Quando concluir a experiência orientada, clique em **VISUALIZAR
 A VISÃO GERAL DO APP**. A Visão geral de seu app é exibida no Painel.
   5. É possível incluir um serviço no app clicando em **INCLUIR UM SERVIÇO OU UMA API** na Visão geral do app na interface com o usuário do {{site.data.keyword.Bluemix_notm}}. Procure e selecione serviços a partir do catálogo ou role até o término do catálogo e clique em **Serviços experimentais do {{site.data.keyword.Bluemix_notm}}** para procurar serviços experimentais. Ou, é possível usar a interface de linha de comandos cf. Consulte Opções para trabalhar com apps.
-  6. Na Visão geral do app, clique em Incluir Git para salvar a origem do aplicativo em um repositório Git e criar um projeto hospedado pelo Git. Também é possível implementar o aplicativo a partir de
-{{site.data.keyword.jazzhub_title}}.
+  6. Na página Visão geral do app, role para o cartão "Entrega contínua" e clique em **Ativar**. A origem de seu app será salva em um repositório no Git Repos and Issue Tracking, que está hospedado no Bluemix. Uma cadeia de ferramentas aberta que usa esse repositório e um pipeline de entrega para desenvolver e implementar seu app também é criada. Para obter mais informações sobre o serviço Continuous Delivery, veja <a href="https://console.ng.bluemix.net/docs/services/ContinuousDelivery/index.html#cd_getting_started">Introdução ao Continuous Delivery</a>.
 
 **Nota:** se um serviço ligado a um app travar, o app poderá parar sua execução ou apresentar erros. O {{site.data.keyword.Bluemix_notm}} não
 reinicia automaticamente o app para recuperar desses problemas. Considere codificar seu app para identificar e recuperar de indisponibilidades, de exceções
@@ -72,9 +71,8 @@ serviços nele e para construí-lo e implementá-lo:
 {{site.data.keyword.Bluemix_notm}} para
 construir seu aplicativo, incluindo a escolha de quais serviços e tempos de execução
 combinar para resolver seu problema de negócios.</dd>
-<dt>{{site.data.keyword.jazzhub_title}}</dt>
-<dd>Use o {{site.data.keyword.jazzhub_title}} para criar um aplicativo na nuvem e implementá-lo no
-{{site.data.keyword.Bluemix_notm}}. Os serviços fornecidos pelo {{site.data.keyword.jazzhub_title}} incluem Track & Plan e Delivery Pipeline, listados no Catálogo do {{site.data.keyword.Bluemix_notm}} sob DevOps, assim com o Web IDE e hosting Git.</dd>
+<dt>{{site.data.keyword.contdelivery_full}}</dt>
+<dd>Use o {{site.data.keyword.contdelivery_short}} para automatizar construções, testes de unidade, implementações e mais. Edite e envie o código por push por meio do IDE avançado baseado na web. Crie cadeias de ferramentas para ativar as integrações de ferramentas que suportam as tarefas de desenvolvimento, implementação e operação. O serviço Continuous Delivery inclui o Delivery Pipeline, o Eclipse Orion Web IDE e o Git Repos and Issue Tracking. Para obter mais informações, veja <a href="https://console.ng.bluemix.net/docs/services/ContinuousDelivery/index.html#cd_getting_started">Introdução ao Continuous Delivery</a>.</dd>
 </dl>
 
 ## Dicas

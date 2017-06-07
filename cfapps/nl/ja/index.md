@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-04-18"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -31,7 +31,7 @@ lastupdated: "2016-04-18"
   3. **「Web」**をクリックし、指示に従ってスターターを選択し、名前を指定し、コーディング方法を選択します。
   4. 指示を実行し終えたら、**「アプリの概要の表示」**をクリックします。ダッシュボードにアプリの概要が表示されます。
   5. {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースでは、アプリの「概要」で**「サービスまたは API の追加」**をクリックすることによって、サービスをアプリに追加できます。カタログを表示してサービスを選択するか、あるいは、カタログを最後までスクロールして**「{{site.data.keyword.Bluemix_notm}} Experimental Services」**をクリックし、試験的サービスを表示します。あるいは cf コマンド・ライン・インターフェースを使用することもできます。『アプリの処理のオプション』を参照してください。
-  6. アプリの「概要」で「Git の追加」をクリックして、アプリケーション・ソースを Git リポジトリーに保存し、Git でホストされるプロジェクトを作成します。{{site.data.keyword.jazzhub_title}} からもアプリケーションをデプロイできます。
+  6. アプリの「概要」ページで、「継続的デリバリー」カードまでスクロールし、**「有効化」**をクリックします。アプリのソースは、Bluemix 上でホストされる「Git Repos and Issue Tracking」内のリポジトリーに保存されます。そのリポジトリーおよび配信のパイプラインを使用してアプリを開発してデプロイする、オープン・ツールチェーンも作成されます。Continuous Delivery サービスについて詳しくは、『<a href="https://console.ng.bluemix.net/docs/services/ContinuousDelivery/index.html#cd_getting_started">Getting started with Continuous Delivery</a>』を参照してください。
 
 **注:** アプリにバインドしたサービスが異常終了すると、アプリは実行を停止するか、エラーを起こす可能性があります。{{site.data.keyword.Bluemix_notm}} では、それらの問題から復旧するためにアプリを自動的に再始動することはありません。
 障害、例外、および接続障害を発見して復旧するようアプリをコーディングすることを検討してください。詳しくは、トラブルシューティングのトピック『アプリが自動的に再始動されない』を参照してください。
@@ -44,8 +44,9 @@ lastupdated: "2016-04-18"
 <dd>cf コマンド・ライン・インターフェースを使用して、アプリケーションの更新、サービス・インスタンスの作成、またはアプリケーションへのサービスのバインドを行います。また、cloud-cli コマンド・ライン・インターフェースを使用して、サービス・オファリングの作成、更新、および削除を行うこともできます。</dd>
 <dt>{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェース</dt>
 <dd>{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用して、アプリケーションをビルドします。これには、ビジネス上の問題を解決するためにサービスおよびランタイムを選出して組み合わせる作業も含まれます。</dd>
-<dt>{{site.data.keyword.jazzhub_title}}</dt>
-<dd>{{site.data.keyword.jazzhub_title}} を使用して、クラウド内でアプリケーションを作成し、それを {{site.data.keyword.Bluemix_notm}} にデプロイします。{{site.data.keyword.jazzhub_title}} によって提供されるサービスには、{{site.data.keyword.Bluemix_notm}} カタログの DevOps の下にリストされる Track & Plan および Delivery Pipeline があり、さらに、Web IDE および Git ホスティングもあります。</dd>
+<dt>{{site.data.keyword.contdelivery_full}}</dt>
+<dd>{{site.data.keyword.contdelivery_short}} を使用して、ビルド、単体テスト、デプロイメントなどを自動化します。機能豊富な Web ベース IDE により、コードの編集およびプッシュを行います。開発、デプロイメント、および運用の作業をサポートするツール統合を実現するツールチェーンを作成します。Continuous Delivery サービスには、Delivery Pipeline、Eclipse Orion Web IDE、および Git Repos and Issue Tracking が含まれています。詳しくは、『<a href="https://console.ng.bluemix.net/docs/services/ContinuousDelivery/index.html#cd_getting_started">Getting started with Continuous Delivery</a>』を参照してください。
+</dd>
 </dl>
 
 ## ヒント

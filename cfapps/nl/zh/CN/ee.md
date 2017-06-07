@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -26,6 +26,13 @@ lastupdated: "2017-01-11"
 {: #ee_start}
 
 开始之前，请通过以下链接注册 IBM 标识：[https://console.ng.bluemix.net/ ![外部链接图标](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window}。注册后，登录到 {{site.data.keyword.Bluemix_notm}}，即可开始 30 天免费试用。{{site.data.keyword.Bluemix_notm}} 提供了 2 GB 运行时内存和 10 个服务实例供您免费试用。
+
+
+## 使用工具链和 {{site.data.keyword.contdelivery_short}} 服务开发和部署应用程序
+{: #ee_cd}
+
+向应用程序添加包含 {{site.data.keyword.contdelivery_full}} 服务的<a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">工具链</a>。然后，<a href="docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">使用工具链</a>来开发和部署应用程序。
+
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 用户界面创建 Web 应用程序
 {: #ee_appui}

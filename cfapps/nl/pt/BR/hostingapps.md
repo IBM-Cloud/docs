@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-05-09"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -93,12 +93,16 @@ Para implementar seu aplicativo no {{site.data.keyword.Bluemix_notm}} como um ap
 |:------|:--------|
 |Interface da linha de comandos do Cloud Foundry (cf cli)	|Gerencie seu código no cliente local e use a interface da linha de comandos do Cloud Foundry para enviar o seu aplicativo por push para o {{site.data.keyword.Bluemix_notm}} manualmente. Para obter mais informações, consulte [Fazendo upload de seus apps](/docs/starters/upload_app.html).|
 |Eclipse	|Gerencie seu código no Eclipse e use o IBM Eclipse tools for {{site.data.keyword.Bluemix_notm}} para enviar seu aplicativo por push.|
-|Integração Git	|Gerencie seu código no GitHub e Git integrado no {{site.data.keyword.Bluemix_notm}}. É possível colaborar com outros desenvolvedores. Seu aplicativo será implementado no {{site.data.keyword.Bluemix_notm}} automaticamente, quando você confirmar as mudanças no código. Não é necessário enviar o aplicativo por push manualmente.|
-|{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Gerencie seu código no repositório DevOps GitHub e implemente o aplicativo para {{site.data.keyword.Bluemix_notm}} usando o DevOps Delivery Pipeline.|
-{: caption="Tabela 1. Ferramentas do Bluemix" caption-side="top"}
+|{{site.data.keyword.contdelivery_full}} |    Use o {{site.data.keyword.contdelivery_short}} para automatizar construções, testes de unidade, implementações e mais. Edite e envie o código por push por meio do IDE avançado baseado na web. Crie cadeias de ferramentas para ativar as integrações de ferramentas que suportam as tarefas de desenvolvimento, implementação e operação. O serviço Continuous Delivery inclui o Delivery Pipeline, o Eclipse Orion Web IDE e o Git Repos and Issue Tracking. Para obter mais informações, veja <a href="/docs/services/ContinuousDelivery/index.html#cd_getting_started">Introdução ao Continuous Delivery</a>.|
+{: caption="Tabela 1. Ferramentas do {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
 
 Se a plataforma Cloud Foundry não suportar os requisitos de seu aplicativo, será possível usar um contêiner ou máquina virtual em que o tempo de execução é instalado, configurado e mantido com mais opções customizadas.
+
+##Desenvolvendo e implementando seus apps usando cadeias de ferramentas no Continuous Delivery
+{:ht_cd}
+
+Inclua uma <a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">cadeia de ferramentas em seu app</a> e, em seguida, use a <a href="/docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">UI da cadeia de ferramentas do Continuous Delivery</a> para desenvolver e implementar seu app.
 
 ##Fazendo upload de apps usando cf cli
 {: #ht_cfcli}
@@ -140,7 +144,8 @@ Execute as etapas a seguir para migrar seu aplicativo.
 <pre>cf login -a https://api.ng.bluemix.net</pre></li>
 <li>No diretório do aplicativo, insira o comando cf push com o nome do aplicativo. O nome do aplicativo deve ser exclusivo no ambiente do {{site.data.keyword.Bluemix_notm}}.
 <pre>cf push appname</pre></li>
-<li>Opcional: se você usar um buildpack externo, deverá usar a opção -b com o comando cf push. Por exemplo:
+<li>Opcional: se você usar um buildpack externo, deverá usar a opção -b com o comando cf push. Por
+exemplo:
 <pre>cf push appname -b buildpack_URL</pre>
 <p>Consulte Usando buildpacks de comunidade para obter detalhes.</p>
 </li></ol>

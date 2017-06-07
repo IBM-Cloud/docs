@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="Cloud Foundry Applications" audience="compute" href="/docs/cfapps/index.html"}
-Cloud Foundry Apps
+Cloud Foundry 앱
 
     {: .navgroup id="howto"}
     index.md

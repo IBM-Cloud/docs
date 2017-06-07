@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-04-18"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2016-04-18"
   3. 按一下 **WEB**，然後遵循引導式體驗來選擇入門範本、指定名稱，並選取您想要用來撰寫程式碼的方式。
   4. 完成引導式體驗之後，按一下**檢視應用程式概觀**。應用程式的「概觀」會顯示在「儀表板」中。
   5. 您可以在 {{site.data.keyword.Bluemix_notm}} 使用者介面中的應用程式「概觀」上，按一下**新增服務或 API**，以將服務新增至您的應用程式。從型錄中瀏覽並選取服務，或捲動至型錄結尾，然後按一下 **{{site.data.keyword.Bluemix_notm}} 實驗性服務**來瀏覽實驗性服務。或者，您可以使用 cf 指令行介面。請參閱「用於處理應用程式的選項」。
-  6. 在應用程式「概觀」上，按一下「新增 Git」，以將您的應用程式原始檔儲存在 Git 儲存庫中，並建立由 Git 管理的專案。您也可以從 {{site.data.keyword.jazzhub_title}} 中部署應用程式。
+  6. 在應用程式的「概觀」頁面上，捲動至 "Continuous Delivery" 卡片，然後按一下**啟用**。您應用程式的原始檔將會儲存至在 Bluemix 上管理的 Git Repos and Issue Tracking 的儲存庫中。同時會建立使用該儲存庫的開放式工具以及開發與部署應用程式的 Delivery Pipeline。如需 Continuous Delivery 服務的相關資訊，請參閱<a href="https://console.ng.bluemix.net/docs/services/ContinuousDelivery/index.html#cd_getting_started">開始使用 Continuous Delivery</a>。
 
 **附註：**如果您連結至應用程式的服務損毀，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題回復。請考慮撰寫應用程式碼，以識別運行中斷、異常狀況和連線失敗，並從其中回復。如需相關資訊，請參閱「應用程式未自動重新啟動」疑難排解主題。
 
@@ -42,8 +42,9 @@ lastupdated: "2016-04-18"
 <dd>使用 cf 指令行介面來更新應用程式、建立服務實例，或將服務連結至應用程式。您也可以使用 cloud-cli 指令行介面來建立、更新及刪除服務供應項目。</dd>
 <dt>{{site.data.keyword.Bluemix_notm}} 使用者介面</dt>
 <dd>使用 {{site.data.keyword.Bluemix_notm}} 使用者介面來建置應用程式，包括挑選要結合的服務和運行環境，以解決您的商業問題。</dd>
-<dt>{{site.data.keyword.jazzhub_title}}</dt>
-<dd>使用 {{site.data.keyword.jazzhub_title}} 在雲端中建立應用程式，並將其部署至 {{site.data.keyword.Bluemix_notm}}。{{site.data.keyword.jazzhub_title}} 所提供的服務包括 Track & Plan 和 Delivery Pipeline（列在 {{site.data.keyword.Bluemix_notm}}「型錄」的 DevOps 下），以及 Web IDE 和 Git Hosting。</dd>
+<dt>{{site.data.keyword.contdelivery_full}}</dt>
+<dd>使用 {{site.data.keyword.contdelivery_short}} 來自動進行建置、單元測試、部署及其他作業。透過豐富的 Web 型 IDE 編輯及推送程式碼。建立工具鏈來啟用工具整合，以支援開發、部署及操作作業。Continuous Delivery 服務包括 Delivery Pipeline、Eclipse Orion Web IDE 及 Git Repos and Issue Tracking。如需相關資訊，請參閱<a href="https://console.ng.bluemix.net/docs/services/ContinuousDelivery/index.html#cd_getting_started">開始使用 Continuous Delivery</a>。
+</dd>
 </dl>
 
 ## 提示

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-05-09"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -93,12 +93,16 @@ Sie können die folgenden Tools und Services verwenden, die von {{site.data.keyw
 |:------|:--------|
 |Cloud Foundry-Befehlszeilenschnittstelle (Befehlszeilenschnittstelle 'cf')	|Verwalten Sie den Code auf einem lokalen Client und verwenden Sie die Cloud Foundry-Befehlszeilenschnittstelle, um Ihre Anwendung mit einer Push-Operation manuell zu {{site.data.keyword.Bluemix_notm}} zu übertragen. Weitere Informationen finden Sie unter [Apps hochladen](/docs/starters/upload_app.html).|
 |Eclipse	|Verwalten Sie den Code in Eclipse und verwenden Sie IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, um Ihre Anwendung mit einer Push-Operation zu übertragen.|
-|Git-Integration	|Verwalten Sie den Code mit GitHub und integrieren Sie Git in {{site.data.keyword.Bluemix_notm}}. Sie können mit anderen Entwicklern zusammenarbeiten. Die Anwendung wird automatisch in {{site.data.keyword.Bluemix_notm}} bereitgestellt, wenn Sie Änderungen am Code festschreiben. Sie müssen die Anwendung nicht manuell mit einer Push-Operation übertragen.|
-|{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|Verwalten Sie den Code mithilfe eines DevOps GitHub-Repositorys und stellen Sie die Anwendung in {{site.data.keyword.Bluemix_notm}} unter Verwendung von DevOps Delivery Pipeline bereit.|
-{: caption="Tabelle 1. Bluemix-Tools" caption-side="top"}
+|{{site.data.keyword.contdelivery_full}} |    Mit {{site.data.keyword.contdelivery_short}} können Sie Builds, Komponententests, Bereitstellungen und weitere Tasks automatisieren. In der umfangreichen webbasierten IDE können Sie Code bearbeiten und mit einer Push-Operation übertragen. Durch die Erstellung von Toolchains werden Toolintegrationen ermöglicht, die Entwicklungs-, Bereitstellungs- und Betriebstasks unterstützen. Der Continuous Delivery-Service umfasst Delivery Pipeline, die Eclipse Orion-Web-IDE, Git-Repositorys und eine Problemüberwachung. Weitere Informationen finden Sie unter <a href="/docs/services/ContinuousDelivery/index.html#cd_getting_started">Einführung in Continuous Delivery</a>.|
+{: caption="Tabelle 1. {{site.data.keyword.Bluemix_notm}}-Tools" caption-side="top"}
 
 
 Wenn die Cloud Foundry-Plattform nicht die Anforderungen der Anwendung erfüllt, können Sie einen Container oder eine virtuelle Maschine verwenden, für den bzw. die eine Laufzeit mit entsprechend angepassten Optionen konfiguriert ist und verwaltet wird.
+
+##Entwicklung und Bereitstellung Ihrer Apps mithilfe von Toolchains in Continuous Delivery
+{:ht_cd}
+
+Fügen Sie eine <a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">Toolchain zur App</a> hinzu und verwenden Sie dann die <a href="/docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">Toolchain-Benutzerschnittstelle von Continuous Delivery</a> zum Entwickeln und Bereitstellen der App.
 
 ##Apps mithilfe der Befehlszeilenschnittstelle 'cf' hochladen
 {: #ht_cfcli}
