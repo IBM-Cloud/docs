@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-16"
+lastupdated: "2017-06-08"
 
 ---
 {:new_window: target="_blank"}
@@ -65,46 +65,58 @@ After you log in to the {{site.data.keyword.Bluemix_notm}} CLI:
 
   The {{site.data.keyword.bpshort}} plug-in appears under `bx plugin list` if the installation is successful. 
 
-2. Create an environment from your configuration. When you create your environment, you are pointing the service to your source control so that it can extract the latest code. 
+2. Create an environment from your configuration. When you create your environment, you are pointing the service to your source control so that it can extract the latest code.
+
+  a. Create a JSON file to pass metadata that describes your environment, including the GitHub repo where your Terraform files are stored.
+  
+  The following JSON sample shows all available parameters.
+  
+  ```
+  {
+    "description": "(Optional) Description of the environment",
+    "frozen": false,
+    "name": "Name of the environment",
+    "sourceurl": "The GitHub URL that points to the Terraform configuration",
+    "tags": [
+      "(Optional) tag_1",
+      "(Optional) tag_2"
+    ],
+    "terraformversion": "0.9",
+    "variablestore": [
+      {
+        "name": "(Optional) variable_1",
+        "secure": false,
+        "value": "Visible value"
+      },
+      {
+        "name": "(Optional) variable_2_secret",
+        "secure": true,
+        "value": "Secured value"
+      }
+    ]
+  }
+  ```
+  {: codeblock}
+  
+  b. Run the `create` command to add the environment to {{site.data.keyword.bpshort}}.
   
   ```
   bx schematics environment create --file FILE_NAME
   ```
   {: codeblock}
   
-  <table summary="Description of the environment create command.">
-  <caption>Table 1. Description of the environment create command.
+  <table summary="Description of the create command.">
+  <caption>Table 1. Description of the create command.
   </caption>
   <thead>
-  <th colspan="1">Command</th>
-  <th colspan="1">What you're doing</th>
+  <th colspan="1">Parameter</th>
+  <th colspan="1">Description</th>
   </thead>
   <tbody>
   <tr>
   <td>--file FILE_NAME</td>
-  <td>The JSON file where details about your environment are stored.
-  <p>
-  <p>Example JSON:
-  <pre>{
-      "description": "(Optional) Description of the environment",
-      "frozen": false,
-      "name": "Name of the environment",
-      "sourceurl": "The GitHub URL that points to the Terraform configuration",
-      "tags": ["(Optional) metadata_tag_1", "(Optional) metadata_tag_2"],
-      "terraformversion": "0.9",
-      "variablestore": [{
-          "name": "(Optional) variable_1",
-          "secure": false,
-          "value": "Visible value"
-      },
-      {
-          "name": "(Optional) variable_2_secret",
-          "secure": true,
-          "value": "Secured value"
-      }]
-  }</pre>
+  <td>The JSON file that you created in the previous step to describe your environment.
   </td>
-  </tr>
   </tbody></table>
   
   Note the `ID` value that is returned. The `ID` is a unique identifier that is assigned to your environment and is used in subsequent commands.
@@ -120,8 +132,8 @@ After you log in to the {{site.data.keyword.Bluemix_notm}} CLI:
   <caption>Table 2. Description of the plan command.
   </caption>
   <thead>
-  <th colspan="1">Command</th>
-  <th colspan="1">What you're doing</th>
+  <th colspan="1">Parameter</th>
+  <th colspan="1">Description</th>
   </thead>
   <tbody>
   <tr>
@@ -143,8 +155,8 @@ After you log in to the {{site.data.keyword.Bluemix_notm}} CLI:
   <caption>Table 3. Description of the log command.
   </caption>
   <thead>
-  <th colspan="1">Command</th>
-  <th colspan="1">What you're doing</th>
+  <th colspan="1">Parameter</th>
+  <th colspan="1">Description</th>
   </thead>
   <tbody>
   <tr>
@@ -164,8 +176,8 @@ After you log in to the {{site.data.keyword.Bluemix_notm}} CLI:
   <caption>Table 4. Description of the apply command.
   </caption>
   <thead>
-  <th colspan="1">Command</th>
-  <th colspan="1">What you're doing</th>
+  <th colspan="1">Parameter</th>
+  <th colspan="1">Description</th>
   </thead>
   <tbody>
   <tr>
