@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-06-06"
 
 
 ---
@@ -30,7 +30,7 @@ To switch your existing SoftLayer account to an IBMid, complete the following st
 
 2. Follow the wizard prompts to create your IBMid. 
 
-   Enter an email address that is not currently is use by any IBMid. This email address is used as the user name for the new IBMid, and it's where your registratin code is sent after the IBMid is created. You can update the email address that is associated with the IBMid later on, but you can't change the user name.
+   Enter an email address that is not currently in use by any IBMid. This email address is used as the user name for the new IBMid, and it's where your registratin code is sent after the IBMid is created. You can update the email address that is associated with the IBMid later on, but you can't change the user name.
 
 3. When you receive your registration code, click the link in the email or copy the URL into a browser and enter your registration code.
 
@@ -40,7 +40,7 @@ To switch your existing SoftLayer account to an IBMid, complete the following st
 
    At the Account Login prompt, go to the **IBMid Account Login** section and click **Log in with IBMid**. Do not use the **Username** and **Password** fields that you used previously with your SoftLayer ID.
 
-If you are a new customer, you're asked for your existing IBMid or to created a new IBMid when you check out your order. 
+If you are a new customer, you're asked for your existing IBMid or to create a new IBMid when you check out your order. 
   * To use an existing IBMid, enter the user name or the email address of the IBMid it if is unique (that is, it's not shared across multiple IBMids).
   
   * To create a new IBMid, enter an email address that is not currently in use by any IBMid. This email address is the user name for the IBMid, and it's where your registration code is sent after the IBMid is created. You can update the email address that's associated with the IBMid later on, but you can't change the user name. 

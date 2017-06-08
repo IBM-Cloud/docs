@@ -30,7 +30,7 @@ API ゲートウェイを使用して、OpenWhisk アクションを API とし�
 API ホスト `wsk property set --apihost openwhisk.ng.bluemix.net` を使用して、OpenWhisk CLI を構成します。`wsk api` を使用できるようにするには、CLI 構成ファイル `~/.wskprops` に Bluemix アクセス・トークンを含める必要があります。
 アクセス・トークンを取得するには、CLI コマンド `wsk bluemix login` を使用します。このコマンドについて詳しくは、`wsk bluemix login -h` を実行してください。
 
-**注:** シングル・サインオン (sso) が必要なコマンド・エラーが発生したとしても、現在、これはサポートされていません。次善策として、CloudFoundry CLI で `cf login` を使用してログインし、HOME ディレクトリー構成ファイル `~/.cf/config.json` からアクセス・トークンを `~/.wskprops` ファイルに、プロパティー `APIGW_ACCESS_TOKEN="value of AccessToken` としてコピーしてください。アクセス・トークン・ストリングをコピーする際、接頭部 `Bearer ` を削除してください。
+**注:** シングル・サインオン (sso) が必要なコマンド・エラーが発生したとしても、現在、これはサポートされていません。次善策として、Bluemix CLI で `bluemix login` を使用してログインし、HOME ディレクトリー構成ファイル `~/.bluemix/.cf/config.json` からアクセス・トークンを `~/.wskprops` ファイルに、プロパティー `APIGW_ACCESS_TOKEN="value of AccessToken` としてコピーしてください。アクセス・トークン・ストリングをコピーする際、接頭部 `Bearer ` を削除してください。
 
 **注:** `wsk api-experimental` を使用して作成された API は短期間は機能し続けますが、ご使用の API を Web アクションにマイグレーションし、新規 CLI コマンド `wsk api` を使用して既存の API を再構成することをお勧めします。
 
@@ -61,14 +61,14 @@ API ホスト `wsk property set --apihost openwhisk.ng.bluemix.net` を使用し
   ```
   ```
   ok: created API /hello/world GET for action /_/hello
-  https://${APIHOST}:9001/api/21ef035/hello/world
+  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world
   ```
 **GET** HTTP メソッドを介して `hello` アクションを公開する新規 URL が生成されます。
   
 4. その URL に HTTP 要求を送信してみましょう。
   
   ```
-  $ curl https://${APIHOST}:9001/api/21ef035/hello/world?name=OpenWhisk
+  $ curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world?name=OpenWhisk
   ```
   ```json
   {

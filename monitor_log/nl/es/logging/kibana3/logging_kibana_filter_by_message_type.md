@@ -44,11 +44,11 @@ Lleve a cabo las tareas siguientes para ver y filtrar los registros de la app de
 
 6. Añada un filtro para incluir o excluir información sobre un tipo de mensaje. 
 
-    * Para añadir un filtro que incluya información sobre un tipo de mensaje, pulse el icono **Lupa** ![Icono Lupa](images/logging_magnifying_glass.jpg "Icono Lupa") en la fila message_type de la tabla.  
+    * Para añadir un filtro que incluya información sobre un tipo de mensaje, pulse el icono **Lupa** ![Icono Lupa](images/logging_magnifying_glass.jpg "Icono Lupa") en la fila message_type de la tabla. 
     
            ![Condición de filtro para el campo message_type](images/logging_message_type_filter.png "Condición de filtro para el campo message_type")
     
-    * Para añadir un filtro que excluya información sobre un tipo de mensaje, pulse el icono **Exclusión** ![Icono Exclusión](images/logging_exclusion_icon.png "Icono Exclusión") en la fila message_type de la tabla.  
+    * Para añadir un filtro que excluya información sobre un tipo de mensaje, pulse el icono **Exclusión** ![Icono Exclusión](images/logging_exclusion_icon.png "Icono Exclusión") en la fila message_type de la tabla. 
     
     Se añade una nueva condición de filtro al panel de control de Kibana.
 
@@ -56,10 +56,10 @@ Lleve a cabo las tareas siguientes para ver y filtrar los registros de la app de
 
 9. Guarde el panel de control.    
         
-    Cuando haya terminado de crear los filtros, pulse el icono **Guardar** ![Icono Guardar](images/logging_save.jpg "Icono Guardar") y escriba un nombre para el panel de control.  
+    Cuando haya terminado de crear los filtros, pulse el icono **Guardar** ![Icono Guardar](images/logging_save.jpg "Icono Guardar") y escriba un nombre para el panel de control. 
       
     **Nota:** si intenta guardar un panel de control con un nombre que contenga espacios en blanco, no se guardará. Escriba un nombre sin espacios y pulse el icono **Guardar**.
     
     ![Guardar nombre del panel de control](images/logging_save_dashboard.jpg "Guardar nombre del panel de control").
 
-Ha creado un panel de control que filtra las entradas de registro por tipo de mensaje. Puede cargar el panel de control que ha guardado en cualquier momento pulsando el icono **Carpeta** ![Icono Carpeta](images/logging_folder.jpg "Icono Carpeta") y seleccionando el panel de control por nombre. 
+Ha creado un panel de control que filtra las entradas de registro por tipo de mensaje. Puede cargar el panel de control que ha guardado en cualquier momento pulsando el icono **Carpeta** ![Icono Carpeta](images/logging_folder.jpg "Icono Carpeta") y seleccionando el panel de control por nombre.

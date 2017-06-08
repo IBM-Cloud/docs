@@ -38,8 +38,8 @@ Um das Widget 'Support' zu öffnen, melden Sie sich bei der {{site.data.keyword.
 
 Wenn Sie ein Konto verwenden, das zwischen {{site.data.keyword.Bluemix_notm}} und {{site.data.keyword.BluSoftlayer}} verknüpft ist, unterscheidet sich das Widget 'Support' etwas. Melden Sie sich bei der {{site.data.keyword.Bluemix_notm}}-Konsole an und klicken Sie in der Menüleiste auf **Support**, um das Widget 'Support' zu öffnen. Wählen Sie dann **Ticket hinzufügen** oder **Antworten suchen** aus. Folgende Optionen stehen Ihnen zur Verfügung:
 
-* Sie können die {{site.data.keyword.Bluemix_notm}}-Dokumentation und Stack Overflow durchsuchen, indem Sie einen Filter setzen, damit die Suchergebnisse nur die ausgewählten Elemente umfassen. 
-* Sie können Verknüpfungen direkt zu Stack Overflow **#IBMBluemix** erstellen, um Antworten zu suchen oder Fragen zu posten. 
+* Sie können die {{site.data.keyword.Bluemix_notm}}-Dokumentation und Stack Overflow durchsuchen, indem Sie einen Filter setzen, damit die Suchergebnisse nur die ausgewählten Elemente umfassen.
+* Sie können Verknüpfungen direkt zu Stack Overflow **#IBMBluemix** erstellen, um Antworten zu suchen oder Fragen zu posten.
 * Sie können eine strukturierte Idee auf der Site [IBM Cloud - Structured Ideas](https://ibmcloud.ideas.aha.io/) übergeben.
 * Sie können den Vertrieb entweder telefonisch oder über die Suche nach einem Vertriebsbeauftragten erreichen. Siehe die Seite [Kontaktaufnahme](https://www.ibm.com/cloud-computing/bluemix/contact-us).
 * Sie können eine Verbindung zu [**@IBMBluemixHelp**](http://www.twitter.com/IBMBluemixHelp) auf Twitter herstellen, um Ihre {{site.data.keyword.Bluemix_notm}}-Nutzungserfahrung zu verbessern.
@@ -144,7 +144,7 @@ Bei {{site.data.keyword.Bluemix_notm}} Public können Sie sich für Plattformben
 
   * Prüfen, ob derzeit Wartungszeiten existieren oder ob es einen Vorfall gibt
 
-	Wenn Sie vermuten, dass {{site.data.keyword.Bluemix_notm}} nicht wie erwartet funktioniert, überprüfen Sie die Seite 'Status' auf aktuelle Wartungszeiten oder einen aktuellen Vorfall. Wenn Sie einen Vorfall melden möchten, der noch nicht auf der Seite 'Status' aufgeführt ist, öffnen Sie ein Support-Ticket, indem Sie auf **Support** klicken und die Option **Ticket hinzufügen** in der Menüleiste auswählen. Alternativ können Sie auch auf die Hilfeseite [IBM Bluemix Support ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.ibm.biz/bluemixsupport){: new_window} zugreifen. 
+	Wenn Sie vermuten, dass {{site.data.keyword.Bluemix_notm}} nicht wie erwartet funktioniert, überprüfen Sie die Seite 'Status' auf aktuelle Wartungszeiten oder einen aktuellen Vorfall. Wenn Sie einen Vorfall melden möchten, der noch nicht auf der Seite 'Status' aufgeführt ist, öffnen Sie ein Support-Ticket, indem Sie auf **Support** klicken und die Option **Ticket hinzufügen** in der Menüleiste auswählen. Alternativ können Sie auch auf die Hilfeseite [IBM Bluemix Support ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.ibm.biz/bluemixsupport){: new_window} zugreifen.
 
   * Nutzen der Vorteile mehrerer {{site.data.keyword.Bluemix_notm}}-Regionen
 
@@ -194,8 +194,8 @@ Wenn Sie Ihr technisches Problem nicht mithilfe der Fehlerbehebungs- und Hilfeop
 
 Wenn das Problem nicht auf einen Ausfall zurückzuführen ist, öffnen Sie ein Support-Ticket mit einer der folgenden Optionen:
 
-  * Klicken Sie in der Menüleiste auf **Support** und wählen Sie **Ticket hinzufügen** aus. Füllen Sie auf der angezeigten Seite das Formular aus, um anzugeben, wofür Sie technische Unterstützung benötigen. 
-  * Verwenden Sie die Hilfetextseite von [IBM {{site.data.keyword.Bluemix_notm}} Support ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.ibm.biz/bluemixsupport){: new_window}. Sie können Tickets für Probleme bei Vertrieb, IBM ID und Anmeldung, Abrechnung sowie für technische Unterstützung einreichen. Bei Problemen, die technische Unterstützung erfordern, können Sie das Problem auf einen bestimmten Bereich oder Service eingrenzen. Wenn Sie Hilfe für einen bestimmten Service benötigen, wählen Sie die entsprechende Kategorie des Service aus. Zum Ermitteln der Kategorie, zu der Ihr Service gehört, prüfen Sie den Katalog in der Menüleiste.   
+  * Klicken Sie in der Menüleiste auf **Support** und wählen Sie **Ticket hinzufügen** aus. Füllen Sie auf der angezeigten Seite das Formular aus, um anzugeben, wofür Sie technische Unterstützung benötigen.
+  * Verwenden Sie die Hilfetextseite von [IBM {{site.data.keyword.Bluemix_notm}} Support ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.ibm.biz/bluemixsupport){: new_window}. Sie können Tickets für Probleme bei Vertrieb, IBM ID und Anmeldung, Abrechnung sowie für technische Unterstützung einreichen. Bei Problemen, die technische Unterstützung erfordern, können Sie das Problem auf einen bestimmten Bereich oder Service eingrenzen. Wenn Sie Hilfe für einen bestimmten Service benötigen, wählen Sie die entsprechende Kategorie des Service aus. Zum Ermitteln der Kategorie, zu der Ihr Service gehört, prüfen Sie den Katalog in der Menüleiste.  
   
 Stellen Sie beim Öffnen eines Support-Tickets sicher, dass Sie eine geeignete Priorität für das Ticket angeben. Die Priorität bestimmt, wie Ihr Ticket bearbeitet wird. Informationen zu den verschiedenen Prioritätsstufen finden Sie unter [Support-Ticket - Priorität und Reaktionszeit](/docs/support/index.html#support-ticket-severity). Wenn Ihre Supportanfrage eine schnellere Antwort erfordert, empfiehlt es sich, ein Upgrade auf Standard- oder Premium-Support durchzuführen, damit Sie Support-Tickets mit einer Priorität von 1-4 öffnen können. Zum Aktualisieren Ihres Kontos auf eine höhere Supportstufe, wenden Sie sich an Ihren [IBM Vertriebsbeauftragten ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud-computing/bluemix/contact-us){: new_window} oder senden Sie eine E-Mail an sales@bluemix.net.
 
@@ -228,7 +228,7 @@ Wenn Sie Benutzer von {{site.data.keyword.Bluemix_notm}} Dedicated sind, erhalte
 </li>
 <li>Wenn Sie über eine {{site.data.keyword.ibmid}} verfügen und Zugriff auf die {{site.data.keyword.Bluemix_notm}} Public-Umgebung haben, klicken Sie in der Menüleiste auf **Support** und wählen **Ticket hinzufügen** aus. Wählen Sie den Themenbereich für Ihr Problem aus und befolgen Sie die Eingabeaufforderungen, um Ihr Ticket einzureichen.</li>
 <li>Wenn Sie keine {{site.data.keyword.ibmid}} haben, können Sie sich an eine Person in Ihrer Organisation mit einer solchen ID wenden oder mit Ihrem IBM Ansprechpartner zusammenarbeiten.
-<p>**Hinweis:** Auf Anforderung kann eine Liste der Benutzer in Ihrer Organisation, die als Kontaktpersonen für Support-Tickets fungieren, auf der Seite **Support** der {{site.data.keyword.Bluemix_notm}}-Konsole für Ihre Dedicated-Umgebung angezeigt werden. </p></li>
+<p>**Hinweis:** Auf Anforderung kann eine Liste der Benutzer in Ihrer Organisation, die als Kontaktpersonen für Support-Tickets fungieren, auf der Seite **Support** der {{site.data.keyword.Bluemix_notm}}-Konsole für Ihre Dedicated-Umgebung angezeigt werden.</p></li>
 </ul>
 
 ### Kontaktaufnahme mit dem Support für Bluemix Local

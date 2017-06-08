@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2017-01-11"
 #서비스
 {: #services}
 
-{{site.data.keyword.Bluemix}} 사용자 인터페이스의 **서비스** 아래에 있는 **카탈로그**에서 사용 가능한 서비스를 확인할 수 있습니다.
+{{site.data.keyword.Bluemix}} 콘솔의 **서비스** 아래의 **카탈로그**에서 사용 가능한 서비스를 찾을 수 있습니다.
 {:shortdesc}
 
 
@@ -52,95 +52,13 @@ lastupdated: "2017-01-11"
 
 시범 서비스는 안정적이지 않을 수 있으며 이전 버전과 호환 가능하지 않은 방식으로 변경될 수 있습니다. 프로덕션 환경에서는 이러한 서비스를 사용하지 않는 것이 좋습니다. 시범 서비스에 대한 지원은 {{site.data.keyword.Bluemix_notm}} 개발자 커뮤니티를 통해 제공됩니다. IBM에서 문제점을 조사한 결과 시범 서비스의 결함으로 판별될 경우 IBM이 수정사항을 제공할 의무는 없습니다.
 
-{{site.data.keyword.Bluemix_notm}} 사용자 인터페이스, cf 명령행 인터페이스, IBM {{site.data.keyword.Bluemix_notm}} DevOps Services 또는 지원되는 도구에서 서비스를 사용하려면 다음 단계를 수행하십시오.
+{{site.data.keyword.Bluemix_notm}} 콘솔, cf 명령행 인터페이스, IBM {{site.data.keyword.Bluemix_notm}} DevOps Services 또는 지원되는 도구에서 서비스를 사용하려면 다음 단계를 수행하십시오. 
 
 1. 서비스 인스턴스를 작성하십시오. 대부분의 경우 애플리케이션을 작성할 때 서비스 인스턴스를 작성할 수 있습니다. 
 
 2. 새 서비스 인스턴스를 사용할 애플리케이션을 지정하십시오. 웹 애플리케이션의 경우 동일한 서비스 인스턴스를 사용(보통 데이터 공유를 위해)할 애플리케이션을 두 개 이상 지정할 수 있습니다. 
 
 3. 서비스와 상호작용하도록 애플리케이션에 고유한 코드를 작성하십시오. 
-
-##지역별 서비스
-
-모든 {{site.data.keyword.Bluemix_notm}} 지역에서 모든 서비스를 사용할 수 있는 것은 아닙니다. 다음 표는 IBM에서 제공하는 서비스를 보여줍니다. 
-
-
-
-|서비스	|미국 남부 지역에서 사용 가능	|유럽 영국 지역에서 사용 가능 |오스트레일리아 시드니 지역에서 사용 가능|
-|:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.activedeployshort}}	|예		|예		|아니오|
-|{{site.data.keyword.alchemyapishort}} 		|예	   	|예  		|예|
-|{{site.data.keyword.appsecshort}}		|예		|아니오		|아니오|
-|{{site.data.keyword.alertnotificationshort}}|예		|아니오			|아니오		|
-|{{site.data.keyword.APS_DA}}			|예		|아니오		|아니오|
-|{{site.data.keyword.APS_MA}}			|예		|아니오		|아니오|
-|{{site.data.keyword.amashort}}			|예		|예		|예|
-|{{site.data.keyword.hadoopst}}			|예		|아니오		|아니오|
-|{{site.data.keyword.APIM}}			|예		|예		|아니오|
-|{{site.data.keyword.autoscaling}}		|예		|예		|예|
-|{{site.data.keyword.bigicloudst}}		|예		|아니오		|아니오|
-|{{site.data.keyword.blockstorageshort}}        |아니오             |예            |아니오 |
-|{{site.data.keyword.rules_short}}		|예		|예		|아니오|
-|{{site.data.keyword.cloudint}}			|예		|예		|아니오|
-|{{site.data.keyword.cloudant}}			|예		|예		|아니오|
-|{{site.data.keyword.conceptexpansionshort}}	|예		|예		|예|
-|{{site.data.keyword.conceptinsightsshort}}	|예		|예		|예|
-|{{site.data.keyword.dashdbshort}}		|예		|예		|아니오|
-|{{site.data.keyword.datacshort}}		|예		|예		|예|
-|{{site.data.keyword.DB2OnCloud_short}}		|예		|예		|예|
-|{{site.data.keyword.deliverypipeline}}		|예		|예		|아니오|
-|{{site.data.keyword.dialogshort}}		|예		|예		|예|
-|{{site.data.keyword.documentconversionshort}}	|예		|예		|예|
-|{{site.data.keyword.creshort}}			|예		|아니오		|아니오|
-|{{site.data.keyword.game}}			|예		|예		|예|
-|{{site.data.keyword.geospatialshort_Geospatial}}	|예	|예		|아니오|
-|{{site.data.keyword.globalizationshort}}	|예		|아니오		|아니오|
-|{{site.data.keyword.dataworks_short}}		|예		|예		|아니오|
-|{{site.data.keyword.twittershort}}		|예		|예		|예|
-|{{site.data.keyword.weather_short}}		|예		|예		|예|
-|{{site.data.keyword.IntegrationTestingshort}}	|예		|예		|아니오|
-|{{site.data.keyword.iot_short}}		|예		|아니오		|아니오|
-|{{site.data.keyword.keymanagementserviceshort}}|아니오		|예		|아니오|
-|{{site.data.keyword.languagetranslationshort}}	|예		|예		|아니오|
-|{{site.data.keyword.messagehub}}		|예		|예		|아니오|
-|{{site.data.keyword.messageresonanceshort}}	|예		|예		|아니오|
-|{{site.data.keyword.APS_MAiOS}} 		|예		|아니오		|아니오|
-|{{site.data.keyword.macm_short}}		|예		|예		|예|
-|{{site.data.keyword.mobilemam}}		|예		|예		|아니오|
-|{{site.data.keyword.mobiledata}}		|예		|예		|아니오|
-|{{site.data.keyword.manda}}			|예		|예		|아니오|
-|{{site.data.keyword.mqa}}			|예		|예		|아니오|
-|{{site.data.keyword.mql}}			|예		|예		|아니오|
-|{{site.data.keyword.nlclassifierlshort}} 	|예 		|예 		|예|
-|{{site.data.keyword.objectstorageshort}}	|예		|아니오		|아니오|
-|{{site.data.keyword.personalityinsightsshort}}	|예		|예		|예|
-|{{site.data.keyword.mobilepush}}		|예		|예		|아니오|
-|Push for iOS 8					|예		|예		|아니오|
-|{{site.data.keyword.questionandanswershort}}	|예		|예		|예|
-|{{site.data.keyword.rapidApps}}		|예		|예		|아니오|
-|{{site.data.keyword.relationshipextractionshort}}	|예	|예		|예|
-|{{site.data.keyword.retrieveandrankshort}}	|예 		|예 		|예|
-|{{site.data.keyword.SecureGateway}}		|예		|예		|아니오|
-|{{site.data.keyword.sescashort}}		|예		|예		|예|
-|{{site.data.keyword.ssofull}}			|예		|아니오		|아니오|
-|{{site.data.keyword.speechtotextshort}}	|예 		|예	 	|예|
-|{{site.data.keyword.sqldb}}			|예		|예		|아니오|
-|{{site.data.keyword.staticanalyzershort}}	|예		|예		|아니오|
-|{{site.data.keyword.streaminganalyticsshort}}	|예		|아니오		|아니오|
-|{{site.data.keyword.texttospeechshort}} 	|예 		|예	 	|예|
-|{{site.data.keyword.times}}			|예		|예		|아니오|
-|{{site.data.keyword.toneanalyzershort}} 	|예 		|예 		|예|
-|{{site.data.keyword.trackplan}}		|예		|예		|아니오|
-|{{site.data.keyword.tradeoffanalyticsshort}}	|예		|예		|예|
-|{{site.data.keyword.visualinsightsshort}}	|예		|예		|예|
-|{{site.data.keyword.visualizationrenderingshort}} |예		|예		|아니오|
-|{{site.data.keyword.workflow}}			|예		|예		|아니오|
-|{{site.data.keyword.workloadscheduler}}	|예		|예		|아니오|
-|{{site.data.keyword.xpagesservice_short}}	|예		|예		|아니오|
-*표 2. 서비스 가용성*
-{: caption="표 2. 서비스 가용성" caption-side="top"}
-
-
 
 # 애플리케이션에 서비스 추가
 {: #add_service}
@@ -165,11 +83,11 @@ lastupdated: "2017-01-11"
 ## 새 서비스 인스턴스 요청
 {: #req_instance}
 
-새 서비스 인스턴스를 요청하려면 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 cf 명령행 인터페이스를 사용해야 합니다. 
+새 서비스 인스턴스를 요청하려면 {{site.data.keyword.Bluemix_notm}} 콘솔이나 cf 명령행 인터페이스를 사용해야 합니다. 
 
 **참고:** 서비스 이름을 지정하는 경우 영문자 또는 숫자만 사용하십시오. 그렇지 않을 경우 예측할 수 없는 결과가 초래될 수 있습니다.
 
-{{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하여 서비스 인스턴스를 요청하는 경우 다음 단계를 수행하십시오. 
+{{site.data.keyword.Bluemix_notm}} 콘솔을 사용하여 서비스 인스턴스를 요청하는 경우에는 다음 단계를 완료하십시오. 
 
 1. {{site.data.keyword.Bluemix_notm}} **카탈로그**에서 추가할 서비스의 타일을 클릭하십시오. 서비스 세부사항 페이지가 열립니다. 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2017-01-11"
 #Serviços
 {: #services}
 
-É possível localizar serviços disponíveis no **Catálogo** em **Serviços** na interface com o usuário do {{site.data.keyword.Bluemix}}.
+É possível localizar serviços disponíveis no **Catálogo** em **Serviços** no console do {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
 
@@ -48,10 +48,18 @@ e, em seguida, pelos serviços de comunidade.</dd>
 
 |Tipo	|Descrição	|Detalhes do suporte|
 |:------|:--------------|:--------------|
-|IBM	|Um serviço que é fornecido pela IBM e que está geralmente disponível.	|Problemas determinados como um defeito em um serviço fornecido pela IBM que geralmente está disponível são suportados. O suporte será fornecido com base na severidade configurada. Para obter mais informações sobre a severidade do chamado, veja [Entrando em contato com o suporte](/docs/support/index.html#contacting-bluemix-support).|
-|Terceiros	|Um serviço que é fornecido por uma empresa que não seja a IBM.	|O suporte para serviços de terceiros é fornecido perlo provedor de serviços. Se um problema for investigado pela IBM e ficar determinado ser um defeito em um serviço de terceiro, a IBM não será obrigada a fornecer uma correção. A IBM compartilhará a análise com o provedor de serviços de terceiro, se necessário.|
-|Comunidade	|Um serviço que é fornecido por uma comunidade de software livre.	|O suporte para serviços de comunidade é fornecido pela Comunidade de desenvolvedores do {{site.data.keyword.Bluemix_notm}}. Se um problema for investigado pela IBM e ficar determinado ser um defeito em serviço de comunidade, a IBM não será obrigada a fornecer uma correção.|
-|Beta	|Um serviço que não está pronto para produção e está em um estágio de avaliação de desenvolvimento. Um serviço Beta pode ajudar as equipes de desenvolvimento e marketing a avaliar o valor dos serviços antes de tornarem o serviço geralmente disponível.	|Problemas que são determinados como sendo um defeito em um serviço beta fornecido pela IBM são suportados mas a IBM não é obrigada a fornecer uma correção. Além disso, o chamado de problema será designado como severidade 3 ou 4 onde aplicável. Para obter informações sobre severidade de chamados, consulte [Entrando em contato com o suporte](/docs/support/index.html#contacting-bluemix-support).|
+|IBM	|Um serviço que é fornecido pela IBM e que está geralmente disponível.	|Problemas determinados como um defeito
+em um serviço fornecido pela IBM que geralmente está disponível são suportados. O suporte será fornecido com base na severidade configurada. Para obter mais informações sobre a severidade do chamado, veja [Entrando em contato com o suporte](/docs/support/index.html#contacting-bluemix-support).|
+|Terceiros	|Um serviço que é fornecido por uma empresa que não seja a IBM.	|O suporte para serviços de terceiros é fornecido
+perlo provedor de serviços. Se um problema for investigado pela IBM e ficar determinado ser um defeito em um serviço de terceiro, a IBM não será obrigada a fornecer uma correção. A IBM compartilhará a análise com o provedor de serviços de terceiro, se necessário.|
+|Comunidade	|Um serviço que é fornecido por uma comunidade de software
+livre.	|O suporte para serviços de comunidade é fornecido pela Comunidade de desenvolvedores do {{site.data.keyword.Bluemix_notm}}. Se um problema for investigado pela IBM e ficar determinado ser um defeito em serviço de comunidade, a IBM não será obrigada a fornecer uma correção.|
+|Beta	|Um serviço que não está pronto para produção e está em um estágio de avaliação de desenvolvimento. Um serviço Beta pode ajudar as equipes de desenvolvimento
+e marketing a avaliar o valor dos serviços antes de tornarem o
+serviço geralmente disponível.	|Problemas que são determinados como sendo um defeito
+em um serviço beta fornecido pela IBM são suportados mas a IBM não é obrigada a
+fornecer uma correção. Além disso,
+o chamado de problema será designado como severidade 3 ou 4 onde aplicável. Para obter informações sobre severidade de chamados, consulte [Entrando em contato com o suporte](/docs/support/index.html#contacting-bluemix-support).|
 {: caption="Tabela 1. Informações de suporte de serviços do Bluemix" caption-side="top"}
 
 
@@ -65,7 +73,7 @@ Serviços experimentais podem não ser estáveis e podem mudar de maneiras que n
 e for determinado que é um defeito em um serviço experimental,
 a IBM não será obrigada a fornecer uma correção.
 
-Para usar um serviço na interface com o usuário do {{site.data.keyword.Bluemix_notm}}, interface de linha de comandos cf, IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ou quaisquer ferramentas suportadas, execute as etapas a seguir:
+Para usar um serviço no console do {{site.data.keyword.Bluemix_notm}}, na interface da linha de comandos cf, no IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ou em quaisquer ferramentas suportadas, execute as etapas a seguir:
 
 1. Crie uma instância do serviço. Na maioria dos casos,
 a instância de serviço pode ser criada durante a criação do aplicativo.
@@ -75,88 +83,6 @@ para usar a mesma instância de serviço, geralmente para compartilhamento de da
 
 3. Escreva seu próprio código no aplicativo para interagir com
 o serviço.
-
-##Serviços por região
-
-Nem todos os serviços estão disponíveis em toda região do {{site.data.keyword.Bluemix_notm}}. A tabela a seguir mostra os serviços que são fornecidos pela IBM.
-
-
-
-|Serviço	|Disponível na região sul dos EUA	|Disponível na região do Reino Unido na Europa |Disponível na região de Sydney, na Austrália|
-|:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.activedeployshort}}	|Sim		|Sim		|Não|
-|{{site.data.keyword.alchemyapishort}} 		|Sim	   	|Sim  		|Sim|
-|{{site.data.keyword.appsecshort}}		|Sim		|Não		|Não|
-|{{site.data.keyword.alertnotificationshort}}|Sim		|Não			|Não		|
-|{{site.data.keyword.APS_DA}}			|Sim		|Não		|Não|
-|{{site.data.keyword.APS_MA}}			|Sim		|Não		|Não|
-|{{site.data.keyword.amashort}}			|Sim		|Sim		|Sim|
-|{{site.data.keyword.hadoopst}}			|Sim		|Não		|Não|
-|{{site.data.keyword.APIM}}			|Sim		|Sim		|Não|
-|{{site.data.keyword.autoscaling}}		|Sim		|Sim		|Sim|
-|{{site.data.keyword.bigicloudst}}		|Sim		|Não		|Não|
-|{{site.data.keyword.blockstorageshort}}        |Não             |Sim            |Não |
-|{{site.data.keyword.rules_short}}		|Sim		|Sim		|Não|
-|{{site.data.keyword.cloudint}}			|Sim		|Sim		|Não|
-|{{site.data.keyword.cloudant}}			|Sim		|Sim		|Não|
-|{{site.data.keyword.conceptexpansionshort}}	|Sim		|Sim		|Sim|
-|{{site.data.keyword.conceptinsightsshort}}	|Sim		|Sim		|Sim|
-|{{site.data.keyword.dashdbshort}}		|Sim		|Sim		|Não|
-|{{site.data.keyword.datacshort}}		|Sim		|Sim		|Sim|
-|{{site.data.keyword.DB2OnCloud_short}}		|Sim		|Sim		|Sim|
-|{{site.data.keyword.deliverypipeline}}		|Sim		|Sim		|Não|
-|{{site.data.keyword.dialogshort}}		|Sim		|Sim		|Sim|
-|{{site.data.keyword.documentconversionshort}}	|Sim		|Sim		|Sim|
-|{{site.data.keyword.creshort}}			|Sim		|Não		|Não|
-|{{site.data.keyword.game}}			|Sim		|Sim		|Sim|
-|{{site.data.keyword.geospatialshort_Geospatial}}	|Sim	|Sim		|Não|
-|{{site.data.keyword.globalizationshort}}	|Sim		|Não		|Não|
-|{{site.data.keyword.dataworks_short}}		|Sim		|Sim		|Não|
-|{{site.data.keyword.twittershort}}		|Sim		|Sim		|Sim|
-|{{site.data.keyword.weather_short}}		|Sim		|Sim		|Sim|
-|{{site.data.keyword.IntegrationTestingshort}}	|Sim		|Sim		|Não|
-|{{site.data.keyword.iot_short}}		|Sim		|Não		|Não|
-|{{site.data.keyword.keymanagementserviceshort}}|Não		|Sim		|Não|
-|{{site.data.keyword.languagetranslationshort}}	|Sim		|Sim		|Não|
-|{{site.data.keyword.messagehub}}		|Sim		|Sim		|Não|
-|{{site.data.keyword.messageresonanceshort}}	|Sim		|Sim		|Não|
-|{{site.data.keyword.APS_MAiOS}} 		|Sim		|Não		|Não|
-|{{site.data.keyword.macm_short}}		|Sim		|Sim		|Sim|
-|{{site.data.keyword.mobilemam}}		|Sim		|Sim		|Não|
-|{{site.data.keyword.mobiledata}}		|Sim		|Sim		|Não|
-|{{site.data.keyword.manda}}			|Sim		|Sim		|Não|
-|{{site.data.keyword.mqa}}			|Sim		|Sim		|Não|
-|{{site.data.keyword.mql}}			|Sim		|Sim		|Não|
-|{{site.data.keyword.nlclassifiershort}} 	|Sim 		|Sim 		|Sim|
-|{{site.data.keyword.objectstorageshort}}	|Sim		|Não		|Não|
-|{{site.data.keyword.personalityinsightsshort}}	|Sim		|Sim		|Sim|
-|{{site.data.keyword.mobilepush}}		|Sim		|Sim		|Não|
-|Push for iOS 8					|Sim		|Sim		|Não|
-|{{site.data.keyword.questionandanswershort}}	|Sim		|Sim		|Sim|
-|{{site.data.keyword.rapidApps}}		|Sim		|Sim		|Não|
-|{{site.data.keyword.relationshipextractionshort}}	|Sim	|Sim		|Sim|
-|{{site.data.keyword.retrieveandrankshort}}	|Sim 		|Sim 		|Sim|
-|{{site.data.keyword.SecureGateway}}		|Sim		|Sim		|Não|
-|{{site.data.keyword.sescashort}}		|Sim		|Sim		|Sim|
-|{{site.data.keyword.ssofull}}			|Sim		|Não		|Não|
-|{{site.data.keyword.speechtotextshort}}	|Sim 		|Sim	 	|Sim|
-|{{site.data.keyword.sqldb}}			|Sim		|Sim		|Não|
-|{{site.data.keyword.staticanalyzershort}}	|Sim		|Sim		|Não|
-|{{site.data.keyword.streaminganalyticsshort}}	|Sim		|Não		|Não|
-|{{site.data.keyword.texttospeechshort}} 	|Sim 		|Sim	 	|Sim|
-|{{site.data.keyword.times}}			|Sim		|Sim		|Não|
-|{{site.data.keyword.toneanalyzershort}} 	|Sim 		|Sim 		|Sim|
-|{{site.data.keyword.trackplan}}		|Sim		|Sim		|Não|
-|{{site.data.keyword.tradeoffanalyticsshort}}	|Sim		|Sim		|Sim|
-|{{site.data.keyword.visualinsightsshort}}	|Sim		|Sim		|Sim|
-|{{site.data.keyword.visualizationrenderingshort}} |Sim		|Sim		|Não|
-|{{site.data.keyword.workflow}}			|Sim		|Sim		|Não|
-|{{site.data.keyword.workloadscheduler}}	|Sim		|Sim		|Não|
-|{{site.data.keyword.xpagesservice_short}}	|Sim		|Sim		|Não|
-*Tabela 2. Disponibilidade do serviço*
-{: caption="Tabela 2. Disponibilidade de serviço" caption-side="top"}
-
-
 
 # Incluindo um serviço em seu aplicativo
 {: #add_service}
@@ -196,12 +122,11 @@ codifica aplicativos externos ou ferramentas de terceiros para usar os serviços
 ## Solicitando uma nova instância de serviço
 {: #req_instance}
 
-Para solicitar uma nova instância de serviço, deve-se usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface de
-linha de comandos cf.
+Para solicitar uma nova instância de serviço, deve-se usar o console do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos cf.
 
 **Nota:** Ao especificar o nome do serviço, evite usar caracteres que não sejam caracteres alfabéticos ou numéricos, pois os resultados poderão ser imprevisíveis.
 
-Se você usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} para solicitar uma instância de serviço, conclua as etapas a seguir:
+Se você usar o console do {{site.data.keyword.Bluemix_notm}} para solicitar uma instância de serviço, conclua as etapas a seguir:
 
 1. No **Catálogo** do {{site.data.keyword.Bluemix_notm}}, clique no ladrilho para o serviço que você deseja incluir. A página de detalhes do serviço é aberta.
 
@@ -465,7 +390,7 @@ ligação de serviço.
 # rellinks
 {: #rellinks}
 
-## general
+## gerais
 {: #general}
 
 * [Ligando um serviço usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}}](/docs/cfapps/ee.html#ee_bindui)

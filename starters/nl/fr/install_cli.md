@@ -33,7 +33,7 @@ lastupdated: "2017-04-19"
 Utilisez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} pour télécharger, modifier et redéployer vos applications et instances de service Cloud Foundry.
 {:shortdesc}
 
-Avant de commencer, téléchargez et installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.  
+Avant de commencer, téléchargez et installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. 
 
 <p>
 <a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger l'interface de ligne de commande Bluemix" /> </a>

@@ -22,8 +22,7 @@ lastupdated: "2017-04-10"
 {: #managingapps}
 
 
-Entre los problemas generales relacionados con la gestión de apps se pueden incluir
-las apps que no se pueden actualizar y los caracteres de doble byte que no se visualizan. En muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos.
+Entre los problemas generales relacionados con la gestión de apps se pueden incluir las apps que no se pueden actualizar y los caracteres de doble byte que no se visualizan. En muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos.
 {:shortdesc}
 
 
@@ -208,8 +207,7 @@ No tiene el nivel adecuado de autorización necesario para realizar las acciones
 Para obtener el nivel de autorización adecuado, utilice uno de estos métodos:
 {: tsResolve}
  * Seleccione otra organización y otro espacio de los que tenga el rol de desarrollador.
- * Pida al gestor de la organización que le cambie el rol a desarrollador o que cree un espacio y le asigne un rol de desarrollador. Consulte
-[Gestión de organizaciones y espacios](/docs/admin/orgs_spaces.html) para obtener detalles.
+ * Pida al gestor de la organización que le cambie el rol a desarrollador o que cree un espacio y le asigne un rol de desarrollador. Consulte [Gestión de organizaciones y espacios](/docs/admin/orgs_spaces.html) para obtener detalles.
 
 ## No se puede acceder a los servicios de Bluemix debido a errores de autorización
 {: #ts_vcap}
@@ -234,21 +232,16 @@ Para obtener más información sobre los mandatos que puede utilizar en otros le
 ## No se pueden desplegar apps utilizando IBM Eclipse Tools for Bluemix
 {: #ts_bm_tools_facet}
 
-Cuando se aplica una faceta no soportada en el proyecto de Eclipse,
-no podrá desplegar las apps en {{site.data.keyword.Bluemix_notm}} utilizando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
+Cuando se aplica una faceta no soportada en el proyecto de Eclipse, no podrá desplegar las apps en {{site.data.keyword.Bluemix_notm}} utilizando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 
 Puede desplegar correctamente la app en {{site.data.keyword.Bluemix_notm}} con la CLI de Cloud Foundry. Sin embargo, no puede desplegar la app en {{site.data.keyword.Bluemix_notm}} utilizando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} y verá el mensaje de error: `No se admite la faceta de proyecto <nombre_faceta>.` Por ejemplo:
 {: tsSymptoms}
 `No se da soporte a la faceta de proyecto de la aplicación autónoma de Cloud Foundry versión 1.0.`
 
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} asignan proyectos a los tiempos de ejecución de {{site.data.keyword.Bluemix_notm}} mediante facetas de proyectos. Las facetas definen los requisitos de los proyectos de
-Java EE en Eclipse y se utilizan como parte de la configuración de tiempo de ejecución de modo que los diferentes tiempos de ejecución estén asociados a diferentes proyectos. Si
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} no da soporte a la faceta que se aplica al proyecto, no se podrá desplegar la app utilizando IBM Eclipse
-Tools for {{site.data.keyword.Bluemix_notm}}.
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} asignan proyectos a los tiempos de ejecución de {{site.data.keyword.Bluemix_notm}} mediante facetas de proyectos. Las facetas definen los requisitos de los proyectos de Java EE en Eclipse y se utilizan como parte de la configuración de tiempo de ejecución de modo que los diferentes tiempos de ejecución estén asociados a diferentes proyectos. Si IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} no da soporte a la faceta que se aplica al proyecto, no se podrá desplegar la app utilizando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 {: tsCauses}
 
-Debe eliminar la faceta del proyecto de Eclipse para poder
-desplegar la app utilizando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
+Debe eliminar la faceta del proyecto de Eclipse para poder desplegar la app utilizando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 {: tsResolve}
 
 Para eliminar la faceta, en IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, pulse **Proyecto>Propiedades>Facetas de proyecto** del proyecto. Luego, desmarque el recuadro de selección de la faceta a la que no se da soporte.
@@ -335,8 +328,8 @@ Suprima las instancias del servicio que no sean necesarias o elimine el límite 
   * Para suprimir una instancia del servicio, puede utilizar la consola de {{site.data.keyword.Bluemix_notm}} o la interfaz de la línea de mandatos.
 
     Para utilizar la consola de {{site.data.keyword.Bluemix_notm}} para suprimir una instancia de servicio, siga estos pasos:
-	  1. En el panel de control Servicios, pulse el menú **Acciones** para el servicio que desea suprimir. 
-	  2. Pulse **Suprimir servicio**. Se le solicitará que cambie las etapas de la app a la que está vinculada la instancia de servicio. 
+	  1. En el panel de control Servicios, pulse el menú **Acciones** para el servicio que desea suprimir.
+	  2. Pulse **Suprimir servicio**. Se le solicitará que cambie las etapas de la app a la que está vinculada la instancia de servicio.
 
     Para utilizar la interfaz de línea de mandatos para suprimir una instancia de servicio, siga los pasos siguientes:
 	  1. Desenlace la instancia de servicio de la app escribiendo `cf unbind-service <nombre_app> <nombre_instancia_servicio>`.
@@ -356,8 +349,7 @@ No puede ejecutar archivos ejecutables en {{site.data.keyword.Bluemix_notm}} si 
 Si el contenido que quiere enviar a {{site.data.keyword.Bluemix_notm}} ya es un ejecutable, el contenido ya se habrá compilado previamente y no será necesario compilarlo en {{site.data.keyword.Bluemix_notm}}. En este caso, no se requiere ningún paquete de compilación para ejecutar el archivo ejecutable en {{site.data.keyword.Bluemix_notm}}. Sin embargo, debe indicar explícitamente a {{site.data.keyword.Bluemix_notm}} que no se requiere ningún paquete de compilación.
 {: tsCauses}
 
-Cuando envíe el archivo ejecutable a {{site.data.keyword.Bluemix_notm}},
-debe especificar un paquete de compilación nulo, que indica que no se requiere ningún paquete de compilación. Especifique un paquete de compilación nulo mediante la opción **-b** con el mandato `cf push`:
+Cuando envíe el archivo ejecutable a {{site.data.keyword.Bluemix_notm}}, debe especificar un paquete de compilación nulo, que indica que no se requiere ningún paquete de compilación. Especifique un paquete de compilación nulo mediante la opción **-b** con el mandato `cf push`:
 {: tsResolve}
 
 ```
@@ -371,7 +363,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## El límite memoria de la organización se ha excedido
 {: #ts_outofmemory}
 
-Si es usuario de una cuenta de prueba, es posible que no pueda desplegar una app en {{site.data.keyword.Bluemix_notm}} si ha excedido el límite de memoria de su organización. Puede reducir la memoria que utilizan las apps o aumentar la cuota de memoria de su cuenta. El máximo de cuota de memoria para una cuenta de prueba es de 2 GB y únicamente se puede incrementar pasando a una cuenta de pago. 
+Si es usuario de una cuenta de prueba, es posible que no pueda desplegar una app en {{site.data.keyword.Bluemix_notm}} si ha excedido el límite de memoria de su organización. Puede reducir la memoria que utilizan las apps o aumentar la cuota de memoria de su cuenta. El máximo de cuota de memoria para una cuenta de prueba es de 2 GB y únicamente se puede incrementar pasando a una cuenta de pago.
 
 Al desplegar una app en {{site.data.keyword.Bluemix_notm}}, verá el siguiente mensaje de error:
 {: tsSymptoms}
@@ -416,7 +408,7 @@ Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utiliza
 
 Una app no se reinicia automáticamente si el servicio que ha enlazado a la app deja de funcionar.	  
 
-Si se bloquea un servicio enlazado con una app, se pueden producir problemas como paradas, excepciones o intentos de reconexión. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la app para solucionar los problemas.
+Si se bloquea un servicio enlazado con una app, se pueden producir problemas en la app como paradas, excepciones o intentos de reconexión. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la app para solucionar los problemas.
 {: tsSymptoms}
 
 Este comportamiento se debe al diseño de Cloud Foundry.
@@ -433,48 +425,16 @@ Además, puede codificar la app para identificar y recuperarse de problemas como
 ## Se pierden las variables definidas por el usuario al enviar por push una app
 {: #ts_varsnotretained}
 
-Al enviar por push una app a {{site.data.keyword.Bluemix_notm}} desde IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, se restablecen las variables especificadas, a menos que las guarde
-en el archivo de manifiesto.
+Al enviar por push una app a {{site.data.keyword.Bluemix_notm}} desde IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, se restablecen las variables especificadas, a menos que las guarde en el archivo de manifiesto.
 
 Las variables especificadas se pierden tras enviar por push una app a {{site.data.keyword.Bluemix_notm}} desde IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 {: tsSymptoms}
 
-Las variables especificadas solo se guardan si las guarda
-en el archivo de manifiesto.
+Las variables especificadas solo se guardan si las guarda en el archivo de manifiesto.
 {: tsCauses}
 
-Al enviar por push una app a {{site.data.keyword.Bluemix_notm}} desde IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, seleccione el recuadro de verificación **Guardar en el archivo de manifiesto** en la página Detalles de aplicación del asistente Aplicación. Posteriormente,
-las variables especificadas
-en el asistente
-se guardan en el archivo de manifiesto de su app. La próxima vez que abra el asistente, las variables se visualizarán automáticamente.
+Al enviar por push una app a {{site.data.keyword.Bluemix_notm}} desde IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, seleccione el recuadro de verificación **Guardar en el archivo de manifiesto** en la página Detalles de aplicación del asistente Aplicación. Posteriormente, las variables especificadas en el asistente se guardan en el archivo de manifiesto de su app. La próxima vez que abra el asistente, las variables se visualizarán automáticamente.
 {: tsResolve}
-
-
-## No se muestran los iconos de Bluemix Live Sync
-{: #ts_llz_lkb_3r}
-
-Ha creado una app, pero los iconos de IBM Bluemix Live Sync no se muestran en el IDE de web.
-
-Al editar una app Node.js en Web IDE, los iconos de {{site.data.keyword.Bluemix_notm}} Live de editar, reinicio rápido y depurar no se muestran.
-{: tsSymptoms}
-
-Los iconos no están disponibles en estas circunstancias:
-{: tsCauses}
-
-  * El archivo `manifest.yml` no está guardado en el nivel superior del proyecto.
-  * La app está almacenada en un subdirectorio en lugar de en el nivel superior del proyecto, pero la vía de acceso al subdirectorio no está especificada en el archivo `manifest.yml`.
-  * La app no contiene un archivo `package.json`.
-
-Utilice uno de los siguientes métodos:
-{: tsResolve}
-
-  * Si el archivo `manifest.yml` no está almacenado en el nivel superior del proyecto, guárdelo ahí.
-  * Si la app está almacenada en un subdirectorio, especifique la vía de acceso al subdirectorio en el archivo `manifest.yml`.
-  ```
-   path: vía_acceso_a_app
-   ```
-  * Cree un archivo `package.json` que esté en el directorio de la app.
-
 
 <!-- begin STAGING ONLY -->
 
@@ -489,15 +449,15 @@ Debería habilitar la característica de depuración de su app configurando la v
 La característica Debug no se puede habilitar en estas situaciones:
 {: tsCauses}
 
-  * Cuando `manifest.yml` contiene el atributo command. 
+  * Cuando `manifest.yml` contiene el atributo command.
   * Cuando utiliza la opción **-c** para enviar por push la app a {{site.data.keyword.Bluemix_notm}}
 
 Utilice una de las siguientes opciones para resolver este problema:
 {: tsResolve}
 
-  * La práctica recomendada es utilizar el paquete de compilación IBM Node.js para iniciar la app. Para obtener más información, consulte la sección del mandato Startup del tema [Desplegar una aplicación Node.js en {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime). 
+  * La práctica recomendada es utilizar el paquete de compilación IBM Node.js para iniciar la app. Para obtener más información, consulte la sección del mandato Startup del tema [Desplegar una aplicación Node.js en {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime).
   * Inhabilite el mandato para su app existente revisando el atributo command en su archivo `manifest.yml` para command: nulo o editándolo para que el mandato push incluya `-c null`.
-  * Elimine el atributo **command** de `manifest.yml`. A continuación suprima la app actual de {{site.data.keyword.Bluemix_notm}} y envíe por push la app de nuevo. 
+  * Elimine el atributo **command** de `manifest.yml`. A continuación suprima la app actual de {{site.data.keyword.Bluemix_notm}} y envíe por push la app de nuevo.
 
 <!-- end STAGING ONLY -->  
 
@@ -520,9 +480,7 @@ Al intentar enviar por push una app a {{site.data.keyword.Bluemix_notm}} utiliza
 
 `No se ha encontrado cloudspace.`
 
-Este problema se produce porque no se ha especificado el punto final de la API de la región
-con la que desea trabajar, y la organización que está buscando
-puede encontrarse en otra región.
+Este problema se produce porque no se ha especificado el punto final de la API de la región con la que desea trabajar, y la organización que está buscando puede encontrarse en otra región.
 {: tsCauses}
 
 Si envía por push su app a {{site.data.keyword.Bluemix_notm}} utilizando la interfaz de línea de mandatos cf, introduzca el mandato cf api y especifique el punto final API de la región. Por ejemplo, escriba el siguiente mandato para conectarse a la región {{site.data.keyword.Bluemix_notm}} de Europa - Reino Unido:
@@ -531,8 +489,7 @@ Si envía por push su app a {{site.data.keyword.Bluemix_notm}} utilizando la int
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-Si envía por push su app a {{site.data.keyword.Bluemix_notm}} utilizando las herramientas de Eclipse, primero debe crear un servidor de {{site.data.keyword.Bluemix_notm}} y especificar el punto final API de la región de {{site.data.keyword.Bluemix_notm}} en la que se ha creado su organización. Para obtener más información
-sobre el uso de las herramientas de Eclipse, consulte [Despliegue de apps con IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html).  
+Si envía por push su app a {{site.data.keyword.Bluemix_notm}} utilizando las herramientas de Eclipse, primero debe crear un servidor de {{site.data.keyword.Bluemix_notm}} y especificar el punto final API de la región de {{site.data.keyword.Bluemix_notm}} en la que se ha creado su organización. Para obtener más información sobre el uso de las herramientas de Eclipse, consulte [Despliegue de apps con IBM Eclipse Tools for Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html).  
 
 ## No se pueden crear rutas de app
 {: #ts_hostistaken}
@@ -544,20 +501,17 @@ Al desplegar una app en {{site.data.keyword.Bluemix_notm}}, verá el siguiente m
 
 `Creating route hostname.domainname ... FAILED Server error, status code: 400, error code: 210003, message: The host is taken: hostname`
 
-Este problema se produce si el nombre de host especificado
-ya está en uso.
+Este problema se produce si el nombre de host especificado ya está en uso.
 {: tsCauses}
 
-El nombre de host especificado debe ser exclusivo en el dominio
-que está utilizando. Para especificar otro nombre de host debe utilizar uno de los siguientes métodos:
+El nombre de host especificado debe ser exclusivo en el dominio que está utilizando. Para especificar otro nombre de host debe utilizar uno de los siguientes métodos:
 {: tsResolve}
 
   * Si despliega su app utilizando el archivo `manifest.yml`, especifique el nombre de host en la opción host.	 
     ```
     host: nombre_host
 	```
-  * Si despliega su app desde el indicador de mandatos, utilice el mandato `cf
-push` con la opción **-n**.
+  * Si despliega su app desde el indicador de mandatos, utilice el mandato `cf push` con la opción **-n**.
     ```
     cf push nombre_app -p vía_acceso_app -n nombre_host
     ```
@@ -575,8 +529,7 @@ Si carga una app WAR en {{site.data.keyword.Bluemix_notm}} mediante el mandato `
 Este problema puede suceder si no se especifica el archivo WAR o si no se especifica la vía de acceso al archivo WAR.
 {: tsCauses}
 
-Utilice la opción **-p** para especificar un archivo
-WAR o añada la vía de acceso al archivo WAR. Por ejemplo:
+Utilice la opción **-p** para especificar un archivo WAR o añada la vía de acceso al archivo WAR. Por ejemplo:
 {: tsResolve}
 
 ```
@@ -586,8 +539,7 @@ cf push MyUniqueAppName01 -p app.war
 ```
 cf push MyUniqueAppName02 -p "./app.war"
 ```
-Para obtener más información sobre el mandato `cf push`, escriba `cf
-push -h`. 	
+Para obtener más información sobre el mandato `cf push`, escriba `cf push -h`. 	
 
 
 ## Los caracteres de doble byte no se visualizan correctamente cuando se envían por push apps Liberty a Bluemix 
@@ -617,11 +569,9 @@ Puede utilizar el código siguiente en el servlet o archivo JSP:
 ## No se pueden desplegar las apps Node.js
 {: #ts_nodejs_deploy}
 
-Es posible que tenga problemas si actualiza una app Node.js o despliega una
-app Node.js en {{site.data.keyword.Bluemix_notm}}.
+Es posible que tenga problemas si actualiza una app Node.js o despliega una app Node.js en {{site.data.keyword.Bluemix_notm}}.
 
-Si actualiza una app Node.js o despliega una
-app Node.js en {{site.data.keyword.Bluemix_notm}}, es posible que reciba uno de los siguientes mensajes de error:
+Si actualiza una app Node.js o despliega una app Node.js en {{site.data.keyword.Bluemix_notm}}, es posible que reciba uno de los siguientes mensajes de error:
 {: tsSymptoms}
 
 `Ningún paquete de compilación disponible ha detectado correctamente una app.`
@@ -696,7 +646,7 @@ Después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty en Eclip
 El paquete de compilación de Liberty utiliza el archivo `server.xml` para configurar la app y genera un archivo `runtime-vars.xml` cuando la app Liberty se envía a {{site.data.keyword.Bluemix_notm}}. Cuando importa la app en Eclipse, el archivo `runtime-vars.xml` no existe en el entorno local.
 {: tsCauses}
 
-Puede resolver este problema eliminando el archivo server.xml del proyecto. El paquete de compilación crea el archivo `server.xml` de forma dinámica cuando se envía la app como una app WAR. Para obtener más información, consulte [Liberty for Java](/docs/runtimes/liberty/index.html).
+Puede resolver este problema eliminando el archivo server.xml del proyecto. El paquete de compilación crea el archivo `server.xml` de forma dinámica cuando se envía la app como una app WAR. Para obtener más información, consulte el apartado [Liberty for Java](/docs/runtimes/liberty/index.html).
 {: tsResolve}
 
 
@@ -714,21 +664,19 @@ Este problema puede suceder si los scripts, como el script de detección, el scr
 Puede utilizar el mandato [git update ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](http://git-scm.com/docs/git-update-index){: new_window} para cambiar el permiso de cada script por ejecutable. Por ejemplo, puede escribir `git update --chmod=+x script.sh`.
 {: tsResolve}
 
+## No puede desplegar una app desde Delivery Pipeline en IBM Bluemix Continuous Delivery
+ {: #ts_devops_to_bm}
 
-## No se puede desplegar una app de DevOps Services en Bluemix
-{: #ts_devops_to_bm}
+ Podría no poder desplegar su app utilizando {{site.data.keyword.deliverypipeline}} en {{site.data.keyword.contdelivery_short}} si el archivo `manifest.yml` no está presente en su app. 
 
-Es posible que no pueda enviar por push la app de IBM Bluemix DevOps Services a {{site.data.keyword.Bluemix_notm}} si la app no contiene el archivo `manifest.yml`.
+ Cuando se despliega una app utilizando {{site.data.keyword.deliverypipeline}} en {{site.data.keyword.contdelivery_short}}, podría visualizarse el mensaje de error `No es posible detectar un tipo de aplicación soportada`.
+ {: tsSymptoms}
 
-Cuando se despliega una app desde DevOps Services en {{site.data.keyword.Bluemix_notm}}, es posible que se visualice el mensaje de error `No se ha detectado ningún tipo de app soportado`.
-{: tsSymptoms}
+ Este problema podría deberse a que el conducto necesita un archivo `manifest.yml` para desplegar una app en {{site.data.keyword.Bluemix_notm}}.
+ {: tsCauses}
 
-Este problema puede deberse a que DevOps Services necesita un archivo `manifest.yml` para desplegar una app en {{site.data.keyword.Bluemix_notm}}.
-{: tsCauses}
-
-Para solucionar este problema, debe crear un archivo `manifest.yml`. Para obtener más información sobre cómo crear un archivo `manifest.yml`, consulte [Manifiesto de la app](/docs/manageapps/depapps.html#appmanifest).
-{: tsResolve}
-
+ Para solucionar este problema, debe crear un archivo `manifest.yml`. Para obtener más información sobre cómo crear un archivo `manifest.yml`, consulte [Manifiesto de la app](/docs/manageapps/depapps.html#appmanifest).
+ {: tsResolve}
 
 ## No se pueden enviar por push las apps de Meteor
 {: #ts_meteor}
@@ -748,176 +696,7 @@ Para utilizar un paquete de compilación personalizado para las apps de Meteor, 
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
-  * Si despliega su app desde un indicador de mandatos, utilice el mandato `cf
-push` y especifique el paquete de compilación personalizado mediante la opción
-**-b**. Por ejemplo:
+  * Si despliega su app desde un indicador de mandatos, utilice el mandato `cf push` y especifique el paquete de compilación personalizado mediante la opción **-b**. Por ejemplo:
     ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
-
-## El botón Desplegar en Bluemix no despliega la app
-{: #ts_deploybutton}
-
-Si pulsa el botón Desplegar en {{site.data.keyword.Bluemix_notm}} y se encuentra con que el repositorio Git no está clonado o que la app no se ha desplegado, pruebe la resolución de problemas de los siguientes problemas.
-  * [El proyecto Bluemix DevOps Services no se puede crear](#ts_project-cant-be-created)
-  * [El repositorio Git no se encuentra y no se puede clonar en DevOps Services](#ts_repo-not-found)
-  * [El repositorio Git está clonado en DevOps Services, pero la app no se despliega en {{site.data.keyword.Bluemix_notm}}](#ts_repo-cloned-app-not-deployed)
-
-Para obtener más información sobre cómo crear el botón, consulte Creación de un despliegue para un botón de {{site.data.keyword.Bluemix_notm}}.
-
-### El proyecto Bluemix DevOps Services no se puede crear
-{: #ts_project-cant-be-created}
-
-Si no se puede crear el proyecto DevOps Services, es posible que su cuenta de IBM {{site.data.keyword.Bluemix_notm}} haya caducado.
-
-Pulsa el botón **Desplegar en Bluemix**, pero el paso "Creando proyecto" no se completa correctamente.
-{: tsSymptoms}
-
-Es posible que su cuenta de {{site.data.keyword.Bluemix_notm}} haya caducado.
-{: tsCauses}
-
-Utilice uno de los siguientes métodos:
-{: tsResolve}
-
-  * Inicie sesión en {{site.data.keyword.Bluemix_notm}} y actualice la información de cuenta.
-  * Pulse el botón **Desplegar en Bluemix** de nuevo.
-
-### El repositorio Git no se encuentra y no se puede clonar en DevOps Services
-{: #ts_repo-not-found}
-
-Si se encuentra con que el repositorio Git no está clonando, es posible que haya algún problema con el repositorio o con el fragmento de código del botón.
-
-Pulsa el botón **Desplegar en Bluemix**, pero el repositorio Git no se encuentra y no se puede clonar en DevOps Services. El paso "Clonando repositorio" no se completa correctamente. Por lo tanto, la app no se puede desplegar en {{site.data.keyword.Bluemix_notm}}.
-{: tsSymptoms}
-
-Este problema se podría producir por las siguientes razones:
-{: tsCauses}
-
-  * Es posible que el repositorio Git no exista o no se pueda acceder a él.
-  * Es posible que haya un problema en el HTML o el markdown del fragmento de código del botón.
-  * Es posible que haya un problema y que los caracteres especiales, los parámetros de consulta o fragmentos del URL impidan que se pueda acceder al repositorio Git.
-
-Utilice uno de los siguientes métodos:
-{: tsResolve}
-
-  * Compruebe que el repositorio Git exista, se pueda acceder públicamente y que el URL sea correcto.
-  * Compruebe que el fragmento de código no contenga errores de HTML ni markdown.
-  * Si hay caracteres especiales, parámetros de consulta o fragmentos que causan algún problema con el URL del repositorio Git, codifique el URL del fragmento de código del botón.
-
-### El repositorio Git está clonado en DevOps Services, pero la app no se despliega en Bluemix
-{: #ts_repo-cloned-app-not-deployed}
-
-Si la app no se ha desplegado, es posible que haya algún problema con el código del repositorio.
-
-Pulsa el botón **Desplegar en Bluemix** y el repositorio Git se clona en DevOps Services, pero la app no se despliega en {{site.data.keyword.Bluemix_notm}}. El paso "Desplegando en Bluemix" no se completa correctamente.
-{: tsSymptoms}
-
-Este problema se podría producir por las siguientes razones:
-{: tsCauses}  
-
-  * Puede que no haya suficiente espacio en el espacio de {{site.data.keyword.Bluemix_notm}} para desplegar una app.
-  * Puede que un servicio necesario no se haya declarado en el archivo `manifest.yml`.
-  * Puede que un servicio necesario se haya declarado en el archivo `manifest.yml`, pero que el servicio ya exista en el espacio de destino.
-  * Puede que haya algún problema con el código del repositorio.
-
-Para diagnosticar el problema, revise los registros de compilación y despliegue del despliegue:
-  1. Cuando el paso "Desplegando en Bluemix" no se complete correctamente, pulse el enlace del paso anterior "Configurando el conducto" para abrir Delivery Pipeline.
-  2. Identifique la compilación o la etapa de despliegue anómala.
-  3. En la etapa anómala, pulse **Ver registros e historial**.
-  4. Localice el mensaje de error.
-
-Utilice uno de los siguientes métodos:
-{: tsResolve}
-
-  * Si el mensaje de error indica que no hay suficiente espacio en el espacio de {{site.data.keyword.Bluemix_notm}} para desplegar la app, seleccione otro espacio.
-  * Si el mensaje de error indica que un servicio necesario no se ha declarado en el archivo `manifest.yml`, notifique al propietario del repositorio que se debe añadir el servicio.
-  * Si el mensaje de error indica que un servicio necesario ya existe en el espacio de destino, seleccione un espacio diferente.
-  * Si el mensaje de error indica que existe un problema con la compilación, solucione los problemas con el código que impiden que la app se compile. Para verificar que el código no contiene ningún problema, compile el código utilizando mandatos Git:
-    1. Clone el repositorio Git:
-    ```
-    git clone <URL_repositorio_git>
-    ```
-    2. Abra el directorio de la app:
-	```
-	cd <appname>
-	```
-    3. Cree la app:
-	```
-	<appname> create
-	```
-    4. Si es necesario, suministre los complementos.
-    5. Añada las variables de configuración que sean necesarias.
-    6. Envíe el código:
-	```
-	git push <appname> master
-	```
-    7. Compruebe que la app se compile correctamente.
-    8. Si es necesario, ejecute el mandato posterior al despliegue:
-	```
-	<appname> run
-	```
-    9. Abra la app y compruebe que funcione correctamente:
-	```
-	<appname> open
-	```
-
-## No se puede desplegar una app desde la barra de ejecución
-{: #ts_runbar}
-
-El despliegue falla con el estado "no sincronizado" marcado en amarillo.
-{: tsSymptoms}
-
-La app que está desplegando tiene la misma ruta que otra app que está en ejecución.
-{: tsCauses}
-
-Cambie la ruta para que sea exclusiva.
-{: tsResolve}
-
-## No se puede encontrar la barra de ejecución en Eclipse
-{: #ts_runbar-missing}
-
-Si no puede ver la barra de ejecución en Eclipse Orion {{site.data.keyword.webide}}, se habrá producido uno de estos problemas:
-{: tsCauses}
-
-* {{site.data.keyword.jazzhub}} no identifica su proyecto como un proyecto.
-*  {{site.data.keyword.jazzhub_short}} no puede determinar en qué carpeta se encuentra la app.
-* {{site.data.keyword.jazzhub_short}} no detecta que su app sea una app Node.js.
-
-Utilice, entre los
-métodos siguientes, el adecuado:
-{: tsResolve}  
-
-* Si {{site.data.keyword.jazzhub}} no identifica el proyecto como un proyecto, cree un archivo `project.json` en el directorio raíz del proyecto.
-* Si {{site.data.keyword.jazzhub_short}} no ha podido determinar en qué carpeta está su app, y su app no está en el directorio raíz del proyecto, siga uno de los pasos siguientes:
-  * Cree un archivo `manifest.yml` en el directorio raíz del proyecto y edite el archivo para que apunte a la ubicación de la app. Por ejemplo, `path: vía_acceso_app`.
-  * Mueva la app al directorio raíz del proyecto.
-* Si {{site.data.keyword.jazzhub_short}} no detecta que la app es una app Node.js, cree un archivo `package.json` en la carpeta de app del proyecto.
-
-## El hook de GitHub no funciona
-{: #ts_githubhookisntworking}
-
-Ha configurado su proyecto de GitHub para crear enlaces de elementos de trabajo al enviar confirmaciones y los enlaces no funcionan según lo esperado.
-{: tsSymptoms}
-
-Siga estos pasos para identificar el problema:
-{: tsResolve}
-
-1. En el repositorio GitHub, pulse **Configuración**.
-   ![Enlace de configuración de GitHub](images/github_settings.png)
-
-2. Pulse **Webhooks y servicios**.
-   ![Enlace Webhooks y servicios de GitHub](images/github_webhook.png)
-
-3. Para ver el mensaje, pase el cursor del ratón sobre el icono de estado de {{site.data.keyword.jazzhub}}.
-   ![Mensaje de error sobre el hook de servicio](images/github_error.png)
-
-4. Resuelva el error de acuerdo al mensaje de GitHub.
-
-5. Para comprobar que la solución haya funcionado, confirme y envíe otro cambio, o vaya a la página del servicio de
-{{site.data.keyword.jazzhub_short}} y pulse **Probar servicio**.
-   ![Botón Probar servicio de GitHub](images/github_test.png)
-
-6. Verifique que no hay errores comprobando de nuevo el icono de estado.
-   ![Icono de estado sin errores](images/githubResolved_small.png)
-
-Para obtener más información, consulte [Configuración de GitHub para proyectos de Bluemix DevOps Services ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://hub.jazz.net/docs/githubhooks/){: new_window}.

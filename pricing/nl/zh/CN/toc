@@ -1,7 +1,25 @@
-{: .toc}
-管理记帐和使用情况   
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
 
-    [管理记帐和使用情况](index.html)
-        index.md
-	manage_billing.md                                                                                
-        standard_account.md
+{: .toc subcollection="bluemix-pricing" audience="platform" href="/docs/pricing/index.html"}
+管理记帐和使用情况
+    
+    {: .navgroup id="learn"}
+    index.md
+    standard_account.md
+    how_charged.md
+    api_based_services.md
+    {: .navgroup-end}
+    
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    定价
+        linking_accounts.md
+        estimating_costs.md
+            
+    {: .topicgroup}
+    使用情况
+        viewing_usage.md
+        changing_plan.md
+        manage_billing.md
+    {: .navgroup-end}

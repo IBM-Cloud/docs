@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-05-04"
 
 
 ---
@@ -392,9 +392,9 @@ cf help events
 {: #cf_login}
 
 
-{{site.data.keyword.Bluemix_notm}} にログインします。
+{{site.data.keyword.Bluemix_notm}} にログインします。[フェデレーテッド ID](/docs/admin/account.html#signup) でログインする場合は、シングル・サインオン (SSO) パラメーターを使用してログインする必要があります。 
 
-**注:** [フェデレーテッド ID](/docs/admin/account.html#signup) でログインする場合は、シングル・サインオン (SSO) パラメーターを使用してログインする必要があります。
+**注**: {{site.data.keyword.Bluemix_notm}} プラットフォーム API キーを使用してログインすることもできます。ユーザー名 `apikey` を使用し、API キー値をパスワードとして使用します。API キーの作成について詳しくは、『[API キーの管理](/docs/iam/apikeys.html)』を参照してください。
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -447,6 +447,12 @@ cf login -a https://api.ng.bluemix.net -u user_name
 定義されているエンドポイント `https://api.ng.bluemix.net`、ユーザー名 `user_name`、組織名 `org_name`、およびスペース名 `space_name` を使用し、セキュリティーのためのパスワードを指定せずに、{{site.data.keyword.Bluemix_notm}} にログインします。
 ```
 cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
+```
+{: codeblock}
+
+定義されているエンドポイント `https://api.ng.bluemix.net` を使用し、API キーを使用して {{site.data.keyword.Bluemix_notm}} にログインします。`apikey` をユーザー名として使用し、実際の API キーをパスワードとして使用します。
+```
+cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
 ```
 {: codeblock}
 

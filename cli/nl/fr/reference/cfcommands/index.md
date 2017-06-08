@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-05-04"
 
 
 ---
@@ -393,9 +393,9 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Vous connecte à {{site.data.keyword.Bluemix_notm}}.
+Vous connecte à {{site.data.keyword.Bluemix_notm}}. Si vous êtes connecté à l'aide d'un [ID fédéré](/docs/admin/account.html#signup), vous devez utiliser le paramètre de connexion unique (SSO) pour vous connecter. 
 
-**Remarque** : si vous êtes connecté à l'aide d'un [ID fédéré](/docs/admin/account.html#signup), vous devez utiliser le paramètre de connexion unique (SSO) pour vous connecter.
+**Remarque** : vous pouvez aussi utiliser une clé d'API de plateforme {{site.data.keyword.Bluemix_notm}} pour vous connecter. Servez-vous du nom d'utilisateur `apikey` et de la valeur de votre clé d'API comme mot de passe. Pour plus d'informations sur la création d'une clé d'API, voir [Gestion des clés d'API](/docs/iam/apikeys.html).
 
 ```
 cf login [-a url] [-u nom_utilisateur] [-p mot_de_passe] [-sso] [-o nom_organisation] [-s nom_espace] [--skip-ssl-validation]
@@ -456,6 +456,12 @@ d'utilisateur `nom_utilisateur`, sans spécifier de mot de passe pour des raison
 `nom_org` et le nom d'espace `nom_espace`.
 ```
 cf login -a https://api.ng.bluemix.net -u nom_utilisateur -o nom_org -s nom_espace
+```
+{: codeblock}
+
+Connectez-vous à {{site.data.keyword.Bluemix_notm}} avec le noeud final défini `https://api.ng.bluemix.net` à l'aide d'une clé d'API. Utilisez `apikey` comme nom d'utilisateur et la clé d'API réelle comme mot de passe. 
+```
+cf login -a https://api.ng.bluemix.net -u apikey -p CetteValeurEstVotreCléD'API
 ```
 {: codeblock}
 
@@ -538,7 +544,7 @@ nom_hôte] [-p chemin_app] [-s nom_pile] [-t délai] [--no-hostname] [--no-manif
 <dt>*-b* nom_pack_construction (facultatif)</dt>
 <dd>Nom du pack de construction. nom_pack_construction peut être le nom d'un
 pack de construction personnalisé (par exemple, liberty-for-java), une
-adrese URL Git (par exemple, https://github.com/cloudfoundry/java-buildpack.git), ou une adresse URL Git
+adresse URL Git (par exemple, https://github.com/cloudfoundry/java-buildpack.git), ou une adresse URL Git
 avec une branche ou une balise (par exemple, https://github.com/cloudfoundry/java-buildpack.git#v3.3.0 pour la balise v3.3.0).</dd>
 <dt>*-c* commande_démarrage (facultatif)</dt>
 <dd>Commande de démarrage de votre application. Pour utiliser la commande de démarrage par défaut, spécifiez la valeur null pour cette option. </dd>

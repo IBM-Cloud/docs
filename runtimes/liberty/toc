@@ -7,42 +7,52 @@ Liberty for Java
     {: .navgroup id="learn"}
     getting-started.md
     index.md
-    secureWebApp.md
 
     {: .topicgroup}
     Related links
         [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
-        [Managing Liberty apps](../../manageapps/app_mng.html#Utilities)
-        [Deploying apps with IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
-        [Getting started with IBM Monitoring and Analytics for Bluemix Service](../../services/monana/index.html#monana_oview)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    optionsForPushing.md
-    libertyFeatures.md
-    usingBetaFeatures.md
+    secureWebApp.md
+    loggingAndTracing.md
+    [Deploy apps with IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
     autoConfig.md
+    customizingJRE.md
+    oracle_jre.md
+    usingBetaFeatures.md
+    [Opt out of bound services](autoConfig#opting_out.md)
 
     {: .topicgroup}
-    Monitoring
+    Monitor Liberty in Bluemix
         monitoring/jconsole.md
         monitoring/dynatrace.md
         monitoring/newRelic.md
 
-    customizingJRE.md
+    {: .topicgroup}
+    Work offline or with a proxy
+        offlineMode.md
+        [Work with a proxy](../../manageapps/workingWithProxy.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    optionsForPushing.md
     memoryLimits.md
-    loggingAndTracing.md
+    libertyFeatures.md
     environmentVariables.md
+
+    {: .topicgroup}
+    Starter applications and buildpacks
+        [Use the starter applications](../../cfapps/starter_app_usage.html)
+        [Use community buildpacks](../../cfapps/byob.html)
+
     buildpackDefaults.md
-    offlineMode.md
-    [Using the starter applications](../../cfapps/starter_app_usage.html)
     [Managing Liberty and Node.js apps](../../manageapps/app_mng.html)
-    [Working with a proxy](../../manageapps/workingWithProxy.html)
-    [Using community buildpacks](../../cfapps/byob.html)
+    [Getting started with IBM Monitoring and Analytics for Bluemix Service](../../services/monana/index.html#monana_oview)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Buildpack support statement](../../manageapps/buildpackSupport.html)
-    updates.md
     ts_index.md
+    updates.md
+    [Buildpack support statement](../../manageapps/buildpackSupport.html)
     {: .navgroup-end}

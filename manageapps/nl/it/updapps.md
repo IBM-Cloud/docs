@@ -97,7 +97,7 @@ seguente comando:
 
 Una volta configurato il dominio personalizzato in {{site.data.keyword.Bluemix_notm}}, devi associarlo al dominio personalizzato del dominio di sistema {{site.data.keyword.Bluemix_notm}} sul tuo server DNS registrato:
 
-  1. Imposta un record 'CNAME' per il nome dominio personalizzato sul tuo server DNS. La procedura per l'impostazione del record CNAME varia a seconda del tuo provider DNS. Ad esempio, se utilizzi GoDaddy, devi seguire le linee guida di [Domains Help ![icona link esterno](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} fornite da GoDaddy.
+  1. Imposta un record 'CNAME' per il nome dominio personalizzato sul tuo server DNS. La procedura per l'impostazione del record CNAME varia a seconda del tuo provider DNS. Ad esempio, se utilizzi GoDaddy, devi seguire le linee guida di [Domains Help ![Icona link esterno](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} fornite da GoDaddy.
   2. Associare il nome dominio personalizzato all'endpoint sicuro della regione {{site.data.keyword.Bluemix_notm}} in cui viene eseguita la tua applicazione. Utilizza i seguenti endpoint della regione per fornire la rotta dell'URL assegnata alla tua organizzazione in {{site.data.keyword.Bluemix_notm}}:
 
     * STATI UNITI SUD: `secure.us-south.bluemix.net`
@@ -325,5 +325,5 @@ essere eliminata quando è in funzione la nuova.
 ## Link correlati
 {: #general}
 
-* [Blue-green deployments ![icona link esterno](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![icona link esterno](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}
+* [Blue-green deployments ![Icona link esterno](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![Icona link esterno](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}

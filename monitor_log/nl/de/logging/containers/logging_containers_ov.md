@@ -22,7 +22,7 @@ In {{site.data.keyword.Bluemix}} können Sie Containerprotokolle über das {{sit
 
 Containerprotokolle werden von außerhalb der Container mithilfe von Crawlern überwacht und weitergeleitet. Die Daten werden von den Crawlern an eine Multi-Tenant-Elasticsearch-Instanz in {{site.data.keyword.Bluemix_notm}} gesendet.
 
-**Hinweis:** Sie können Containerprotokolle in {{site.data.keyword.Bluemix_notm}} für Docker-Container analysieren, die in der von {{site.data.keyword.IBM}} verwalteten Cloud-Infrastruktur bereitgestellt sind. 
+**Hinweis:** Sie können Containerprotokolle in {{site.data.keyword.Bluemix_notm}} für Docker-Container analysieren, die in der von {{site.data.keyword.IBM}} verwalteten Cloud-Infrastruktur bereitgestellt sind.
 
 Die folgende Abbildung gibt eine allgemeine Übersicht über die Protokollierung für den {{site.data.keyword.containershort}}:
 

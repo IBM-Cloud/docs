@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -29,7 +29,9 @@ informações a seguir listam comandos que são suportados pela CLI do {{site.da
 <dt>Nó de Extremidade</dt>
 <dd>Um terminal de API deve ser configurado por meio de <code>bluemix api</code> antes de usar o comando.</dd>
 <dt>Login</dt>
-<dd>É necessário efetuar login usando o comando <code>bluemix login</code> antes de usar esse comando. <b>Se estiver efetuando login com o ID federado, use a opção '--sso' para autenticar com uma senha descartável ou use '--apikey' para autenticar com a chave API</b>. Acesse o console do {{site.data.keyword.Bluemix_notm}} “Gerenciar” -> “Segurança” -> “Chaves API do Bluemix” para criar chaves API</dd>
+<dd>É necessário efetuar login usando o comando <code>bluemix login</code> antes de usar esse comando.
+Se estiver efetuando login com o ID federado, use a opção '--sso' para se autenticar com uma senha única ou use '--apikey' para se autenticar com a chave API. Acesse o console do {{site.data.keyword.Bluemix_notm}}: **Gerenciar** &gt; **Segurança** &gt; **Chaves API do Bluemix** para criar chaves API.
+</dd>
 <dt>Destino</dt>
 <dd>O comando <code>bluemix target</code> deve ser usado para configurar uma organização e um espaço antes de usar esse comando.</dd>
 <dt>Docker</dt>
@@ -847,7 +849,8 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
    <dt>ORG_NAME (necessário)</dt>
    <dd>O nome da organização para a qual esse usuário é designado.</dd>
    <dt>ORG_ROLE (necessário)</dt>
-   <dd>O nome da função de organização para a qual esse usuário é designado. Por exemplo:
+   <dd>O nome da função de organização para a qual esse usuário é designado. Por
+exemplo:
    <ul>
    <li>OrgManager: essa função pode convidar e gerenciar usuários, selecionar e mudar planos e configurar limites de gastos.</li>
    <li>BillingManager: essa função pode criar e gerenciar a conta de cobrança e informações de pagamento.</li>
@@ -883,7 +886,8 @@ bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
    <dt>ORG_NAME (necessário)</dt>
    <dd>O nome da organização da qual esse usuário é removido.</dd>
    <dt>ORG_ROLE (necessário)</dt>
-   <dd>O nome da função de organização da qual esse usuário é removido. Por exemplo:
+   <dd>O nome da função de organização da qual esse usuário é removido. Por
+exemplo:
    <ul>
    <li>OrgManager: essa função pode convidar e gerenciar usuários, selecionar e mudar planos e configurar limites de gastos.</li>
    <li>BillingManager: essa função pode criar e gerenciar a conta de cobrança e informações de pagamento.</li>
@@ -941,7 +945,8 @@ bluemix iam space-role-set USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_NAME (necessário)</dt>
    <dd>O nome do espaço para o qual esse usuário é designado.</dd>
    <dt>SPACE_ROLE (necessário)</dt>
-   <dd>O nome da função de espaço para a qual esse usuário é designado. Por exemplo:
+   <dd>O nome da função de espaço para a qual esse usuário é designado. Por
+exemplo:
    <ul>
    <li>SpaceManager: essa função pode convidar e gerenciar usuários e ativar recursos para um determinado espaço.</li>
    <li>SpaceDeveloper: essa função pode criar e gerenciar aplicativos e serviços, bem como ver logs e relatórios.</li>
@@ -978,7 +983,8 @@ bluemix iam space-role-unset USER_NAME ORG_NAME SPACE_NAME SPACE_ROLE
    <dt>SPACE_NAME (necessário)</dt>
    <dd>O nome do espaço do qual esse usuário é removido.</dd>
    <dt>SPACE_ROLE (necessário)</dt>
-   <dd>O nome da função de espaço da qual esse usuário é removido. Por exemplo:
+   <dd>O nome da função de espaço da qual esse usuário é removido. Por
+exemplo:
    <ul>
    <li>SpaceManager: essa função pode convidar e gerenciar usuários e ativar recursos para um determinado espaço.</li>
    <li>SpaceDeveloper: essa função pode criar e gerenciar aplicativos e serviços, bem como ver logs e relatórios.</li>
@@ -1071,7 +1077,8 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
    <dt>ORG_NAME (necessário)</dt>
    <dd>O nome da organização para a qual esse usuário é convidado.</dd>
    <dt>ORG_ROLE (necessário)</dt>
-   <dd>O nome da função de organização para a qual esse usuário é convidado. Por exemplo:
+   <dd>O nome da função de organização para a qual esse usuário é convidado. Por
+exemplo:
    <ul>
   <li>OrgManager: essa função pode convidar e gerenciar usuários, selecionar e mudar planos e configurar limites de gastos.</li>
   <li>BillingManager: essa função pode criar e gerenciar a conta de cobrança e informações de pagamento.</li>
@@ -1080,7 +1087,8 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
    <dt>SPACE_NAME (necessário)</dt>
    <dd>O nome do espaço para o qual esse usuário é convidado.</dd>
    <dt>SPACE_ROLE (necessário)</dt>
-   <dd>O nome do espaço para o qual esse usuário é convidado. O nome da função do espaço para o qual esse usuário é convidado. Por exemplo:
+   <dd>O nome do espaço para o qual esse usuário é convidado. O nome da função do espaço para o qual esse usuário é convidado. Por
+exemplo:
    <ul>
 <li>SpaceManager: essa função pode convidar e gerenciar usuários e ativar recursos para um determinado espaço.</li>
 <li>SpaceDeveloper: essa função pode criar e gerenciar aplicativos e serviços, bem como ver logs e relatórios.</li>

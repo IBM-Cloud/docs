@@ -1,15 +1,15 @@
 ---
 
 copyright:
-  years: 2017 lastupdated: "2017-04-17"
+  years: 2017 
+lastupdated: "2017-04-17"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Introdução ao
-{{site.data.keyword.appid_short_notm}}
+# Introdução ao {{site.data.keyword.appid_short_notm}}
 {: #gettingstarted}
 
 O {{site.data.keyword.appid_full}} o ajuda a incluir autenticação em seu dispositivo móvel e apps da web e protege os seus sistemas de backend.

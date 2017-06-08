@@ -30,7 +30,7 @@ Procédez comme suit pour afficher et filtrer vos journaux d'application Cloud F
 
 2. Accédez au tableau de bord Kibana de votre application. Cliquez sur **Vue avancée** ![Lien Vue avancée](images/logging_advanced_view.jpg "Lien Vue avancée"). Le tableau de bord Kibana s'affiche.
 
-3. Sur le tableau de bord Kibana, cliquez sur l'icône de **dossier** ![Icône de dossier](images/logging_folder.jpg "Icône de dossier") pour afficher un menu répertoriant tous les tableaux de bord récents.  
+3. Sur le tableau de bord Kibana, cliquez sur l'icône de **dossier** ![Icône de dossier](images/logging_folder.jpg "Icône de dossier") pour afficher un menu répertoriant tous les tableaux de bord récents. 
 
     **Remarque :** Outre les tableaux de bord que vous avez sauvegardés par nom, le menu répertorie les tableaux de bord sans nom selon le format suivant : *ALCH_TENANT_ID_application_id*. 
 
@@ -50,7 +50,7 @@ Procédez comme suit pour afficher et filtrer vos journaux d'application Cloud F
 	
     3. Ajoutez un filtre.
     
-        Pour ajouter un filtre incluant des informations sur cette valeur de zone spécifique, cliquez sur l'icône en forme de **loupe** ![Icône en forme de loupe](images/logging_magnifying_glass.jpg "Icône en forme de loupe") dans la ligne du tableau contenant la zone que vous souhaitez filtrer.  
+        Pour ajouter un filtre incluant des informations sur cette valeur de zone spécifique, cliquez sur l'icône en forme de **loupe** ![Icône en forme de loupe](images/logging_magnifying_glass.jpg "Icône en forme de loupe") dans la ligne du tableau contenant la zone que vous souhaitez filtrer. 
 	
         Pour ajouter un filtre excluant des informations sur cette valeur de zone spécifique, cliquez sur l'icône d'**exclusion** ![Icône d'exclusion](images/logging_exclusion_icon.png "Icône d'exclusion") dans la ligne du tableau contenant la zone que vous souhaitez filtrer.  
 
@@ -60,11 +60,11 @@ Procédez comme suit pour afficher et filtrer vos journaux d'application Cloud F
 	
 6. Sauvegardez le tableau de bord sous un nom reconnaissable. 
 
-    Cliquez sur l'icône de **sauvegarde** ![Icône de sauvegarde](images/logging_save.jpg "Icône de sauvegarde") et entrez un nom pour votre tableau de bord.  
+    Cliquez sur l'icône de **sauvegarde** ![Icône de sauvegarde](images/logging_save.jpg "Icône de sauvegarde") et entrez un nom pour votre tableau de bord. 
 
     **Remarque :** Si vous tentez de sauvegarder un tableau de bord avec un nom contenant des espaces vides, l'opération échoue. Entrez un nom ne contenant pas d'espaces et cliquez sur l'icône de **sauvegarde**.
 
     ![Sauvegarde d'un nom de tableau de bord](images/logging_save_dashboard.jpg "Sauvegarde d'un nom de tableau de bord").
 
 
-Vous avez créé un tableau de bord qui filtre vos entrées de journal par ID d'application et ID d'instance. Vous pouvez charger votre tableau de bord sauvegardé à tout moment en cliquant sur l'icône de **dossier** ![Icône de dossier](images/logging_folder.jpg "Icône de dossier") et en sélectionnant votre tableau de bord par nom. 
+Vous avez créé un tableau de bord qui filtre vos entrées de journal par ID d'application et ID d'instance. Vous pouvez charger votre tableau de bord sauvegardé à tout moment en cliquant sur l'icône de **dossier** ![Icône de dossier](images/logging_folder.jpg "Icône de dossier") et en sélectionnant votre tableau de bord par nom.

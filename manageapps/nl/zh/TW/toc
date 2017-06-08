@@ -9,7 +9,7 @@
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
-	[將服務新增至您的應用程式](../services/reqnsi.html)
+	[將服務新增至您的應用程式](../services/reqnsi.html#add_service)
 	depapps.md
 	[建立部署至 Bluemix 按鈕](../develop/deploy_button.html)
 	updapps.md

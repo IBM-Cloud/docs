@@ -367,7 +367,7 @@ curl -X DELETE -H "Authorization: <api key token>" "https://iampap.ng.bluemix.ne
 * (PIP) Punto de información de políticas - La entidad del sistema que actúa como origen de valores de atributo (es decir, un recurso, asunto, entorno).
 * (PRP) Punto de recuperación de políticas - Punto en el que se guardan las políticas de autorización de acceso de XACML, generalmente una base de datos o el sistema de archivos.
 * asunto - El "quien" de un par recurso y autorización de asunto, como por ejemplo un usuario o un grupo. El recurso es el recurso al que puede acceder el asunto. 
-* rol - Colección de permisos que se pueden asignar a un usuario, grupo de usuarios, sistema, servicio o aplicación y que les permite realizar determinadas tareas. 
+* rol - Conjunto de permisos que se pueden asignar a un usuario, grupo de usuarios, sistema, servicio o aplicación y que les permite realizar determinadas tareas. 
 * recurso - Objeto físico o lógico sobre las que se pueden realizar acciones, como por ejemplo una organización, un espacio, una base de datos o una tabla.
 * condiciones - Función que se evalúa como verdadera ("True"), falsa ("False") o indeterminada (“Indeterminate”).
 * acciones - Una tarea definida por realiza una aplicación sobre un objeto o recurso como resultado de un suceso.
@@ -376,11 +376,11 @@ curl -X DELETE -H "Authorization: <api key token>" "https://iampap.ng.bluemix.ne
 ## Roles definido por el sistema
 {: #system_defined_roles}
 
-Los roles de IBM Cloud representan una colección de acciones, proporcionadas por servicios habilitados por IAM. 
+Los roles de IBM Cloud representan un conjunto de acciones, proporcionadas por servicios habilitados por IAM. 
 
 La agrupación de acciones como roles ofrece flexibilidad para dar soporte a acciones para cualquier servicio o recurso mediante el uso de un conjunto mínimo de roles definidos por el sistema. Por ejemplo, si necesita un `Administrador` para VM, almacenamiento y red, puede utilizar el rol `Administrador` para los tres y cambiar sólo el destino de la política. `Administrador` en VM, `Administrador` en almacenamiento y `Administrador` en red. 
 
-*Lo que IBM Cloud IAM no hace*: Una alternativa que utilizan otros sistemas de gestión de accesos consiste en crear recursos en el rol. Este enfoque genera un nuevo nombre de rol para cada tipo de recurso que se incorpora en el sistema. Por ejemplo, con este enfoque necesitaría un rol `VMAdministrator`, un rol `StorageAdministrator` y un rol un `NetworkAdministrator` para cubrir la administración de para recursos de VM, almacenamiento y red. 
+*Lo que IBM Cloud IAM no hace*: Una alternativa que utilizan otros sistemas de gestión de accesos consiste en crear recursos en el rol. Este enfoque genera un nuevo nombre de rol para cada tipo de recurso que se incorpora en el sistema. Por ejemplo, con este enfoque necesitaría un rol `VMAdministrator`, un rol `StorageAdministrator` y un rol `NetworkAdministrator` para cubrir la administración para recursos de VM, almacenamiento y red. 
 
 
 En la tabla siguiente se muestran los roles definidos por el sistema IAM y ejemplos de acciones que se correlacionan con éstos.
@@ -389,12 +389,10 @@ En la tabla siguiente se muestran los roles definidos por el sistema IAM y ejemp
 |:-----------------|:-----------------|:-----------------|
 |Visor|acciones que no cambian de estado (es decir, sólo lectura)| <ul><li>enumerar dispositivos</li><li>leer objeto de almacenamiento</li><li>ejecutar consulta</li><li>ejecutar búsqueda</li></ul>|
 |Editor|acciones que pueden modificar el estado y crear o suprimir subrecursos|<ul><li>crear vm</li><li>suprimir vm</li><li>conectar almacenamiento
-</li><li>reiniciar</li><li>iniciar/detener</li><li>cambiar
-el nombre</li></ul>|
+</li><li>rearrancar</li><li>iniciar/detener</li><li>renombrar</li></ul>|
 |Operador |acciones necesarias para configurar y utilizar recursos|<ul><li>actualizar configuración</li><li>iniciar/detener vm</li><li>ver registros</li><li>hacer copia de seguridad/restaurar</li></ul>|
 |Administrador|todas las acciones, incluida la capacidad para gestionar el control de accesos|<ul><li>invitar a usuario</li><li>crear vm</li>actualizar políticas de acceso de usuarios</li><li>enumerar dispositivos</li><li>crear vm</li><li>suprimir vm</li><li>conectar almacenamiento
-</li><li>reiniciar</li><li>iniciar/detener</li><li>cambiar
-el nombre</li><li>hacer copia de seguridad/restaurar</li></ul>|
+</li><li>rearrancar</li><li>iniciar/detener</li><li>renombrar</li><li>hacer copia de seguridad/restaurar</li></ul>|
 |Administrador de facturación|acciones relacionadas con la administración de la facturación|<ul><li>actualizar tarjeta de crédito</li><li>enumerar facturas</li><li>descargar facturas</li></ul>|
 
 La lista más actualizada de roles definidos por el sistema se puede consultar desde el microservicio PAP en: 
@@ -441,7 +439,7 @@ En algunos casos, las solicitudes de la API REST se direccionan a través de una
 El punto interceptor solo conoce la ruta de la API REST y el punto final al que enviar la solicitud. Consulte [Consideraciones sobre los puntos interceptores de control de acceso](https://console.stage1.ng.bluemix.net/docs/developing/Access-Management/intercept_point.html#intercept_point_overview) para ver más detalles. 
 
 
- Este formato debe incluir ambas partes y da soporte a caracteres seguros para los URL según lo especificado en [RCF 1738](https://www.ietf.org/rfc/rfc1738.txt).
+ Este formato debe incluir ambas partes y da soporte a caracteres seguros para los URL según lo especificado en [RFC 1738](https://www.ietf.org/rfc/rfc1738.txt).
  
  
 `<METHOD> /<api_route>`

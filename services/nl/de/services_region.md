@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-03"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -50,6 +50,7 @@ Nicht alle Services sind in jeder {{site.data.keyword.Bluemix_notm}}-Region erh�
 |{{site.data.keyword.composeForRethinkDB}} | Gehostet in Dallas, USA | Gehostet in London, UK | Gehostet in Sydney, AU | Gehostet in Frankfurt,DE |
 |{{site.data.keyword.composeForScyllaDB}} | Gehostet in Dallas, USA | Gehostet in London, UK | Gehostet in Sydney, AU | Gehostet in Frankfurt,DE |
 |{{site.data.keyword.conceptinsightsshort}}	| Gehostet in Dallas, USA	| Gehostet in Dallas, USA	| Gehostet in Dallas, USA | Nicht erh채ltlich in der Region |
+|{{site.data.keyword.contdelivery_short}} | Gehostet in Dallas, USA | Nicht erh채ltlich in der Region | Nicht erh채ltlich in der Region | Nicht erh채ltlich in der Region |
 |{{site.data.keyword.dashdbshort}} | Gehostet in Dallas, USA | Gehostet in London, UK | Gehostet in Sydney | Gehostet in Frankfurt,DE |
 |{{site.data.keyword.datacshort}}	| Gehostet in Dallas, USA	| Gehostet in London, UK	| Gehostet in Sydney, AU | Nicht erh채ltlich in der Region |
 |{{site.data.keyword.DB2OnCloud_short}}	| Gehostet in Dallas, USA	| Gehostet in Dallas, USA	| Gehostet in Sydney, AU | Nicht erh채ltlich in der Region |

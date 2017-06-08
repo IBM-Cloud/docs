@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -27,7 +27,8 @@ lastupdated: "2017-04-20"
 <dt>端點</dt>
 <dd>必須透過 <code>bluemix api</code> 設定 API 端點後，才能使用此指令。</dd>
 <dt>登入</dt>
-<dd>需要使用 <code>bluemix login</code> 指令進行登入後，才能使用此指令。<b>如果是使用聯合 ID 登入，請使用 '--sso' 選項以一次性密碼進行鑑別，或使用 '--apikey' 以 API 金鑰進行鑑別</b>。移至 {{site.data.keyword.Bluemix_notm}} 主控台的「管理」->「安全」->「Bluemix API 金鑰」，來建立 API 金鑰。</dd>
+<dd>需要使用 <code>bluemix login</code> 指令進行登入後，才能使用此指令。如果是使用聯合 ID 登入，請使用 '--sso' 選項以一次性密碼進行鑑別，或使用 '--apikey' 以 API 金鑰進行鑑別。移至 {{site.data.keyword.Bluemix_notm}} 主控台**管理** &gt; **安全** &gt; **Bluemix API 金鑰**，以建立 API 金鑰。
+</dd>
 <dt>目標</dt>
 <dd>必須使用 <code>bluemix target</code> 指令來設定組織及空間後，才能使用此指令。</dd>
 <dt>Docker</dt>
@@ -358,7 +359,8 @@ bluemix login [OPTIONS...]
 互動式登入：
 
 ```
-bluemix login```
+bluemix login
+```
 
 以使用者名稱及密碼登入，並設定目標帳戶、組織及空間：
 

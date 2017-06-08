@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2017-01-11"
 #Services
 {: #services}
 
-Vous trouverez les services disponibles dans le **catalogue** sous **Services**, dans l'interface utilisateur {{site.data.keyword.Bluemix}}.
+Vous trouverez les services disponibles dans le **catalogue** sous **Services**, dans la console {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
 
@@ -58,97 +58,13 @@ Les services expérimentaux peuvent
 environnements de production n'est pas recommandée. Le support des services expérimentaux est assuré par la communauté des développeurs {{site.data.keyword.Bluemix_notm}}. Si IBM examine un problème et
 détermine qu'il s'agit d'un défaut d'un service expérimental, elle n'est pas obligée de fournir un correctif.
 
-Pour utiliser un service dans l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, l'interface de ligne de commande cf, IBM
-{{site.data.keyword.Bluemix_notm}} DevOps Services, ou tout outil pris en charge, procédez comme suit :
+Pour utiliser un service dans la console {{site.data.keyword.Bluemix_notm}}, l'interface de ligne de commande cf, IBM {{site.data.keyword.Bluemix_notm}} DevOps Services, ou tout autre outil pris en charge, procédez comme suit :
 
 1. Créez une instance du service. Dans la plupart des cas, l'instance de service peut être créée en même temps que l'application.
 
 2. Identifiez l'application qui utilise la nouvelle instance de service. Pour les applications Web, vous pouvez spécifier que plusieurs applications utilisent la même instance de service, ce qui permet notamment le partage de données.
 
 3. Ecrivez le code dans votre application pour interaction avec le service.
-
-##Services par région
-
-Les services ne sont pas tous disponibles dans toutes les régions {{site.data.keyword.Bluemix_notm}}. Le tableau ci-dessous affiche le
-services qui sont fournis par IBM.
-
-
-
-|Service	|Disponible dans la région Sud des Etats-Unis	|Disponible dans la région Europe-Royaume-Uni |Disponible dans la région Australie-Sydney|
-|:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.activedeployshort}}	|Oui		|Oui		|Non|
-|{{site.data.keyword.alchemyapishort}} 		|Oui	   	|Oui  		|Oui|
-|{{site.data.keyword.appsecshort}}		|Oui		|Non		|Non|
-|{{site.data.keyword.alertnotificationshort}}|Oui		|Non			|Non		|
-|{{site.data.keyword.APS_DA}}			|Oui		|Non		|Non|
-|{{site.data.keyword.APS_MA}}			|Oui		|Non		|Non|
-|{{site.data.keyword.amashort}}			|Oui		|Oui		|Oui|
-|{{site.data.keyword.hadoopst}}			|Oui		|Non		|Non|
-|{{site.data.keyword.APIM}}			|Oui		|Oui		|Non|
-|{{site.data.keyword.autoscaling}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.bigicloudst}}		|Oui		|Non		|Non|
-|{{site.data.keyword.blockstorageshort}}        |Non             |Oui            |Non |
-|{{site.data.keyword.rules_short}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.cloudint}}			|Oui		|Oui		|Non|
-|{{site.data.keyword.cloudant}}			|Oui		|Oui		|Non|
-|{{site.data.keyword.conceptexpansionshort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.conceptinsightsshort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.dashdbshort}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.datacshort}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.DB2OnCloud_short}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.deliverypipeline}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.dialogshort}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.documentconversionshort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.creshort}}			|Oui		|Non		|Non|
-|{{site.data.keyword.game}}			|Oui		|Oui		|Oui|
-|{{site.data.keyword.geospatialshort_Geospatial}}	|Oui	|Oui		|Non|
-|{{site.data.keyword.globalizationshort}}	|Oui		|Non		|Non|
-|{{site.data.keyword.dataworks_short}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.twittershort}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.weather_short}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.IntegrationTestingshort}}	|Oui		|Oui		|Non|
-|{{site.data.keyword.iot_short}}		|Oui		|Non		|Non|
-|{{site.data.keyword.keymanagementserviceshort}}|Non		|Oui		|Non|
-|{{site.data.keyword.languagetranslationshort}}	|Oui		|Oui		|Non|
-|{{site.data.keyword.messagehub}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.messageresonanceshort}}	|Oui		|Oui		|Non|
-|{{site.data.keyword.APS_MAiOS}} 		|Oui		|Non		|Non|
-|{{site.data.keyword.macm_short}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.mobilemam}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.mobiledata}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.manda}}			|Oui		|Oui		|Non|
-|{{site.data.keyword.mqa}}			|Oui		|Oui		|Non|
-|{{site.data.keyword.mql}}			|Oui		|Oui		|Non|
-|{{site.data.keyword.nlclassifiershort}} 	|Oui 		|Oui 		|Oui|
-|{{site.data.keyword.objectstorageshort}}	|Oui		|Non		|Non|
-|{{site.data.keyword.personalityinsightsshort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.mobilepush}}		|Oui		|Oui		|Non|
-|Push for iOS 8					|Oui		|Oui		|Non|
-|{{site.data.keyword.questionandanswershort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.rapidApps}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.relationshipextractionshort}}	|Oui	|Oui		|Oui|
-|{{site.data.keyword.retrieveandrankshort}}	|Oui 		|Oui 		|Oui|
-|{{site.data.keyword.SecureGateway}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.sescashort}}		|Oui		|Oui		|Oui|
-|{{site.data.keyword.ssofull}}			|Oui		|Non		|Non|
-|{{site.data.keyword.speechtotextshort}}	|Oui 		|Oui	 	|Oui|
-|{{site.data.keyword.sqldb}}			|Oui		|Oui		|Non|
-|{{site.data.keyword.staticanalyzershort}}	|Oui		|Oui		|Non|
-|{{site.data.keyword.streaminganalyticsshort}}	|Oui		|Non		|Non|
-|{{site.data.keyword.texttospeechshort}} 	|Oui 		|Oui	 	|Oui|
-|{{site.data.keyword.times}}			|Oui		|Oui		|Non|
-|{{site.data.keyword.toneanalyzershort}} 	|Oui 		|Oui 		|Oui|
-|{{site.data.keyword.trackplan}}		|Oui		|Oui		|Non|
-|{{site.data.keyword.tradeoffanalyticsshort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.visualinsightsshort}}	|Oui		|Oui		|Oui|
-|{{site.data.keyword.visualizationrenderingshort}} |Oui		|Oui		|Non|
-|{{site.data.keyword.workflow}}			|Oui		|Oui		|Non|
-|{{site.data.keyword.workloadscheduler}}	|Oui		|Oui		|Non|
-|{{site.data.keyword.xpagesservice_short}}	|Oui		|Oui		|Non|
-*Tableau 2. Disponibilité des services*
-{: caption="Tableau 2. Disponibilité des services" caption-side="top"}
-
-
 
 # Ajout d'un service à votre application
 {: #add_service}
@@ -164,7 +80,7 @@ Vous pouvez afficher tous les services qui sont disponibles dans {{site.data.key
 * Depuis l'interface de ligne de commande cf. Utilisez la commande **cf marketplace**.
 * Depuis votre propre application. Utilisez
 l'[API
-Services GET /v2/services ![icône de lien externe](../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
+Services GET /v2/services ![Icône de lien externe](../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 Vous pouvez sélectionner le service dont vous avez besoin pendant le développement des applications. Une fois la sélection effectuée,
 {{site.data.keyword.Bluemix_notm}} interagit avec le service et effectue les opérations nécessaires pour mettre à
@@ -183,14 +99,13 @@ applications externes et des outils tiers](#accser_external).
 ## Demande de nouvelle instance de service
 {: #req_instance}
 
-Pour demander une nouvelle instance de service, vous devez employer l'interface utilisateur
-{{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande cf.
+Pour demander une nouvelle instance de service, vous devez utiliser la console {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande cf.
 
 **Remarque :** lorsque vous spécifiez le nom du service, évitez d'utiliser des caractères autres que des caractères alphabétiques
 ou numériques, car vous risquez de
 générer des résultats imprévisibles.
 
-Si vous utilisez l'interface utilisateur {{site.data.keyword.Bluemix_notm}} pour demander une instance de service, procédez comme suit :
+Si vous utilisez la console {{site.data.keyword.Bluemix_notm}} pour demander une instance de service, procédez comme suit :
 
 1. Dans le **catalogue** {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette du service à ajouter. La page des détails du service s'ouvre.
 

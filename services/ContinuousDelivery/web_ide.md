@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-19"
+lastupdated: "2017-6-1"
 
 ---
 
@@ -35,7 +35,7 @@ By default, the settings for the editor style and font size are always shown. To
 
 2. Click **Editor Settings**.
 
-3. To include or exclude a setting from the **Local Editor Settings** menu, click the star next to each setting.
+3. To include or exclude a setting from the **Local Editor Settings** menu, click the star for each setting.
 
 ![Editor Settings toggle](images/webide_editor_settings_toggle_light.png)
 

@@ -20,11 +20,10 @@ Interface de ligne de commande et outils de développement
 	reference/cloudcli/index.md
 	
 	{: .topicgroup}
-	Plug-ins d'interface de ligne de commande Bluemix
-		[Active Deploy](../services/ActiveDeploy/cli.html?pos=2#ad-cli-bx)
-		plugins/auto-scaling/index.md
+	Plug-in de l'interface de ligne de commande Bluemix
+	        plugins/auto-scaling/index.md
 		plugins/registry/index.md
-		[Service de conteneur (Clusters)](../containers/cs_cli_devtools.html)
+		[Service de conteneur (clusters)](../containers/cs_cli_devtools.html)
 		[Service de conteneur (groupes uniques et évolutifs)](../containers/container_cli_cfic.html)
 		[IBM Developer](../cloudnative/dev_cli.html)
 		plugins/pnp/index.md
@@ -33,7 +32,7 @@ Interface de ligne de commande et outils de développement
 		plugins/bx_vpn/index.md
 	
 	{: .topicgroup}
-	Plug-ins d'interface de ligne de commande Cloud Foundry
+	Plug-in de l'interface de ligne de commande Cloud Foundry
 		plugins/bluemix_admin/index.md
 		plugins/dev_mode/index.md
 		plugins/vpn/index.md

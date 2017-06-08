@@ -11,7 +11,7 @@ lastupdated: "2017-04-11"
 {:codeblock: .codeblock}
 
 
-# Offline mode for node.js
+# Work offline mode for node.js
 {: #offline_mode}
 
 When a node.js application is pushed to {{site.data.keyword.Bluemix}} the SDK for Node.js buildpack

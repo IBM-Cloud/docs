@@ -17,7 +17,7 @@ IBM OpenWhisk
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Documentação da API de REST](./openwhisk_reference.html#openwhisk_ref_restapi)
+    [Documentação da API de REST](./openwhisk_rest_api.html)
     [Referência da API de REST](https://console.ng.bluemix.net/apidocs/98)
     {: .navgroup-end}
 

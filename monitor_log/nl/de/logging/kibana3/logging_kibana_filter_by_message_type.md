@@ -44,11 +44,11 @@ Führen Sie die folgenden Tasks aus, um Ihre Cloud Foundry-App-Protokolle nach N
 
 6. Fügen Sie einen Filter hinzu, um Informationen zu einem Nachrichtentyp ein- oder auszuschließen. 
 
-    * Zum Hinzufügen eines Filters, der Informationen zu einem Nachrichtentyp einschließt, klicken Sie auf das **Lupensymbol** ![Lupensymbol](images/logging_magnifying_glass.jpg "Lupensymbol") in der Zeile 'message_type' der Tabelle.  
+    * Zum Hinzufügen eines Filters, der Informationen zu einem Nachrichtentyp einschließt, klicken Sie auf das **Lupensymbol** ![Lupensymbol](images/logging_magnifying_glass.jpg "Lupensymbol") in der Zeile 'message_type' der Tabelle. 
     
            ![Filterbedingung für das Feld 'message_type'](images/logging_message_type_filter.png "Filterbedingung für das Feld 'message_type'")
     
-    * Zum Hinzufügen eines Filters, der Informationen zu einem bestimmten Nachrichtentyp ausschließt, klicken Sie auf das **Ausschlusssymbol** ![Ausschlusssymbol](images/logging_exclusion_icon.png "Ausschlusssymbol") in der Zeile 'message_type' der Tabelle.  
+    * Zum Hinzufügen eines Filters, der Informationen zu einem bestimmten Nachrichtentyp ausschließt, klicken Sie auf das **Ausschlusssymbol** ![Ausschlusssymbol](images/logging_exclusion_icon.png "Ausschlusssymbol") in der Zeile 'message_type' der Tabelle. 
     
     Im Kibana-Dashboard wird eine neue Filterbedingung hinzugefügt.
 
@@ -56,10 +56,10 @@ Führen Sie die folgenden Tasks aus, um Ihre Cloud Foundry-App-Protokolle nach N
 
 9. Speichern Sie das Dashboard.    
         
-    Wenn Sie die Erstellung Ihrer Filter abgeschlossen haben, klicken Sie auf das Symbol **Speichern** ![Symbol für Speichern](images/logging_save.jpg "Symbol für Speichern") und geben einen Namen für Ihr Dashboard ein.  
+    Wenn Sie die Erstellung Ihrer Filter abgeschlossen haben, klicken Sie auf das Symbol **Speichern** ![Symbol für Speichern](images/logging_save.jpg "Symbol für Speichern") und geben einen Namen für Ihr Dashboard ein. 
       
     **Hinweis:** Wenn Sie versuchen, ein Dashboard unter einem Namen zu speichern, der Leerzeichen enthält, wird es nicht gespeichert. Geben Sie einen Namen ohne Leerzeichen ein und klicken Sie auf das Symbol **Speichern**.
     
-    ![Name zum Speichern des Dashboards](images/logging_save_dashboard.jpg "Name zum Speichern des Dashboards"). 
+    ![Name zum Speichern des Dashboards](images/logging_save_dashboard.jpg "Name zum Speichern des Dashboards").
 
-Sie haben jetzt ein Dashboard erstellt, das Ihre Protokolleinträge nach Nachrichtentyp filtert. Sie können Ihr gespeichertes Dashboard jederzeit laden, indem Sie auf das Symbol **Ordner** ![Ordnersymbol](images/logging_folder.jpg "Ordnersymbol") klicken und Ihr Dashboard über den Namen auswählen. 
+Sie haben jetzt ein Dashboard erstellt, das Ihre Protokolleinträge nach Nachrichtentyp filtert. Sie können Ihr gespeichertes Dashboard jederzeit laden, indem Sie auf das Symbol **Ordner** ![Ordnersymbol](images/logging_folder.jpg "Ordnersymbol") klicken und Ihr Dashboard über den Namen auswählen.

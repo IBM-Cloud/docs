@@ -55,6 +55,6 @@ Para ver los registros de una app, siga estos pasos:
 2. Pulse **Registros**. En la vista **Registros** puede ver los registros de la app en ejecución.
 4. Pulse el botón **Vista avanzada**. **Vista avanzada** muestra una vista más detallada de los registros mediante Kibana, una herramienta de visualización que utiliza registros y datos con indicación de hora para crear visualizaciones personalizadas. Para obtener más información sobre la utilización de la vista avanzada, consulte la [Guía del usuario de Kibana ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}.
 
-Luego puede personalizar un panel de instrumentos de Kibana. Consulte [Análisis avanzado de registros con Kibana](../kibana4/analyzing_logs_Kibana.html#analyzing_logs_Kibana) para obtener más información. 
+Luego puede personalizar un panel de instrumentos de Kibana. Consulte [Análisis avanzado de registros con Kibana](../kibana4/analyzing_logs_Kibana.html#analyzing_logs_Kibana) para obtener más información.
 
 <!-- audience blue staging only end comment -->

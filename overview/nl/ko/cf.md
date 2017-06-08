@@ -20,7 +20,7 @@ lastupdated: "2017-03-20"
 
 모바일 및 웹 모두를 포함하여, 각 실행 환경은 다른 앱의 실행 환경에서 격리됩니다. 이러한 실행 환경은 앱이 동일한 물리적 시스템에 있더라도 격리됩니다. 다음 그림은 {{site.data.keyword.Bluemix_notm}} Cloud Foundry가 앱의 배치를 관리하는 방법에 대한 기본 플로우를 보여줍니다. 
 
-![앱 배치](images/deploy.png)
+![앱 배치](images/deploy-diego.png)
 
 그림 3. 앱 배치
 
@@ -33,7 +33,7 @@ lastupdated: "2017-03-20"
 
 다음 그림은 여러 앱이 배치되어 있고 DEA(Droplet Execution Agent)라고도 하는 가상 서버의 구조를 보여줍니다.
 
-![가상 서버 디자인](images/container.png)
+![가상 서버 디자인](images/container-diego.png)
 
 그림 4. 가상 서버 디자인
 
@@ -41,7 +41,7 @@ lastupdated: "2017-03-20"
 
 앱을 배치할 때 웹 인터페이스(예: Java 웹 앱) 또는 다른 REST 기반 서비스(예: 모바일 앱에 공개적으로 노출된 모바일 서비스)가 있으면 앱의 사용자가 일반적인 HTTP 요청을 사용하여 앱과 통신할 수 있습니다. 
 
-![{{site.data.keyword.Bluemix_notm}} 앱 호출](images/execute.png)
+![{{site.data.keyword.Bluemix_notm}} 앱 호출](images/execute-diego.png)
 
 그림 5. {{site.data.keyword.Bluemix_notm}} 앱 호출
 
@@ -61,7 +61,7 @@ lastupdated: "2017-03-20"
 
 다음 그림은 상위 레벨 {{site.data.keyword.Bluemix_notm}} Cloud Foundry 아키텍처를 보여줍니다. 
 
-![{{site.data.keyword.Bluemix_notm}} 아키텍처](images/arch.png)
+![{{site.data.keyword.Bluemix_notm}} 아키텍처](images/arch-diego.png)
 
 그림 1. {{site.data.keyword.Bluemix_notm}} Cloud Foundry 아키텍처
 

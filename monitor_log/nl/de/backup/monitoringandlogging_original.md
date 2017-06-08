@@ -20,18 +20,18 @@ lastupdated: "2017-02-01"
 Durch Überwachen Ihrer Apps und Prüfen von Protokollen können Sie die Anwendungsausführung und den Datenfluss verfolgen, um einen besseren Einblick in Ihre Bereitstellung zu erhalten. Darüber hinaus können Sie auf diese Weise den Zeit- und Arbeitsaufwand zur Ermittlung und Behebung von Problemen verringern.
 {:shortdesc}
 
-{{site.data.keyword.Bluemix}}-Anwendungen können weit verteilt sein und mehrere Instanzen umfassen. Ihre ausgeführte Anwendung sowie die Daten der Anwendung können über viele Services hinweg gemeinsam genutzt werden. In einer solchen komplexen Umgebung kommt der Überwachung der Apps und der Prüfung von Protokollen eine besondere Bedeutung für die Verwaltung Ihrer Apps zu. 
+{{site.data.keyword.Bluemix}}-Anwendungen können weit verteilt sein und mehrere Instanzen umfassen. Ihre ausgeführte Anwendung sowie die Daten der Anwendung können über viele Services hinweg gemeinsam genutzt werden. In einer solchen komplexen Umgebung kommt der Überwachung der Apps und der Prüfung von Protokollen eine besondere Bedeutung für die Verwaltung Ihrer Apps zu.
 
 ## Überwachung und Protokollierung für Cloud Foundry-Apps
 {: #monitoring_logging_bluemix_apps}
 
-{{site.data.keyword.Bluemix_notm}} hat einen integrierten Protokolliermechanismus, um Protokolldateien für Ihre Apps zu erstellen, während sie ausgeführt werden. In den Protokollen können Sie die Fehler, Warnungen und Informationsnachrichten prüfen, die für Ihre App generiert werden. Sie können Ihre App auch so konfigurieren, dass Protokollnachrichten in die Protokolldatei geschrieben werden. Weitere Informationen zu Protokollformaten und zur Anzeige von Protokollen finden Sie unter [Protokollierung für Apps, die in Cloud Foundry ausgeführt werden](#logging_for_bluemix_apps).
+{{site.data.keyword.Bluemix_notm}} hat einen integrierten Protokolliermechanismus, um Protokolldateien für Ihre Apps zu erstellen, während sie ausgeführt werden. In den Protokollen können Sie die Fehler, Warnungen und Informationsnachrichten prüfen, die für Ihre App generiert werden. Außerdem können Sie die App so konfigurieren, dass Protokollnachrichten in die Protokolldatei geschrieben werden. Weitere Informationen zu Protokollformaten und zur Anzeige von Protokollen finden Sie unter [Protokollierung für Apps, die in Cloud Foundry ausgeführt werden](#logging_for_bluemix_apps).
 
 Durch die Überwachung Ihrer App können Sie Ihre App-Bereitstellung anzeigen und steuern. Mithilfe der Überwachung können Sie die folgenden Tasks ausführen:
 
 * Sie können Leistungsinformationen für App-Instanzen sammeln und überwachen und prüfen, ob diese funktional sind.
 * Sie können Anwendungsoperationen untersuchen, um zum Beispiel potenzielle Engpässe zu erkennen oder festzustellen, wann Upgrades erforderlich sind.
-* Sie können die Ressourcennutzung und die anfallenden Gebühren schätzen. 
+* Sie können die Ressourcennutzung und die anfallenden Gebühren schätzen.
 
 Für einen stabilen Betrieb Ihrer Bereitstellungen auf der {{site.data.keyword.Bluemix_notm}}-Plattform möchten Sie Probleme schnell erkennen und Ursachen effizient bestimmen. Dieses Ziel erreichen Sie, wenn Sie bei der Konzeption Ihrer Apps die Fehlerbehebung im Hinterkopf behalten und Services oder Tools für die Überwachung und Protokollierung verwenden, wenn Ihre App in {{site.data.keyword.Bluemix_notm}} bereitgestellt wird.
 
@@ -48,7 +48,7 @@ Verwenden Sie eine der folgenden Methoden, um {{site.data.keyword.Bluemix_notm}}
 ### Protokollierung für Apps, die in Cloud Foundry ausgeführt werden
 {: #logging_for_bluemix_apps}
 
-Protokolldateien werden automatisch erstellt, wenn Sie die Cloud Foundry-Infrastruktur zur Ausführung Ihrer Apps in {{site.data.keyword.Bluemix_notm}} verwenden. Wenn zu irgendeinem Zeitpunkt, angefangen mit der Bereitstellung bis hin zur Laufzeit, Fehler auftreten, können Sie die Protokolle auf Hinweise prüfen, die bei der Fehlerbehebung hilfreich sein können. 
+Protokolldateien werden automatisch erstellt, wenn Sie die Cloud Foundry-Infrastruktur zur Ausführung Ihrer Apps in {{site.data.keyword.Bluemix_notm}} verwenden. Wenn zu irgendeinem Zeitpunkt, angefangen mit der Bereitstellung bis hin zur Laufzeit, Fehler auftreten, können Sie die Protokolle auf Hinweise prüfen, die bei der Fehlerbehebung hilfreich sein können.
 
 
 <!-- 2016.1.27: original shortdes: Log files are automatically created when you are using the Cloud Foundry infrastructure to run your apps on {{site.data.keyword.Bluemix_notm}}. You can view logs from the {{site.data.keyword.Bluemix_notm}} Dashboard, the cf command line interface, or external hosts. You can also filter the logs to see the parts that you are interested in. -->
@@ -58,9 +58,9 @@ Protokolldateien werden automatisch erstellt, wenn Sie die Cloud Foundry-Infrast
 ### Protokollformat und Protokollspeicherung
 {: #log_format}
 
-In {{site.data.keyword.Bluemix_notm}} Public werden Protokolldaten für Cloud Foundry-Apps standardmäßig sieben Tage lang gespeichert. Sie können bis zu 1 GB an Daten pro Tag durchsuchen. 
+In {{site.data.keyword.Bluemix_notm}} Public werden Protokolldaten für Cloud Foundry-Apps standardmäßig sieben Tage lang gespeichert. Sie können bis zu 1 GB an Daten pro Tag durchsuchen.
 
-Protokolle für {{site.data.keyword.Bluemix_notm}}-Anwendungen werden in einem festen Format nach dem folgenden Muster angezeigt: 
+Protokolle für {{site.data.keyword.Bluemix_notm}}-Anwendungen werden in einem festen Format nach dem folgenden Muster angezeigt:
 
 ```
          1         2         3         4         5
@@ -70,7 +70,7 @@ jjjj-MM-ttTHH:mm:ss:SS-0500 [App/0]      OUT <Nachricht>
 ```
 {:screen}
 
-Jeder Protokolleintrag enthält vier Felder. In der folgenden Liste werden die einzelnen Felder kurz beschrieben: 
+Jeder Protokolleintrag enthält vier Felder. In der folgenden Liste werden die einzelnen Felder kurz beschrieben:
 
 <dl>
 <dt><strong>Zeitmarke</strong></dt>
@@ -86,34 +86,34 @@ Jeder Protokolleintrag enthält vier Felder. In der folgenden Liste werden die e
 <p>Spalten: 29 - 40</p>
 <p>Die Komponente, die Protokolle generiert. </p>
 <p>Auf jeden Komponententyp folgt ein Schrägstrich und eine Ziffer, die die Anwendungsinstanz angibt. 0 ist die Ziffer, die der ersten Instanz zugeordnet ist, 1 die der zweiten usw.</p>
-<p>In der folgenden Liste werden die verschiedenen Typen von Komponenten kurz beschrieben: </p>
+<p>In der folgenden Liste werden die verschiedenen Typen von Komponenten kurz beschrieben:</p>
 
 <dl>
 <dt><strong>LGR</strong></dt>
-<dd>Loggregator: Die Komponente LGR stellt Informationen zum Protokollierungsservice (Logging) bereit. </dd>
+<dd>Loggregator: Die Komponente LGR stellt Informationen zum Protokollierungsservice (Logging) bereit.</dd>
 
 <dt><strong>RTR</strong></dt>
-<dd>Router: Die Komponente RTR stellt Informationen zu HTTP-Anforderungen an eine Anwendung bereit. </dd>
+<dd>Router: Die Komponente RTR stellt Informationen zu HTTP-Anforderungen an eine Anwendung bereit.</dd>
 
 <dt><strong>STG</strong></dt>
-<dd>Staging: Die Komponente STG stellt Informationen zum Staging und erneuten Staging einer Anwendung bereit. </dd>
+<dd>Staging: Die Komponente STG stellt Informationen zum Staging und erneuten Staging einer Anwendung bereit.</dd>
 
 <dt><strong>APP</strong></dt>
-<dd>Anwendung: Die Komponente APP stellt Informationenen zu einer Anwendung bereit. </dd>
+<dd>Anwendung: Die Komponente APP stellt Informationenen zu einer Anwendung bereit.</dd>
 
 <dt><strong>API</strong></dt>
-<dd>Cloud Foundry-API: Die Komponente API stellt Informationen zu den internen Aktionen bereit, die aus der Anforderung eines Benutzers zum Ändern des Status einer Anwendung resultieren. </dd>
+<dd>Cloud Foundry-API: Die Komponente API stellt Informationen zu den internen Aktionen bereit, die aus der Anforderung eines Benutzers zum Ändern des Status einer Anwendung resultieren.</dd>
 
 <dt><strong>DEA</strong></dt>
-<dd>Droplet Execution Agent: Die Komponente DEA stellt Informationen zum Start, Stopp oder Absturz einer Anwendung bereit.
+<dd>Droplet Execution Agent: Die Komponente DEA stellt Informationen zum Start, Stopp oder Absturz einer Anwendung bereit. 
 <p>Diese Komponente ist nur verfügbar, wenn Ihre Anwendung in der Cloud Foundry-Architektur bereitgestellt wurde, die auf DEA basiert.</p></dd>
 
 <dt><strong>CELL</strong></dt>
-<dd>Diego-Zelle: Die Komponente CELL stellt Informationen zum Start, Stopp oder Absturz einer Anwendung bereit.
+<dd>Diego-Zelle: Die Komponente CELL stellt Informationen zum Start, Stopp oder Absturz einer Anwendung bereit. 
 <p>Diese Komponente ist nur verfügbar, wenn Ihre Anwendung in der Cloud Foundry-Architektur bereitgestellt wurde, die auf Diego basiert.</p></dd>
 
 <dt><strong>SSH</strong></dt>
-<dd>SSH: Die Komponente SSH stellt jedes Mal Informationen bereit, wenn ein Benutzer auf eine Anwendung mit dem Befehl **cf ssh** zugreift.
+<dd>SSH: Die Komponente SSH stellt jedes Mal Informationen bereit, wenn ein Benutzer auf eine Anwendung mit dem Befehl **cf ssh** zugreift. 
 <p>Diese Komponente ist nur verfügbar, wenn Ihre Anwendung in der Cloud Foundry-Architektur bereitgestellt wurde, die auf Diego basiert.</p></dd>
 
 </dl>
@@ -141,7 +141,7 @@ Die folgende Abbildung zeigt die verschiedenen Komponenten (Protokolltypen) in e
 ## Protokolle anzeigen
 {: #viewing_logs}
 
-Sie können die Protokolle für Ihre Cloud Foundry-Apps an vier Positionen anzeigen: 
+Sie können die Protokolle für Ihre Cloud Foundry-Apps an vier Positionen anzeigen:
 
   * {{site.data.keyword.Bluemix_notm}}-Dashboard
   * Kibana-Dashboard
@@ -151,24 +151,24 @@ Sie können die Protokolle für Ihre Cloud Foundry-Apps an vier Positionen anzei
 ### Protokolle über das {{site.data.keyword.Bluemix_notm}}-Dashboard anzeigen
 {: #viewing_logs_UI}
 
-Führen Sie die folgenden Schritte aus, um die Bereitstellungs- oder Laufzeitprotokolle anzuzeigen: 
-1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und klicken Sie auf die Kachel für Ihre App. Die App-Detailseite wird angezeigt. 
-2. Klicken Sie in der Navigationsleiste auf **Protokolle**. 
+Führen Sie die folgenden Schritte aus, um die Bereitstellungs- oder Laufzeitprotokolle anzuzeigen:
+1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und klicken Sie auf die Kachel für Ihre App. Die App-Detailseite wird angezeigt.
+2. Klicken Sie in der Navigationsleiste auf **Protokolle**.
 
-In der Konsole **Protokolle** können Sie die letzten Protokolle für Ihre App oder Protokollendabschnitte in Echtzeit anzeigen. Darüber hinaus können Sie Protkolle nach Protokolltyp und Kanal filtern. 
+In der Konsole **Protokolle** können Sie die letzten Protokolle für Ihre App oder Protokollendabschnitte in Echtzeit anzeigen. Darüber hinaus können Sie Protkolle nach Protokolltyp und Kanal filtern.
 
-**Hinweis:** Protokolle werden zwischen Abstürzen und Bereitstellungen von Apps nicht gespeichert. 
+**Hinweis:** Protokolle werden zwischen Abstürzen und Bereitstellungen von Apps nicht gespeichert.
 
 
 ### Protokolle über das Kibana-Dashboard anzeigen
 {: #viewing_logs_Kibana}
 
-Erstellen Sie ein angepasstes Dashboard, um die Protokolle für die Apps, die in einem Bereich ausgeführt werden, auf einfache und kreative Weise anzuzeigen. 
+Erstellen Sie ein angepasstes Dashboard, um die Protokolle für die Apps, die in einem Bereich ausgeführt werden, auf einfache und kreative Weise anzuzeigen.
 
 1. Öffnen Sie [https://logmet.<span class="keyword" data-hd-keyref="DomainName">Domänenname</span>](https://logmet.{DomainName}), um sich bei der Kibana-Benutzerschnittstelle anzumelden.
-2. Wählen Sie die Registerkarte **Kibana 3** aus. 
+2. Wählen Sie die Registerkarte **Kibana 3** aus.
 3. Wenn keine Protokolle angezeigt werden, passen Sie das Zeitauswahlfeld im Header an.
-4. Speichern Sie das Dashboard als neues Dashboard. 
+4. Speichern Sie das Dashboard als neues Dashboard.
   1. Klicken Sie in der Symbolleiste auf das Symbol **Save** (Speichern).
   2. Geben Sie einen Namen für das Dashboard ein.
   3. Klicken Sie neben dem Namensfeld auf das Symbol **Save** (Speichern).
@@ -179,24 +179,24 @@ Weitere Informationen zur Anpassung eines Kibana-Dashboards finden Sie in [diese
 ### Protokolle über die Befehlszeilenschnittstelle anzeigen
 {: #viewing_logs_cli}
 
-Wählen Sie unter folgenden Optionen zum Anzeigen von Protokollen über die Befehlszeilenschnittstelle aus: 
+Wählen Sie unter folgenden Optionen zum Anzeigen von Protokollen über die Befehlszeilenschnittstelle aus:
 
 <ul>
 <li>Tailing-Protokolle beim Bereitstellen von Apps anzeigen.
 <p>Verwenden Sie den Befehl **cf logs**, um Protokolle aus Ihrer App und aus den Systemkomponenten anzuzeigen, die mit Ihrer App interagieren, wenn Sie Apps in {{site.data.keyword.Bluemix_notm}} bereitstellen. Sie können die folgenden Befehle in der CF-Befehlszeilenschnittstelle eingeben. Weitere Informationen zum Befehl 'cf logs' finden Sie unter <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target=" _blank">Protokolltypen und zugehörige Nachrichten in Cloud Foundry <img src="../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>. </p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">App-Name</var> --recent</strong></dt>
-<dd>Zeigt Protokolle aus der jüngsten Vergangenheit an. </dd>
+<dd>Zeigt Protokolle aus der jüngsten Vergangenheit an.</dd>
 
 <dt><strong>cf logs <var class="keyword varname">App-Name</var></strong></dt>
-<dd>Zeigt Protokolle an, die ab dem Moment generiert werden, in dem Sie diesen Befehl ausführen. </dd>
+<dd>Zeigt Protokolle an, die ab dem Moment generiert werden, in dem Sie diesen Befehl ausführen.</dd>
 </dl>
 <div class="note tip"><span class="tiptitle">Tipp:</span> Wenn Sie den Befehl <span class="keyword cmdname">cf push</span> oder <span class="keyword cmdname">cf start</span> in einem Befehlszeilenfenster ausführen, können Sie <samp class="ph codeph">cf logs App-Name --recent</samp> in einem anderen Befehlszeilenfenster eingeben, um die Protokolle in Echtzeit anzuzeigen. </div>
 </li>
 
 <li>Protokolle nach der Bereitstellung der Apps anzeigen.
 
-<p>Wenn die Anwendungsprotokollierung aktiviert ist, können Sie die folgenden Anwendungsprotokolle anzeigen, falls während der Ausführung Probleme mit Ihrer App auftreten. Anwendungsprotokolle können Ihnen bei der Ermittlung der Fehlerursache helfen. </p>
+<p>Wenn die Anwendungsprotokollierung aktiviert ist, können Sie die folgenden Anwendungsprotokolle anzeigen, falls während der Ausführung Probleme mit Ihrer App auftreten. Anwendungsprotokolle können Ihnen bei der Ermittlung der Fehlerursache helfen.</p>
 
 <dl><dt><strong>buildpack.log</strong></dt>
 <dd>
@@ -223,9 +223,9 @@ Wählen Sie unter folgenden Optionen zum Anzeigen von Protokollen über die Befe
 {: #viewing_logs_external}
 
 
-Wenn Protokolle generiert werden, können Sie nach kurzer Verzögerung Nachrichten auf Ihrem externen Host anzeigen, die den Nachrichten ähnlich sind, die Ihnen in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder über die CF-Befehlszeilenschnittstelle angezeigt werden. Wenn Sie mehrere Instanzen Ihrer App haben, werden die Protokolle zusammengefasst, sodass Sie alle Protokolle für Ihre App prüfen können. Darüber hinaus werden die Protokolle zwischen Abstürzen und Bereitstellungen von Apps persistent gespeichert. 
+Wenn Protokolle generiert werden, können Sie nach kurzer Verzögerung Nachrichten auf Ihrem externen Host anzeigen, die den Nachrichten ähnlich sind, die Ihnen in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder über die CF-Befehlszeilenschnittstelle angezeigt werden.  Wenn Sie mehrere Instanzen Ihrer App haben, werden die Protokolle zusammengefasst, sodass Sie alle Protokolle für Ihre App prüfen können. Darüber hinaus werden die Protokolle zwischen Abstürzen und Bereitstellungen von Apps persistent gespeichert.
 
-**Hinweis:** Protokolle, die Sie über die Befehlszeile anzeigen, haben nicht das Syslog-Format und entsprechen möglicherweise nicht exakt den Nachrichten, die auf Ihrem externen Protokollhost angezeigt werden. 
+**Hinweis:** Protokolle, die Sie über die Befehlszeile anzeigen, haben nicht das Syslog-Format und entsprechen möglicherweise nicht exakt den Nachrichten, die auf Ihrem externen Protokollhost angezeigt werden.
 
 
 
@@ -233,15 +233,15 @@ Wenn Protokolle generiert werden, können Sie nach kurzer Verzögerung Nachricht
 ## Protokolle über die Befehlszeilenschnittstelle filtern
 {: #filtering_logs}
 
-Zum Anzeigen von für Sie relevanten Protokollen oder zum Ausschließen des Inhalts, den Sie nicht anzeigen möchten, können Sie den Befehl **cf logs** mit Filteroptionen wie **cut** und **grep** in der CF-Befehlszeilenschnittstelle verwenden. 
+Zum Anzeigen von für Sie relevanten Protokollen oder zum Ausschließen des Inhalts, den Sie nicht anzeigen möchten, können Sie den Befehl **cf logs** mit Filteroptionen wie **cut** und **grep** in der CF-Befehlszeilenschnittstelle verwenden.
 
-* Zum Anzeigen nur eines Teils anstelle der vollständigen und ausführlichen Protokolle verwenden Sie die Option **cut**. Verwenden Sie zum Beispiel den folgenden Befehl, um die Komponenten- und Nachrichteninformationen anzuzeigen: 
+* Zum Anzeigen nur eines Teils anstelle der vollständigen und ausführlichen Protokolle verwenden Sie die Option **cut**. Verwenden Sie zum Beispiel den folgenden Befehl, um die Komponenten- und Nachrichteninformationen anzuzeigen:
 ```
 cf logs App-Name --recent | cut -c 29-40,46-
 ```
 
-Weitere Informationen zur Option **grep** können Sie durch Eingabe von 'cut --help' abrufen. 
-* Zum Anzeigen von Protokolleinträgen, die bestimmte Schlüsselwörter enthalten, verwenden Sie die Option **grep**. Protokolleinträge, die das Schlüsselwort `[APP` enthalten, können Sie beispielsweise mithilfe des folgenden Befehls anzeigen: 
+Weitere Informationen zur Option **grep** können Sie durch Eingabe von 'cut --help' abrufen.
+* Zum Anzeigen von Protokolleinträgen, die bestimmte Schlüsselwörter enthalten, verwenden Sie die Option **grep**. Protokolleinträge, die das Schlüsselwort `[APP` enthalten, können Sie beispielsweise mithilfe des folgenden Befehls anzeigen:
 
 ```
 cf logs appname --recent | grep '\[App'
@@ -253,9 +253,9 @@ Weitere Informationen zur Option **grep** können Sie mit `grep --help` abrufen.
 ## Externe Protokollhosts konfigurieren
 {: #thirdparty_logging}
 
-{{site.data.keyword.Bluemix_notm}} bewahrt eine begrenzte Menge an Protokolldaten im Speicher. Bei der Protokollierung von Daten werden die alten Informationen durch die neueren Daten ersetzt. Zur Aufbewahrung aller Protokolldaten können Sie Ihre Protokolle auf einem externen Protokollhost, wie zum Beispiel in einem Protokoll-Management-Service eines anderen Anbieters, oder auf einem anderen Host speichern. 
+{{site.data.keyword.Bluemix_notm}} bewahrt eine begrenzte Menge an Protokolldaten im Speicher. Bei der Protokollierung von Daten werden die alten Informationen durch die neueren Daten ersetzt. Zur Aufbewahrung aller Protokolldaten können Sie Ihre Protokolle auf einem externen Protokollhost, wie zum Beispiel in einem Protokoll-Management-Service eines anderen Anbieters, oder auf einem anderen Host speichern.
 
-Führen Sie die folgenden Schritte aus, um Protokolle aus Ihrer App und dem System an einen externen Protokollhost zu übertragen: 
+Führen Sie die folgenden Schritte aus, um Protokolle aus Ihrer App und dem System an einen externen Protokollhost zu übertragen:
 
   1. Bestimmen Sie den Protokollierungsendpunkt.
 
@@ -323,12 +323,11 @@ Führen Sie die folgenden Schritte aus, um Protokolle aus Ihrer App und dem Syst
 ### Beispiel: Cloud Foundry-Anwendung durch Streaming an Splunk übertragen
 {: #splunk}
 
-In diesem Beispiel erstellt eine Entwicklerin namens Jane einen virtuellen Server unter Verwendung von IBM Virtual Servers Beta und dem Ubuntu-Image. Jane versucht, die Cloud Foundry-App-Protokolle aus {{site.data.keyword.Bluemix_notm}} an Splunk durch Streaming zu übertragen.
+In diesem Beispiel erstellt eine Entwicklerin namens Jane einen virtuellen Server unter Verwendung von IBM Virtual Servers Beta und dem Ubuntu-Image.  Jane versucht, die Cloud Foundry-App-Protokolle aus {{site.data.keyword.Bluemix_notm}} an Splunk durch Streaming zu übertragen.
 
+  1. Zu Anfang richtet Jane Splunk ein.
 
-  1. Zu Anfang richtet Jane Splunk ein. 
-
-     a. Jane lädt Splunk Light von der Website [Download von Splunk Light ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.splunk.com/en_us/download/splunk-light.html){:new_window} herunter und installiert das Produkt mithilfe des folgenden Befehls. Die Software wird in */opt/splunk* installiert. 
+     a. Jane lädt Splunk Light von der Website [Download von Splunk Light ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.splunk.com/en_us/download/splunk-light.html){:new_window} herunter und installiert das Produkt mithilfe des folgenden Befehls. Die Software wird in */opt/splunk* installiert.
 
 	    ```
         dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
@@ -336,14 +335,14 @@ In diesem Beispiel erstellt eine Entwicklerin namens Jane einen virtuellen Serve
 
      b. Jane installiert und aktualisiert das Add-on RFC5424 für Syslog-Technologie, um Splunk in {{site.data.keyword.Bluemix_notm}} zu integrieren. Weitere Informationen zu den Anweisungen für die Installation des Add-ons finden Sie in der [Cloud Foundry-Anleitung ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.
 
-	    Jane installiert das Add-on mithilfe der folgenden Befehle: 
+	    Jane installiert das Add-on mithilfe der folgenden Befehle:
 
 	    ```
         cd /opt/splunk/etc/apps
         tar xvfz ~/rfc5424-syslog_11.tgz
         ```
 
-        Anschließend aktualisiert Jane das Add-on, indem Sie die Datei */opt/splunk/etc/apps/rfc5424/default/transforms.conf* durch eine neue Datei *transforms.conf* ersetzt, die den folgenden Text enthält: 
+        Anschließend aktualisiert Jane das Add-on, indem Sie die Datei */opt/splunk/etc/apps/rfc5424/default/transforms.conf* durch eine neue Datei *transforms.conf* ersetzt, die den folgenden Text enthält:
 
 	    ```
         [rfc5424_host]
@@ -358,9 +357,9 @@ In diesem Beispiel erstellt eine Entwicklerin namens Jane einen virtuellen Serve
         ```
         {:screen}
 
-     c. Nach der Einrichtung von Splunk muss Jane einige Ports auf der Ubuntu-Maschine öffnen, um den eingehenden Syslog-Drain (Port 5140) und die Splunk-Webbenutzerschnittstelle (Web UI: Port 8000) zu akzeptieren, weil die Firewall für den virtuellen {{site.data.keyword.Bluemix_notm}}-Server standardmäßig konfiguriert ist. 
+     c. Nach der Einrichtung von Splunk muss Jane einige Ports auf der Ubuntu-Maschine öffnen, um den eingehenden Syslog-Drain (Port 5140) und die Splunk-Webbenutzerschnittstelle (Web UI: Port 8000) zu akzeptieren, weil die Firewall für den virtuellen {{site.data.keyword.Bluemix_notm}}-Server standardmäßig konfiguriert ist.
 
-	    **Hinweis:** Die Konfiguration der IP-Tabelle ('iptable') erfolgt hier zu Auswertungszwecken für Jane und ist temporär. Details zur Konfiguration der Firewalleinstellung in der Produktionsumgebung des virtuellen Bluemix-Servers finden Sie in der Dokumentation [Network Security Groups ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window}. 
+	    **Hinweis:** Die Konfiguration der IP-Tabelle ('iptable') erfolgt hier zu Auswertungszwecken für Jane und ist temporär. Details zur Konfiguration der Firewalleinstellung in der Produktionsumgebung des virtuellen Bluemix-Servers finden Sie in der Dokumentation [Network Security Groups ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window}.
 
 	   ```
 	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
@@ -370,39 +369,39 @@ In diesem Beispiel erstellt eine Entwicklerin namens Jane einen virtuellen Serve
 	   ```
 	   {:screen}
 
-	   Dann führt Jane Splunk mit dem folgenden Befehl aus: 
+	   Dann führt Jane Splunk mit dem folgenden Befehl aus:
 
        ```
 	   /opt/splunk/bin/splunk start --accept-license
        ```
 
-  2. Jane konfiguriert die Splunk-Einstellungen so, dass der Syslog-Drain aus {{site.data.keyword.Bluemix_notm}} akzeptiert wird. Sie muss eine Dateneingabe für den Syslog-Drain erstellen. 
+  2. Jane konfiguriert die Splunk-Einstellungen so, dass der Syslog-Drain aus {{site.data.keyword.Bluemix_notm}} akzeptiert wird. Sie muss eine Dateneingabe für den Syslog-Drain erstellen.
 
-     a. Jane klickt in der Splunk-Webschnittstelle auf **Data > Data inputs**. Eine Liste der von Splunk unterstützten Eingabetypen wird angezeigt. 
+     a. Jane klickt in der Splunk-Webschnittstelle auf **Data > Data inputs**. Eine Liste der von Splunk unterstützten Eingabetypen wird angezeigt.
 
-     b. Sie wählt **TCP** aus, weil der Syslog-Drain das TCP-Protokoll verwendet. 
+     b. Sie wählt **TCP** aus, weil der Syslog-Drain das TCP-Protokoll verwendet.
 
-     c. Im Fenster **TCP** gibt sie in das Feld **Port** den Wert **5140** ein und lässt die übrigen Felder leer. Anschließend klickt sie auf **Next**. 
+     c. Im Fenster **TCP** gibt sie in das Feld **Port** den Wert **5140** ein und lässt die übrigen Felder leer. Anschließend klickt sie auf **Next**.
 
-     d. In der Liste **Source Type** wählt Sie den Quellentyp **Uncategorized > rfc5424_syslog** aus. 
+     d. In der Liste **Source Type** wählt Sie den Quellentyp **Uncategorized > rfc5424_syslog** aus.
 
-     e. Für den Typ im Feld **Method** wählt sie **IP** aus. 
+     e. Für den Typ im Feld **Method** wählt sie **IP** aus.
 
-     f. Im Feld **Index** klickt sie auf **Create a new index**. Sie gibt dem neuen Index den Namen "bluemix" und klickt auf **Save**. 
+     f. Im Feld **Index** klickt sie auf **Create a new index**. Sie gibt dem neuen Index den Namen "bluemix" und klickt auf **Save**.
 
-     g. Schließlich bestätigt Jane im Fenster **Review**, dass die Einstellung korrekt ist, und klickt auf **Submit**, um diese Dateneingabe zu aktivieren. 
+     g. Schließlich bestätigt Jane im Fenster **Review**, dass die Einstellung korrekt ist, und klickt auf **Submit**, um diese Dateneingabe zu aktivieren.
 
-  3. In {{site.data.keyword.Bluemix_notm}} erstellt Jane einen Syslog-Drain-Service und bindet den Service an eine App. 
+  3. In {{site.data.keyword.Bluemix_notm}} erstellt Jane einen Syslog-Drain-Service und bindet den Service an eine App.
 
-     a. Jane erstellt den Syslog-Drain-Service mithilfe des folgenden Befehls über die CF-CLI: 
+     a. Jane erstellt den Syslog-Drain-Service mithilfe des folgenden Befehls über die CF-CLI:
 
      ```
      cf cups splunk -l syslog://dummyhost:5140
      ```
 
-     **Hinweis:** *dummyhost* ist nicht der reale Name. Dies dient zur Verschleierung des tatsächlichen Hostnamens. 
+     **Hinweis:** *dummyhost* ist nicht der reale Name. Dies dient zur Verschleierung des tatsächlichen Hostnamens.
 
-     b. Jane bindet den Syslog-Drain-Service an eine App in ihrem Bereich und führt ein erneutes Staging der App durch. 
+     b. Jane bindet den Syslog-Drain-Service an eine App in ihrem Bereich und führt ein erneutes Staging der App durch.
 
 	 ```
      cf bind-service myapp splunk
@@ -410,13 +409,13 @@ In diesem Beispiel erstellt eine Entwicklerin namens Jane einen virtuellen Serve
      ```
 
 
-Jane probiert ihre App aus und gibt anschließend die folgende Abfragezeichenfolge in der Splunk-Webschnittstelle ein: 
+Jane probiert ihre App aus und gibt anschließend die folgende Abfragezeichenfolge in der Splunk-Webschnittstelle ein:
 
 ```
 source="tcp:5140" index="bluemix" sourcetype="rfc5424_syslog"
 ```
 
-Jane wird ein Datenstrom von Protokollen in ihrer Splunk-Webschnittstelle angezeigt. Obwohl Jane Splunk Light installiert hat, kann sie 500 MB an Protokollen pro Tag aufbewahren. 
+Jane wird ein Datenstrom von Protokollen in ihrer Splunk-Webschnittstelle angezeigt. Obwohl Jane Splunk Light installiert hat, kann sie 500 MB an Protokollen pro Tag aufbewahren.
 
 ## Protokollierung für Cloud Foundry-Apps in {{site.data.keyword.Bluemix_dedicated_notm}} und {{site.data.keyword.Bluemix_local_notm}}
 {: #hybrid_apps_logs_ov}
@@ -435,7 +434,7 @@ Cloud Foundry-Apps verwenden Cloud Foundry Loggregator, um Protokolle außerhalb
 | vCPU | 19 | 57 |
 | Hauptspeicher | 80 GB | 240 GB |
 | Lokaler Speicher | 2,98 TB | 8,94 TB |
-{: caption="Tabelle 2. Hardwarevoraussetzungen für die Protokollierung für {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
+{: caption="Tabelle 2. Protokollierung von Hardwarevoraussetzungen für {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
 
 ### Konfiguration
 

@@ -30,7 +30,7 @@ Führen Sie die folgenden Tasks aus, um Ihre Cloud Foundry-App-Protokolle nach b
 
 2. Greifen Sie auf das Kibana-Dashboard für Ihre App zu. Klicken Sie auf **Erweiterte Ansicht** ![Link für erweiterte Ansicht](images/logging_advanced_view.jpg "Link für Erweiterte Ansicht"). Das Kibana-Dashboard wird angezeigt.
 
-3. Klicken Sie im Kibana-Dashboard auf das Symbol **Ordner** ![Ordnersymbol](images/logging_folder.jpg "Ordnersymbol"), um ein Menü anzuzeigen, in dem alle zuletzt verwendeten Dashboards aufgelistet sind.  
+3. Klicken Sie im Kibana-Dashboard auf das Symbol **Ordner** ![Ordnersymbol](images/logging_folder.jpg "Ordnersymbol"), um ein Menü anzuzeigen, in dem alle zuletzt verwendeten Dashboards aufgelistet sind. 
 
     **Hinweis:** Neben den Dashboards, die Sie unter einem Namen gespeichert haben, werden in dem Menü unbenannte Dashboards im folgenden Format aufgelistet: *ALCH_TENANT_ID_Anwendungs-ID*. 
 
@@ -50,9 +50,9 @@ Führen Sie die folgenden Tasks aus, um Ihre Cloud Foundry-App-Protokolle nach b
 	
     3. Fügen Sie einen Filter hinzu.
     
-        Zum Hinzufügen eines Filters, der Informationen zu einem bestimmten Feldwert einschließt, klicken Sie auf das **Lupensymbol** ![Lupensymbol](images/logging_magnifying_glass.jpg "Lupensymbol") in der Zeile der Tabelle, die das Feld enthält, nach dem gefiltert werden soll.  
+        Zum Hinzufügen eines Filters, der Informationen zu einem bestimmten Feldwert einschließt, klicken Sie auf das **Lupensymbol** ![Lupensymbol](images/logging_magnifying_glass.jpg "Lupensymbol") in der Zeile der Tabelle, die das Feld enthält, nach dem gefiltert werden soll. 
 	
-        Zum Hinzufügen eines Filters, der Informationen zu einem bestimmten Feldwert ausschließt, klicken Sie auf das **Ausschlusssymbol** ![Ausschlusssymbol](images/logging_exclusion_icon.png "Ausschlusssymbol") in der Zeile der Tabelle, die das Feld enthält, nach dem gefiltert werden soll.   
+        Zum Hinzufügen eines Filters, der Informationen zu einem bestimmten Feldwert ausschließt, klicken Sie auf das **Ausschlusssymbol** ![Ausschlusssymbol](images/logging_exclusion_icon.png "Ausschlusssymbol") in der Zeile der Tabelle, die das Feld enthält, nach dem gefiltert werden soll.  
 
         Im Kibana-Dashboard wird eine neue Filterbedingung hinzugefügt.
 	
@@ -60,11 +60,11 @@ Führen Sie die folgenden Tasks aus, um Ihre Cloud Foundry-App-Protokolle nach b
 	
 6. Speichern Sie dieses Dashboard mit einem wiedererkennbaren Namen. 
 
-    Klicken Sie auf das Symbol **Speichern** ![Symbol für Speichern](images/logging_save.jpg "Symbol für Speichern") und geben Sie einen Namen für Ihr Dashboard ein.  
+    Klicken Sie auf das Symbol **Speichern** ![Symbol für Speichern](images/logging_save.jpg "Symbol für Speichern") und geben Sie einen Namen für Ihr Dashboard ein. 
 
     **Hinweis:** Wenn Sie versuchen, ein Dashboard unter einem Namen zu speichern, der Leerzeichen enthält, wird es nicht gespeichert. Geben Sie einen Namen ohne Leerzeichen ein und klicken Sie auf das Symbol **Speichern**.
 
-    ![Name zum Speichern des Dashboards](images/logging_save_dashboard.jpg "Name zum Speichern des Dashboards"). 
+    ![Name zum Speichern des Dashboards](images/logging_save_dashboard.jpg "Name zum Speichern des Dashboards").
 
 
-Sie haben jetzt ein Dashboard erstellt, das Ihre Protokolleinträge nach Anwendungs-ID und Instanz-ID filtert. Sie können Ihr gespeichertes Dashboard jederzeit laden, indem Sie auf das Symbol **Ordner** ![Ordnersymbol](images/logging_folder.jpg "Ordnersymbol") klicken und Ihr Dashboard über den Namen auswählen. 
+Sie haben jetzt ein Dashboard erstellt, das Ihre Protokolleinträge nach Anwendungs-ID und Instanz-ID filtert. Sie können Ihr gespeichertes Dashboard jederzeit laden, indem Sie auf das Symbol **Ordner** ![Ordnersymbol](images/logging_folder.jpg "Ordnersymbol") klicken und Ihr Dashboard über den Namen auswählen.

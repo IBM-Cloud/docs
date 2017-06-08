@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-05-04"
 
 
 ---
@@ -70,7 +70,7 @@ Verwenden Sie den Index in der folgenden Tabelle als Referenz für die häufig v
  <td>[Push-Operation](/docs/cli/reference/cfcommands/index.html#cf_push)</td>
   </tr>
  <tr>
- <td>[Skalieren](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
+ <td>[scale](/docs/cli/reference/cfcommands/index.html#cf_scale)</td>
  <td>[services](/docs/cli/reference/cfcommands/index.html#cf_services)
  <td>[set-env](/docs/cli/reference/cfcommands/index.html#cf_set-env)</td>
  <td>[ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)</td>
@@ -388,17 +388,17 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Hiermit melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an.
+Hiermit melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an. Wenn Sie sich mit einer [eingebundenen ID](/docs/admin/account.html#signup) anmelden, müssen Sie den SSO-Parameter (SSO - Single Sign-on) zum Anmelden verwenden. 
 
-**Hinweis:** Wenn Sie sich mit einer [eingebundenen ID](/docs/admin/account.html#signup) anmelden, müssen Sie den SSO-Parameter (SSO - Single Sign-on) zum Anmelden verwenden.
+**Hinweis**: Sie können für die Anmeldung auch einen API-Schlüssel für die {{site.data.keyword.Bluemix_notm}}-Plattform verwenden. Verwenden Sie den Benutzernamen `apikey` und Ihren API-Schlüsselwert als Kennwort. Weitere Informationen zum Erstellen eines API-Schlüssels finden Sie im Abschnitt [API-Schlüssel verwalten](/docs/iam/apikeys.html).
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
 ```
 
-<strong>Voraussetzungen:</strong> keine.
+<strong>Voraussetzungen</strong>: keine.
 
-<strong>Befehlsoptionen:</strong>
+<strong>Befehlsoptionen</strong>:
 
 <dl>
 <dt>*-a* https://api.{DomainName} (optional)</dt>
@@ -443,6 +443,12 @@ cf login -a https://api.ng.bluemix.net -u user_name
 Anmeldung bei {{site.data.keyword.Bluemix_notm}} mit dem definierten Endpunkt `https://api.ng.bluemix.net`, dem Benutzernamen `user_name`, aus Sicherheitsgründen ohne Kennwortangabe, mit dem Organisationsnamen `org_name` und dem Bereichsnamen `space_name`.
 ```
 cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
+```
+{: codeblock}
+
+Anmeldung bei {{site.data.keyword.Bluemix_notm}} mit dem definierten Endpunkt `https://api.ng.bluemix.net` unter Verwendung eines API-Schlüssels. Verwenden Sie `apikey` als Benutzernamen und den tatsächlichen API-Schlüssel als Kennwort. 
+```
+cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
 ```
 {: codeblock}
 

@@ -115,12 +115,12 @@ Se durante il runtime riscontri dei problemi con la tua applicazione, i log dell
 In particolare, è possibile abilitare la registrazione in stdout e stderr. Per ulteriori informazioni su come configurare i file di log per le applicazioni
 che vengono distribuite tramite i pacchetti di build integrati {{site.data.keyword.Bluemix_notm}}, consulta il seguente elenco:
 
-  * Per le applicazioni Liberty for Java™, consulta [Liberty Profile: Logging and Trace ![icona link esterno](../icons/launch-glyph.svg)](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
-  * Per le applicazioni Node.js, vedi [How to log in node.js ![icona link esterno](../icons/launch-glyph.svg)](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
-  * Per le applicazioni PHP, vedi [error_log ![icona link esterno](../icons/launch-glyph.svg)](http://php.net/manual/en/function.error-log.php){: new_window}.
-  * Per le applicazioni Python, vedi [Logging HOWTO ![icona link esterno](../icons/launch-glyph.svg)](https://docs.python.org/2/howto/logging.html){: new_window}.
-  * Per le applicazioni Ruby on Rails, vedi [The Logger ![icona link esterno](../icons/launch-glyph.svg)](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
-  * Per le applicazioni Ruby Sinatra, vedi [Logging ![icona link esterno](../icons/launch-glyph.svg)](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
+  * Per le applicazioni Liberty for Java™, consulta [Liberty Profile: Logging and Trace ![Icona link esterno](../icons/launch-glyph.svg)](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
+  * Per le applicazioni Node.js, vedi [How to log in node.js ![Icona link esterno](../icons/launch-glyph.svg)](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
+  * Per le applicazioni PHP, vedi [error_log ![Icona link esterno](../icons/launch-glyph.svg)](http://php.net/manual/en/function.error-log.php){: new_window}.
+  * Per le applicazioni Python, vedi [Logging HOWTO ![Icona link esterno](../icons/launch-glyph.svg)](https://docs.python.org/2/howto/logging.html){: new_window}.
+  * Per le applicazioni Ruby on Rails, vedi [The Logger ![Icona link esterno](../icons/launch-glyph.svg)](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
+  * Per le applicazioni Ruby Sinatra, vedi [Logging ![Icona link esterno](../icons/launch-glyph.svg)](http://www.sinatrarb.com/intro.html#Logging){: new_window}.
 
 Quando immetti `cf logs nomeapplicazione --recent` nell'interfaccia riga di comando cf, vengono visualizzati solo i log più recenti. Per visualizzare i log con gli errori che si sono verificati in precedenza, devi recuperare tutti i log e ricercare gli errori. Per recuperare tutti i log per la tua applicazione, utilizza uno dei seguenti metodi:
 <dl>
@@ -160,7 +160,7 @@ A seconda del modo in cui il nuovo codice viene distribuito, scegli uno dei segu
 ## general
 {: #general}
 
-  * [DEA (Droplet Execution Agent) ![icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
+  * [DEA (Droplet Execution Agent) ![Icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/concepts/architecture/execution-agent.html){: new_window}
   * [Introduzione al servizio IBM Monitoring and Analytics per Bluemix](/docs/services/monana/index.html#gettingstartedtemplate)
   * [Come funziona Bluemix](/docs/overview/whatisbluemix.html#howwork)
   * [Installazione dello strumento di comando cf](/docs/starters/install_cli.html)

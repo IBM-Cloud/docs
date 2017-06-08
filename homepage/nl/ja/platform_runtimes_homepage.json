@@ -54,10 +54,15 @@
 		"img": "homepage/images/WhatIsBluemix-icon.svg",
 		"href": "overview/whatisbluemix.html"
     }, {
-		"title": "アカウントのセットアップ",
-		"description": "プロファイルの更新、アカウントと消費量の通知の設定、チーム・メンバーの招待、または組織とスペースの管理を行います。",
+		"title": " アカウントの管理",
+		"description": "プロファイルの更新、アカウントと消費量の通知の設定、または組織とスペースの管理を行います。",
 		"img": "homepage/images/admin.svg",
 		"href": "admin/adminpublic.html"
+	}, {
+		"title": " ID およびアクセス権限の管理",
+		"description": "ユーザー・アクセスの管理、またはチーム・メンバーの招待を行います。",
+		"img": "homepage/images/admin.svg",
+		"href": "iam/iamusermanage.html"
 	}, {
 		"title": "CLI と開発ツール",
 		"description": "統合コマンド・ライン・インターフェースおよび CLI プラグインなどのツールにアクセスできます。",
@@ -91,7 +96,7 @@
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
 	}, {
-		"title": "料金",
+		"title": "請求および使用量の管理",
 		"description": "計算器を使用してコストを見積もることができ、使用量詳細ビューで実際のコストを確認することができます。",
 		"img": "homepage/images/pricing.svg",
 		"href": "pricing/index.html"

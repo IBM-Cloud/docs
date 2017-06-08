@@ -44,11 +44,11 @@ Procédez comme suit pour afficher et filtrer vos journaux d'application Cloud F
 
 6. Ajoutez un filtre pour inclure ou exclure des informations concernant un type de message. 
 
-    * Pour ajouter un filtre incluant des informations sur un type de message, cliquez sur l'icône en forme de **loupe** ![Icône en forme de loupe](images/logging_magnifying_glass.jpg "Icône en forme de loupe") dans la ligne message_type du tableau.  
+    * Pour ajouter un filtre incluant des informations sur un type de message, cliquez sur l'icône en forme de **loupe** ![Icône en forme de loupe](images/logging_magnifying_glass.jpg "Icône en forme de loupe") dans la ligne message_type du tableau. 
     
            ![Condition de filtre incluant la zone message_type](images/logging_message_type_filter.png "Condition de filtre incluant la zone message_type")
     
-    * Pour ajouter un filtre excluant des informations sur un type de message, cliquez sur l'icône d'**exclusion** ![Icône d'exclusion](images/logging_exclusion_icon.png "Icône d'exclusion") dans la ligne message_type du tableau.  
+    * Pour ajouter un filtre excluant des informations sur un type de message, cliquez sur l'icône d'**exclusion** ![Icône d'exclusion](images/logging_exclusion_icon.png "Icône d'exclusion") dans la ligne message_type du tableau. 
     
     Une nouvelle condition de filtre est ajoutée au tableau de bord Kibana.
 
@@ -62,4 +62,4 @@ Procédez comme suit pour afficher et filtrer vos journaux d'application Cloud F
     
     ![Sauvegarde d'un nom de tableau de bord](images/logging_save_dashboard.jpg "Sauvegarde d'un nom de tableau de bord").
 
-Vous avez créé un tableau de bord qui filtre vos entrées de journal par type de message. Vous pouvez charger votre tableau de bord sauvegardé à tout moment en cliquant sur l'icône de **dossier** ![Icône de dossier](images/logging_folder.jpg "Icône de dossier") et en sélectionnant votre tableau de bord par nom. 
+Vous avez créé un tableau de bord qui filtre vos entrées de journal par type de message. Vous pouvez charger votre tableau de bord sauvegardé à tout moment en cliquant sur l'icône de **dossier** ![Icône de dossier](images/logging_folder.jpg "Icône de dossier") et en sélectionnant votre tableau de bord par nom.

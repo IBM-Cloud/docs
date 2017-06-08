@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-05-04"
 
 
 ---
@@ -389,9 +389,9 @@ cf help events
 {: #cf_login}
 
 Se inicia la sesión
-en {{site.data.keyword.Bluemix_notm}}.
+en {{site.data.keyword.Bluemix_notm}}. Si va a iniciar sesión con un [ID federado](/docs/admin/account.html#signup), debe utilizar el parámetro de inicio de sesión único (SSO) para iniciar la sesión.  
 
-**Nota**: si va a iniciar sesión con un [ID federado](/docs/admin/account.html#signup), debe utilizar el parámetro de inicio de sesión único (SSO) para iniciar la sesión.
+**Nota**: También puede utilizar una clave de una API de la plataforma de {{site.data.keyword.Bluemix_notm}} para iniciar una sesión. Utilice el nombre de usuario `apikey` y su valor de clave de API como contraseña. Para obtener más información sobre la creación de claves de API, consulte [Gestión de claves de API](/docs/iam/apikeys.html).
 
 ```
 cf login [-a url] [-u nombre_usuario] [-p contraseña] [-sso] [-o nombre_organización] [-s nombre_espacio] [--skip-ssl-validation]
@@ -445,6 +445,12 @@ cf login -a https://api.ng.bluemix.net -u nombre_usuario
 Inicie sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net`, un nombre de usuario de `user_name`, sin contraseña especificada por motivos de seguridad, y un nombre de organización de `nombre_org` y un nombre de espacio de `nombre_espacio`.
 ```
 cf login -a https://api.ng.bluemix.net -u nombre_usuario -o nombre_org -s nombre_espacio
+```
+{: codeblock}
+
+Inicie una sesión en {{site.data.keyword.Bluemix_notm}} con un punto final definido de `https://api.ng.bluemix.net` utilizando una clave de API. Utilice `apikey` como el nombre de usuario y la clave de API real como contraseña. 
+```
+cf login -a https://api.ng.bluemix.net -u apikey -p EsteValorEsSuClaveAPI
 ```
 {: codeblock}
 

@@ -117,7 +117,6 @@ do {
         } else {
             print("Action invoked!")
         }
-
     })
 } catch {
     print("Error \(error)")
@@ -163,8 +162,6 @@ do {
             var result = reply["result"]
             print("Got result \(result)")
         }
-
-
     })
 } catch {
     print("Error \(error)")
@@ -219,7 +216,6 @@ whisk.urlSession = session
 
 ```swift
 var whiskButton = WhiskButton(frame: CGRectMake(0,0,20,20))
-
 whiskButton.setupWhiskAction("helloConsole", package: "mypackage", namespace: "_", credentials: credentialsConfiguration!, hasResult: false, parameters: nil, urlSession: nil)
 let myParams = ["name":"value"]
 // Call this when you detect a press event, e.g. in an IBAction, to invoke the action
@@ -234,7 +230,6 @@ whiskButton.invokeAction(parameters: myParams, callback: { reply, error in
 var whiskButtonSelfContained = WhiskButton(frame: CGRectMake(0,0,20,20))
 whiskButtonSelfContained.listenForPressEvents = true
 do {
-
    // use qualified name API which requires do/try/catch
    try whiskButtonSelfContained.setupWhiskAction("mypackage/helloConsole", credentials: credentialsConfiguration!, hasResult: false, parameters: nil, urlSession: nil)
    whiskButtonSelfContained.actionButtonCallback = { reply, error in

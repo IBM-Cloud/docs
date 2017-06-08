@@ -9,7 +9,7 @@
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
-	[アプリへのサービスの追加](../services/reqnsi.html)
+	[アプリへのサービスの追加](../services/reqnsi.html#add_service)
 	depapps.md
 	[「Bluemix にデプロイ」ボタンの作成](../develop/deploy_button.html)
 	updapps.md

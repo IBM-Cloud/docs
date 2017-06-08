@@ -21,7 +21,7 @@ Vous pouvez créer un tableau de bord Grafana personnalisé afin d'afficher des 
 
 Pour créer un tableau de bord Grafana, procédez comme suit :
 
-1. Lancez Grafana depuis un navigateur Web. Pour plus d'informations, voir[Accès au tableau de bord Grafana depuis un navigateur Web](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
+1. Lancez Grafana depuis un navigateur Web. Pour plus d'informations, voir [Accès au tableau de bord Grafana depuis un navigateur Web](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
 
 2. Sauvegardez le tableau de bord par défaut.
 

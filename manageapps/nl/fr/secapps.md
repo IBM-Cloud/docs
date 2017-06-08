@@ -75,7 +75,7 @@ Vous pouvez appliquer un protocole de sécurité pour garantir la confidentialit
 application et empêcher les écoutes clandestines, les altérations et les falsifications de messages
 
 Dans {{site.data.keyword.Bluemix_notm}}, pour chaque organisation dont le propriétaire de compte bénéficie
-d'un plan Paiement à la carte ou Abonnement, vous avez droit à quatre téléchargements de certificat. Pour chaque organisation dont le propriétaire de compte bénéficie d'un compte d'essai gratuit, vous devez mettre à niveau votre compte pour pouvoir télécharger un certificat. 
+d'un plan Paiement à la carte ou Abonnement, vous avez droit à quatre téléchargements de certificat. Pour chaque organisation dont le propriétaire de compte bénéficie d'un compte d'essai gratuit, vous devez mettre à niveau votre compte pour pouvoir télécharger un certificat.
 
 Pour
 pouvoir télécharger des certificats, vous devez créer une demande de signature de certificat. Voir [Création de demandes de signature de certificat](#ssl_csr).
@@ -93,7 +93,7 @@ Pour télécharger un certificat pour votre application, procédez comme suit :
 
 1. Accédez à votre tableau de bord.
 
-2. Sélectionnez le nom de votre application pour ouvrir la vue des détails d'application. 
+2. Sélectionnez le nom de votre application pour ouvrir la vue des détails d'application.
 
 3. Sélectionnez le menu déroulant **Routes**, puis **Gestion des domaines**.
 
@@ -166,4 +166,4 @@ l'option de demande de certificat client, téléchargez un fichier de magasin de
 	  * DER (.der ou .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-Pour supprimer un certificat ou remplacer un certificat existant par un nouveau, accédez à **Gérer** > **Compte** > **Organisations**. Cliquez ensuite sur **Afficher les détails** > **Editer l'organisation** > **Domaines** pour supprimer ou remplacer un certificat pour un domaine personnalisé. 
+Pour supprimer un certificat ou remplacer un certificat existant par un nouveau, accédez à **Gérer** > **Compte** > **Organisations**. Cliquez ensuite sur **Afficher les détails** > **Editer l'organisation** > **Domaines** pour supprimer ou remplacer un certificat pour un domaine personnalisé.

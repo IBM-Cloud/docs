@@ -344,7 +344,8 @@ Nella sezione **Utilizzo risorsa **, puoi visualizzare le seguenti informazioni:
 - Il tempo di risposta medio per {{site.data.keyword.Bluemix_notm}} negli ultimi 10 minuti, 1 ora e 1 giorno.
 - Le transazioni medie al secondo per {{site.data.keyword.Bluemix_notm}} nel corso degli ultimi 10 minuti, dell'ultima ora e dell'ultimo giorno.
 
-#### Dettagli memoria, disco e CPU
+
+#### Dettagli di memoria di sistema, disco e CPU
 {: #resourceusagedetails}
 
 Nella sezione **Utilizzo risorsa**, puoi vedere un riepilogo dello spazio **Riservato** e **Fisico** relativo a memoria e disco.    
@@ -371,6 +372,13 @@ Per informazioni più dettagliate sull'utilizzo della memoria o del disco fisico
 	<dt><strong>Fisico</strong></dt>
 	<dd>L'area Fisico mostra la quantità di memoria o spazio su disco effettivamente utilizzata.</dd>
 	</dl>
+	
+#### Dettagli di utilizzo del servizio
+{: #servicesresourceusage}
+
+La scheda **Servizio** mostra l'utilizzo totale del servizio in relazione alla capacità massima di cui disponi per un servizio dedicato. Ad esempio, se hai un servizio Cloudant dedicato e stai utilizzando 500 GB della tua capacità di 1000 GB, visualizzi un grafico che mostra che hai utilizzato il 50%  della tua capacità totale. Il colore del grafico cambia in base a quanto sei vicino al limite di capacità. Il giallo viene mostrato quando hai utilizzato tra il 70% e l'84% della tua capacità e il rosso viene usato quando hai raggiunto l'85%  o più della capacità disponibile.
+
+**Nota**: in questo momento, le informazioni sul consumo del servizio potrebbero non essere disponibili in tutti gli ambienti. Questa funzione è disponibile per Cloudant, MessageHub, API Connect e Session Cache.
 
 
 ### Utilizzo dell'account
@@ -517,11 +525,11 @@ Puoi inoltre gestire l'ordine di priorità dei pacchetti di build disponibili da
 ### Registrazione di un broker dei servizi
 {: #servicebrokerui}
 
-Se vuoi visualizzare un determinato servizio nel tuo catalogo {{site.data.keyword.Bluemix_notm}}, devi implementare e registrare un [broker dei servizi ![icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/services/api.html){: new_window}. Una volta registrato il tuo broker, puoi scegliere quali organizzazioni possono accedere al servizio nella tua istanza locale o dedicata.
+Se vuoi visualizzare un determinato servizio nel tuo catalogo {{site.data.keyword.Bluemix_notm}}, devi implementare e registrare un [broker dei servizi ![Icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/services/api.html){: new_window}. Una volta registrato il tuo broker, puoi scegliere quali organizzazioni possono accedere al servizio nella tua istanza locale o dedicata.
 
 Le modalità d'uso del tuo broker dei servizi variano a seconda del numero di servizi che gestisce o dalla sua eventuale precedente registrazione in {{site.data.keyword.Bluemix_notm}}.
 
-- Se il tuo broker dei servizi gestisce un unico servizio, puoi utilizzare l'interfaccia utente per registrarlo al termine dell'implementazione dell'[API broker dei servizi ![icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/services/api.html){: new_window}. Vedi [Registrazione di un broker dei servizi che gestisce un unico servizio](index.html#registerbrokerui).
+- Se il tuo broker dei servizi gestisce un unico servizio, puoi utilizzare l'interfaccia utente per registrarlo al termine dell'implementazione dell'[API broker dei servizi ![Icona link esterno](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/services/api.html){: new_window}. Vedi [Registrazione di un broker dei servizi che gestisce un unico servizio](index.html#registerbrokerui).
 - Se il tuo broker dei servizi gestisce più servizi, utilizza la CLI cf con il plug-in [{{site.data.keyword.Bluemix_notm}} Admin CLI](../cli/plugins/bluemix_admin/index.html) (sottocomando `ba`) o l'[API del servizio personalizzato](index.html#servicebrokerapi).
 - Se il tuo broker dei servizi è già registrato e desideri aggiornarlo o eliminarlo, utilizza la CLI cf con il plug-in [{{site.data.keyword.Bluemix_notm}} Admin CLI](../cli/plugins/bluemix_admin/index.html) (sottocomando `ba`) o l'[API del servizio personalizzato](index.html#servicebrokerapi).
 
@@ -532,7 +540,7 @@ Le modalità d'uso del tuo broker dei servizi variano a seconda del numero di se
 
 Esamina le seguenti informazioni e completa la procedura per registrare il tuo broker dei servizi:
 
-**rima di iniziare**: <a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">implementa l'API broker dei servizi Cloud Foundry <img src="../icons/launch-glyph.svg" alt="icona link esterno"></a> per consentire la comunicazione tra il tuo servizio e {{site.data.keyword.Bluemix_notm}}. L'API broker dei servizi è un insieme di endpoint REST utilizzati da {{site.data.keyword.Bluemix_notm}}.
+**rima di iniziare**: <a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">implementa l'API broker dei servizi Cloud Foundry <img src="../icons/launch-glyph.svg" alt="Icona link esterno"></a> per consentire la comunicazione tra il tuo servizio e {{site.data.keyword.Bluemix_notm}}. L'API broker dei servizi è un insieme di endpoint REST utilizzati da {{site.data.keyword.Bluemix_notm}}.
 
 Quando implementi il broker dei servizi, nella risposta JSON di <code>GET /v2/catalog</code> devi fornire le definizioni per i tuoi piani di servizio e servizi, incluse le informazioni sul servizio che desideri visualizzare. Ad esempio, consulta il seguente file JSON di esempio della risposta del catalogo (GET):
 
@@ -1095,10 +1103,10 @@ utilizzare altri strumenti.
 * cURL, per immettere richieste API REST come comandi. cURL è un programma di utilità gratuito che puoi
                     utilizzare per inviare richieste HTTP a un server e ricevere le risposte
                     attraverso un'interfaccia riga di comando. Puoi scaricare
-cURL dal [sito cURL Download ![icona link esterno](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}.
+cURL dal [sito cURL Download ![Icona link esterno](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}.
 * Python, per utilizzare lo strumento JSON Pretty-Print Python. Questo strumento
 facoltativo prende il testo JSON come input e fornisce un output facile da leggere. Puoi scaricare
-Python dal [sito Python Downloads ![icona link esterno](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}.
+Python dal [sito Python Downloads ![Icona link esterno](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}.
 
 
 ### Elenco delle organizzazioni
@@ -2063,7 +2071,7 @@ Puoi gestire gli utenti per il tuo ambiente {{site.data.keyword.Bluemix_notm}}
 utilizzando l'interfaccia riga di comando Cloud Foundry insieme al plug-in {{site.data.keyword.Bluemix_notm}} Admin CLI. Devi scaricare questo plug-in per la tua CLI Cloud Foundry.
 
 Prima di iniziare, installa l'interfaccia riga di comando cf. Il plug-in {{site.data.keyword.Bluemix_notm}} Admin
-CLI richiede cf versione 6.11.2 o successive. [Scarica Cloud Foundry command line interface ![icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
+CLI richiede cf versione 6.11.2 o successive. [Scarica Cloud Foundry command line interface ![Icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
 
 **Limitazione:** l'interfaccia riga di comando Cloud Foundry non
 è supportata da Cygwin. Utilizza l'interfaccia riga di comando Cloud Foundry

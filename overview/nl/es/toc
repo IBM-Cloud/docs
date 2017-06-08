@@ -18,7 +18,7 @@ Qué es Bluemix
     {: .navgroup-end}
     
     {: .navgroup id="reference"}
-    [Avisos y condiciones de uso](../navigation/notices.html)
+    ../navigation/
     glossary/index.md
-    [Novedades](../whatsnew/index.html)
+    ../whatsnew/
     {: .navgroup-end}

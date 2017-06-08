@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-03-07"
+lastupdated: "2017-05-03"
 
 
 ---
@@ -124,7 +124,7 @@ Java™ およびすべての Java 関連の商標およびロゴは Oracle や�
 
 他の会社名、製品名、およびサービス名は、それぞれ各社の商標または登録商標です。
 
-## {{site.data.keyword.Bluemix_notm}} のご契約条件
+## クラウド・サービスのご利用条件
 {: #terms}
 
 既に締結済みのパスポート・アドバンテージのご契約条件の下で {{site.data.keyword.Bluemix_notm}} を注文する場合を除き、{{site.data.keyword.Bluemix_notm}} の使用には、IBM クラウド・サービス契約書の条件が適用されます。この契約書には、下記の関連するサービス記述書およびご使用条件のすべての記載文書が含まれます。

@@ -21,7 +21,7 @@ lastupdated: "2017-06-01"
 The {{site.data.keyword.Bluemix}} Standard Account Limited Release introduces a new free account, which offers a new way to work in the {{site.data.keyword.Bluemix_notm}} Public Cloud. The Standard account never expires, unlike the 30-day {{site.data.keyword.Bluemix_notm}} trial. You can continue to work on your {{site.data.keyword.Bluemix_notm}} applications without any concerns about time restrictions. 
 {:shortdesc}
 
-All users in the UK are eligible for the Standard account. If you are not in the UK, you can still create a Standard account by asking a friend for an invite or reaching out to our sales team at sales@bluemix.net. Once you have a Standard account, you can invite friends and colleagues to participate.    
+Users in the UK are eligible for the Standard account. If you are not in the UK, you can still create a Standard account by asking a friend for an invite or reaching out to our sales team at sales@bluemix.net. Once you have a Standard account, you can invite friends and colleagues to participate.    
 
 ## Introducing the {{site.data.keyword.Bluemix_notm}} Standard account
 {: #standardaccount}
@@ -129,6 +129,4 @@ Your Lite plan services are deleted if there isn’t any activity on them for 30
  
 ## Participating in the Standard Account Limited Release
 {: #lgainvitation}
-
-If you are a UK user, click **Sign up** on the [IBM {{site.data.keyword.Bluemix_notm}} Cloud ![External link icon](../icons/launch-glyph.svg)](http://ibm.com/bluemix){: new_window} 
-page to create your Standard account. If you are not in the UK but would like to build for free with a Standard account, ask a friend with a Standard account for an invite or reach out to our sales team at sales@bluemix.net.
+You can ask a friend with a Standard account for an invite or reach out to our sales team at sales@bluemix.net. We would love to have you try it out!

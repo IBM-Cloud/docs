@@ -16,10 +16,10 @@ lastupdated: "2017-02-14"
 # Monitoramento e criação de log
 {: #monitoringandlogging}
 
-{{site.data.keyword.Bluemix}} é uma plataforma de computação em nuvem da {{site.data.keyword.IBM_notm}} para construir, executar e gerenciar apps e serviços. O {{site.data.keyword.Bluemix_notm}} combina a plataforma como serviço (PaaS) com a infraestrutura como serviço (IaaS). Além disso, o {{site.data.keyword.Bluemix_notm}} tem um rico catálogo de serviços de nuvem, que pode ser facilmente integrado com o PaaS e IaaS para construir aplicativos de negócios rapidamente. O {{site.data.keyword.Bluemix_notm}} inclui os serviços de criação de log e monitoramento integrados na plataforma. {:shortdesc}
+{{site.data.keyword.Bluemix}} é uma plataforma de computação em nuvem da {{site.data.keyword.IBM_notm}} para construir, executar e gerenciar apps e serviços. O {{site.data.keyword.Bluemix_notm}} combina a plataforma como serviço (PaaS) com a infraestrutura como serviço (IaaS). Além disso, o {{site.data.keyword.Bluemix_notm}} tem um rico catálogo de serviços de nuvem, que pode ser facilmente integrado com o PaaS e IaaS para construir aplicativos de negócios rapidamente. O {{site.data.keyword.Bluemix_notm}} inclui os serviços de criação de log e monitoramento integrados na plataforma. 
+{:shortdesc}
 
-O {{site.data.keyword.Bluemix_notm}} oferece os serviços de criação de log e monitoramento em diferentes serviços de cálculo, como o Cloud Foundry e {{site.data.keyword.containershort}}. É possível desenvolver, executar e gerenciar aplicativos em qualquer tempo de execução de cálculo sem a complexidade de construir e manter a infraestrutura que está geralmente associada ao desenvolvimento e ativação de um app.
- 
+O {{site.data.keyword.Bluemix_notm}} oferece os serviços de criação de log e monitoramento em diferentes serviços de cálculo, como o Cloud Foundry e {{site.data.keyword.containershort}}. É possível desenvolver, executar e gerenciar aplicativos em qualquer tempo de execução de cálculo sem a complexidade de construir e manter a infraestrutura que está geralmente associada ao desenvolvimento e ativação de um app. 
 
 **Nota:** os recursos de monitoramento e criação de log estão disponíveis na região sul dos EUA e na região do Reino Unido.
 

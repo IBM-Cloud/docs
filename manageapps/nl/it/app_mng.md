@@ -58,7 +58,7 @@ Il programma di utilità *devconsole* avvia anche *proxy*.
 
 L'agent Health Center (*hc*) abilita il monitoraggio della tua applicazione mediante il client Health Center.
 
-Health Center supporta l'analisi delle prestazioni delle tue applicazioni Liberty e Node.js utilizzando gli strumenti IBM Monitoring and Diagnostic. Per ulteriori informazioni, vedi [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){: new_window}.</p></li>
+Health Center supporta l'analisi delle prestazioni delle tue applicazioni Liberty e Node.js utilizzando gli strumenti IBM Monitoring and Diagnostic. Per ulteriori informazioni, vedi [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){: new_window}.</p></li>
 
 Il programma di utilità *hc* avvia anche *proxy*.
 
@@ -69,7 +69,7 @@ esempio:
 $ cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 ```
 
-Successivamente, per il collegamento al client Health Center, utilizza [MQTT connection ![icona link esterno](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window} e specifica l'host come `127.0.0.1` e la porta come `1883`.
+Successivamente, per il collegamento al client Health Center, utilizza [MQTT connection ![Icona link esterno](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window} e specifica l'host come `127.0.0.1` e la porta come `1883`.
 
 #### shell
 {: #shell}
@@ -110,14 +110,14 @@ Successivamente, per il collegamento a Eclipse, utilizza "Configurazione Java re
 
 Il programma di utilità *jmx* abilita il connettore JMX REST per consentire a un client JMX remoto di gestire l'applicazione utilizzando le credenziali utente di {{site.data.keyword.Bluemix_notm}}.
 
-Per ulteriori informazioni sulla configurazione di un connettore JMX, vedi [Configuring secure JMX connection to the Liberty profile ![icona link esterno](../icons/launch-glyph.svg)](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}.
+Per ulteriori informazioni sulla configurazione di un connettore JMX, vedi [Configuring secure JMX connection to the Liberty profile ![Icona link esterno](../icons/launch-glyph.svg)](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}.
 
 Il programma di utilità *jmx* non avvia proxy.
 
 #### localjmx
 {: #localjmx}
 
-Il programma di utilità *localjmx* abilita la funzione [localConnector-1.0 ![icona link esterno](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty. Combinata con l'inoltro alla porta locale, ciò abilita un modo alternativo per consentire a un client JMX remoto di gestire l'applicazione.
+Il programma di utilità *localjmx* abilita la funzione [localConnector-1.0 ![Icona link esterno](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty. Combinata con l'inoltro alla porta locale, ciò abilita un modo alternativo per consentire a un client JMX remoto di gestire l'applicazione.
 
 Il programma di utilità *localjmx* si applica solo alle applicazioni on esecuzione in una cella Diego. Per utilizzare *localjmx*, stabilisci prima l'inoltro alla porta utilizzando il comando `cf ssh`. Ad
 esempio:
@@ -135,9 +135,9 @@ Successivamente, per il collegamento alla JConsole, scegli "Processo remoto", sp
 #### inspector
 {: #inspector}
 
-Per le versioni di Node.js precedenti alla 6.3.0, *inspector* abilita l'interfaccia del programma di debug node inspector. Il processo *inspector* viene eseguito nel contenitore della tua applicazione. Utilizza questo programma di utilità per creare profili di utilizzo CPU, aggiungere punti di interruzione e codice di debug, il tutto mentre la tua applicazione è in esecuzione su {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni sul modulo node inspector, vedi [node-inspector on GitHub ![icona link esterno](../icons/launch-glyph.svg)](https://github.com/node-inspector/node-inspector){:new_window}.
+Per le versioni di Node.js precedenti alla 6.3.0, *inspector* abilita l'interfaccia del programma di debug node inspector. Il processo *inspector* viene eseguito nel contenitore della tua applicazione. Utilizza questo programma di utilità per creare profili di utilizzo CPU, aggiungere punti di interruzione e codice di debug, il tutto mentre la tua applicazione è in esecuzione su {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni sul modulo node inspector, vedi [node-inspector on GitHub ![Icona link esterno](../icons/launch-glyph.svg)](https://github.com/node-inspector/node-inspector){:new_window}.
 
-Per Node.js versioni 6.3.0 e successive, *inspector* utilizza [V8 Inspector Integration for Node.js ![icona link esterno](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}.
+Per Node.js versioni 6.3.0 e successive, *inspector* utilizza [V8 Inspector Integration for Node.js ![Icona link esterno](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}.
 
 Il programma di utilità inspector avvia *proxy* per impostazione predefinita, ma come esegui il debug in remoto dipende dalla versione di Node.js e l'utilizzo di *proxy* o *noproxy*.  La seguente tabella illustra come eseguire l'accesso al debug in remoto in scenari diversi.
 

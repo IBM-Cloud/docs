@@ -138,16 +138,16 @@ Reports events related to operations performed by a database administrator on th
 <dt>User</dt> 
 <dd>The username of the user who performed the operation. The following users are the users defined to the database.
 <ul>
-<li>UAADB: vcap, root, backup_user.
-<li>CCDB: vcap, ccadmin, backup_user.
-<li>Usage outside of the above will need investigation into who did the operation. This can be done using the Operating System Administration Security Report and the Operating System Login Security Report.
+<li>UAADB: vcap, root, backup_user.</li>
+<li>CCDB: vcap, ccadmin, backup_user.</li>
+<li>Usage outside of the above will need investigation into who did the operation. This can be done using the Operating System Administration Security Report and the Operating System Login Security Report.</li>
 </ul>
 </dd>
 <dt>Source</dt> 
 <dd>The IP address from where the user starts the command. The expected values are the following:
 <ul>
-<li>UAADB – uaa VMs and the nfs_WAL_server VM.
-<li>CCDB – api_worker, clock_global,cloud_controller_ng and nsf_WAL_server VMs.
+<li>UAADB – uaa VMs and the nfs_WAL_server VM.</li>
+<li>CCDB – api_worker, clock_global,cloud_controller_ng and nsf_WAL_server VMs.</li>
 </ul>
 </dd>
 <dt>DB_Statement</dt>
@@ -169,15 +169,15 @@ Reports user management activities performed on the Bluemix administration conso
 <dt>Event_Type</dt>
 <dd>Type of Event (SECURITY_RUNTIME).
 <ul>
-<li>SECURITY_MGMT_REGISTRY: Add User [user ID]
-<li>SECURITY_MGMT_REGISTRY: Delete User [user ID]
-<li>SECURITY_AUTHN_CREDS_MODIFY: Add permission [permissions] to users [user ID].
-<li>SECURITY_AUTHN_CREDS_MODIFY: Remove permission [permissions] from users [user ID].
-<li>SECURITY_MGMT_CONFIG: Create organization [name].
-<li>SECURITY_MGMT_CONFIG: Change organization managers, [ids].
-<li>SECURITY_MGMT_CONFIG: Rename organization id [id] to new name [name].
-<li>SECURITY_MGMT_CONFIG: Delete organization id [id].
-<li>SECURITY_MGMT_CONFIG: Update quota for organization [id] to quota [quotaPlan].
+<li>SECURITY_MGMT_REGISTRY: Add User [user ID]</li>
+<li>SECURITY_MGMT_REGISTRY: Delete User [user ID]</li>
+<li>SECURITY_AUTHN_CREDS_MODIFY: Add permission [permissions] to users [user ID].</li>
+<li>SECURITY_AUTHN_CREDS_MODIFY: Remove permission [permissions] from users [user ID].</li>
+<li>SECURITY_MGMT_CONFIG: Create organization [name].</li>
+<li>SECURITY_MGMT_CONFIG: Change organization managers, [ids].</li>
+<li>SECURITY_MGMT_CONFIG: Rename organization id [id] to new name [name].</li>
+<li>SECURITY_MGMT_CONFIG: Delete organization id [id].</li>
+<li>SECURITY_MGMT_CONFIG: Update quota for organization [id] to quota [quotaPlan].</li>
 </ul>
 </dd>
 <dt>User</dt> 
@@ -185,17 +185,17 @@ Reports user management activities performed on the Bluemix administration conso
 <dt>Message</dt> 
 <dd>Command executed.
 <ul>
-<li>Add User [user ID]: Adds a user with the specified ID.
-<li>Delete User [user ID]: Deletes a user with the specified ID.
+<li>Add User [user ID]: Adds a user with the specified ID.</li>
+<li>Delete User [user ID]: Deletes a user with the specified ID.</li>
 <li>Add permission [permissions] to users [user ID]: Adds permissions to the specified users. Permissions can include:
-ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read, and ops.user.write.
-<li>Remove permission [permissions] from users [user ID]: Remove permission - Remove permissions from the specified users. Permissions can include: ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read, and ops.users.write.
-<li>Create organization [name]: Creates an organization with the specified name.
-<li>Change organization managers [ids]: Configures the managers of an organization to be the specified users.
-<li>Rename organization id [id] to new name [name]: Renames the specified organization.
-<li>Delete User [user ID]: Deletes a user with the specified ID.
-<li>Delete organization id [id]: Deletes the specified organization.
-<li>Update quota for organization [id] to quota [quotaPlan]: Updates the quota plan for the specified organization. Plans can include: q2GB, q4GB, q8GB, q16GB, q32GB, q64GB, q128GB, q256GB, q512GB.
+ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read, and ops.user.write.</li>
+<li>Remove permission [permissions] from users [user ID]: Remove permission - Remove permissions from the specified users. Permissions can include: ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read, and ops.users.write.</li>
+<li>Create organization [name]: Creates an organization with the specified name.</li>
+<li>Change organization managers [ids]: Configures the managers of an organization to be the specified users.</li>
+<li>Rename organization id [id] to new name [name]: Renames the specified organization.</li>
+<li>Delete User [user ID]: Deletes a user with the specified ID.</li>
+<li>Delete organization id [id]: Deletes the specified organization.</li>
+<li>Update quota for organization [id] to quota [quotaPlan]: Updates the quota plan for the specified organization. Plans can include: q2GB, q4GB, q8GB, q16GB, q32GB, q64GB, q128GB, q256GB, q512GB.</li>
 </ul>
 </dd>
 <dt>Log Source</dt>
@@ -236,8 +236,8 @@ Reports events related to the security reports management activities performed o
 <dd>Type of Event (SECURITY_RUNTIME).
 <ul>
 <li>SECURITY_DATA_SYNC: Upload report [name] to category [name] date [date].
-Delete Report with ID [id]
-<li>SECURITY_RESOURCE_ACCESS: Download Report [name].
+Delete Report with ID [id]</li>
+<li>SECURITY_RESOURCE_ACCESS: Download Report [name].</li>
 </ul>
 </dd>
 <dt>User</dt> 
@@ -245,9 +245,9 @@ Delete Report with ID [id]
 <dt>Message</dt> 
 <dd>Command executed.
 <ul>
-<li>Upload report [name] to category [name] date [date]: Upload - Upload a report with the specified file name and date to the specified category. 
-<li>Delete Report with ID [id]: Delete - Delete a report with the specified id.
-<li>Download Report [name]: Download - A report was downloaded with the specified name.
+<li>Upload report [name] to category [name] date [date]: Upload - Upload a report with the specified file name and date to the specified category.</li>
+<li>Delete Report with ID [id]: Delete - Delete a report with the specified id.</li>
+<li>Download Report [name]: Download - A report was downloaded with the specified name.</li>
 </ul>
 </dd>
 <dt>Log Source</dt>
@@ -311,13 +311,13 @@ Reports events related to configure the software update deployment windows or no
 <dt>Event_Type</dt>
 <dd>Type of Event (SECURITY_RUNTIME).
 <ul>
-<li> SECURITY_MGMT_CONFIG: Create Window [id].
-<li> SECURITY_MGMT_CONFIG: Update Window [id].
-<li> SECURITY_MGMT_CONFIG: Delete Window [id].
-<li> SECURITY_MGMT_CONFIG: Create Subscription [id].
-<li> SECURITY_MGMT_CONFIG: Update Subscription [id].
-<li> SECURITY_MGMT_CONFIG: Delete Susbscription [id].
-<li> SECURITY_MGMT_CONFIG: Create Topic Reply [id].
+<li> SECURITY_MGMT_CONFIG: Create Window [id].</li>
+<li> SECURITY_MGMT_CONFIG: Update Window [id].</li>
+<li> SECURITY_MGMT_CONFIG: Delete Window [id].</li>
+<li> SECURITY_MGMT_CONFIG: Create Subscription [id].</li>
+<li> SECURITY_MGMT_CONFIG: Update Subscription [id].</li>
+<li> SECURITY_MGMT_CONFIG: Delete Susbscription [id].</li>
+<li> SECURITY_MGMT_CONFIG: Create Topic Reply [id].</li>
 </ul>
 </dd>
 <dt>User</dt> 
@@ -325,13 +325,13 @@ Reports events related to configure the software update deployment windows or no
 <dt>Message</dt>
 <dd>Command executed.
 <ul>
-<li>Create Window [id]: Creates an window for maintenance updates. The update window logs are generated when a user is managing (creating) the update windows for an environment. The update windows are the blackout and preferred windows for deployments. This is when customers are allowing/not allowing non-disruptive deployments to be deployed without having to approve and schedule them.
-<li>Update Window [id]: Updates a maintenance update window. This event is generated when a user is updating the maintenance update windows for an environment.
-<li>SECURITY_MGMT_CONFIG: Delete Update Window This event is generated when a user delegates the update windows for an environment.
-<li>Create Subscription [id]: Creates an event subscription. The event subscription audit logs are generated when a user creates a subscription for either update or incident events. This will allow them to be notified when something is going on in their system..
-<li>Update Subscription [id]: Updates an event subscription. The event is generated when a user updates a subscription for either update or incident events.
-<li>Delete Subscription [id]: Delete Event Subscription. This event is generated when a user deletes a subscription for either update or incident events.
-<li>Create Topic Reply [id]: Reply to a Topic The topic reply audit log is generated when the customer approves and schedules disruptive update..
+<li>Create Window [id]: Creates an window for maintenance updates. The update window logs are generated when a user is managing (creating) the update windows for an environment. The update windows are the blackout and preferred windows for deployments. This is when customers are allowing/not allowing non-disruptive deployments to be deployed without having to approve and schedule them.</li>
+<li>Update Window [id]: Updates a maintenance update window. This event is generated when a user is updating the maintenance update windows for an environment.</li>
+<li>SECURITY_MGMT_CONFIG: Delete Update Window This event is generated when a user delegates the update windows for an environment.</li>
+<li>Create Subscription [id]: Creates an event subscription. The event subscription audit logs are generated when a user creates a subscription for either update or incident events. This will allow them to be notified when something is going on in their system.</li>
+<li>Update Subscription [id]: Updates an event subscription. The event is generated when a user updates a subscription for either update or incident events.</li>
+<li>Delete Subscription [id]: Delete Event Subscription. This event is generated when a user deletes a subscription for either update or incident events.</li>
+<li>Create Topic Reply [id]: Reply to a Topic The topic reply audit log is generated when the customer approves and schedules disruptive update.</li>
 </ul>
 </dd>
 <dt>Log Source</dt>
@@ -351,12 +351,12 @@ Reports events related to the Bluemix platform using the command line, the REST 
 <dt>Event_Type</dt>
 <dd>Type of Event (SECURITY_RUNTIME).
 <ul>
-<li>SECURITY_AUTH_CREDS_MODIFY: Events related to modification of credentials for a given user identity.
+<li>SECURITY_AUTH_CREDS_MODIFY: Events related to modification of credentials for a given user identity.</li>
 <li>SECURITY_MGMT_RESOURCE: Resource management events such as creation, deletion, and changes to the attributes of a
-resource.
-<li>SECURITY_MGMT_POLICY: Event related to management of security policies such as creation of access control lists..
-<li>SECURITY_RUNTIME: Runtime events such as starting and stopping of security servers.
-<li>SECURITY_RESOURCE_ACCESS: Events that record all accesses to a resource. Examples are all accesses to a file, all HTTP request/responses to a given Web page, and all accesses to a critical database table.
+resource.</li>
+<li>SECURITY_MGMT_POLICY: Event related to management of security policies such as creation of access control lists.</li>
+<li>SECURITY_RUNTIME: Runtime events such as starting and stopping of security servers.</li>
+<li>SECURITY_RESOURCE_ACCESS: Events that record all accesses to a resource. Examples are all accesses to a file, all HTTP request/responses to a given Web page, and all accesses to a critical database table.</li>
 </ul>
 </dd>
 <dt>User</dt> 
@@ -365,9 +365,9 @@ resource.
 <dd>Details of the operation executed, such as the id of the entity and results of the operation. Examples:
 <ul>
 <li>UserCreatedEvent ('["user_id=ca3a811f-1778-4103-9553-537788ed4c4e","username=equaranta"]’). User was created with 
-(username=equaranta and id = ca3a811f-1778-4103-9553-537788ed4c4e).
-<li>GroupModifiedEvent ('{" "group_name":"ops.reports.read","members":["0625ff9a- 8a59-4cca-a80a-8e3b51f3dd21","5005f0f8-e090-4cabb51d- 2ceee70acf0e"}'). Group with name ops.reports.read was modified, with resulting membership (id 0625ff9a- 8a59-4ccaa80a- 8e3b51f3dd21","5005f0f8- e090-4cab-b51d- 2ceee70acf0e).
-<li>UserDeletedEvent ('["UserDeletedEvent ('["user_id=5cd5f412-4bbb-4c44-b44b- 713a5bc6144d","username=818811853"]'):"]'. User was deleted with id value=5cd5f412-4bbb- 4c44-b44b-713a5bc6144.
+(username=equaranta and id = ca3a811f-1778-4103-9553-537788ed4c4e).</li>
+<li>GroupModifiedEvent ('{" "group_name":"ops.reports.read","members":["0625ff9a- 8a59-4cca-a80a-8e3b51f3dd21","5005f0f8-e090-4cabb51d- 2ceee70acf0e"}'). Group with name ops.reports.read was modified, with resulting membership (id 0625ff9a- 8a59-4ccaa80a- 8e3b51f3dd21","5005f0f8- e090-4cab-b51d- 2ceee70acf0e).</li>
+<li>UserDeletedEvent ('["UserDeletedEvent ('["user_id=5cd5f412-4bbb-4c44-b44b- 713a5bc6144d","username=818811853"]'):"]'. User was deleted with id value=5cd5f412-4bbb- 4c44-b44b-713a5bc6144.</li>
 </ul>
 </dd>
 <dt>Message</dt>

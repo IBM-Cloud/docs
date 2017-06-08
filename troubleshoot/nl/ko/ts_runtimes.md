@@ -182,7 +182,7 @@ Instance 4: Trace specification is set successfully
 {: tsResolve} 
 
 
-## 인스턴스에 서로 다른 traceSpecification 구성이 있음
+## 인스턴스에 다른 traceSpecification 구성이 있음
 {: #ts_different_config}
 
 하나의 앱의 여러 인스턴스에서 traceSpecification 구성이 서로 다를 수 있습니다.

@@ -39,19 +39,19 @@ Con la función de registro que proporciona {{site.data.keyword.Bluemix_notm}}, 
 ## Creación de registros para apps de CF
 {: #logging_bmx_ov_cf}
 
-{{site.data.keyword.Bluemix_notm}} registra los datos de registro que genera la plataforma Cloud Foundry y las aplicaciones de Cloud Foundry. En los registros puede ver los errores, avisos y mensajes informativos que se generan para la app. Para obtener más información sobre la creación de registros en Cloud Foundry, consulte [Creación de registros para apps de Cloud Foundry en Bluemix](cfapps/logging_cf_apps.html#logging_bluemix_cf_apps). 
+{{site.data.keyword.Bluemix_notm}} registra los datos de registro que genera la plataforma Cloud Foundry y las aplicaciones de Cloud Foundry. En los registros puede ver los errores, avisos y mensajes informativos que se generan para la app. Para obtener más información sobre la creación de registros en Cloud Foundry, consulte [Creación de registros para apps de Cloud Foundry en Bluemix](cfapps/logging_cf_apps.html#logging_bluemix_cf_apps).
 
 ## Creación de registros para contenedores
 {: #logging_bmx_ov_containers}
 
 {{site.data.keyword.Bluemix_notm}} registra los datos de registro que genera {{site.data.keyword.containershort}}. Para obtener más información sobre el registro en {{site.data.keyword.containershort}}, consulte [Registro correspondiente al servicio IBM Bluemix Container](containers/logging_containers_ov.html#logging_containers_ov).  
 
-**Nota:** Tiene la posibilidad de analizar los registros de contenedores Docker en {{site.data.keyword.Bluemix_notm}} que se despliegan en la infraestructura de nube gestionada de {{site.data.keyword.IBM}}. 
+**Nota:** Tiene la posibilidad de analizar los registros de contenedores Docker en {{site.data.keyword.Bluemix_notm}} que se despliegan en la infraestructura de nube gestionada de {{site.data.keyword.IBM}}.
 
 ## Análisis de registro en Bluemix
 {: #logging_bmx_ov_ui}
 
-En {{site.data.keyword.Bluemix_notm}}, puede ver los registros recientes para su app o la parte más reciente de los registros en tiempo real. 
+En {{site.data.keyword.Bluemix_notm}}, puede ver los registros recientes para su app o la parte más reciente de los registros en tiempo real.
 
 * Puede ver, filtrar y analizar registros a través de la interfaz de usuario. Para obtener más información, consulte [Análisis de registros desde la consola de Bluemix](logging_view_dashboard.html#analyzing_logs_bmx_ui).
 

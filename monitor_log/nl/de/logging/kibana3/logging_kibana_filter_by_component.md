@@ -42,11 +42,11 @@ Führen Sie die folgenden Tasks aus, um Ihre Cloud Foundry-App-Protokolle nach P
 
 6. Fügen Sie einen Filter hinzu, um Informationen für eine Komponente (Protokolltyp) ein- oder auszuschließen. 
 
-    * Zum Hinzufügen eines Filters, der einen Komponentenwert einschließt, klicken Sie auf das **Lupensymbol** ![Lupensymbol](images/logging_magnifying_glass.jpg "Lupensymbol") in der Zeile 'source_id' der Tabelle.  
+    * Zum Hinzufügen eines Filters, der einen Komponentenwert einschließt, klicken Sie auf das **Lupensymbol** ![Lupensymbol](images/logging_magnifying_glass.jpg "Lupensymbol") in der Zeile 'source_id' der Tabelle. 
 
         ![Filterbedingung für das Feld 'instance_id'](images/logging_component_filter.png "Filterbedingung für das Feld 'instance_id'") 
 
-    * Zum Hinzufügen eines Filters, der einen Komponentenwert ausschließt, klicken Sie auf das **Ausschlusssymbol** ![Ausschlusssymbol](images/logging_exclusion_icon.png "Ausschlusssymbol") in der Zeile 'source_id' der Tabelle.  
+    * Zum Hinzufügen eines Filters, der einen Komponentenwert ausschließt, klicken Sie auf das **Ausschlusssymbol** ![Ausschlusssymbol](images/logging_exclusion_icon.png "Ausschlusssymbol") in der Zeile 'source_id' der Tabelle. 
     
          ![Filterbedingung für den Ausschluss des Felds 'source_id'](images/logging_component_add_exclusion_filter.png "Filterbedingung für den Ausschluss des Felds 'source_id'") 
      
@@ -60,12 +60,12 @@ Führen Sie die folgenden Tasks aus, um Ihre Cloud Foundry-App-Protokolle nach P
 
 8. Speichern Sie das Dashboard. 
 
-    Wenn Sie die gewünschten Filter hinzugefügt und die Anpassung des Dashboards abgeschlossen haben, klicken Sie auf das Symbol **Speichern** ![Symbol für Speichern](images/logging_save.jpg "Symbol für Speichern") und geben einen Namen für Ihr Dashboard ein.  
+    Wenn Sie die gewünschten Filter hinzugefügt und die Anpassung des Dashboards abgeschlossen haben, klicken Sie auf das Symbol **Speichern** ![Symbol für Speichern](images/logging_save.jpg "Symbol für Speichern") und geben einen Namen für Ihr Dashboard ein. 
       
     **Hinweis:** Wenn Sie versuchen, ein Dashboard unter einem Namen zu speichern, der Leerzeichen enthält, wird es nicht gespeichert. Geben Sie einen Namen ohne Leerzeichen ein und klicken Sie auf das Symbol **Speichern**.
     
     ![Name zum Speichern des Dashboards](images/logging_save_dashboard.jpg "Name zum Speichern des Dashboards")
 
-Sie haben jetzt ein Dashboard erstellt, das Ihre Protokolleinträge nach Komponente (Protokolltyp) filtert. Sie können Ihr gespeichertes Dashboard jederzeit laden, indem Sie auf das Symbol **Ordner** ![Ordnersymbol](images/logging_folder.jpg "Ordnersymbol") klicken und Ihr Dashboard über den Namen auswählen. 
+Sie haben jetzt ein Dashboard erstellt, das Ihre Protokolleinträge nach Komponente (Protokolltyp) filtert. Sie können Ihr gespeichertes Dashboard jederzeit laden, indem Sie auf das Symbol **Ordner** ![Ordnersymbol](images/logging_folder.jpg "Ordnersymbol") klicken und Ihr Dashboard über den Namen auswählen.
 
 

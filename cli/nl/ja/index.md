@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-02-14"
+lastupdated: "2017-05-15"
 
 
 ---
@@ -49,9 +49,9 @@ lastupdated: "2017-02-14"
 bluemix plugin install plugin_name -r Bluemix
 ```
 
-| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Bluemix Container Service*  |
+| *{{site.data.keyword.autoscaling}} CLI* |  *IBM Bluemix Container Service*  |
 |-----|-----|-----|
-| プラグイン名: active-deploy<br> [資料の表示](/docs/services/ActiveDeploy/cli.html#cli) | プラグイン名: auto-scaling <br> [資料の表示](/docs/cli/plugins/auto-scaling/index.html) | プラグイン名: container-service  <br> [資料の表示](/docs/containers/cs_cli_devtools.html) |
+| プラグイン名: auto-scaling <br> [資料の表示](/docs/cli/plugins/auto-scaling/index.html) |  プラグイン名: container-service  <br> [資料の表示](/docs/containers/cs_cli_devtools.html) |
 {: caption="表 2. プラグイン" caption-side="top"}
 
 |  *プライベート・ネットワーク・ピアリング* | *VPN*  |
@@ -91,9 +91,9 @@ bluemix cf install-plugin plugin_name -r bluemix-cf-repo
 ```
 {: codeblock}
 
-| *Active Deploy* | *管理コンソール* |
-|-----------------|-----------------|
-| プラグイン名: active-deploy<br>  [資料の表示](/docs/services/ActiveDeploy/cli.html#cli) |  プラグイン名: bluemix-admin<br> [資料の表示](/docs/cli/plugins/bluemix_admin/index.html) |
+| *管理コンソール* |
+-----------------|
+|  プラグイン名: bluemix-admin<br> [資料の表示](/docs/cli/plugins/bluemix_admin/index.html) |
 {: caption="表 4. プラグイン" caption-side="top"}
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
@@ -106,7 +106,7 @@ bluemix cf install-plugin plugin_name -r bluemix-cf-repo
 
 お気に入りの {{site.data.keyword.Bluemix_notm}} サービスを統合するためのプラグインをダウンロードしてインストールします。
 
-| *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
-|-------------|----------|----------|----------|----------|----------|
-| [Egit Eclipse プラグイン ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window} <br> [RTC Eclipse プラグイン ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Liberty Eclipse プラグイン ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse プラグイン ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse プラグイン](../services/rules/index.html#rulov002) | [Developer Toolkit ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://nextstage.torolab.ibm.com/apimanagement/getting-started/ ){: new_window} | [Bluemix Eclipse プラグイン](/docs/manageapps/eclipsetools/eclipsetools.html) |
+| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
+|----------|----------|----------|----------|----------|
+| [Liberty Eclipse プラグイン ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Eclipse プラグイン ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse プラグイン](../services/rules/index.html#rulov002) | [デベロッパーズ・ツールキット](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Bluemix Eclipse プラグイン](/docs/manageapps/eclipsetools/eclipsetools.html) |
 {: caption="表 6. プラグイン" caption-side="top"}

@@ -1,12 +1,12 @@
 ---
 
- 
+
 
 copyright:
 
   years: 2014, 2017
 
-lastupdated: "2017-01-10" 
+lastupdated: "2017-01-10"
 
 ---
 
@@ -23,7 +23,7 @@ proposant des choix clairs pour le développement d'applications sécurisé.
 {:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} assure la sécurité en appliquant des règles de sécurité respectant les meilleurs pratiques d'IBM en matière de systèmes, de réseau et d'ingénierie
-sécurisée. Ces règles incluent des pratiques telles que l'analyse du code source, l'analyse dynamique, la modélisation des menaces et des tests de pénétration. {{site.data.keyword.Bluemix_notm}} suit le processus IBM Product Security Incident Response Team (PSIRT) pour la gestion des incidents de sécurité. Pour plus d'informations, voir le site [IBM Security Vulnerability Management (PSIRT) ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window}. 
+sécurisée. Ces règles incluent des pratiques telles que l'analyse du code source, l'analyse dynamique, la modélisation des menaces et des tests de pénétration. {{site.data.keyword.Bluemix_notm}} suit le processus IBM Product Security Incident Response Team (PSIRT) pour la gestion des incidents de sécurité. Pour plus d'informations, voir le site [IBM Security Vulnerability Management (PSIRT) ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://www-03.ibm.com/security/secure-engineering/process.html){: new_window}.
 
 Les environnements {{site.data.keyword.Bluemix_notm}} public et dédié utilisent les services cloud d'infrastructure sous forme de services
 (IaaS) {{site.data.keyword.BluSoftlayer}} et profitent pleinement de son architecture sécurisée. L'infrastructure
@@ -60,7 +60,7 @@ Avec l'environnement {{site.data.keyword.Bluemix_notm}} local, vous hébergez {{
 de votre société et dans votre centre de données. Par conséquent, vous êtes responsable de certains aspects de la sécurité. L'image ci-dessous indique quelles sont les parties
 de la sécurité qui appartiennent au client et quelles sont celles qui sont gérées et mises à jour par IBM.
 
-![Présentation de la sécurité de la plateforme Bluemix locale](images/security_local_platform.svg){: #localplatformsecurity}
+![Présentation de la sécurité de la plateforme Bluemix locale](images/security_local_platform.svg) {: #localplatformsecurity}
 
 Figure 2. Présentation de la sécurité de la plateforme {{site.data.keyword.Bluemix_notm}} locale
 
@@ -272,9 +272,9 @@ vulnérabilités en matière de sécurité. Pour plus d'informations, voir [Init
 ### Plug-in IBM UrbanCode pour le test de la sécurité des applications
 
 Le plug-in IBM Application Security Testing for {{site.data.keyword.Bluemix_notm}} vous permet d'exécuter des analyses de sécurité pour vos
-applications Web ou Android qui sont hébergées dans {{site.data.keyword.Bluemix_notm}}. Il est développé par la communauté IBM UrbanCode. Deploy Community, qui assure son support, sur la plateforme IBM Bluemix DevOps Services.
+applications Web ou Android qui sont hébergées dans {{site.data.keyword.Bluemix_notm}}. Il est développé par la communauté IBM UrbanCode. Deploy Community, qui assure son support. 
 
-Pour plus d'informations, voir [IBM Application Security Testing for Bluemix ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}. 
+Pour plus d'informations, voir [IBM Application Security Testing for Bluemix ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/urbancode/plugindoc/ibmucd/ibm-application-security-testing-bluemix/1-0/){: new_window}.
 
 ### dashDB
 

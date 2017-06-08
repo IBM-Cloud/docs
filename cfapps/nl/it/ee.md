@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -28,10 +28,17 @@ end-to-end.
 ## Registrazione
 {: #ee_start}
 
-Prima di iniziare, esegui la registrazione per un ID IBM da [https://console.ng.bluemix.net/ ![icona link esterno](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window}. Successivamente, potrai accedere a {{site.data.keyword.Bluemix_notm}} e
+Prima di iniziare, esegui la registrazione per un ID IBM da [https://console.ng.bluemix.net/ ![Icona link esterno](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window}. Successivamente, potrai accedere a {{site.data.keyword.Bluemix_notm}} e
 iniziare il periodo di prova di 30 giorni. {{site.data.keyword.Bluemix_notm}} fornisce
 una franchigia di 2 GB di memoria di runtime e 10 istanze del servizio per la tua prova
 gratuita.
+
+
+## Sviluppo e distribuzione delle tue applicazioni attraverso le toolchain e il servizio {{site.data.keyword.contdelivery_short}}
+{: #ee_cd}
+
+<a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">Aggiungi una toolchain</a> che include il servizio {{site.data.keyword.contdelivery_full}} nella tua applicazione. Quindi, <a href="docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">utilizza la toolchain</a> per sviluppare e distribuire la tua applicazione.
+
 
 ## Creazione della tua applicazione web utilizzando l'interfaccia utente {{site.data.keyword.Bluemix_notm}}
 {: #ee_appui}

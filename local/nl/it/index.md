@@ -218,7 +218,7 @@ Distribuzione e aggiornamenti di manutenzione
 </dt>
 <dd>
 Tranne che per l'installazione iniziale della VM di inizio installata nelle prime fasi del processo di distribuzione, la distribuzione della maggior parte degli altri componenti viene automatizzata utilizzando UrbanCode Deploy.<br>
-<p>Per l'attività di distribuzione, UrbanCode Deploy si basa su [BOSH ![icona link esterno](../icons/launch-glyph.svg)](https://bosh.cloudfoundry.org/){:new_window}, con i componenti BOSH tra i primi ad essere distribuiti dalla VM di inizio. La funzionalità di fornitura continua di UrbanCode Deploy viene utilizzata per fornire gli aggiornamenti di piattaforma attraverso un coerente processo di test e convalida.</p>
+<p>Per l'attività di distribuzione, UrbanCode Deploy si basa su [BOSH ![Icona link esterno](../icons/launch-glyph.svg)](https://bosh.cloudfoundry.org/){:new_window}, con i componenti BOSH tra i primi ad essere distribuiti dalla VM di inizio. La funzionalità di fornitura continua di UrbanCode Deploy viene utilizzata per fornire gli aggiornamenti di piattaforma attraverso un coerente processo di test e convalida.</p>
 <p>Gli script e i pacchetti vengono trasferiti dal centro operativo {{site.data.keyword.IBM_notm}} alla tua piattaforma {{site.data.keyword.Bluemix_notm}} locale tramite il relay.</p>
 </dd>
 <dt>
@@ -252,7 +252,7 @@ Il team di distribuzione {{site.data.keyword.Bluemix_notm}} carica il certificat
 
 {{site.data.keyword.Bluemix_local_notm}} fornisce una versione privata dell'offerta {{site.data.keyword.Bluemix_notm}} pubblico che viene ospitata nell'hardware da te scelto. Le due opzioni comunemente supportate sono le seguenti:
 * Fornisci tu l'hardware VMware.
-* Ordini il sistema {{site.data.keyword.Bluemix_notm}} locale, che è integrato nell'applicazione PureApplication preconfigurata che puoi ordinare tramite {{site.data.keyword.IBM_notm}}. Per ulteriori informazioni sulle opzioni dell'applicazione PureApplication, vedi [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![icona link esterno](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
+* Ordini il sistema {{site.data.keyword.Bluemix_notm}} locale, che è integrato nell'applicazione PureApplication preconfigurata che puoi ordinare tramite {{site.data.keyword.IBM_notm}}. Per ulteriori informazioni sulle opzioni dell'applicazione PureApplication, vedi [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![Icona link esterno](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
 
 Per {{site.data.keyword.Bluemix_local_notm}}, puoi utilizzare i servizi e i runtime {{site.data.keyword.Bluemix_notm}} per supportare le tue esigenze di elaborazione in un ambiente cloud protetto, ospitato e gestito dal cliente. {{site.data.keyword.IBM_notm}} ti fornisce l'accesso a {{site.data.keyword.Bluemix_local_notm}} utilizzando un accesso protetto da password. Puoi accedere a servizi, runtime
 e risorse associate nonché distribuire e rimuovere applicazioni {{site.data.keyword.Bluemix_notm}}. Riesamina i seguenti passi per lavorare con il tuo rappresentante {{site.data.keyword.IBM_notm}} per configurare la tua istanza locale di {{site.data.keyword.Bluemix_notm}}.
@@ -265,7 +265,7 @@ Per configurare la tua versione privata di {{site.data.keyword.Bluemix_notm}}:
 <li>Riesamina i <a href="index.html#localinfra" title="Si apre in nuova pagina">Requisiti dell'infrastruttura {{site.data.keyword.Bluemix_local_notm}}</a> per configurare la tua istanza locale.</li>
 <li>Per iniziare, contatta il tuo rappresentante dell'account designato {{site.data.keyword.IBM_notm}} oppure
 <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">contatta
-{{site.data.keyword.Bluemix_notm}} <img src="../icons/launch-glyph.svg" alt="icona link esterno">
+{{site.data.keyword.Bluemix_notm}} <img src="../icons/launch-glyph.svg" alt="Icona link esterno">
 </a>.</li>
 <li>Stabilisci un accordo per {{site.data.keyword.Bluemix_local_notm}} con {{site.data.keyword.IBM_notm}} che includa le date cardine per la distribuzione.
 	<ol type="a">
@@ -448,7 +448,7 @@ La fase finale di completamento rappresenta la fine del rapporto tra te e {{site
 ## Requisiti infrastruttura {{site.data.keyword.Bluemix_local_notm}}
 {: #localinfra}
 
-Per {{site.data.keyword.Bluemix_local_notm}}, la sicurezza fisica e l'infrastruttura per ospitare l'istanza locale sono di tua competenza. I requisiti dell'infrastruttura sono gli stessi anche se scegli di utilizzare e gestire la tua propria VMware o acquistare il sistema {{site.data.keyword.Bluemix_local_notm}} che include l'applicazione PureApp ordinata da IBM. Tuttavia, esistono due opzioni per l'applicazione PureApp che hai scelto durante l'ordine e il processo di ridimensionamento fa differenza tra VMware e il sistema {{site.data.keyword.Bluemix_local_notm}}. Per ulteriori informazioni sulle opzioni dell'applicazione PureApp, vedi [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![icona link esterno](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
+Per {{site.data.keyword.Bluemix_local_notm}}, la sicurezza fisica e l'infrastruttura per ospitare l'istanza locale sono di tua competenza. I requisiti dell'infrastruttura sono gli stessi anche se scegli di utilizzare e gestire la tua propria VMware o acquistare il sistema {{site.data.keyword.Bluemix_local_notm}} che include l'applicazione PureApp ordinata da IBM. Tuttavia, esistono due opzioni per l'applicazione PureApp che hai scelto durante l'ordine e il processo di ridimensionamento fa differenza tra VMware e il sistema {{site.data.keyword.Bluemix_local_notm}}. Per ulteriori informazioni sulle opzioni dell'applicazione PureApp, vedi [IBM {{site.data.keyword.Bluemix_notm}} Local System W3500 and W3550 models run cloud native services, enabled middleware, and open pattern workloads concurrently ![Icona link esterno](../icons/launch-glyph.svg)](https://www-01.ibm.com/common/ssi/rep_ca/5/897/ENUS216-325/){: new_window}.
 
 {{site.data.keyword.IBM_notm}} imposta i seguenti requisiti minimi per la configurazione di {{site.data.keyword.Bluemix_local_notm}}.
 
@@ -671,7 +671,7 @@ Un programma di bilanciamento del carico globale non solo garantisce la disponib
 * Fornisce il failover del sito in base alla verifica dell'integrità dell'applicazione
 * Utilizza un instradamento ponderato tra gli endpoint
 
-Puoi scegliere un programma di bilanciamento del carico globale come Akamai o Dyn. Per ulteriori informazioni sull'utilizzo di Akamai come programma di bilanciamento del carico globale, vedi [Global traffic management ![icona link esterno](../icons/launch-glyph.svg)](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp){: new_window}. Per ulteriori informazioni sull'utilizzo di Dyn come programma di bilanciamento del carico globale, vedi [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud ![icona link esterno](../icons/launch-glyph.svg)](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}.
+Puoi scegliere un programma di bilanciamento del carico globale come Akamai o Dyn. Per ulteriori informazioni sull'utilizzo di Akamai come programma di bilanciamento del carico globale, vedi [Global traffic management ![Icona link esterno](../icons/launch-glyph.svg)](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp){: new_window}. Per ulteriori informazioni sull'utilizzo di Dyn come programma di bilanciamento del carico globale, vedi [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud ![Icona link esterno](../icons/launch-glyph.svg)](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}.
 
 ### Alta disponibilità
 {: #ha}
@@ -682,8 +682,8 @@ Queste tecnologie includono:
 
 <dl>
 <dt>Scalabilità in Cloud Foundry DEA</dt>
-<dd>Un <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">DEA (Droplet Execution Agent) <img src="../icons/launch-glyph.svg" alt="icona link esterno">
-</a> Cloud Foundry effettua verifiche dell'integrità nelle applicazioni eseguite al suo interno. Se si verifica un problema con l'applicazione o con lo stesso DEA, distribuisce ulteriori istanze dell'applicazione a un DEA alternativo per risolvere il problema. Per ulteriori informazioni, vedi <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy <img src="../icons/launch-glyph.svg" alt="icona link esterno">
+<dd>Un <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">DEA (Droplet Execution Agent) <img src="../icons/launch-glyph.svg" alt="Icona link esterno">
+</a> Cloud Foundry effettua verifiche dell'integrità nelle applicazioni eseguite al suo interno. Se si verifica un problema con l'applicazione o con lo stesso DEA, distribuisce ulteriori istanze dell'applicazione a un DEA alternativo per risolvere il problema. Per ulteriori informazioni, vedi <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy <img src="../icons/launch-glyph.svg" alt="Icona link esterno">
 </a>.
 <p>Per garantire l'elevata disponibilità per le tue applicazioni, hai bisogno di abbastanza risorse di elaborazione per bilanciare il carico e puoi inoltre richiederne ulteriori per supportare un possibile malfunzionamento. Se hai bisogno di ridimensionare il tuo ambiente incrementando il tuo pool DEA in modo da essere preparato a un malfunzionamento o per affrontare un'anomalia durante il caricamento delle tue istanze dell'applicazione, puoi collaborare con il tuo rappresentante IBM per ordinare ulteriori DEA e per verificare di avere l'hardware appropriato per supportare le risorse aggiunte.
 </p>
@@ -718,7 +718,7 @@ Poiché la protezione dei dati privati è di importanza critica, {{site.data.key
 {: rellinks}
 ## general
 {: general}
-* [Scopri: {{site.data.keyword.Bluemix_local_notm}} ![icona link esterno](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/){: new_window}
+* [Scopri: {{site.data.keyword.Bluemix_local_notm}} ![Icona link esterno](../icons/launch-glyph.svg)](http://www.ibm.com/cloud-computing/bluemix/hybrid/local/){: new_window}
 * [Novità in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
 * [{{site.data.keyword.Bluemix_notm}} glossario](/docs/overview/glossary/index.html)
 * [Managing {{site.data.keyword.Bluemix_local_notm}} e {{site.data.keyword.Bluemix_notm}} dedicato](/docs/admin/index.html#mng)

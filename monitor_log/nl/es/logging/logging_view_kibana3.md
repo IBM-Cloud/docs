@@ -56,7 +56,7 @@ Después de personalizar un panel de control, puede elegir entre cualquiera de l
 
 * Puede incluir el panel de control en una página web. Para que un usuario vea un panel de control incorporado, dicho usuario debe tener permisos para acceder a Kibana.
 
-Para obtener más información, consulte la documentación de [Kibana ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}. 
+Para obtener más información, consulte la documentación de [Kibana ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 **Nota:** Kibana 4 y Kibana 3 reciben soporte. Kibana 3 está en desuso.
 
@@ -76,7 +76,7 @@ Para ver los registros de una aplicación Cloud Foundry en Kibana, siga los paso
 
 Si no ve ningún registro, ajuste el selector de tiempo de la cabecera.
 
-Para obtener más información sobre cómo personalizar el panel de control de Kibana, consulte [este artículo en el blog ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} o la documentación de [Kibana ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.  
+Para obtener más información sobre cómo personalizar el panel de control de Kibana, consulte [este artículo en el blog ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} o la documentación de [Kibana ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 ##  Cómo ir al panel de control de Kibana desde un navegador web
 {: #launch_Kibana_from_browser}
@@ -91,7 +91,7 @@ Siga los pasos siguientes para abrir un panel de control de Kibana desde un nave
 
 Si no ve ningún registro, ajuste el selector de tiempo de la cabecera.
 
-Para obtener más información sobre cómo personalizar el panel de control de Kibana, consulte [este artículo en el blog ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} o la documentación de [Kibana ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.  
+Para obtener más información sobre cómo personalizar el panel de control de Kibana, consulte [este artículo en el blog ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} o la documentación de [Kibana ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 
 

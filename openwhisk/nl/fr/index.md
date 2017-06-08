@@ -22,7 +22,7 @@ Vous êtes facturé à la milliseconde de temps d'exécution (arrondie aux 100 m
 
 Ce modèle de programmation convient particulièrement bien pour les applications de microservices, de mobiles, IoT, et beaucoup d'autres. La mise à l'échelle automatique et l'équilibrage de charge y sont inhérents, sans que vous ayez à configurer manuellement des clusters, des équilibreurs de charge, des plug-ins HTTP, etc. Si vous utilisez {{site.data.keyword.openwhisk}}, vous êtes également déchargé de toutes les tâches d'administration, la maintenance du matériel, du réseau et des logiciels étant assurée par IBM. Tout ce que vous avez à faire est fournir le code que vous souhaitez exécuter et le donner à {{site.data.keyword.openwhisk}}. Le reste se fait par magie. Vous trouverez une excellente présentation du modèle de programmation sans serveur sur le [blogue de Martin Fowler](https://martinfowler.com/articles/serverless.html).
 
-Vous pouvez également obtenir le [code source Apache OpenWhisk](https://github.com/openwhisk/openwhisk) et exécuter le système vous-même. 
+Vous pouvez également obtenir le [code source Apache OpenWhisk](https://github.com/openwhisk/openwhisk) et exécuter le système vous-même.
 
 Pour plus de détails sur le fonctionnement d'{{site.data.keyword.openwhisk_short}}, voir [A propos d'{{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 

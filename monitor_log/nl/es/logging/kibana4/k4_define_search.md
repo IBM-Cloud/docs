@@ -19,7 +19,7 @@ lastupdated: "2017-03-13"
 En la barra de búsqueda de la página Descubrir, puede definir y guardar consultas de búsqueda utilizando el lenguaje de consulta de Lucene. Para cada búsqueda, puede aplicar filtros para precisar las entradas que están disponibles para el análisis.
 {:shortdesc}
 
-Complete las siguientes tareas para definir una búsqueda personalizada: 
+Complete las siguientes tareas para definir una búsqueda personalizada:
 
 1. Acceda al separador **Registros** de la app Cloud Foundry (CF) o contenedor. 
 

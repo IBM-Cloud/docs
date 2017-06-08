@@ -20,7 +20,7 @@ Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}} Cloud F
 
 Ogni ambiente di esecuzione, compresi sia quello mobile sia quello web, è isolato dall'ambiente di esecuzione di altre applicazioni. Gli ambienti di esecuzione sono isolati anche se tali applicazioni si trovano sulla stessa macchina fisica. La seguente figura mostra il flusso di base del modo in cui {{site.data.keyword.Bluemix_notm}} Cloud Foundry gestisce la distribuzione di applicazioni:
 
-![Distribuzione di un'applicazione](images/deploy.png)
+![Distribuzione di un'applicazione](images/deploy-diego.png)
 
 Figura 3. Distribuzione di un'applicazione
 
@@ -33,7 +33,7 @@ Una volta selezionato un server virtuale, su ciascun server virtuale un gestore 
 
 La seguente figura mostra la struttura di un server virtuale, nota anche come DEA (Droplet Execution Agent), su cui sono distribuite più applicazioni:
 
-![Progetto di un server virtuale](images/container.png)
+![Progetto di un server virtuale](images/container-diego.png)
 
 Figura 4. Progetto di un server virtuale
 
@@ -41,7 +41,7 @@ In ciascun server virtuale, un gestore dell'applicazione comunica con il resto d
 
 Quando l'applicazione viene distribuita, se ha un'interfaccia web (come per un'applicazione web Java), o altri servizi basati su REST (come i servizi mobili presentati pubblicamente all'applicazione mobile), gli utenti dell'applicazione possono comunicare con essa utilizzando normali richieste HTTP.
 
-![Chiamata di un'applicazione {{site.data.keyword.Bluemix_notm}}](images/execute.png)
+![Richiamo di un'applicazione {{site.data.keyword.Bluemix_notm}}](images/execute-diego.png)
 
 Figura 5. Richiamo di un'applicazione {{site.data.keyword.Bluemix_notm}}
 
@@ -65,7 +65,7 @@ I client, che possono essere applicazioni mobili, applicazioni che vengono esegu
 
 La seguente figura mostra l'architettura {{site.data.keyword.Bluemix_notm}} Cloud Foundry di alto livello.
 
-![Architettura di {{site.data.keyword.Bluemix_notm}}](images/arch.png)
+![Architettura {{site.data.keyword.Bluemix_notm}}](images/arch-diego.png)
 
 Figure 1. Architettura {{site.data.keyword.Bluemix_notm}} Cloud Foundry
 

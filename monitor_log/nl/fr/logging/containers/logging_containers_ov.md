@@ -22,7 +22,7 @@ Dans {{site.data.keyword.Bluemix}}, vous pouvez visualiser, filtrer et analyser 
 
 Les journaux de conteneurs sont surveillés et retransmis depuis l'extérieur du conteneur par le biais de moteurs de balayage. Les données sont envoyés par les moteurs de balayage à un service partagé Elasticsearch dans {{site.data.keyword.Bluemix_notm}}.
 
-**Remarque :** Vous pouvez analyser des journaux de conteneur dans {{site.data.keyword.Bluemix_notm}} pour les conteneurs Docker qui sont déployés dans l'infrastructure de cloud gérée par {{site.data.keyword.IBM}}. 
+**Remarque :** Vous pouvez analyser des journaux de conteneur dans {{site.data.keyword.Bluemix_notm}} pour les conteneurs Docker qui sont déployés dans l'infrastructure de cloud gérée par {{site.data.keyword.IBM}}.
 
 Le diagramme suivant offre une vue d'ensemble de la journalisation pour {{site.data.keyword.containershort}}:
 

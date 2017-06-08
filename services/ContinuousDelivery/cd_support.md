@@ -41,7 +41,7 @@ If you have a more serious issue or encounter problems with the {{site.data.keyw
 1. From the menu bar, click **Support**, and then click **Add Ticket**.
 1. Complete the form to indicate what you need technical support for.
 
-For more information about opening an IBM {{site.data.keyword.Bluemix_notm}} support ticket, or about support levels and ticket severities, see [Contacting support](https://console.ng.bluemix.net/docs/support/index.html#contacting-support).
+For more information about opening an IBM {{site.data.keyword.Bluemix_notm}} support ticket, or about support levels and ticket severities, see [Contacting support](https://console.bluemix.net/docs/support/index.html#contacting-support).
 
 
 ## Support for Bluemix

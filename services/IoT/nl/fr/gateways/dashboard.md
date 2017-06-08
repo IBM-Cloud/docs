@@ -35,7 +35,7 @@ Les terminaux de passerelle possèdent des autorisations supplémentaires par ra
 - Exécuter un agent de gestion des terminaux, de manière à pouvoir le gérer, et gérer les terminaux qui lui sont connectés  
 Pour les informations du développeur de passerelle, voir [Connectivité MQTT pour les passerelles](mqtt.html).
 
-Vous pouvez également utiliser des passerelles pour exécuter des fonctions Edge Analytics sur les données envoyées par les terminaux de passerelle. Pour plus d'informations, voir[Edge analytics](../edge_analytics.html) et [Installation de l'agent Edge Analytics](#edge).
+Vous pouvez également utiliser des passerelles pour exécuter des fonctions Edge Analytics sur les données envoyées par les terminaux de passerelle. Pour plus d'informations, voir [Edge analytics](../edge_analytics.html) et [Installation de l'agent Edge Analytics](#edge).
 
 ## Etape 1 : Enregistrement de votre passerelle auprès de {{site.data.keyword.iot_short_notm}}  
 {: #register_gateway}

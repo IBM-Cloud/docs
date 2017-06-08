@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-5-8"
+lastupdated: "2017-6-1"
 ---
 
 {:new_window: target="_blank"}
@@ -37,7 +37,7 @@ No matter where you code, you can use this quick reference to do common tasks.
 ### Eclipse Orion Web IDE
 1. Click the **Reference** list and expand **local**.
 
-2. Next to the branch to modify, click the checkout icon <img  class="inline" src="./images/checkout.png" alt="Checkout icon">.
+2. Click the checkout icon <img  class="inline" src="./images/checkout.png" alt="Checkout icon"> for the branch to modify.
 
 1. Make sure that your selected branch is shown in the **Reference** list.
 
@@ -66,7 +66,7 @@ No matter where you code, you can use this quick reference to do common tasks.
 
 1. Click the **Reference** list and expand **local**.
 
-2. Next to the local branch to remove, click **Delete** <img class="inline"  src="./images/delete.png" alt="Delete icon">.
+2. Click **Delete** <img class="inline"  src="./images/delete.png" alt="Delete icon"> for the local branch to remove.
 
 ### Git terminal
 1. Type `git branch -d <branchname>` and press Enter.
@@ -80,7 +80,7 @@ Overwrite the contents of a referenced remote branch with the contents of your a
 
 ### Eclipse Orion Web IDE
 
-1. In the Working Directory Changes section, in the Outgoing section, click the arrow next to **Push**.
+1. In the Working Directory Changes section, in the Outgoing section, click the arrow for **Push**.
 2. Click **Force Push Branch**.
 3. Confirm the warning.
 
@@ -160,7 +160,7 @@ Overwrite the contents of a referenced remote branch with the contents of your a
 
 2. View the details of the commit by clicking it.
 
-3. Next to a file, click the **>** and review the file's changes.
+3. To review a file's changes, click **>**.
 
   **Note:** If a commit introduced a change to a line, the original line is shaded pink and the new line is shaded green.  Similarly, lines that were added by a commit are shaded green and lines that were removed by a commit are shaded pink.
 
@@ -249,7 +249,7 @@ Revert the changes that a commit has introduced into your active branch.
 
 1. Under History, select a commit.
 
-2. On the right side of the page, above the commit summary, click the revert icon <img class="inline" src="./images/revert.png" alt="Revert icon">.
+2. Click the revert icon <img class="inline" src="./images/revert.png" alt="Revert icon">.
 
 ### Git terminal
 
@@ -273,7 +273,7 @@ When you need to deliver changes from a source branch to a destination branch, y
 
 1. In the Incoming section, click the **Merge** icon <img  class="inline" src="./images/mergeicon.png" alt="Merge icon in the Incoming section">
 
-1. In the **Reference** list, click the checkout icon next to the branch that you just merged the changes into.
+1. In the **Reference** list, click the checkout icon for the branch that you just merged the changes into.
 
 1. If you want to deliver the changes, click **Push**. Otherwise, at this point, you can create a test deployment to make sure that everything is working as expected.
 

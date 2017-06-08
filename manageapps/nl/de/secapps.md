@@ -68,7 +68,7 @@ Ein Zertifikat wird von einer Zertifizierungsstelle ausgegeben und von dieser Ze
 
 Sie können ein Sicherheitsprotokoll anwenden, um die Kommunikation für Ihre Anwendung zu schützen und so ein Ausspionieren, Manipulationen und das Fälschen von Nachrichten zu verhindern.
 
-Für jede Organisation in {{site.data.keyword.Bluemix_notm}} mit einem Kontoeigner, der einen Plan mit nutzungsabhängiger Zahlung oder einen Abonnementplan besitzt, dürfen Sie vier Zertifikate hochladen. Für jede Organisation mit einem Kontoeigner, der ein Konto für eine kostenlose Testversion besitzt, müssen Sie Ihr Konto aktualisieren, um ein Zertifikat hochzuladen. 
+Für jede Organisation in {{site.data.keyword.Bluemix_notm}} mit einem Kontoeigner, der einen Plan mit nutzungsabhängiger Zahlung oder einen Abonnementplan besitzt, dürfen Sie vier Zertifikate hochladen. Für jede Organisation mit einem Kontoeigner, der ein Konto für eine kostenlose Testversion besitzt, müssen Sie Ihr Konto aktualisieren, um ein Zertifikat hochzuladen.
 
 Bevor Sie Zertifikate hochladen können, müssen Sie eine Zertifikatssignieranforderung erstellen. Siehe [Zertifikatssignieranforderungen erstellen](#ssl_csr).
 
@@ -82,11 +82,11 @@ Wenn Sie eine angepasste Domäne verwenden, um das SSL-Zertifikat ordnungsgemä�
 
 Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
 
-1. Wechseln Sie zu Ihrem Dashboard. 
+1. Wechseln Sie zu Ihrem Dashboard.
 
-2. Wählen Sie den Namen für Ihre App aus, um die App-Detailansicht zu öffnen. 
+2. Wählen Sie den Namen für Ihre App aus, um die App-Detailansicht zu öffnen.
 
-3. Wählen Sie die Dropdown-Liste **Routen** und anschließend die Option **Domänen verwalten** aus. 
+3. Wählen Sie die Dropdown-Liste **Routen** und anschließend die Option **Domänen verwalten** aus.
 
 3. Klicken Sie für Ihre angepasste Domäne auf **Zertifikat hochladen**.
 
@@ -137,4 +137,4 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
 	  * DER (.der oder .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-Um ein Zertifikat zu löschen oder ein vorhandenes Zertifikat durch ein neues zu ersetzen, wechseln Sie zu **Verwalten** > **Konto** > **Organisationen**. Klicken Sie anschließend auf **Details anzeigen** > **Organisation bearbeiten** > **Domänen**, um ein Zertifikat für eine angepasste Domäne zu löschen oder zu ersetzen. 
+Um ein Zertifikat zu löschen oder ein vorhandenes Zertifikat durch ein neues zu ersetzen, wechseln Sie zu **Verwalten** > **Konto** > **Organisationen**. Klicken Sie anschließend auf **Details anzeigen** > **Organisation bearbeiten** > **Domänen**, um ein Zertifikat für eine angepasste Domäne zu löschen oder zu ersetzen.

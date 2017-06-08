@@ -33,17 +33,17 @@ Per un'**applicazione Cloud Foundry Liberty**, il console.log predefinito per il
 * Il console.log contiene i STDOUT e STDERR reindirizzati dal processo JVM. L'output della console contiene gli eventi e gli errori principali se utilizzi la configurazione consoleLogLevel predefinita. Se utilizzi la configurazione copySystemStreams predefinita, questo output contiene anche i messaggi che vengono scritti nei flussi system.out e system.err. L'output della console contiene sempre i messaggi scritti direttamente dal processo JVM, come l'output -verbose:gc. Puoi regolare il livello di registrazione di Liberty tramite il file server.xml.
 * Il consoleLogLevel imposta il livello di filtro del gestore console.log. Quando imposti il consoleLogLevel su INFO, configuri tutti i messaggi INFO, AUDIT, WARNING e ERROR in modo che vengano scritti nel file console.log. **Nota:** le voci di log FINE, FINER, FINEST vengono scritte solo nel file trace.log.
 
-Per ulteriori informazioni sulle applicazioni Liberty for Java™, vedi [Liberty Profile: Logging and Trace ![icona link esterno](../../../icons/launch-glyph.svg "External link icon")](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
+Per ulteriori informazioni sulle applicazioni Liberty for Java™, vedi [Liberty Profile: Logging and Trace ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](http://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/rwlp_logging.html){: new_window}.
 
 Per un'**applicazione Cloud Foundry Node.js**, puoi utilizzare il modulo di registrazione integrato della console per configurare la registrazione per il runtime in {{site.data.keyword.Bluemix}}. Puoi inserire i messaggi in stdout e in stderr:
 
 * console.log('message') invierà il messaggio al flusso STDOUT
 * console.error('error_message') invierà l'errore al flusso STDERR
 
-Per ulteriori informazioni sulle applicazioni Node.js, vedi [How to log in node.js ![icona link esterno](../../../icons/launch-glyph.svg "External link icon")](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
+Per ulteriori informazioni sulle applicazioni Node.js, vedi [How to log in node.js ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](http://docs.nodejitsu.com/articles/intermediate/how-to-log){: new_window}.
 
 
-Per ulteriori informazioni sulle **applicazioni Ruby on Rails**, vedi [The Logger ![icona link esterno](../../../icons/launch-glyph.svg "External link icon")](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
+Per ulteriori informazioni sulle **applicazioni Ruby on Rails**, vedi [The Logger ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](http://guides.rubyonrails.org/debugging_rails_applications.html#the-logger){: new_window}.
 
 La seguente tabella elenca l'associazione tra alcuni log dei runtime dell'applicazione e i log raccolti automaticamente da Loggregator:
 

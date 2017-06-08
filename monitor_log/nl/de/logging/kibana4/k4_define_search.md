@@ -19,7 +19,7 @@ lastupdated: "2017-03-13"
 In der Suchleiste der Seite 'Discover' können Sie Suchabfragen in der Abfragesprache 'Lucene' definieren und speichern. Auf jede Suche können Sie Filter anwenden, um die Einträge einzugrenzen, die für die Analyse verfügbar sind.
 {:shortdesc}
 
-Führen Sie die folgenden Tasks aus, um eine angepasste Suche zu definieren: 
+Führen Sie die folgenden Tasks aus, um eine angepasste Suche zu definieren:
 
 1. Greifen Sie auf die Registerkarte **Protokolle** Ihrer Cloud Foundry-App (CF-App) oder Ihres Containers zu. 
 

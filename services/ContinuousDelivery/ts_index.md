@@ -109,7 +109,7 @@ You can either increase the memory quota of your account, or reduce the memory t
 
     3. Restart your app for the changes to take effect.
 
-For more information about general problems with managing your apps, see [Troubleshooting for managing apps](https://console.ng.bluemix.net/docs/troubleshoot/ts_apps.html#managingapps).
+For more information about general problems with managing your apps, see [Troubleshooting for managing apps](https://console.bluemix.net/docs/troubleshoot/ts_apps.html#managingapps).
 
 
 ## Toolchain does not load
@@ -132,7 +132,7 @@ You can find the Status page by choosing either of the following options:
   * Log in to the {{site.data.keyword.Bluemix_notm}} console. From the menu bar, click **Support** and select **Status**. Check the listed resources for the ![some issues](../../support/images/some_issues.svg) icon. This icon might indicate an outage.
   * Access it directly at [IBM {{site.data.keyword.Bluemix_notm}} - System Status ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window}.
 
-For more information about the {{site.data.keyword.Bluemix_notm}} Status page, see [Viewing {{site.data.keyword.Bluemix_notm}} status](https://console.ng.bluemix.net/docs/support/index.html#viewing-bluemix-status).
+For more information about the {{site.data.keyword.Bluemix_notm}} Status page, see [Viewing {{site.data.keyword.Bluemix_notm}} status](https://console.bluemix.net/docs/support/index.html#viewing-bluemix-status).
 
 
 ## Tool integration is not configured

@@ -30,7 +30,7 @@ Puede configurar Kibana para que muestre los campos siguientes para cada entrada
 | \_type | El tipo de registro; por ejemplo, *syslog*. |
 | loglevel | La gravedad del suceso registrado; por ejemplo, **Info**. |
 | module | Este campo se establece en **MessageHub**. |
-{: caption="Tabla 1. Campos para los sucesos de MessageHub " caption-side="top"}
+{: caption="Tabla 1. Campos para los sucesos de MessageHub" caption-side="top"}
 
 Ejemplo de una entrada de registro:
 

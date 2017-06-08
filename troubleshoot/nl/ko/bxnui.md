@@ -1263,7 +1263,7 @@ Bluemix에서 로그아웃됩니다.
 [IBM Bluemix Support](http://ibm.biz/bluemixsupport){: new_window}로 이동하십시오.
 
 ## BXNUI2084E 
-**메시지**: 지불을 지원하는 국가 목록을 검색할 수 없습니다. 
+**메시지**: 결제를 지원하는 국가 목록을 검색할 수 없습니다. 
 
 [IBM Bluemix Support](http://ibm.biz/bluemixsupport){: new_window}로 이동하십시오.
 

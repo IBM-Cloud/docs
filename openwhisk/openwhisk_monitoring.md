@@ -13,7 +13,7 @@ lastupdated: "2016-08-02"
 
 # Monitoring your {{site.data.keyword.openwhisk_short}} activity with the {{site.data.keyword.openwhisk_short}} Dashboard
 
-The [{{site.data.keyword.openwhisk}} Dashboard](https://{DomainName}/whisk/dashboard/) provides a graphical summary of your activity. Use the dashboard to determine the performance and health of your {{site.data.keyword.openwhisk_short}} actions.
+The [{{site.data.keyword.openwhisk}} Dashboard](https://{DomainName}/openwhisk/dashboard/) provides a graphical summary of your activity. Use the dashboard to determine the performance and health of your {{site.data.keyword.openwhisk_short}} actions.
 {:shortdesc}
 
 Click **Reload** at any time to update the dashboard with the latest activation log data.

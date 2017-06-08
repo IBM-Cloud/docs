@@ -62,7 +62,7 @@ lastupdated: "2017-02-14"
 
 {{site.data.keyword.Bluemix_notm}} 會記錄 Cloud Foundry 平台和 Cloud Foundry 應用程式所產生的日誌資料。在日誌中，您可以檢視針對應用程式所產生的錯誤、警告及參考訊息。如需 Cloud Foundry 中記載功能的相關資訊，請參閱 [{{site.data.keyword.Bluemix}} 中 Cloud Foundry 應用程式的記載功能](logging_cf_apps.html#logging_bluemix_cf_apps)。
 
-{{site.data.keyword.Bluemix_notm}} 會記錄 {{site.data.keyword.containershort}} 所產生的日誌資料。如需在 {{site.data.keyword.containershort}} 中記載的相關資訊，請參閱 [{{site.data.keyword.containershort}} 中的記載功能](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_logs)。   
+{{site.data.keyword.Bluemix_notm}} 會記錄 {{site.data.keyword.containershort}} 所產生的日誌資料。如需 {{site.data.keyword.containershort}} 中記載功能的相關資訊，請參閱 [{{site.data.keyword.containershort}} 中的記載功能](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_logs)。   
 
 
 使用 {{site.data.keyword.Bluemix_notm}} 所提供的記載功能，您可以：
@@ -72,7 +72,7 @@ lastupdated: "2017-02-14"
 * 定義應用程式的資料追蹤，例如，可用來進行審核的資料追蹤。
 * 減少在應用程式中尋找問題並進行修復所需的時間及工作量。 
 * 監視應用程式在雲端平台中的部署情況。
-* 偵測服務或應用程式於何時關閉或損毀。
+* 偵測服務或應用程式關閉或損毀情況。
 * 追蹤應用程式執行和資料流程。
 * 識別應用程式中的漏洞。
 * 偵測基礎架構中的問題。

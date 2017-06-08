@@ -22,7 +22,7 @@ Die Ausführungszeit wird Ihnen in Millisekunden (aufgerundet auf die nächsten 
 
 Dieses Programmiermodell ist eine perfekte Anpassung an Microservices, mobile Apps, IoT-Apps und viele andere Apps – Sie erhalten sofort nutzbare Auto-Scaling- und Lastverteilungsfunktionen, ohne Cluster, Lastverteilungsfunktionen, HTTP-Plug-ins usw. manuell konfigurieren zu müssen. Wenn Sie dann auch noch in {{site.data.keyword.openwhisk}} arbeiten, haben Sie außerdem den Vorteil, keinen Verwaltungsaufwand treiben zu müssen, da sämtliche Hardware, Netzfunktionalität und Software von IBM gewartet wird. Sie müssen nur noch den Code bereitstellen, den Sie ausführen wollen, und an {{site.data.keyword.openwhisk}} übergeben. Der Rest geht wie von selbst. Eine gute Einführung in das serverunabhängige Programmiermodell finden Sie im [Blog von Martin Fowler](https://martinfowler.com/articles/serverless.html).
 
-Sie können auch den [Apache OpenWhisk-Quellcode](https://github.com/openwhisk/openwhisk) erhalten und das System selbst ausführen. 
+Sie können auch den [Apache OpenWhisk-Quellcode](https://github.com/openwhisk/openwhisk) erhalten und das System selbst ausführen.
 
 Weitere Einzelheiten zur Funktionsweise von {{site.data.keyword.openwhisk_short}} finden Sie unter [Informationen zu {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html).
 

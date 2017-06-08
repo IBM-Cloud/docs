@@ -101,7 +101,7 @@ Completa i seguenti controlli, come appropriato:
 {: tsResolve}
  * Contatta il tuo utente master o amministratore account per verificare di essere autorizzato a passare all'autenticazione con ID IBM.
  * Assicurati di completare il passo relativo al passaggio all'ID IBM nel tuo account Softlayer. Vedi [Switching to IBMid](/docs/admin/softlayerlink.html#ibmid_switch).
- * Assicurati di seguire i passaggi indicati nell'e-mail per **Associare il tuo account SoftLayer a un ID IBM**. Controlla la cartella della posta in arrivo e quella dello spam per cercare l'e-mail. Per ricevere di nuovo l'e-mail, ad esempio nel caso in cui sia scaduta, vai alla pagina Modifica profilo utente nel Portale del cliente e fai clic su **Invia nuovamente email**. In alternativa, contatta il [Supporto {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixsupport.com){: new_window}.
+ * Assicurati di seguire i passaggi indicati nell'e-mail per **Associare il tuo account SoftLayer a un ID IBM**. Controlla la cartella della posta in arrivo e quella dello spam per cercare l'e-mail. Per ricevere di nuovo l'e-mail, ad esempio nel caso in cui sia scaduta, vai alla pagina Modifica profilo utente nel Portale del cliente e fai clic su **Invia nuovamente email**. In alternativa, contatta il [Supporto {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/bluemixsupport.com){: new_window}.
 
 **Nota:** se hai creato il tuo ID IBM direttamente con l'ID IBM, riceverai due e-mail per il processo: una dalla registrazione dell'ID IBM e una da Softlayer. Assicurati di seguire i passaggi indicati in entrambe le e-mail.
 
@@ -150,7 +150,7 @@ Quando accedi a {{site.data.keyword.Bluemix_notm}}, l'autenticazione tramite l'I
 Potrebbe esserci un problema con il servizio di autenticazione ID IBM.
 {: tsCauses}
 
-Controlla lo stato del servizio in [IBM BlueID ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://new.wind.ibmcloud.com/webapp/#/status/a1a0c5d743d94a6a9597087541564d8e){: new_window} e riprova.
+Controlla lo stato del servizio in [IBM BlueID ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://new.wind.ibmcloud.com/webapp/#/status/a1a0c5d743d94a6a9597087541564d8e){: new_window} e riprova.
 {: tsResolve}
 
 
@@ -172,7 +172,7 @@ che si trova nella email di conferma per completare il processo di registrazione
 {: tsCauses} 
 
 L'e-mail di conferma viene inviata all'indirizzo di posta
-da te fornito. Controlla la cartella della posta in arrivo e quella dello spam. Se non hai ricevuto un'e-mail di conferma, contatta il [Supporto {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixsupport.com){: new_window}.  
+da te fornito. Controlla la cartella della posta in arrivo e quella dello spam. Se non hai ricevuto un'e-mail di conferma, contatta il [Supporto {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/bluemixsupport.com){: new_window}.  
 {: tsResolve}
 
 
@@ -260,7 +260,7 @@ sulla scheda **UTENTI**.
 Se non puoi invitare utenti perché sei un collaboratore e non un membro, devi eliminare il tuo account {{site.data.keyword.Bluemix_notm}} precedente ed essere inviato a entrare a far parte dell'account come membro dell'organizzazione. Per eliminare il tuo account precedente ed entrare a far parte dell'account come membro,
 completa la seguente procedura: 
 
-  1. Contatta il [Supporto {{site.data.keyword.Bluemix_notm}} ![icona link esterno](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixsupport){: new_window} per aprire un ticket di supporto e richiedere l'eliminazione del tuo account. Se hai dei dati associati al tuo
+  1. Contatta il [Supporto {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/bluemixsupport){: new_window} per aprire un ticket di supporto e richiedere l'eliminazione del tuo account. Se hai dei dati associati al tuo
 account precedente che vuoi salvare e passare al nuovo account,
 includi queste informazioni nell'email. 
   2. Una volta eliminato il tuo account, fa sì che un utente con il ruolo di gestore

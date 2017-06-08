@@ -15,7 +15,8 @@ lastupdated: "2017-05-16"
 # Informationen
 {: #about}
 
-{{site.data.keyword.bplong}} kann verwendet werden, um Infrastruktur-Bausteine zu erstellen. Sie können {{site.data.keyword.IBM_notm}} Cloud-Services zusammenstellen, um eine Infrastruktur zu erstellen, die bereitgestellt und wiederverwendet werden kann.{:shortdesc}
+{{site.data.keyword.bplong}} kann verwendet werden, um Infrastruktur-Bausteine zu erstellen. Sie können {{site.data.keyword.IBM_notm}} Cloud-Services zusammenstellen, um eine Infrastruktur zu erstellen, die bereitgestellt und wiederverwendet werden kann.
+{:shortdesc}
 
 {{site.data.keyword.bpshort}} verwendet Terraform, um die Infrastrukturverwaltung zu vereinfachen. Wenn Sie z. B. möchten, dass mehrere Kopien Ihres Service, der einen Cluster von App-Servern, eine Lastausgleichsfunktion und einen Datenbankserver verwendet, den Betrieb aufnehmen, müssen Sie möglicherweise ein Bash-Script schreiben, um Befehle ausführen und diese Komponenten in Betrieb zu nehmen. Es ist jedoch einfacher, schneller und geordneter, eine Konfiguration mit einer Ausführungskomponente zu haben, die die Konfiguration in echte Ressourcen umwandelt. Mit Terraform können mehrere Ressourcen zur gleichen Zeit den Betrieb aufnehmen, als kollektive Gruppe, innerhalb derer Abhängigkeiten zugeordnet sind. 
 

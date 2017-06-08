@@ -40,7 +40,7 @@ en **Póngase en contacto**. Aunque el widget de soporte constituye el método r
 
 Si está utilizando una cuenta enlazada entre {{site.data.keyword.Bluemix_notm}} y {{site.data.keyword.BluSoftlayer}}, el widget Soporte es ligeramente diferente. Inicie una sesión en la consola de {{site.data.keyword.Bluemix_notm}} y pulse **Soporte** en la barra de menús para abrir el widget Soporte. A continuación, seleccione **Añadir incidencia** o **Encontrar respuestas**. Las opciones disponibles son:
 
-* Busque en la documentación de {{site.data.keyword.Bluemix_notm}} y de Stack Overflow configurando un filtro para cambiar los resultados de las búsquedas para que únicamente incluyan elementos seleccionados. 
+* Busque en la documentación de {{site.data.keyword.Bluemix_notm}} y de Stack Overflow configurando un filtro para cambiar los resultados de las búsquedas para que únicamente incluyan elementos seleccionados.
 * Puede enlazar directamente con el foro Stack Overflow **#IBMBluemix** para buscar o publicar.
 * Puede enviar una idea estructurada al sitio [IBM Cloud - Structured Ideas](https://ibmcloud.ideas.aha.io/).
 * Puede ponerse en contacto con ventas llamando o buscando un representante de ventas. Consulte la página [Póngase en contacto con nosotros](https://www.ibm.com/cloud-computing/bluemix/contact-us).
@@ -201,8 +201,7 @@ Si el problema no es debido a una parada, puede abrir una incidencia de soporte 
 
   * En la barra de menús, pulse **Soporte** y seleccione **Añadir incidencia**. En la página que se muestra, rellene el formulario para indicar el tipo de soporte que necesita.
   * Utilice la página de ayuda del [Soporte de IBM {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://www.ibm.biz/bluemixsupport){: new_window}. Puede enviar incidencias correspondientes a ventas, facturación, ID de IBM e inicio de sesión y problemas de soporte técnico. Para problemas de soporte técnico, puede reducir el problema a un servicio específico o una área específica. Si necesita ayuda con un servicio específico, seleccione
-la categoría de servicio correspondiente. Para determinar la categoría a la que pertenece su servicio, consulte Catálogo en la barra de menús.
-  
+la categoría de servicio correspondiente. Para determinar la categoría a la que pertenece su servicio, consulte Catálogo en la barra de menús.  
   
 Cuando abra una incidencia de soporte, asegúrese de indicar una gravedad adecuada a su incidencia. La gravedad determina cómo se maneja
 la incidencia. Consulte [Gravedad de la incidencia de soporte y tiempo de respuesta](/docs/support/index.html#support-ticket-severity) para obtener información sobre las distintas gravedades. Si su consulta de soporte requiere una respuesta inmediata, le recomendamos actualizar a nuestro nivel de soporte Estándar o Premium para poder enviar incidencias de soporte de gravedad 1-4. Para actualizar su cuenta a un nivel de soporte superior, póngase en contacto con el [representante de ventas de IBM ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://www.ibm.com/cloud-computing/bluemix/contact-us){: new_window} o envíenos un correo electrónico a sales@bluemix.net.

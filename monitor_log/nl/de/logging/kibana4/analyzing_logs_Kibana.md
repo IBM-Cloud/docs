@@ -19,7 +19,7 @@ lastupdated: "2017-04-06"
 In {{site.data.keyword.Bluemix}} können Sie Kibana, eine quelloffene Analyse- und Visualisierungsplattform, dazu verwenden, Ihre Daten in einer Reihe von Darstellungsarten, wie zum Beispiel Diagrammen und Tabellen, zu überwachen, zu durchsuchen, zu analysieren und zu visualisieren. Verwenden Sie Kibana für erweiterte Analysetasks.
 {:shortdesc}
 
-Kibana ist eine browserbasierte Schnittstelle, in der Sie Daten interaktiv analysieren und Dashboards anpassen können, mit denen Sie anschließend Protokolldaten analysieren und erweiterte Management-Tasks durchführen können. Weitere Informationen finden Sie in der Veröffentlichung [Kibana User Guide ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}. 
+Kibana ist eine browserbasierte Schnittstelle, in der Sie Daten interaktiv analysieren und Dashboards anpassen können, mit denen Sie anschließend Protokolldaten analysieren und erweiterte Management-Tasks durchführen können. Weitere Informationen finden Sie in der Veröffentlichung [Kibana User Guide ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}.
 
 Die Daten, die auf einer Kibana-Seite angezeigt werden, werden durch eine Suche beschränkt. Die Standarddatengruppe wird durch das vorkonfigurierte Indexmuster (Index Pattern) definiert. Zum Filtern der Informationen können Sie neue Suchabfragen hinzufügen und Filter auf die Standarddatengruppe anwenden. Anschließend können Sie die Suche zur künftigen Wiederverwendung speichern. 
 
@@ -66,7 +66,7 @@ Sie können Kibana auf eine beliebige der folgenden Arten starten:
     
     Die Abfrage, durch die die Daten gefiltert werden, die im Dashboard angezeigt werden, ruft Protokolleinträge für einen Bereich in der {{site.data.keyword.Bluemix_notm}}-Organisation ab. Die Protokollinformationen, die in Kibana angezeigt werden, umfassen Einträge für alle Ressourcen, die innerhalb des Bereichs der {{site.data.keyword.Bluemix_notm}}-Organisation bereitgestellt wurden, an der Sie angemeldet sind. 
     
-    Weitere Informationen finden Sie unter [Zum Kibana-Dashboard über einen Web-Browser navigieren](k4_launch.html#launch_Kibana_from_browser). 
+    Weitere Informationen finden Sie unter [Zum Kibana-Dashboard über einen Web-Browser navigieren](k4_launch.html#launch_Kibana_from_browser).
     
     Wenn Sie Kibana in einem Browser starten, können Sie auswählen, ob Sie mit Kibana 4 oder Kibana 3 arbeiten möchten. **Hinweis:** Kibana 3 ist veraltet. Informationen zur Verwendung von Kibana 3 zur Analyse Ihrer Protokolle finden Sie unter [Protokolle in Kibana 3 analysieren (veraltet)](../logging_view_kibana3.html#analyzing_logs_Kibana3).
 

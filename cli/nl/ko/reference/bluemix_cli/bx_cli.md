@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -27,7 +27,8 @@ lastupdated: "2017-04-20"
 <dt>엔드포인트</dt>
 <dd>명령을 사용하기 전에 <code>bluemix api</code>를 통해 API 엔드포인트를 설정해야 합니다.</dd>
 <dt>로그인</dt>
-<dd>이 명령을 사용하기 전에 <code>bluemix login</code> 명령을 사용하여 로그인해야 합니다.<b>연합 ID로 로그인한 경우 일회성 패스코드로 인증하려면 '--sso' 옵션을 사용하고 API 키로 인증하려면 '--apikey'를 사용하십시오</b>. {{site.data.keyword.Bluemix_notm}} 콘솔 “관리” -> “보안” -> “Bluemix API 키”로 이동하여 API 키를 작성하십시오.</dd>
+<dd>이 명령을 사용하기 전에 <code>bluemix login</code> 명령을 사용하여 로그인해야 합니다. 연합 ID로 로그인한 경우에는 '--sso' 옵션을 사용하여 일회성 패스코드로 인증하거나 '--apikey'를 사용하여  API 키로 인증하십시오. {{site.data.keyword.Bluemix_notm}} 콘솔 **관리** &gt; **보안** &gt; **Bluemix API 키**로 이동하여 API 키를 작성하십시오.
+</dd>
 <dt>대상</dt>
 <dd>이 명령을 사용하기 전에 <code>bluemix target</code> 명령을 사용하여 조직과 영역을 설정해야 합니다.</dd>
 <dt>Docker</dt>
@@ -848,7 +849,7 @@ bluemix iam org-role-set USER_NAME ORG_NAME ORG_ROLE
    <dd>이 사용자가 지정되는 조직 역할의 이름입니다. 예를 들어, 다음과 같습니다.
    <ul>
    <li>OrgManager: 이 역할은 사용자를 초대 및 관리하고, 플랜을 선택 및 변경하며, 지출 한계를 설정할 수 있습니다.</li>
-   <li>BillingManager: 이 역할은 청구 계정 및 지불 정보를 작성하고 관리할 수 있습니다. </li>
+   <li>BillingManager: 이 역할은 청구 계정 및 결제 정보를 작성하고 관리할 수 있습니다. </li>
    <li>OrgAuditor: 이 역할은 조직 정보 및 보고서에 대한 읽기 전용 액세스 권한을 보유합니다. </li>
    </ul>
    </dd>
@@ -884,7 +885,7 @@ bluemix iam org-role-unset USER_NAME ORG_NAME ORG_ROLE
    <dd>이 사용자가 제거되는 조직 역할의 이름입니다. 예를 들어, 다음과 같습니다.
    <ul>
    <li>OrgManager: 이 역할은 사용자를 초대 및 관리하고, 플랜을 선택 및 변경하며, 지출 한계를 설정할 수 있습니다.</li>
-   <li>BillingManager: 이 역할은 청구 계정 및 지불 정보를 작성하고 관리할 수 있습니다. </li>
+   <li>BillingManager: 이 역할은 청구 계정 및 결제 정보를 작성하고 관리할 수 있습니다. </li>
    <li>OrgAuditor: 이 역할은 조직 정보 및 보고서에 대한 읽기 전용 액세스 권한을 보유합니다. </li>
    </ul>
    </dd>
@@ -1072,7 +1073,7 @@ bluemix iam account-user-invite USER_NAME ORG_NAME ORG_ROLE SPACE_NAME SPACE_ROL
    <dd>이 사용자가 초대되는 조직 역할의 이름입니다. 예를 들어, 다음과 같습니다.
    <ul>
   <li>OrgManager: 이 역할은 사용자를 초대 및 관리하고, 플랜을 선택 및 변경하며, 지출 한계를 설정할 수 있습니다.</li>
-  <li>BillingManager: 이 역할은 청구 계정 및 지불 정보를 작성하고 관리할 수 있습니다. </li>
+  <li>BillingManager: 이 역할은 청구 계정 및 결제 정보를 작성하고 관리할 수 있습니다. </li>
   <li>OrgAuditor: 이 역할은 조직 정보 및 보고서에 대한 읽기 전용 액세스 권한을 보유합니다. </li>
   </ul> </dd>
    <dt>SPACE_NAME(필수)</dt>
