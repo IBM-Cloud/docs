@@ -69,36 +69,52 @@ If the workload of your application changes dramatically during the peak time an
 {: #node-asagent}
 
 To enable the {{site.data.keyword.autoscaling}} service with your Node.js apps, besides service provision and binding steps, you need to complete the following steps as well before pushing the app to {{site.data.keyword.Bluemix_notm}}.
+1. Enable `blumix-autoscaling-agent` in your application.
+  + Update the package.json to create a dependency entry for `blumix-autoscaling-agent`. For example:<br/> 
+  `"dependencies": {
+    "bluemix-autoscaling-agent": "*"
+  }`.<br/>
+2. Start `blumix-autoscaling-agent` with your application.
+There are two ways to start the agent.
+  + The first way is to update the package.json file, adding `"start": "node -r bluemix-autoscaling-agent  app.js"` to the `scripts` section. For example:<br/>
+  ```
+  "scripts": {
+    "start": "node -r bluemix-autoscaling-agent app.js"
+  }
+  ```
+  + The second way is to update your main file to add the agent declaration `var as_agent = require('bluemix-autoscaling-agent');`. In this way, please note that you must call `require('bluemix-autoscaling-agent');` before the require statements for any npm modules you want to monitor. `bluemix-autoscaling-agent` must be initialized first so that it can instrument modules for monitoring as they are loaded.<br/>
+  The following code snippet shows a complete entry js file with the auto-scaling agent declaration.<br/>
+  ```
+  var agent = require('bluemix-autoscaling-agent');
+  var http = require('http');
+  var server = http.createServer(function handler(req, res) {
+    console.log("Hello!");
+    
+    }).listen(process.env.PORT || 3000);
+  console.log('App is listening on port 3000');
+  ```
+You can choose either of the two ways.<br/>
 
-1. Update the package.json file with the following steps: <ol><li>Create a dependency entry for `blumix-autoscaling-agent`, for example `"bluemix-autoscaling-agent": "*"`.<br/><li>(Optional) Set heap limit within the `scripts` section based on the memory that you allocate for your app, for example `"start": "node --max-old-space-size=600 app.js"`. .<br/>*Note:* Set a value for `max-old-space-size` if you want to trigger scaling based on heap usage. If the value is not set when you start your application, the default Node.js heap limit 1.4GB is used regardless how much memory your app is allocated, which might lead to improper auto-scaling decisions.<br/>
-```
-{
-	"name": "Your-App",
-	"version": "0.0.1",
-	"description": "A sample nodejs app for Bluemix",
-	"scripts": {
-		"start": "node --max-old-space-size=600 app.js"
-	},
-	"dependencies": {
-		"bluemix-autoscaling-agent": "*"
-	},
-	"repository": {},
-	"engines": {
-		"node": "0.12.x"
-	} 
-}
-```
-</ol>
-2. Update your main file to add the agent declaration `var as_agent = require('bluemix-autoscaling-agent');`. The following code snippet shows a complete entry js file with the auto-scaling agent declaration.<br/>
-```
-var agent = require('bluemix-autoscaling-agent');
-var http = require('http');
-var server = http.createServer(function handler(req, res) {
-	console.log("Hello!");
-	
-	}).listen(process.env.PORT || 3000);
-console.log('App is listening on port 3000');
-```
+3. (Optional) Set heap limit within the `scripts` section based on the memory that you allocate for your app, for example `"start": "node --max-old-space-size=600 app.js"`. .<br/>*Note:* Set a value for `max-old-space-size` if you want to trigger scaling based on heap usage. If the value is not set when you start your application, the default Node.js heap limit 1.4GB is used regardless how much memory your app is allocated, which might lead to improper auto-scaling decisions.<br/>
+
+  A full sample of package.json:
+  ```
+  {
+    "name": "Your-App",
+    "version": "0.0.1",
+    "description": "A sample nodejs app for Bluemix",
+    "scripts": {
+      "start": "node -r bluemix-autoscaling-agent --max-old-space-size=600 app.js"
+    },
+    "dependencies": {
+      "bluemix-autoscaling-agent": "*"
+    },
+    "repository": {},
+    "engines": {
+      "node": "0.12.x"
+    } 
+  }
+  ``` 
 
 ## Configuring Swift apps with the {{site.data.keyword.autoscaling}} service
 {: #swift-asagent}
@@ -326,21 +342,21 @@ The {{site.data.keyword.autoscaling}} CLI provides similar functionality as {{si
 
 | Field name  | Description |
 |-------------|----------------------|
-|*Allowable maixmum instance count* |	The maximum number of the application instance that can be started. If the current number of the application instances equals this value, the {{site.data.keyword.autoscaling}} service does not scale out the application any more. Default minimum instance count	The minimum number of the application instance that can be started. If the number of the instances equals this value, the {{site.data.keyword.autoscaling}} service dose not scale in the application any more. |
-| *Metric Type*	| 	The supported metric types that can be monitored. For more information, see Table 2. |
-| *Scale Out* | 	Specifies the threshold that triggers a scaling out action and how many instances are increased when the scaling out action is triggered. |
-| *Scale In* |	Specifies a threshold that triggers a scaling in action and how many instances are decreased when the scaling in action is triggered. |
-| *Statistic Window* |	The length of the past period when received metric values are recognized as valid. Metric values are valid only if the time stamps fall within this period. The unit of the Statistic Window parameter is second. |
-| *Breach Duration*	| The length of the past period when a scaling action might be triggered. A scaling action is triggered when collected metric values are either above the upper threshold, or below the lower threshold longer than the time specified. The unit of the Breach Duration parameter is second. |
+|*Allowable maixmum instance count* | The maximum number of the application instance that can be started. If the current number of the application instances equals this value, the {{site.data.keyword.autoscaling}} service does not scale out the application any more. Default minimum instance count The minimum number of the application instance that can be started. If the number of the instances equals this value, the {{site.data.keyword.autoscaling}} service dose not scale in the application any more. |
+| *Metric Type* |   The supported metric types that can be monitored. For more information, see Table 2. |
+| *Scale Out* |   Specifies the threshold that triggers a scaling out action and how many instances are increased when the scaling out action is triggered. |
+| *Scale In* |  Specifies a threshold that triggers a scaling in action and how many instances are decreased when the scaling in action is triggered. |
+| *Statistic Window* |  The length of the past period when received metric values are recognized as valid. Metric values are valid only if the time stamps fall within this period. The unit of the Statistic Window parameter is second. |
+| *Breach Duration* | The length of the past period when a scaling action might be triggered. A scaling action is triggered when collected metric values are either above the upper threshold, or below the lower threshold longer than the time specified. The unit of the Breach Duration parameter is second. |
 | *Cooldown period for scaling in* | After a scaling in action occurs, other scaling requests are ignored during the length of the period that is specified by the Cooldown period for scaling in parameter. The unit of this parameter is second. |
-| *Cooldown period for scaling out*	| After a scaling out action occurs, other scaling requests are ignored during the length of the period that is specified by the Cooldown period for scaling out parameter. The unit of this parameter is second. |
-| *Time Zone*	| The time zone where the schedule applies. |
-| *Start Time*  |	The start time of a recurring schedule. |
-| *End Time*    |	The end time of a recurring schedule.	|
-| *Repeat On*	|	The day in a week when a recurring schedule applies. |
-| *Minimum Instance Count* |	The minimum number of instances that can be started for the application during the specified time period in the schedule. |
-| *Start Date&Time* |	The start date and time of the schedule set up on a specific date. |
-| *End Date&Time* |	The end date and time of the schedule set up on a specific date.	|
+| *Cooldown period for scaling out* | After a scaling out action occurs, other scaling requests are ignored during the length of the period that is specified by the Cooldown period for scaling out parameter. The unit of this parameter is second. |
+| *Time Zone* | The time zone where the schedule applies. |
+| *Start Time*  | The start time of a recurring schedule. |
+| *End Time*    | The end time of a recurring schedule. |
+| *Repeat On* | The day in a week when a recurring schedule applies. |
+| *Minimum Instance Count* |  The minimum number of instances that can be started for the application during the specified time period in the schedule. |
+| *Start Date&Time* | The start date and time of the schedule set up on a specific date. |
+| *End Date&Time* | The end date and time of the schedule set up on a specific date.  |
 {: caption="Table 1. Policy fields in the scaling policy" caption-side="top"}
 
 | Metric name | Description | Supported application type |
@@ -348,7 +364,7 @@ The {{site.data.keyword.autoscaling}} CLI provides similar functionality as {{si
 | *Heap* |     The usage percentage of the heap memory.        | Liberty for Java (with IBM JDK), Node.js SDK |
 | *Memory*   | The usage percentage of the memory.     |  All |
 | *Throughput* | The number of the processed requests per second.| Liberty for Java (with IBM JDK), Node.js SDK, Swift (with Kitura) |
-| *Response time* |    The response time of the processed requests.    | Liberty for Java (with IBM JDK), Swift (with Kitura) |
+| *Response time* |    The response time of the processed requests.    | Liberty for Java (with IBM JDK), Swift (with Kitura)|
 
 
 {: caption="Table 2. Supported metric names" caption-side="top"}
