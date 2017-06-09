@@ -21,7 +21,7 @@ Liberty for Java
     customizingJRE.md
     oracle_jre.md
     usingBetaFeatures.md
-    [Opt out of bound services](autoConfig#opting_out.md)
+    [Opt out of bound services](autoConfig.html#opting_out)
 
     {: .topicgroup}
     Monitor Liberty in Bluemix
