@@ -760,7 +760,7 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
 Se ha creado el archivo hello.zip en el mismo directorio que hello.swift.
 -Cárguelo en OpenWhisk con el nombre de acción helloSwifty:
   ```
-  wsk action update helloSwiftly hello.zip --kind swift:3
+  wsk action update helloSwiftly hello.zip --kind swift:3.1.1
   ```
   {: pre}
 - Para comprobar lo rápido que es, ejecute 
