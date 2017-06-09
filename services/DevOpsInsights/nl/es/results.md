@@ -23,10 +23,10 @@ Si está utilizando un conducto de {{site.data.keyword.contdelivery_short}}, pue
 
 1. En la etapa que contiene la puerta que se debe comprobar, pulse **Ver registros e historial**.
 
-2. Desde el trabajo que contiene la puerta, pulse el nombre de la puerta. 
+2. Desde el trabajo que contiene la puerta, pulse el nombre de la puerta.
 
-3. En la ventana de registros, busque el mensaje `Comprobar aquí informe de {{site.data.keyword.DRA_short}}` y pulse el enlace para abrir el informe. 
+3. En la ventana de registros, busque el mensaje `Comprobar aquí informe de {{site.data.keyword.DRA_short}}` y pulse el enlace para abrir el informe.
 
 ## Informes de Developer Insights y Team Dynamics
 
-Puede ver paneles de control sobre su código y equipo después de un periodo inicial de minería de datos. En el menú de navegación del servicio, pulse **Developer Insights** o **Team Dynamics** y, a continuación, seleccione una categoría de datos para ver esta información.  
+Puede ver paneles de control sobre su código y equipo después de un periodo inicial de minería de datos. En el menú de navegación del servicio, pulse **Developer Insights** o **Team Dynamics** y, a continuación, seleccione una categoría de datos para ver esta información.

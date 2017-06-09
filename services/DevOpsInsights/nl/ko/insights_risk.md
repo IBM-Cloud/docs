@@ -12,7 +12,7 @@ lastupdated: "2017-03-31"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Deployment Risk(베타)
+# 배치 위험성
 {: #gettingstarted}
 
 {{site.data.keyword.DRA_short}}에서는 배치, 특히 위험성에 대한 풍부한 정보를 제공합니다. 이 정보를 사용하면 정책과 게이트를 사용하여 Delivery Pipeline에서 품질 보호를 자동화할 수 있습니다.

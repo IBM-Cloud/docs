@@ -14,7 +14,7 @@ lastupdated: "2017-04-07"
 
 # 关于 Deployment Risk
 
-{{site.data.keyword.DRA_short}} 提供了有关部署的丰富信息，尤其是风险方面。您可以使用这些信息在 Delivery Pipeline 中通过策略和检测点来自动保障质量。
+{{site.data.keyword.DRA_short}} 提供了有关部署（尤其是风险方面）的大量信息。您可以使用这些信息在 Delivery Pipeline 中通过策略和检测点来自动保障质量。
 {:shortdesc}
 
 在工具链中打开 {{site.data.keyword.DRA_short}} 后，单击 **Deployment Risk**。在其中，可以了解编译打包和生产环境中应用程序的概况，并可向下钻取以了解代码覆盖、测试性能和安全报告。仪表板中会自动填充管道的 {{site.data.keyword.DRA_short}} 测试生成的最新信息。

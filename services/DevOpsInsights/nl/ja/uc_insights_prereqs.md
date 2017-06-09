@@ -16,7 +16,8 @@ lastupdated: "2017-03-14"
 {: #prereqs}
 
 IBM UrbanCode Deploy サーバーからの情報を {{site.data.keyword.DRA_short}} で表示するには、IBM UrbanCode Deploy サーバーに接続可能なシステム上に、DevOps Connect のインスタンスをホストする必要があります。
-このシステムは、物理コンピューターと仮想マシンのどちらであってもかまいません。{:shortdesc}
+このシステムは、物理コンピューターと仮想マシンのどちらであってもかまいません。
+{:shortdesc}
 
 DevOps Connect をホストするシステムでは、以下の前提条件が揃っていなければなりません。
 

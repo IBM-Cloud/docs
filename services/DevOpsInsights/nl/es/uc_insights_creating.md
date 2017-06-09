@@ -18,7 +18,7 @@ lastupdated: "2017-03-14"
 Se pueden crear tantos informes de Delivery Insights como desee para organizar sus métricas. También es posible compartir informes con otras personas dentro de su organización de Bluemix (org).
 {:shortdesc}
 
-## Creación de informes 
+## Creación de informes
 
 Para crear un informe, abra {{site.data.keyword.DRA_short}}, pulse **Delivery Insights > Informes** y, a continuación, pulse **Añadir informe**. 
 
@@ -27,7 +27,7 @@ Desde el informe, puede añadir tarjetas a la sección **Métricas**, filtrar la
 Para cambiar el orden de los diagramas, en la parte superior derecha de la página, pulse el botón Valores y, a continuación, pulse **Editar diseño de gráfica**. A continuación, arrastre y suelte los gráficos para establecer el orden en el informe.
 
 ## Compartición de informes
-De forma predeterminada, sólo usted puede ver sus informes de Delivery Insights. Comparta los informes con otros usuarios en su organización de Bluemix. Para compartir un informe con otra persona en su organización de Bluemix, abra el informe, en la parte superior derecha del informe pulse el botón Valores y, a continuación, pulse **Compartir**.   
+De forma predeterminada, sólo usted puede ver sus informes de Delivery Insights. Comparta los informes con otros usuarios en su organización de Bluemix. Para compartir un informe con otra persona en su organización de Bluemix, abra el informe, en la parte superior derecha del informe pulse el botón Valores y, a continuación, pulse **Compartir**.  
 
 ![Compartir un informe](images/uc_insights_sharing.gif).
 

@@ -25,7 +25,7 @@ copyright:
 
 2. 在包含检测点的作业中，单击检测点的名称。
 
-3. 在日志视图中，找到“`在此处检查 {{site.data.keyword.DRA_short}} 报告`”消息并单击链接以打开报告。
+3. 在日志视图中，找到“`在此处查看 {{site.data.keyword.DRA_short}} 报告`”消息并单击链接以打开报告。
 
 ## Developer Insights 和 Team Dynamics 报告
 

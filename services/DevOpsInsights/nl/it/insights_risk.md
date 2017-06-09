@@ -12,7 +12,7 @@ lastupdated: "2017-03-31"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Deployment Risk (Beta)
+# Rischio per le distribuzioni
 {: #gettingstarted}
 
 {{site.data.keyword.DRA_short}} fornisce un gran numero di informazioni sulle tue distribuzioni, particolarmente a rischio. Puoi utilizzarlo per automatizzare la protezione della qualità nella tua delivery pipeline utilizzando politiche e gate. 

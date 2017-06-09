@@ -12,7 +12,7 @@ lastupdated: "2017-03-16"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Team Dynamics (sperimentale)
+# Team Dynamics
 {: #gettingstarted}
 
 {{site.data.keyword.DRA_full}} Team Dynamics utilizza le analisi di codice social per identificare il livello di interazione tra i membri in modo che il team possa correggere le procedure non produttive. 

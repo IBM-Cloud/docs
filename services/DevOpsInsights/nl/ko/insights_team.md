@@ -12,7 +12,7 @@ lastupdated: "2017-03-16"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Team Dynamics(시범)
+# Team Dynamics
 {: #gettingstarted}
 
 {{site.data.keyword.DRA_full}} Team Dynamics에서는 팀이 비생산적인 실무를 수정할 수 있도록 팀 구성원 간의 상호작용 레벨을 식별하는 소셜 코딩 분석을 채택합니다.

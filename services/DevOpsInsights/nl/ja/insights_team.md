@@ -12,7 +12,7 @@ lastupdated: "2017-03-16"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Team Dynamics (実験)
+# Team Dynamics
 {: #gettingstarted}
 
 {{site.data.keyword.DRA_full}} Team Dynamics では、チーム・メンバー間の対話レベルを特定して、チームが生産性の低い慣習を修正することができるようにするために、ソーシャル・コーディング分析を採用しています。

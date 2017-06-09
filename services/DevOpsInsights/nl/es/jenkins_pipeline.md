@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-21"
+lastupdated: "2017-05-19"
 
 ---
 
@@ -15,20 +15,20 @@ lastupdated: "2017-04-21"
 
 # Integración con Jenkins Pipeline
 
-Después de añadir {{site.data.keyword.DRA_full}} a una cadena de herramientas abierta y de definir las políticas que supervisa, puede integrarla con un proyecto Jenkins Pipeline.  Los conductos se definen en la interfaz web de Jenkins o en un *Jenkinsfile* que se almacena en su repositorio de control de origen. Puede ver y administrar proyectos Jenkins Pipeline desde la interfaz web de Jenkins.  
+Después de añadir {{site.data.keyword.DRA_full}} a una cadena de herramientas abierta y de definir las políticas que supervisa, puede integrarla con un proyecto Jenkins Pipeline. Los conductos se definen en la interfaz web de Jenkins o en un *Jenkinsfile* que se almacena en su repositorio de control de origen. Puede ver y administrar proyectos Jenkins Pipeline desde la interfaz web de Jenkins. 
 
 El plugin IBM Cloud DevOps para Jenkins integra proyectos Jenkins con cadenas de herramientas. Una *cadena de herramientas* es un conjunto de integraciones de herramientas que dan soporte a tareas de desarrollo, despliegue, y operaciones. El poder colectivo de una cadena de herramientas es mayor que la suma de sus integraciones de herramientas individuales. Las cadenas de herramientas abiertas son parte del servicio {{site.data.keyword.contdelivery_full}}. Para obtener más información sobre el servicio {{site.data.keyword.contdelivery_short}}, consulte [su documentación](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/cd_about.html). 
 
-Después de instalar el plugin IBM Cloud DevOps, puede configurar su proyecto Jenkins para publicar resultados de pruebas en {{site.data.keyword.DRA_short}}, evaluar la calidad de la compilación automáticamente en las puertas y realizar un seguimiento del riesgo de su despliegue. También puede enviar notificaciones de trabajos a otras herramientas en su cadena de herramientas como, por ejemplo, Slack y PagerDuty. Para ayudarle en el seguimiento de despliegues, la cadena de herramientas puede añadir mensajes de despliegue a confirmaciones Git y los correspondientes problemas Git o JIRA relacionados. También puede ver los despliegues en la página Conexiones de la cadena de herramientas.  
+Después de instalar el plugin IBM Cloud DevOps, puede configurar su proyecto Jenkins para publicar resultados de pruebas en {{site.data.keyword.DRA_short}}, evaluar la calidad de la compilación automáticamente en las puertas y realizar un seguimiento del riesgo de su despliegue. También puede enviar notificaciones de trabajos a otras herramientas en su cadena de herramientas como, por ejemplo, Slack y PagerDuty. Para ayudarle en el seguimiento de despliegues, la cadena de herramientas puede añadir mensajes de despliegue a confirmaciones Git y los correspondientes problemas Git o JIRA relacionados. También puede ver los despliegues en la página Conexiones de la cadena de herramientas. 
 
 El plugin proporciona una interfaz de línea de mandatos y las acciones posteriores a la compilación para dar soporte a la integración. {{site.data.keyword.DRA_short}} agrega y analiza los resultados de pruebas de unidad, pruebas funcionales, herramientas de cobertura de código, exploraciones de código de seguridad estático y exploraciones de código de seguridad dinámico para determinar si el código cumple las políticas predefinidas en las puertas especificadas del proceso de despliegue. Si el código no cumple o supera una política, el despliegue se detiene para impedir que se liberen cambios arriesgados. Puede utilizar {{site.data.keyword.DRA_short}} como red de seguridad para su entorno de entrega continua, como método para implementar y mejorar con el tiempo los estándares de calidad y como una herramienta de visualización de datos para ayudarle a comprender el estado de salud de su proyecto.
 
-En este tema se presupone que está familiarizado con Jenkins Pipeline. Si no es así, [consulte la documentación de Jenkins Pipeline](https://jenkins.io/doc/book/pipeline/) antes de continuar. 
+Si está familiarizado con Jenkins Pipeline, siga leyendo. De lo contrario, [consulte la documentación de Jenkins Pipeline](https://jenkins.io/doc/book/pipeline/) antes de continuar. 
 
 ## Requisitos previos
 {: #jenkins_prerequisites}
 
-Debe tener acceso a un servidor que ejecute un proyecto Jenkins Pipeline.  
+Debe tener acceso a un servidor que ejecute un proyecto Jenkins Pipeline. 
 
 ## Creación de una cadena de herramientas
 {: #jenkins_create}
@@ -37,52 +37,48 @@ Antes de poder integrar {{site.data.keyword.DRA_short}} con un proyecto Jenkins,
 
 1. Para crear una cadena de herramientas, vaya a la página [Crear una cadena de herramientas](https://console.ng.bluemix.net/devops/create) y siga las instrucciones en dicha página. 
 
-2. Después de crear la cadena de herramientas, añada {{site.data.keyword.DRA_short}} a la misma. Consulte la [documentación de {{site.data.keyword.DRA_short}}](https://console.ng.bluemix.net/docs/services/DevOpsInsights/index.html) para obtener más información.  
+2. Después de crear la cadena de herramientas, añada {{site.data.keyword.DRA_short}} a la misma. Consulte la [documentación de {{site.data.keyword.DRA_short}}](https://console.ng.bluemix.net/docs/services/DevOpsInsights/index.html) para obtener más información. 
 
 ## Instalación del plugin
 {: #jenkins_install}
 
-Primero, descargue el plugin desde {{site.data.keyword.DRA_short}}.  
+Instale el plugin en el servidor Jenkins abriendo la interfaz del servidor y siguiendo estos pasos:
 
-1. En la página de Visión general de la cadena de herramientas, pulse **DevOps Insights**.
+1. Pulse **Gestionar Jenkins**.
+2. Pulse **Gestionar plugins**. 
+3. Pulse el separador **Disponible**.
+4. Filtre por `IBM Cloud DevOps`. 
+5. Seleccione **IBM Cloud DevOps**.
+6. Pulse **Descargar ahora e instalar al reiniciar**. 
 
-2. Pulse **Valores** y, a continuación, **Configuración del plugin Jenkins**.
-3. Siga las instrucciones de la página para descargar el plugin.
+El plugin está disponible tras reiniciar el servidor.  
 
-A continuación, instale el plugin en el servidor Jenkins.
-
-
-1. Pulse **Gestionar Jenkins &gt; Gestionar plugins** y pulse el separador **Avanzado**. 
-2. Pulse **Elegir archivo** y seleccione el archivo de instalación del plugin IBM Cloud DevOps.  
-3. Pulse **Cargar**.
-4. Reinicie Jenkins y verifique se ha instalado el plugin.
-
-## Creación de un conducto 
+## Creación de un conducto
 {: #jenkinsfile_create}
 
-Los conductos se definen en el menú de configuración de los proyectos Jenkins o en un Jenkinsfile en su repositorio. Para continuar, cree o abra un script existente o un Jenkinsfile para utilizar con {{site.data.keyword.DRA_short}}. Puede seguir los formatos [declarativos](https://jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline) o [de scripts](https://jenkins.io/doc/book/pipeline/syntax/#scripted-pipeline). 
+Los conductos se definen en el menú de configuración de los proyectos Jenkins o en un Jenkinsfile en su repositorio. Para continuar, cree o abra un script o un Jenkinsfile para utilizar con {{site.data.keyword.DRA_short}}. Puede seguir los formatos [declarativos](https://jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline) o [de scripts](https://jenkins.io/doc/book/pipeline/syntax/#scripted-pipeline).
 
 ## Exposición de variables de entorno necesarias
 
-A continuación, abra la definición del conducto.  
+Abra la definición del conducto.  
 
 En la definición, añada las siguientes variables de entorno. Estas variables son necesarios para la integración del conducto con {{site.data.keyword.DRA_short}}.
 
 | Variable de entorno        | Definición    |
 | ----------------------------|---------------|
-| `IBM_CLOUD_DEVOPS_CREDS`    | Credenciales de Bluemix que se definen en Jenkins con el mandato `credentials`. Por ejemplo, `IBM_CLOUD_DEVOPS_CREDS = credentials('BM_CRED')`. Al establecer la variable con este mandato, establece dos variables de entorno adicionales de forma automática: `IBM_CLOUD_DEVOPS_CREDS_USR` e `IBM_CLOUD_DEVOPS_CREDS_PSW` para el nombre de usuario y la contraseña, respectivamente.   |
-| `IBM_CLOUD_DEVOPS_ORG`      | Organización de Bluemix a la que pertenece su cadena de herramientas.       |
-| `IBM_CLOUD_DEVOPS_APP_NAME` | Nombre de la aplicación que despliega su cadena de herramientas.    |
+| `IBM_CLOUD_DEVOPS_CREDS`    | Credenciales de Bluemix que se definen en Jenkins con el mandato `credentials`. Por ejemplo, `IBM_CLOUD_DEVOPS_CREDS = credentials('BM_CRED')`. Al establecer la variable con este mandato, establece dos variables de entorno más de forma automática: `IBM_CLOUD_DEVOPS_CREDS_USR` e `IBM_CLOUD_DEVOPS_CREDS_PSW` para el nombre de usuario y la contraseña.  |
+| `IBM_CLOUD_DEVOPS_ORG`      | Organización de Bluemix a la que pertenece su cadena de herramientas.     |
+| `IBM_CLOUD_DEVOPS_APP_NAME` | Nombre de la aplicación que despliega su cadena de herramientas.   |
 | `IBM_CLOUD_DEVOPS_TOOCLHAIN_ID` | Identificador de su cadena de herramientas. Abra la Visión general de la cadena de herramientas y consulte el URL para determinar el ID. El formato del URL de la cadena de herramientas es `https://console.ng.bluemix.net/devops/toolchains/[SU_ID_CADENA_HERRAMIENTAS]`.   |
-| `IBM_CLOUD_DEVOPS_WEBHOOKURL` | Webhook que proporcionó al añadir Jenkins a su cadena de herramientas.    |
+| `IBM_CLOUD_DEVOPS_WEBHOOKURL` | Webhook que proporcionó al añadir Jenkins a su cadena de herramientas.   |
 
-Consulte la documentación de [Jenkins Pipeline](https://jenkins.io/doc/pipeline/tour/environment/#credentials-in-the-environment) para obtener más información sobre el mandato `credentials`.
+Para obtener más información sobre el mandato `credentials`, consulte la [documentación de Jenkins Pipeline](https://jenkins.io/doc/pipeline/tour/environment/#credentials-in-the-environment).
 {: tip}
 
-Si está utilizando el formato de conducto de script, establezca sus credenciales con `withCredentials` y su entorno con `withEnv` en lugar de hacerlo con `credentials` y `environment` que se utilizan en el siguiente ejemplo.  Consulte la [documentación de Jenkins](https://jenkins.io/doc/pipeline/steps/credentials-binding/) para obtener más información sobre `withCredentials`.
+Si está utilizando el formato de conducto de script, establezca sus credenciales con `withCredentials` y su entorno con `withEnv` en lugar de hacerlo con `credentials` y `environment` que se utilizan en el siguiente ejemplo. Para obtener más información sobre `withCredentials`, consulte la [documentación de Jenkins](https://jenkins.io/doc/pipeline/steps/credentials-binding/).
 {: tip} 
 
-Estas credenciales y variables de entorno las utiliza el plugin IBM Cloud DevOps para interactuar con DevOps Insights. A continuación se muestra un ejemplo de configuración de las mismas en el formato de conducto declarativo.  
+Estas credenciales y variables de entorno las utiliza el plugin IBM Cloud DevOps para interactuar con DevOps Insights. En este ejemplo, se establecen en el formato de conducto declarativo. 
 
 ```
 environment {
@@ -103,7 +99,7 @@ El plugin Cloud DevOps añade cuatro pasos a los conductos Jenkins. Utilice esto
 * `publishDeployRecord`, que publica registros de despliegue para DevOps Insights
 * `evaluateGate`, que impone las políticas de DevOps Insights 
 
-Añada estos pasos a su definición de conducto siempre que necesite ejecutarlo. Por ejemplo, podría subir los resultados de una prueba después de ejecutarla y, a continuación, evaluar dichos resultados en una puerta después de haberlos subido.  
+Añada estos pasos a su definición de conducto siempre que necesite ejecutarlo. Por ejemplo, podría cargar los resultados de una prueba después de ejecutarla y, a continuación, evaluar dichos resultados en una puerta después de haberlos cargado. 
 
 ### Publicación de registros de compilación
 
@@ -111,12 +107,12 @@ Publique los registros de compilación con el paso `publishBuildRecord`. Este pa
 
 | Parámetro        | Definición    |
 | ----------------------------|---------------|
-| `gitBranch`    | Nombre de la rama Git que utiliza la compilación.   |
-| `gitCommit`      | ID de confirmación que utiliza la compilación.     |
+| `gitBranch`    | Nombre de la rama Git que utiliza la compilación.  |
+| `gitCommit`      | ID de confirmación que utiliza la compilación.    |
 | `gitRepo` | URL del repositorio Git.   |
-| `result` | Resultado de la etapa de compilación. El valor debe ser `SUCCESS` o `FAIL`.   |
+| `result` | Resultado de la etapa de compilación. El valor es `SUCCESS` o `FAIL`.   |
 
-Estos son los parámetros en un mandato de ejemplo:
+Este ejemplo muestra estos parámetros en un mandato:
 
 ```
 publishBuildRecord gitBranch: "${GIT_MASTER}", gitCommit: "${GIT_COMMIT}", gitRepo: "https://github.com/username/reponame", result:"SUCCESS"
@@ -130,10 +126,10 @@ Publique los resultados de la prueba con el paso `publishTestResult`. Este paso 
 
 | Parámetro        | Definición    |
 | ----------------------------|---------------|
-| `type`    | Tipo de resultado de prueba. El valor debe ser `unittest` para pruebas de unidad, `fvt` para pruebas de verificación funcional o `code` para pruebas de cobertura de código.   |
-| `fileLocation`      | Ubicación del archivo de resultados de la prueba.     |
+| `type`    | Tipo de resultado de prueba. El valor debe ser `unittest` para pruebas de unidad, `fvt` para pruebas de verificación funcional o `code` para pruebas de cobertura de código.  |
+| `fileLocation`      | Ubicación del archivo de resultados de la prueba.    |
 
-Estos son los parámetros en los mandatos de ejemplo. El primer mandato publica los resultados de la prueba de unidad Mocha y el segundo mandato publica los resultados de la prueba de cobertura de código.  
+El siguiente ejemplo muestra estos parámetros en mandatos. El primer mandato publica los resultados de la prueba de unidad Mocha. El segundo mandato publica los resultados de la prueba de cobertura de código. 
 
 ```
 publishTestResult type:'unittest', fileLocation: './mochatest.json'
@@ -142,7 +138,7 @@ publishTestResult type:'code', fileLocation: './tests/coverage/reports/coverage-
 
 ### Publicación de registros de despliegue
 
-Publique los registros de despliegue con el paso `publishDeployRecord`. Este paso requiere dos parámetros. También puede aceptar un parámetro opcional.  
+Publique los registros de despliegue con el paso `publishDeployRecord`. Este paso requiere dos parámetros. También puede aceptar un parámetro opcional. 
 
 | Parámetro        | Definición    |
 | ----------------------------|---------------|
@@ -150,7 +146,7 @@ Publique los registros de despliegue con el paso `publishDeployRecord`. Este pas
 | `result`      | Resultado de la etapa de compilación. El valor debe ser `SUCCESS` o `FAIL`.    |
 | `appUrl`      | *Opcional*: URL que se utiliza para acceder a su aplicación.    |
 
-Estos son los parámetros en los mandatos de ejemplo. El primer mandato publica los registros de despliegue para un entorno de transferencia; el segundo mandato publica el registro de despliegue para un entorno de producción. 
+El siguiente ejemplo muestra estos parámetros en mandatos. El primer mandato publica los registros de despliegue para un entorno de transferencia. El segundo mandato publica el registro de despliegue para un entorno de producción.
 
 ```
 publishDeployRecord environment: "STAGING", appUrl: "http://staging-Weather-App.mybluemix.net", result:"SUCCESS"
@@ -159,16 +155,16 @@ publishDeployRecord environment: "PRODUCTION", appUrl: "http://Weather-App.myblu
 
 ### Adición de puertas
 
-Utilice el mandato `evaluateGate` para añadir puertas a su conducto. Las puertas imponen las políticas de DevOps Insights, que establecen requisitos para las pruebas para la promoción de la compilación.  
+Utilice el mandato `evaluateGate` para añadir puertas a su conducto. Las puertas imponen las políticas de DevOps Insights, que establecen requisitos para las pruebas para la promoción de la compilación. 
 
-Este paso requiere un parámetro. También puede aceptar un parámetro opcional.  
+Este paso requiere un parámetro. También puede aceptar un parámetro opcional. 
 
 | Parámetro        | Definición    |
 | ----------------------------|---------------|
 | `policy`    | Nombre de la política que la puerta implementa. El nombre de la política se define en DevOps Insights. |
 | `forceDecision`      | *Opcional*: Indica si debe detenerse el conducto según la decisión que tome la puerta. Establezca este parámetro en `true` para detener la ejecución del conducto si la puerta falla. Establézcalo en `false` para permitir que el conducto continúe después de que se produzca una anomalía en la puerta. De forma predeterminada, el valor es `false`.     |
 
-Estos son los parámetros en un mandato de ejemplo. En este mandato, el conducto continuará ejecutándose independientemente de la decisión de la puerta.  
+El siguiente ejemplo muestra estos parámetros en un mandato. En este mandato, el conducto continúa ejecutándose independientemente de la decisión de la puerta.  
 
 ```
 evaluateGate policy: 'Weather App Policy', forceDecision: 'true'
@@ -176,19 +172,19 @@ evaluateGate policy: 'Weather App Policy', forceDecision: 'true'
 
 ### Comunicación con cadenas de herramientas
 
-Envíe el estado del conducto a las cadenas de herramientas de Bluemix utilizando el mandato `notifyOTC`. Para obtener más información sobre la integración de Jenkins con cadenas de herramientas, [consulte la documentación](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins). Puede omitir los pasos 6d a 6f, puesto que sólo se aplican a proyectos Jenkins de formato libre. 
+Envíe el estado del conducto a las cadenas de herramientas de Bluemix utilizando el mandato `notifyOTC`. Para obtener más información sobre la integración de Jenkins con cadenas de herramientas, [consulte la documentación](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins). Puede omitir los pasos 6d a 6f, puesto que sólo se aplican a proyectos Jenkins de formato libre.
 
-Este paso requiere dos parámetros y puede utilizar otro más opcional.  
+Este paso requiere dos parámetros y también puede utilizarse otro opcional. 
 
 | Parámetro        | Definición    |
 | ----------------------------|---------------|
 | `stageName`    | Nombre de la etapa de conducto actual. |
-| `status`    | Estado de la etapa de conducto actual. Con `SUCCESS`, `FAILURE` o `ABORTED` activará de forma automática el resaltado de color en Slack.   |
-| `webhookUrl`      | *Opcional*: URL de webhook que se muestra en su mosaico Jenkins de la cadena de herramientas. Si incluye este parámetro, su valor prevalece sobre la variable de entorno `IBM_CLOUD_DEVOPS_WEBHOOKURL`.    |
+| `status`    | Estado de la etapa de conducto actual. Con `SUCCESS`, `FAILURE` o `ABORTED` activará de forma automática el resaltado de color en Slack.  |
+| `webhookUrl`      | *Opcional*: URL de webhook que se muestra en su mosaico Jenkins de la cadena de herramientas. Si incluye este parámetro, su valor prevalece sobre la variable de entorno `IBM_CLOUD_DEVOPS_WEBHOOKURL`.   |
 
-Estos son ejemplos de la utilización del paso `notifyOTC` tanto en definiciones de conducto de scripts como en definiciones de conducto declarativos: 
+Los siguientes ejemplos muestran cómo utilizar el paso `notifyOTC` tanto en definiciones de conductos de scripts como en definiciones de conductos declarativos.
 
-#### Ejemplo de conducto declarativo: 
+#### Conducto declarativo
 ```
 stage('Deploy') {
     steps {
@@ -206,7 +202,7 @@ stage('Deploy') {
 }
 ```
 
-#### Ejemplo de conducto de scritps:
+#### Conducto de script
 ```
 stage('Deploy') {
   try {
@@ -220,16 +216,15 @@ stage('Deploy') {
 }
 ```
 
-Observe en ambos ejemplos que el URL de webhook de la cadena de herramientas únicamente se modifica en caso de una anomalía.  
+En ambos ejemplos, el URL de webhook de la cadena de herramientas únicamente se modifica en caso de una anomalía. 
 
 ## Cómo asegurar la trazabilidad a lo largo de las integraciones de la cadena
 
-Configure su entorno de Jenkins para integrar con su cadena de herramientas de Bluemix siguiendo las instrucciones en [la documentación de Bluemix](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins). Puede omitir los pasos 6d a 6f, puesto que sólo se aplican a proyectos Jenkins de formato libre. 
+Configure su entorno de Jenkins para integrar con su cadena de herramientas de Bluemix siguiendo las instrucciones en [la documentación de Bluemix](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins). Puede omitir los pasos 6d a 6f, puesto que sólo se aplican a proyectos Jenkins de formato libre.
 
 La integración con una cadena de herramientas le ofrece trazabilidad de principio a fin y correlación de despliegues. Después de seguir las instrucciones de integración, añada el mandato `cf icd --create-connection $IBM_CLOUD_DEVOPS_WEBHOOK_URL $CF_APP_NAME` después de los pasos de despliegue. Este mandato conecta a su integración de Jenkins para una app que se está ejecutando en Bluemix. 
 
-A continuación se muestra un ejemplo de un paso de despliegue en su totalidad. 
-Observe que el último mandato es `cf icd --create-connection`. 
+Este ejemplo muestra un paso de despliegue en su totalidad. El último mandato es `cf icd --create-connection`. 
 
 <pre>
 sh '''
@@ -244,11 +239,11 @@ sh '''
 '''
 </pre>
 
-Tal como se describe en la documentación de integración de Jenkins, debe tener instalados los plugins CloudFoundry CLI y CloudFoundry ICD en su servidor Jenkins. También puede necesitar iniciar una sesión en Bluemix desde el servidor para conectarse.
+Tal como se describe en la documentación de integración de Jenkins, los plugins CloudFoundry CLI y CloudFoundry ICD deben estar instalados en su servidor Jenkins. También puede necesitar iniciar una sesión en Bluemix desde el servidor para conectarse.
 
-## Ejemplo de conducto declarativo
+## Ejemplo de un conducto declarativo
 
-A continuación se muestra un conducto completo de ejemplo definido como un Jenkinsfile declarativo. 
+Este ejemplo muestra un conducto completo que está definido como un Jenkinsfile declarativo. 
 
 ```
 #!groovy
@@ -384,7 +379,7 @@ pipeline {
 
                         # utilizar "cf icd --create-connection" para habilitar la trazabilidad
                         cf icd --create-connection $IBM_CLOUD_DEVOPS_WEBHOOK_URL $CF_APP_NAME
-
+                        
                         export APP_URL=http://$(cf app $CF_APP_NAME | grep urls: | awk '{print $2}')
                     '''
             }

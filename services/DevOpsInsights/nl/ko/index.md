@@ -45,11 +45,9 @@ lastupdated: "2017-04-07"
 
 2. **{{site.data.keyword.DRA_short}}**를 클릭하십시오. 
 
-3. 모든 {{site.data.keyword.DRA_short}} 기능을 도구 체인에 추가하려면 **고급**을 선택하고 **Developer Insights 사용** 선택란을 선택합니다. Deployment Risk만 추가하려면 **기본값**을 선택하십시오. 
+3. **통합 작성**을 클릭하십시오. 
 
-4. **통합 작성**을 클릭하십시오. 
-
-{{site.data.keyword.DRA_short}}는 이제 도구 체인의 개요 페이지에서 사용할 수 있습니다.
+{{site.data.keyword.DRA_short}}는 이제 도구 체인의 개요 페이지에서 사용할 수 있습니다. 사용자의 저장소 및 문제 추적 시스템이 데이터를 찾기 위해 자동으로 스캔됩니다.  
 
 ## DevOps Insights 사용
 {: #using}
@@ -58,18 +56,8 @@ lastupdated: "2017-04-07"
 
 1. 도구 체인의 개요 페이지에서 **{{site.data.keyword.DRA_short}}**를 클릭하십시오.
 
-2. 왼쪽 탐색에서 **Team Dynamics** 또는 **Developer Insights**를 클릭한 다음 데이터 카테고리를 선택하십시오.
+2. **Team Dynamics** 또는 **Developer Insights**를 클릭한 후에 데이터 카테고리를 선택하십시오.  
 
 3. 데이터 카테고리에서 대시보드를 확인하여 프로젝트의 데이터를 탐색하십시오. 그래프에 대한 자세한 정보 또는 이 정보를 사용하여 수행할 수 있는 작업에 대해 알아보려면 **정보** 또는 **안내**를 클릭하십시오.
 
 Team Dynamics 및 Developer Insights를 탐색한 다음 코드 품질을 적용할 수 있도록 [Deployment Risk를 구성](/docs/services/DevOpsInsights/insights_risk.html)하십시오. Deployment Risk는 {{site.data.keyword.contdelivery_short}} 파이프라인 및 Jenkins 둘 다와 호환 가능합니다.   
-
-기본적으로 {{site.data.keyword.DRA_short}}에는 Developer Insights나 Team Dynamics가 포함되지 않습니다. 도구 체인을 구성한 다음 해당 기능에 도구 체인에 추가하려면 다음을 수행하십시오.
-
-1. 도구 체인의 개요 페이지로 이동하십시오.
-2. {{site.data.keyword.DRA_short}} 카드에서 **조치** 메뉴를 클릭하십시오.
-3. **구성**을 클릭하십시오.
-4. 유형으로는 **고급**을 선택한 다음 선택란을 선택하십시오.
-5. **통합 저장**을 클릭하십시오.
-
-구성을 저장하고 나면 Developer Insights와 Team Dynamics가 자동으로 저장소와 문제 추적 시스템을 스캔합니다.

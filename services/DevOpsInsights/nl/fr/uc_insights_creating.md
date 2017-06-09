@@ -24,7 +24,7 @@ Pour créer un rapport, ouvrez {{site.data.keyword.DRA_short}}, cliquez sur **De
 
 Dans le rapport, vous pouvez ajouter des cartes dans la section **Metrics**, filtrer l'activité sous **Recent application activity** et ajouter des graphiques dans la section **Report Details**. Vous pouvez appliquer un filtre et une personnalisation individuelle à chaque graphique de la section **Report Details**. Pour afficher les données brutes derrière un graphique, cliquez sur le bouton des paramètres du graphique en haut à droite de ce dernier, puis cliquez sur **Report Data**.
 
-Pour modifier l'ordre des graphiques, cliquez sur le bouton des paramètres en haut à droite de la page, puis cliquez sur **Edit Chart Layout**. Vous pouvez ensuite faire glisser et déposer les graphiques pour définir l'ordre du rapport. 
+Pour modifier l'ordre des graphiques, cliquez sur le bouton des paramètres en haut à droite de la page, puis cliquez sur **Edit Chart Layout**. Vous pouvez ensuite faire glisser et déposer les graphiques pour définir l'ordre du rapport.
 
 ## Partage de rapports
 Par défaut, vous ne pouvez afficher que vos rapports Delivery Insights. Vous pouvez partager un rapport avec d'autres utilisateurs de votre organisation Bluemix. Pour ce faire, ouvrez le rapport et cliquez sur le bouton des paramètres situé en haut à droite de ce dernier, puis cliquez sur **Share**.  

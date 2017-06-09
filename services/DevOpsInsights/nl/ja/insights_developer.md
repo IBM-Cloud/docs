@@ -12,7 +12,7 @@ lastupdated: "2017-03-17"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Developer Insights (実験)
+# Developer Insights
 {: #gettingstarted}
 
 {{site.data.keyword.DRA_full}} Developer Insights には、プロジェクトの開発リスクを検討するための包括的な方法が用意されています。

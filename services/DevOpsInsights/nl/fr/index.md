@@ -18,13 +18,13 @@ lastupdated: "2017-04-07"
 {{site.data.keyword.DRA_full}} applique l'analyse du développeur, de l'équipe et de déploiement à vos projets DevOps les plus actifs. Il vous permet de savoir dans quelle mesure votre équipe se conforme aux pratiques DevOps et du développeur, de gérer les risques du codebase et d'appliquer des normes de qualité dans des projets de distribution continue.
 {:shortdesc}
 
-{{site.data.keyword.DRA_short}} comprend plusieurs groupes de fonctionnalités :  
+{{site.data.keyword.DRA_short}} comprend plusieurs groupes de fonctionnalités :
 
-   * Developer Insights fournit une méthode globale permettant d'explorer la maturité de développement de votre projet. Vous pouvez identifier les fichiers présentant une prédisposition élevée aux erreurs et obtenir une vue de conformité du projet par rapport aux pratiques du développeur. 
+   * Developer Insights fournit une méthode globale permettant d'explorer la maturité de développement de votre projet. Vous pouvez identifier les fichiers présentant une prédisposition élevée aux erreurs et obtenir une vue de conformité du projet par rapport aux pratiques du développeur.
 
-   * Team Dynamics utilise l'analyse du codage social pour vous aider à déterminer comment votre équipe collabore et à comprendre ce qui peut être modifié pour un meilleur fonctionnement. 
+   * Team Dynamics utilise l'analyse du codage social pour vous aider à déterminer comment votre équipe collabore et à comprendre ce qui peut être modifié pour un meilleur fonctionnement.
 
-   * Deployment Risk est comparable à un filet de sécurité pour votre pipeline de distribution continue. Il analyse les résultats provenant des tests d'unité, tests fonctionnels, examens d'application et outils de couverture du code à des jalons spécifiques de votre processus de déploiement, et empêche la publication des changements risqués. 
+   * Deployment Risk est comparable à un filet de sécurité pour votre pipeline de distribution continue. Il analyse les résultats provenant des tests d'unité, tests fonctionnels, examens d'application et outils de couverture du code à des jalons spécifiques de votre processus de déploiement, et empêche la publication des changements risqués.
 
    * Delivery Insights affiche des statistiques et des mesures liées au déploiement, ainsi que d'autres informations sur votre installation IBM UrbanCode Deploy. Il peut ainsi présenter des graphiques concernant la durée du déploiement, les réussites et les échecs, triés par environnements regroupés de manière logique. Voir
 [Intégration de DevOps Insights avec IBM UrbanCode Deploy](/docs/services/DevOpsInsights/uc_insights_overview.html).
@@ -36,41 +36,29 @@ Pour utiliser {{site.data.keyword.DRA_short}}, vous devez l'ajouter à une chaî
 ## Ajout de DevOps Insights à une chaîne d'outils
 {: #catalog}
 
-{{site.data.keyword.DRA_short}} fait partie de {{site.data.keyword.contdelivery_short}}. Vous pouvez ajouter {{site.data.keyword.DRA_short}} à n'importe quelle chaîne d'outils en sélectionnant cette dernière dans le catalogue des intégrations d'outil. 
+{{site.data.keyword.DRA_short}} fait partie de {{site.data.keyword.contdelivery_short}}. Vous pouvez ajouter {{site.data.keyword.DRA_short}} à n'importe quelle chaîne d'outils en sélectionnant cette dernière dans le catalogue des intégrations d'outil.
 
 {{site.data.keyword.DRA_short}} est également inclus dans de nombreux modèles de chaîne d'outils. Si vous créez une chaîne d'outils à partir d'un modèle qui comprend {{site.data.keyword.DRA_short}}, veillez à ce que {{site.data.keyword.DRA_short}} soit défini sur **Avancé**. Créez ensuite la chaîne d'outils et passez à [Utilisation de DevOps Insights](/docs/services/DevOpsInsights/index.html#using).
 
-Pour ajouter {{site.data.keyword.DRA_short}} à une chaîne d'outils : 
+Pour ajouter {{site.data.keyword.DRA_short}} à une chaîne d'outils :
 
 1. Cliquez sur **Ajouter un outil**.
 
 2. Cliquez sur **{{site.data.keyword.DRA_short}}**.
 
-3. Pour ajouter toutes les fonctionnalités de {{site.data.keyword.DRA_short}} à votre chaîne d'outils, sélectionnez **Avancé** et vérifiez que la case **Activer Developer Insights** est cochée. Pour ajouter uniquement Deployment Risk, sélectionnez **Valeur par défaut**. 
+3. Cliquez sur **Créer une intégration**.
 
-4. Cliquez sur **Créer une intégration**.
-
-{{site.data.keyword.DRA_short}} est maintenant disponible sur la page de présentation de votre chaîne d'outils. 
+{{site.data.keyword.DRA_short}} est maintenant disponible sur la page de présentation de votre chaîne d'outils. Une recherche de données est automatiquement effectuée sur votre référentiel et votre système de suivi des problèmes. 
 
 ## Utilisation de DevOps Insights
 {: #using}
 
-Si votre chaîne d'outils inclut GitHub, GitLab ou JIRA, {{site.data.keyword.DRA_short}} vous fournit automatiquement des informations sur votre codebase et votre équipe après un premier rassemblement et une analyse initiale des données. Si votre chaîne d'outils n'inclut aucune de ces intégrations, ajoutez-en une, puis procédez comme suit : 
+Si votre chaîne d'outils inclut GitHub, GitLab ou JIRA, {{site.data.keyword.DRA_short}} vous fournit automatiquement des informations sur votre codebase et votre équipe après un premier rassemblement et une analyse initiale des données. Si votre chaîne d'outils n'inclut aucune de ces intégrations, ajoutez-en une, puis procédez comme suit :
 
 1. Sur la page de présentation de votre chaîne d'outils, cliquez sur **{{site.data.keyword.DRA_short}}**.
 
-2. Dans la navigation de gauche, cliquez sur **Team Dynamics** ou sur **Developer Insights**, puis choisissez une catégorie de données.
+2. Cliquez sur **Team Dynamics** ou sur **Developer Insights**, puis choisissez une catégorie de données.  
 
 3. Explorez les données de votre projet en affichant les tableaux de bord dans la catégorie de données. Si vous voulez en savoir plus sur un graphique ou savoir ce que vous pouvez faire de ces informations, cliquez sur **Informations** ou sur **Conseils**.
 
 Après avoir exploré Team Dynamics et Developer Insights, [configurez Deployment Risk](/docs/services/DevOpsInsights/insights_risk.html) pour faciliter l'application de la qualité du code. Deployment Risk est compatible à la fois avec le pipeline {{site.data.keyword.contdelivery_short}} et Jenkins.   
-
-Par défaut, {{site.data.keyword.DRA_short}} n'inclut ni Developer Insights, ni Team Dynamics. Pour ajouter ces fonctionnalités à votre chaîne d'outils après l'avoir configurée, procédez comme suit : 
-
-1. Accédez à la page de présentation de la chaîne d'outils. 
-2. Sur la carte {{site.data.keyword.DRA_short}}, cliquez sur le menu **Actions**.
-3. Cliquez sur **Configurer**.
-4. Pour le type, sélectionnez **Avancé** et cochez la case. 
-5. Cliquez sur **Sauvegarder l'intégration**.
-
-Une fois la configuration sauvegardée, Developer Insights et Team Dynamics examinent automatiquement votre référentiel et les systèmes de suivi. 

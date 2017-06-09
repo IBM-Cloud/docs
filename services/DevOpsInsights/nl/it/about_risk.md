@@ -12,9 +12,9 @@ lastupdated: "2017-04-07"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Informazioni su Deployment Risk 
+# Informazioni su Deployment Risk
 
-{{site.data.keyword.DRA_short}} fornisce un gran numero di informazioni sulle tue distribuzioni, particolarmente a rischio. Puoi utilizzarlo per automatizzare la protezione della qualità nella tua delivery pipeline utilizzando politiche e gate.
+{{site.data.keyword.DRA_short}} fornisce un gran numero di informazioni sulle tue distribuzioni, particolarmente a rischio. Puoi utilizzarlo per automatizzare la protezione della qualità nella tua delivery pipeline utilizzando politiche e gate. 
 {:shortdesc}
 
 Dopo aver aperto {{site.data.keyword.DRA_short}} dalla tua toolchain, fai clic su **Deployment Risk**. Da lì, puoi ottenere una panoramica delle applicazioni nei tuoi ambienti di produzione e di preparazione ed eseguire il drill down per comprendere la copertura del codice, le prestazioni del test e i report di sicurezza. I dashboard sono automaticamente popolati con le informazioni più recenti dai test {{site.data.keyword.DRA_short}} della tua pipeline.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-07"
+lastupdated: "2017-05-11"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2017-04-07"
 将 {{site.data.keyword.DRA_full}} 添加到开放工具链并定义其监视的策略之后，可以将其与自由格式的 Jenkins 项目相集成。
 自由格式的 Jenkins 项目可在 Jenkins Web 界面中进行配置和管理。 
 
-IBM Cloud DevOps for Jenkins 插件可将 Jenkins 项目与工具链相集成。*工具链*是一组工具集成，用于支持开发、部署和操作任务。工具链的整体能力大于其个别工具集成的总和。开放工具链是 {{site.data.keyword.contdelivery_full}} 服务的组成部分。要了解有关 {{site.data.keyword.contdelivery_short}} 服务的更多信息，请参阅[其服务文档](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/cd_about.html)。
+IBM Cloud DevOps for Jenkins 插件可将 Jenkins 项目与工具链相集成。*工具链*是一组工具集成，用于支持开发、部署和操作任务。工具链的整体能力大于其各个单独工具集成的总和。开放工具链是 {{site.data.keyword.contdelivery_full}} 服务的组成部分。要了解有关 {{site.data.keyword.contdelivery_short}} 服务的更多信息，请参阅[其服务文档](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/cd_about.html)。
 
 安装 IBM Cloud DevOps 插件后，可以将测试结果发布到 {{site.data.keyword.DRA_short}}，添加自动质量检测点以及跟踪部署风险。您还可以将作业通知发送给工具链中的其他工具，例如 Slack 和 PagerDuty。为了帮助您跟踪部署，工具链可以将部署消息添加到 Git 落实及其相关的 Git 或 JIRA 问题。此外，还可以在工具链的“连接”页面上查看部署。 
 
@@ -40,18 +40,16 @@ IBM Cloud DevOps for Jenkins 插件可将 Jenkins 项目与工具链相集成。
 ## 安装插件
 {: #jenkins_install}
 
-首先，从 {{site.data.keyword.DRA_short}} 下载插件。  
+首先，在 Jenkins 服务器上安装插件。打开服务器界面，然后：
 
-1. 在工具链的“概述”页面中，单击 **DevOps Insights**。
-2. 单击**设置**，然后单击 **Jenkins 插件设置**。
-3. 按照页面上的指示信息下载该插件。
+1. 单击**管理 Jenkins**。
+2. 单击**管理插件**。 
+3. 单击**可用**选项卡。
+4. 对 `IBM Cloud DevOps` 进行过滤。 
+5. 选择 IBM Cloud DevOps。
+6. 单击**立即下载并在重新启动后安装**。 
 
-然后，在 Jenkins 服务器上安装插件。
-
-1. 单击**管理 Jenkins &gt; 管理插件**，然后单击**高级**选项卡。
-2. 单击**选择文件**并选择 IBM Cloud DevOps 插件安装文件。 
-3. 单击**上传**。
-4. 重新启动 Jenkins 并验证已安装插件。
+在服务器重新启动后即可使用该插件。  
 
 ## 为 Deployment Risk 仪表板配置 Jenkins 作业
 {: #jenkins_configure}
@@ -106,7 +104,3 @@ Deployment Risk 仪表板依赖于编译打包部署作业后存在检测点。�
 {: #jenkins_notifications}
 
 可以通过遵循 [Bluemix 文档](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins)中的指示信息来配置用于向 Slack 或 PagerDuty 之类的工具发送通知的 Jenkins 作业。
-
-此示例显示了如何配置用于作业配置的 `ICD_WEBHOOK_URL`：![设置 ICD_WEBHOOK_URL 参数](images/Set-Parameterized-Webhook.png "设置参数化 WebHook")
-
-此示例显示了如何配置用于作业通知的构建后操作：![用于 WebHook 通知的构建后操作](images/PostBuild-WebHookNotification.png "在构建后操作中配置 WebHook 通知")
