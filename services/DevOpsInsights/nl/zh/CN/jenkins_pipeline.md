@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-21"
+lastupdated: "2017-05-19"
 
 ---
 
@@ -17,13 +17,13 @@ lastupdated: "2017-04-21"
 
 将 {{site.data.keyword.DRA_full}} 添加到开放工具链并定义其监视的策略之后，可以将其与 Jenkins Pipeline 项目相集成。您可在 Jenkins Web 界面中定义管道，也可在源代码控制存储库中存储的 *Jenkinsfile* 中定义管道。可以在 Jenkins Web 界面中查看和管理 Jenkins Pipeline 项目。 
 
-IBM Cloud DevOps for Jenkins 插件可将 Jenkins 项目与工具链相集成。*工具链*是一组工具集成，用于支持开发、部署和操作任务。工具链的整体能力大于其个别工具集成的总和。开放工具链是 {{site.data.keyword.contdelivery_full}} 服务的组成部分。要了解有关 {{site.data.keyword.contdelivery_short}} 服务的更多信息，请参阅[其服务文档](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/cd_about.html)。 
+IBM Cloud DevOps for Jenkins 插件可将 Jenkins 项目与工具链相集成。*工具链*是一组工具集成，用于支持开发、部署和操作任务。工具链的整体能力大于其各个单独工具集成的总和。开放工具链是 {{site.data.keyword.contdelivery_full}} 服务的组成部分。要了解有关 {{site.data.keyword.contdelivery_short}} 服务的更多信息，请参阅[其服务文档](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/cd_about.html)。 
 
 安装 IBM Cloud DevOps 插件后，可以配置 Jenkins 项目，以将测试结果发布到 {{site.data.keyword.DRA_short}}，自动在检测点对构建质量进行评估以及跟踪部署风险。您还可以将作业通知发送给工具链中的其他工具，例如 Slack 和 PagerDuty。为了帮助您跟踪部署，工具链可以将部署消息添加到 Git 落实及其相关的 Git 或 JIRA 问题。此外，还可以在工具链的“连接”页面上查看部署。 
 
 该插件提供了构建后操作和 CLI 以支持集成。{{site.data.keyword.DRA_short}} 聚集和分析单元测试、功能测试、代码覆盖工具、静态安全代码扫描和动态安全代码扫描的结果，以确定您的代码是否符合部署过程中检测点处的预定义策略。如果您的代码不满足或超出策略，那么会暂停部署以防止发布有风险的更改。您可以使用 {{site.data.keyword.DRA_short}} 作为持续交付环境的安全网、作为随时间实现和提高质量标准的方法，以及作为帮助您了解项目运行状况的数据可视化工具。
 
-本主题假设您对 Jenkins Pipeline 至少略有了解。如果完全不了解，请先[查看 Jenkins Pipeline 文档](https://jenkins.io/doc/book/pipeline/)，然后继续。
+如果您熟悉 Jenkins Pipeline，请继续阅读。否则，请先参阅 [Jenkins Pipeline 文档](https://jenkins.io/doc/book/pipeline/)，然后再继续。
 
 ## 先决条件
 {: #jenkins_prerequisites}
@@ -42,27 +42,25 @@ IBM Cloud DevOps for Jenkins 插件可将 Jenkins 项目与工具链相集成。
 ## 安装插件
 {: #jenkins_install}
 
-首先，从 {{site.data.keyword.DRA_short}} 下载插件。  
+通过打开服务器界面并遵循以下步骤，在 Jenkins 服务器上安装插件：
 
-1. 在工具链的“概述”页面中，单击 **DevOps Insights**。
-2. 单击**设置**，然后单击 **Jenkins 插件设置**。
-3. 按照页面上的指示信息下载该插件。
+1. 单击**管理 Jenkins**。
+2. 单击**管理插件**。 
+3. 单击**可用**选项卡。
+4. 对 `IBM Cloud DevOps` 进行过滤。 
+5. 选择 **IBM Cloud DevOps**。
+6. 单击**立即下载并在重新启动后安装**。 
 
-然后，在 Jenkins 服务器上安装插件。
-
-1. 单击**管理 Jenkins &gt; 管理插件**，然后单击**高级**选项卡。
-2. 单击**选择文件**并选择 IBM Cloud DevOps 插件安装文件。 
-3. 单击**上传**。
-4. 重新启动 Jenkins 并验证已安装插件。
+在服务器重新启动后即可使用该插件。  
 
 ## 创建管道
 {: #jenkinsfile_create}
 
-您可在 Jenkins 项目配置菜单中定义管道，也可在存储库的 Jenkinsfile 中定义管道。要继续，请创建或打开现有脚本或 Jenkinsfile 以用于 {{site.data.keyword.DRA_short}}。您可以采用[声明式](https://jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline)或[脚本式](https://jenkins.io/doc/book/pipeline/syntax/#scripted-pipeline)格式。
+您可在 Jenkins 项目配置菜单中定义管道，也可在存储库的 Jenkinsfile 中定义管道。要继续，请创建或打开脚本或 Jenkinsfile 以用于 {{site.data.keyword.DRA_short}}。您可以采用[声明式](https://jenkins.io/doc/book/pipeline/syntax/#declarative-pipeline)或[脚本式](https://jenkins.io/doc/book/pipeline/syntax/#scripted-pipeline)格式。
 
 ## 公开必需的环境变量
 
-接下来，打开管道定义。 
+打开管道定义。 
 
 在定义中，添加以下环境变量。这些是管道与 {{site.data.keyword.DRA_short}} 集成所必需的变量。
 
@@ -80,7 +78,7 @@ IBM Cloud DevOps for Jenkins 插件可将 Jenkins 项目与工具链相集成。
 如果使用的是脚本式管道格式，请使用 `withCredentials` 设置凭证，并使用 `withEnv` 设置环境，而不要使用以下示例中所用的 `credentials` 和 `environment` 进行设置。有关 `withCredentials` 的更多信息，请参阅 [Jenkins 文档](https://jenkins.io/doc/pipeline/steps/credentials-binding/)。
 {: tip} 
 
-IBM Cloud DevOps 插件使用这些环境变量和凭证来与 DevOps Insights 进行交互。下面是以声明式管道格式进行设置的示例。 
+IBM Cloud DevOps 插件使用这些环境变量和凭证来与 DevOps Insights 进行交互。在此示例中，以声明式管道格式进行设置。 
 
 ```
 environment {
@@ -112,9 +110,9 @@ Cloud DevOps 插件会向 Jenkins Pipeline 添加四个步骤供您使用。在�
 | `gitBranch`    | 构建使用的 Git 分支的名称。  |
 | `gitCommit`      | 构建使用的 Git 落实标识。    |
 | `gitRepo` | Git 存储库的 URL。   |
-| `result` | 构建阶段的结果。值应该为 `SUCCESS` 或 `FAIL`。   |
+| `result` | 构建阶段的结果。值为 `SUCCESS` 或 `FAIL`。   |
 
-下面是示例命令中的参数：
+此示例显示命令中的这些参数：
 
 ```
 publishBuildRecord gitBranch: "${GIT_MASTER}", gitCommit: "${GIT_COMMIT}", gitRepo: "https://github.com/username/reponame", result:"SUCCESS"
@@ -131,7 +129,7 @@ Jenkins Pipeline 不会将 Git 信息作为环境变量公开。可以使用 `sh
 | `type`    | 测试结果的类型。此参数的值必须为 `unittest`（对于单元测试）、`fvt`（对于功能验证测试）或 `code`（对于代码覆盖测试）。  |
 | `fileLocation`      | 测试结果文件的位置。    |
 
-下面是示例命令中的参数。第一个命令发布 Mocha 单元测试结果，第二个命令发布代码覆盖测试结果。 
+以下示例显示命令中的这些参数。第一个命令发布 Mocha 单元测试结果。第二个命令发布代码覆盖测试结果。 
 
 ```
 publishTestResult type:'unittest', fileLocation: './mochatest.json'
@@ -148,7 +146,7 @@ publishTestResult type:'code', fileLocation: './tests/coverage/reports/coverage-
 | `result`      | 构建阶段的结果。值应该为 `SUCCESS` 或 `FAIL`。    |
 | `appUrl`      | *可选*：用于访问应用程序的 URL。    |
 
-下面是示例命令中的参数。第一个命令发布编译打包环境的部署记录；第二个命令发布生产环境的部署记录。
+以下示例显示命令中的这些参数。第一个命令发布编译打包环境的部署记录。第二个命令发布生产环境的部署记录。
 
 ```
 publishDeployRecord environment: "STAGING", appUrl: "http://staging-Weather-App.mybluemix.net", result:"SUCCESS"
@@ -166,7 +164,7 @@ publishDeployRecord environment: "PRODUCTION", appUrl: "http://Weather-App.myblu
 | `policy`    | 检测点实施的策略的名称。策略的名称在 DevOps Insights 中进行定义。 |
 | `forceDecision`      | *可选*：管道是否停止取决于检测点的决策。将此参数设置为 `false` 可在检测点失败时停止运行管道。将此参数设置为 `true` 将允许管道在检测点失败后继续运行。缺省情况下，此值为 `false`。     |
 
-下面是示例命令中的参数。在此命令中，不管检测点的决策是什么，管道都将继续运行。 
+以下示例显示命令中的这些参数。在此命令中，不管检测点的决策是什么，管道都将继续运行。 
 
 ```
 evaluateGate policy: 'Weather App Policy', forceDecision: 'true'
@@ -184,9 +182,9 @@ evaluateGate policy: 'Weather App Policy', forceDecision: 'true'
 | `status`    | 当前管道阶段的状态。使用 `SUCCESS`、`FAILURE` 或 `ABORTED` 将在 Slack 中自动触发颜色突出显示。  |
 | `webhookUrl`      | *可选*：在工具链的 Jenkins 磁贴上显示的 WebHook URL。如果包含此参数，其值将覆盖 `IBM_CLOUD_DEVOPS_WEBHOOKURL` 环境变量的值。   |
 
-下面是在声明式和脚本式管道定义中使用 `notifyOTC` 步骤的示例：
+以下示例显示如何在声明式和脚本式管道定义中使用 `notifyOTC` 步骤。
 
-#### 声明式管道示例：
+#### 声明式管道
 ```
 stage('Deploy') {
     steps {
@@ -204,7 +202,7 @@ stage('Deploy') {
 }
 ```
 
-#### 脚本式管道示例：
+#### 脚本式管道
 ```
 stage('Deploy') {
   try {
@@ -218,7 +216,7 @@ stage('Deploy') {
 }
 ```
 
-在这两个示例中，请注意，仅在失败时才会覆盖工具链 WebHook URL。 
+在这两个示例中，仅在失败时才会覆盖工具链 WebHook URL。 
 
 ## 确保跨工具链集成的可跟踪性
 
@@ -226,7 +224,7 @@ stage('Deploy') {
 
 通过与工具链相集成，可以提供端到端可跟踪性和部署映射。遵循集成指示信息进行操作后，在部署步骤后添加 `cf icd --create-connection $IBM_CLOUD_DEVOPS_WEBHOOK_URL $CF_APP_NAME` 命令。此命令将 Jenkins 集成连接到正在在 Bluemix 上运行的应用程序。 
 
-下面是完整的部署步骤示例。请注意，最后一个命令是 `cf icd --create-connection`。 
+此示例显示完整的部署步骤。最后一个命令是 `cf icd --create-connection`。 
 
 <pre>
 sh '''
@@ -241,11 +239,11 @@ sh '''
 '''
 </pre>
 
-如 Jenkins 集成文档中所述，您必须在 Jenkins 服务器上安装 CloudFoundry CLI 和 CloudFoundry ICD 插件。您还需要从服务器登录到 Bluemix 才能与其建立连接。
+如 Jenkins 集成文档中所述，必须在 Jenkins 服务器上安装 CloudFoundry CLI 和 CloudFoundry ICD 插件。您还需要从服务器登录到 Bluemix 才能与其建立连接。
 
-## 示例声明式管道
+## 声明式管道示例
 
-作为示例，下面是定义为声明式 Jenkinsfile 的完整管道。 
+此示例显示定义为声明式 Jenkinsfile 的完整管道。 
 
 ```
 #!groovy

@@ -17,14 +17,14 @@ lastupdated: "2017-04-07"
 
 Les politiques sont des ensembles de règles qui contrôlent les jalons de votre pipeline de distribution. Si votre code ne satisfait pas, dans un sens ou dans l'autre, une politique appliquée à un jalon particulier, le déploiement est arrêté dans le but d'empêcher la publication de changements risqués.
 
-Vous définissez les politiques dans {{site.data.keyword.DRA_short}}. Les politiques sont créées dans l'organisation {{site.data.keyword.Bluemix_notm}} qui contient {{site.data.keyword.DRA_short}}. Toutes les applications qui se trouvent dans la même organisation peuvent utiliser la politique.  
+Vous définissez les politiques dans {{site.data.keyword.DRA_short}}. Les politiques sont créées dans l'organisation {{site.data.keyword.Bluemix_notm}} qui contient {{site.data.keyword.DRA_short}}. Toutes les applications qui se trouvent dans la même organisation peuvent utiliser la politique. 
 
 ## Création de politiques
 {: #create_policies}
 
 Pour créer une politique :
 
-1. Dans la navigation de gauche, cliquez sur **Paramètres**.
+1. Dans le menu de navigation de {{site.data.keyword.DRA_short}}, cliquez sur **Paramètres**.
 
 2. Cliquez sur **Politiques**.
 

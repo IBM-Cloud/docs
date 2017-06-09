@@ -20,7 +20,7 @@ lastupdated: "2017-04-07"
 
 {{site.data.keyword.DRA_short}} comprende molti gruppi di funzionalità:
 
-   * Developer Insights fornisce un modo completo di esplorare la maturità dello sviluppo del tuo progetto. Puoi identificare i file con alta tendenza all'errore e ottenere una vista di conformità del progetto per le procedure dello sviluppatore. 
+   * Developer Insights fornisce un modo completo di esplorare la maturità dello sviluppo del tuo progetto. Puoi identificare i file con alta tendenza all'errore e ottenere una vista di conformità del progetto per le procedure dello sviluppatore.
 
    * Team Dynamics utilizza le analisi di codifica social per aiutarti a capire come il tuo team collabora e come può funzionare in modo migliore.
 
@@ -45,11 +45,9 @@ Per aggiungere {{site.data.keyword.DRA_short}} a una toolchain:
 
 2. Fai clic su **{{site.data.keyword.DRA_short}}**.
 
-3. Per aggiungere tutte le funzionalità di {{site.data.keyword.DRA_short}} alla tua toolchain, seleziona **Advanced** e assicurati che la casella di spunta **Enable Developer Insights** sia selezionata. Per aggiungere solo Deployment Risk, seleziona **Default**. 
+3. Fai clic su **Create Integration**.
 
-4. Fai clic su **Create Integration**.
-
-{{site.data.keyword.DRA_short}} è ora disponibile nella pagina della panoramica della tua toolchain.
+{{site.data.keyword.DRA_short}} è ora disponibile nella pagina della panoramica della tua toolchain. Il tuo sistema di traccia dei problemi e quello di repository vengono scansionati automaticamente per rilevare se sono presenti eventuali dati. 
 
 ## Utilizzo di DevOps Insights
 {: #using}
@@ -58,18 +56,8 @@ Se la tua toolchain include GitHub, GitLab o JIRA, {{site.data.keyword.DRA_short
 
 1. Dalla pagina della panoramica della tua toolchain, fai clic su **{{site.data.keyword.DRA_short}}**.
 
-2. Dal menu di navigazione di sinistra, fai clic su **Team Dynamics** o **Developer Insights** e scegli quindi una categoria di dati.
+2. Fai clic su **Team Dynamics** o **Developer Insights** e scegli quindi una categoria di dati. 
 
 3. Esplora i dati del tuo progetto visualizzando i dashboard nella categoria dei dati. Se desideri avere ulteriori informazioni su un grafico o su cosa puoi fare con queste informazioni, fai clic su **Information** o **Guidance**.
 
 Dopo aver esplorato Team Dynamics e Developer Insights, [configura Deployment Risk](/docs/services/DevOpsInsights/insights_risk.html) per aiutarti nell'applicazione della qualità del codice. Deployment Risk è compatibile sia con {{site.data.keyword.contdelivery_short}} pipeline che con Jenkins.   
-
-Per impostazione predefinita, {{site.data.keyword.DRA_short}} non include Developer Insights o Team Dynamics. Per aggiungere queste funzionalità alla tua toolchain dopo averla configurata:
-
-1. Vai alla pagina della panoramica della tua toolchain.
-2. Nella scheda {{site.data.keyword.DRA_short}}, fai clic su menu **Actions**.
-3. Fai clic su **Configure**.
-4. Per il tipo, seleziona **Advanced** e seleziona la casella di spunta.
-5. Fai clic su **Save Integration**.
-
-Dopo aver salvato la configurazione, Developer Insights e Team Dynamics automaticamente eseguono la scansione del tuo repository ed emettono i sistemi di traccia.

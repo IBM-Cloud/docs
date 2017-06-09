@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-07"
+lastupdated: "2017-05-11"
 
 ---
 
@@ -57,25 +57,16 @@ Jenkins プロジェクトを実行しているサーバーに対するアクセ
 ## プラグインのインストール
 {: #jenkins_install}
 
-まず、{{site.data.keyword.DRA_short}} からプラグインをダウンロードします。
-  
+まず、Jenkins サーバーにプラグインをインストールします。サーバー・インターフェースを開き、次のようにします。
 
-1. ツールチェーンの概要ページから、**DevOps Insights** をクリックします。
+1. **「Jenkins の管理」**をクリックします。
+2. **「プラグインの管理」**をクリックします。 
+3. **「利用可能」**タブをクリックします。
+4. `「IBM Cloud DevOps」`でフィルタリングします。 
+5. 「IBM Cloud DevOps」を選択します。
+6. **「ダウンロードして再起動後にインストール」**をクリックします。 
 
-2. **「設定」**、**「Jenkins プラグインのセットアップ (Jenkins Plugin Setup)」** の順にクリックします。
-
-3. ページの指示に従い、プラグインをダウンロードします。
-
-
-次に、Jenkins サーバーでプラグインをインストールします。
-
-
-1. **「Jenkins の管理 (Manage Jenkins)」&gt;「プラグインの管理」**をクリックした後、**「詳細」**タブをクリックします。
-
-2. **「ファイルの選択」**をクリックし、IBM Cloud DevOps プラグインのインストール・ファイルを選択します。
- 
-3. **「アップロード」**をクリックします。
-4. Jenkins を再始動して、プラグインがインストールされたことを確認します。
+プラグインは、サーバーの再起動後に使用できます。  
 
 ## Deployment Risk ダッシュボードのための Jenkins ジョブの構成
 {: #jenkins_configure}
@@ -157,10 +148,4 @@ Deployment Risk ダッシュボードは、ステージング・デプロイメ�
 {: #jenkins_notifications}
 
 [Bluemix の資料](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins)にある手順を実行することにより、Slack や PagerDuty などのツールに通知を送信するよう、Jenkins ジョブを構成することができます。
-
-
-次のサンプルには、ジョブ構成のための `ICD_WEBHOOK_URL` の構成方法が示されています。 ![ICD_WEBHOOK_URL パラメーターの設定](images/Set-Parameterized-Webhook.png "パラメーター化 WebHook の設定")
-
-
-次のサンプルには、ジョブ通知のためのビルド後アクションの構成方法が示されています。![WebHook 通知のためのビルド後アクション](images/PostBuild-WebHookNotification.png "ビルド後アクションでの WebHook 通知の構成")
 

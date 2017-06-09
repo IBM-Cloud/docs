@@ -12,7 +12,7 @@ lastupdated: "2017-03-17"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Developer Insights (sperimentale)
+# Developer Insights
 {: #gettingstarted}
 
 {{site.data.keyword.DRA_full}} Developer Insights fornisce un modo completo di esplorare il rischio di sviluppo del tuo progetto. Puoi identificare i file con alta tendenza all'errore e ottenere una vista di conformità del progetto per le procedure DevOps.

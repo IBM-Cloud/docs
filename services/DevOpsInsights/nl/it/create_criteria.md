@@ -15,12 +15,12 @@ lastupdated: "2017-02-24"
 # Definizione delle politiche
 {: #policies}
 
-Le politiche controllano i gate nella tua delivery pipeline continua. Se il tuo codice non soddisfa o supera una politica approvata in un gate particolare, la distribuzione viene arrestata per prevenire che vengano rilasciati dei rischi.
+Le politiche controllano i gate nella tua delivery pipeline continua. Se il tuo codice non soddisfa o supera una politica approvata in un gate particolare, la distribuzione viene arrestata per prevenire che vengano rilasciati dei rischi. 
 {:shortdesc}
 
-Definisci le politiche in {{site.data.keyword.DRA_short}}. Le politiche sono create nell'organizzazione (org) {{site.data.keyword.Bluemix_notm}} che contiene {{site.data.keyword.DRA_short}}. Tutte le applicazioni nella stessa organizzazione possono utilizzare la politica.  
+Definisci le politiche in {{site.data.keyword.DRA_short}}. Le politiche sono create nell'organizzazione (org) {{site.data.keyword.Bluemix_notm}} che contiene {{site.data.keyword.DRA_short}}. Tutte le applicazioni nella stessa organizzazione possono utilizzare la politica. 
 
-Per definire una politica: 
+Per definire una politica:
 
 1. Dal menu di navigazione di sinistra, fai clic su **Settings**.
 
@@ -54,7 +54,7 @@ Puoi richiedere l'esito positivo indipendentemente se hai contrassegnato i test 
 
 3. Definisci ogni scenario di test che è critico.
 
-4. Per monitorare le regressioni dello scenario di test, seleziona la casella di spunta **Monitor for test case regression**. 
+4. Per monitorare le regressioni dello scenario di test, seleziona la casella di spunta **Monitor for test case regression**.
 
 5. Fai clic su **Save**.
 
@@ -68,7 +68,7 @@ Puoi richiedere l'esito positivo indipendentemente se hai contrassegnato i test 
 
 3. Definisci ogni scenario di test che è critico.
 
-4. Per monitorare le regressioni dello scenario di test, seleziona la casella di spunta **Monitor for test case regression**. 
+4. Per monitorare le regressioni dello scenario di test, seleziona la casella di spunta **Monitor for test case regression**.
 
 5. Fai clic su **Save**.
 
@@ -80,7 +80,7 @@ Puoi richiedere l'esito positivo indipendentemente se hai contrassegnato i test 
 
 2. Specifica la percentuale di copertura del codice necessaria per essere considerato con esito positivo.
 
-3. Per monitorare le regressioni di copertura del codice, seleziona la casella di spunta **Monitor for test case regression**. 
+3. Per monitorare le regressioni di copertura del codice, seleziona la casella di spunta **Monitor for test case regression**.
 
 4. Fai clic su **Save**.
 
@@ -112,8 +112,8 @@ Puoi richiedere l'esito positivo indipendentemente se hai contrassegnato i test 
 
 {{site.data.keyword.DRA_short}} supporta inoltre i test Selenium e Jasmine. Questi test devono essere inclusi negli strumenti supportati ufficiali, come xUnit e Mocha. Per ulteriori informazioni sull'utilizzo contemporaneo di {{site.data.keyword.deliverypipeline}}, {{site.data.keyword.DRA_short}} e Selenium, consulta [Running Selenium tests from the command line on a delivery pipeline](https://developer.ibm.com/devops-services/2016/07/21/running-selenium-tests-command-line-delivery-pipeline/).
 
-Per gli elementi con scenari di test, puoi specificare gli scenari di test critici, che sono test che devono essere superati indipendentemente dalla percentuale accettabile. Il nome degli scenari di test critici devono corrispondere all'attributo `full title` dello scenario di test.     
-* Per i test Karma/Mocha, le stringhe della descrizione `describe()` e `it()` sono collegate tra loro con gli spazi. 
+Per gli elementi con scenari di test, puoi specificare gli scenari di test critici, che sono test che devono essere superati indipendentemente dalla percentuale accettabile. Il nome degli scenari di test critici devono corrispondere all'attributo `full title` dello scenario di test.    
+* Per i test Karma/Mocha, le stringhe della descrizione `describe()` e `it()` sono collegate tra loro con gli spazi.
 * Per i test xUnit, il nome del pacchetto e della funzione sono collegati tra loro con gli spazi. Ciò è riportato nel seguente esempio:
   ```
   <testsuites package="test">
@@ -131,7 +131,7 @@ Per gli elementi con scenari di test, puoi specificare gli scenari di test criti
 
 Puoi utilizzare Sauce Labs con {{site.data.keyword.DRA_short}} aggiungendo l'integrazione dello strumento Sauce Labs alla tua pipeline. Quindi, incorpora le variabili di ambiente `SAUCE_USERNAME` e `SAUCE_ACCESS_KEY` nei test Selenium come credenziali.
 
-Puoi visualizzare i titoli completi di tutti i test nei log dopo un'esecuzione.   
+Puoi visualizzare i titoli completi di tutti i test nei log dopo un'esecuzione.  
 
 **Note:**
 * {{site.data.keyword.DRA_short}} non supporta i test critici che contengono un trattino nel titolo completo.    

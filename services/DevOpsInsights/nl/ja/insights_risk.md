@@ -12,7 +12,7 @@ lastupdated: "2017-03-31"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Deployment Risk (ベータ)
+# Deployment Risk
 {: #gettingstarted}
 
 {{site.data.keyword.DRA_short}} は、デプロイメント、特にリスクについての豊富な情報を提供します。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-07"
+lastupdated: "2017-05-11"
 
 ---
 
@@ -39,18 +39,16 @@ Jenkins 프로젝트를 실행하는 서버에 액세스할 수 있어야 합니
 ## 플러그인 설치
 {: #jenkins_install}
 
-먼저 {{site.data.keyword.DRA_short}}에서 플러그인을 다운로드하십시오.  
+우선 Jenkins 서버에 플러그인을 설치하십시오. 서버 인터페이스를 열고 다음을 수행하십시오. 
 
-1. 도구 체인의 개요 페이지에서 **DevOps Insights**를 클릭하십시오.
-2. **설정**을 클릭한 다음 **Jenkins 플러그인 설정**을 클릭하십시오.
-3. 페이지의 지시사항을 따라 플러그인을 다운로드하십시오.
+1. **Jenkins 관리**를 클릭하십시오. 
+2. **플러그인 관리**를 클릭하십시오.  
+3. **사용 가능** 탭을 클릭하십시오. 
+4. `IBM Cloud DevOps`에 대해 필터링하십시오.  
+5. IBM Cloud DevOps를 선택하십시오. 
+6. **지금 다운로드 및 재시작 이후 설치**를 클릭하십시오.  
 
-그런 다음 Jenkins 서버에서 플러그인을 설치하십시오.
-
-1. **Jenkins 관리 &gt; 플러그인 관리**를 클릭하고 **고급** 탭을 클릭하십시오.
-2. **파일 선택**을 클릭하고 IBM Cloud DevOps 플러그인 설치 파일을 선택하십시오. 
-3. **업로드**를 클릭하십시오. 
-4. Jenkins를 다시 시작하고 플러그인이 설치되었는지 확인하십시오.
+서버가 다시 시작되면 플러그인을 사용할 수 있습니다.   
 
 ## Deployment Risk 대시보드에 맞게 Jenkins 작업 구성
 {: #jenkins_configure}
@@ -104,9 +102,3 @@ Deployment Risk 대시보드는 스테이징 배치 작업 후의 게이트 존�
 {: #jenkins_notifications}
 
 [Bluemix 문서](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins)의 지시사항을 따라 Slack 또는 PagerDuty와 같은 도구에 알림을 보내도록 Jenkins 작업을 구성할 수 있습니다.
-
-이 예에서는 작업 구성에 맞게 `ICD_WEBHOOK_URL`을 구성하는 방법을 보여줍니다.
-![ICD_WEBHOOK_URL 매개변수 설정](images/Set-Parameterized-Webhook.png "매개변수화된 WebHook 설정")
-
-이 예에서는 작업 알림의 사후 빌드 조치 구성 방법을 보여줍니다.
-![WebHook 알림의 사후 빌드 조치](images/PostBuild-WebHookNotification.png "사후 빌드 조치의 WebHook 알림 구성")

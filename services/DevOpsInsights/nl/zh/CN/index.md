@@ -44,13 +44,11 @@ lastupdated: "2017-04-07"
 
 1. 单击**添加工具**。
 
-2. 单击 **{{site.data.keyword.DRA_short}}** 。
+2. 单击 **{{site.data.keyword.DRA_short}}**。
 
-3. 要将 {{site.data.keyword.DRA_short}} 的所有功能添加到工具链，请选择**高级**，并确保选中**启用 Developer Insights** 复选框。要仅添加 Deployment Risk，请选择**缺省项**。 
+3. 单击**创建集成**。
 
-4. 单击**创建集成**。
-
-现在，{{site.data.keyword.DRA_short}} 在工具链的“概述”页面上可用。
+现在，{{site.data.keyword.DRA_short}} 在工具链的“概述”页面上可用。此时，将自动扫描存储库和问题跟踪系统，以获取相关数据。 
 
 ## 使用 DevOps Insights
 {: #using}
@@ -59,18 +57,8 @@ lastupdated: "2017-04-07"
 
 1. 在工具链的“概述”页面中，单击 **{{site.data.keyword.DRA_short}}**。
 
-2. 在左侧导航中，单击 **Team Dynamics** 或 **Developer Insights**，然后选择数据类别。
+2. 单击 **Team Dynamics** 或 **Developer Insights**，然后选择数据类别。 
 
 3. 通过查看该数据类别中的仪表板，探索项目数据。如果要了解有关图或可使用图中信息执行哪些操作的更多信息，请单击**信息**或**指导**。
 
 探索 Team Dynamics 和 Developer Insights 后，请[配置 Deployment Risk](/docs/services/DevOpsInsights/insights_risk.html) 以帮助您强制实施代码质量。Deployment Risk 与 {{site.data.keyword.contdelivery_short}} Pipeline和 Jenkins 兼容。   
-
-缺省情况下，{{site.data.keyword.DRA_short}} 不包含 Developer Insights 或 Team Dynamics。要在配置工具链后将这些功能添加到工具链，请执行以下操作：
-
-1. 转至工具链的“概述”页面。
-2. 在 {{site.data.keyword.DRA_short}} 卡上，单击**操作**菜单。
-3. 单击**配置**。
-4. 对于类型，选择**高级**并选中相应复选框。
-5. 单击**保存集成**。
-
-保存配置后，Developer Insights 和 Team Dynamics 会自动扫描存储库和问题跟踪系统。

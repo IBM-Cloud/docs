@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-07"
+lastupdated: "2017-05-11"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2017-04-07"
 
 # Intégration avec des projets Jenkins à structure libre
 
-Après avoir ajouté {{site.data.keyword.DRA_full}} à une chaîne d'outils ouverte et défini les politiques qu'il surveille, vous pouvez l'intégrer à votre projet Jenkins à structure libre. Les projets Jenkins à structure libre sont configurés et administrés à partir de l'interface Web Jenkins.  
+Après avoir ajouté {{site.data.keyword.DRA_full}} à une chaîne d'outils ouverte et défini les politiques qu'il surveille, vous pouvez l'intégrer à votre projet Jenkins à structure libre. Les projets Jenkins à structure libre sont configurés et administrés à partir de l'interface Web Jenkins. 
 
 Le plug-in IBM Cloud DevOps pour Jenkins intègre des projets Jenkins à des chaînes d'outils. Une *chaîne d'outils* est un ensemble d'intégrations d'outils prenant en charge des tâches de développement, de déploiement et d'opérations. La puissance collective d'une chaîne d'outils est supérieure à la somme de ses intégrations d'outils individuelles. Les chaînes d'outils ouvertes font partie du service {{site.data.keyword.contdelivery_full}}. Pour en savoir plus sur le service {{site.data.keyword.contdelivery_short}}, voir [la documentation associée](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/cd_about.html).
 
@@ -39,18 +39,16 @@ Avant de pouvoir intégrer {{site.data.keyword.DRA_short}} à un projet Jenkins,
 ## Installation du plug-in
 {: #jenkins_install}
 
-Téléchargez d'abord le plug-in à partir de {{site.data.keyword.DRA_short}}.  
+Installez d'abord le plug-in sur votre serveur Jenkins. Ouvrez l'interface du serveur, puis : 
 
-1. Sur la page de présentation de la chaîne d'outils, cliquez sur **DevOps Insights**.
-2. Cliquez sur **Settings**, puis sur **Jenkins Plugin Setup**.
-3. Suivez les instructions de la page pour télécharger le plug-in.
+1. Cliquez sur **Manage Jenkins**.
+2. Cliquez sur **Manage Plugins**. 
+3. Cliquez sur l'onglet **Available**.
+4. Activez le filtre en fonction d'`IBM Cloud DevOps`. 
+5. Sélectionnez IBM Cloud DevOps.
+6. Cliquez sur **Download now and install after restart**. 
 
-Ensuite, sur votre serveur Jenkins, installez le plug-in.
-
-1. Cliquez sur **Manage Jenkins &gt; Manage Plugins**, puis sélectionnez l'onglet **Advanced**.
-2. Cliquez sur **Choose File** et sélectionnez le fichier d'installation du plug-in IBM Cloud DevOps. 
-3. Cliquez sur **Upload**.
-4. Redémarrez Jenkins et vérifiez que le plug-in a été installé.
+Le plug-in est disponible après le redémarrage du serveur.   
 
 ## Configuration des travaux Jenkins pour les tableaux de bord Deployment Risk
 {: #jenkins_configure}
@@ -101,7 +99,3 @@ Le tableau de bord Deployment Risk repose sur la présence d'un jalon après un 
 {: #jenkins_notifications}
 
 Vous pouvez configurer vos travaux Jenkins pour qu'ils envoient les notifications à des outils tels que Slack ou PagerDuty en suivant les instructions de la [documentation Bluemix](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins).
-
-Cet exemple montre comment configurer `ICD_WEBHOOK_URL` pour les configurations de travail : ![Définition du paramètre ICD_WEBHOOK_URL](images/Set-Parameterized-Webhook.png "Définition d'un webhook paramétré")
-
-Cet exemple montre comment configurer des actions post-génération pour les notifications des travaux : ![Actions post-génération pour une notification webhook](images/PostBuild-WebHookNotification.png "Configuration d'une notification webhook dans des actions post-génération")

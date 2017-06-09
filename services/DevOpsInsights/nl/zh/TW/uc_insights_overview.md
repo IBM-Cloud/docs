@@ -18,7 +18,7 @@ Delivery Insights 是 {{site.data.keyword.DRA_short}} 的一部分，它會顯�
 {:shortdesc}
 
 如果您沒有工具鏈或 {{site.data.keyword.DRA_short}}，則必須先設定 {{site.data.keyword.DRA_short}}：
-1. 從 {{site.data.keyword.Bluemix}} 型錄中按一下 **{{site.data.keyword.DRA_short}}**，選取定價方案，然後按一下**建立**。
+1. 從 {{site.data.keyword.Bluemix}} 型錄中按一下 **{{site.data.keyword.DRA_short}}**、選取定價方案，然後按一下**建立**。
 1. 按一下**管理**標籤，然後在**開始使用 Delivery Insights for UrbanCode** 下，按一下**從這裡開始**。Delivery Insights 會在背景中建立組織的工具鏈。開放式工具鏈是工具整合的集合，在此情況下，IBM UrbanCode Deploy 和 {{site.data.keyword.DRA_short}} 是工具鏈的一部分。如需工具鏈的相關資訊，請參閱[使用工具鏈](../ContinuousDelivery/toolchains_working.html)。
 1. 在 **Delivery Insights 設定**頁面中，遵循步驟來設定 DevOps Connect，並連接您的 IBM UrbanCode Deploy 伺服器。
 <!--  1. Set up a system to run DevOps Connect. See [prerequisites](uc_insights_prereqs.html).
@@ -38,7 +38,7 @@ Delivery Insights 是 {{site.data.keyword.DRA_short}} 的一部分，它會顯�
 For questions or issues, see the [questions forum](https://developer.ibm.com/answers/?community=urbancode).
 --> 
 
-![UrbanCode Insights 示範資料中的兩個圖表](images/uc_insights_demo_data.gif)
+![根據 UrbanCode Insights 示範資料的兩個圖表](images/uc_insights_demo_data.gif)
 
 您可以在 Delivery Insights 上看到的部分資訊包括：
 
@@ -52,7 +52,7 @@ Delivery Insights 的拓蹼包括 IBM UrbanCode Deploy <!-- (and optionally IBM 
 
 下圖顯示這些系統的一般安裝。
 
-![UrbanCode Insights 的概觀拓蹼，包括客戶內部部署系統及 IBM Cloud Services](images/uc_insights_overview_topology_multi_ucd.png)
+![UrbanCode Insights（包括客戶內部部署系統及 IBM Cloud Services）的拓蹼概觀](images/uc_insights_overview_topology_multi_ucd.png)
 
 - **IBM UrbanCode Deploy** 的安裝會提供部署成功和失敗的相關資訊給度量值。IBM UrbanCode Deploy 需要修補程式，才能與 IBM Bluemix DevOps Connect 通訊。
 
@@ -65,4 +65,4 @@ Delivery Insights 的拓蹼包括 IBM UrbanCode Deploy <!-- (and optionally IBM 
 
   DevOps Connect 需要外掛程式，才能連接至拓蹼中的其他系統。
 
-- **Delivery Insights** 是 {{site.data.keyword.DRA_short}} 的一部分，它會提供 IBM UrbanCode Deploy 上部署活動的相關度量值，包括根據環境群組所提供的部署次數和失敗率。授權是由 {{site.data.keyword.Bluemix}} 帳戶控制。
+- **Delivery Insights** 是 {{site.data.keyword.DRA_short}} 的一部分，它會提供 IBM UrbanCode Deploy 上部署活動的相關度量值，包括部署時間和根據環境群組的失敗率。授權是由 {{site.data.keyword.Bluemix}} 帳戶控制。

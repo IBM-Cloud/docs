@@ -50,7 +50,7 @@ lastupdated: "2017-02-24"
 
 1. 键入描述并选择格式。
 
-2. 指定必须通过声明成功的测试用例百分比。
+2. 指定必须通过并声明成功的测试用例百分比。
 
 3. 定义重要的任何测试用例。
 
@@ -64,7 +64,7 @@ lastupdated: "2017-02-24"
 
 1. 键入描述并选择格式。
 
-2. 指定必须通过声明成功的测试用例百分比。
+2. 指定必须通过并声明成功的测试用例百分比。
 
 3. 定义重要的任何测试用例。
 
@@ -110,7 +110,7 @@ lastupdated: "2017-02-24"
 * 单元测试（Mocha、xUnit、Karma/Mocha）
 * 代码覆盖（作为 JSON 摘要报告格式的 Istanbul、Blanket.js）
 
-{{site.data.keyword.DRA_short}} 还支持 Selenium 和 Jasmine 测试。这些测试必须包含在正式支持的工具中，如 xUnit 和 Mocha。要了解有关同时使用 {{site.data.keyword.deliverypipeline}}、{{site.data.keyword.DRA_short}} 和 Selenium 的更多信息，请参阅[在 Delivery Pipeline 上从命令行运行 Selenium 测试](https://developer.ibm.com/devops-services/2016/07/21/running-selenium-tests-command-line-delivery-pipeline/)。
+{{site.data.keyword.DRA_short}} 还支持 Selenium 和 Jasmine 测试。这些测试必须包含在官方支持的工具中，如 xUnit 和 Mocha。要了解有关同时使用 {{site.data.keyword.deliverypipeline}}、{{site.data.keyword.DRA_short}} 和 Selenium 的更多信息，请参阅[在 Delivery Pipeline 上从命令行运行 Selenium 测试](https://developer.ibm.com/devops-services/2016/07/21/running-selenium-tests-command-line-delivery-pipeline/)。
 
 对于具有测试用例的项，您可以指定重要测试用例，即不管可接受的百分比而必须通过的测试。重要测试用例名称必须匹配测试用例的 `full title` 属性。    
 * 对于 Karma/Mocha 测试，`describe()` 和 `it()` 描述字符串通过空格链接在一起。
@@ -133,7 +133,7 @@ lastupdated: "2017-02-24"
 
 您可以在运行之后，在日志中查看所有测试的完整标题。  
 
-**注意：**
+**注：**
 * {{site.data.keyword.DRA_short}} 不支持在完整标题中包含连字符的重要测试。    
 * 如果您更改组织名称，那么您必须重新创建与之前名称相关联的策略。您将丢失对名称更改之前所生成的任何决策报告的访问权。
 
@@ -148,4 +148,4 @@ lastupdated: "2017-02-24"
 
    2. 在包含检测点的作业中，单击检测点的名称。
 
-   3. 在日志视图中，找到“`在此处检查 {{site.data.keyword.DRA_short}} 报告`”消息并单击链接以打开报告。
+   3. 在日志视图中，找到“`在此处查看 {{site.data.keyword.DRA_short}} 报告`”消息并单击链接以打开报告。

@@ -18,7 +18,7 @@ lastupdated: "2017-02-24"
 原則可控制持續交付管線中的閘道。如果您的程式碼不符合或超出特定閘道制定的原則，則會中止部署，以防止釋出有風險的變更。
 {:shortdesc}
 
-您可以在 {{site.data.keyword.DRA_short}} 中定義原則。原則會建立在包含 {{site.data.keyword.DRA_short}} 的 {{site.data.keyword.Bluemix_notm}} 組織 (org) 中。相同組織中的任何應用程式都可以使用此原則。 
+您可以在 {{site.data.keyword.DRA_short}} 中定義原則。原則會建立在包含 {{site.data.keyword.DRA_short}} 的 {{site.data.keyword.Bluemix_notm}} 組織中。相同組織中的任何應用程式都可以使用此原則。 
 
 若要定義原則，請執行下列動作：
 
@@ -50,9 +50,9 @@ lastupdated: "2017-02-24"
 
 1. 鍵入說明，並選取格式。
 
-2. 指定必須通過才能宣告成功的測試案例的百分比。
+2. 指定必須通過才能宣告成功的測試案例百分比。
 
-3. 定義任何重要測試案例。
+3. 定義任何重要的測試案例。
 
 4. 若要監視測試案例回歸，請選取**監視測試案例回歸**勾選框。
 
@@ -64,9 +64,9 @@ lastupdated: "2017-02-24"
 
 1. 鍵入說明，並選取格式。
 
-2. 指定必須通過才能宣告成功的測試案例的百分比。
+2. 指定必須通過才能宣告成功的測試案例百分比。
 
-3. 定義任何重要測試案例。
+3. 定義任何重要的測試案例。
 
 4. 若要監視測試案例回歸，請選取**監視測試案例回歸**勾選框。
 
@@ -78,9 +78,9 @@ lastupdated: "2017-02-24"
 
 1. 鍵入說明，並選取格式。
 
-2. 指定需要宣告成功的程式碼涵蓋面的百分比。
+2. 指定需要宣告成功的程式碼涵蓋面百分比。
 
-3. 若要監視程式碼涵蓋面回歸，請選取**監視測試案例回歸**勾選框。
+3. 若要監視程式碼涵蓋面回歸，請選取**監視程式碼涵蓋面回歸**勾選框。
 
 4. 按一下**儲存**。
 
@@ -110,9 +110,9 @@ lastupdated: "2017-02-24"
 * 單元測試（Mocha、xUnit、Karma/Mocha）
 * 程式碼涵蓋面（Istanbul 作為 JSON 摘要報告格式、Blanket.js）
 
-{{site.data.keyword.DRA_short}} 也支援 Selenium 及 Jasmine 測試。這些測試必須內含在正式支援的工具中，例如 JUnit 和 Mocha。若要進一步瞭解如何一起使用 {{site.data.keyword.deliverypipeline}}、{{site.data.keyword.DRA_short}} 及 Selenium，請參閱[從指令行在交付管線上執行 Selenium 測試](https://developer.ibm.com/devops-services/2016/07/21/running-selenium-tests-command-line-delivery-pipeline/)。
+{{site.data.keyword.DRA_short}} 也支援 Selenium 及 Jasmine 測試。這些測試必須內含在正式支援的工具中，例如 JUnit 和 Mocha。若要進一步瞭解如何一起使用 {{site.data.keyword.deliverypipeline}}、{{site.data.keyword.DRA_short}} 及 Selenium，請參閱 [Running Selenium tests from the command line on a delivery pipeline](https://developer.ibm.com/devops-services/2016/07/21/running-selenium-tests-command-line-delivery-pipeline/)。
 
-針對具有測試案例的項目，您可以指定重要測試案例，這些測試案例就是不論可接受百分比為何都必須通過的測試。重要測試案例名稱必須符合測試案例的 `full title` 屬性。    
+針對具有測試案例的項目，您可以指定重要測試案例，也就是不論可接受百分比為何都必須通過的測試。重要測試案例名稱必須符合測試案例的 `full title` 屬性。    
 * 若為 Karma/Mocha 測試，會使用空格將 `describe()` 與 `it()` 說明字串鏈結在一起。
 * 若為 xUnit 測試，會使用空格將套件名稱、類別名稱與函數名稱鏈結在一起。舉例說明如下：
   ```
@@ -140,11 +140,11 @@ lastupdated: "2017-02-24"
 ## 檢視決策報告    
 {: #DI_decision_reports}
 
-管線執行之後，{{site.data.keyword.DRA_short}} 會開始收集並分析其測試結果，以建立基準線。收集每個後續執行的資料，並將其與先前的結果進行比較。決策閘道使用此資料來判斷何時停止部署。 
+管線執行之後，{{site.data.keyword.DRA_short}} 會開始收集並分析其測試結果，以建立基準線。每個後續執行的資料，會加以收集並將與先前的結果進行比較。決策閘道使用此資料來判斷何時停止部署。 
 
 若要從管線檢視閘道的決策報告，請完成下列步驟：
 
-   1. 在包含要檢查之閘道的階段上，按一下 **View logs and history**。
+   1. 在包含要檢查之閘道的階段上，按一下**檢視日誌與歷程**。
 
    2. 從包含閘道的工作中，按一下閘道的名稱。
 

@@ -15,7 +15,7 @@ lastupdated: "2017-03-14"
 # Prerequisiti per Delivery Insights
 {: #prereqs}
 
-Per visualizzare le informazioni dai tuoi server IBM UrbanCode Deploy in {{site.data.keyword.DRA_short}}, devi ospitare un'istanza di DevOps Connect su un sistema che può collegarsi ai tuoi server IBM UrbanCode Deploy. Questo sistema può essere un computer fisico o una macchina virtuale.
+Per visualizzare le informazioni dai tuoi server IBM UrbanCode Deploy in {{site.data.keyword.DRA_short}}, devi ospitare un'istanza di DevOps Connect su un sistema che può collegarsi ai tuoi server IBM UrbanCode Deploy. Questo sistema può essere un computer fisico o una macchina virtuale. 
 {:shortdesc}
 
 Il sistema che ospita DevOps Connect deve avere i seguenti prerequisiti:

@@ -23,7 +23,7 @@ Si vous utilisez un pipeline {{site.data.keyword.contdelivery_short}}, vous pouv
 
 1. A l'étape qui contient le jalon à vérifier, cliquez sur **Afficher les journaux et l'historique**.
 
-2. Dans le travail qui contient le jalon, cliquez sur le nom du jalon. 
+2. Dans le travail qui contient le jalon, cliquez sur le nom du jalon.
 
 3. Dans la vue du journal, recherchez le message `Check {{site.data.keyword.DRA_short}} report here` et cliquez sur le lien pour ouvrir le rapport.
 
