@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-23"
+lastupdated: "2017-06-09"
 
 ---
 
@@ -107,14 +107,15 @@ Choose your API endpoint
 cf api <API-endpoint>
    ```
    {: pre}
+Deploy your app to one of the following Bluemix regions. For optimal latency, choose a region that's closest to your users. Replace the *API-endpoint* in the command with an API endpoint from the following list.
 
-Replace the *API-endpoint* in the command with an API endpoint from the following list.
+|Region          |API endpoint                             |
+|:---------------|:-------------------------------|
+| US South       |https://api.ng.bluemix.net     |
+| United Kingdom | https://api.eu-gb.bluemix.net  |
+| Sydney         | https://api.au-syd.bluemix.net |
+| Frankfurt     | https://api.eu-de.bluemix.net | 
 
-|URL                             |Region          |
-|:-------------------------------|:---------------|
-| https://api.ng.bluemix.net     | US South       |
-| https://api.eu-gb.bluemix.net  | United Kingdom |
-| https://api.au-syd.bluemix.net | Sydney         |
 
 Login to your {{site.data.keyword.Bluemix_notm}} account
 
