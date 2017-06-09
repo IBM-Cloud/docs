@@ -99,15 +99,14 @@ cf api <API-endpoint>
   ```
   {: pre}
 
-Replace the *API-endpoint* in the command with an API endpoint from the following list.
+Deploy your app to one of the following Bluemix regions. For optimal latency, choose a region that's closest to your users.
 
-|URL                             |Region          |
-|:-------------------------------|:---------------|
-| https://api.ng.bluemix.net     | US South       |
-| https://api.eu-de.bluemix.net  | Germany        |
-| https://api.eu-gb.bluemix.net  | United Kingdom |
-| https://api.au-syd.bluemix.net | Sydney         |
-| https://api.eu-de.bluemix.net | Frankfurt |
+|Region          |API endpoint                             |
+|:---------------|:-------------------------------|
+| US South       |https://api.ng.bluemix.net     |
+| United Kingdom | https://api.eu-gb.bluemix.net  |
+| Sydney         | https://api.au-syd.bluemix.net |
+| Frankfurt     | https://api.eu-de.bluemix.net | 
 
 **Be sure you are in the main directory, `get-started-aspnet-core`, for your application**  them push your application to {{site.data.keyword.Bluemix_notm}}
   ```
