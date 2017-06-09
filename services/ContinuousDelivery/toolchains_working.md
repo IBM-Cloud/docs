@@ -2,7 +2,9 @@
 
 copyright:
   years: 2015, 2017
+
 lastupdated: "2017-4-28"
+
 
 ---
 
@@ -74,3 +76,11 @@ After you configure the toolchain and its tool integrations, you can view a visu
 2. To access a tool integration that is in your toolchain, click the tool.
 
  **Tip**: If you have more than one GitHub, {{site.data.keyword.ghe_short}}, or Git repo, you might have multiple cards for the same tool integration because each repo is represented by its own card. If you have more than one pipeline, you might have multiple cards for the same tool integration because each pipeline is represented by its own card. For example, when you create a Microservices toolchain, each of the three microservices has its own GitHub, {{site.data.keyword.ghe_short}}, or Git repo and its own pipeline.
+
+## Take a tutorial: Using toolchains
+{: #toolchain_tutorials}
+
+Check out one of these tutorials on the [IBM&reg; Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}:
+  * [Create and use your first toolchain (GitHub) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Create a toolchain that uses Git Repos and Issue Tracking ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Add a toolchain to an app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_app_to_toolchain?task=1){:new_window}
