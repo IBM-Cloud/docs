@@ -71,3 +71,9 @@ To create an [empty pipeline ![External link icon](../../icons/launch-glyph.svg 
 1. Click **Create**. An empty pipeline is created and represented as a card on the toolchain's Overview page.
 
 From your {{site.data.keyword.deliverypipeline}}, change your configuration; check the status of builds, the deployed app, and recent deployments; see the most recent logs and deployment details; or delete your pipeline.
+
+##Take a tutorial: {{site.data.keyword.deliverypipeline}}
+{: #pipeline-tutorial}
+
+Check out this tutorial on the [IBM&reg; Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}:
+  * [Create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_first_pipeline?task=1){:new_window}
