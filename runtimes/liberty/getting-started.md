@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-06-05"
 
 ---
 
@@ -103,6 +103,7 @@ Deploy your app to one of the following Bluemix regions. For optimal latency, ch
 | US South       |https://api.ng.bluemix.net     |
 | United Kingdom | https://api.eu-gb.bluemix.net  |
 | Sydney         | https://api.au-syd.bluemix.net |
+| Frankfurt     | https://api.eu-de.bluemix.net | 
 
 1. Set the API endpoint by replacing  `<API-endpoint>`  with the endpoint for your region.
   ```

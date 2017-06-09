@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-23"
+lastupdated: "2017-06-05"
 
 ---
 
@@ -107,6 +107,7 @@ Replace the *API-endpoint* in the command with an API endpoint from the followin
 | https://api.eu-de.bluemix.net  | Germany        |
 | https://api.eu-gb.bluemix.net  | United Kingdom |
 | https://api.au-syd.bluemix.net | Sydney         |
+| https://api.eu-de.bluemix.net | Frankfurt |
 
 **Be sure you are in the main directory, `get-started-aspnet-core`, for your application**  them push your application to {{site.data.keyword.Bluemix_notm}}
   ```

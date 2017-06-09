@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-06-05"
 
 ---
 
@@ -116,6 +116,7 @@ Replace the *API-endpoint* in the command with an API endpoint from the followin
 | https://api.ng.bluemix.net     | US South       |
 | https://api.eu-gb.bluemix.net  | United Kingdom |
 | https://api.au-syd.bluemix.net | Sydney         |
+| https://api.eu-de.bluemix.net | Frankfurt     |
 
 Login to your {{site.data.keyword.Bluemix_notm}} account
 

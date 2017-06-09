@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-22"
+lastupdated: "2017-06-05"
 
 ---
 
@@ -100,11 +100,12 @@ cf api <API-endpoint>
    ```
    {: pre}
 
-|API endpoint                            |Region          |
-|:-------------------------------|:---------------|
-| https://api.ng.bluemix.net     | US South       |
-| https://api.eu-gb.bluemix.net  | United Kingdom |
-| https://api.au-syd.bluemix.net | Sydney         |
+   |Region          |API endpoint                             |
+   |:---------------|:-------------------------------|
+   | US South       |https://api.ng.bluemix.net     |
+   | United Kingdom | https://api.eu-gb.bluemix.net  |
+   | Sydney         | https://api.au-syd.bluemix.net |
+   | Frankfurt     | https://api.eu-de.bluemix.net | 
 
 Log in to your {{site.data.keyword.Bluemix_notm}} account.
 

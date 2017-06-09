@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-04"
+lastupdated: "2017-06-05"
 
 ---
 
@@ -93,11 +93,12 @@ cf api <API-endpoint>
 
 Replace the *API-endpoint* in the command with an API endpoint from the following list.
 
-|URL                             |Region          |
-|:-------------------------------|:---------------|
-| https://api.ng.bluemix.net     | US South       |
-| https://api.eu-gb.bluemix.net  | United Kingdom |
-| https://api.au-syd.bluemix.net | Sydney         |
+|Region          |API endpoint                             |
+|:---------------|:-------------------------------|
+| US South       |https://api.ng.bluemix.net     |
+| United Kingdom | https://api.eu-gb.bluemix.net  |
+| Sydney         | https://api.au-syd.bluemix.net |
+| Frankfurt     | https://api.eu-de.bluemix.net | 
 
 Login to your {{site.data.keyword.Bluemix_notm}} account
 
