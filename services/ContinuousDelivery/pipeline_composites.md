@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-4-5"
+lastupdated: "2017-5-5"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -187,3 +187,9 @@ When you are a member of an org that is connected to IBM UrbanCode Deploy, you c
     3. Click **Save**.
 
     4. Repeat these steps for each logical environment that you use.
+
+##Take a tutorial: Composite pipelines
+{: #composite_pipeline-tutorial}
+
+Check out this tutorial on the [IBM&reg; Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}:
+  * [Create and use a microservices toolchain with DevOps Insights (v2) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}
