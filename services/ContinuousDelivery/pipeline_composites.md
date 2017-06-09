@@ -188,6 +188,7 @@ When you are a member of an org that is connected to IBM UrbanCode Deploy, you c
 
     4. Repeat these steps for each logical environment that you use.
 
+
 ##Take a tutorial: Composite pipelines
 {: #composite_pipeline-tutorial}
 
