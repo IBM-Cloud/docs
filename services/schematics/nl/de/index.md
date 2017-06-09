@@ -30,8 +30,7 @@ Wenn Sie mit {{site.data.keyword.bpshort}} arbeiten, schreiben Sie Konfiguration
 ## Konfiguration erstellen
 {: #configuration}
 
-Wenn Sie eine Konfiguration erstellen, codifizieren Sie die Cloudressourcen, aus denen sich Ihre Umgebung zusammensetzt.
-{:shortdesc}
+Wenn Sie eine Konfiguration erstellen, codifizieren Sie die Cloudressourcen, aus denen sich Ihre Umgebung zusammensetzt.{:shortdesc}
 
 
 Wenn Sie eine Beispielkonfiguration mit {{site.data.keyword.bpshort}} ausprobieren möchten, führen Sie die folgenden Schritte aus. In dem Beispiel können Sie einen SSH-Schlüssel bereitstellen, der in {{site.data.keyword.BluSoftlayer}} verwendet werden soll. 
@@ -96,8 +95,7 @@ Sie können jetzt eine Umgebung aus Ihrer Konfiguration erstellen.
 ## Umgebung erstellen
 {: #environment}
 
-Wenn Sie eine Umgebung erstellen, verweisen Sie den Service auf Ihre Konfiguration, sodass der Service Ihre neuesten Codeänderungen extrahieren kann.
-{:shortdesc}
+Wenn Sie eine Umgebung erstellen, verweisen Sie den Service auf Ihre Konfiguration, sodass der Service Ihre neuesten Codeänderungen extrahieren kann.{:shortdesc}
 
 Führen Sie anhand der Beispielkonfiguration die folgenden Schritte durch, um eine Umgebung zu erstellen.
 

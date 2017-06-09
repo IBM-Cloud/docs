@@ -14,14 +14,12 @@ lastupdated: "2017-05-16"
 # Bereitstellung von Ressourcen in Ihren Umgebungen
 {: #deploying}
 
-Mit {{site.data.keyword.bplong}} können Sie Ihre letzten Codeänderungen direkt über Ihren Quellcode bereitstellen. Wenn Sie Ihre Umgebung bereitstellen, stellen Sie die Ressourcen bereit, die von Ihrer Konfigurationsdateien definiert sind. Anschließend können Sie die Bereitstellung, die Orchestrierungen und den Lebenszyklus der Umgebung von {{site.data.keyword.bpshort}} aus verwalten.
-{:shortdesc}
+Mit {{site.data.keyword.bplong}} können Sie Ihre letzten Codeänderungen direkt über Ihren Quellcode bereitstellen. Wenn Sie Ihre Umgebung bereitstellen, stellen Sie die Ressourcen bereit, die von Ihrer Konfigurationsdateien definiert sind. Anschließend können Sie die Bereitstellung, die Orchestrierungen und den Lebenszyklus der Umgebung von {{site.data.keyword.bpshort}} aus verwalten.{:shortdesc}
 
 ## Bereitstellung Ihrer Umgebungen über die GUI
 {: #gui}
 
-Wenn Sie für die Bereitstellung Ihrer Umgebung eine grafische Ansicht bevorzugen, können Sie das {{site.data.keyword.bpshort}}-Dashboard verwenden.
-{:shortdesc}
+Wenn Sie für die Bereitstellung Ihrer Umgebung eine grafische Ansicht bevorzugen, können Sie das {{site.data.keyword.bpshort}}-Dashboard verwenden.{:shortdesc}
 
 
 ### Voraussetzung
@@ -45,8 +43,7 @@ Nach dem Speichern Ihrer Konfiguration:
 ## Bereitstellung Ihrer Umgebungen mit der CLI
 {: #cli}
 
-Sie können das {{site.data.keyword.bpshort}}-Plug-in für die {{site.data.keyword.Bluemix_notm}}-CLI verwenden, um Aktualisierungen für Ihre Umgebung bereitzustellen.
-{:shortdesc}
+Sie können das {{site.data.keyword.bpshort}}-Plug-in für die {{site.data.keyword.Bluemix_notm}}-CLI verwenden, um Aktualisierungen für Ihre Umgebung bereitzustellen.{:shortdesc}
 
 ### Voraussetzungen
 {: #cli-prereq}
@@ -189,8 +186,7 @@ Nachdem Sie sich an der {{site.data.keyword.Bluemix_notm}}-CLI angemeldet haben,
 ## Bereitstellung in Ihren Umgebungen mit der API
 {: #api}
 
-Sie können Ihre Umgebung mit der {{site.data.keyword.bpshort}}-API programmgesteuert bereitstellen.
-{:shortdesc}
+Sie können Ihre Umgebung mit der {{site.data.keyword.bpshort}}-API programmgesteuert bereitstellen.{:shortdesc}
 
 Aufrufe der <a href="https://us-south.schematics.bluemix.net/swagger-api/">{{site.data.keyword.bpshort}}-API <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a> verweisen auf den folgenden Basis-Endpunkt:
 
