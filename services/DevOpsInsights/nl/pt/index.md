@@ -45,12 +45,10 @@ Para incluir o {{site.data.keyword.DRA_short}} em uma cadeia de ferramentas:
 
 2. Clique em **{{site.data.keyword.DRA_short}}**.
 
-3. Para incluir todos os recursos do {{site.data.keyword.DRA_short}} na cadeia de ferramentas, selecione **Avançado** e certifique-se de que a caixa de seleção **Ativar Developer Insights** esteja marcada. Para incluir apenas o Deployment Risk, selecione **Padrão**. 
-
-4. Clique em
+3. Clique em
 **Criar integração**.
 
-O {{site.data.keyword.DRA_short}} está agora disponível na página Visão geral de sua cadeia de ferramentas.
+O {{site.data.keyword.DRA_short}} está agora disponível na página Visão geral de sua cadeia de ferramentas. Seu repositório e o sistema de rastreamento de problemas são varridos automaticamente para dados. 
 
 ## Usando o DevOps Insights
 {: #using}
@@ -59,18 +57,8 @@ Se a sua cadeia de ferramentas incluir GitHub, GitLab ou JIRA, o {{site.data.key
 
 1. Na página Visão geral da cadeia de ferramentas, clique em **{{site.data.keyword.DRA_short}}**.
 
-2. Na navegação esquerda, clique em **Team Dynamics** ou **Developer Insights** e, em seguida, escolha uma categoria de dados.
+2. Clique em **Team Dynamics** ou **Developer Insights** e, em seguida, escolha uma categoria de dados. 
 
 3. Explore os dados de seu projeto visualizando os painéis na categoria de dados. Se desejar saber mais sobre um gráfico ou o que você poderia fazer com suas informações, clique em **Informações** ou **Orientação**.
 
 Depois de explorar o Team Dynamics e o Developer Insights, [configure o Deployment Risk](/docs/services/DevOpsInsights/insights_risk.html) para ajudá-lo a utilizar a qualidade de código. O Deployment Risk é compatível com o pipeline do {{site.data.keyword.contdelivery_short}} e o Jenkins.   
-
-Por padrão, o {{site.data.keyword.DRA_short}} não inclui o Developer Insights ou o Team Dynamics. Para incluir esses recursos em sua cadeia de ferramentas depois de configurá-la:
-
-1. Acesse a página Visão geral da cadeia de ferramentas.
-2. No cartão do {{site.data.keyword.DRA_short}}, clique no menu **Ações**.
-3. Clique em **Configurar**.
-4. Para o tipo, selecione **Avançado** e marque a caixa de seleção.
-5. Clique em **Salvar integração**.
-
-Depois de salvar a configuração, o Developer Insights e o Team Dynamics varrem automaticamente seu repositório e sistemas de rastreamento de problemas.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-07"
+lastupdated: "2017-05-11"
 
 ---
 
@@ -40,21 +40,19 @@ Antes de ser possível integrar o {{site.data.keyword.DRA_short}} a um projeto J
 
 2. Depois de criar a cadeia de ferramentas, inclua o {{site.data.keyword.DRA_short}} nela. Para obter instruções, veja a [documentação do {{site.data.keyword.DRA_short}}](https://console.ng.bluemix.net/docs/services/DevOpsInsights/index.html). 
 
-## Instalando o Plug-in
+## Instalando o plug-in
 {: #jenkins_install}
 
-Primeiro, faça download do plug-in do {{site.data.keyword.DRA_short}}.  
+Primeiro, instale o plug-in em seu servidor Jenkins. Abra a interface do servidor e:
 
-1. Na página Visão geral da cadeia de ferramentas, clique em **DevOps Insights**.
-2. Clique em **Configurações** e, em seguida, em **Configuração do plug-in do Jenkins**.
-3. Siga as instruções na página para fazer download do plug-in.
+1. Clique em **Gerenciar Jenkins**.
+2. Clique em **Gerenciar plug-ins**. 
+3. Clique na guia **Disponível**
+4. Filtre para o `IBM Cloud DevOps`. 
+5. Selecione IBM Cloud DevOps.
+6. Clique em **Fazer download agora e instalar após a reinicialização**. 
 
-Em seguida, no servidor Jenkins, instale o plug-in.
-
-1. Clique em **Gerenciar Jenkins &gt; Gerenciar plug-ins** e clique na guia **Avançado**.
-2. Clique em **Escolher arquivo** e selecione o arquivo de instalação do plug-in IBM Cloud DevOps. 
-3. Clique em **Carregar**.
-4. Reinicie o Jenkins e verifique se o plug-in foi instalado.
+O plug-in estará disponível após a reinicialização do servidor.  
 
 ## Configurando tarefas do Jenkins para o painel Deployment Risk
 {: #jenkins_configure}
@@ -108,9 +106,3 @@ O painel Deployment Risk depende da presença de uma porta após uma tarefa de i
 {: #jenkins_notifications}
 
 É possível configurar as tarefas do Jenkins para enviar notificações para ferramentas, como Slack ou PagerDuty, seguindo as instruções nos [Bluemix Docs](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins).
-
-Este exemplo mostra como configurar o `ICD_WEBHOOK_URL` para configurações de tarefa:
-![Configurar o parâmetro ICD_WEBHOOK_URL](images/Set-Parameterized-Webhook.png "Configurar WebHook parametrizado")
-
-Este exemplo mostra como configurar ações pós-construção para notificações de tarefa:
-![Ações pós-construção para notificação de WebHook](images/PostBuild-WebHookNotification.png "Configurar notificação de WebHook em ações pós-construção")

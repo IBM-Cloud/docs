@@ -15,7 +15,7 @@ lastupdated: "2017-02-24"
 # Definindo Políticas
 {: #policies}
 
-As políticas controlam as portas em seu pipeline de entrega contínua. Se o seu código não atender nem exceder uma política executada em uma porta específica, a implementação será interrompida para evitar que as mudanças de risco sejam liberadas.
+As políticas controlam as portas em seu pipeline de entrega contínua. Se o seu código não atender nem exceder uma política executada em uma porta específica, a implementação será interrompida para evitar que as mudanças de risco sejam liberadas. 
 {:shortdesc}
 
 As políticas são definidas no {{site.data.keyword.DRA_short}}. As políticas são criadas na organização (org.) do {{site.data.keyword.Bluemix_notm}} que contém o {{site.data.keyword.DRA_short}}. Qualquer aplicativo que estiver na mesma organização poderá usar a política. 

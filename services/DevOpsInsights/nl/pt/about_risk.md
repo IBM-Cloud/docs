@@ -14,7 +14,7 @@ lastupdated: "2017-04-07"
 
 # Sobre o Deployment Risk
 
-O {{site.data.keyword.DRA_short}} fornece uma riqueza de informações sobre suas implementações, especificamente de risco. É possível usá-lo para automatizar a proteção de qualidade em seu pipeline de entrega usando políticas e portas.
+O {{site.data.keyword.DRA_short}} fornece uma riqueza de informações sobre suas implementações, especificamente de risco. É possível usá-lo para automatizar a proteção de qualidade em seu pipeline de entrega usando políticas e portas. 
 {:shortdesc}
 
 Depois de abrir o {{site.data.keyword.DRA_short}} por meio de sua cadeia de ferramentas, clique em **Deployment Risk**. Daí, é possível obter uma visão geral dos aplicativos nos ambientes de preparação e produção e realizar drill down para entender os relatórios de cobertura de código, de desempenho de teste e de segurança. Os painéis são preenchidos automaticamente com as informações mais recentes dos testes do {{site.data.keyword.DRA_short}} dos pipelines.

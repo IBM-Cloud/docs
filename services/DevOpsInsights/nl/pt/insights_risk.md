@@ -12,10 +12,10 @@ lastupdated: "2017-03-31"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Deployment Risk (Beta)
+# Perigo De disposição
 {: #gettingstarted}
 
-O {{site.data.keyword.DRA_short}} fornece uma riqueza de informações sobre suas implementações, especificamente de risco. É possível usá-lo para automatizar a proteção de qualidade em seu pipeline de entrega usando políticas e portas.
+O {{site.data.keyword.DRA_short}} fornece uma riqueza de informações sobre suas implementações, especificamente de risco. É possível usá-lo para automatizar a proteção de qualidade em seu pipeline de entrega usando políticas e portas. 
 {:shortdesc}
 
 Depois de abrir o {{site.data.keyword.DRA_short}} por meio de sua cadeia de ferramentas, clique em **Deployment Risk**. Daí, é possível obter uma visão geral dos aplicativos nos ambientes de preparação e produção e realizar drill down para entender os relatórios de cobertura de código, de desempenho de teste e de segurança. Os painéis são preenchidos automaticamente com as informações mais recentes dos testes do {{site.data.keyword.DRA_short}} dos pipelines.
@@ -264,9 +264,7 @@ poder coletivo de uma cadeia de ferramentas é maior que a soma de suas integra�
 Depois de instalar o plug-in IBM Cloud DevOps, será possível publicar os resultados de teste no {{site.data.keyword.DRA_short}}, incluir portas de qualidade automatizadas e controlar o risco de implementação. Também é possível enviar notificações de tarefa para outras ferramentas em sua cadeia de ferramentas, como Slack e PagerDuty. Para ajudá-lo a controlar as implementações, a cadeia de ferramentas poderá incluir mensagens de implementação nas confirmações do Git e seus problemas Git ou JIRA relacionados. Também será possível visualizar suas implementações na página Conexões da cadeia de ferramentas. 
 
 O plug-in fornece ações pós-construção e CLIs para suportar a integração. O {{site.data.keyword.DRA_short}} agrega e analisa os resultados de testes de unidade, testes funcionais, ferramentas de cobertura de código, varreduras de código de segurança estática e varreduras de código de segurança dinâmica para determinar se seu código atende às políticas predefinidas nas portas em seu processo de implementação. Se o seu código não atender nem exceder uma
-política, a implementação será interrompida, impedindo que as mudanças de risco sejam liberadas. É possível usar o {{site.data.keyword.DRA_short}} como uma
-rede de segurança para o seu ambiente de entrega contínua, uma forma de implementar e melhorar normas de qualidade ao longo do tempo e uma ferramenta de visualização
-de dados para ajudá-lo a entender o funcionamento do seu projeto.
+política, a implementação será interrompida, impedindo que as mudanças de risco sejam liberadas. É possível usar o {{site.data.keyword.DRA_short}} como uma rede de segurança para o seu ambiente de entrega contínua, uma forma de implementar e melhorar padrões de qualidade ao longo do tempo e uma ferramenta de visualização de dados para ajudá-lo a entender o funcionamento do seu projeto.
 
 ### Pré-Requisitos
 {: #jenkins_prerequisites}
@@ -282,7 +280,7 @@ Antes de ser possível integrar o {{site.data.keyword.DRA_short}} a um projeto J
 
 2. Depois de criar a cadeia de ferramentas, inclua o {{site.data.keyword.DRA_short}} nela. Para obter instruções, veja a [documentação do {{site.data.keyword.DRA_short}}](https://console.ng.bluemix.net/docs/services/DevOpsInsights/index.html). 
 
-### Instalando o Plug-in
+### Instalando o plug-in
 {: #jenkins_install}
 
 Primeiro, faça download do plug-in do {{site.data.keyword.DRA_short}}.  

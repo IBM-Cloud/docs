@@ -24,7 +24,7 @@ As políticas são definidas no {{site.data.keyword.DRA_short}}. As políticas s
 
 Para criar uma política:
 
-1. Na navegação à esquerda, clique em **Configurações**.
+1. No menu de navegação {{site.data.keyword.DRA_short}}, clique em **Configurações**.
 
 2. Clique em **Políticas**.
 
