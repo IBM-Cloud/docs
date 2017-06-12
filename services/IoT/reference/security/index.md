@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-08"
+lastupdated: "2017-06-12"
 
 ---
 
@@ -67,7 +67,7 @@ Device credentials and API keys can be individually revoked if they are compromi
 ## How do we ensure your devices connect securely to the {{site.data.keyword.iot_short_notm}}?
 {: #secure-device-connection}
 
-Devices connect by using a clientID and the authentication token that is generated when the devices are added to your platform or both. MQTT is used to allow simple interoperability across many platforms and languages. The {{site.data.keyword.iot_short_notm}} supports connectivity over TLS v1.2.
+Devices connect by using a clientID and the authentication token that is generated when the devices are added to your platform. MQTT is used to allow simple interoperability across many platforms and languages. The {{site.data.keyword.iot_short_notm}} supports connectivity over TLS v1.2.
 
 ![image](connectivity_platform.svg)
 
