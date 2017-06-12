@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-12"
+lastupdated: "2017-06-12"
 
 ---
 
@@ -23,7 +23,7 @@ You can enhance security to enable creating, enforcing, and reporting on device 
 When certificates are enabled, during communication between devices and the server, any devices that do not have valid certificates  configured in the security settings are denied access, even if they use valid user IDs and passwords
 
 To configure certificates and server access for devices, the system operator registers the associated certificate authority (CA) certiﬁcates and optionally registers message server certificates into the Watson IoT Platform platform.
-To configure client certificates and server access for devices, the system operator imports the associated certificate authority (CA) certiﬁcates and messaging server certificates into {{site.data.keyword.iot_short_notm}}. The security analyst then conﬁgures the connection security policies so that the default connections between devices and the platform. The analyst can add different policies for different device types.
+To configure client certificates and server access for devices, the system operator imports the associated certificate authority (CA) certiﬁcates and messaging server certificates into {{site.data.keyword.iot_short_notm}}. The security analyst then configures the default security policies for connections between devices and the platform. The analyst can add different policies for different device types.
 
 For information about how to configure certificates, see [Configuring certificates](set_up_certificates.html).
 
