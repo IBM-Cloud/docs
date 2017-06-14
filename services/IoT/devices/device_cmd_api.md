@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-06-08"
+lastupdated: "2017-06-14"
 
 ---
 
@@ -83,10 +83,6 @@ Use one of the following URLs to submit a ``POST`` request from a device that is
 <pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
 
 **Note:** Port 443, the default SSL port, can also be specified for secure HTTP API calls.
-
-To receive a command from {{site.data.keyword.iot_short_notm}}, use the following API:
-
-<pre class="pre"><code class="hljs">/device/types/{deviceType}/devices/{deviceId}/commands/{command}/request</code></pre>
 
 You can optionally include the parameter *waitTimeSecs* in the body of the HTTP request to specify an integer that represents the maximum number of seconds to wait for a command:
 <pre class="pre"><code class="hljs">{"waitTimeSecs": 5} </code></pre>
