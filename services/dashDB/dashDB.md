@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2017
-lastupdated: "2017-05-16"
+lastupdated: "2017-06-16"
 
 ---
 
@@ -21,6 +21,8 @@ lastupdated: "2017-05-16"
 
 #Getting started with dashDB
 {: #dashDB}
+
+<b>Note:</b> On June 20, 2017, IBM is renaming <b>dashDB for Transactions</b> to <b>Db2 on Cloud</b>. Over the coming weeks, documents will be updated to reflect this name change.
 
 {{site.data.keyword.IBM}} {{site.data.keyword.dashdbshort}} managed service is an SQL database provisioned for you in the cloud. You can use {{site.data.keyword.dashdbshort_notm}} just as you would use any database software, but without the overhead and expense of hardware setup or software installation and maintenance. 
 {: shortdesc}
