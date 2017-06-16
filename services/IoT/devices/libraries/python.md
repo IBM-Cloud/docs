@@ -36,8 +36,8 @@ The options dictionary creates definitions that are used to interact with the {{
 |`orgId`|Your organization ID.|
 |`type`|The type of the device. The device type is a grouping for devices that perform a specific task, for example, "weatherballoon".|
 |`id`|A unique ID to identify a device. Typically, for a given device type, the device ID is a unique identifier of that device, for example, a serial number or MAC address.|
-|`auth-method`|The method of authentication. The only method that is supported is `apikey`.|
-|`auth-token`|An API key token, which is also required when you set the value of auth-method to `apikey`.|
+|`auth-method`|The method of authentication. The only method that is supported is `token`.|
+|`auth-token`|An API key token, which is also required when you set the value of auth-method to `token`.|
 |`clean-session`|A true or false value that is required only if you want to connect the application in durable subscription mode. By default, `clean-session` is set to true.|
 
 If no options dictionary is provided, the client connects to the {{site.data.keyword.iot_short_notm}} Quickstart service as an unregistered device.
