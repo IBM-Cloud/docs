@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-05-31"
 
 ---
 
@@ -10,7 +10,7 @@ lastupdated: "2017-03-15"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Writing Secure Java Web Applications
+# Write Secure Java Web Applications
 {: #secure_java_web_app}
 
 All web applications must be designed and coded with security in mind to avoid introducing severe security vulnerabilities.

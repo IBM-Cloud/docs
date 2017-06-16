@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -26,6 +26,13 @@ Sie können die {{site.data.keyword.Bluemix}}-Benutzerschnittstelle, -Plattform 
 {: #ee_start}
 
 Bevor Sie beginnen können, müssen Sie sich unter [https://console.ng.bluemix.net/ ![Symbol für externen Link](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window} für eine IBMid registrieren. Anschließend melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und starten Ihre kostenlose 30-tägige Testversion. {{site.data.keyword.Bluemix_notm}} stellt im Rahmen Ihrer kostenlosen Testversion ein Volumen von 2 GB Laufzeitspeicher und 10 Serviceinstanzen bereit.
+
+
+## Entwicklung und Bereitstellung der Apps mit Toolchains und dem {{site.data.keyword.contdelivery_short}}-Service
+{: #ee_cd}
+
+<a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">Fügen Sie eine Toolchain</a>, die den {{site.data.keyword.contdelivery_full}}-Service enthält, zu der App hinzu. <a href="docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">Verwenden Sie dann die Toolchain</a> zum Entwickeln und Implementieren der App. 
+
 
 ## Web-App mithilfe der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle erstellen
 {: #ee_appui}

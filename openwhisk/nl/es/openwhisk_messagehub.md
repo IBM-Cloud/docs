@@ -242,7 +242,7 @@ Si desea utilizar una acción de OpenWhisk para generar un mensaje en Message Hu
 |value|Serie|El valor del mensaje que desea generar|
 |key|Serie (opcional)|La clave del mensaje que desea generar|
 
-Aunque los tres primeros parámetros se pueden enlazan automáticamente mediante `wsk package refresh`, a continuación se muestra un ejemplo de cómo invocar la acción con todos los parámetros necesarios:
+Aunque los tres primeros parámetros se pueden enlazar automáticamente mediante `wsk package refresh`, a continuación se muestra un ejemplo de cómo invocar la acción con todos los parámetros necesarios:
 
 ```
 wsk action invoke /messaging/messageHubProduce -p kafka_brokers_sasl "[\"kafka01-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka02-prod01.messagehub.services.us-south.bluemix.net:9093\", \"kafka03-prod01.messagehub.services.us-south.bluemix.net:9093\"]" -p topic mytopic -p user <your Message Hub user> -p password <your Message Hub password> -p value "Este es el contenido de mi mensaje"

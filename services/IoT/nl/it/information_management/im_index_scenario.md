@@ -294,7 +294,7 @@ Il seguente esempio mostra una risposta al metodo POST:
 ```
 L'identificativo del tipo di evento *5846d2846522050001db0e10* restituito nella risposta al metodo POST viene utilizzato per aggiungere un tipo di evento all'interfaccia fisica.
 
-## Passo 3: crea un'interfaccia fisica
+## Passo 4: crea un'interfaccia fisica
 {: #step7}
 
 Per creare un'interfaccia fisica, utilizza la seguente API:

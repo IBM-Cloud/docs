@@ -13,7 +13,7 @@ lastupdated: "2017-04-11"
 # Detalhes do app
 {: #manageapps}
 
-O painel Apps no console do {{site.data.keyword.Bluemix}} fornece informações de resumo para os aplicativos criados. As informações de resumo incluem o nome, ícone, URL, tempo de execução, status de execução e instâncias de serviço que estão ligadas ao app.
+O painel Apps no console do {{site.data.keyword.Bluemix}} fornece informações de resumo para os aplicativos criados. As informações de resumo incluem o nome, ícone, URL, tempo de execução, status de execução e instâncias de serviço que estão ligadas ao app. 
 {:shortdesc}
 
 No painel Apps, é possível visualizar o status de cada aplicativo.

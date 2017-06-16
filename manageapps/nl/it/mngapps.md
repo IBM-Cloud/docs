@@ -13,7 +13,7 @@ lastupdated: "2017-04-11"
 # Dettagli dell'applicazione
 {: #manageapps}
 
-Il dashboard Applicazioni nella console {{site.data.keyword.Bluemix}} fornisce delle informazioni di riepilogo per le applicazioni da te create. Le informazioni di riepilogo includono nome, icona, URL, runtime, stato di esecuzione e istanze del servizio associate all'applicazione.
+Il dashboard Applicazioni nella console {{site.data.keyword.Bluemix}} fornisce delle informazioni di riepilogo per le applicazioni da te create. Le informazioni di riepilogo includono nome, icona, URL, runtime, stato di esecuzione e istanze del servizio associate all'applicazione. 
 {:shortdesc}
 
 Dal dashboard Applicazioni, puoi visualizzare lo stato di ciascuna applicazione.

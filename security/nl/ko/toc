@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="bluemix-security" audience="platform" href="/docs/security/index.html"}
-Bluemix security
+Bluemix 보안
     
     {: .navgroup id="learn"}
     index.md

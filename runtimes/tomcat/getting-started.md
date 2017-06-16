@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-04"
+lastupdated: "2017-06-09"
 
 ---
 
@@ -89,7 +89,7 @@ Open the manifest.yml file, and change the `name` from `GetStartedTomcat` to you
   - name: GetStartedTomcat
     random-route: true
     memory: 256M
-    path: target/TomcatHelloWorldApp.war
+    path: target/GetStartedTomcat.war
     buildpack: java_buildpack
   ```
   {: codeblock}
@@ -111,12 +111,12 @@ cf api <API-endpoint>
 
 Replace the *API-endpoint* in the command with an API endpoint from the following list.
 
-|URL                             |Region          |
-|:-------------------------------|:---------------|
-| https://api.ng.bluemix.net     | US South       |
-| https://api.eu-gb.bluemix.net  | United Kingdom |
-| https://api.au-syd.bluemix.net | Sydney         |
-
+|Region          |API endpoint                             |
+|:---------------|:-------------------------------|
+| US South       |https://api.ng.bluemix.net     |
+| United Kingdom | https://api.eu-gb.bluemix.net  |
+| Sydney         | https://api.au-syd.bluemix.net |
+| Frankfurt     | https://api.eu-de.bluemix.net | 
 
 Login to your {{site.data.keyword.Bluemix_notm}} account:
 
@@ -158,7 +158,7 @@ Create a Tomcat server definition:
 Run your application locally on the Apache server:
   - Right click on the `GetStartedTomcat` sample and select `Run As` -> `Run on Server` option.
   - Find and select the localhost Tomcat server and press Finish.
-  - In a few seconds, your application should be running at http://localhost:8080/TomcatHelloWorldApp/
+  - In a few seconds, your application should be running at http://localhost:8080/GetStartedTomcat/
 
 Create a {{site.data.keyword.Bluemix_notm}} server definition:
   - In the `Servers` view, right-click -> `New` -> `Server`.

@@ -15,7 +15,8 @@ lastupdated: "2017-05-16"
 # Einführung in {{site.data.keyword.bpfull_notm}} (Beta)
 {: #gettingstarted}
 
-{{site.data.keyword.bplong}} ist ein Automatisierungstool, das Sie verwenden können, um die Cloudinfrastruktur als eine einzige Einheit definieren und bereitstellen und die Cloudressourcendefinitionen für eine beliebige Anzahl von Umgebungen wiederverwenden zu können.{:shortdesc}
+{{site.data.keyword.bplong}} ist ein Automatisierungstool, das Sie verwenden können, um die Cloudinfrastruktur als eine einzige Einheit definieren und bereitstellen und die Cloudressourcendefinitionen für eine beliebige Anzahl von Umgebungen wiederverwenden zu können.
+{:shortdesc}
 
 {{site.data.keyword.bpshort}} verwendet Terraform von HashiCorp, um die Infrastruktur zu codifizieren. Die Komponenten Ihrer Infrastruktur werden in einzelne Ressourcen heruntergebrochen, bei denen es sich um verschiedenste Ressourcen handeln kann, von physischer Hardware bis hin zu Benutzerkonten. Durch Abstrahieren übergeordneter und untergeordneter Ressourcen können Sie Ihre Infrastruktur wie Ihre eigene Software als Code behandeln. 
 

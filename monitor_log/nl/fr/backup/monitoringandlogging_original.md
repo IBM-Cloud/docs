@@ -69,7 +69,7 @@ déploiement et l'exécution, vous pouvez consulter les journaux pour détermine
 {: #log_format}
 
 Dans les applications Cloud Foundry de l'environnement {{site.data.keyword.Bluemix_notm}} public, les données de journal sont stockées par
-défaut pendant 7 jours. Vous pouvez rechercher jusqu'à 1 Go de données par jour. 
+défaut pendant 7 jours. Vous pouvez rechercher jusqu'à 1 Go de données par jour.
 
 Les journaux pour les applications {{site.data.keyword.Bluemix_notm}} sont affichés dans un format fixe similaire au modèle suivant :
 
@@ -101,28 +101,31 @@ Chaque entrée de journal contient quatre zones. Reportez-vous à la liste suiva
 
 <dl>
 <dt><strong>LGR</strong></dt>
-<dd>Loggregator : Le composant LGR fournit des informations sur le service de consignation. </dd>
+<dd>Loggregator : Le composant LGR fournit des informations sur le service de consignation.</dd>
 
 <dt><strong>RTR</strong></dt>
-<dd>Router : Le composant RTR fournit des informations sur les demandes HTTP adressées à une application. </dd>
+<dd>Router : Le composant RTR fournit des informations sur les demandes HTTP adressées à une application.</dd>
 
 <dt><strong>STG</strong></dt>
 <dd>Staging : Le composant STG fournit des informations sur la manière dont une application est constituée ou reconstituée.</dd>
 
 <dt><strong>APP</strong></dt>
-<dd>Application : Le composant APP fournit des informations sur une application. </dd>
+<dd>Application : Le composant APP fournit des informations sur une application.</dd>
 
 <dt><strong>API</strong></dt>
 <dd>Cloud Foundry API : Le composant API fournit des informations sur les actions en interne résultant d'une demande utilisateur pour modifier l'état d'une application.</dd>
 
 <dt><strong>DEA</strong></dt>
-<dd>Droplet Execution Agent : Le composant DEA fournit des informations sur le démarrage, l'arrêt ou la panne d'une application. <p>Ce composant est disponible uniquement si votre application est déployée dans l'architecture Cloud Foundry qui est basée sur DEA.</p></dd>
+<dd>Droplet Execution Agent : Le composant DEA fournit des informations sur le démarrage, l'arrêt ou la panne d'une application. 
+<p>Ce composant est disponible uniquement si votre application est déployée dans l'architecture Cloud Foundry qui est basée sur DEA.</p></dd>
 
 <dt><strong>CELL</strong></dt>
-<dd>Diego cell : Le composant CELL fournit des informations sur le démarrage, l'arrêt ou la panne d'une application. <p>Ce composant est disponible uniquement si votre application est déployée dans l'architecture Cloud Foundry qui est basée sur Diego.</p></dd>
+<dd>Diego cell : Le composant CELL fournit des informations sur le démarrage, l'arrêt ou la panne d'une application. 
+<p>Ce composant est disponible uniquement si votre application est déployée dans l'architecture Cloud Foundry qui est basée sur Diego.</p></dd>
 
 <dt><strong>SSH</strong></dt>
-<dd>SSH : Le composant SSH fournit des informations chaque fois qu'un utilisateur accède à une application via la commande **cf ssh**. <p>Ce composant est disponible uniquement si votre application est déployée dans l'architecture Cloud Foundry qui est basée sur Diego.</p></dd>
+<dd>SSH : Le composant SSH fournit des informations chaque fois qu'un utilisateur accède à une application via la commande **cf ssh**. 
+<p>Ce composant est disponible uniquement si votre application est déployée dans l'architecture Cloud Foundry qui est basée sur Diego.</p></dd>
 
 </dl>
 </dd>
@@ -173,10 +176,10 @@ journaux en temps réel. De plus, vous pouvez filtrer les journaux par type et c
 ### Affichage des journaux dans le tableau de bord Kibana
 {: #viewing_logs_Kibana}
 
-Créez un tableau de bord personnalisé pour afficher, de manière simple ou créative, les journaux des applications s'exécutant dans un espace. 
+Créez un tableau de bord personnalisé pour afficher, de manière simple ou créative, les journaux des applications s'exécutant dans un espace.
 
 1. Ouvrez [https://logmet.<span class="keyword" data-hd-keyref="DomainName">NomDomaine</span>](https://logmet.{DomainName}) pour vous connecter à l'interface utilisateur Kibana.
-2. Sélectionnez l'onglet **Kibana 3**. 
+2. Sélectionnez l'onglet **Kibana 3**.
 3. Si vous ne voyez aucun journal, ajustez le sélecteur de période situé dans l'en-tête.
 4. Enregistrez le tableau de bord en tant que nouveau tableau de bord.
   1. Dans la barre d'outils, cliquez sur l'icône de **sauvegarde**.
@@ -391,7 +394,7 @@ fichier *transforms.conf* contenant le texte suivant :
 (port 5140) et l'interface utilisateur Web de Splunk (port
 8000) vu que, par défaut, le pare-feu est en place sur le serveur virtuel {{site.data.keyword.Bluemix_notm}}.
 
-	    **Remarque :** la configuration iptable est réalisée ici à des fins d'évaluation par Jeanne et n'est que temporaire. Pour configurer le paramètre de pare-feu dans le serveur virtuel Bluemix en environnement de production, voir la documentation sur les [groupes de sécurité des réseaux ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} pour plus d'informations. 
+	    **Remarque :** la configuration iptable est réalisée ici à des fins d'évaluation par Jeanne et n'est que temporaire. Pour configurer le paramètre de pare-feu dans le serveur virtuel Bluemix en environnement de production, voir la documentation sur les [groupes de sécurité des réseaux ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} pour plus d'informations.
 
 	   ```
 	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT
@@ -473,7 +476,7 @@ Les applications Cloud Foundry utilisent Cloud Foundry loggregator pour surveill
 | UC virtuelle | 19 | 57 |
 | Mémoire | 80 Go | 240 Go |
 | Stockage local | 2,98 To | 8,94 To |
-{: caption="Tableau 2. Consignation de la configuration matérielle requise pour {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
+{: caption="Tableau 2. Configuration matérielle requise pour la journalisation pour {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
 
 ### Configuration
 

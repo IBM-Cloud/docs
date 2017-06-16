@@ -12,7 +12,7 @@ lastupdated: "2017-03-17"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Developer Insights(시범)
+# Developer Insights
 {: #gettingstarted}
 
 {{site.data.keyword.DRA_full}} Developer Insights는 프로젝트의 개발 위험성을 탐색하는 포괄적인 방법을 제공합니다. 오류 발생 가능성이 높은 파일을 식별하고 프로젝트가 DevOps 관행을 준수하는지 볼 수 있습니다.

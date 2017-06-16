@@ -26,7 +26,7 @@ The {{site.data.keyword.registrylong}} CLI is a plug-in to manage your registry 
  with the `bx login` command to generate a {{site.data.keyword.Bluemix_short}}
  access token and authenticate your session.
 
-To find out about how to use the {{site.data.keyword.registrylong}} CLI, see [IBM Bluemix Container Registry overview](https://console.ng.bluemix.net/docs/services/Registry/registry_setup.html#registry_setup).
+To find out about how to use the {{site.data.keyword.registrylong}} CLI, see [Setting up a private images registry](../../../services/Registry/index.html).
 
 <table summary="Manage your Containers Registry">
 <caption>Table 1. Commands for managing {{site.data.keyword.registryshort}} on {{site.data.keyword.Bluemix_short}}
@@ -78,6 +78,7 @@ bx cr api
 
 
 ## bx cr info
+{: #bx_cr_info}
 Displays the name and the account of the registry that you are logged in to.
 
 ```
@@ -87,6 +88,7 @@ bx cr info
 
 
 ## bx cr image-inspect
+{: #bx_cr_image_inspect}
 Displays details about a specific image.
 
 ```
@@ -101,6 +103,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 <dt>--format FORMAT</dt>
 <dd>(Optional) Format the output elements by using a Go template. 
 
+For more information, see [Viewing information about images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 
 </dd>
 <dt>IMAGE</dt>
@@ -109,6 +112,7 @@ bx cr image-inspect [--format FORMAT] IMAGE [IMAGE]
 
 
 ## bx cr image-list (bx cr images)
+{: #bx_cr_image_list}
 Displays all images in your {{site.data.keyword.Bluemix_short}} account.
 
 ```
@@ -127,13 +131,14 @@ Displays all images in your {{site.data.keyword.Bluemix_short}} account.
 <dt>--format FORMAT</dt>
 <dd>(Optional) Format the output elements by using a Go template. 
 
-
+For more information, see [Viewing information about images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 </dd>
 
 </dl>
 
 
 ## bx cr image-rm
+{: #bx_cr_image_rm}
 Deletes one or more specified images from your registry.
 
 ```
@@ -149,6 +154,7 @@ bx cr image-rm IMAGE [IMAGE]
 
 
 ## bx cr login
+{: #bx_cr_login}
 This command runs the `docker login` command against the registry. The `docker login` command is required to be able to run the `docker push` or `docker pull` commands for the registry. This command is not required to run other `bx cr` commands. If Docker is not installed, this command returns an error message.
 
 ```
@@ -158,6 +164,7 @@ bx cr login
 
 
 ## bx cr namespace-add
+{: #bx_cr_namespace_add}
 Adds a namespace to your {{site.data.keyword.Bluemix_short}} account.
 
 ```
@@ -173,6 +180,7 @@ bx cr namespace-add NAMESPACE
 
 
 ## bx cr namespace-list (bx cr namespaces)
+{: #bx_cr_namespace_list}
 Displays all namespaces that are owned by your {{site.data.keyword.Bluemix_short}} account.
 
 ```
@@ -182,6 +190,7 @@ bx cr namespace-list
 
 
 ## bx cr namespace-rm
+{: #bx_cr_namespace_rm}
 Removes a namespace from your {{site.data.keyword.Bluemix_short}} account. Images in this namespace are deleted when the namespace is removed.
 
 ```
@@ -210,7 +219,9 @@ bx cr plan
 ## bx cr plan-upgrade
 {: #bx_cr_plan_upgrade}
 
-Modify the specified quota.
+Change the IBM Bluemix Container Registry service plan.
+
+For more information about available service plans, see [Registry plans](../../../services/Registry/registry_overview.html#registry_plans).
 
 ```
 bx cr plan-upgrade PLAN
@@ -258,6 +269,7 @@ bx cr quota-set [--traffic VALUE] [--storage VALUE]
 <!-- audience blue staging only end comment -->
 
 ## bx cr token-add
+{: #bx_cr_token_add}
 Adds a token that you can use to control access to a registry.
 
 ```
@@ -281,6 +293,7 @@ bx cr token-add [--description VALUE] [-q, --quiet] [--non-expiring] [--readwrit
 
 
 ## bx cr token-get
+{: #bx_cr_token_get}
 Retrieve the specified token from the registry.
 
 ```
@@ -297,6 +310,7 @@ bx cr token-get TOKEN
 
 
 ## bx cr token-list (bx cr tokens)
+{: #bx_cr_token_list}
 Displays all tokens that exist for your {{site.data.keyword.Bluemix_short}} account.
 
 ```
@@ -309,12 +323,13 @@ bx cr token-list --format FORMAT
 <dt>--format FORMAT</dt>
 <dd>(Optional) Format the output elements by using a Go template. 
 
-
+For more information, see [Viewing information about images](../../../services/Registry/registry_cli_reference.html#registry_cli_listing).
 </dd>
 </dl>
 
 
 ## bx cr token-rm
+{: #bx_cr_token_rm}
 Remove one or more specified tokens.
 
 ```
@@ -350,6 +365,7 @@ bx cr vulnerability-assessment IMAGE [IMAGE...]
 <li>Ubuntu</li>
 </ul>
 
+For more information, see [Reviewing image security](../../../services/Registry/registry_images_.html#registry_security_checking).
 </dd>
 
 </dd>

@@ -6,7 +6,7 @@ copyright:
 
   years: 2016, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-05-04"
 
 
 ---
@@ -388,9 +388,9 @@ cf help events
 ## cf login
 {: #cf_login}
 
-Efetua seu login no {{site.data.keyword.Bluemix_notm}}.
+Efetua seu login no {{site.data.keyword.Bluemix_notm}}. Se você estiver efetuando login com um [ID federado](/docs/admin/account.html#signup), deverá usar o parâmetro de conexão única (SSO) para efetuar login. 
 
-**Nota**: caso você esteja efetuando login com um [ID federado](/docs/admin/account.html#signup), deve-se usar o parâmetro de conexão única (SSO) para efetuar login.
+**Nota**: também é possível usar uma chave API da Plataforma do {{site.data.keyword.Bluemix_notm}} para efetuar login. Use o nome de usuário `apikey` e seu valor de chave API como a senha. Para obter mais informações sobre como criar uma chave API, veja [Gerenciando chaves API](/docs/iam/apikeys.html).
 
 ```
 cf login [-a url] [-u user_name] [-p password] [-sso] [-o organization_name] [-s space_name] [--skip-ssl-validation]
@@ -443,6 +443,12 @@ cf login -a https://api.ng.bluemix.net -u user_name
 Efetue login no {{site.data.keyword.Bluemix_notm}} com um terminal definido de `https://api.ng.bluemix.net`, um nome de usuário de `user_name`, nenhuma senha especificada por motivos de segurança, um nome da organização de `org_name` e o nome do espaço de `space_name`.
 ```
 cf login -a https://api.ng.bluemix.net -u user_name -o org_name -s space_name
+```
+{: codeblock}
+
+Efetue login no {{site.data.keyword.Bluemix_notm}} com um terminal definido de `https://api.ng.bluemix.net` usando uma chave API. Use `apikey` como o nome do usuário e a chave API real como a senha.
+```
+cf login -a https://api.ng.bluemix.net -u apikey -p ThisValueIsYourAPIKey
 ```
 {: codeblock}
 

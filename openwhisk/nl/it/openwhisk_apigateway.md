@@ -33,7 +33,7 @@ Configura la CLI OpenWhisk CLI con l'apihost `wsk property set --apihost openwhi
 Per poter utilizzare `wsk api`, il file di configurazione della CLI `~/.wskprops` deve contenere il token di accesso Bluemix.
 Per ottenere il token di accesso, utilizza il comando CLI `wsk bluemix login`, per ulteriori informazioni sul comando esegui `wsk bluemix login -h`
 
-**Nota:** se si verifica un errore di comando che richiede il sso (single sign on), questo non è attualmente supportato. Come soluzione temporanea, accedi con la CLI CloudFoundry utilizzando `cf login`, quindi copia il token di accesso dal file di configurazione della directory HOME `~/.cf/config.json` nel file `~/.wskprops` come proprietà `APIGW_ACCESS_TOKEN="value of AccessToken`. Rimuovi il prefisso `Bearer ` quando copi la stringa del token di accesso.
+**Nota:** se si verifica un errore di comando che richiede il sso (single sign on), questo non è attualmente supportato. Come soluzione temporanea, accedi con la CLI Bluemix utilizzando `bluemix login`, quindi copia il token di accesso dal file di configurazione della directory HOME `~/.bluemix/.cf/config.json` nel file `~/.wskprops` come proprietà `APIGW_ACCESS_TOKEN="value of AccessToken`. Rimuovi il prefisso `Bearer ` quando copi la stringa del token di accesso.
 
 **Nota:** le API che crei utilizzando `wsk api-experimental` continueranno a funzionare per un breve periodo, tuttavia dovresti iniziare a migrare le API alle azioni web e riconfigurare le tue API esistenti utilizzando il nuovo comando CLI `wsk api`.
 
@@ -64,14 +64,14 @@ Per ottenere il token di accesso, utilizza il comando CLI `wsk bluemix login`, p
   ```
   ```
   ok: created API /hello/world GET for action /_/hello
-  https://${APIHOST}:9001/api/21ef035/hello/world
+  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world
   ```
   Viene generato un nuovo URL che espone l'azione `hello` tramite un metodo HTTP **GET**.
   
 4. Facciamo una prova inviando una richiesta HTTP all'URL.
   
   ```
-  $ curl https://${APIHOST}:9001/api/21ef035/hello/world?name=OpenWhisk
+  $ curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world?name=OpenWhisk
   ```
   ```json
   {

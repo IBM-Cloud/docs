@@ -12,13 +12,13 @@ lastupdated: "2017-03-31"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Deployment Risk（測試版）
+# Deployment Risk
 {: #gettingstarted}
 
-{{site.data.keyword.DRA_short}} 針對部署（尤其是風險）提供豐富的相關資訊。您可以利用它，透過原則和閘道將 Delivery Pipeline 中的品質保護作業自動化。
+{{site.data.keyword.DRA_short}} 針對部署提供豐富的相關資訊，尤其是風險。您可以利用它，透過原則和閘道將 Delivery Pipeline 中的品質保護作業自動化。
 {:shortdesc}
 
-從工具鏈開啟 {{site.data.keyword.DRA_short}} 之後，按一下 **Deployment Risk**。您可以從這裡取得暫置和正式作業環境中的應用程式概觀，並往下探查，以瞭解程式碼涵蓋面、測試效能和安全報告。儀表板會自動移入管線的 {{site.data.keyword.DRA_short}} 測試中的最新資訊。
+從工具鏈開啟 {{site.data.keyword.DRA_short}} 之後，按一下 **Deployment Risk**。您可以從這裡取得編譯打包和正式作業環境中的應用程式概觀，並往下探查，以瞭解程式碼涵蓋面、測試效能和安全報告。儀表板會自動移入管線的 {{site.data.keyword.DRA_short}} 測試中的最新資訊。
 
 ## 關於 Deployment Risk
 {: #about}
@@ -60,7 +60,7 @@ Deployment Risk 會與 {{site.data.keyword.deliverypipeline}}（隸屬於 {{site
 
 原則是在交付管線中用來控制閘道的規則集。如果您的程式碼不符合或超出特定閘道制定的原則，則會中止部署，以防止釋出有風險的變更。
 
-您可以在 {{site.data.keyword.DRA_short}} 中定義原則。原則會建立在包含 {{site.data.keyword.DRA_short}} 的 {{site.data.keyword.Bluemix_notm}} 組織 (org) 中。相同組織中的任何應用程式都可以使用此原則。 
+您可以在 {{site.data.keyword.DRA_short}} 中定義原則。原則會建立在包含 {{site.data.keyword.DRA_short}} 的 {{site.data.keyword.Bluemix_notm}} 組織中。相同組織中的任何應用程式都可以使用此原則。 
 
 ### 建立原則
 {: #create_policies}
@@ -95,9 +95,9 @@ Deployment Risk 會與 {{site.data.keyword.deliverypipeline}}（隸屬於 {{site
 
 1. 鍵入說明，並選取格式。
 
-2. 指定必須通過才能宣告成功的測試案例的百分比。
+2. 指定必須通過才能宣告成功的測試案例百分比。
 
-3. 定義任何重要測試案例。
+3. 定義任何重要的測試案例。
 
 4. 若要監視測試案例回歸，請選取**監視測試案例回歸**勾選框。
 
@@ -109,9 +109,9 @@ Deployment Risk 會與 {{site.data.keyword.deliverypipeline}}（隸屬於 {{site
 
 1. 鍵入說明，並選取格式。
 
-2. 指定必須通過才能宣告成功的測試案例的百分比。
+2. 指定必須通過才能宣告成功的測試案例百分比。
 
-3. 定義任何重要測試案例。
+3. 定義任何重要的測試案例。
 
 4. 若要監視測試案例回歸，請選取**監視測試案例回歸**勾選框。
 
@@ -123,7 +123,7 @@ Deployment Risk 會與 {{site.data.keyword.deliverypipeline}}（隸屬於 {{site
 
 1. 鍵入說明，並選取格式。
 
-2. 指定需要宣告成功的程式碼涵蓋面的百分比。
+2. 指定需要宣告成功的程式碼涵蓋面百分比。
 
 3. 若要監視程式碼涵蓋面回歸，請選取**監視測試案例回歸**勾選框。
 
@@ -159,9 +159,9 @@ Deployment Risk 會與 {{site.data.keyword.deliverypipeline}}（隸屬於 {{site
 ### 準備管線階段
 {: #integrate_pipeline}
 
-若要讓 Deployment Risk 分析您的專案，您必須在管線中定義暫置和正式作業階段。您可以使用文字環境內容來定義階段（可在**環境內容**下各階段的配置功能表 ![「管線階段配置」圖示](images/pipeline-stage-configuration-icon.png) 中找到文字環境內容）。
+若要讓 Deployment Risk 分析您的專案，您必須在管線中定義編譯打包和正式作業的階段。您可以使用文字環境內容來定義階段（可在各階段配置功能表 ![「管線階段配置」圖示](images/pipeline-stage-configuration-icon.png) 的**環境內容**下找到文字環境內容）。
 
-1. 在暫置階段，將 `LOGICAL_ENV_NAME` 內容設為 `STAGING`。 
+1. 在編譯打包階段，將 `LOGICAL_ENV_NAME` 內容設為 `STAGING`。 
 
 2. 在正式作業階段，將 `LOGICAL_ENV_NAME` 內容設為 `PRODUCTION`。 
 
@@ -182,7 +182,7 @@ Deployment Risk 會與 {{site.data.keyword.deliverypipeline}}（隸屬於 {{site
 1. 在要新增上傳結果工作的階段，按一下**階段配置**圖示 ![「管線階段配置」圖示](images/pipeline-stage-configuration-icon.png)。按一下**配置階段**。
 2. 建立測試工作，並鍵入其名稱。 
 3. 針對工作類型，選取**進階測試者**。
-4. 完成**測試指令**和**工作目錄**欄位，與一般管線測試工作相同。 
+4. 完成**測試指令**和**工作目錄**欄位，如同一般管線測試工作一樣。 
 5. 完成其餘欄位，以上傳特定測試類型的測試結果。 
 
  1. 選擇度量值類型，需符合您要使用的 {{site.data.keyword.DRA_short}} 原則中定義的內容。
@@ -221,11 +221,11 @@ Deployment Risk 會與 {{site.data.keyword.deliverypipeline}}（隸屬於 {{site
 ### 定義閘道
 {: #configure_pipeline_gates}
 
-{{site.data.keyword.DRA_short}} 閘道會檢查測試結果是否符合所定義的原則。如果不符合原則，依預設，{{site.data.keyword.DRA_short}} 閘道會失敗。您也可以配置閘道來擔任諮詢角色，以允許管線即使失敗後仍可繼續進行。
+{{site.data.keyword.DRA_short}} 閘道會檢查測試結果是否符合所定義的原則。如果不符合原則，依預設，{{site.data.keyword.DRA_short}} 閘道會失敗。您也可以將閘道配置為以諮詢角色運作，以允許管線即使失敗後仍可繼續進行。
 
-在暫置部署工作之後，Deployment Risk 儀表板需要有閘道存在。如果您想要使用此儀表板，請確定在部署至暫置環境之後，且部署至正式作業環境之前，有閘道存在。
+在編譯打包部署工作之後，Deployment Risk 儀表板需要有閘道存在。如果您想要使用此儀表板，請確定在部署至編譯打包環境之後，且部署至正式作業環境之前，有閘道存在。
 
-通常在管線中，閘道會放在建置升級前面。這些位置很適合用來根據原則檢查建置品質，以確保可以安心從某個環境升級至另一個環境。不過，您可以在管線中任何想要檢查特定準則的位置放置閘道。在您部署至暫置環境之前設置的閘道仍會強制執行原則，但不會出現在 Deployment Risk 儀表板上。
+通常在管線中，閘道會放在建置升級前面。這些位置很適合用來根據原則檢查建置品質，以確保可以安心從某個環境升級至另一個環境。不過，您可以在管線中任何想要檢查特定準則的位置放置閘道。在您部署至編譯打包環境之前設置的閘道仍會強制執行原則，但不會出現在 Deployment Risk 儀表板上。
 
 1. 在階段上，依序按一下**階段配置**圖示 ![「管線階段配置」圖示](images/pipeline-stage-configuration-icon.png) 及**配置階段**。
 2. 按一下**新增工作**。針對工作類型，選取**測試**。
@@ -235,7 +235,7 @@ Deployment Risk 會與 {{site.data.keyword.deliverypipeline}}（隸屬於 {{site
 
  此名稱必須完全符合您定義的其中一個原則名稱。您只能指定在與工具鏈相同的 {{site.data.keyword.Bluemix_notm}} 組織中所定義的原則。
 
-6. 選用項目：若要在諮詢模式中製作閘道功能，請清除**此工作失敗時停止執行這個階段**勾選框。在諮詢模式中，{{site.data.keyword.DRA_short}} 會在閘道上完成相同的原則分析，並產生報告，但是，失敗時不會停止管線。
+6. 選用項目：若要讓閘道以諮詢模式運作，請清除**此工作失敗時停止執行這個階段**勾選框。在諮詢模式中，{{site.data.keyword.DRA_short}} 會在閘道上完成相同的原則分析並產生報告，但是失敗時不會停止管線。
 7. 按一下**儲存**，以回到管線。
 8. 重複這些步驟，以設定所有 {{site.data.keyword.DRA_short}} 原則的閘道。
 
@@ -253,7 +253,7 @@ Deployment Risk 會與 {{site.data.keyword.deliverypipeline}}（隸屬於 {{site
 
 安裝 IBM Cloud DevOps 外掛程式之後，您可以將測試結果發佈至 {{site.data.keyword.DRA_short}}、新增自動化品質閘道，以及追蹤您的部署風險。您也可以將工作通知傳送給工具鏈中的其他工具，例如 Slack 和 PagerDuty。為了協助您追蹤部署，工具鏈可以將部署訊息新增至 Git 確定及其相關 Git 或 JIRA 問題。您也可以在工具鏈的「連線」頁面上檢視您的部署。 
 
-外掛程式提供後建置動作和 CLI 來支援整合。{{site.data.keyword.DRA_short}} 會聚集並分析單元測試、功能測試、程式碼涵蓋面工具、靜態安全程式碼掃描及動態安全程式碼掃描的結果，以在部署程序中判斷您的程式碼是否符合閘道的預先定義原則。如果您的程式碼不符合或超出原則，則會中止部署，以防止釋出有風險的變更。您可以使用 {{site.data.keyword.DRA_short}} 當作持續交付環境的安全網、實作與改善一段時間品質標準的方式，以及協助您瞭解專案性能的資料視覺化工具。
+外掛程式提供後建置動作和 CLI 來支援整合。{{site.data.keyword.DRA_short}} 會聚集並分析單元測試、功能測試、程式碼涵蓋面工具、靜態安全程式碼掃描及動態安全程式碼掃描的結果，以在部署程序中判斷您的程式碼是否符合閘道的預先定義原則。如果您的程式碼不符合或超出原則，則會中止部署，以防止釋出有風險的變更。您可以使用 {{site.data.keyword.DRA_short}} 當作持續交付環境的安全網、持續實作與改善品質標準的方式，以及協助您瞭解專案性能的資料視覺化工具。
 
 ### 必要條件
 {: #jenkins_prerequisites}
@@ -331,29 +331,27 @@ Deployment Risk 會與 {{site.data.keyword.deliverypipeline}}（隸屬於 {{site
 
 6. 移至 [IBM Bluemix DevOps](https://console.ng.bluemix.net/devops)、選取您的工具鏈，然後按一下 **DevOps Insights**，以檢視 Deployment Risk 儀表板。
 
-在暫置部署工作之後，Deployment Risk 儀表板需要有閘道存在。如果您想要使用此儀表板，請確定在部署至暫置環境之後，且部署至正式作業環境之前，有閘道存在。
+在編譯打包部署工作之後，Deployment Risk 儀表板需要有閘道存在。如果您想要使用此儀表板，請確定在部署至編譯打包環境之後，且部署至正式作業環境之前，有閘道存在。
     
 ### 配置通知
 {: #jenkins_notifications}
 
-您可以遵循 [Bluemix 文件](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins)中的指示，配置 Jenkins 工作，以將通知傳送至 Slack 或 PagerDuty 之類的工具。
+您可以遵循 [Bluemix 文件](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins)中的指示來配置 Jenkins 工作，以將通知傳送至 Slack 或 PagerDuty 之類的工具。
 
-此範例示範如何配置工作配置的 `ICD_WEBHOOK_URL`：
-![設定 ICD_WEBHOOK_URL 參數](images/Set-Parameterized-Webhook.png "設定參數化 WebHook")
+此範例示範如何配置工作配置的 `ICD_WEBHOOK_URL`：![設定 ICD_WEBHOOK_URL 參數](images/Set-Parameterized-Webhook.png "設定參數化 WebHook")
 
-此範例示範如何配置工作通知的後建置動作：
-![WebHook 通知的後建置動作](images/PostBuild-WebHookNotification.png "在後建置動作中配置 WebHook 通知")
+此範例示範如何配置工作通知的後建置動作：![WebHook 通知的後建置動作](images/PostBuild-WebHookNotification.png "在後建置動作中配置 WebHook 通知")
 
 ## 檢視結果
 {: #view_results}
 
-管線執行之後，{{site.data.keyword.DRA_short}} 會開始收集並分析其測試結果，以建立基準線。收集每個後續執行的資料，並將其與先前的結果進行比較。決策閘道使用此資料來判斷何時停止部署。 
+管線執行之後，{{site.data.keyword.DRA_short}} 會開始收集並分析其測試結果，以建立基準線。每個後續執行的資料，會加以收集並將與先前的結果進行比較。決策閘道使用此資料來判斷何時停止部署。 
 
 您可以從 Deployment Risk 儀表板查看部署和閘道評估資料。若要開啟儀表板，請開啟 {{site.data.keyword.DRA_short}}，然後從側邊功能表中按一下 **Deployment Risk**。
 
 如果您是使用 {{site.data.keyword.contdelivery_short}} 管線，則可從管線本身檢視個別閘道執行報告。若要從管線檢視閘道的決策報告，請完成下列步驟：
 
-1. 在包含要檢查之閘道的階段上，按一下 **View logs and history**。
+1. 在包含要檢查之閘道的階段上，按一下**檢視日誌與歷程**。
 
 2. 從包含閘道的工作中，按一下閘道的名稱。
 

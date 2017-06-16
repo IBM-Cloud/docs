@@ -22,13 +22,13 @@ In questo esempio, uno sviluppatore di nome Jane crea un server virtuale utilizz
 
   1. Per iniziare, Jane configura Splunk.
 
-     a. Jane scarica Splunk Light dal [sito di download di Splunk Light ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}, quindi lo installa utilizzando il seguente comando. Il software viene installato su */opt/splunk*.
+     a. Jane scarica Splunk Light dal [sito di download di Splunk Light ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.splunk.com/en_us/download/splunk-light.html){:new_window}, quindi lo installa utilizzando il seguente comando. Il software viene installato su */opt/splunk*.
 
 	    ```
         dpkg -i  ~/splunklight-6.3.0-aa7d4b1ccb80-linux-2.6-amd64.deb
         ```
 
-     b. Jane installa e applica le patch al componente aggiuntivo con tecnologia syslog RFC5424 da integrare con {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni sulle istruzioni di installazione del componente aggiuntivo, consulta la [Guida Cloud Foundry ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.
+     b. Jane installa e applica le patch al componente aggiuntivo con tecnologia syslog RFC5424 da integrare con {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni sulle istruzioni di installazione del componente aggiuntivo, consulta la [Guida Cloud Foundry ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://docs.cloudfoundry.org/devguide/services/integrate-splunk.html){:new_window}.
 
 	    Jane installa il componente aggiuntivo utilizzando i seguenti comandi:
 
@@ -54,7 +54,7 @@ In questo esempio, uno sviluppatore di nome Jane crea un server virtuale utilizz
 
      c. Una volta impostato Splunk, Jane deve aprire alcune porte sulla macchina Ubuntu per accettare lo scarico syslog in entrata (porta 5140) e Splunk Web UI (porta 8000), poiché il firewall del server virtuale {{site.data.keyword.Bluemix_notm}} è configurato con valori predefiniti.
 
-	    **Nota:** la conferma iptable viene effettuata in questo punto per gli scopi di valutazione di Jane ed è temporanea. Per configurare l'impostazione del firewall nel server virtuale Bluemix produttivo, vedi la documentazione [Network Security Groups ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} contenente informazioni dettagliate.
+	    **Nota:** la conferma iptable viene effettuata in questo punto per gli scopi di valutazione di Jane ed è temporanea. Per configurare l'impostazione del firewall nel server virtuale Bluemix produttivo, vedi la documentazione [Network Security Groups ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} contenente informazioni dettagliate.
 
 	   ```
 	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT

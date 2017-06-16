@@ -33,7 +33,7 @@ lastupdated: "2017-04-19"
 Utilice la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} para descargar, modificar y volver a desplegar aplicaciones e instancias de servicio de Cloud Foundry.
 {:shortdesc}
 
-Antes de empezar, descargue e instale la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}.  
+Antes de empezar, descargue e instale la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}. 
 
 <p>
 <a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="(Se abre en una nueva ventana o separador)"><img class="image" src="images/btn_bx_commandline.svg" alt="Descargar interfaz de línea de mandatos de Bluemix" /> </a>

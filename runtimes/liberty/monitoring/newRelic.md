@@ -2,19 +2,19 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-05-31"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Using New Relic
+# Use New Relic to monitor Liberty in Bluemix
 {: #new_relic}
 
 New Relic is a third-party service that provides monitoring metrics for your application. For more information on what the New Relic service provides, see [New Relic](http://newrelic.com/java).
 
-According to this [Java agent manual installation documentation](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation), Java applications that are to be monitored by using the New Relic service are typically required to be bundled and configured with a New Relic agent and an account license key. In the IBM Bluemix environment, a New Relic license agreement and account can be obtained by creating a service instance in IBM Bluemix. Java applications can then be bound to the New Relic service instance and the Liberty buildpack auto configures the application that is ready to be monitored by the New Relic service.
+According to the [Java agent manual installation documentation](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation), Java applications that are to be monitored by using the New Relic service are typically required to be bundled and configured with a New Relic agent and an account license key. In the IBM Bluemix environment, a New Relic license agreement and account can be obtained by creating a service instance in IBM Bluemix. Java applications can then be bound to the New Relic service instance and the Liberty buildpack auto configures the application that is ready to be monitored by the New Relic service.
 Specifically, the buildpack:
 
 * provides the application with a New Relic agent.

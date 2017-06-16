@@ -15,9 +15,10 @@ lastupdated: "2017-02-24"
 # Définition de politiques
 {: #policies}
 
-Les politiques contrôlent les jalons dans votre pipeline de distribution continue. Si votre code ne satisfait pas, dans un sens ou dans l'autre, une politique appliquée à un jalon particulier, le déploiement est arrêté dans le but d'empêcher la publication de changements risqués.{:shortdesc}
+Les politiques contrôlent les jalons dans votre pipeline de distribution continue. Si votre code ne satisfait pas, dans un sens ou dans l'autre, une politique appliquée à un jalon particulier, le déploiement est arrêté dans le but d'empêcher la publication de changements risqués. 
+{:shortdesc}
 
-Vous définissez les politiques dans {{site.data.keyword.DRA_short}}. Les politiques sont créées dans l'organisation {{site.data.keyword.Bluemix_notm}} qui contient {{site.data.keyword.DRA_short}}. Toutes les applications qui se trouvent dans la même organisation peuvent utiliser la politique.  
+Vous définissez les politiques dans {{site.data.keyword.DRA_short}}. Les politiques sont créées dans l'organisation {{site.data.keyword.Bluemix_notm}} qui contient {{site.data.keyword.DRA_short}}. Toutes les applications qui se trouvent dans la même organisation peuvent utiliser la politique. 
 
 Pour définir une politique :
 
@@ -113,7 +114,7 @@ Vous pouvez exiger la réussite inconditionnelle en marquant les tests comme cri
 
 Pour les éléments qui disposent de scénarios de test, vous pouvez définir des scénarios de test critiques, c'est-à-dire des tests à réussir indépendamment du pourcentage acceptable. Les noms de test critique doivent correspondre à l'attribut `full title` du scénario de test.    
 * Pour les tests Karma/Mocha, les chaînes de description `describe()` et `it()` sont liées ensemble par des espaces.
-* Pour les tests xUnit, le nom de package, le nom de classe et le nom de fonction sont liés ensemble par des espaces. Ce cas de figure est illustré par l'exemple suivant : 
+* Pour les tests xUnit, le nom de package, le nom de classe et le nom de fonction sont liés ensemble par des espaces. Ce cas de figure est illustré par l'exemple suivant :
   ```
   <testsuites package="test">
     <testsuite package="otc-api" name="PUT Service Instances - Test Setup" tests="2" failures="0" errors="0">
@@ -123,7 +124,7 @@ Pour les éléments qui disposent de scénarios de test, vous pouvez définir de
   </testsuite>
   ```
   Cet exemple produit les noms de scénario de test suivants :
-```
+  ```
   test otc-api PUT Service Instances - Test Setup #1 Authorization passed for mock user: idsb3t1@us.ibm.com
   test otc-api PUT Service Instances - Test Setup #2 Authorization passed for mock user: idsb3t1@us.ibm.com
   ```
@@ -145,6 +146,6 @@ Pour afficher le rapport de décision pour un jalon du pipeline, procédez comme
 
    1. A l'étape qui contient le jalon à vérifier, cliquez sur **Afficher les journaux et l'historique**.
 
-   2. Dans le travail qui contient le jalon, cliquez sur le nom du jalon. 
+   2. Dans le travail qui contient le jalon, cliquez sur le nom du jalon.
 
    3. Dans la vue du journal, recherchez le message `Check {{site.data.keyword.DRA_short}} report here` et cliquez sur le lien pour ouvrir le rapport.

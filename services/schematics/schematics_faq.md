@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-06-08"
 
 ---
 
@@ -22,7 +22,7 @@ Answers to common questions about the {{site.data.keyword.bplong}} service.
 ## What versions of Terraform are supported?
 {: #terraform-versions}
 
-Versions 0.9.1 and 0.9.3 are currently supported. 
+Version 0.9.3 is currently supported. 
 
 ## Can you import existing cloud resources into the service?
 {: #existing-resources}

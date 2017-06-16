@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="bluemix-services" audience="platform" href="/docs/services/index.html"}
-Bluemix services
+Bluemix 서비스
 
 	{: .navgroup id="learn"}
 	services_region.md

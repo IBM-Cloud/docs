@@ -15,16 +15,16 @@ lastupdated: "2017-04-07"
 # 開始使用 DevOps Insights（測試版）
 {: #gettingstarted}
 
-{{site.data.keyword.DRA_full}} 將開發人員、團隊和部署分析套用至您最忙碌的 DevOps 專案。您可以用它來瞭解團隊符合 DevOps 和開發人員作法的情況、管理程式碼庫中的風險，以及在持續交付專案中自動強制執行品質標準。
+{{site.data.keyword.DRA_full}} 將開發人員、團隊和部署分析套用至您最忙碌的 DevOps 專案。您可以用它來瞭解團隊符合 DevOps 和開發人員作法的程度、管理程式碼庫中的風險，以及在持續交付專案中自動強制執行品質標準。
 {:shortdesc}
 
-{{site.data.keyword.DRA_short}} 包含數個群組的功能：
+{{site.data.keyword.DRA_short}} 包含數組功能：
 
-   * Developer Insights 提供綜合性的方法來探索專案的開發成熟度。您可以識別具有高度錯誤傾向的檔案，並獲得針對開發人員作法的專案相符性觀點。
+   * Developer Insights 提供綜合性的方法來探索專案的開發成熟度。您可以識別具有高度錯誤傾向的檔案，並對照開發人員作法獲得專案相符性觀點。
 
    * Team Dynamics 使用社交編碼分析來幫助您瞭解團隊協同作業的情況，並瞭解如何可以做得更好。
 
-   * Deployment Risk 像是持續交付安全網。它會分析在部署程序中的指定閘道上進行的單元測試、功能測試、應用程式掃描及程式碼涵蓋面工具的結果，並防止釋出有風險的變更。
+   * Deployment Risk 像是持續交付安全網。它會在部署程序中的指定閘道上，分析單元測試、功能測試、應用程式掃描及程式碼涵蓋面工具的結果，並防止釋出有風險的變更。
 
    * Delivery Insights 會顯示 IBM UrbanCode Deploy 安裝的部署統計資料、度量值及其他相關資訊。例如，它會顯示部署持續時間、成功及失敗等圖表，全部依邏輯分組環境排序。請參閱[將 DevOps Insights 與 IBM UrbanCode Deploy 整合](/docs/services/DevOpsInsights/uc_insights_overview.html)。
 
@@ -45,11 +45,9 @@ lastupdated: "2017-04-07"
 
 2. 按一下 **{{site.data.keyword.DRA_short}}**。
 
-3. 若要將所有 {{site.data.keyword.DRA_short}} 功能新增至工具鏈，請選取**進階**，並確定已選取**啟用 Developer Insights** 勾選框。若只要新增 Deployment Risk，請選取**預設值**。 
+3. 按一下**建立整合**。
 
-4. 按一下**建立整合**。
-
-現在即可在工具鏈的「概觀」頁面上使用 {{site.data.keyword.DRA_short}}。
+現在即可在工具鏈的「概觀」頁面上使用 {{site.data.keyword.DRA_short}}。會自動掃描您的儲存庫和問題追蹤系統是否有資料。 
 
 ## 使用 DevOps Insights
 {: #using}
@@ -58,18 +56,8 @@ lastupdated: "2017-04-07"
 
 1. 從工具鏈的「概觀」頁面中，按一下 **{{site.data.keyword.DRA_short}}**。
 
-2. 從左導覽中，按一下 **Team Dynamics** 或 **Developer Insights**，然後選擇一個資料種類。
+2. 按一下 **Team Dynamics** 或 **Developer Insights**，然後選擇一個資料種類。 
 
 3. 檢視該資料種類中的儀表板，以探索專案的資料。如果您要進一步瞭解某個圖形，或是瞭解可以使用其資訊做什麼，請按一下**資訊**或**指引**。
 
 探索 Team Dynamics 和 Developer Insights 之後，請[配置 Deployment Risk](/docs/services/DevOpsInsights/insights_risk.html)，以協助您強制執行程式碼品質。Deployment Risk 與 {{site.data.keyword.contdelivery_short}} 管線和 Jenkins 都相容。   
-
-依預設，{{site.data.keyword.DRA_short}} 不包括 Developer Insights 或 Team Dynamics。若要在進行配置之後，將這些功能新增至工具鏈，請執行下列動作：
-
-1. 移至工具鏈的「概觀」頁面。
-2. 在 {{site.data.keyword.DRA_short}} 卡片上，按一下**動作**功能表。
-3. 按一下**配置**。
-4. 針對類型，選取**進階**，並選取勾選框。
-5. 按一下**儲存整合**。
-
-儲存配置之後，Developer Insights 和 Team Dynamics 會自動掃描儲存庫及問題追蹤系統。

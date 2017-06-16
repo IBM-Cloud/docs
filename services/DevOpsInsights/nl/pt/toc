@@ -9,26 +9,20 @@ IBM Cloud DevOps Insights
     about_risk.md
     about_team.md
     about_dev.md
-
-  {:topicgroup}
-    Delivery Insights
-        uc_insights_overview.md
-        uc_insights_prereqs.md
-        uc_insights_connect_ucd.md
-        uc_insights_creating.md
-        uc_insights_mapping.md
+    about_delivery.md
 
   {: .topicgroup}
     Links relacionados
         [Sobre as cadeias de ferramentas](../ContinuousDelivery/toolchains_about.html)
         [Introdução ao Delivery Pipeline](../DeliveryPipeline/index.html)
-        [IBM Cloud DevOps Insights no IBM Cloud Garage Method](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/)
+        [IBM Cloud DevOps Insights no IBM Cloud Garage Method](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/)
   {: .navgroup-end}
 
   {: .navgroup id="howto"}
     risk_cd.md
     jenkins_pipeline.md
     risk_jenkins.md
+    uc_insights_connect_ucd.md
     risk_policies.md
     results.md
   {: .navgroup-end}

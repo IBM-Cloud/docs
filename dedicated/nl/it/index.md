@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -78,7 +78,7 @@ Sono presenti dei componenti facoltativi disponibili per te da acquistare per ri
 |IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 12.128.1400 | Istanza dedicata che supporta carichi di lavoro OLTP (Online Transaction Processing) con 128 GB di RAM e 1,4 TB di archiviazione SSD per dati e log e che include un ulteriore server di standby per l'alta disponibilità. |
 |Servizi di community {{site.data.keyword.Bluemix_dedicated_notm}}  | Un ambiente che consente la distribuzione e l'esecuzione di servizi di community fino a un totale di 50 istanze per ogni servizio di community.  |
 |Istanza cluster {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.cloudant}} | Questo componente facoltativo include un cluster a 3 nodi per il quale sei responsabile di fornire l'infrastruttura e dove la capacità di archiviazione e di calcolo può essere determinata sulla base delle tue specifiche esigenze. {{site.data.keyword.cloudant}} fornisce l'accesso a un livello di dati JSON NoSQL interamente gestito sempre attivo. Questo servizio è compatibile con CouchDB e accessibile mediante un'interfaccia HTTP di facile utilizzo per i modelli di applicazione web e mobile. |
-|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | Un ambiente che fornisce messaggistica di sottoscrizione e pubblica fino a 10 GB per partizione. I messaggi vengono conservati e sono disponibili per l'utilizzo per un massimo di 24 ore. |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | Un ambiente che fornisce la messaggistica di pubblicazione/sottoscrizione fino a 10 GB per partizione, con un limite di 100 partizioni. |
 |IBM Bluemix Dedicated {{site.data.keyword.mobilepushshort}} | Un ambiente che consente la distribuzione e l'esecuzione di istanze {{site.data.keyword.mobilepushshort}} con la capacità di accettare 300 richieste al secondo. |
 |Aumento incrementale dedicato per {{site.data.keyword.iot_short}} | Un incremento dell'ambiente che consente l'esecuzione di una versione privata di {{site.data.keyword.iot_short}} nell'ambiente dedicato con una capacità di 100,000 applicazioni o dispositivi connessi contemporaneamente e 0.5 TB di scambio dati. |
 |IBM {{site.data.keyword.appserver_short}} per {{site.data.keyword.Bluemix_notm}} - Dedicato Small| Un'istanza {{site.data.keyword.appserver_short}} Liberty, Traditional Network Deployment o Traditional WebSphere Java EE preconfigurata in un ambiente cloud ospitato su {{site.data.keyword.Bluemix_notm}} con 64 vCore, 128GB RAM e 1TB HDD al mese. |
@@ -169,7 +169,7 @@ Se disponi di un'istanza privata del servizio per il tuo ambiente dedicato, vedi
 ## Architettura di {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #dedicatedarch}
 
-{{site.data.keyword.Bluemix_dedicated_notm}} può essere distribuito in qualsiasi [data center {{site.data.keyword.IBM_notm}} SoftLayer ![icona link esterno](../icons/launch-glyph.svg)](http://www.softlayer.com/data-centers){: new_window} in tutto il mondo. {{site.data.keyword.IBM_notm}} SoftLayer fornisce l'infrastruttura cloud dalle prestazioni più elevate. Ciascun data center fornisce rigorosi controlli di sicurezza 24 ore al giorno, 7
+{{site.data.keyword.Bluemix_dedicated_notm}} può essere distribuito in qualsiasi [data center {{site.data.keyword.IBM_notm}} SoftLayer ![Icona link esterno](../icons/launch-glyph.svg)](http://www.softlayer.com/data-centers){: new_window} in tutto il mondo. {{site.data.keyword.IBM_notm}} SoftLayer fornisce l'infrastruttura cloud dalle prestazioni più elevate. Ciascun data center fornisce rigorosi controlli di sicurezza 24 ore al giorno, 7
 giorni a settimana.
 
 Ogni distribuzione di {{site.data.keyword.Bluemix_dedicated_notm}} è dedicata a una singola azienda sull'hardware dedicato di {{site.data.keyword.IBM_notm}} SoftLayer nella sua propria rete privata. Gli ambienti di {{site.data.keyword.Bluemix_dedicated_notm}} hanno gli stessi standard di sicurezza di {{site.data.keyword.Bluemix_notm}} pubblico in termini di sicurezza fisica, operativa e di infrastruttura. Tuttavia,
@@ -233,13 +233,13 @@ e risorse associate nonché distribuire e rimuovere applicazioni {{site.data.key
 Per configurare la tua versione privata di {{site.data.keyword.Bluemix_notm}}:
 
 <ol>
-<li>Per iniziare, contatta il tuo rappresentante dell'account designato IBM oppure <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">contatta {{site.data.keyword.Bluemix_notm}} <img src="../icons/launch-glyph.svg" alt="icona link esterno"></a>.</li>
+<li>Per iniziare, contatta il tuo rappresentante dell'account designato IBM oppure <a href="https://console.ng.bluemix.net/?direct=classic/#/contactUs/cloudOEPaneId=contactUs" target="_blank">contatta {{site.data.keyword.Bluemix_notm}} <img src="../icons/launch-glyph.svg" alt="Icona link esterno"></a>.</li>
 <li>Determina insieme a IBM la quota per la tua istanza {{site.data.keyword.Bluemix_dedicated_notm}}. La quota mensile ricorrente si basa sui servizi dedicati
 che desideri utilizzare, oltre a una sottoscrizione a tutti i servizi pubblici
 {{site.data.keyword.Bluemix_notm}}. Riceverai quindi una fattura per tutto ciò che scegli di utilizzare
 al di fuori di tale accordo di sottoscrizione.</li>
 <li>Identifica le scadenze per ogni fase di configurazione della tua istanza di {{site.data.keyword.Bluemix_dedicated_notm}}. Per informazioni su ciascuna fase e sulle attività coinvolte, vedi <a href="/docs/dedicated/index.html#rolesresponsibilities">Ruoli e responsabilità {{site.data.keyword.Bluemix_dedicated_notm}}</a>.</li>
-<li>Seleziona la <a href="http://www.softlayer.com/data-centers" target="_blank">sede data center {{site.data.keyword.BluSoftlayer}} <img src="../icons/launch-glyph.svg" alt="icona link esterno"></a> per la tua istanza dedicata. Vengono creati quindi la tua piattaforma dedicata e il tuo account. Per l'account, devi identificare le persone all'interno della tua organizzazione
+<li>Seleziona la <a href="http://www.softlayer.com/data-centers" target="_blank">sede data center {{site.data.keyword.BluSoftlayer}} <img src="../icons/launch-glyph.svg" alt="Icona link esterno"></a> per la tua istanza dedicata. Vengono creati quindi la tua piattaforma dedicata e il tuo account. Per l'account, devi identificare le persone all'interno della tua organizzazione
 a cui assegnare i ruoli necessari per rendere operativa la tua istanza
 dedicata. Per informazioni sui ruoli che puoi assegnare, vedi <a href="/docs/dedicated/index.html#rolesresponsibilities">Ruoli e responsabilità {{site.data.keyword.Bluemix_dedicated_notm}}</a>.
 </li>
@@ -266,7 +266,7 @@ contatto anche per il supporto e la fatturazione.</li>
 Per la distribuzione e configurazione iniziale del tuo ambiente puoi prevedere un processo simile a quello elencato di seguito. Per i dettagli sui responsabili di ciascuna attività, vedi [Ruoli e responsabilità](index.html#rolesresponsibilities).
 
 <ol>
-<li>Seleziona il data center che verrà utilizzato per ospitare l'istanza dedicata. Per informazioni sulle opzioni dei data center, vedi <a href="http://www.softlayer.com/data-centers" target="_blank">Sede data center {{site.data.keyword.BluSoftlayer}} <img src="../icons/launch-glyph.svg" alt="icona link esterno"></a>.</li>
+<li>Seleziona il data center che verrà utilizzato per ospitare l'istanza dedicata. Per informazioni sulle opzioni dei data center, vedi <a href="http://www.softlayer.com/data-centers" target="_blank">Sede data center {{site.data.keyword.BluSoftlayer}} <img src="../icons/launch-glyph.svg" alt="Icona link esterno"></a>.</li>
 <li>Specifica i nomi di dominio per la distribuzione e gli ID che desideri utilizzare. Quando configuri l'istanza {{site.data.keyword.Bluemix_notm}}, ottieni tre domini. Puoi scegliere il prefisso per <code>*mycompany*.*region*.bluemix.net</code> e <code>*mycompany*.*region*.mybluemix.net</code>. Inoltre, puoi scegliere il nome completo per il terzo dominio.<br />
 <p>Puoi scegliere il numero di domini personalizzati desiderato. Tuttavia, sarai responsabile dei certificati dei domini personalizzati. Per ulteriori informazioni sulla creazione del dominio personalizzato, consulta <a href="/docs/manageapps/updapps.html#domain">Creazione e utilizzo di un dominio personalizzato</a>.</p></li>
 <li>Identifica un proprietario per l'account pubblico che viene utilizzato per rappresentare la tua azienda in {{site.data.keyword.Bluemix_notm}} pubblico. IBM utilizza questo account per tracciare l'utilizzo dei servizi diffusi.</li>
@@ -485,7 +485,7 @@ Un programma di bilanciamento del carico globale non solo garantisce la disponib
 * Fornisce il failover del sito in base alla verifica dell'integrità dell'applicazione
 * Utilizza un instradamento ponderato tra gli endpoint
 
-Puoi scegliere un programma di bilanciamento del carico globale come Akamai o Dyn. Per ulteriori informazioni sull'utilizzo di Akamai come programma di bilanciamento del carico globale, vedi [Global traffic management ![icona link esterno](../icons/launch-glyph.svg)](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp "Opens in new window"){: new_window}. Per ulteriori informazioni sull'utilizzo di Dyn come programma di bilanciamento del carico globale, vedi [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud ![icona link esterno](../icons/launch-glyph.svg)](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}.
+Puoi scegliere un programma di bilanciamento del carico globale come Akamai o Dyn. Per ulteriori informazioni sull'utilizzo di Akamai come programma di bilanciamento del carico globale, vedi [Global traffic management ![Icona link esterno](../icons/launch-glyph.svg)](https://www.akamai.com/us/en/solutions/products/web-performance/global-traffic-management.jsp "Opens in new window"){: new_window}. Per ulteriori informazioni sull'utilizzo di Dyn come programma di bilanciamento del carico globale, vedi [4 Reasons Businesses Are Taking Global Load Balancing to the Cloud ![Icona link esterno](../icons/launch-glyph.svg)](http://dyn.com/blog/4-reasons-businesses-are-taking-global-load-balancing-to-the-cloud/){: new_window}.
 
 ### Alta disponibilità
 {: #ha}
@@ -496,7 +496,7 @@ Queste tecnologie includono:
 
 <dl>
 <dt>Scalabilità in Cloud Foundry DEA</dt>
-<dd>Un <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">DEA (Droplet Execution Agent) <img src="../icons/launch-glyph.svg" alt="icona link esterno"></a> Cloud Foundry effettua verifiche dell'integrità nelle applicazioni eseguite al suo interno. Se si verifica un problema con l'applicazione o con lo stesso DEA, distribuisce ulteriori istanze dell'applicazione a un DEA alternativo per risolvere il problema. Per ulteriori informazioni, vedi <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy <img src="../icons/launch-glyph.svg" alt="icona link esterno"></a>.
+<dd>Un <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">DEA (Droplet Execution Agent) <img src="../icons/launch-glyph.svg" alt="Icona link esterno"></a> Cloud Foundry effettua verifiche dell'integrità nelle applicazioni eseguite al suo interno. Se si verifica un problema con l'applicazione o con lo stesso DEA, distribuisce ulteriori istanze dell'applicazione a un DEA alternativo per risolvere il problema. Per ulteriori informazioni, vedi <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy <img src="../icons/launch-glyph.svg" alt="Icona link esterno"></a>.
 <p>Per garantire l'elevata disponibilità per le tue applicazioni, hai bisogno di abbastanza risorse di elaborazione per bilanciare il carico e puoi inoltre richiederne ulteriori per supportare un possibile malfunzionamento. Se hai bisogno di ridimensionare il tuo ambiente incrementando il tuo pool DEA in modo da essere preparato a un malfunzionamento o per affrontare un'anomalia durante il caricamento delle tue istanze dell'applicazione, puoi collaborare con il tuo rappresentante IBM per ordinare ulteriori DEA e per verificare di avere l'hardware appropriato per supportare le risorse aggiunte.
 </p>
 </dd>

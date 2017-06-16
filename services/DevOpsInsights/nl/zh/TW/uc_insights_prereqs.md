@@ -21,6 +21,6 @@ lastupdated: "2017-03-14"
 管理 DevOps Connect 的系統必須具備下列必要條件：
 - 系統必須要有 Java Runtime Environment (JRE) 第 8 版或更新版本。
 - 系統 `PATH` 變數必須包括 JRE 的位置。
-- 系統必須容許 DevOps Connect 建立至 IBM Bluemix 的送出連線。
+- 系統必須容許 DevOps Connect 建立連往 IBM Bluemix 的送出連線。
 
 若要安裝 DevOps Connect 來與 Delivery Insights 搭配使用，請開啟 DevOps Insights 服務，然後按一下**設定 > Delivery Insights 設定**。

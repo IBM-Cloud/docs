@@ -10,17 +10,17 @@ lastupdated: "2017-04-11"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Detalles de app 
+# Detalles de app
 {: #manageapps}
 
-El panel de control Apps en la consola de {{site.data.keyword.Bluemix}} proporciona información de resumen de la aplicación que ha creado. La información de resumen incluye el nombre, el icono, el URL, el tiempo de ejecución, el estado de ejecución y las instancias de servicios vinculadas a la app.
+El panel de control Apps en la consola de {{site.data.keyword.Bluemix}} proporciona información de resumen de la aplicación que ha creado. La información de resumen incluye el nombre, el icono, el URL, el tiempo de ejecución, el estado de ejecución y las instancias de servicios vinculadas a la app. 
 {:shortdesc}
 
-Desde el panel de control Apps, puede ver el estado de cada aplicación. 
+Desde el panel de control Apps, puede ver el estado de cada aplicación.
 
 **Detenido o Desconocido (gris)**
 
-  La app se ha detenido o el estado es desconocido. El icono gris indica que la app está detenida o que se desconoce su estado. 
+  La app se ha detenido o el estado es desconocido. El icono gris indica que la app está detenida o que se desconoce su estado.
 
 **En ejecución (verde)**
 
@@ -34,7 +34,7 @@ Desde el panel de control Apps, puede ver el estado de cada aplicación.
 
   La app no está ejecutándose. El icono rojo indica que la app se ha iniciado, pero que no hay ninguna instancia en ejecución.
 
-Para ver más información sobre una app, pulse el nombre para abrir la página Visión general de la app. 
+Para ver más información sobre una app, pulse el nombre para abrir la página Visión general de la app.
 
 Cuando se despliega una app, puede iniciar, detener, reiniciar o (en el caso de las apps web) modificar el número de instancias y la cantidad de memoria que utiliza la app. En este momento, para aplicaciones web, {{site.data.keyword.Bluemix_notm}} no escala automáticamente la app en función de su carga, por lo que deberá gestionar este aspecto usted mismo.
 

@@ -16,14 +16,12 @@ lastupdated: "2017-02-14"
 # Supervisión y registro
 {: #monitoringandlogging}
 
-{{site.data.keyword.Bluemix}} es una plataforma de computación de {{site.data.keyword.IBM_notm}} en la nube para compilar, ejecutar y gestionar apps y servicios. {{site.data.keyword.Bluemix_notm}} combina una plataforma como servicio (PaaS) con una infraestructura como servicio (IaaS). Además, {{site.data.keyword.Bluemix_notm}} tiene un catálogo enriquecido de servicios de nube que se pueden integrar fácilmente con una PaaS e IaaS para crear aplicaciones empresariales rápidamente.
-{{site.data.keyword.Bluemix_notm}} incluye servicios integrados de supervisión y creación de registros en toda la plataforma.
+{{site.data.keyword.Bluemix}} es una plataforma de computación de {{site.data.keyword.IBM_notm}} en la nube para compilar, ejecutar y gestionar apps y servicios. {{site.data.keyword.Bluemix_notm}} combina una plataforma como servicio (PaaS) con una infraestructura como servicio (IaaS). Además, {{site.data.keyword.Bluemix_notm}} tiene un catálogo enriquecido de servicios de nube que se pueden integrar fácilmente con una PaaS e IaaS para crear aplicaciones empresariales rápidamente. {{site.data.keyword.Bluemix_notm}} incluye servicios integrados de supervisión y creación de registros en toda la plataforma. 
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} ofrece servicios de supervisión y creación de registros a lo largo de los distintos servicios de computación como, por ejemplo, Cloud Foundry y {{site.data.keyword.containershort}}. Puede desarrollar, ejecutar y gestionar aplicaciones en cualquier entorno de ejecución de computación sin la complejidad de tener que crear y mantener la infraestructura que se suele asociar al desarrollo y puesta en marcha de una app.
- 
+{{site.data.keyword.Bluemix_notm}} ofrece servicios de supervisión y creación de registros a lo largo de los distintos servicios de computación como, por ejemplo, Cloud Foundry y {{site.data.keyword.containershort}}. Puede desarrollar, ejecutar y gestionar aplicaciones en cualquier entorno de ejecución de computación sin la complejidad de tener que crear y mantener la infraestructura que se suele asociar al desarrollo y puesta en marcha de una app. 
 
-**Nota:** Las funcionalidades de supervisión y creación de registros están disponibles en la región US South y en la región United Kingdom. 
+**Nota:** Las funcionalidades de supervisión y creación de registros están disponibles en la región US South y en la región United Kingdom.
 
 Puede utilizar las funciones de supervisión de {{site.data.keyword.Bluemix_notm}} para recopilar y calcular automáticamente medidas clave del entorno y las aplicaciones. No se requiere ninguna instrumentación especial para recopilar medidas. Por ejemplo, puede utilizar la información que proporcionan las medidas de rendimiento para supervisar la forma en que se ejecuta un servicio en la nube, detectar cuellos de botella de recursos y supervisar el acuerdo de nivel de servicio (SLA). Por ejemplo, al analizar los datos de rendimiento de un servicio, puede detectar situaciones que pueden dar lugar a un cuello de botella del recurso, lo que afectaría al SLA de servicio de los clientes. Al emprender una acción temprana, puede evitar situaciones que podrían perjudicar a su negocio.  
 
@@ -60,9 +58,9 @@ Las funciones de registro de {{site.data.keyword.Bluemix_notm}} están integrada
 
 Cuando ejecuta sus apps en la nube, es posible que no pueda utilizar SSH ni FTP en la infraestructura en la que se ejecutan las apps para acceder a los registros, por ejemplo si ejecuta apps en Cloud Foundry. Por otro lado, puede ejecutar la app en {{site.data.keyword.containershort}}, otro tiempo de ejecución de cálculo disponible en {{site.data.keyword.Bluemix_notm}}, donde puede ejecutar SSH y acceder a los registros. Independientemente del tiempo de ejecución de cálculo, el acceso a los registros resulta crucial y {{site.data.keyword.Bluemix_notm}} proporciona una experiencia común para visualizar y analizar registros en la plataforma en la nube.
 
-{{site.data.keyword.Bluemix_notm}} registra los datos de registro que genera la plataforma Cloud Foundry y las aplicaciones de Cloud Foundry. En los registros puede ver los errores, avisos y mensajes informativos que se generan para la app. Para obtener más información sobre la creación de registros en Cloud Foundry, consulte [Creación de registros para apps de Cloud Foundry en {{site.data.keyword.Bluemix}}](logging_cf_apps.html#logging_bluemix_cf_apps). 
+{{site.data.keyword.Bluemix_notm}} registra los datos de registro que genera la plataforma Cloud Foundry y las aplicaciones de Cloud Foundry. En los registros puede ver los errores, avisos y mensajes informativos que se generan para la app. Para obtener más información sobre la creación de registros en Cloud Foundry, consulte [Creación de registros para apps de Cloud Foundry en {{site.data.keyword.Bluemix}}](logging_cf_apps.html#logging_bluemix_cf_apps).
 
-{{site.data.keyword.Bluemix_notm}} registra los datos de registro que genera {{site.data.keyword.containershort}}. Para obtener información sobre la creación de registros en {{site.data.keyword.containershort}}, consulte [Creación de registros en {{site.data.keyword.containershort}}](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_logs).    
+{{site.data.keyword.Bluemix_notm}} registra los datos de registro que genera {{site.data.keyword.containershort}}. Para obtener información sobre la creación de registros en {{site.data.keyword.containershort}}, consulte [Creación de registros en {{site.data.keyword.containershort}}](/docs/containers/monitoringandlogging/container_ml_logs.html#container_ml_logs).   
 
 
 Con la función de registro que proporciona {{site.data.keyword.Bluemix_notm}}, puede:

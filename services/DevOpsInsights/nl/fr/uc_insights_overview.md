@@ -28,8 +28,8 @@ Si vous ne disposez pas d'une chaîne d'outils ou de {{site.data.keyword.DRA_sho
 
 
 Si vous disposez déjà d'une chaîne d'outils, procédez comme suit pour ajouter Delivery Insights :
-1. Si vous ne disposez pas de l'outil {{site.data.keyword.DRA_short}}, ajoutez-le à votre chaîne d'outils. 
-1. Sur votre chaîne d'outils, cliquez sur l'outil {{site.data.keyword.DRA_short}}. 
+1. Si vous ne disposez pas de l'outil {{site.data.keyword.DRA_short}}, ajoutez-le à votre chaîne d'outils.
+1. Sur votre chaîne d'outils, cliquez sur l'outil {{site.data.keyword.DRA_short}}.
 1. Sur la page **Delivery Insights Setup**, suivez la procédure pour configurer DevOps Connect et connecter vos serveurs IBM UrbanCode Deploy.
 
 Après avoir configuré Delivery Insights et DevOps Connect, vous pouvez afficher les données des serveurs IBM UrbanCode Deploy dans Delivery Insights. Voir [Connexion de serveurs IBM UrbanCode Deploy à Delivery Insights](uc_insights_connect_ucd.html).
@@ -43,14 +43,14 @@ For questions or issues, see the [questions forum](https://developer.ibm.com/ans
 Delivery Insights vous permet de visualiser notamment les informations suivantes :
 
 - Statistiques sur le déploiement, dont la durée et le volume de déploiement dans le temps.
-- Statistiques sur le taux d'échec de déploiement par application et par environnement. 
-- Statistiques sur le déploiement de composant, avec le taux d'échec, l'heure et la durée du déploiement. 
+- Statistiques sur le taux d'échec de déploiement par application et par environnement.
+- Statistiques sur le déploiement de composant, avec le taux d'échec, l'heure et la durée du déploiement.
 
 ## Présentation des systèmes
 
 La topologie de Delivery Insights inclut une ou plusieurs installations sur site d'IBM UrbanCode Deploy <!-- (and optionally IBM UrbanCode Release) --> et l'utilitaire DevOps Connect.
 
-Le diagramme suivant représente une installation typique de ces systèmes. 
+Le diagramme suivant représente une installation typique de ces systèmes.
 
 ![Topologie de présentation d'UrbanCode Insights, avec des systèmes sur site client et IBM Cloud Services](images/uc_insights_overview_topology_multi_ucd.png)
 
@@ -63,6 +63,6 @@ Le diagramme suivant représente une installation typique de ces systèmes.
 
 - **IBM Bluemix DevOps Connect**, anciennement IBM UrbanCode Sync Utility, coordonne la communication entre des installations sur site d'IBM UrbanCode Deploy <!-- and IBM UrbanCode Release --> et des services hébergés par IBM, tels que UrbanCode Insights. DevOps Connect utilise la communication HTTPS sécurisée vers les serveurs sur site et l'authentification par jeton pour fournir des données à UrbanCode Insights.
 
-  DevOps Connect requiert des plug-in pour se connecter aux autres systèmes de la topologie. 
+  DevOps Connect requiert des plug-in pour se connecter aux autres systèmes de la topologie.
 
 - **Delivery Insights**, un composant de {{site.data.keyword.DRA_short}}, fournit des mesures sur l'activité de déploiement sur IBM UrbanCode Deploy, avec notamment les heures de déploiement et les taux d'échec par groupes d'environnements. L'autorisation est contrôlée par des comptes {{site.data.keyword.Bluemix}}.

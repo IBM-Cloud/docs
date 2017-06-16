@@ -13,7 +13,7 @@ lastupdated: "2016-09-06"
 # Cloud Foundry 앱 모니터링 및 로깅
 {: #monitoring_logging_cloud_foundry_apps}
 
-{{site.data.keyword.Bluemix_notm}}에는 실행 중인 앱의 로그 파일을 생성하는 로깅 메커니즘이 기본 제공됩니다. 로그를 통해 사용자 앱에 대해 생성된 오류, 경고 및 정보 메시지를 확인할 수 있습니다. 또한 로그 메시지를 로그 파일에 기록하도록 앱을 구성할 수도 있습니다. 로그 형식 및 로그를 보는 방법에 대한 자세한 정보는 [Cloud Foundry에서 실행 중인 앱 로깅](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps)을 참조하십시오.
+{{site.data.keyword.Bluemix_notm}}에는 실행 중인 앱의 로그 파일을 생성하는 로깅 메커니즘이 기본 제공됩니다. 로그에서 앱에 대해 생성된 오류, 경고 및 정보 메시지를 볼 수 있습니다. 또한 로그 메시지를 로그 파일에 기록하도록 앱을 구성할 수도 있습니다. 로그 형식 및 로그를 보는 방법에 대한 자세한 정보는 [Cloud Foundry에서 실행 중인 앱 로깅](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps)을 참조하십시오.
 
 앱을 모니터링하면 앱 개발을 보고 제어할 수 있습니다. 모니터링을 사용하여 다음 태스크를 수행할 수 있습니다.
 

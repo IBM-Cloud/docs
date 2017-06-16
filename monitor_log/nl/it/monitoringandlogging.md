@@ -23,7 +23,7 @@ Per impostazione predefinita {{site.data.keyword.Bluemix_notm}} raccoglie e visu
 
 Le funzionalità di registrazione {{site.data.keyword.Bluemix_notm}} sono integrate nella piattaforma e la raccolta dei dati è abilitata automaticamente per le risorse cloud. Per impostazione predefinita, {{site.data.keyword.Bluemix_notm}}, raccoglie e visualizza i log per le tue applicazioni, i runtime delle applicazioni e i runtime di calcolo in cui queste applicazioni vengono eseguite. Per ulteriori informazioni, vedi [Registrazione](logging/logging_bmx_ov.html#logging_bmx_ov).
 
-{{site.data.keyword.Bluemix_notm}} offre anche il monitoraggio dell'infrastruttura, disponibile per tutti i server, e dei report facilmente leggibili. Per ulteriori informazioni, vedi [Infrastructure Monitoring & Reporting ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/infrastructure-monitoring){: new_window}.
+{{site.data.keyword.Bluemix_notm}} offre anche il monitoraggio dell'infrastruttura, disponibile per tutti i server, e dei report facilmente leggibili. Per ulteriori informazioni, vedi [Infrastructure Monitoring & Reporting ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud-computing/bluemix/infrastructure-monitoring){: new_window}.
 
 Le funzionalità di monitoraggio e di registrazione sono disponibili nelle seguenti regioni:
 * Stati Uniti Sud

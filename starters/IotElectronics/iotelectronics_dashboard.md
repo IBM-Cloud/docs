@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-05-30"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -12,7 +12,7 @@ lastupdated: "2017-03-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Managing your data and devices
+# Using the dashboard to manage your data and devices
 {: #iot4e_dashboard}
 View data from your registered devices and manage your devices and users on
 {{site.data.keyword.iot_full}} with the {{site.data.keyword.iotelectronics}} dashboard.
@@ -23,18 +23,6 @@ Use the {{site.data.keyword.iotelectronics}} dashboard to
 - Map users to appliances
 - Perform bulk actions such as adding and deleting large numbers of appliances
 - Extract appliance data
-
-## Opening the dashboard
-{: #iot4e_opendashboard}
-
-**Important:** Before you can use the dashboard for the first time, you must [enable it](#iot4e_enabledashboard).
-
-To open the dashboard
-1. Open your {{site.data.keyword.Bluemix_notm}} dashboard and click the name of the {{site.data.keyword.iot_short_notm}} service.  
-
-    **Tip:** The service name ends with `iotf-service` and is described as *Internet of Things Platform* in the Service Offering column.
-2. On the Welcome page, click **Launch**.
-3. On the menu, select **Electronics**.
 
 ## Enabling the dashboard
 {: #iot4e_enabledashboard}
@@ -80,3 +68,15 @@ Enable the {{site.data.keyword.iotelectronics}} dashboard within {{site.data.key
     ![Platform configuration](images/IoT4E_Platform_config.svg "Platform configuration")
 
 4. You can now [open the {{site.data.keyword.iotelectronics}} dashboard](#iot4e_opendashboard) in {{site.data.keyword.iot_short_notm}}.
+
+## Opening the dashboard
+{: #iot4e_opendashboard}
+
+**Important:** Before you can use the dashboard for the first time, you must [enable it](#iot4e_enabledashboard).
+
+To open the dashboard
+1. Open your {{site.data.keyword.Bluemix_notm}} dashboard and click the name of the {{site.data.keyword.iot_short_notm}} service.  
+
+    **Tip:** The service name ends with `iotf-service` and is described as *Internet of Things Platform* in the Service Offering column.
+2. On the Welcome page, click **Launch**.
+3. On the menu, select **Electronics**.

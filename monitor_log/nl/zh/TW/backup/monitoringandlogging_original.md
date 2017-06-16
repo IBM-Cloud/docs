@@ -25,7 +25,7 @@ lastupdated: "2017-02-01"
 ## 監視及記載 Cloud Foundry 應用程式
 {: #monitoring_logging_bluemix_apps}
 
-{{site.data.keyword.Bluemix_notm}} 具有內建記載機制，可產生執行中應用程式的日誌檔。在日誌中，您可以檢視針對應用程式所產生的錯誤、警告及參考訊息。此外，您也可以配置應用程式將日誌訊息寫入日誌檔中。如需日誌格式及日誌檢視方式的相關資訊，請參閱 [Cloud Foundry 上執行之應用程式的記載](#logging_for_bluemix_apps)。
+{{site.data.keyword.Bluemix_notm}} 具有內建記載機制，可產生執行中應用程式的日誌檔。在日誌中，您可以檢視針對應用程式所產生的錯誤、警告及參考訊息。此外，您也可以配置應用程式將日誌訊息寫入日誌檔中。如需日誌格式及日誌檢視方式的相關資訊，請參閱 [Cloud Foundry 上執行之應用程式的記載功能](#logging_for_bluemix_apps)。
 
 監視應用程式可讓您查看及控制應用程式部署。運用監視，您可以完成下列作業：
 
@@ -94,7 +94,7 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 <dd>日誌聚集器：LGR 元件提供記載服務的相關資訊。</dd>
 
 <dt><strong>RTR</strong></dt>
-<dd>路由器：RTR 元件會將 HTTP 要求的相關資訊提供給應用程式。</dd>
+<dd>路由器：RTR 元件會提供向應用程式發出之 HTTP 要求的相關資訊。</dd>
 
 <dt><strong>STG</strong></dt>
 <dd>編譯打包：STG 元件提供應用程式如何編譯打包或重新編譯打包的相關資訊。</dd>
@@ -186,7 +186,7 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 <p>當您將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，請使用 **cf logs** 指令來顯示來自應用程式以及來自與其互動之系統元件的日誌。您可以在 cf 指令行介面中鍵入下列指令。如需 cf 日誌的相關資訊，請參閱 <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html" target=" _blank">Log Types and Their Messages in Cloud Foundry <img src="../icons/launch-glyph.svg" alt="外部鏈結圖示"></a></p>
 <dl>
 <dt><strong>cf logs <var class="keyword varname">appname</var> --recent</strong></dt>
-<dd>從最新到最舊顯示日誌。</dd>
+<dd>顯示最近的日誌。</dd>
 
 <dt><strong>cf logs <var class="keyword varname">appname</var></strong></dt>
 <dd>顯示您執行此指令時所產生的日誌。</dd>
@@ -220,7 +220,7 @@ yyyy-MM-ddTHH:mm:ss:SS-0500 [App/0]      OUT <message>
 {: #viewing_logs_external}
 
 
-產生日誌時，在短暫延遲之後，您就可以檢視外部日誌主機中的訊息，而這些訊息與您從 {{site.data.keyword.Bluemix_notm}} 使用者介面或 cf 指令行介面檢視的訊息類似。如果您的應用程式有多個實例，則會產生日誌，而且您可以查看應用程式的所有日誌。此外，在應用程式損毀與部署之間會持續保存日誌。
+產生日誌時，在短暫延遲之後，您就可以檢視外部日誌主機中的訊息，而這些訊息與您從 {{site.data.keyword.Bluemix_notm}} 使用者介面或 cf 指令行介面檢視的訊息類似。如果您的應用程式有多個實例，則會聚集日誌，而且您可以查看應用程式的所有日誌。此外，在應用程式損毀與部署之間會持續保存日誌。
 
 **附註：**您在指令行介面中檢視的日誌不是 syslog 格式，而且可能未完全符合外部日誌主機中所顯示的訊息。
 
@@ -419,7 +419,7 @@ Jane 在她的 Splunk Web 介面中看到日誌串流。雖然 Jane 所安裝的
 {: #hybrid_apps_logs_ov}
 
 
-在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 中，Cloud Foundry 應用程式有內建的記載。您可以在 {{site.data.keyword.Bluemix_notm}} 主控台上檢閱從您的應用程式收集到的資料。
+在 {{site.data.keyword.Bluemix_dedicated_notm}} 及 {{site.data.keyword.Bluemix_local_notm}} 中，Cloud Foundry 應用程式有內建的記載功能。您可以在 {{site.data.keyword.Bluemix_notm}} 主控台上檢閱從您的應用程式收集到的資料。
 {:shortdesc}
 
 Cloud Foundry 應用程式會使用 Cloud Foundry 日誌聚集器，從應用程式之外監視並轉遞日誌。您不需要在應用程式內安裝代理程式。

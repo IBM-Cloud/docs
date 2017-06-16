@@ -53,7 +53,7 @@ lastupdated: "2017-04-06"
 ##  從 Web 瀏覽器導覽至 Kibana 儀表板
 {: #launch_Kibana_from_browser}
 
-用來過濾 Kibana 中顯示資料的查詢，會擷取 {{site.data.keyword.Bluemix_notm}} 組織中某個空間的日誌項目。Kibana 顯示的日誌資訊，包括部署在您登入之 {{site.data.keyword.Bluemix_notm}} 組織的空間內的所有資源記錄。
+用來過濾 Kibana 中顯示資料的查詢，會擷取 {{site.data.keyword.Bluemix_notm}} 組織中某個空間的日誌項目。Kibana 顯示的日誌資訊，包括部署在 {{site.data.keyword.Bluemix_notm}} 組織中您登入之空間內的所有資源記錄。
 
 請完成下列步驟，以從瀏覽器啟動 Kibana：
 

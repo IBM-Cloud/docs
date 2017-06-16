@@ -12,10 +12,10 @@ lastupdated: "2017-03-31"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Deployment Risk (Beta)
+# Deployment Risk
 {: #gettingstarted}
 
-{{site.data.keyword.DRA_short}} 提供了有关部署的丰富信息，尤其是风险方面。您可以使用这些信息在 Delivery Pipeline 中通过策略和检测点来自动保障质量。
+{{site.data.keyword.DRA_short}} 提供了有关部署（尤其是风险方面）的大量信息。您可以使用这些信息在 Delivery Pipeline 中通过策略和检测点来自动保障质量。
 {:shortdesc}
 
 在工具链中打开 {{site.data.keyword.DRA_short}} 后，单击 **Deployment Risk**。在其中，可以了解编译打包和生产环境中应用程序的概况，并可向下钻取以了解代码覆盖、测试性能和安全报告。仪表板中会自动填充管道的 {{site.data.keyword.DRA_short}} 测试生成的最新信息。
@@ -95,7 +95,7 @@ Deployment Risk 与 {{site.data.keyword.deliverypipeline}}（{{site.data.keyword
 
 1. 键入描述并选择格式。
 
-2. 指定必须通过声明成功的测试用例百分比。
+2. 指定必须通过并声明成功的测试用例百分比。
 
 3. 定义重要的任何测试用例。
 
@@ -109,7 +109,7 @@ Deployment Risk 与 {{site.data.keyword.deliverypipeline}}（{{site.data.keyword
 
 1. 键入描述并选择格式。
 
-2. 指定必须通过声明成功的测试用例百分比。
+2. 指定必须通过并声明成功的测试用例百分比。
 
 3. 定义重要的任何测试用例。
 
@@ -187,7 +187,7 @@ Deployment Risk 与 {{site.data.keyword.deliverypipeline}}（{{site.data.keyword
 5. 填写其余字段，以上传特定测试类型的测试结果。 
 
  1. 选择与要使用的 {{site.data.keyword.DRA_short}} 策略中所定义类型相匹配的度量类型。
- 2. 输入结果文件位置。此位置相对于工作目录。 
+ 2. 输入结果文件位置。此位置是工作目录的相对位置。 
 
 6. 如果要在同一作业中上传另一种测试类型的结果，请填写前缀为*其他*的字段。
 7. 单击**保存**以返回管道。
@@ -221,7 +221,7 @@ Deployment Risk 与 {{site.data.keyword.deliverypipeline}}（{{site.data.keyword
 ### 定义检测点
 {: #configure_pipeline_gates}
 
-{{site.data.keyword.DRA_short}} 检测点用于检查测试结果是否符合所定义的策略。如果不符合策略，那么缺省情况下 {{site.data.keyword.DRA_short}} 检测点将失败。您还可以将检测点配置为以建议角色执行操作，以允许管道在即便发生失败后仍向前推进。
+{{site.data.keyword.DRA_short}} 检测点用于检查测试结果是否符合所定义的策略。如果不符合策略，那么缺省情况下 {{site.data.keyword.DRA_short}} 检测点将失败。您还可以将检测点配置为以建议角色执行操作，以允许管道在即便发生失败后仍继续运行。
 
 Deployment Risk 仪表板依赖于编译打包部署作业后存在检测点。如果要使用该仪表板，请确保您在部署到编译打包环境后，但在部署到生产环境之前拥有检测点。
 
@@ -250,7 +250,7 @@ Deployment Risk 仪表板依赖于编译打包部署作业后存在检测点。�
 将 {{site.data.keyword.DRA_full}} 添加到开放工具链并定义其监视的策略之后，可以将其与 Jenkins 项目相集成。
  
 
-IBM Cloud DevOps for Jenkins 插件可将 Jenkins 项目与工具链相集成。*工具链*是一组工具集成，用于支持开发、部署和操作任务。工具链的整体能力大于其个别工具集成的总和。开放工具链是 {{site.data.keyword.contdelivery_full}} 服务的组成部分。要了解有关 {{site.data.keyword.contdelivery_short}} 服务的更多信息，请参阅[其服务文档](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/cd_about.html)。
+IBM Cloud DevOps for Jenkins 插件可将 Jenkins 项目与工具链相集成。*工具链*是一组工具集成，用于支持开发、部署和操作任务。工具链的整体能力大于其各个单独工具集成的总和。开放工具链是 {{site.data.keyword.contdelivery_full}} 服务的组成部分。要了解有关 {{site.data.keyword.contdelivery_short}} 服务的更多信息，请参阅[其服务文档](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/cd_about.html)。
 
 安装 IBM Cloud DevOps 插件后，可以将测试结果发布到 {{site.data.keyword.DRA_short}}，添加自动质量检测点以及跟踪部署风险。您还可以将作业通知发送给工具链中的其他工具，例如 Slack 和 PagerDuty。为了帮助您跟踪部署，工具链可以将部署消息添加到 Git 落实及其相关的 Git 或 JIRA 问题。此外，还可以在工具链的“连接”页面上查看部署。 
 
@@ -357,7 +357,7 @@ Deployment Risk 仪表板依赖于编译打包部署作业后存在检测点。�
 
 2. 在包含检测点的作业中，单击检测点的名称。
 
-3. 在日志视图中，找到“`在此处检查 {{site.data.keyword.DRA_short}} 报告`”消息并单击链接以打开报告。
+3. 在日志视图中，找到“`在此处查看 {{site.data.keyword.DRA_short}} 报告`”消息并单击链接以打开报告。
 
 
 

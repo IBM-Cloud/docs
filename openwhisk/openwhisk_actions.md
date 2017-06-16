@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-  lastupdated: "2017-06-01"
+lastupdated: "2017-06-01"
 
 ---
 
@@ -354,7 +354,8 @@ JavaScript functions that run asynchronously may need to return the activation r
  ```json
   {
       "start": 1455881628103,
-      "end":   1455881648126
+      "end":   1455881648126,
+      ...
   }
   ```
 
@@ -445,7 +446,7 @@ exports.main = myAction;
 ```
 {: codeblock}
 
-Note that the action is exposed through `exports.main`; the action handler itself can have any name, as long as it conforms to the usual signature of accepting an object and returning an object (or a `Promise` of an object). Per Node.js convention, you must either name this file `index.js` or specify the the file name you prefer as the `main` property in package.json.
+Note that the action is exposed through `exports.main`; the action handler itself can have any name, as long as it conforms to the usual signature of accepting an object and returning an object (or a `Promise` of an object). Per Node.js convention, you must either name this file `index.js` or specify the file name you prefer as the `main` property in package.json.
 
 To create an OpenWhisk action from this package:
 
@@ -646,6 +647,7 @@ wsk action create helloPython --kind python:3 helloPython.zip
 While the steps above are shown for Python 3.6, you can do the same for Python 2.7 as well.
 
 ## Creating Swift actions
+{: #openwhisk_actions_swift}
 
 The process of creating Swift actions is similar to that of JavaScript actions. The following sections guide you through creating and invoking a single swift action, and adding parameters to that action.
 
@@ -705,18 +707,19 @@ When you create an OpenWhisk Swift action with a Swift source file, it has to be
 To avoid the cold-start delay, you can compile your Swift file into a binary and then upload to OpenWhisk in a zip file. As you need the OpenWhisk scaffolding, the easiest way to create the binary is to build it within the same environment as it will be run in. These are the steps:
 
 - Run an interactive Swift action container.
-```
-docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
-```
-{: pre}
+  ```
+  docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
+  ```
+  {: pre}
+  This puts you in a bash shell within the Docker container. 
 
-    This puts you in a bash shell within the Docker container. Execute the following commands within it:
-
+  Execute the following commands within it:
 - Install zip for convenience, to package the binary
   ```
   apt-get install -y zip
   ```
   {: pre}
+
 - Copy the source code and prepare to build it
   ```
   cp /owexec/hello.swift /swift3Action/spm-build/main.swift 
@@ -730,11 +733,13 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   echo '_run_main(mainFunction:main)' >> /swift3Action/spm-build/main.swift
   ```
   {: pre}
-- zBuild and link
+
+- Build and link
   ```
   /swift3Action/spm-build/swiftbuildandlink.sh
   ```
   {: pre}
+
 - Create the zip archive
   ```
   cd /swift3Action/spm-build
@@ -743,17 +748,21 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   ```
   zip /owexec/hello.zip .build/release/Action
   ```
+  {: pre}
+
 - Exit the Docker container
   ```
   exit
   ```
   {: pre}
-This has created hello.zip in the same directory as hello.swift. 
--Upload it to OpenWhisk with the action name helloSwifty:
+  This has created hello.zip in the same directory as hello.swift. 
+
+- Upload it to OpenWhisk with the action name helloSwifty:
   ```
   wsk action update helloSwiftly hello.zip --kind swift:3
   ```
   {: pre}
+
 - To check how much faster it is, run 
   ```
   wsk action invoke helloSwiftly --blocking

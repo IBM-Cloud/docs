@@ -12,10 +12,10 @@ lastupdated: "2017-03-31"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Deployment Risk (Bêta)
+# Deployment Risk
 {: #gettingstarted}
 
-{{site.data.keyword.DRA_short}} fournit un grand nombre d'informations sur vos déploiements, et en particulier sur les risques. Vous pouvez l'utiliser pour automatiser la protection de la qualité dans votre pipeline de distribution à l'aide de politiques et de jalons.
+{{site.data.keyword.DRA_short}} fournit un grand nombre d'informations sur vos déploiements, et en particulier sur les risques. Vous pouvez l'utiliser pour automatiser la protection de la qualité dans votre pipeline de distribution à l'aide de politiques et de jalons. 
 {:shortdesc}
 
 Après avoir ouvert {{site.data.keyword.DRA_short}} à partir de la chaîne d'outils, cliquez sur **Deployment Risk**. A partir de là, vous obtenez une présentation des applications de vos environnements de préproduction et de production, et vous pouvez effectuer une exploration en aval pour comprendre la couverture de code, les performances du test et les rapports de sécurité. Les tableaux de bord sont automatiquement remplis avec les informations les plus récentes provenant des tests {{site.data.keyword.DRA_short}} de vos pipelines.
@@ -23,27 +23,27 @@ Après avoir ouvert {{site.data.keyword.DRA_short}} à partir de la chaîne d'ou
 ## A propos de Deployment Risk
 {: #about}
 
-Vous pouvez utiliser Deployment Risk pour appliquer des normes de qualité dans votre chaîne d'outils grâce à des politiques et des jalons. Les politiques sont des ensembles de règles ; les jalons appliquent les politiques. Vous pouvez ainsi créer une politique "Test d'unité et couverture de test" qui exige des générations qu'elles répondent à des normes de test d'unité et de couverture de test. Vous pouvez ensuite ajouter un jalon qui se réfère à cette politique dans votre processus de distribution continue. Les générations qui ne satisfont pas la politique sont arrêtées au jalon.  
+Vous pouvez utiliser Deployment Risk pour appliquer des normes de qualité dans votre chaîne d'outils grâce à des politiques et des jalons. Les politiques sont des ensembles de règles ; les jalons appliquent les politiques. Vous pouvez ainsi créer une politique "Test d'unité et couverture de test" qui exige des générations qu'elles répondent à des normes de test d'unité et de couverture de test. Vous pouvez ensuite ajouter un jalon qui se réfère à cette politique dans votre processus de distribution continue. Les générations qui ne satisfont pas la politique sont arrêtées au jalon. 
 
-Deployment Risk fonctionne avec {{site.data.keyword.deliverypipeline}}, qui fait partie d'{{site.data.keyword.contdelivery_full}}, et avec les projets Jenkins. A un niveau élevé, les instructions d'utilisation de l'un ou de l'autre sont similaires.   
+Deployment Risk fonctionne avec {{site.data.keyword.deliverypipeline}}, qui fait partie d'{{site.data.keyword.contdelivery_full}}, et avec les projets Jenkins. A un niveau élevé, les instructions d'utilisation de l'un ou de l'autre sont similaires.  
 
-Si vous utilisez {{site.data.keyword.deliverypipeline}}, suivez les étapes ci-après : 
+Si vous utilisez {{site.data.keyword.deliverypipeline}}, suivez les étapes ci-après :
 
 1. [Créez des politiques et des règles](#policies_and_rules) qui seront gérées par {{site.data.keyword.DRA_short}}.
 2. [Préparez les étapes de votre pipeline](#integrate_pipeline) en vue de l'intégration avec {{site.data.keyword.DRA_short}}.
 
 3. [Créez ou éditez des travaux de test](#configure_pipeline_jobs) dans le pipeline qui téléchargent les résultats vers {{site.data.keyword.DRA_short}}.
-4. [Ajoutez des jalons](#configure_pipeline_gates) au pipeline qui prend les décisions de promotion en fonction de ces résultats et de vos politiques. 
+4. [Ajoutez des jalons](#configure_pipeline_gates) au pipeline qui prend les décisions de promotion en fonction de ces résultats et de vos politiques.
 5. Exécutez le pipeline et [affichez les résultats](#view_results).
 
 Si vous utilisez Jenkins, procédez comme suit :
 
 1. [Créez des politiques et des règles](#policies_and_rules) qui seront gérées par {{site.data.keyword.DRA_short}}.
 2. [Installez et configurez le plug-in Jenkins](#integrate_jenkins).
-3. [Créez les travaux de test et les jalons comme décrit dans les instructions du plug-in](#integrate_jenkins). Les tests téléchargent les résultats vers {{site.data.keyword.DRA_short}} en vue de l'analyse et les jalons utilisent ces résultats pour prendre les décisions quant aux promotions. 
+3. [Créez les travaux de test et les jalons comme décrit dans les instructions du plug-in](#integrate_jenkins). Les tests téléchargent les résultats vers {{site.data.keyword.DRA_short}} en vue de l'analyse et les jalons utilisent ces résultats pour prendre les décisions quant aux promotions.
 4. Exécutez le projet et [affichez les résultats](#view_results). 
 
-Peu importe la manière dont vous générez et déployez votre code, les résultats sont identiques : les générations qui satisfont les normes passent les jalons Deployment Risk et les générations qui ne répondent pas aux normes sont arrêtées.  
+Peu importe la manière dont vous générez et déployez votre code, les résultats sont identiques : les générations qui satisfont les normes passent les jalons Deployment Risk et les générations qui ne répondent pas aux normes sont arrêtées. 
 
 ## Prérequis
 {: #prerequisites}
@@ -256,7 +256,7 @@ Le plug-in fournit des actions et des interfaces de ligne de commande post-gén�
 ### Prérequis
 {: #jenkins_prerequisites}
 
-Vous devez avoir accès à un serveur qui exécute un projet Jenkins. 
+Vous devez avoir accès à un serveur qui exécute un projet Jenkins.
 
 ### Création d'une chaîne d'outils
 {: #jenkins_create}
@@ -288,11 +288,11 @@ Ensuite, sur votre serveur Jenkins, installez le plug-in.
 
 Une fois le plug-in installé, vous pouvez intégrer {{site.data.keyword.DRA_short}} dans votre projet Jenkins. 
 
-Suivez la procédure ci-après pour utiliser les jalons et le tableau de bord de Deployment Risk avec votre projet. 
+Suivez la procédure ci-après pour utiliser les jalons et le tableau de bord de Deployment Risk avec votre projet.
 
-1. Ouvrez la configuration de n'importe quel travail dont vous disposez, comme une génération, un test ou un déploiement. 
+1. Ouvrez la configuration de n'importe quel travail dont vous disposez, comme une génération, un test ou un déploiement.
 
-2. Ajoutez une action post-génération pour le type correspondant : 
+2. Ajoutez une action post-génération pour le type correspondant :
 
    * Pour les travaux de génération, utilisez **Publish build information to IBM Cloud DevOps**.
    
@@ -300,7 +300,7 @@ Suivez la procédure ci-après pour utiliser les jalons et le tableau de bord de
    
    * Pour les travaux de déploiement, utilisez **Publish deployment information to IBM Cloud DevOps**.
    
-3. Renseignez les zones requises. Elles varient selon le type de travail.  
+3. Renseignez les zones requises. Elles varient selon le type de travail. 
 
    * Dans la liste **Credentials**, sélectionnez votre ID et votre mot de passe {{site.data.keyword.Bluemix_notm}}. S'ils ne sont pas sauvegardés dans Jenkins, cliquez sur **Add** pour les sauvegarder. Testez votre connexion à {{site.data.keyword.Bluemix_notm}} en cliquant sur **Test Connection**.
    

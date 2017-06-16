@@ -20,7 +20,7 @@ lastupdated: "2017-03-20"
 
 每个执行环境（包括移动应用程序和 Web 应用程序）都与其他应用程序的执行环境相隔离。即使这些应用程序位于同一物理机器上，其执行环境也相互隔离。下图显示了 {{site.data.keyword.Bluemix_notm}} Cloud Foundry 如何管理应用程序部署的基本流程：
 
-![部署应用程序](images/deploy.png)
+![部署应用程序](images/deploy-diego.png)
 
 图 3. 部署应用程序
 
@@ -33,7 +33,7 @@ lastupdated: "2017-03-20"
 
 下图显示部署了多个应用程序的虚拟服务器（也称为 Droplet Execution Agent (DEA)）的结构：
 
-![虚拟服务器的设计](images/container.png)
+![虚拟服务器的设计](images/container-diego.png)
 
 图 4. 虚拟服务器的设计
 
@@ -41,7 +41,7 @@ lastupdated: "2017-03-20"
 
 部署应用程序后，如果该应用程序具有 Web 接口（例如 Java Web 应用程序）或其他基于 REST 的服务（例如向移动应用程序公开的移动服务），那么该应用程序的用户可以使用正常的 HTTP 请求与其进行通信。
 
-![调用 {{site.data.keyword.Bluemix_notm}} 应用程序](images/execute.png)
+![调用 {{site.data.keyword.Bluemix_notm}} 应用程序](images/execute-diego.png)
 
 图 5. 调用 {{site.data.keyword.Bluemix_notm}} 应用程序
 
@@ -61,7 +61,7 @@ lastupdated: "2017-03-20"
 
 下图显示了高层次的 {{site.data.keyword.Bluemix_notm}} Cloud Foundry 体系结构。
 
-![{{site.data.keyword.Bluemix_notm}} 体系结构](images/arch.png)
+![{{site.data.keyword.Bluemix_notm}} 体系结构](images/arch-diego.png)
 
 图 1. {{site.data.keyword.Bluemix_notm}} Cloud Foundry 体系结构
 

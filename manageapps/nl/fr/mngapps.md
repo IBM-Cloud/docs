@@ -13,10 +13,10 @@ lastupdated: "2017-04-11"
 # Détails de l'application
 {: #manageapps}
 
-Le tableau de bord Applications de la console {{site.data.keyword.Bluemix}} fournit des informations récapitulatives sur les applications que vous avez créées. Ces informations récapitulatives incluent le nom, l'icône, l'URL, le contexte d'exécution, le statut d'exécution, ainsi que les instances de service liées à l'application.
+Le tableau de bord Applications de la console {{site.data.keyword.Bluemix}} fournit des informations récapitulatives sur les applications que vous avez créées. Ces informations récapitulatives incluent le nom, l'icône, l'URL, le contexte d'exécution, le statut d'exécution, ainsi que les instances de service liées à l'application. 
 {:shortdesc}
 
-Depuis le tableau de bord Applications, vous pouvez afficher le statut de chaque application. 
+Depuis le tableau de bord Applications, vous pouvez afficher le statut de chaque application.
 
 **Arrêté ou Inconnu (gris)**
 

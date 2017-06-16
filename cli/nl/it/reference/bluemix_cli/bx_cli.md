@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -27,7 +27,9 @@ L'interfaccia di riga comando (CLI) {{site.data.keyword.Bluemix_notm}} fornisce 
 <dt>Endpoint</dt>
 <dd>Un endpoint API deve essere impostato mediante <code>bluemix api</code> prima di utilizzare il comando.</dd>
 <dt>Accesso</dt>
-<dd>L'accesso utilizzando il comando <code>bluemix login</code> è richiesto prima di utilizzare questo comando. <b>Se stai eseguendo l'accesso con l'ID federato, utilizza l'opzione '--sso' per autenticarti con un passcode monouso o utilizza '--apikey' per autenticarti con la chiave API</b>. Per creare le chiavi API, vai alla console {{site.data.keyword.Bluemix_notm}} “Gestisci” -> “Sicurezza” -> “Chiavi API Bluemix”</dd>
+<dd>L'accesso utilizzando il comando <code>bluemix login</code> è richiesto prima di utilizzare questo comando.
+Se stai eseguendo l'accesso con l'ID federato, utilizza l'opzione '--sso' per autenticarti con la passcode monouso o utilizza '--apikey' per autenticarti con la chiave API. Vai alla console {{site.data.keyword.Bluemix_notm}} **Gestisci** &gt; **Sicurezza** &gt; **Chiavi API Bluemix** per creare le chiavi API.
+</dd>
 <dt>Destinazione</dt>
 <dd>Il comando <code>bluemix target</code> deve essere utilizzato per impostare un'organizzazione e uno spazio prima di utilizzare questo comando.</dd>
 <dt>Docker</dt>
@@ -347,7 +349,7 @@ bluemix login [OPZIONI...]
   <dt> -c <i>ID_ACCOUNT</i> (facoltativo) </dt>
   <dd> ID dell'account di destinazione</dd>
   <dt> -o <i>NOME_ORGANIZZAZIONE</i> (facoltativo) </dt>
-  <dd> Nome dell'organizzazione di destinazione</dd>
+  <dd> Nome dell'organizzazione di destinazione </dd>
   <dt> -s <i>NOME_SPAZIO</i> (facoltativo) </dt>
   <dd> Nome dello spazio di destinazione</dd>
   <dt> --skip-ssl-validation (facoltativo) </dt>
@@ -539,7 +541,7 @@ bluemix config --locale CLEAR
 ## bluemix curl
 {: #bluemix_curl}
 
-Eseguire una richiesta HTTP raw per {{site.data.keyword.Bluemix_notm}}. *Content-Type* è impostato su *application/json* come valore predefinito. Questo comando invia la richiesta al MCCP (Multi Cloud Control Proxy) {{site.data.keyword.Bluemix_notm}}. Per i percorsi supportati, fai riferimento alle definizioni del percorso API nella [Documentazione API CloudFoundry ](http://apidocs.cloudfoundry.org/){: new_window} ![icona link esterno](../../../icons/launch-glyph.svg).
+Eseguire una richiesta HTTP raw per {{site.data.keyword.Bluemix_notm}}. *Content-Type* è impostato su *application/json* come valore predefinito. Questo comando invia la richiesta al MCCP (Multi Cloud Control Proxy) {{site.data.keyword.Bluemix_notm}}. Per i percorsi supportati, fai riferimento alle definizioni del percorso API nella [Documentazione API CloudFoundry ](http://apidocs.cloudfoundry.org/){: new_window} ![Icona link esterno](../../../icons/launch-glyph.svg).
 
 ```
 bluemix curl PERCORSO [OPZIONI...]

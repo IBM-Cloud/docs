@@ -26,9 +26,9 @@ Ci-après figurent des réponses sur des questions fréquentes concernant l'util
 {: #logging_qa_no_JSON_data_kibana}
 
 Lorsque des journaux JSON sont envoyés aux journaux Docker sous la sortie standard (stdout), ils ne sont pas analysés
-en tant que fichiers JSON, et, par conséquent, ne peuvent pas être triés d'après la zone @timestamp pour modifier leur ordre.  
+en tant que fichiers JSON, et, par conséquent, ne peuvent pas être triés d'après la zone @timestamp pour modifier leur ordre. 
 
-Les valeurs @timestamp affichées correspondent à leur horodatage lors de leur réception par ElasticSearch.  
+Les valeurs @timestamp affichées correspondent à leur horodatage lors de leur réception par ElasticSearch. 
 
 Les horodatages correspondant à la génération de ces
 journaux dans le conteneur sont affichés dans le cadre de la zone de message.

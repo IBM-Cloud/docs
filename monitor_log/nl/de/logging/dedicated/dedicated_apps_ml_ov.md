@@ -34,7 +34,7 @@ Cloud Foundry-Apps verwenden Cloud Foundry Loggregator, um Protokolle außerhalb
 vCPU | 19 | 57 |
 Hauptspeicher | 80 GB | 240 GB |
 Lokaler Speicher | 2,98 TB | 8,94 TB |
-{: caption="Tabelle 1. Hardwarevoraussetzungen für die Protokollierung für {{site.data.keyword.Bluemix_local_notm:}}" caption-side="top"}
+{: caption="Tabelle 1. Protokollierung von Hardwarevoraussetzungen für {{site.data.keyword.Bluemix_local_notm:}}" caption-side="top"}
 
 ## Konfiguration
 
@@ -53,8 +53,8 @@ Für die Apps, die Sie unter {{site.data.keyword.Bluemix_notm}} Dedicated und {{
 Führen Sie die folgenden Schritte aus, um die Protokolle für Ihre Apps anzuzeigen.
 1. Wählen Sie eine aktive App aus.
 2. Klicken Sie auf **Protokolle**. In der Ansicht **Protokolle** können Sie die Protokolle für Ihre aktive App einsehen.
-4. Klicken Sie auf die Schaltfläche **Erweiterte Ansicht**. Die **erweiterte Ansicht** zeigt mehr Details der Protokolle und verwendet hierzu Kibana, ein Visualisierungstool, das mithilfe von Protokollen und Daten mit Zeitmarken angepasste Visualisierungen erstellt. Weitere Informationen zur Verwendung der erweiterten Ansicht finden Sie in der Veröffentlichung [Kibana User Guide ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}. 
+4. Klicken Sie auf die Schaltfläche **Erweiterte Ansicht**. Die **erweiterte Ansicht** zeigt mehr Details der Protokolle und verwendet hierzu Kibana, ein Visualisierungstool, das mithilfe von Protokollen und Daten mit Zeitmarken angepasste Visualisierungen erstellt. Weitere Informationen zur Verwendung der erweiterten Ansicht finden Sie in der Veröffentlichung [Kibana User Guide ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}.
 
-Als Nächstes können Sie ein Kibana-Dashboard anpassen. Weitere Informationen finden Sie unter [Erweiterte Protokollanalyse mit Kibana](../kibana4/analyzing_logs_Kibana.html#analyzing_logs_Kibana). 
+Als Nächstes können Sie ein Kibana-Dashboard anpassen. Weitere Informationen finden Sie unter [Erweiterte Protokollanalyse mit Kibana](../kibana4/analyzing_logs_Kibana.html#analyzing_logs_Kibana).
 
 <!-- audience blue staging only end comment -->

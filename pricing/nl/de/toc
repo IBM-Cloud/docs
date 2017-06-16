@@ -1,7 +1,25 @@
-{: .toc}
-Abrechnung und Nutzung verwalten   
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
 
-    [Abrechnung und Nutzung verwalten](index.html)
-        index.md
-	manage_billing.md                                                                                
-        standard_account.md
+{: .toc subcollection="bluemix-pricing" audience="platform" href="/docs/pricing/index.html"}
+Abrechnung und Nutzung verwalten
+    
+    {: .navgroup id="learn"}
+    index.md
+    standard_account.md
+    how_charged.md
+    api_based_services.md
+    {: .navgroup-end}
+    
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    Preisstruktur
+        linking_accounts.md
+        estimating_costs.md
+            
+    {: .topicgroup}
+    Nutzung
+        viewing_usage.md
+        changing_plan.md
+        manage_billing.md
+    {: .navgroup-end}

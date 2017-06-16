@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-04-18"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -39,14 +39,12 @@ d'ensemble de votre application dans l'interface utilisateur {{site.data.keyword
 utiliser l'interface de
 ligne de commande cf. Voir Options pour apprendre à utiliser les
 applications.
-  6. Dans la page Vue d'ensemble de l'application, cliquez sur Ajouter un référentiel Git pour sauvegarder la source de votre application
-dans un
-référentiel Git et créer un projet hébergé par Git. Vous pouvez également déployer l'application à partir de {{site.data.keyword.jazzhub_title}}.
+  6. Dans la page Vue d'ensemble de l'application, accédez à la carte "Distribution continue" et cliquez sur **Activer**. La source de votre application sera sauvegardée dans un référentiel dans Git Repos and Issue Tracking, hébergé dans Bluemix. Une chaîne d'outils ouverte utilisant ce référentiel et un pipeline de distribution afin de développer et de déployer votre application sont également créés. Pour plus d'informations sur le service Continuous Delivery, voir <a href="https://console.ng.bluemix.net/docs/services/ContinuousDelivery/index.html#cd_getting_started">Initiation à Continuous Delivery</a>.
 
 **Remarque :** si un service que vous liez à une application tombe en panne, il se peut que l'application s'arrête ou présente des
 erreurs. {{site.data.keyword.Bluemix_notm}} ne redémarre pas automatiquement l'application pour assurer la
 reprise suite à ces problèmes. Envisagez de coder votre application de sorte à identifier les indisponibilités, les exceptions et les pannes de connexion pour assurer
-la reprise. Pour plus d'informations, voir la rubrique de traitement des incidents Les applications ne sont pas redémarrées automatiquement.
+la reprise. Pour plus d'informations, voir la rubrique de traitement des incidents intitulée Les applications ne sont pas redémarrées automatiquement.
 
 ## Options pour la gestion des applications
 
@@ -56,9 +54,10 @@ Une fois que vous avez créé votre application, vous disposez de quelques optio
 <dd>Utilisez l'interface de ligne de commande cf pour mettre à jour votre application, créer une instance de service ou lier le service à votre application. Vous pouvez également utiliser l'interface de ligne de commande cloud-cli pour créer, mettre à jour et supprimer des offres de services.</dd>
 <dt>Interface utilisateur {{site.data.keyword.Bluemix_notm}}</dt>
 <dd>L'interface utilisateur {{site.data.keyword.Bluemix_notm}} permet de construire une application, et de choisir les services et les contextes d'exécution à combiner afin de résoudre vos problèmes métier.</dd>
-<dt>{{site.data.keyword.jazzhub_title}}</dt>
-<dd>Utilisez {{site.data.keyword.jazzhub_title}} pour créer une application dans le cloud et la déployer dans {{site.data.keyword.Bluemix_notm}}. Les services fournis par {{site.data.keyword.jazzhub_title}} incluent Track & Plan et Delivery Pipeline, qui sont proposés dans le
-catalogue {{site.data.keyword.Bluemix_notm}} sous DevOps, mais également dans Web IDE et Git Hosting.</dd>
+<dt>{{site.data.keyword.contdelivery_full}}</dt>
+<dd>Utilisez {{site.data.keyword.contdelivery_short}} pour automatiser les générations, les tests unitaires, les déploiements, etc. Editez et insérez du code via l'interface IDE Web enrichie. Créez des chaînes d'outils pour activer les intégrations d'outils prenant en charge vos tâches de développement, de déploiement et d'opérations.
+Le service Continuous Delivery inclut Delivery Pipeline, Eclipse Orion Web IDE et Git Repos and Issue Tracking. Pour plus d'informations, voir <a href="https://console.ng.bluemix.net/docs/services/ContinuousDelivery/index.html#cd_getting_started">Initiation à Continuous Delivery</a>.
+</dd>
 </dl>
 
 ## Conseils

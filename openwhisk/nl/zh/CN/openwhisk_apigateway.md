@@ -32,7 +32,7 @@ API 网关充当 [Web 操作](webactions.md)的代理，并为这些操作提供
 为了能使用 `wsk api`，CLI 配置文件 `~/.wskprops` 需要包含 Bluemix 访问令牌。
 要获取访问令牌，请使用 CLI 命令 `wsk bluemix login`；有关该命令的更多信息，请运行 `wsk bluemix login -h`
 
-**注：**如果该命令在要求单点登录 (SSO) 时出错，说明目前不支持此功能。作为变通方法，请使用 `cf login` 登录 Cloud Foundry CLI，然后将主目录配置文件 `~/.cf/config.json` 中的访问令牌复制到 `~/.wskprops` 文件作为属性 `APIGW_ACCESS_TOKEN="value of AccessToken`。复制访问令牌字符串时，请除去前缀 `Bearer`。
+**注：**如果该命令在要求单点登录 (SSO) 时出错，说明目前不支持此功能。作为变通方法，请使用 `bluemix login` 登录 Bluemix CLI，然后将 HOME 目录配置文件 `~/.bluemix/.cf/config.json` 中的访问令牌复制到 `~/.wskprops` 文件作为属性 `APIGW_ACCESS_TOKEN="value of AccessToken`。复制访问令牌字符串时，请除去前缀 `Bearer`。
 
 **注：**使用 `wsk api-experimental` 创建的 API 将继续运行一段较短的时间，但您应该开始将 API 迁移到 Web 操作，并使用新的 CLI 命令 `wsk api` 重新配置现有 API。
 
@@ -63,14 +63,14 @@ API 网关充当 [Web 操作](webactions.md)的代理，并为这些操作提供
   ```
   ```
   ok: created API /hello/world GET for action /_/hello
-  https://${APIHOST}:9001/api/21ef035/hello/world
+  https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world
   ```
   这将生成新 URL，用于通过 **GET** HTTP 方法公开 `hello` 操作。
   
 4. 通过向该 URL 发送 HTTP 请求来尝试公开 echo 操作。
   
   ```
-  $ curl https://${APIHOST}:9001/api/21ef035/hello/world?name=OpenWhisk
+  $ curl https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/21ef035/hello/world?name=OpenWhisk
   ```
   ```json
   {

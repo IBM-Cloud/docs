@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-15"
+lastupdated: "2017-06-12"
 
 ---
 
@@ -58,10 +58,9 @@ Now you can follow the instructions on the **Delivery Insights Setup** page to i
 {: #connect_ucd_to_connect}
 
 1. Install the patch into your IBM UrbanCode Deploy server. All versions of IBM UrbanCode Deploy require a patch to communicate with DevOps Connect. 
-  1. Download the correct patch for your version of IBM UrbanCode Deploy by going to the following page and downloading the correct patch:
-  [http://public.dhe.ibm.com/software/products/UrbanCode/plugins/ucsync/patches/ibmucd/](http://public.dhe.ibm.com/software/products/UrbanCode/plugins/ucsync/patches/ibmucd/)
-
-  1. Extract the file. It contains one or more patch files that you must add to the server.
+  1. Download the correct patch for your version of IBM UrbanCode Deploy from the following page. For example, the patch file for IBM UrbanCode Deploy 6.2.4.x is named  [ucd-6.2.4.0-WI161775-Devops-Insights-Patch.jar](http://public.dhe.ibm.com/software/products/UrbanCode/plugins/ucsync/patches/ibmucd/6_2_4_X/ucd-6.2.4.0-WI161775-Devops-Insights-Patch.jar).  
+  
+    [http://public.dhe.ibm.com/software/products/UrbanCode/plugins/ucsync/patches/ibmucd/](http://public.dhe.ibm.com/software/products/UrbanCode/plugins/ucsync/patches/ibmucd/)
 
   1. Stop the server. See [Starting and stopping the server](https://www.ibm.com/support/knowledgecenter/SS4GSP_6.2.4/com.ibm.udeploy.install.doc/topics/run_server.html).
 

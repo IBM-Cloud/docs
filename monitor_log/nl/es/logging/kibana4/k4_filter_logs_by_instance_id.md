@@ -34,7 +34,7 @@ Siga estos pasos para ver y filtrar los registros por ID de instancia en el pane
    
 3. Para añadir un filtro que busque un determinado tipo de registro, seleccione el botón de lupa ![Botón de lupa en modalidad de inclusión](images/k4_include_field_icon.jpg "Botón de lupa en modalidad de inclusión") para el tipo de registro que desea analizar. 
 
-   Por ejemplo, para añadir un filtro que incluya las entradas para la instancia de app CD *2*, seleccione el botón de lupa ![Botón de lupa en modalidad de inclusión](images/k4_include_field_icon.jpg "Botón de lupa en modalidad de inclusión") que está disponible para el valor *2* en la sección Lista de campos. La figura siguiente muestra el filtro que incluye entradas para la instancia *2*.
+   Por ejemplo, para añadir un filtro que incluya las entradas para la instancia de app CF *2*, seleccione el botón de lupa ![Botón de lupa en modalidad de inclusión](images/k4_include_field_icon.jpg "Botón de lupa en modalidad de inclusión") que está disponible para el valor *2* en la sección Lista de campos. La figura siguiente muestra el filtro que incluye entradas para la instancia *2*.
     
     ![Filtro que incluye entradas de instance_id para la instancia 2](images/k4_filter_instanceid_f2.jpg "Filtro que incluye entradas de instance_id para la instancia 2")
 

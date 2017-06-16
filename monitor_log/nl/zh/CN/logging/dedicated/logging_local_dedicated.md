@@ -29,7 +29,7 @@ Cloud Foundry 应用程序使用 Cloud Foundry loggregator 从应用程序外部
 | vCPU | 19 | 57 |
 | 内存 | 80 GB | 240 GB |
 | 本地存储器 | 2.98 TB | 8.94 TB |
-{: caption="表 2. 记录 {{site.data.keyword.Bluemix_local_notm}} 的硬件需求" caption-side="top"}
+{: caption="表 2. {{site.data.keyword.Bluemix_local_notm}} 的日志记录硬件需求" caption-side="top"}
 
 ## 设置
 

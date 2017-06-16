@@ -34,7 +34,7 @@ Affinché il CSR sia valido, durante la sua creazione è necessario immettere le
 **Nome paese**
 
   Un codice a due cifre che rappresenta il paese o la regione. Ad esempio, "US" rappresenta gli Stati
-Uniti. Per gli altri paesi o regioni, consulta l'[elenco di codici paese ISO ![icona link esterno](../icons/launch-glyph.svg)](https://www.iso.org/obp/ui/#search){:new_window} prima di creare il CSR.
+Uniti. Per gli altri paesi o regioni, consulta l'[elenco di codici paese ISO ![Icona link esterno](../icons/launch-glyph.svg)](https://www.iso.org/obp/ui/#search){:new_window} prima di creare il CSR.
 
 **Stato o provincia**
 
@@ -58,7 +58,7 @@ Marketing.
 
   Il nome di dominio completo (FQDN) per il quale stai richiedendo il certificato SSL.
 
-I metodi per creare un CSR variano a seconda del tuo sistema operativo. Il seguente esempio mostra come creare un CSR utilizzando [lo strumento riga di comando OpenSSL ![icona link esterno](../icons/launch-glyph.svg)](http://www.openssl.org/){:new_window}:
+I metodi per creare un CSR variano a seconda del tuo sistema operativo. Il seguente esempio mostra come creare un CSR utilizzando [lo strumento riga di comando OpenSSL ![Icona link esterno](../icons/launch-glyph.svg)](http://www.openssl.org/){:new_window}:
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -150,7 +150,7 @@ il browser web gli richiede di fornire un certificato client per il dominio. Uti
   **Nota:** la funzione relativa al certificato personalizzato nella gestione del dominio di {{site.data.keyword.Bluemix_notm}} dipende dall'estensione Server Name Indication (SNI) del protocollo TLS (Transport Layer Security). Pertanto, il codice
 client che accede alle applicazioni {{site.data.keyword.Bluemix_notm}}
 protette da certificati personalizzati deve supportare l'estensione SNI nell'implementazione
-TLS. Per ulteriori informazioni, vedi la [sezione 7.4.2 del RFC 4346 ![icona link esterno](../icons/launch-glyph.svg)](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
+TLS. Per ulteriori informazioni, vedi la [sezione 7.4.2 del RFC 4346 ![Icona link esterno](../icons/launch-glyph.svg)](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
 
   **Truststore certificato client**
 

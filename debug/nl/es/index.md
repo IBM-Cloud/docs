@@ -138,7 +138,7 @@ SystemErr respectivamente.
 ### Depuración de cambios de código
 {: #debug_code_changes}
 
-Si realiza cambios de código en una app que ya está desplegada y en funcionamiento, los cambios no se reflejarán todavía en {{site.data.keyword.Bluemix_notm}} y puede depurar mediante los registros. Independientemente de que su app se esté ejecutando, puede comprobar los registros que se generan durante el despliegue o la ejecución de la app para determinar porqué no se ejecuta el código nuevo.
+Si realiza cambios de código en una app que ya está desplegada y en funcionamiento, los cambios no se reflejarán todavía en {{site.data.keyword.Bluemix_notm}} y puede depurar mediante los registros. Independientemente de que su app se esté ejecutando, puede comprobar los registros que se generan durante el despliegue o la ejecución de la app para determinar por qué no se ejecuta el código nuevo.
 
 En función de la forma de desplegar el nuevo código, elija uno de los métodos siguientes para depurar los cambios de código:
 

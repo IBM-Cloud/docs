@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-05-02"
 
 
 ---
@@ -45,10 +45,10 @@ Sicher interessiert es Sie, welche Unterschiede zwischen dem Standardkonto und d
 |Die {{site.data.keyword.Bluemix_notm}} Support-Stufe bleibt unverändert. |
 {:caption="Tabelle 2. Was bleibt unverändert?" caption-side="top"}
 
-**Hinweis:** Wenn Ihr Testkonto nicht konvertiert werden kann, erhalten Sie eine Nachricht mit einer Erläuterung zur Ursache. Möglicherweise enthält das bestehende Testkonto mehr als eine Organisation oder Apps, die nicht übertragen werden können. Sie können die entsprechende Maßnahme ausführen und dann die Konvertierung des Kontos erneut versuchen.
+**Hinweis**: Wenn Ihr Testkonto nicht konvertiert werden kann, erhalten Sie eine Nachricht mit einer Erläuterung zur Ursache. Möglicherweise enthält das bestehende Testkonto mehr als eine Organisation oder Apps, die nicht übertragen werden können. Sie können die entsprechende Maßnahme ausführen und dann die Konvertierung des Kontos erneut versuchen.
 
 Wenn Sie bei einem Standardkonto angemeldet sind, können Sie Teammitglieder dazu einladen, in Ihrer Organisation und Ihren Bereichen mitzuarbeiten, Nutzungsdaten anzuzeigen, Bereiche zu erstellen, das Kontoprofil zu aktualisieren und die Organisation zu verwalten. Weitere Informationen
-finden Sie in [Konto einrichten](/docs/admin/adminpublic.html#account).
+finden Sie in [Konto verwalten](/docs/admin/adminpublic.html#account). 
 
 ## Lite-Pläne
 {: #liteplans}
@@ -82,7 +82,7 @@ Wenn die Grenzwerte des Kontingents erreicht sind, wird die Anwendung gestoppt o
 
 Sie können 1 Instanz pro Lite-Plan bereitstellen. 
 
-**Hinweis:** Diese Einschränkungen gelten nur für das Standardkonto. Sie können jederzeit ein Upgrade auf ein nutzungsabhängiges Konto oder ein abonnementbasiertes Abrechnungskonto durchführen. Kosten fallen nur für die Nutzung an, die über die kostenfreien Kontingente hinausgeht. Weitere Informationen zu nutzungsabhängigen Konten und Abonnementkonten finden Sie unter [Wie wird abgerechnet?](/docs/pricing/index.html#pay-accounts).
+**Hinweis**: Diese Einschränkungen gelten nur für das Standardkonto. Sie können jederzeit ein Upgrade auf ein nutzungsabhängiges Konto oder ein abonnementbasiertes Abrechnungskonto durchführen. Kosten fallen nur für die Nutzung an, die über die kostenfreien Kontingente hinausgeht. Weitere Informationen zu nutzungsabhängigen Konten und Abonnementkonten finden Sie unter [Kontotypen](/docs/pricing/index.html#pay-accounts).
 
 ## Entwicklungsaktivität
 {: #devactivity}
@@ -106,7 +106,7 @@ Als Unterstützung für Standardkontobenutzer bei der bestmöglichen Verwaltung 
   * cf enable-ssh
   * cf disable-ssh
 
- **Hinweis** Wenn für die App der SSH-Modus bereits aktiviert ist, kann sie mit den Befehlen `cf enable-ssh` und `cf disable-sh` nicht aktiviert werden. 
+ **Hinweis**: Wenn für die App der SSH-Modus bereits aktiviert ist, kann sie mit den Befehlen `cf enable-ssh` und `cf disable-sh` nicht aktiviert werden. 
 
  * Ihre Lite-Plan-Services werden gelöscht, wenn über einen Zeitraum von 30 Tagen keine Aktivität dafür stattfindet. Auf diese Weise müssen Sie keine inaktiven Instanzen löschen, wenn Sie eine neue Instanz erstellen möchten. Zum gegenwärtigen Zeitpunkt verwendet nur der Internet of Things Platform-Service dieses Feature. 
  

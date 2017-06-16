@@ -59,7 +59,7 @@ fichier *transforms.conf* contenant le texte suivant :
 (port 5140) et l'interface utilisateur Web de Splunk (port
 8000) vu que, par défaut, le pare-feu est en place sur le serveur virtuel {{site.data.keyword.Bluemix_notm}}.
 
-	    **Remarque :** la configuration iptable est réalisée ici à des fins d'évaluation par Jeanne et n'est que temporaire. Pour configurer le paramètre de pare-feu dans le serveur virtuel Bluemix en environnement de production, voir la documentation sur les [groupes de sécurité des réseaux ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} pour plus d'informations. 
+	    **Remarque :** la configuration iptable est réalisée ici à des fins d'évaluation par Jeanne et n'est que temporaire. Pour configurer le paramètre de pare-feu dans le serveur virtuel Bluemix en environnement de production, voir la documentation sur les [groupes de sécurité des réseaux ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} pour plus d'informations.
 
 	   ```
 	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT

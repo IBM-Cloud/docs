@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -27,7 +27,9 @@ Von der {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle (CLI) werd
 <dt>Endpunkt</dt>
 <dd>Vor dem Verwenden des Befehls muss ein API-Endpunkt durch Absetzen des Befehls <code>bluemix api</code> definiert werden.</dd>
 <dt>Anmeldung</dt>
-<dd>Vor der Verwendung des Befehls ist die Anmeldung über den Befehl <code>bluemix login</code> erforderlich. <b>Verwenden Sie beim Anmelden mit einer eingebundenen ID die Option '--sso' für die Anmeldung mit einmaligem Kenncode oder verwenden Sie die Option '--apikey' für die Authentifizierung mit einem API-Schlüssel</b>. Wechseln Sie zur {{site.data.keyword.Bluemix_notm}}-Konsole “Verwalten” -> “Sicherheit” -> “Bluemix-API-Schlüssel”, um API-Schlüssel zu erstellen. </dd>
+<dd>Vor der Verwendung des Befehls ist die Anmeldung über den Befehl <code>bluemix login</code> erforderlich.
+Verwenden Sie beim Anmelden mit einer eingebundenen ID die Option '--sso' für die Anmeldung mit einmaligem Kenncode oder verwenden Sie die Option '--apikey' für die Authentifizierung mit einem API-Schlüssel. Wechseln Sie in der {{site.data.keyword.Bluemix_notm}}-Konsole zum Erstellen von API-Schlüsseln zu **Verwalten** &gt; **Sicherheit** &gt; **Bluemix-API-Schlüssel**.
+</dd>
 <dt>Ziel</dt>
 <dd>Vor dem Verwenden des Befehls muss der Befehl <code>bluemix target</code> zum Definieren einer Organisation und eines Bereichs ausgeführt werden.</dd>
 <dt>Docker</dt>
@@ -294,7 +296,7 @@ bluemix api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
    <dt>--unset (optional)</dt>
    <dd>Entfernt die Einstellung für den API-Endpunkt.</dd>
    <dt>--skip-ssl-validation (optional)</dt>
-   <dd>Umgeht die SSL-Validierung von HTTP-Anforderungen. </dd>
+   <dd>Umgeht die SSL-Validierung von HTTP-Anforderungen.</dd>
    </dl>
 <strong>Beispiele</strong>:
 
@@ -335,48 +337,48 @@ bluemix login [OPTIONS...]
 <strong>Befehlsoptionen:</strong>
 <dl>
   <dt>-a <i>API_ENDPOINT</i> (optional)</dt>
-  <dd> API-Endpunkt (z. B.: api.ng.bluemix.net) </dd>
+  <dd> API-Endpunkt (z. B.: api.ng.bluemix.net)</dd>
   <dt> --apikey <i>API_KEY oder @API_KEY_FILE_PATH</i>
   <dd> API-Schlüsselinhalt oder der Pfad einer API-Schlüsseldatei, die durch @ angegeben wird.</dd>
   <dt> --sso (optional) </dt>
   <dd> Einmaligen Kenncode zum Anmelden verwenden. </dd>
   <dt> -u <i>USERNAME</i> (optional)</dt>
-  <dd> Der Benutzername. </dd>
+  <dd> Der Benutzername.</dd>
   <dt> -p <i>PASSWORD</i> (optional)</dt>
-  <dd> Das Kennwort. </dd>
+  <dd> Das Kennwort.</dd>
   <dt> -c <i>ACCOUNT_ID</i> (optional) </dt>
-  <dd> Die ID des Zielkontos. </dd>
+  <dd> Die ID des Zielkontos.</dd>
   <dt> -o <i>ORG_NAME</i> (optional) </dt>
   <dd> Der Name der Zielorganisation. </dd>
   <dt> -s <i>SPACE_NAME</i> (optional) </dt>
-  <dd> Der Name des Zielbereichs. </dd>
+  <dd> Der Name des Zielbereichs.</dd>
   <dt> --skip-ssl-validation (optional) </dt>
-  <dd> Umgeht die SSL-Validierung von HTTP-Anforderungen. Diese Option wird nicht empfohlen. </dd>
+  <dd> Umgeht die SSL-Validierung von HTTP-Anforderungen. Diese Option wird nicht empfohlen.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
-Interaktive Anmeldung: 
+Interaktive Anmeldung:
 
 ```
 bluemix login
 ```
 
-Anmeldung mit einem Benutzernamen und einem Kennwort und Festlegen des Kontos, der Organisation und des Bereichs: 
+Anmeldung mit einem Benutzernamen und einem Kennwort und Festlegen des Kontos, der Organisation und des Bereichs:
 
 ```
 bluemix login -u Benutzername -p Kennwort -c MyAccountID -o MyOrg -s MySpace
 ```
 
-Anmeldung mit einmaligem Kenncode und Festlegen eines Zielkontos, einer Organisation und eines Bereichs: 
+Anmeldung mit einmaligem Kenncode und Festlegen eines Zielkontos, einer Organisation und eines Bereichs:
 
 ```
 bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 
-Anmeldung mit API-Schlüssel und Festlegen von Zielen: 
+Anmeldung mit API-Schlüssel und Festlegen von Zielen:
 
-* API-Schlüssel hat zugeordnetes Konto. 
+* API-Schlüssel hat zugeordnetes Konto.
 
 ```
 bluemix login --apikey api-key-string -o MyOrg -s MySpace
@@ -386,7 +388,7 @@ bluemix login --apikey api-key-string -o MyOrg -s MySpace
 bluemix login --apikey @Dateiname -o MyOrg -s MySpace
 ```
 
-* API-Schlüssel hat kein zugeordnetes Konto. 
+* API-Schlüssel hat kein zugeordnetes Konto.
 
 ```
 bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
@@ -396,7 +398,7 @@ bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
 bluemix login --apikey @Dateiname -c MyAccountID -o MyOrg -s MySpace
 ```
 
-<strong>Hinweis:</strong> Wenn der API-Schlüssel ein zugeordnetes Konto hat, ist ein Wechsel zu einem anderen Konto nicht zulässig. 
+<strong>Hinweis:</strong> Wenn der API-Schlüssel ein zugeordnetes Konto hat, ist ein Wechsel zu einem anderen Konto nicht zulässig.
 
 
 ## bluemix logout
@@ -415,7 +417,7 @@ bluemix logout
 {: #bluemix_target}
 
 
-Zielkonto, Region, Organisation oder Bereich festlegen oder anzeigen. 
+Zielkonto, Region, Organisation oder Bereich festlegen oder anzeigen.
 
 ```
 bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
@@ -426,9 +428,9 @@ bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
 <strong>Befehlsoptionen:</strong>
    <dl>
    <dt>-c <i>ACCOUNT_ID</i> (optional)</dt>
-   <dd>Die ID des Zielkontos. </dd>
+   <dd>Die ID des Zielkontos.</dd>
    <dt>-r <i>REGION</i> (optional)</dt>
-   <dd>Die Region, zu der gewechselt werden soll. </dd>
+   <dd>Die Region, zu der gewechselt werden soll.</dd>
    <dt>-o <i>ORG_NAME</i> (optional)</dt>
    <dd>Der Name der Zielorganisation.</dd>
    <dt>-s <i>SPACE_NAME</i> (optional)</dt>
@@ -438,19 +440,19 @@ Wenn keine der Optionen angegeben wird, werden das aktuelle Konto, die aktuelle 
 
 <strong>Beispiele</strong>:
 
-Festlegen des aktuellen Kontos, der aktuellen Organisation und des aktuellen Bereichs: 
+Festlegen des aktuellen Kontos, der aktuellen Organisation und des aktuellen Bereichs:
 
 ```
 bluemix target -c MyAccountID -o MyOrg -s MySpace
 ```
 
-Zu einer neuen Region wechseln: 
+Zu einer neuen Region wechseln:
 
 ```
 bluemix target -r eu-gb
 ```
 
-Anzeigen des aktuellen Kontos, der aktuellen Region, der aktuellen Organisation und des aktuellen Bereichs: 
+Anzeigen des aktuellen Kontos, der aktuellen Region, der aktuellen Organisation und des aktuellen Bereichs:
 
 ```
 bluemix target
@@ -495,7 +497,7 @@ bluemix config --http-timeout TIMEOUT_IN_SECONDS | --trace (true|false|path/to/f
    <dd>CLI-Versionsprüfung aktivieren oder inaktivieren.</dd>
    </dl>
 
-Es kann jeweils nur eine dieser Optionen gleichzeitig angegeben werden. 
+Es kann jeweils nur eine dieser Optionen gleichzeitig angegeben werden.
 
 <strong>Beispiele</strong>:
 
@@ -566,7 +568,7 @@ bluemix curl /v2/organizations
 ## bluemix update
 {: #bluemix_update}
 
-Die Befehlszeilenschnittstelle auf die neueste Version aktualisieren. 
+Die Befehlszeilenschnittstelle auf die neueste Version aktualisieren.
 
 ```
 bluemix update
@@ -660,7 +662,7 @@ bluemix iam org-create ORG_NAME
 
 <strong>Beispiele</strong>:
 
-Organisation mit dem Namen `IBM` erstellen: 
+Organisation mit dem Namen `IBM` erstellen:
 
 ```
 bluemix iam org-create IBM
@@ -812,7 +814,7 @@ Benutzer aus Organisation entfernen (Organisationsmanager oder nur Benutzer selb
 ## bluemix iam org-roles
 {: #bluemix_iam_org_roles}
 
-Alle Organisationsrollen des aktuellen Benutzers abrufen. 
+Alle Organisationsrollen des aktuellen Benutzers abrufen.
 
 ```
 bluemix iam org-roles
@@ -989,7 +991,7 @@ bluemix iam space-role-unset Mary IBM Cloud SpaceManager
 ## bluemix iam accounts
 {: #bluemix_iam_accounts}
 
-Alle Konten des aktuellen Benutzers auflisten. 
+Alle Konten des aktuellen Benutzers auflisten.
 
 ```
 bluemix iam accounts
@@ -1001,7 +1003,7 @@ bluemix iam accounts
 ## bluemix iam org-account
 {: #bluemix_iam_org_account}
 
-Das Konto der angegebenen Organisation anzeigen (Organisationsbenutzer erforderlich). 
+Das Konto der angegebenen Organisation anzeigen (Organisationsbenutzer erforderlich).
 
 ```
 bluemix iam org-account ORG_NAME [--guid]
@@ -1012,7 +1014,7 @@ bluemix iam org-account ORG_NAME [--guid]
 <strong>Befehlsoptionen:</strong>
 <dl>
   <dt>--guid (optional)</dt>
-  <dd>Nur die Konto-ID anzeigen. </dd>
+  <dd>Nur die Konto-ID anzeigen.</dd>
 </dl>
 
 
@@ -1028,7 +1030,7 @@ bluemix iam account-users
 ## bluemix iam account-user-delete
 {: #bluemix_iam_account_user_delete}
 
-Benutzer aus dem aktuellen Konto löschen (nur Kontoeigner). 
+Benutzer aus dem aktuellen Konto löschen (nur Kontoeigner).
 
 ```
 bluemix iam account-user-delete USERNAME [-f]
@@ -1039,7 +1041,7 @@ bluemix iam account-user-delete USERNAME [-f]
 <strong>Befehlsoptionen:</strong>
 <dl>
 <dt>USERNAME (erforderlich)</dt>
-<dd>Der Benutzername. </dd>
+<dd>Der Benutzername.</dd>
 <dt>--force, -f (optional)</dt>
 <dd>Löschung ohne Bestätigung erzwingen.</dd>
 </dl>
@@ -1100,7 +1102,7 @@ Einladung erneut an einen Benutzer senden (Organisationsmanager oder Kontoeigner
 ## bluemix iam api-keys
 {: #bluemix_iam api_keys}
 
-Alle API-Schlüssel der Bluemix-Plattform auflisten. 
+Alle API-Schlüssel der Bluemix-Plattform auflisten.
 
 ```
 bluemix iam api-keys
@@ -1111,7 +1113,7 @@ bluemix iam api-keys
 ## bluemix iam api-key-create
 {: #bluemix_iam_api_key_create}
 
-Neuen API-Schlüssel für Bluemix-Plattform erstellen. 
+Neuen API-Schlüssel für Bluemix-Plattform erstellen.
 
 ```
 bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
@@ -1122,16 +1124,16 @@ bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
 <strong>Befehlsoptionen:</strong>
 <dl>
 <dt>NAME (erforderlich)</dt>
-<dd>Der Name des zu erstellenden API-Schlüssels. </dd>
+<dd>Der Name des zu erstellenden API-Schlüssels.</dd>
 <dt>-d <i>DESCRIPTION</i> (optional)</dt>
-<dd>Die Beschreibung des API-Schlüssels. </dd>
+<dd>Die Beschreibung des API-Schlüssels.</dd>
 <dt>-f, -- file <i>FILE</i></dt>
-<dd>Informationen zu API-Schlüssel in angegebener Datei speichern. Wenn nicht festgelegt, wird der JSON-Inhalt angezeigt. </dd>
+<dd>Informationen zu API-Schlüssel in angegebener Datei speichern. Wenn nicht festgelegt, wird der JSON-Inhalt angezeigt.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
-API-Schlüssel erstellen und in einer Datei speichern: 
+API-Schlüssel erstellen und in einer Datei speichern:
 
 ```
 bluemix iam api-key-create MyKey -d "this is my API key" -f key_file
@@ -1140,7 +1142,7 @@ bluemix iam api-key-create MyKey -d "this is my API key" -f key_file
 ## bluemix iam api-key-update
 {: #bluemix_iam_api_key_update}
 
-API-Schlüssel der Bluemix-Plattform aktualisieren. 
+API-Schlüssel der Bluemix-Plattform aktualisieren.
 
 ```
 bluemix iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
@@ -1151,16 +1153,16 @@ bluemix iam api-key-update NAME [-n NAME] [-d DESCRIPTION]
 <strong>Befehlsoptionen:</strong>
 <dl>
 <dt>NAME (erforderlich)</dt>
-<dd>Der alte Name des zu aktualisierenden API-Schlüssels. </dd>
+<dd>Der alte Name des zu aktualisierenden API-Schlüssels.</dd>
 <dt>-n <i>NAME</i> (optional)</dt>
-<dd>Der neue Name des API-Schlüssels. </dd>
+<dd>Der neue Name des API-Schlüssels.</dd>
 <dt>-d <i>DESCRIPTION</i> (optional)</dt>
-<dd>Die neue Beschreibung des API-Schlüssels. </dd>
+<dd>Die neue Beschreibung des API-Schlüssels.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
-Beschreibung eines API-Schlüssels aktualisieren: 
+Beschreibung eines API-Schlüssels aktualisieren:
 
 ```
 bluemix iam api-key-update MyKey -d "the new description of my key"
@@ -1169,7 +1171,7 @@ bluemix iam api-key-update MyKey -d "the new description of my key"
 ## bluemix api-key-delete
 {: #bluemix_api_key_delete}
 
-API-Schlüssel der Bluemix-Plattform löschen. 
+API-Schlüssel der Bluemix-Plattform löschen.
 
 ```
 bluemix iam api-key-delete NAME [-f]
@@ -1180,7 +1182,7 @@ bluemix iam api-key-delete NAME [-f]
 <strong>Befehlsoptionen:</strong>
 <dl>
 <dt>NAME (erforderlich)</dt>
-<dd>Der Name des zu löschenden API-Schlüssels. </dd>
+<dd>Der Name des zu löschenden API-Schlüssels.</dd>
 <dt>-f  (optional)</dt>
 <dd>Löschung ohne Bestätigung erzwingen.</dd>
 </dl>
@@ -1351,7 +1353,7 @@ bluemix app domain-cert-add DOMAIN -k PRIVATE_KEY_FILE -c CERT_FILE [-p PASSWORD
    <dt>-i <i>INTERMEDIATE_CERT_FILE</i> (optional)</dt>
    <dd>Der Pfad für die Zwischenzertifikatsdatei.</dd>
    <dt>-t <i>TRUST_STORE_FILE</i> (optional)</dt>
-   <dd>Die Truststore-Datei. </dd>
+   <dd>Die Truststore-Datei.</dd>
    </dl>
 
 
@@ -1955,7 +1957,7 @@ Plug-in von der Remote URL installieren:
 bluemix plugin install http://plugins.ng.bluemix.net/downloads/new_plugin
 ```
 
-Plug-in `IBM-Containers` der letzten Version aus dem Repository `bluemix-repo` installieren: 
+Plug-in `IBM-Containers` der letzten Version aus dem Repository `bluemix-repo` installieren:
 
 ```
 bluemix plugin install IBM-Containers -r bluemix-repo
@@ -1969,7 +1971,7 @@ bluemix plugin install IBM-Containers -r bluemix-repo -v 0.5.800
 ## bluemix plugin update
 {: #bluemix_plugin_update}
 
-Plug-in aus einem Repository aktualisieren. 
+Plug-in aus einem Repository aktualisieren.
 
 ```
 bluemix plugin update -r REPO_NAME [PLUGIN NAME [-v VERSION]]
@@ -1982,26 +1984,26 @@ bluemix plugin update -r REPO_NAME [PLUGIN NAME [-v VERSION]]
  <dt>-r REPO_NAME (erforderlich)</dt>
  <dd>Der Name des Repositorys, in dem sich die Binärdatei des Plug-ins befindet.</dd>
  <dt><i>PLUGIN_NAME</i> (optional)</dt>
- <dd>Wenn nicht angegeben, werden alle Plug-ins, die in dem jeweiligen Repository zur Aktualisierung verfügbar sind, zur Auswahl aufgelistet. </dd>
+ <dd>Wenn nicht angegeben, werden alle Plug-ins, die in dem jeweiligen Repository zur Aktualisierung verfügbar sind, zur Auswahl aufgelistet.</dd>
  <dt>-v <i>VERSION</i> (optional)</dt>
- <dd>Die Version des Plug-ins, auf die aktualisiert werden soll. Wenn nicht angegeben, wird das Plug-in auf die neueste verfügbare Version aktualisiert. </dd>
+ <dd>Die Version des Plug-ins, auf die aktualisiert werden soll. Wenn nicht angegeben, wird das Plug-in auf die neueste verfügbare Version aktualisiert.</dd>
 </dl>
 
 <strong>Beispiele</strong>:
 
-Auf alle verfügbaren Upgrades im Plug-in-Repository "My-Repo" prüfen: 
+Auf alle verfügbaren Upgrades im Plug-in-Repository "My-Repo" prüfen:
 
 ```
 bluemix plugin update -r My-Repo
 ```
 
-Upgrade für Plug-in "plugin-echo" im Repository "My-Repo" auf die neueste Version durchführen: 
+Upgrade für Plug-in "plugin-echo" im Repository "My-Repo" auf die neueste Version durchführen:
 
 ```
 bluemix plugin update -r My-Repo plugin-echo
 ```
 
-Plug-in "plugin-echo" im Repository "My-Repo" auf Version "1.0.1" aktualisieren: 
+Plug-in "plugin-echo" im Repository "My-Repo" auf Version "1.0.1" aktualisieren:
 
 ```
 bluemix plugin update -r My-Repo plugin-echo -v 1.0.1
@@ -2027,7 +2029,7 @@ bluemix plugin uninstall PLUGIN_NAME
 
 <strong>Beispiele</strong>:
 
-Plug-in `IBM-Containers` deinstallieren, das zuvor installiert wurde: 
+Plug-in `IBM-Containers` deinstallieren, das zuvor installiert wurde:
 
 ```
 bluemix plugin uninstall IBM-Containers

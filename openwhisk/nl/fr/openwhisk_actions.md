@@ -52,7 +52,7 @@ Suivez les étapes et les exemples ci-dessous pour créer votre première action
       return {payload: 'Hello world'};
   }
   ```
-    {: codeblock}
+  {: codeblock}
 
   Le fichier JavaScript peut contenir des fonctions supplémentaires. Toutefois, par convention, une fonction appelée `main` doit exister pour fournir le point d'entrée de l'action.
 
@@ -61,7 +61,7 @@ Suivez les étapes et les exemples ci-dessous pour créer votre première action
   ```
   wsk action create hello hello.js
   ```
-      {: pre}
+  {: pre}
   ```
   ok: created action hello
   ```
@@ -190,8 +190,7 @@ Des paramètres peuvent être transmis à l'action lorsqu'elle est appelée.
   }
   ```
 
-  Remarquez l'utilisation de l'option `--result` : elle implique un appel bloquant où l'interface de ligne de commande attend la fin de l'activation, puis affiche uniquement le résultat.
-Pour plus de commodité, cette option peut être utilisée sans `--blocking` qui est automatiquement déduit. 
+  Remarquez l'utilisation de l'option `--result` : elle implique un appel bloquant où l'interface de ligne de commande attend la fin de l'activation, puis affiche uniquement le résultat. Pour plus de commodité, cette option peut être utilisée sans `--blocking` qui est automatiquement déduit.
 
 ### Définition de paramètres par défaut
 {: #openwhisk_binding_actions}
@@ -577,60 +576,68 @@ wsk action invoke --blocking --result helloPython --param name World
   }
 ```
 
-### Conditionnement d'actions Python dans des fichiers zip
+### Conditionnement des actions Python dans des fichiers zip 
 {: #openwhisk_actions_python_zip}
 
-Vous pouvez conditionner une action Python et des modules dépendants dans un fichier zip.
-Le nom du fichier source contenant le point d'entrée (par exemple, `main`) doit être `__main__.py`.
-Par exemple, pour créer une action avec un module de fichiers d'aide appelé `helper.py`, commencez par créer une archive contenant vos fichiers source :
+Vous pouvez conditionner une action Python et les modules dépendants dans un fichier zip.
+Le nom du fichier source contenant le point d'entrée (par exemple `main`) doit être `__main__.py`.
+Par exemple, pour créer une action avec un module auxiliaire appelé `helper.py`, créez d'abord une archive contenant vos fichiers source :
 
 ```bash
-$ zip -r helloPython.zip **main**.py helper.py
+zip -r helloPython.zip __main__.py helper.py
 ```
+{: pre}
 
 puis, créez l'action :
 
 ```bash
-$ wsk action create helloPython --kind python:3 helloPython.zip
+wsk action create helloPython --kind python:3 helloPython.zip
 ```
+{: pre}
 
-### Conditionnement d'actions Python avec un environnement virtuel dans des fichiers zip
+### Conditionnement d'actions Python avec un environnement virtuel dans des fichiers zip 
 {: #openwhisk_actions_python_virtualenv}
 
-Une autre méthode de conditionnement des dépendances Python consiste à utiliser un environnement virtuel (`virtualenv`). Cela vous permet de lier des packages supplémentaires qui peuvent être installés via [`pip`](https://packaging.python.org/installing/), par exemple.
-Pour assurer la compatibilité avec le conteneur OpenWhisk, des installations de package dans un environnement virtuel (virtualenv) doivent être effectuées dans l'environnement cible.
-Par conséquent, l'image Docker `openwhisk/python2action` ou `openwhisk/python3action` doit être utilisée pour créer un répertoire virtualenv pour votre action.
+Pour conditionner des dépendances Python, vous pouvez aussi utiliser un environnement virtuel (`virtualenv`). Ainsi, vous pouvez lier des packages supplémentaires
+pouvant être installés via [`pip`](https://packaging.python.org/installing/) par exemple.
+Pour assurer la compatibilité avec le conteneur OpenWhisk, les installations de package dans un environnement virtuel (virtualenv) doivent être effectuées dans l'environnement cible.
+Par conséquent, l'image docker `openwhisk/python2action` ou `openwhisk/python3action` doit être utilisée afin de créer un répertoire virtualenv pour votre action. 
 
 Comme avec le support de fichier zip de base, le nom du fichier source contenant le point d'entrée principal doit être `__main__.py`. De plus, le répertoire virtualenv doit s'appeler `virtualenv`.
 Vous trouverez ci-dessous un exemple de scénario d'installation des dépendances, de conditionnement de ces dernières dans un environnement virtuel et de création d'une action OpenWhisk compatible.
-1. Avec un fichier `requirements.txt` contenant les modules `pip` et les versions à installer, exécutez ce qui suit pour installer les dépendances et créer un environnement virtuel à l'aide d'une image Docker compatible :
+
+1. Avec un fichier `requirements.txt` contenant les versions et les modules `pip` à installer, exécutez les commandes suivantes pour installer les dépendances et créer un environnement virtuel à l'aide d'une image Docker compatible :
+ 
  ```bash
- $ docker run --rm -v "$PWD:/tmp" openwhisk/python3action sh \
+ docker run --rm -v "$PWD:/tmp" openwhisk/python3action sh \
    -c "cd tmp; virtualenv virtualenv; source virtualenv/bin/activate; pip install -r requirements.txt;"
  ```
+ {: pre}
 
-2. Archivez le répertoire virtualenv, ainsi que les éventuels fichiers Python supplémentaires :
+2. Archivez le répertoire virtualenv ainsi que les éventuels fichiers Python supplémentaires : 
  ```bash
- $ zip -r helloPython.zip virtualenv **main**.py
+ zip -r helloPython.zip virtualenv __main__.py
  ```
+ {: pre}
 
 3. Créez l'action :
-```bash
-$ wsk action create helloPython --kind python:3 helloPython.zip
-```
+  ```bash
+  wsk action create helloPython --kind python:3 helloPython.zip
+  ```
+  {: pre}
 
 Les étapes ci-dessus s'appliquent à Python 3.6, mais vous pouvez aussi les utiliser pour Python 2.7.
 
-## Création d'actions Swift
+## Création d'actions Swift 
 
 Le processus de création d'actions Swift est similaire au processus de création d'actions JavaScript. Les sections ci-après expliquent comment créer et appeler une action Swift unique, et comment ajouter des paramètres à cette action.
 
-Vous pouvez aussi utiliser le [bac à sable Swift] en ligne (https://swiftlang.ng.bluemix.net) pour tester votre code Swift sans avoir à installer Xcode sur votre machine.
+Vous pouvez aussi utiliser le [bac à sable Swift](https://swiftlang.ng.bluemix.net) en ligne pour tester votre code Swift sans avoir à installer Xcode sur votre machine. 
 
-### Création et appel d'une action
+### Création et appel d'une action 
 
-Une action est simplement une fonction Swift de niveau supérieur. Par exemple, créez un fichier appel
-`hello.swift` avec le contenu suivant :
+Une action est simplement une fonction Swift de niveau supérieur. Par exemple, créez un fichier appelé
+`hello.swift` avec le contenu suivant : 
 
 ```swift
 func main(args: [String:Any]) -> [String:Any] {
@@ -643,17 +650,19 @@ func main(args: [String:Any]) -> [String:Any] {
 ```
 {: codeblock}
 
-Les actions Swift consomment et produisent toujours un dictionnaire.
+Les actions Swift consomment et produisent toujours un dictionnaire. 
 
-Vous pouvez créer une action {{site.data.keyword.openwhisk_short}} appelée `helloSwift` à partir de cette fonction comme suit :
+Vous pouvez créer une action {{site.data.keyword.openwhisk_short}} appelée `helloSwift` depuis cette fonction comme
+suit :
 
 ```
 wsk action create helloSwift hello.swift
 ```
 {: pre}
 
-Lorsque vous utilisez la ligne de commande et un fichier source `.swift`, il n'est pas nécessaire de spécifier
-que vous créez une action Swift (et non une action JavaScript) ; l'outil le détermine à partir de l'extension de fichier.
+Lorsque vous utilisez la ligne de commande et un fichier source `.swift`, il n'est pas nécessaire de
+spécifier que vous créez une action Swift (et non une action JavaScript) ;
+l'outil le détermine à partir de l'extension de fichier. 
 
 L'appel d'action est identique pour les actions Swift et les actions JavaScript :
 
@@ -668,14 +677,17 @@ wsk action invoke --blocking --result helloSwift --param name World
   }
 ```
 
-**Attention :** les actions Swift s'exécutent dans un environnement Linux. Swift on Linux est en cours de développement et {{site.data.keyword.openwhisk_short}} utilise généralement l'édition disponible la plus récente, qui n'est pas nécessairement stable.  De plus, il se peut que la version de Swift qui est utilisée avec {{site.data.keyword.openwhisk_short}} ne corresponde pas aux versions de Swift provenant d'éditions stables de Xcode sous MacOS. ### Conditionnement d'une action sous la forme d'un exécutable Swift
+**Attention :** les actions Swift s'exécutent dans un environnement Linux. Swift on Linux est en cours de développement
+et {{site.data.keyword.openwhisk_short}} utilise généralement l'édition disponible la plus récente, qui n'est pas nécessairement stable. De plus, il se peut que la version de Swift qui est utilisée avec {{site.data.keyword.openwhisk_short}} ne corresponde pas aux versions de Swift provenant d'éditions stables de Xcode sous MacOS. 
+
+### Conditionnement d'une action en tant qu'exécutable Swift 
 {: #openwhisk_actions_swift_zip}
 
-Lorsque vous créez une action Swift d'OpenWhisk avec un fichier source Swift, celui-ci doit être compilé dans un binaire avant d'exécuter l'action. Après quoi, les appels ultérieurs de l'action sont beaucoup plus rapides jusqu'à ce que le conteneur hébergeant votre action soit purgé. Ce délai est dénommé délai de démarrage à froid.
+Lorsque vous créez une action Swift OpenWhisk avec un fichier source Swift, celui-ci doit être compilé en fichier binaire avant l'exécution de l'action. Après quoi, les appels ultérieurs de l'action sont beaucoup plus rapides jusqu'à ce que le conteneur hébergeant votre action soit purgé. Ce délai est dénommé délai de démarrage à froid.
 
 Pour éviter ce délai, vous pouvez compiler votre fichier Swift en binaire, puis le télécharger dans OpenWhisk sous forme de fichier zip. Comme vous avez besoin de l'échafaudage OpenWhisk, la manière la plus facile de créer le binaire consiste à le générer dans le même environnement que celui où il sera exécuté. Pour ce faire, procédez comme suit :
 
-- Exécutez un conteneur d'actions Swift interactif.
+- Exécutez un conteneur d'actions Swift interactif. 
 ```
 docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
 ```
@@ -683,8 +695,8 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
 
     Ceci vous positionne dans un shell bash dans le conteneur Docker. Exécutez les commandes suivantes depuis ce shell :
 
-- Installez zip pour création créer facilement le package binaire
-```
+- Installez zip pour pouvoir conditionner facilement le fichier binaire. 
+  ```
   apt-get install -y zip
   ```
   {: pre}
@@ -714,13 +726,13 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   ```
   zip /owexec/hello.zip .build/release/Action
   ```
-- Quittez le conteneur Docker
+- Quittez le conteneur Docker. 
   ```
   exit
   ```
   {: pre}
-Ainsi, vous avez créé le fichier hello.zip dans le même répertoire que hello.swift.
--Téléchargez-le dans OpenWhisk avec le nom d'action helloSwiftly :
+Vous avez créé hello.zip dans le même répertoire qu'hello.swift.
+-Téléchargez-le dans OpenWhisk avec le nom d'action helloSwifty :
   ```
   wsk action update helloSwiftly hello.zip --kind swift:3
   ```
@@ -732,23 +744,27 @@ Ainsi, vous avez créé le fichier hello.zip dans le même répertoire que hello
   {: pre}
 
 Le temps qui a été nécessaire à l'exécution de l'action figure dans la propriété "duration" et vous pouvez le comparer avec le temps qui est nécessaire à l'exécution via une étape de compilation dans l'action hello.
-## Création d'actions Java
+
+
+## Création d'actions Java 
 {: #openwhisk_actions_java}
 
 Le processus de création d'actions Java est similaire au processus de création d'actions JavaScript et Swift. Les sections ci-après expliquent comment créer et appeler une action Java unique, et comment ajouter des paramètres à cette action.
 
-Pour compiler, tester et archiver des fichiers Java, vous devez disposer d'un [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) installé en local.
+Pour pouvoir compiler, tester et archiver des fichiers Java, un logiciel [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) doit être installé en local.
 
-### Création et appel d'une action
+
+### Création et appel d'une action 
 {: #openwhisk_actions_java_invoke}
 
-Une action Java est un programme Java doté d'une méthode appelée `main` qui possède l'exacte signature suivante :
+Une action Java est un programme Java comportant une méthode appelée `main` qui possède l'exacte signature suivante :
+
 ```java
 public static com.google.gson.JsonObject main(com.google.gson.JsonObject);
 ```
 {: codeblock}
 
-Par exemple, créez un fichier Java appelé `Hello.java` avec le contenu suivant :
+Par exemple, créez un fichier Java appelé `Hello.java` avec le contenu suivant : 
 
 ```java
 import com.google.gson.JsonObject;
@@ -765,7 +781,7 @@ public class Hello {
 ```
 {: codeblock}
 
-Puis, compilez `Hello.java` dans un fichier JAR `hello.jar` comme suit :
+Ensuite, compilez `Hello.java` dans un fichier JAR appelé `hello.jar` comme suit : 
 ```
 javac Hello.java
 ```
@@ -775,17 +791,25 @@ jar cvf hello.jar Hello.class
 ```
 {: pre}
 
-**Remarque :** [google-gson](https://github.com/google/gson) doit exister dans votre variable Java CLASSPATH lors de la compilation du fichier Java.
+**Remarque :** [google-gson](https://github.com/google/gson) doit exister dans votre variable Java CLASSPATH lorsque vous compilez le fichier Java. 
 
-Vous pouvez créer une action OpenWhisk nommée `helloJava` à partir de fichier JAR comme suit :
+Vous pouvez créer une action OpenWhisk appelée `helloJava` depuis ce fichier JAR comme
+suit :
+
 
 ```
 wsk action create helloJava hello.jar --main Hello
 ```
 
-Lorsque vous utilisez la ligne de commande et un fichier source `.jar`, il n'est pas nécessaire de spécifier que vous créez une action Java ; l'outil le détermine à partir de l'extension de fichier.
+Lorsque vous utilisez la ligne de commande et un fichier source `.jar`, il n'est pas nécessaire
+de spécifier que vous créez une action Java ;
+l'outil le détermine à partir de l'extension de fichier.
 
-Vous devez indiquer le nom de la classe principale avec `--main`. Une classe principale est éligible quand elle implémente une méthode `main` statique comme décrit ci-dessus. Si la classe ne figure pas dans le package par défaut, utilisez le nom de classe Java entièrement qualifié, par exemple, `--main com.example.MyMain`.
+
+Vous devez spécifier le nom de la classe principale à l'aide de `--main`. Une classe principale est
+éligible si elle implémente une méthode `main` statique comme décrit ci-dessus. Si la
+classe ne se trouve pas dans le package par défaut, utilisez le nom de classe qualifié complet Java,
+par exemple `--main com.example.MyMain`.
 
 L'appel d'action est identique pour les actions Java et les actions Swift et JavaScript :
 
@@ -800,15 +824,17 @@ wsk action invoke --blocking --result helloJava --param name World
   }
 ```
 
-## Création d'actions Docker
+## Création d'actions Docker 
 
-Avec les actions Docker {{site.data.keyword.openwhisk_short}}, vous pouvez écrire vos actions dans n'importe quel langage.
+Avec des actions Docker {{site.data.keyword.openwhisk_short}}, vous pouvez écrire vos actions dans n'importe quel langage. 
 
-Votre code est compilé dans un fichier binaire exécutable et imbriqué dans une image Docker. Le programme binaire interagit avec le système en prenant l'entrée provenant de `stdin` et en répondant par le biais de `stdout`.
+Votre code est compilé dans un fichier binaire exécutable et imbriqué dans une image Docker. Le programme binaire interagit avec le système en prenant l'entrée dans `stdin` et en répondant par le biais de `stdout`.
 
-Au préalable, vous devez disposer d'un compte Docker Hub. Pour configurer un ID et un compte Docker gratuits, visitez [Docker Hub](https://hub.docker.com).
 
-Dans les instructions qui suivent, l'ID utilisateur Docker est `janesmith` et le mot de passe est `janes_password`. Si l'on part du principe que l'interface de ligne de commande est déjà configurée, trois étapes doivent être effectuées pour configurer un fichier binaire personnalisé pouvant être utilisé par {{site.data.keyword.openwhisk_short}}. Ensuite, l'image Docker téléchargée peut être utilisée en tant qu'action.
+Au préalable, vous devez disposer d'un compte Docker Hub. Pour configurer un ID et un compte Docker gratuits, visitez le site [Docker Hub](https://hub.docker.com).
+
+
+Dans les instructions qui suivent, l'ID utilisateur Docker est `jeannedupont` et le mot de passe est `jeanne_motdepasse`. Si l'on part du principe que l'interface de ligne de commande est déjà configurée, trois étapes doivent être effectuées pour configurer un fichier binaire personnalisé pouvant être utilisé par {{site.data.keyword.openwhisk_short}}. Ensuite, l'image Docker téléchargée peut être utilisée en tant qu'action.
 
 1. Téléchargez le squelette Docker. Vous pouvez le télécharger via l'interface de ligne de commande comme suit :
 
@@ -960,7 +986,7 @@ Vous pouvez utiliser l'interface de ligne de commande {{site.data.keyword.openwh
 ## Affichage de la liste des actions
 {: #openwhisk_listing_actions}
 
-Vous pouvez répertorier toutes les actions que vous avez créées en utilisant la commande : 
+Vous pouvez répertorier toutes les actions que vous avez créées en utilisant la commande :
 
 ```
 wsk action list
@@ -1009,7 +1035,7 @@ Ces propriétés sont accessibles via l'environnement système de tous les conte
 
 * `__OW_API_HOST` : hôte d'API pour le déploiement OpenWhisk qui exécute cette action
 * `__OW_API_KEY` : clé d'API pour l'objet qui appelle l'action ; peut être une clé d'API restreinte
-* `__OW_NAMESPACE` : espace-noms pour l'*activation* (peut être différent de l'espace-noms pour l'action)
+* `__OW_NAMESPACE` : espace de nom pour l'*activation* (peut être différent de l'espace de nom pour l'action)
 * `__OW_ACTION_NAME` : nom qualifié complet de l'action en cours d'exécution
 * `__OW_ACTIVATION_ID` : ID d'activation pour cette instance d'action en cours d'exécution
 * `__OW_DEADLINE` : délai approximatif au terme duquel cette action aura consommé la totalité de son quota de durée (mesuré en millisecondes sur l'époque)

@@ -30,17 +30,17 @@ Par défaut, vos rapports incluent des environnements logiques qui correspondent
 
 ## Mappage des environnements à des environnements logiques
 
-Vous pouvez mapper manuellement des environnements physiques à des environnements logiques, ou vous pouvez utiliser des masques pour associer dynamiquement des environnements physiques à des environnements logiques. 
+Vous pouvez mapper manuellement des environnements physiques à des environnements logiques, ou vous pouvez utiliser des masques pour associer dynamiquement des environnements physiques à des environnements logiques.
 
-Pour mapper des environnements physiques à des environnements logiques à l'aide d'un masque, procédez comme suit : 
+Pour mapper des environnements physiques à des environnements logiques à l'aide d'un masque, procédez comme suit :
 
 1. Dans {{site.data.keyword.DRA_short}}, cliquez sur **Delivery Insights > Map Environments**.
 1. Cliquez sur un environnement logique existant ou sur **Add Logical Environment**.
 1. Dans les paramètres de l'environnement logique, sous **Patterns**, cliquez sur **Add Pattern**.
 1. Indiquez un masque pour les noms d'environnement. Vous pouvez utiliser l'astérisque (*) comme caractère générique. Par exemple, le masque `env` correspond aux environnements `env1`, `env2` et `env`.
-1. Vérifiez que l'environnement logique contient les environnements que vous souhaitez. 
+1. Vérifiez que l'environnement logique contient les environnements que vous souhaitez.
 
-Pour mapper manuellement des environnements à des environnements logiques, cliquez sur **Add Manually** et sélectionnez les environnements à ajouter ou à retirer. 
+Pour mapper manuellement des environnements à des environnements logiques, cliquez sur **Add Manually** et sélectionnez les environnements à ajouter ou à retirer.
 
 ![Configuration de l'intégration dans DevOps Connect](images/uc_insights_mapping_manually.gif)
 

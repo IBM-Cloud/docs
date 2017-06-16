@@ -23,7 +23,7 @@ Se utilizzi l'infrastruttura Cloud Foundry per eseguire le tue applicazioni su {
 Per monitorare le prestazioni delle applicazioni CF, utilizza uno dei seguenti metodi:
 
 * {{site.data.keyword.Bluemix_notm}} Availability Monitoring per monitorare le applicazioni CF attraverso la console.
-* Opzioni di terze parti per monitorare le applicazioni CF attraverso prodotti di terzi come [New Relic ![icona link esterno](../../../icons/launch-glyph.svg "External link icon")](http://newrelic.com/){:new_window}.
+* Opzioni di terze parti per monitorare le applicazioni CF attraverso prodotti di terzi come [New Relic ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](http://newrelic.com/){:new_window}.
 
 
 

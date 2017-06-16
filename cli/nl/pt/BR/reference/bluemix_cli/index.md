@@ -16,13 +16,13 @@ lastupdated: "2017-03-08"
 # Introdução ao {{site.data.keyword.Bluemix_notm}} CLI
 {: #getting-started}
 
-A CLI do {{site.data.keyword.Bluemix_notm}} fornece uma maneira unificada para você interagir com seus aplicativos, contêineres, infraestruturas e outros serviços usando uma interface da linha de comandos.  
+A CLI do {{site.data.keyword.Bluemix_notm}} fornece uma maneira unificada para você interagir com seus aplicativos, contêineres, infraestruturas e outros serviços usando uma interface da linha de comandos. 
 
 **Restrição**: o {{site.data.keyword.Bluemix_notm}} CLI não é suportado por Cygwin, portanto, não use o {{site.data.keyword.Bluemix_notm}} CLI na janela de linha de comandos do Cygwin.
 
 **Nota**: caso sua rede contenha um servidor proxy HTTP entre o host que executa a CLI e o {{site.data.keyword.Bluemix_notm}}, deve-se especificar o nome do host ou o endereço IP do servidor proxy na variável de ambiente HTTP_PROXY.
 
-**Nota:** a ferramenta CLI do {{site.data.keyword.Bluemix_notm}} empacotou uma interface da linha de comandos do Cloud Foundry em sua instalação. No entanto, não é permitido combinar o uso de comandos da CLI do {{site.data.keyword.Bluemix_notm}} `bx xxx` e comandos da CLI do Cloud Foundry `cf xxx` se você tem sua própria instalação cf cli. Em vez disso, use `bluemix cf` se desejar usar cf cli para gerenciar recursos do Cloud Foundry. No backend, ela executa comandos da CLI do Cloud Foundry empacotada em um contexto compartilhado com a CLI do {{site.data.keyword.Bluemix_notm}}. Além disso, `bluemix cf api/login/logout/target` não é permitido, use `bluemix api/login/logout/target`.
+**Nota:** a ferramenta CLI do {{site.data.keyword.Bluemix_notm}} empacotou uma interface da linha de comandos do Cloud Foundry em sua instalação. No entanto, não é permitido combinar o uso de comandos da CLI do {{site.data.keyword.Bluemix_notm}} `bx xxx` e comandos da CLI do Cloud Foundry `cf xxx` se você tem sua própria instalação cf cli. Em vez disso, use `bluemix cf` se desejar usar cf cli para gerenciar recursos do Cloud Foundry. No backend, ela executa comandos da CLI do Cloud Foundry empacotada em um contexto compartilhado com a CLI do {{site.data.keyword.Bluemix_notm}}.  Além disso, `bluemix cf api/login/logout/target` não é permitido, use `bluemix api/login/logout/target`.
 
 ## Instalando o {{site.data.keyword.Bluemix_notm}} CLI
 {: #install_bluemix_cli}

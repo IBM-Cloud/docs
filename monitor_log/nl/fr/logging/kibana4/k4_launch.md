@@ -17,9 +17,10 @@ lastupdated: "2017-04-06"
 # Accès au tableau de bord Kibana
 {: #k4_launch}
 
-Vous pouvez lancer Kibana depuis l'interface utilisateur {{site.data.keyword.Bluemix}} ou directement depuis un navigateur Web. {:shortdesc}
+Vous pouvez lancer Kibana depuis l'interface utilisateur {{site.data.keyword.Bluemix}} ou directement depuis un navigateur Web.
+{:shortdesc}
 
-Lancez Kibana depuis {{site.data.keyword.Bluemix_notm}} pour visualiser et analyser des données en contexte sur la ressource à partir de laquelle vous lancez Kibana. Par exemple, vous pouvez lancer les journaux d'une application CF spécifique dans Kibana, dans le contexte de cette application, ou vous pouvez lancer les journaux d'un conteneur Docker spécifique dans Kibana, dans le contexte de ce conteneur.  
+Lancez Kibana depuis {{site.data.keyword.Bluemix_notm}} pour visualiser et analyser des données en contexte sur la ressource à partir de laquelle vous lancez Kibana. Par exemple, vous pouvez lancer les journaux d'une application CF spécifique dans Kibana, dans le contexte de cette application, ou vous pouvez lancer les journaux d'un conteneur Docker spécifique dans Kibana, dans le contexte de ce conteneur. 
     
 Lancez Kibana depuis un lien de navigateur direct si vous souhaitez voir les données de journal agrégées à partir des services d'un espace {{site.data.keyword.Bluemix_notm}} fourni. La requête utilisée pour filtrer les données affichées dans le tableau de bord extrait des entrées de journal pour un espace dans l'organisation {{site.data.keyword.Bluemix_notm}}. Les informations de journal affichées par Kibana incluent des enregistrements pour toutes les ressources déployées dans l'espace de l'organisation {{site.data.keyword.Bluemix_notm}} à laquelle vous êtes connecté. 
 

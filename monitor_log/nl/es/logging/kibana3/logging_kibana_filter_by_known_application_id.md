@@ -30,7 +30,7 @@ Lleve a cabo las tareas siguientes para ver y filtrar los registros de la app de
 
 2. Acceso al panel de control de Kibana para su app. Pulse **Vista avanzada** ![Enlace Vista avanzada](images/logging_advanced_view.jpg "Enlace Vista avanzada"). Se visualiza el panel de control de Kibana.
 
-3. En el panel de control de Kibana, pulse el icono **Carpeta** ![Icono Carpeta](images/logging_folder.jpg "Icono Carpeta") para mostrar un menú que enumere todos los paneles de control recientes.  
+3. En el panel de control de Kibana, pulse el icono **Carpeta** ![Icono Carpeta](images/logging_folder.jpg "Icono Carpeta") para mostrar un menú que enumere todos los paneles de control recientes. 
 
     **Nota:** además de los paneles de control guardados por nombre, el menú enumera paneles de control sin nombre según el formato siguiente: *ALCH_TENANT_ID_application_id*. 
 
@@ -50,9 +50,9 @@ Lleve a cabo las tareas siguientes para ver y filtrar los registros de la app de
 	
     3. Añada un filtro.
     
-        Para añadir un filtro que incluya información sobre dicho valor de campo específico, pulse el icono **Lupa** ![Icono Lupa](images/logging_magnifying_glass.jpg "Icono Lupa") en la fila de la tabla que contiene el campo que desea filtrar.  
+        Para añadir un filtro que incluya información sobre dicho valor de campo específico, pulse el icono **Lupa** ![Icono Lupa](images/logging_magnifying_glass.jpg "Icono Lupa") en la fila de la tabla que contiene el campo que desea filtrar. 
 	
-        Para añadir un filtro que excluya información sobre este valor de campo concreto, pulse el icono **Exclusión** ![Icono Exclusión](images/logging_exclusion_icon.png "Icono Exclusión") en la fila de la tabla que contiene el campo que desea filtrar.   
+        Para añadir un filtro que excluya información sobre este valor de campo concreto, pulse el icono **Exclusión** ![Icono Exclusión](images/logging_exclusion_icon.png "Icono Exclusión") en la fila de la tabla que contiene el campo que desea filtrar.  
 
         Se añade una nueva condición de filtro al panel de control de Kibana.
 	
@@ -60,11 +60,11 @@ Lleve a cabo las tareas siguientes para ver y filtrar los registros de la app de
 	
 6. Guarde este panel de control con un nombre que reconozca. 
 
-    Pulse el icono **Guardar** ![Icono Guardar](images/logging_save.jpg "Icono Guardar") y escriba un nombre para el panel de control.  
+    Pulse el icono **Guardar** ![Icono Guardar](images/logging_save.jpg "Icono Guardar") y escriba un nombre para el panel de control. 
 
     **Nota:** si intenta guardar un panel de control con un nombre que contenga espacios en blanco, no se guardará. Escriba un nombre sin espacios y pulse el icono **Guardar**.
 
     ![Guardar nombre del panel de control](images/logging_save_dashboard.jpg "Guardar nombre del panel de control").
 
 
-Ha creado un panel de control que filtra las entradas de registro por ID de aplicación e ID de instancia. Puede cargar el panel de control que ha guardado en cualquier momento pulsando el icono **Carpeta** ![Icono Carpeta](images/logging_folder.jpg "Icono Carpeta") y seleccionando el panel de control por nombre. 
+Ha creado un panel de control que filtra las entradas de registro por ID de aplicación e ID de instancia. Puede cargar el panel de control que ha guardado en cualquier momento pulsando el icono **Carpeta** ![Icono Carpeta](images/logging_folder.jpg "Icono Carpeta") y seleccionando el panel de control por nombre.

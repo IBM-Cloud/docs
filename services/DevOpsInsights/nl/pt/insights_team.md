@@ -12,10 +12,10 @@ lastupdated: "2017-03-16"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Team Dynamics (Experimental)
+# Dinâmica De time
 {: #gettingstarted}
 
-O {{site.data.keyword.DRA_full}} Team Dynamics emprega análise de codificação social para identificar o nível de interação entre os membros da equipe para que a equipe possa corrigir práticas não produtivas.
+O {{site.data.keyword.DRA_full}} Team Dynamics emprega análise de codificação social para identificar o nível de interação entre os membros da equipe para que a equipe possa corrigir práticas não produtivas. 
 {:shortdesc}
 
 Depois de abrir o {{site.data.keyword.DRA_short}} por meio de sua cadeia de ferramentas, clique em **Team Dynamics**. Daí, é possível selecionar uma categoria de analítica para pesquisar detalhadamente os hábitos e as práticas de colaboração de sua equipe. O que cada conjunto de dados indica pode variar de equipe para equipe e será possível realizar drill down em cada visualização para ajuda e orientação.  

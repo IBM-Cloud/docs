@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-19"
+lastupdated: "2017-6-9"
 
 ---
 
@@ -35,7 +35,7 @@ By default, the settings for the editor style and font size are always shown. To
 
 2. Click **Editor Settings**.
 
-3. To include or exclude a setting from the **Local Editor Settings** menu, click the star next to each setting.
+3. To include or exclude a setting from the **Local Editor Settings** menu, click the star for each setting.
 
 ![Editor Settings toggle](images/webide_editor_settings_toggle_light.png)
 
@@ -62,9 +62,9 @@ The second section is the editor pane. The editor provides several coding featur
  2. In the file navigator, click a file.
 
 ### Keyboard shortcuts
-Many of the commands in the {{site.data.keyword.webide}} are also accessible  through keyboard shortcuts.
+Many of the commands in the {{site.data.keyword.webide}} are accessible through keyboard shortcuts.
 
-To see a list of the keyboard shortcuts in the editor, press Alt+Shift+?. If you're using a Mac OS, press Ctrl+Shift+?.
+To see a list of the keyboard shortcuts in the editor, click **Tools** > **Show keys**. Alternatively, you can see the list by pressing Alt+Shift+?, or on MacOS, Ctrl+Shift+?. You can customize a shortcut by hovering over the key, clicking the pencil, and typing the new key binding.
 
 ## Managing source code
 {: #sourcecontrol}
@@ -203,7 +203,15 @@ The Eclipse Orion {{site.data.keyword.webide}} provides content assist, tooltips
 </li><li>git config
 </li><li>cfignore
 </li><li>properties
-</ul>
+</li></ul>
 </td>
 </tr>
 </table>
+
+## Take a tutorial: Eclipse Orion Web IDE
+{: #toolchain_tutorials}
+
+Check out one of these tutorials on the [IBM&reg; Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}:
+  * [Create and use your first toolchain (GitHub) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow?task=1){:new_window}
+  * [Create a toolchain that uses Git Repos and Issue Tracking ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_cfv2?task=1){:new_window}
+  * [Create and use a microservices toolchain with DevOps Insights (v2) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

@@ -65,14 +65,10 @@ lastupdated: "2017-04-07"
 
 2. **「{{site.data.keyword.DRA_short}}」** をクリックします。
 
-3. {{site.data.keyword.DRA_short}} の機能のすべてをツールチェーンに追加するには、**「詳細」**を選択し、さらに**「Developer Insights を有効にする (Enable Developer Insights)」**チェック・ボックスにチェック・マークが付いていることを確認します。
-Deployment Risk のみ追加する場合は、**「デフォルト」**を選択します。
- 
-
-4. **「統合の作成 (Create Integration)」**をクリックします。
+3. **「統合の作成 (Create Integration)」**をクリックします。
 
 {{site.data.keyword.DRA_short}} は、ツールチェーンの概要ページから利用できるようになりました。
-
+データを検索するために、リポジトリーと問題追跡システムが自動的にスキャンされます。 
 
 ## DevOps Insights の使用
 {: #using}
@@ -84,8 +80,7 @@ Deployment Risk のみ追加する場合は、**「デフォルト」**を選択
 1. ツールチェーンの概要ページから、**「{{site.data.keyword.DRA_short}}」**をクリックします。
 
 
-2. 左側ナビゲーションから、**「Team Dynamics」**または**「Developer Insights」**をクリックした後、データのカテゴリーを選択します。
-
+2. **「Team Dynamics」**または**「Developer Insights」**をクリックしてから、データのカテゴリーを選択します。 
 
 3. そのデータ・カテゴリーの中のダッシュボードを表示することにより、プロジェクトのデータを調べます。
 グラフについて、またその情報の処理方法については、**「情報」**または**「ガイダンス」**をクリックしてください。
@@ -94,20 +89,3 @@ Deployment Risk のみ追加する場合は、**「デフォルト」**を選択
 Team Dynamics や Developer Insights について調べた後、[Deployment Risk の構成](/docs/services/DevOpsInsights/insights_risk.html)を行って、コード品質を維持強制することができます。
 Deployment Risk は、{{site.data.keyword.contdelivery_short}} パイプラインと Jenkins の両方と互換性があります。
    
-
-デフォルトでは、{{site.data.keyword.DRA_short}} には Developer Insights も Team Dynamics も含まれていません。
-構成後にそれらの機能をツールチェーンに追加するには、次のようにします。
-
-
-1. ツールチェーンの概要ページに移動します。
-
-2. {{site.data.keyword.DRA_short}} カードで、**「アクション」**メニューをクリックします。
-
-3. **「構成 (Configure)」**をクリックします。
-4. タイプとして**「詳細」**を選択し、チェック・ボックスにチェック・マークを付けます。
-
-5. **「統合の保存」**をクリックします。
-
-
-構成を保存した後、Developer Insights と Team Dynamics によりリポジトリーが自動的にスキャンされ、トラッキング・システムが発行されます。
-

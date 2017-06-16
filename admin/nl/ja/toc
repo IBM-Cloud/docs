@@ -1,14 +1,28 @@
-{: .toc}
-Cloud Foundry アプリ  
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
 
-    [アカウントのセットアップ](/docs/admin/adminpublic.html)
+{: .toc subcollection="bluemix-account" audience="platform" href="/docs/admin/adminpublic.html"}
+アカウントの管理
+
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    アカウントのセットアップ
         adminpublic.md
         profile.md
-        account.md
-        iamuserinv.md
-        iamusermanage.md
-        users_roles.md
+    
+    softlayerlink.md
+
+    {: .topicgroup}
+    組織
         orgs_spaces.md
-        apikeys.md
+        manageorg.md
+        
+    notifications.md
+    {: .navgroup-end}
+
+    {: .navgroup id="learn"}
+    {: .topicgroup}  
+    ベスト・プラクティス
         patterns.md
-        softlayerlink.md
+        
+    {: .navgroup-end}

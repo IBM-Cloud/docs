@@ -20,12 +20,12 @@ The following frequently asked questions relate to a Standard account, which is 
 ## Who can sign up for a Standard account?
 {: #whocanuse}
 
-Currently, new {{site.data.keyword.Bluemix_notm}} users in the UK can sign up for a Standard account. Also, users who receive an invite to participate in the Standard account Beta. You can ask a friend who already has a Standard account to invite you, or get in touch with our sales team at sales@bluemix.net.
+Because it is in limited release, only a select few new {{site.data.keyword.Bluemix_notm}} users in the United Kingdom are eligible for a Standard account. Users can also sign up for a Standard account if they receive an invite from a user participating in the limited release. You can ask a friend who already has a Standard account to invite you, or get in touch with our sales team at sales@bluemix.net.
 
 ## How many organizations can I use in a Standard account?
 {: #howmanyorgs}
 
-Since the Standard account is not meant for advances use cases, it is limited to one account. If you need more than one organization, you can upgrade to a billable account and pay only for what you use above the free allowances. For more information, see [Signing up for a billable account](/docs/pricing/billable.html#billable).
+Because the Standard account is not meant for advanced use cases, it is limited to one account. If you need more than one organization, you can upgrade to a billable account and pay only for what you use above the free allowances. For more information, see [Signing up for a billable account](/docs/pricing/billable.html#billable).
 
 ## Does a Standard account ever expire?
 {: #neverexpires}

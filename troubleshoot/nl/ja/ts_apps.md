@@ -436,34 +436,6 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} からアプリを {{si
 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} からアプリを {{site.data.keyword.Bluemix_notm}} にプッシュするときは、「アプリケーション」ウィザードの「アプリケーションの詳細 (Application details)」ページで**「マニフェスト・ファイルに保存 (Save to the manifest file)」**チェック・ボックスを選択してください。これにより、ウィザードで指定した変数が、アプリケーション用のマニフェスト・ファイルに保存されます。次にそのウィザードを開いたときに、それらの変数は自動的に表示されます。
 {: tsResolve}
 
-
-## Bluemix Live Sync アイコンが表示されない
-{: #ts_llz_lkb_3r}
-
-アプリを作成しても、Web IDE に IBM Bluemix Live Sync アイコンが表示されません。
-
-Web IDE で Node.js アプリを編集するときは、{{site.data.keyword.Bluemix_notm}} ライブ編集、即時再始動、およびデバッグの各アイコンは表示されません。
-{: tsSymptoms}
-
-以下の場合にはアイコンは使用できません。
-{: tsCauses}
-
-  * `manifest.yml` ファイルがプロジェクトの最上位に格納されていない。
-  * アプリはプロジェクトの最上位ではなくサブディレクトリーに格納されているが、そのサブディレクトリーのパスが `manifest.yml` ファイルに指定されていない。
-  * アプリに `package.json` ファイルが含まれていない。
-
-以下のいずれかの方法を使用します。
-{: tsResolve}
-
-  * `manifest.yml` ファイルがプロジェクトの最上位に格納されていなければ、最上位に格納します。
-  * アプリがサブディレクトリーに格納されている場合は、そのサブディレクトリーのパスを `manifest.yml` ファイルに指定します。
-
-  ```
-   path: path_to_application
-   ```
-  * アプリと同じディレクトリーに `package.json` ファイルを作成します。
-
-
 <!-- begin STAGING ONLY -->
 
 ## Bluemix Live Sync Debug がコマンド・ラインから開始しない
@@ -695,21 +667,18 @@ Java』](/docs/runtimes/liberty/index.html)を参照してください。
 [git update![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://git-scm.com/docs/git-update-index){: new_window} コマンドを使用して、各スクリプトのアクセス権を実行可能に変更できます。例えば、`git update --chmod=+x script.sh` と入力できます。
 {: tsResolve}
 
+## IBM Bluemix Continuous Delivery の Delivery Pipeline からアプリをデプロイできない
+ {: #ts_devops_to_bm}
 
-## DevOps Services から Bluemix にアプリをデプロイできない
-{: #ts_devops_to_bm}
+ アプリに `manifest.yml` ファイルが存在しない場合、{{site.data.keyword.contdelivery_short}} の {{site.data.keyword.deliverypipeline}} を使用してアプリをデプロイできないことがあります。
 
-`manifest.yml` ファイルがアプリ内に存在しない場合、IBM Bluemix DevOps Services から {{site.data.keyword.Bluemix_notm}} にアプリをプッシュできないことがあります。
+ {{site.data.keyword.contdelivery_short}} の {{site.data.keyword.deliverypipeline}} を使用してアプリをデプロイすると、エラー・メッセージ`「サポートされるアプリケーション・タイプを検出できません (Unable to detect a supported application type)」`が表示されることがあります。
+ {: tsSymptoms}
 
-DevOps Services から {{site.data.keyword.Bluemix_notm}} にアプリをデプロイすると、`「サポートされるアプリケーション・タイプを検出できません (Unable to detect a supported application type)」`というエラー・メッセージが表示される場合があります。
-{: tsSymptoms}
+ この問題は、{{site.data.keyword.Bluemix_notm}} にアプリをデプロイするために、パイプラインが `manifest.yml` ファイルを必要とすることが原因で発生する可能性があります。{: tsCauses}
 
-この問題は、{{site.data.keyword.Bluemix_notm}} にアプリをデプロイする際に DevOps Services が `manifest.yml` ファイルを必要とすることが原因で発生する場合があります。
-{: tsCauses}
-
-この問題を解決するには、`manifest.yml` ファイルを作成する必要があります。`manifest.yml` ファイルの作成方法について詳しくは、『[アプリケーション・マニフェスト](/docs/manageapps/depapps.html#appmanifest)』を参照してください。
+ この問題を解決するには、`manifest.yml` ファイルを作成する必要があります。`manifest.yml` ファイルの作成方法について詳しくは、『[アプリケーション・マニフェスト](/docs/manageapps/depapps.html#appmanifest)』を参照してください。
 {: tsResolve}
-
 
 ## Meteor アプリをプッシュできない
 {: #ts_meteor}
@@ -733,166 +702,3 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
     ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
-
-## 「Bluemix にデプロイ」ボタンでアプリがデプロイされない
-{: #ts_deploybutton}
-
-「{{site.data.keyword.Bluemix_notm}} へのデプロイ (Deploy to Bluemix)」ボタンをクリックしても、Git リポジトリーが複製されない場合、あるいはアプリがデプロイされない場合は、
-以下の問題に対するトラブルシューティング方法を試してください。
-  * [Bluemix DevOps Services プロジェクトが作成できない](#ts_project-cant-be-created)
-  * [Git リポジトリーが見つからず、DevOps Services で複製できない](#ts_repo-not-found)
-  * [Git リポジトリーは DevOps Services で複製されるが、アプリが {{site.data.keyword.Bluemix_notm}}](#ts_repo-cloned-app-not-deployed) にデプロイされない
-
-ボタンの作成方法について詳しくは、『「{{site.data.keyword.Bluemix_notm}} へのデプロイ (Deploy to Bluemix)」ボタンの作成』を参照してください。
-
-### Bluemix DevOps Services プロジェクトが作成できない
-{: #ts_project-cant-be-created}
-
-DevOps Services プロジェクトを作成できない場合は、ご使用の IBM {{site.data.keyword.Bluemix_notm}} アカウントの有効期限が切れている可能性があります。
-
-**「Bluemix へのデプロイ (Deploy to Bluemix)」**ボタンをクリックしても、「プロジェクトの作成 (Creating project)」ステップが正常に完了しません。
-{: tsSymptoms}
-
-お使いの {{site.data.keyword.Bluemix_notm}} アカウントの有効期限が切れている場合があります。
-{: tsCauses}
-
-以下のいずれかの方法を使用します。
-{: tsResolve}
-
-  * {{site.data.keyword.Bluemix_notm}} にログインして、アカウント情報を更新します。
-  * 再度**「Bluemix へのデプロイ (Deploy to Bluemix)」**ボタンをクリックします。
-
-### Git リポジトリーが見つからず、DevOps Services で複製できない
-{: #ts_repo-not-found}
-
-Git リポジトリーが複製されない場合は、リポジトリーまたはボタン・スニペットに問題がある場合があります。
-
-**「Bluemix へのデプロイ (Deploy to Bluemix)」**ボタンをクリックしても、Git リポジトリーを見つけることができず、DevOps Services で複製することもできません。「リポジトリーの複製 (Cloning repository)」ステップが正常終了しません。そのため、アプリを {{site.data.keyword.Bluemix_notm}} にデプロイできません。
-{: tsSymptoms}
-
-この問題は、以下の理由で発生することがあります。
-{: tsCauses}
-
-  * Git リポジトリーが存在しないか、アクセスできない可能性があります。
-  * ボタン・スニペットの HTML または Markdown に問題が存在する可能性があります。
-  * 特殊文字、照会パラメーター、または URL 内のフラグメント化により、Git リポジトリーに正しくアクセスできないという問題が存在する可能性があります。
-
-以下のいずれかの方法を使用します。
-{: tsResolve}
-
-  * Git リポジトリーが存在し、公的にアクセス可能であること、および URL が正しいことを検証します。
-  * スニペットに HTML のエラーも Markdown のエラーも含まれていないことを検証します。
-  * 特殊文字、照会パラメーター、またはフラグメントが原因で Git リポジトリーの URL に問題が生じる場合は、ボタン・スニペット内で URL をエンコードします。
-
-### Git リポジトリーは DevOps Services で複製されるが、アプリが Bluemix にデプロイされない
-{: #ts_repo-cloned-app-not-deployed}
-
-アプリがデプロイされない場合は、リポジトリーに含まれるコードに問題が存在する可能性があります。
-
-**「Bluemix へのデプロイ (Deploy to Bluemix)」**ボタンをクリックすると、Git リポジトリーは DevOps Services で複製されるが、アプリが {{site.data.keyword.Bluemix_notm}} にデプロイされません。「Bluemix へのデプロイ」ステップが正常に完了しません。
-{: tsSymptoms}
-
-この問題は、以下の理由で発生することがあります。
-{: tsCauses}  
-
-  * ご使用の {{site.data.keyword.Bluemix_notm}} スペースに、アプリをデプロイするための十分なスペースがない場合があります。
-  * 必要なサービスが `manifest.yml` ファイルで宣言されていない可能性があります。
-  * 必要なサービスは `manifest.yml` ファイルで宣言されていても、そのサービスは既にターゲット・スペース内にあります。
-  * リポジトリーに含まれるコードに問題が存在する可能性があります。
-
-問題を診断するには、デプロイメントからのビルド・ログとデプロイ・ログを調査します。
-  1. 「Bluemix へのデプロイ」ステップが正常に完了しない場合は、前の「パイプラインの構成」ステップに含まれるリンクをクリックして Delivery Pipeline を開きます。
-  2. 失敗したビルドまたはデプロイのステージを特定します。
-  3. 失敗したステージで、**「ログと履歴の表示 (View logs and history)」**をクリックします。
-  4. エラー・メッセージを見つけます。
-
-以下のいずれかの方法を使用します。
-{: tsResolve}
-
-  * エラー・メッセージに、{{site.data.keyword.Bluemix_notm}} スペースにアプリをデプロイするための十分なスペースがないと示されている場合は、別のスペースを対象にします。
-  * エラー・メッセージに、必要なサービスが `manifest.yml` ファイルで宣言されていないと示されている場合は、リポジトリーの所有者に、必要なサービスを追加する必要があることを知らせます。
-  * エラー・メッセージに、必要なサービスは既にターゲット・スペースに存在すると示されている場合は、別のスペースを選択して使用します。
-  * エラー・メッセージに、ビルドに問題が存在すると示されている場合は、アプリのビルドを妨げている、コードに関わる問題をすべて修正します。そのコードに問題が含まれていないことを検証するには、Git コマンドを使用してコードをビルドします。
-    1. Git リポジトリーを複製します。
-    ```
-    git clone <git_repository_URL>
-    ```
-    2. アプリのディレクトリーを開きます。
-	```
-	cd <appname>
-	```
-    3. アプリを作成します。
-	```
-	<appname> create
-	```
-    4. 必要な場合はアドオンをプロビジョンします。
-    5. 必要な構成変数をすべて追加します。
-    6. コードをプッシュします。
-	```
-	git push <appname> master
-	```
-    7. アプリが正しくビルドされていることを検証します。
-    8. 必要な場合は、ポスト・デプロイメント・コマンドを実行します。
-	```
-	<appname> run
-	```
-    9. アプリを開き、そのアプリが正常に機能していることを検証します。
-	```
-	<appname> open
-	```
-
-## 実行バーからアプリをデプロイできない
-{: #ts_runbar}
-
-デプロイメントは黄色の「非同期」状態で失敗します。{: tsSymptoms}
-
-デプロイしているアプリの経路が、実行中の別のアプリと同じです。{: tsCauses}
-
-固有な経路に変更してください。{: tsResolve}
-
-## Eclipse 内の実行バーが見つからない
-{: #ts_runbar-missing}
-
-Eclipse Orion {{site.data.keyword.webide}} に実行バーが見つからない場合は、以下のいずれかの問題が発生しています。
-{: tsCauses}
-
-* {{site.data.keyword.jazzhub}} がご使用のプロジェクトをプロジェクトとして識別していない。
-*  アプリが含まれているフォルダーを {{site.data.keyword.jazzhub_short}} が判別できなかった。
-* アプリが Node.js アプリであることが {{site.data.keyword.jazzhub_short}} によって検出されない。
-
-必要に応じて、以下のいずれかの方法を使用してください。
-{: tsResolve}  
-
-* {{site.data.keyword.jazzhub}} がご使用のプロジェクトをプロジェクトとして識別しない場合は、プロジェクトのルート・ディレクトリーに `project.json` ファイルを作成します。
-* アプリが入っているフォルダーを {{site.data.keyword.jazzhub_short}} が判別できず、アプリがプロジェクトのルート・ディレクトリーに存在しない場合は、以下のいずれかのステップを使用してください。
-  * プロジェクトのルート・ディレクトリーに `manifest.yml` ファイルを作成し、そのファイルを編集して、アプリの場所を指すようにします。例えば、`path: path_to_your_app` と指定します。
-  * アプリをプロジェクトのルート・ディレクトリーに移動します。
-* アプリが Node.js アプリであることを {{site.data.keyword.jazzhub_short}} が検出しない場合は、プロジェクトのアプリ・フォルダーに `package.json` ファイルを作成します。
-
-## GitHub フックが動作しない
-{: #ts_githubhookisntworking}
-
-コミットのプッシュ時にワークアイテムのリンクを作成するように GitHub プロジェクトを構成しましたが、リンクが期待どおり動作していません。
-{: tsSymptoms}
-
-以下の手順を使用して、問題を見つけてください。
-{: tsResolve}
-
-1. GitHub リポジトリーで**「Settings」**をクリックします。
-   ![GitHub の「Settings」リンク](images/github_settings.png)
-
-2. **「Webhooks & services」**をクリックします。
-   ![GitHub の「Web hooks and services」リンク](images/github_webhook.png)
-
-3. メッセージを表示するには、{{site.data.keyword.jazzhub}} 状況アイコンの上にマウスを移動します。
-   ![サービス・フックに関するエラー・メッセージ](images/github_error.png)
-
-4. GitHub のメッセージに従って、エラーを解決します。
-
-5. 修正により問題が解決したことを確認するには、別の変更をコミットしてプッシュするか、{{site.data.keyword.jazzhub_short}} のサービス・ページに移動して**「Test service」**をクリックします。
-   ![GitHub の「Test Service」ボタン](images/github_test.png)
-
-6. 状況アイコンを再びチェックして、エラーがないことを確認します。
-   ![エラーのない状況アイコン](images/githubResolved_small.png)
-
-詳しくは、[『Bluemix DevOps Services プロジェクトのための GitHub のセットアップ (Setting up GitHub for Bluemix DevOps Services projects)』![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://hub.jazz.net/docs/githubhooks/){: new_window}を参照してください。

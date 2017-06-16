@@ -21,6 +21,6 @@ lastupdated: "2016-09-06"
 * 深入了解应用程序运行情况，例如，检测潜在瓶颈或何时需要升级。
 * 估算资源使用情况和费用。
 
-为了使您的部署在 {{site.data.keyword.Bluemix_notm}} 平台上稳定运行，您希望及时检测到问题，并有效地确定原因。为了实现此目标，请在设计应用程序时将故障诊断考虑在内，并在应用程序部署到 {{site.data.keyword.Bluemix_notm}} 后使用服务或工具进行监视和日志记录。
+为了使您的部署在 {{site.data.keyword.Bluemix_notm}} 平台上稳定运行，您希望及时检测到问题，并有效地确定原因。要实现此目标，请在设计应用程序时将故障诊断考虑在内，并在应用程序部署到 {{site.data.keyword.Bluemix_notm}} 后使用服务或工具进行监视和日志记录。
 
 有关 Cloud Foundry 应用程序的监视和日志记录的更多信息，请参阅[监视和日志记录](/docs/monitor_log/monitoringandlogging.html)。

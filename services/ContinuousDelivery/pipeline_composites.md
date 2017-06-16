@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-4-5"
+lastupdated: "2017-5-5"
 ---
 <!-- Copyright info at top of file: REQUIRED
     The copyright info is YAML content that must occur at the top of the MD file, before attributes are listed.
@@ -22,7 +22,7 @@ lastupdated: "2017-4-5"
 With the composite pipeline feature for {{site.data.keyword.deliverypipeline}}, you can manage repeatable continuous integration and continuous delivery processes for related software apps.
 {:shortdesc}
 
-You create composite pipelines to manage the apps in a toolchain. If your toolchain contains apps that are deployed by {{site.data.keyword.deliverypipeline}}, the toolchain dynamically updates when you add or remove delivery pipelines from the toolchain. You can also add apps from external sources to the composite pipeline.
+You create composite pipelines to manage the apps in a toolchain. If your toolchain contains apps that are deployed by {{site.data.keyword.deliverypipeline}}, you can set the composite pipeline to update when you add or remove delivery pipelines from the toolchain. You can also add apps from external sources to the composite pipeline.
 
 ## Creating a composite pipeline
 {: #compositepipeline_create_for_toolchain}
@@ -33,7 +33,7 @@ You create composite pipelines to manage the apps in a toolchain. If your toolch
 
 2. Enable the composite pipeline feature by clicking **Learn more** and then clicking **Enable**. The composite pipeline is enabled for each user, so only the members of your organization (org) who opt in to the experimental feature see the composite pipelines that you create.
 
-2. Click **Create** > **Composite Pipeline**.
+2. Click **Create pipeline** > **Composite Pipeline**.
 
 3. Type a name for the composite pipeline. You can also modify the pipeline description.
 
@@ -45,7 +45,11 @@ You create composite pipelines to manage the apps in a toolchain. If your toolch
 
 5. If you create an empty toolchain, select **Add default environments**. You use these default logical environments to control process execution through the composite pipeline.
 
-6. Click **Create**.
+6. To update the composite pipeline when you add pipelines to the toolchain, remove pipelines from the toolchain, or modify the stages of the toolchain's pipelines, select **Automatically synchronize this composite pipeline with the selected toolchain**.
+
+  **Note:** You must enable automatic synchronization before you change the toolchain's pipelines. Only changes that you make while automatic synchronization is enabled are included in the composite pipeline.
+
+7. Click **Create**.
 
 The stages that you configured are automatically mapped to the appropriate space in your org and a deployment plan is created for the composite pipeline.
 
@@ -96,6 +100,35 @@ To run all of the jobs in all of the apps that are in a space, click the **Deplo
 ![Running a stage in all apps](images/composite_run_space.png)
 
 The jobs run according to the composite blueprint's deployment plan.
+
+##Adding apps that are deployed by delivery pipelines
+{: #compositepipeline_add_apps}
+
+You can add apps that are deployed by delivery pipelines only by automatically synchronizing the composite pipeline with the toolchain. Because a composite pipeline is associated with a single toolchain, you can include only apps whose delivery pipelines that are in that toolchain.
+
+To add an app that is deployed by a delivery pipeline to the composite pipeline, take these steps:
+
+1. Open the composite pipeline.
+
+2. Select **Automatically synchronize this composite pipeline with your toolchain**.
+
+  **Note:** You must enable automatic synchronization before you create the delivery pipelines. Only changes that you make while automatic synchronization is enabled are included in the composite pipeline.
+
+3. Create the delivery pipeline for the app. Be sure to assign the delivery pipeline to the same toolchain as the composite pipeline.
+
+4. Configure stages and jobs for the delivery pipeline.
+
+The app is added to the composite pipeline, and the deployment plans for each stage contain tasks to run the jobs that you configured.
+
+
+##Updating delivery pipelines in the composite pipeline
+{: #compositepipeline_sync}
+
+Before you add or update delivery pipelines that are included in a composite pipeline, you must enable automatic synchronization in the composite pipeline.
+
+1. Open the composite pipeline.
+
+2. Select **Automatically synchronize this composite pipeline with your toolchain**.
 
 ## Viewing logs
 {: #compositepipeline_view_logs}
@@ -162,7 +195,7 @@ If your integration succeeded, you can add IBM UrbanCode Deploy apps to your com
 ## Adding apps from IBM UrbanCode Deploy
 {: #compositepipeline_add_apps}
 
-If you are a member of an org that integrated with IBM UrbanCode Deploy by using DevOps Connect, you can add the apps you can access in IBM UrbanCode Deploy to the composite pipeline. For installation instructions, see [Using IBM Bluemix DevOps Connect to integrate with IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
+If you are a member of an org that integrated with IBM UrbanCode Deploy by using DevOps Connect, you can add the apps that you can access in IBM UrbanCode Deploy to the composite pipeline. For installation instructions, see [Using IBM Bluemix DevOps Connect to integrate with IBM UrbanCode Deploy](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect).
 
 When you are a member of an org that is connected to IBM UrbanCode Deploy, you can add UrbanCode Deploy apps to composite pipelines, select the app processes to include in the deployment plan, and customize the deployment of the apps.
 
@@ -187,3 +220,9 @@ When you are a member of an org that is connected to IBM UrbanCode Deploy, you c
     3. Click **Save**.
 
     4. Repeat these steps for each logical environment that you use.
+
+##Take a tutorial: Composite pipelines
+{: #composite_pipeline-tutorial}
+
+Check out this tutorial on the [IBM&reg; Cloud Garage Method ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method){:new_window}:
+  * [Create and use a microservices toolchain with DevOps Insights (v2) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices_cd?task=1){:new_window}

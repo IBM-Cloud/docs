@@ -4,7 +4,7 @@ copyright:
 
   years: 2017
 
-lastupdated: "2017-05-16"
+lastupdated: "2017-06-01"
 
 ---
 
@@ -17,12 +17,38 @@ lastupdated: "2017-05-16"
 # {{site.data.keyword.bpshort}} CLI plug-in for the {{site.data.keyword.Bluemix_notm}} CLI
 {: #cli}
 
-Refer to the {{site.data.keyword.bpshort}} commands for the {{site.data.keyword.Bluemix}} CLI to manage your environments and perform other operations within {{site.data.keyword.Bluemix_notm}}.
+The {{site.data.keyword.bplong}} plug-in for the {{site.data.keyword.Bluemix_notm}} CLI lets you manage your environments in addition to performing other operations within {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-Before you use the CLI commands:
+## Updating the {{site.data.keyword.bpshort}} plug-in
+{: #updating}
 
-* Log in to {{site.data.keyword.Bluemix_notm}} with `bx login [--sso]` to authenticate your session. Users with a federated ID need to use the `--sso` flag to generate a one-time passcode.
+You might want to update the {{site.data.keyword.bpshort}} plug-in periodically as new features are released.
+{: shortdesc}
+
+1. Log in to {{site.data.keyword.Bluemix_notm}} to authenticate your session.
+
+  ```
+  bx login [--sso]
+  ```
+  {:codeblock}
+  
+  Users with a federated ID need to use the `--sso` flag to generate a one-time passcode. 
+
+2. Update the plug-in to the latest version.
+  
+  ```
+  bx plugin update schematics -r Bluemix
+  ```
+  {:codeblock}
+
+  You can confirm that the installation is successful if you run `bx plugin list` and see the plug-in name `schematics`.
+
+## Commands for the {{site.data.keyword.bpshort}} CLI plug-in
+{: #commands}
+
+Refer to the {{site.data.keyword.bpshort}} commands for the {{site.data.keyword.Bluemix}} CLI to manage your environments.
+{: shortdesc}
 
 To view a list of commands, you can run `bx schematics help`.
 
@@ -80,8 +106,8 @@ bx schematics environment create --file FILE_NAME [--json]
 ### Parameters
 
 <dl>
-<dt>--file FILE_NAME</dt>
-<dd>The JSON file that is used to pass details about your environment.
+<dt>--file FILE_NAME, -f FILE_NAME</dt>
+<dd>A JSON file that is used to pass details about your environment, such as where the source Terraform files are stored.
 <p>
 <p>Example JSON with all available values:
 <pre>{
@@ -102,7 +128,7 @@ bx schematics environment create --file FILE_NAME [--json]
         "value": "Secured value"
     }]
 }</pre></dd>
-<dt>--json</dt>
+<dt>--json, -j</dt>
 <dd>Print the output in JSON format.</dd>
 </dl>
 
@@ -119,9 +145,9 @@ bx schematics environment delete --id ENVIRONMENT_ID [--force]
 ### Parameters
 
 <dl>
-<dt>--id ENVIRONMENT_ID</dt>
+<dt>--id ENVIRONMENT_ID, -i ENVIRONMENT_ID</dt>
 <dd>The unique identifier of the environment. You can retrieve this value by running <code>bx schematics environment list</code>.</dd>
-<dt>--force</dt>
+<dt>--force, -f</dt>
 <dd>Force advancement of the command without a yes/no  confirmation.</dd>
 </dl>
 
@@ -137,11 +163,11 @@ bx schematics environment list [--count VALUE] [--offset VALUE] [--json]
 
 ### Parameters
 <dl>
-<dt>--count VALUE</dt>
+<dt>--count VALUE, -c VALUE</dt>
 <dd>The number of environments to limit in your return.</dd>
-<dt>--offset VALUE</dt>
+<dt>--offset VALUE, -m VALUE</dt>
 <dd>The offset in the list of environments.</dd>
-<dt>--json</dt>
+<dt>--json, -j</dt>
 <dd>Print the output in JSON format.</dd>
 </dl>
 
@@ -157,9 +183,9 @@ bx schematics environment show --id ENVIRONMENT_ID [--json]
 
 ### Parameters
 <dl>
-<dt>--id ENVIRONMENT_ID</dt>
+<dt>--id ENVIRONMENT_ID, -i ENVIRONMENT_ID</dt>
 <dd>The unique identifier of the environment. You can retrieve this value by running <code>bx schematics environment list</code>.</dd>
-<dt>--json</dt>
+<dt>--json, -j</dt>
 <dd>Print the output in JSON format.</dd>
 </dl>
   
@@ -175,11 +201,11 @@ bx schematics environment update --id ENVIRONMENT_ID --file FILE_NAME [--json]
 
 ### Parameters
 <dl>
-<dt>--id ENVIRONMENT_ID</dt>
+<dt>--id ENVIRONMENT_ID, -i ENVIRONMENT_ID</dt>
 <dd>The unique identifier of the environment. You can retrieve this value by running <code>bx schematics environment list</code>.</dd>
-<dt>--file FILE_NAME</dt>
+<dt>--file FILE_NAME, -f FILE_NAME</dt>
 <dd>The JSON file that is used to pass details about your environment. See [bx schematics environment create](#environment-create) for an example JSON snippet with allowed values.</dd>
-<dt>--json</dt>
+<dt>--json, -j</dt>
 <dd>Print the output in JSON format.</dd>
 </dl>
 
@@ -195,11 +221,11 @@ bx schematics action apply --id ENVIRONMENT_ID [--force] [--json]
 
 ### Parameters
 <dl>
-<dt>--id ENVIRONMENT_ID</dt>
+<dt>--id ENVIRONMENT_ID, -i ENVIRONMENT_ID</dt>
 <dd>The unique identifier of the environment. You can retrieve this value by running <code>bx schematics environment list</code>.</dd>
 <dt>--force</dt>
 <dd>Force advancement of the command without a yes/no  confirmation.</dd>
-<dt>--json</dt>
+<dt>--json, -j</dt>
 <dd>Print the apply output in JSON format.</dd>
 </dl>
 
@@ -215,11 +241,11 @@ bx schematics action destroy --id ENVIRONMENT_ID [--force] [--json]
 
 ### Parameters
 <dl>
-<dt>--id ENVIRONMENT_ID</dt>
+<dt>--id ENVIRONMENT_ID, -i ENVIRONMENT_ID</dt>
 <dd>The unique identifier of the environment. You can retrieve this value by running <code>bx schematics environment list</code>.</dd>
 <dt>--force</dt>
 <dd>Force advancement of the command without a yes/no  confirmation.</dd>
-<dt>--json</dt>
+<dt>--json, -j</dt>
 <dd>Print the destroy output in JSON format.</dd>
 </dl>
 </dl>
@@ -236,16 +262,16 @@ bx schematics action plan --id ENVIRONMENT_ID [--file FILE_NAME] [--json]
 
 ### Parameters
 <dl>
-<dt>--id ENVIRONMENT_ID</dt>
+<dt>--id ENVIRONMENT_ID, -i ENVIRONMENT_ID</dt>
 <dd>The unique identifier of the environment. You can retrieve this value by running <code>bx schematics environment list</code>.</dd>
-<dt>--file FILE_NAME</dt>
+<dt>--file FILE_NAME, -f FILE_NAME</dt>
 <dd>The optional JSON file that is used to pass parameters for the plan action. You can pass the parameter <code>sourcesha</code> to reference a specific Git branch for the environment's Terraform configuration. The Git branch must be specified as a head reference such as <code>refs/heads/BRANCH_NAME</code>. If no parameter is specified, the default value is the head of the master branch, that is <code>refs/heads/master</code>.
 <p>
 <p>Example JSON snippet with value:
 <pre>{
   "sourcesha": "refs/heads/BRANCH_NAME"
 }</pre></dd>
-<dt>--json</dt>
+<dt>--json, -j</dt>
 <dd>Print the plan output in JSON format.</dd>
 </dl>
 
@@ -261,13 +287,13 @@ bx schematics activity list --id ENVIRONMENT_ID [--count VALUE] [--offset VALUE]
 
 ### Parameters
 <dl>
-<dt>--id ENVIRONMENT_ID</dt>
+<dt>--id ENVIRONMENT_ID, -i ENVIRONMENT_ID</dt>
 <dd>The unique identifier of the environment. You can retrieve this value by running <code>bx schematics environment list</code>.</dd>
-<dt>--count VALUE</dt>
+<dt>--count VALUE, -c VALUE</dt>
 <dd>The number of activities to return.</dd>
-<dt>--offset VALUE</dt>
+<dt>--offset VALUE, -m VALUE</dt>
 <dd>The offset in the list.</dd>
-<dt>--json</dt>
+<dt>--json, -j</dt>
 <dd>Print the plan output in JSON format.</dd>
 </dl>
 
@@ -283,7 +309,7 @@ bx schematics activity log --id ACTIVITY_ID
 
 ### Parameters
 <dl>
-<dt>--id ACTIVITY_ID</dt>
+<dt>--id ACTIVITY_ID, -i ACTIVITY_ID</dt>
 <dd>The flag to return details about a specific activity. You can retrieve a list of activity IDs per environment with the <code>bx schematics activity list --id ENVIRONMENT_ID</code> command.</dd>
 </dl>
 
@@ -299,7 +325,7 @@ bx schematics activity planfile --id ACTIVITY_ID
 
 ### Parameters
 <dl>
-<dt>--id ACTIVITY_ID</dt>
+<dt>--id ACTIVITY_ID, -i ACTIVITY_ID</dt>
 <dd>The flag to return details about a specific activity. You can retrieve a list of activity IDs per environment with the <code>bx schematics activity list --id ENVIRONMENT_ID</code> command.</dd>
 </dl>
 
@@ -315,8 +341,8 @@ bx schematics activity show --id ACTIVITY_ID [--json]
 
 ### Parameters
 <dl>
-<dt>--id ACTIVITY_ID</dt>
+<dt>--id ACTIVITY_ID, -i ACTIVITY_ID</dt>
 <dd>The flag to return details about a specific activity. You can retrieve a list of activity IDs per environment with the <code>bx schematics activity list --id ENVIRONMENT_ID</code> command.</dd>
-<dt>--json</dt>
+<dt>--json, -j</dt>
 <dd>Print the plan output in JSON format.</dd>
 </dl>

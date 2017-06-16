@@ -39,7 +39,7 @@ lastupdated: "2017-02-01"
         tar xvfz ~/rfc5424-syslog_11.tgz
         ```
 
-        然后，Jane 通过将 */opt/splunk/etc/apps/rfc5424/default/transforms.conf* 替换为包含以下文本的 *transforms.conf* 文件，对附加组件进行修补：
+        然后，Jane 通过将 */opt/splunk/etc/apps/rfc5424/default/transforms.conf* 替换为新的包含以下文本的 *transforms.conf* 文件，对附加组件进行修补：
 
 	    ```
         [rfc5424_host]
@@ -56,7 +56,7 @@ lastupdated: "2017-02-01"
 
      c. 设置完 Splunk 之后，Jane 必须在 Ubuntu 机器上打开一些端口，以接受传入的 syslog 漏出（端口 5140）和 Splunk Web UI（端口 8000），因为缺省情况下，{{site.data.keyword.Bluemix_notm}} 虚拟服务器已设置防火墙。
 
-	    **注：**这里已完成 iptable 配置，以供 Jane 进行评估，并且这只是暂时的。要在生产环境中的 Bluemix 虚拟服务器上配置防火墙设置，请参阅[网络安全组 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} 文档以获取详细信息。
+	    **注：**iptable 配置此时已经可供 Jane 评估时使用，并且这是一项临时配置。要在生产环境中的 Bluemix 虚拟服务器上配置防火墙设置，请参阅[网络安全组 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://new-console.ng.bluemix.net/docs/services/networksecuritygroups/index.html){:new_window} 文档以获取详细信息。
 
 	   ```
 	   iptables -A INPUT -p tcp --dport 5140 -j ACCEPT

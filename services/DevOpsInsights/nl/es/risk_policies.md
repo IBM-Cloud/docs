@@ -15,20 +15,20 @@ lastupdated: "2017-04-07"
 # Creación de políticas y reglas
 {: #policies_and_rules}
 
-Las políticas son conjuntos de reglas que controlan las puertas en su conducto de entrega. Si su código no satisface o excede una política instaurada en una puerta concreta, se detiene el despliegue para evitar que se liberen cambios con un riesgo elevado. 
+Las políticas son conjuntos de reglas que controlan las puertas en su conducto de entrega. Si su código no satisface o excede una política instaurada en una puerta concreta, se detiene el despliegue para evitar que se liberen cambios con un riesgo elevado.
 
-Las políticas se definen en {{site.data.keyword.DRA_short}}. Las políticas se crean en la organización (org) de {{site.data.keyword.Bluemix_notm}} que contiene {{site.data.keyword.DRA_short}}. Todas las aplicaciones que se encuentran en la misma organización puede utilizar la política.  
+Las políticas se definen en {{site.data.keyword.DRA_short}}. Las políticas se crean en la organización (org) de {{site.data.keyword.Bluemix_notm}} que contiene {{site.data.keyword.DRA_short}}. Todas las aplicaciones que se encuentran en la misma organización puede utilizar la política. 
 
-## Creación de políticas 
+## Creación de políticas
 {: #create_policies}
 
 Para crear una política:
 
-1. En la navegación izquierda, pulse **Valores**.
+1. En el menú de navegación de {{site.data.keyword.DRA_short}}, pulse **Valores**.
 
 2. Pulse **Políticas**.
 
-3. Pulse **Crear política** y, a continuación, especifique un nombre y una descripción para la nueva política.  
+3. Pulse **Crear política** y, a continuación, especifique un nombre y una descripción para la nueva política.
 
 4. Pulse **Siguiente**.
 
@@ -43,9 +43,9 @@ Para crear una política:
 ## Creación de reglas
 {: #creating_rules}
 
-Las reglas definen los criterios que utilizarán las políticas para juzgar el cumplimiento o incumplimiento de la misma. Podría crear una política "Unit Testing and Test Coverage" que contenga una regla de prueba de unidad que requiera al menos un éxito del 80% de la misma y una regla de cobertura que precise el 100% de la cobertura de código. Si añade una puerta que haga referencia a esta regla en un conducto, la puerta impide que las compilaciones que no satisfacen ambas reglas continúen.  
+Las reglas definen los criterios que utilizarán las políticas para juzgar el cumplimiento o incumplimiento de la misma. Podría crear una política "Unit Testing and Test Coverage" que contenga una regla de prueba de unidad que requiera al menos un éxito del 80% de la misma y una regla de cobertura que precise el 100% de la cobertura de código. Si añade una puerta que haga referencia a esta regla en un conducto, la puerta impide que las compilaciones que no satisfacen ambas reglas continúen. 
 
-Puede exigir una prueba satisfactoria sea como sea marcándola como crítica. Para crear una regla, seleccione una política y, a continuación, pulse **Añadir regla a política**.  
+Puede exigir una prueba satisfactoria sea como sea marcándola como crítica. Para crear una regla, seleccione una política y, a continuación, pulse **Añadir regla a política**. 
 
 ### Creación de reglas de prueba de verificación funcional
 {: #criteria_fvt}
@@ -93,7 +93,7 @@ Puede integrar {{site.data.keyword.DRA_short}} con IBM Application Security on C
 
 1. Especifique una descripción.
 
-2. Especifique el número máximo de problemas de seguridad baja, media o elevada que esta regla permite.  
+2. Especifique el número máximo de problemas de seguridad baja, media o elevada que esta regla permite. 
 
 3. Pulse **Guardar**.
 
@@ -104,6 +104,6 @@ Puede integrar {{site.data.keyword.DRA_short}} con {{site.data.keyword.appsecclo
 
 1. Especifique una descripción.
 
-2. Especifique el número máximo de problemas de seguridad baja, media o elevada que esta regla permite.  
+2. Especifique el número máximo de problemas de seguridad baja, media o elevada que esta regla permite. 
 
 3. Pulse **Guardar**.

@@ -42,11 +42,11 @@ Lleve a cabo las tareas siguientes para ver y filtrar los registros de la app de
 
 6. Añada un filtro para incluir o excluir información correspondiente a un componente (tipo de registro). 
 
-    * Para añadir un filtro que incluya un valor de componente, pulse el icono **Lupa** ![Icono Lupa](images/logging_magnifying_glass.jpg "Icono Lupa") en la fila source_id de la tabla.  
+    * Para añadir un filtro que incluya un valor de componente, pulse el icono **Lupa** ![Icono Lupa](images/logging_magnifying_glass.jpg "Icono Lupa") en la fila source_id de la tabla. 
 
         ![Condición de filtro para el campo source_id](images/logging_component_filter.png "Condición de filtro para el campo source_id") 
 
-    * Para añadir un filtro que excluya un valor de componente, pulse el icono **Exclusión** ![Icono Exclusión](images/logging_exclusion_icon.png "Icono Exclusión") en la fila source_id de la tabla.  
+    * Para añadir un filtro que excluya un valor de componente, pulse el icono **Exclusión** ![Icono Exclusión](images/logging_exclusion_icon.png "Icono Exclusión") en la fila source_id de la tabla. 
     
          ![Condición de filtro para excluir el campo source_id](images/logging_component_add_exclusion_filter.png "Condición de filtro para excluir el campo source_id") 
      
@@ -60,12 +60,12 @@ Lleve a cabo las tareas siguientes para ver y filtrar los registros de la app de
 
 8. Guarde el panel de control. 
 
-    Cuando haya terminado de crear los filtros, pulse el icono **Guardar** ![Icono Guardar](images/logging_save.jpg "Icono Guardar") y especifique un nombre para el panel de control.  
+    Cuando haya terminado de crear los filtros, pulse el icono **Guardar** ![Icono Guardar](images/logging_save.jpg "Icono Guardar") y especifique un nombre para el panel de control. 
       
     **Nota:** si intenta guardar un panel de control con un nombre que contenga espacios en blanco, no se guardará. Escriba un nombre sin espacios y pulse el icono **Guardar**.
     
     ![Guardar nombre del panel de control](images/logging_save_dashboard.jpg "Guardar nombre del panel de control")
 
-Ha creado un panel de control que filtra las entradas de registro por componente (tipo de registro). Puede cargar el panel de control que ha guardado en cualquier momento pulsando el icono **Carpeta** ![Icono Carpeta](images/logging_folder.jpg "Icono Carpeta") y seleccionando el panel de control por nombre. 
+Ha creado un panel de control que filtra las entradas de registro por componente (tipo de registro). Puede cargar el panel de control que ha guardado en cualquier momento pulsando el icono **Carpeta** ![Icono Carpeta](images/logging_folder.jpg "Icono Carpeta") y seleccionando el panel de control por nombre.
 
 

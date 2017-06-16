@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-03-06"
 
 ---
 {:new_window: target="_blank"}
@@ -36,7 +36,7 @@ You must install cURL before you can use the service.
 ```
 {
   "accessToken": "<api-key>",
-  "uri": "https://fss-analytics.mybluemix.net/"
+  "uri": "https://fss-analytics.stage1.mybluemix.net/"
 }
 ```
 
@@ -45,7 +45,7 @@ You must install cURL before you can use the service.
 To use the following example, replace api-key with your service key and service-url with the URL for your service.
 
 ```
-curl -X GET -H "X-IBM-Access-Token: <api-key>” “<service-url>/api/v1/historical/instrument/<name-of-instrument>?date=2017-01-01”
+curl -X GET -H "X-IBM-Access-Token: <api-key>” “<service-url>/api/v1/historical/instrument/<id-of-instrument>?date=2017-01-01”
 ```
 
 {:codeblock}
@@ -55,7 +55,7 @@ The following is an example of a response to a successful request:
 ```
 [
   {
-    "instrument": “<name-of-instrument>",
+    "instrument": “<id-of-instrument>",
     "scenario": “Base Scenario",
     "values": [
       {
@@ -70,7 +70,7 @@ The following is an example of a response to a successful request:
 Example using `POST`. Using `POST` is preferred if you are requesting a large number of analytics, or if there are commas within the analytic names.
 
 ```
-curl -X POST -H "X-IBM-Access-Token: <api-key>” -d '{"analytics":["THEO/Value","THEO/Price", "THEO/Effective Duration"]}' “<service-url>/api/v1/historical/instrument/<name-of-instrument>?date=2017-01-01”
+curl -X POST -H "X-IBM-Access-Token: <api-key>” -d '{"analytics":["THEO/Value","THEO/Price", "THEO/Effective Duration"]}' “<service-url>/api/v1/historical/instrument/<id-of-instrument>?date=2017-01-01”
 ```
 
 {:codeblock}
@@ -80,7 +80,7 @@ The following is an example of a response to a successful request:
 ```
 [
   {
-    "instrument": “<name-of-instrument>",
+    "instrument": “<id-of-instrument>",
     "scenario": "Base Scenario",
     "values": [
       {

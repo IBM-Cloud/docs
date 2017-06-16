@@ -14,10 +14,10 @@ lastupdated: "2017-04-07"
 
 # 關於 Deployment Risk
 
-{{site.data.keyword.DRA_short}} 針對部署（尤其是風險）提供豐富的相關資訊。您可以利用它，透過原則和閘道將 Delivery Pipeline 中的品質保護作業自動化。
+{{site.data.keyword.DRA_short}} 針對部署提供豐富的相關資訊，尤其是風險。您可以利用它，透過原則和閘道將 Delivery Pipeline 中的品質保護作業自動化。
 {:shortdesc}
 
-從工具鏈開啟 {{site.data.keyword.DRA_short}} 之後，按一下 **Deployment Risk**。您可以從這裡取得暫置和正式作業環境中的應用程式概觀，並往下探查，以瞭解程式碼涵蓋面、測試效能和安全報告。儀表板會自動移入管線的 {{site.data.keyword.DRA_short}} 測試中的最新資訊。
+從工具鏈開啟 {{site.data.keyword.DRA_short}} 之後，按一下 **Deployment Risk**。您可以從這裡取得編譯打包和正式作業環境中的應用程式概觀，並往下探查，以瞭解程式碼涵蓋面、測試效能和安全報告。儀表板會自動移入管線的 {{site.data.keyword.DRA_short}} 測試中的最新資訊。
 
 Deployment Risk 可讓您透過原則和閘道，在工具鏈中強制執行品質標準。原則包含規則集；閘道可強制執行原則。例如，您可以建立「單元測試和測試涵蓋面」原則，要求建置需符合單元測試和測試涵蓋面標準。然後，將參照該原則的閘道新增至持續交付程序。不符合原則的建置會在該閘道被阻擋下來。 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-07"
+lastupdated: "2017-05-11"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-04-07"
 
 安裝 IBM Cloud DevOps 外掛程式之後，您可以將測試結果發佈至 {{site.data.keyword.DRA_short}}、新增自動化品質閘道，以及追蹤您的部署風險。您也可以將工作通知傳送給工具鏈中的其他工具，例如 Slack 和 PagerDuty。為了協助您追蹤部署，工具鏈可以將部署訊息新增至 Git 確定及其相關 Git 或 JIRA 問題。您也可以在工具鏈的「連線」頁面上檢視您的部署。 
 
-外掛程式提供後建置動作和 CLI 來支援整合。{{site.data.keyword.DRA_short}} 會聚集並分析單元測試、功能測試、程式碼涵蓋面工具、靜態安全程式碼掃描及動態安全程式碼掃描的結果，以在部署程序中判斷您的程式碼是否符合閘道的預先定義原則。如果您的程式碼不符合或超出原則，則會中止部署，以防止釋出有風險的變更。您可以使用 {{site.data.keyword.DRA_short}} 當作持續交付環境的安全網、實作與改善一段時間品質標準的方式，以及協助您瞭解專案性能的資料視覺化工具。
+外掛程式提供後建置動作和 CLI 來支援整合。{{site.data.keyword.DRA_short}} 會聚集並分析單元測試、功能測試、程式碼涵蓋面工具、靜態安全程式碼掃描及動態安全程式碼掃描的結果，以在部署程序中判斷您的程式碼是否符合閘道的預先定義原則。如果您的程式碼不符合或超出原則，則會中止部署，以防止釋出有風險的變更。您可以使用 {{site.data.keyword.DRA_short}} 當作持續交付環境的安全網、持續實作與改善品質標準的方式，以及協助您瞭解專案性能的資料視覺化工具。
 
 ## 必要條件
 {: #jenkins_prerequisites}
@@ -39,18 +39,16 @@ lastupdated: "2017-04-07"
 ## 安裝外掛程式
 {: #jenkins_install}
 
-首先，從 {{site.data.keyword.DRA_short}} 下載外掛程式。  
+首先，在 Jenkins 伺服器上安裝外掛程式。開啟伺服器介面，然後：
 
-1. 從工具鏈的「概觀」頁面中，按一下 **DevOps Insights**。
-2. 按一下**設定**，然後按一下 **Jenkins 外掛程式設定**。
-3. 遵循頁面上的指示下載外掛程式。
+1. 按一下**管理 Jenkins**。
+2. 按一下**管理外掛程式**。 
+3. 按一下**可用的**標籤。
+4. 過濾 `IBM Cloud DevOps`。 
+5. 選取 IBM Cloud DevOps。
+6. 按一下**立即下載並在重新啟動之後安裝**。 
 
-然後，在 Jenkins 伺服器上安裝外掛程式。
-
-1. 按一下**管理 Jenkins &gt; 管理外掛程式**，然後按一下**進階**標籤。
-2. 按一下**選擇檔案**，然後選取 IBM Cloud DevOps 外掛程式安裝檔。 
-3. 按一下**上傳**。
-4. 重新啟動 Jenkins，並驗證已安裝外掛程式。
+伺服器重新啟動之後即可使用外掛程式。  
 
 ## 配置 Deployment Risk 儀表板的 Jenkins 工作
 {: #jenkins_configure}
@@ -98,15 +96,9 @@ lastupdated: "2017-04-07"
 
 6. 移至 [IBM Bluemix DevOps](https://console.ng.bluemix.net/devops)、選取您的工具鏈，然後按一下 **DevOps Insights**，以檢視 Deployment Risk 儀表板。
 
-在暫置部署工作之後，Deployment Risk 儀表板需要有閘道存在。如果您想要使用此儀表板，請確定在部署至暫置環境之後，且部署至正式作業環境之前，有閘道存在。
+在編譯打包部署工作之後，Deployment Risk 儀表板需要有閘道存在。如果您想要使用此儀表板，請確定在部署至編譯打包環境之後，且部署至正式作業環境之前，有閘道存在。
     
 ## 配置通知
 {: #jenkins_notifications}
 
-您可以遵循 [Bluemix 文件](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins)中的指示，配置 Jenkins 工作，以將通知傳送至 Slack 或 PagerDuty 之類的工具。
-
-此範例示範如何配置工作配置的 `ICD_WEBHOOK_URL`：
-![設定 ICD_WEBHOOK_URL 參數](images/Set-Parameterized-Webhook.png "設定參數化 WebHook")
-
-此範例示範如何配置工作通知的後建置動作：
-![WebHook 通知的後建置動作](images/PostBuild-WebHookNotification.png "在後建置動作中配置 WebHook 通知")
+您可以遵循 [Bluemix 文件](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins)中的指示來配置 Jenkins 工作，以將通知傳送至 Slack 或 PagerDuty 之類的工具。

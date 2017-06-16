@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-07"
+lastupdated: "2017-05-11"
 
 ---
 
@@ -39,18 +39,16 @@ Prima di poter integrare {{site.data.keyword.DRA_short}} con un progetto Jenkins
 ## Installazione del plugin
 {: #jenkins_install}
 
-Per prima cosa, scarica il plugin da {{site.data.keyword.DRA_short}}.  
+Per prima cosa, installa il plugin sul tuo server Jenkins. Apri l'interfaccia server e quindi:
 
-1. Dalla pagina della panoramica della toolchain, fai clic su **DevOps Insights**.
-2. Fai clic su **Settings**, quindi su **Jenkins Plugin Setup**.
-3. Segui le istruzioni nella pagina per scaricare il plugin.
+1. Fai clic su **Manage Jenkins**.
+2. Fai clic su **Manage Plugins**. 
+3. Fai clic sulla scheda **Available**
+4. Imposta un filtro per `IBM Cloud DevOps`. 
+5. Seleziona IBM Cloud DevOps.
+6. Fai clic su **Download now and install after restart**. 
 
-Quindi, nel tuo server Jenkins, installa il plugin.
-
-1. Fai clic su **Manage Jenkins &gt; Manage Plugins** e sulla scheda **Advanced**.
-2. Fai clic su **Choose File** e seleziona il file di installazione del plugin IBM Cloud DevOps. 
-3. Fai clic su **Upload**.
-4. Riavvia Jenkins e verifica che il plugin sia stato installato.
+Il plugin è disponibile dopo i riavvii del server.  
 
 ## Configurazione dei lavori Jenkins per il dashboard Deployment Risk
 {: #jenkins_configure}
@@ -104,9 +102,3 @@ Il dashboard Deployment Risk si basa sulla presenza di un gate dopo un lavoro di
 {: #jenkins_notifications}
 
 Puoi configurare i tuoi lavori Jenkins in modo da inviare notifiche agli strumenti come Slack o PagerDuty seguendo le istruzioni nei [Documenti Bluemix](https://console.ng.bluemix.net/docs/services/ContinuousDelivery/toolchains_integrations.html#jenkins).
-
-Questo esempio mostra come configurare `ICD_WEBHOOK_URL` per le configurazioni del lavoro:
-![Imposta il parametro ICD_WEBHOOK_URL](images/Set-Parameterized-Webhook.png "Imposta il webhook con parametri")
-
-Questo esempio mostra come configurare le azioni di post creazione per le notifiche del lavoro:
-![Azioni di post creazione per la notifica webhook](images/PostBuild-WebHookNotification.png "Configura la notifica webhook nelle azioni di post creazione")

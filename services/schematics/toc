@@ -16,8 +16,10 @@ IBM Cloud Schematics
 
     {: .topicgroup}
     Related links
-        [Multi-cloud service: Cloud Automation Manager](https://console.ng.bluemix.net/docs/services/CloudAutomationManager/index.html)
+        [Video: Tell me about Schematics](https://youtu.be/wVmhTTa44f4)
+        [Blog: Codifying the cloud](https://medium.com/@kelner/ibm-cloud-schematics-6e0f11374edf)
         [Infrastructure as code: Terraform](https://www.terraform.io)
+        [Multi-cloud service: Cloud Automation Manager](https://console.ng.bluemix.net/docs/services/CloudAutomationManager/index.html)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}

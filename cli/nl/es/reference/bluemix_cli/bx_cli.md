@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-20"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -27,7 +27,9 @@ La interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix_notm}} pr
 <dt>Punto final</dt>
 <dd>Un punto final de API se debe establecer por medio de la <code>bluemix api</code> antes de utilizar el mandato.</dd>
 <dt>Login</dt>
-<dd>El inicio de sesión que utiliza el mandato <code>bluemix login</code> es necesario antes de utilizar este mandato. <b>Si inicia sesión con un ID federado, utilice la opción '--sso' para autenticarse con un código de acceso de una sola vez o utilice '--apikey' para realizar la autenticación con una clave de API</b>. Vaya a la consola de {{site.data.keyword.Bluemix_notm}} “Gestionar” -> “Seguridad” -> “Claves de API de Bluemix API keys” para crear claves de API</dd>
+<dd>El inicio de sesión que utiliza el mandato <code>bluemix login</code> es necesario antes de utilizar este mandato.
+Si inicia sesión con un ID federado, utilice la opción '--sso' para autenticarse con un código de acceso de una sola vez o utilice '--apikey' para realizar la autenticación con una clave de API. Vaya a la consola de {{site.data.keyword.Bluemix_notm}} **Gestionar** &gt; **Seguridad** &gt; **Claves de API de Bluemix ** para crear claves de API.
+</dd>
 <dt>Target</dt>
 <dd>El mandato <code>bluemix target</code> debe utilizarse para establecer un punto de extensión org y un espacio antes de utilizar este mandato.</dd>
 <dt>Docker</dt>
@@ -244,7 +246,7 @@ Utilice los índices de las tablas siguientes para consultar los mandatos de Blu
  
 ## bluemix help
 {: #bluemix_help}
-Muestra la ayuda general para mandatos incorporados de primer nivel y espacios de nombres soportados de {{site.data.keyword.Bluemix_notm}} CLI, o la ayuda para un mandato o un nombre de espacio incorporado específico.
+Muestra la ayuda general para mandatos incorporados de primer nivel y espacios de nombres soportados de {{site.data.keyword.Bluemix_notm}} CLI, o la ayuda para un mandato o un espacio de nombres incorporado específico.
 
 ```
 bluemix help [COMMAND|NAMESPACE]
@@ -294,7 +296,7 @@ bluemix api [API_ENDPOINT] [--unset] [--skip-ssl-validation]
    <dt>--unset (opcional)</dt>
    <dd>Elimina la configuración del punto final de la API.</dd>
    <dt>--skip-ssl-validation (opcional)</dt>
-   <dd>Omite la validación SSL de solicitudes HTTP. </dd>
+   <dd>Omite la validación SSL de solicitudes HTTP.</dd>
    </dl>
 <strong>Ejemplos</strong>:
 
@@ -338,7 +340,7 @@ bluemix login [OPTIONS...]
   <dd> Punto final de la API (por ejemplo: api.ng.bluemix.net)</dd>
   <dt> --apikey <i>API_KEY o @API_KEY_FILE_PATH</i>
   <dd> Contenido de clave de API o la vía de acceso a un archivo de clave de API indicado mediante @</dd>
-  <dt> --sso (opcional)</dt>
+  <dt> --sso (opcional) </dt>
   <dd> Utiliza un código de acceso de una sola vez para iniciar una sesión </dd>
   <dt> -u <i>USERNAME</i> (opcional)</dt>
   <dd> Nombre de usuario</dd>
@@ -349,20 +351,20 @@ bluemix login [OPTIONS...]
   <dt> -o <i>ORG_NAME</i> (opcional) </dt>
   <dd> Nombre de la organización de destino </dd>
   <dt> -s <i>SPACE_NAME</i> (opcional) </dt>
-  <dd> Nombre del espacio de destino </dd>
-  <dt> --skip-ssl-validation (opcional)</dt>
-  <dd> Omite la validación SSL de solicitudes HTTP. No se recomienda esta opción. </dd>
+  <dd> Nombre del espacio de destino</dd>
+  <dt> --skip-ssl-validation (opcional) </dt>
+  <dd> Omite la validación SSL de solicitudes HTTP. No se recomienda esta opción.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
 
-Inicio de sesión interactivo: 
+Inicio de sesión interactivo:
 
 ```
 bluemix login
 ```
 
-Inicio de sesión con un nombre de usuario y su contraseña, estableciendo un espacio, una organización y una cuenta de destino: 
+Inicio de sesión con un nombre de usuario y su contraseña, estableciendo un espacio, una organización y una cuenta de destino:
 
 ```
 bluemix login -u username -p password -c MyAccountID -o MyOrg -s MySpace
@@ -374,7 +376,7 @@ Inicio sesión con un código de acceso de una sola vez, estableciendo una cuent
 bluemix login --sso -c MyAccountID -o MyOrg -s MySpace
 ```
 
-Inicio de sesión con una clave de API y estableciendo destinos: 
+Inicio de sesión con una clave de API y estableciendo destinos:
 
 * La clave de API tiene asociada una cuenta
 
@@ -396,7 +398,7 @@ bluemix login --apikey api-key-string -c MyAccountID -o MyOrg -s MySpace
 bluemix login --apikey @fileName -c MyAccountID -o MyOrg -s MySpace
 ```
 
-<strong>Nota:</strong> Si la clave de API tiene asociada una cuenta, no se permite conmutar a otra cuenta. 
+<strong>Nota:</strong> Si la clave de API tiene asociada una cuenta, no se permite conmutar a otra cuenta.
 
 
 ## bluemix logout
@@ -415,7 +417,7 @@ bluemix logout
 {: #bluemix_target}
 
 
-Establece o visualiza la cuenta, región, organización o espacio de destino. 
+Establece o visualiza la cuenta, región, organización o espacio de destino.
 
 ```
 bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
@@ -425,16 +427,17 @@ bluemix target [-c ACCOUNT_ID] [-r REGION] [-o ORG_NAME] [-s SPACE_NAME]
 
 <strong>Opciones de mandato</strong>:
    <dl>
-   <dt>-c <i>ACCOUNT_ID</i> (opcional) </dt>
-   <dd>ID de la cuenta de destino. </dd>
+   <dt>-c <i>ACCOUNT_ID</i> (opcional)</dt>
+   <dd>ID de la cuenta de destino.</dd>
    <dt>-r <i>REGION</i> (opcional)</dt>
-   <dd>Región a la que conmutar. </dd>
+   <dd>Región a la que conmutar.</dd>
    <dt>-o <i>ORG_NAME</i> (opcional)</dt>
    <dd>Nombre de la organización de destino.</dd>
    <dt>-s <i>SPACE_NAME</i> (opcional)</dt>
    <dd>Nombre del espacio de destino.</dd>
    </dl>
 Si no se especifica ninguna opción, se visualiza la cuenta, la región, la organización y el espacio actuales.
+
 <strong>Ejemplos</strong>:
 
 Establece la cuenta, organización y espacio actuales
@@ -449,7 +452,7 @@ Conmuta a una nueva región
 bluemix target -r eu-gb
 ```
 
-Visualiza la cuenta, región, organización y espacio actual: 
+Visualiza la cuenta, región, organización y espacio actual:
 
 ```
 bluemix target
@@ -1125,7 +1128,7 @@ bluemix iam api-key-create NAME [-d DESCRIPTION] [-f, --file FILE]
 <dt>-d <i>DESCRIPTION</i> (opcional)</dt>
 <dd>Descripción de la clave de API</dd>
 <dt>-f, -- file <i>FILE</i></dt>
-<dd>Guarda la información de la clave de API en el archivo especificado. Si no se establece, se visualiza el contenido JSON. </dd>
+<dd>Guarda la información de la clave de API en el archivo especificado. Si no se establece, se visualiza el contenido JSON.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
@@ -1179,7 +1182,7 @@ bluemix iam api-key-delete NAME [-f]
 <strong>Opciones de mandato</strong>:
 <dl>
 <dt>NAME (necesario)</dt>
-<dd>Nombre de la clave de API a suprimir. </dd>
+<dd>Nombre de la clave de API a suprimir.</dd>
 <dt>-f  (opcional)</dt>
 <dd>Forzar la eliminación sin confirmación.</dd>
 </dl>
@@ -1985,7 +1988,7 @@ bluemix plugin update -r REPO_NAME [PLUGIN NAME [-v VERSION]]
  <dt><i>PLUGIN_NAME</i> (opcional)</dt>
  <dd>Si no se especifica, se listan para su selección todos los plugins disponibles para la actualización en el repositorio proporcionado.</dd>
  <dt>-v <i>VERSION</i> (opcional)</dt>
- <dd>Versión a la que se tiene que actualizar el plugin. Si no se proporciona, actualiza el plugin a la última versión disponible. </dd>
+ <dd>Versión a la que se tiene que actualizar el plugin. Si no se proporciona, actualiza el plugin a la última versión disponible.</dd>
 </dl>
 
 <strong>Ejemplos</strong>:
@@ -1996,13 +1999,13 @@ Comprueba todas las actualizaciones disponibles en el repositorio de plugins "My
 bluemix plugin update -r My-Repo
 ```
 
-Actualiza el plugin "plugin-echo" en el repositorio "My-Repo" a la última versión: 
+Actualiza el plugin "plugin-echo" en el repositorio "My-Repo" a la última versión:
 
 ```
 bluemix plugin update -r My-Repo plugin-echo
 ```
 
-Actualiza el plugin "plugin-echo" en el repositorio "My-Repo" a la versión "1.0.1": 
+Actualiza el plugin "plugin-echo" en el repositorio "My-Repo" a la versión "1.0.1":
 
 ```
 bluemix plugin update -r My-Repo plugin-echo -v 1.0.1

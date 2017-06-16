@@ -20,7 +20,7 @@ Cuando despliega una app en {{site.data.keyword.Bluemix_notm}} Cloud Foundry, de
 
 Cada entorno de ejecución, que incluye tanto móvil como web, se aísla del entorno de ejecución de otras apps. Los entornos de ejecución se aíslan aunque estas apps estén en la misma máquina física. La figura siguiente muestra el flujo básico de cómo {{site.data.keyword.Bluemix_notm}} Cloud Foundry gestiona el despliegue de apps:
 
-![Despliegue de una app](images/deploy.png)
+![Despliegue de una app](images/deploy-diego.png)
 
 Figura 3. Despliegue de una app
 
@@ -34,7 +34,7 @@ Después de seleccionar un servidor virtual, un gestor de apps de cada servidor 
 La siguiente figura
 muestra la estructura de un servidor virtual, también conocido como agente de ejecución de gotas (DEA), en el que se han desplegado varias apps:
 
-![Diseño de un servidor virtual](images/container.png)
+![Diseño de un servidor virtual](images/container-diego.png)
 
 Figura 4. Diseño de un servidor virtual
 
@@ -42,7 +42,7 @@ En cada servidor virtual, un gestor de apps se comunica con el resto de la infra
 
 Cuando se despliega la app, si tiene una interfaz web (como por ejemplo una app web Java) y otros servicios basados en REST (como por ejemplo servicios móviles expuestos públicamente para la app para móvil), los usuarios de la app pueden comunicarse con la misma mediante solicitudes HTTP normales.
 
-![Invocación de una app de {{site.data.keyword.Bluemix_notm}}](images/execute.png)
+![Invocación de una app de {{site.data.keyword.Bluemix_notm}}](images/execute-diego.png)
 
 Figura 5. Invocación de una app de {{site.data.keyword.Bluemix_notm}}
 
@@ -62,7 +62,7 @@ Los clientes, que pueden ser apps móviles, las apps que se ejecutan externament
 
 La figura siguiente muestra la arquitectura de {{site.data.keyword.Bluemix_notm}} Cloud Foundry de alto nivel.
 
-Arquitectura de ![{{site.data.keyword.Bluemix_notm}}](images/arch.png)
+![Arquitectura de {{site.data.keyword.Bluemix_notm}}](images/arch-diego.png)
 
 Figura 1. Arquitectura de {{site.data.keyword.Bluemix_notm}} Cloud Foundry
 

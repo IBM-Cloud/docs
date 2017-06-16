@@ -29,6 +29,6 @@ Il grafico Codifica social mostra le connessioni tra i tuoi collaboratori del pr
 
 Ogni nodo è colorato di blu e rosso di varie gradazioni. Il blu indica quante righe di codice sono state aggiunta da un collaboratore come parte del numero totale di righe che ha toccato. Il rosso indica quante righe di codice un collaboratore ha rimosso. Un collaboratore che ha soltanto aggiunto codice sarà completamente blu, mentre un collaboratore che ha aggiunto e rimosso un numero uguale di righe sarà mezzo blu e mezzo rosso. 
 
-### Autori 
+### Autori
 
 La categoria Autori fornisce il numero di commit, modifiche riga e modifiche file per collaboratore del repository. Mentre qualcosa come il numero totale di righe codificate non può essere utilizzato per determinare un contributo di rete del membro del team ad un progetto, tali informazioni possono essere fornite ai gestori e leader del team. Un membro del team che contribuisce in molte modifiche di riga potrebbe essere sovraccarico, rappresenta un collo di bottiglia nei tuoi processi o codifica in un modo più dettagliato in confronto agli altri membri del team. 

@@ -10,7 +10,7 @@ lastupdated: "2017-01-10"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Prérequis 
+# Prérequis
 {: #prereqs}
 
 Les éléments prérequis pour l'utilisation de la plateforme {{site.data.keyword.Bluemix_notm}} ne sont pas nombreux, mais il en existe
