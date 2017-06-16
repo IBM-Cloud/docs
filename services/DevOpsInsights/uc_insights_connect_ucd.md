@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-12"
+lastupdated: "2017-06-16"
 
 ---
 
@@ -51,7 +51,13 @@ Now you can follow the instructions on the **Delivery Insights Setup** page to i
 {: #set_up_connect}
   1. Set up a system to run DevOps Connect, as described in the [Prerequisites](uc_insights_connect_ucd.html#prereqs).
   1. Download DevOps Connect, which is provided in a runnable JAR file.
-  1. Copy the script from the **Delivery Insights Setup** page and run it. This command starts DevOps Connect with a token that allows it to connect to your organization on {{site.data.keyword.Bluemix}}.
+  1. Copy the command from the **Delivery Insights Setup** page. This command starts DevOps Connect with a token that allows it to connect to your organization on {{site.data.keyword.Bluemix}}.
+  1. DevOps Connect runs on port 8443 by default, which is the same port that the IBM UrbanCode Deploy server runs on by default. Therefore, if the IBM UrbanCode Deploy server or any other service is running on port 844s, change the port for DevOps Connect by adding the parameter `-Dserver.port` to the command. For example, to set DevOps Connect to use port 8888, the beginning of the command looks like this:  
+```java -Dserver.port=8888 -jar devops-connect-2.0.92clear0618.jar -Dserver.port=8888```  
+  The full command contains information about your Bluemix account, which configures DevOps Connect automatically, as in the following example:  
+```java -Dserver.port=8888 -jar devops-connect-2.0.920618.jar --sync.id=a2c12cb9-9a09-9832-479b01bf --sync.token=j0zs325U6qp080pzpcQ  --sync.registrar=jsmith@example.com
+```
+  1. Run the command and wait for DevOps connect to start.
   1. Connect your IBM UrbanCode Deploy servers to DevOps connect, as described in the next section.
 
 ## Connecting IBM UrbanCode Deploy servers to DevOps Connect
