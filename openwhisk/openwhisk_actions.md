@@ -759,7 +759,7 @@ To avoid the cold-start delay, you can compile your Swift file into a binary and
 
 - Upload it to OpenWhisk with the action name helloSwifty:
   ```
-  wsk action update helloSwiftly hello.zip --kind swift:3
+  wsk action update helloSwiftly hello.zip --kind swift:3.1.1
   ```
   {: pre}
 
