@@ -58,7 +58,7 @@ All requests must include an authorization header. Basic authentication is the o
 
 ### Content-Type request headers
 
-A `Content-Type` request header must be provided with the request. The following table shows how the supported types are mapped to the {{site.data.keyword.iot_short_notm}} internal formats.
+A `Content-Type` request header should be provided with the request if the content is not JSON. The following table shows how the supported types are mapped to the {{site.data.keyword.iot_short_notm}} internal formats.
 
 |Content-Type header|Format in {{site.data.keyword.iot_short_notm}}|
 |:---|:---|
