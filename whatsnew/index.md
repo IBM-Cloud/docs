@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-06-05" 
+lastupdated: "2017-06-20" 
 
 ---
 
@@ -146,6 +146,11 @@ The Liberty buildpack v3.8 provides new default and monthly Liberty runtime vers
 
 ## Services
 {: #services_category}
+
+### dashDB for Transactions has been renamed to {{site.data.keyword.DB2OnCloud_short}}
+New as of: 14 June 2017
+
+IBM {{site.data.keyword.DB2OnCloud_short}} is the new name for dashDB for Transactions. As part of this renaming the former self-managed IBM {{site.data.keyword.DB2OnCloud_short}} service will also be renamed to IBM Db2 Hosted. At this time only display names are updated, so any APIs or command line interfaces remain unchanged.
 
 ### {{site.data.keyword.sparks}} updates: Stocator-S3 connector includes support for IBM Cloud Object Storage Cross Region service (Beta)
 New as of: 05 June 2017
