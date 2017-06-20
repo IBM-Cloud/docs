@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2016
-lastupdated: "2017-06-06"
+lastupdated: "2017-06-20"
 
 ---
 
@@ -14,8 +14,6 @@ lastupdated: "2017-06-06"
 
 # User roles and permissions
 {: #userroles}
-
-<!-- staging only content in the service policy roles table. Do not move entire topic to production -->
 
 You can manage users across the {{site.data.keyword.Bluemix_notm}} Platform and Infrastructure services from the **Users** page for your account. To access the Users page, from the {{site.data.keyword.Bluemix_notm}} menu, click **Manage** &gt; **Account** &gt; **Users**. Account owners perform all operations on organizations and spaces, including managing users and their assigned roles. Organization managers and space managers also have access to manage roles. 
 {:shortdesc}
@@ -83,8 +81,6 @@ You can assign and manage policies if you have the proper role. The following ta
 Roles are a collection of actions; the actions that are mapped to these roles are service specific. Refer to the documentation for the selected service for additional details about what types of actions each role allows.
 
 In addition to the descriptions of the roles provided in the console, the following table provides examples of some of the tasks that users assigned each role might be able to do for the IBM Container service.  
-
-**Note**: The operator role is not available for the IBM Container service at this time. The following example is included for informational purposes only.
 
 | Role | Description of actions | Example actions|
 |:-----------------|:-----------------|:-----------------|
