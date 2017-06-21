@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-5-9"
+lastupdated: "2017-6-19"
 
 ---
 
@@ -100,26 +100,6 @@ If you are creating tasks in a CSV file, you must include the required fields th
 |segmentPattern                |Execution pattern of the selected segment.|
 
 {: caption="Table 1. IBM UrbanCode Release deployment plan fields" caption-side="top"}
-
-
-<!--
-
-| Message  |
-| ------------------ |
-|Commas were found in a name field. This can cause problems when specifying lists of dependencies by name.|
-|This field was left blank. It was replaced with '--'.|
-|Required field.|
-|No task type was provided.  Task type is assumed to be Manual.|
-|Description contains HTML tags. The tags are removed and the description contains only the text content.|
-|Group already exists in Continuous Release.|
-{: caption="Table 2. CSV import error messages" caption-side="top"}  
-
-
-
-## Generating deployment plans with Continuous Delivery composite pipelines
-{: #plan_genPipeline}   
-
--->                                             
 
 ## Copying and promoting deployment plans
 {: #plan_copyPromote}

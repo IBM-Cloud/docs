@@ -2,7 +2,7 @@
 
 copyright:
  years: 2017
-lastupdated: "2017-5-10"
+lastupdated: "2017-6-16"
 
 ---
 
@@ -41,41 +41,43 @@ With {{site.data.keyword.uccr_short}} you can do the following:
 
 The following terms are used frequently with {{site.data.keyword.uccr_short}}:
 
-**Application**: Application refers to the IBM UrbanCode Deploy applications that {{site.data.keyword.uccr_short}} manages. In {{site.data.keyword.uccr_short}}, you assign integrated applications to UrbanCode Deploy type tasks. You can select application processes, versions, and environments. When an UrbanCode Deploy task runs, it also runs the associated application in IBM UrbanCode Deploy.
+**Activities**: Activities refer to the items that can be displayed in the **Activities** list on the Releases page. Activities include releases, events, and deployment plans. You can filter the **Activities** list by status, time, and tag.  
 
-**Auto task**: During deployments, auto tasks start automatically as soon as they are eligible to run. Auto tasks include the following task types: UrbanCode Deploy, Delayed, and Header.
+**Application**: Application refers to the IBM UrbanCode Deploy applications that {{site.data.keyword.uccr_short}} manages. In {{site.data.keyword.uccr_short}}, you assign integrated applications to UrbanCode Deploy type tasks. You select application processes, versions, and environments. When an UrbanCode Deploy task runs, it also runs the associated application in IBM UrbanCode Deploy.
 
-**Dependent tasks**: The ability of a task to start can depend on other tasks finishing. A task waiting for other tasks to complete is called a dependent task. A task that a dependent task waits for is called a prerequisite task. Dependent tasks cannot start until all its prerequisite tasks are resolved. Typically, you use dependencies to ensure that tasks run in the expected order, and to manage deployment workflows.
+**Auto task**: During deployments, auto tasks start automatically as soon as they are eligible to run. Auto tasks include the following task types: UrbanCode Deploy, Continuous Delivery pipeline, email, Slack, run another plan, and delayed.
+
+**Dependent tasks**: The ability of a task to start can depend on other tasks finishing. A task waiting for other tasks to complete is called a dependent task. A task that a dependent task waits for is called a prerequisite task. Dependent tasks cannot start until all its prerequisite tasks are resolved. Typically, you use dependencies to ensure that tasks run in the expected order.
 
 **Duration**: The time tasks take to run. Duration is measured from the time a task starts until it is resolved. When you create some task types, you can estimate its expected duration. Duration is reported in minutes.
 
-**Environment**: Represents IBM UrbanCode Deploy application environments. In UrbanCode Deploy, environments define deployment targets. In {{site.data.keyword.uccr_short}}, when you run UrbanCode Deploy tasks, you select the environment. You can select the environment when you create the task or at run time.
+**Environment**: Represents IBM UrbanCode Deploy application environments. In UrbanCode Deploy, environments define deployment targets. In {{site.data.keyword.uccr_short}}, when you run UrbanCode Deploy tasks, you select the environment. You can specify the environment when you create the task or at run time.
 
-**Execution pattern**: Refers to the order in which tasks are eligible to run. By default, a plan's execution pattern is sequential. Sequential tasks run in order beginning with the first task in the deployment plan. In addition, you can combine tasks into groups and assign the parallel execution pattern to the group.  Parallel tasks can run in any order and simultaneously.
+**Execution pattern**: Refers to the order in which tasks in a deployment plan become eligible to run. By default, a plan's execution pattern is sequential. Sequential tasks run in order beginning with the first task in the deployment plan. You can combine tasks into groups and assign the parallel execution pattern to the group.  Parallel tasks can run in any order and simultaneously.
 
-You can assign the parallel pattern to groups when you create the groups. The execution pattern can also be affected by task dependencies.
+You assign the parallel pattern to groups when you create the groups. The expected execution pattern can be affected by task dependencies.
 
 **Integration**: Refers to regularized communication between {{site.data.keyword.uccr_short}} and other products and services. Communication between {{site.data.keyword.uccr_short}} and the integrated products can be bidirectional. For example, IBM UrbanCode Deploy can send application data to {{site.data.keyword.uccr_short}}, and {{site.data.keyword.uccr_short}} can then run the applications. Integrations are configured with IBM Bluemix DevOps Connect.
 
 **Process**: Refers to UrbanCode Deploy application processes. In UrbanCode Deploy, processes define automation activities, such as deploying components. In {{site.data.keyword.uccr_short}}, when you run UrbanCode Deploy tasks, you select the process. You can select the process when you create the task or at run time.
 
-**Tag**: A tag is a label that you can apply to a task or release. When applied to tasks, tags can determine task eligibility for a given deployment. Tags applied to releases are called events and can be tracked on the calendar.
+**Tag**: A tag is a label that you can apply to tasks or releases. When applied to tasks, tags can determine task applicablity for a given deployment. When applied to releases, tags can be used to organize and filter releases.
 
 **Task group**: You can combine two or more tasks into a task group. When you form a group, you define the group's execution pattern, either sequential or parallel.
 
-**Version**: Represents an IBM UrbanCode Deploy application snapshot. When you create an UrbanCode Deploy task, versions that belong to the application that is assigned to the task are stored in the deployment plan. You can use the Version tab to select the application versions and environments that are used whenever a task runs.
+**Team**: A team is a collection of users and groups. In {{site.data.keyword.uccr_short}}, teams manage releases, events, and deployment plans. Teams can be imported from IBM UrbanCode Deploy.
+
+**Version**: Represents an IBM UrbanCode Deploy application snapshot. When you create an UrbanCode Deploy task, versions that belong to the application that is assigned to the task are stored in the deployment plan. You can use the Version tab to select the application versions and environments that are used when a task runs.
 
 ## Key concepts
 {: #keyconcepts}
 
 **Deployment**:
-The term deployment refers to the activities used to deliver a software project to a single lifecycle stage. Typically, you run deployments for each stage of your release lifecycle, ending with the production stage. The activities that are performed during a deployment, called tasks, are defined in deployment plans. You start a deployment by starting one of the plan's eligible tasks. You complete a deployment by resolving all the tasks in the deployment plan
+The term deployment refers to the activities used to deliver a software project to a deployment target. Typically, you run deployments for each stage of your release lifecycle, ending with the production stage. The activities that are performed during a deployment, called tasks, are defined in deployment plans. You start a deployment by starting one of the plan's eligible tasks. You complete a deployment by resolving all the tasks in the deployment plan
 
 **Deployment plan**: A deployment plan is a repeatable plan that is used to drive software releases. Deployment plans contain the tasks that you use to run deployments. When you add a task to a deployment plan, you define its type and duration.
 
 When you are ready to run a deployment, you start one of the plan's eligible tasks. A task's eligibility to start is determined by its execution pattern. Auto tasks start automatically as soon as they are eligible to run. Manual tasks are started manually.  
-
-As you add tasks to a deployment plan, the list of IBM UrbanCode Deploy applications is updated. The list maintains a record of the environments, processes, and versions that are available in the plan. A record of the changes that you make to a plan is also maintained and you can revert to earlier versions if needed.
 
 **Event**: Events are release-related activities that are applied to releases and tracked with the calendar. You can use events to organize your releases and other time-dependent activities, such as holidays and blackouts.
 
@@ -100,45 +102,4 @@ You can define several types of tasks.
 </ul>
 
 **Release**:
-A release is a container for deployment plans. Generally, a release contains several deployment plans although there is no requirement that a release contain more than one plan. Again, speaking generally, each plan in a release represents a stage in the development lifecycle, such as QA or Production. The stages, or deployment plans, are collectively referred to as the release lifecycle.
-
-<!--
-
-## Getting help and support for <service_short_name>
-{: #gettinghelp}
-
-If you have problems or questions when using service_name, you can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
-
-When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
-<!--Insert the appropriate Stack Overflow tag for your service for <service_keyword> in URL and text below:  
-
--->
-
-<!--
-
-* If you have technical questions about developing or deploying an app with service_short_name, post your question on [Stack Overflow](http://stackoverflow.com/search?q=<service_keyword>+ibm-bluemix){:new_window} and tag your question with "ibm-bluemix" and "<service_keyword>".
-
--->
-
-<!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
-
-<!--
-
-* For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/<service_name>/?smartspace=bluemix){:new_window} forum. Include the  "<service_keyword>" and "bluemix" tags.
-
-See [Getting help](https://www.{DomainName}/docs/support/index.html#getting-help) for more details about using the forums.
-
-For information about opening an IBM support ticket, or about support levels and ticket severities, see [Contacting support](https://www.{DomainName}/docs/support/index.html#contacting-support).
-
--->
-
-## Getting help for Continuous Release
-{: #gettinghelp}
-
-If you have problems or questions when using {{site.data.keyword.uccr_short}}, you can get help by searching for information or by asking questions through a forum.  
-
-When using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.Bluemix_notm}} development teams.
-
-* If you have technical questions about developing or deploying an app with {{site.data.keyword.uccr_short}}, post your question on [Stack Overflow](http://stackoverflow.com/search?q=cloud-continuous-release+ibm-bluemix){:new_window} and tag your question with "ibm-bluemix" and "cloud-continuous-release".
-
-* For questions about the service and getting started instructions, use the [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/cloud-continuous-release/?smartspace=bluemix){:new_window} forum. Include the  "cloud-continuous-release" and "bluemix" tags.
+A release is a container for deployment plans, events, and tags. Generally, a release contains several deployment plans although there is no requirement that a release contain more than one plan. Speaking generally again, each plan in a release represents a stage in the development lifecycle, such as QA or Production. The stages, or deployment plans, are collectively referred to as the release lifecycle.
