@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# {{site.data.keyword.iot_short}} 開発用のクライアント・ライブラリー
+# {{site.data.keyword.iot_short_notm}} 開発用のクライアント・ライブラリー
 {: #iot_platform_client_lib}
 
 クライアント・ライブラリーには、{{site.data.keyword.iot_full}} でデバイスやアプリケーションを統合して接続するコードを作成したり開発したりするために必要なツールやファイルが用意されています。
@@ -38,7 +38,7 @@ lastupdated: "2017-03-13"
 - [その他の資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-embeddedc/blob/master/README.md){:new_window}
 
 
-## Java™
+## Java
 - [クライアント・ライブラリー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-java){:new_window}
 - [サンプル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-java#samples){:new_window}
 - [その他の資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-java/blob/master/README.md){:new_window}
@@ -65,7 +65,7 @@ lastupdated: "2017-03-13"
 - [サンプル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples){:new_window}
 - [その他の資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/iot-python/blob/master/README.rst){:new_window}
 
-## {{site.data.keyword.iot_short}} 開発の概説
+## {{site.data.keyword.iot_short_notm}} 開発の概説
 
 用意されているクライアント・ライブラリーを使用して {{site.data.keyword.iot_short_notm}} 用のコードを開発する作業を開始する際に、{{site.data.keyword.Bluemix_notm}} の資料にある以下のセクションを参照してください。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-04-10"
 
 ---
 
@@ -157,10 +157,10 @@ Où :
 - Les autres clients qui font partie de l'application évolutive doivent utiliser le même ID de client.
 - La valeur de l'option clean session doit être false (0) pour des abonnements non durables.
 
-### Abonnements partagés à durabilité mixte (bêta)
+### Abonnement partagé à durabilité mixte
 {: #shared_sub_mixed}
 
-Le service {{site.data.keyword.iot_short_notm}} développe la spécification de protocole de messagerie MQTT V3.1.1 pour permettre la prise en charge d'une version d'essai bêta des abonnements partagés à durabilité mixte. Les abonnements partagés fournissent des fonctions d'équilibrage de charge pour les applications. Un abonnement partagé peut s'avérer nécessaire si une application d'entreprise de back end ne peut pas traiter le volume de messages publiés sur un espace de sujet spécifique. Par exemple, lorsque de nombreux terminaux publient des messages qui sont traités par une seule application, il peut s'avérer nécessaire d'utiliser la fonction d'équilibrage de charge d'un abonnement partagé.
+Le service {{site.data.keyword.iot_short_notm}} développe la spécification de protocole de messagerie MQTT V3.1.1 pour permettre la prise en charge des abonnements partagés à durabilité mixte. Les abonnements partagés fournissent des fonctions d'équilibrage de charge pour les applications. Un abonnement partagé peut s'avérer nécessaire si une application d'entreprise de back end ne peut pas traiter le volume de messages publiés sur un espace de sujet spécifique. Par exemple, lorsque de nombreux terminaux publient des messages qui sont traités par une seule application, il peut s'avérer nécessaire d'utiliser la fonction d'équilibrage de charge d'un abonnement partagé.
 
 Pour les abonnements partagés à durabilité mixte, assurez-vous que l'identificateur de client défini dans l'abonnement respecte le format suivant :
 
@@ -176,7 +176,6 @@ Où :
    - Points (. )
 
 **Important :**
-- La prise en charge des abonnements partagés à durabilité mixte est uniquement disponible en tant que fonction bêta. N'implémentez pas les fonctions bêta dans les applications en production.
 - La session de l'option clean session peut avoir pour valeur true (1) ou false (0) dans les abonnements partagés à durabilité mixte.
 - Les clients qui se connectent à l'aide de l'ID instance utilisent des abonnements différents de ceux utilisés par les clients qui se connectent sans l'ID instance. Par conséquent, si vous souhaitez que plusieurs clients se connectent à un abonnement partagé à durabilité mixte, vous devez spécifier l'ID instance dans tous les abonnements.
 

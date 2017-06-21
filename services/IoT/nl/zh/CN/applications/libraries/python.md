@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -375,7 +375,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-有关请求和响应模型以及 HTTP 状态码的信息，请参阅 [{{site.data.keyword.iot_short_notm}} API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} 的“组织配置”部分。
+有关请求和响应模型以及 HTTP 状态码的信息，请参阅 [{{site.data.keyword.iot_short_notm}} API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} 的“组织配置”部分。
 
 
 ## 批量设备操作
@@ -383,7 +383,7 @@ except IoTFCReSTException as e:
 
 应用程序可以使用批量操作来同时获取、添加或除去多个设备。
 
-有关查询参数的列表、请求和响应模型以及 HTTP 状态码的信息，请参阅 [{{site.data.keyword.iot_short_notm}} API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/){: new_window} 的“批量操作”部分。
+有关查询参数的列表、请求和响应模型以及 HTTP 状态码的信息，请参阅 [{{site.data.keyword.iot_short_notm}} API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} 的“批量操作”部分。
 
 
 ### 检索设备信息
@@ -599,7 +599,7 @@ except IoTFCReSTException as e:
 
 在 API 中可用的设备操作包括列出、添加、除去、查看、更新 {{site.data.keyword.iot_short_notm}} 组织中的设备以及查看设备位置和查看设备的设备管理信息。
 
-有关查询参数、请求和响应模型以及 HTTP 状态码的信息，请参阅 [{{site.data.keyword.iot_short_notm}} API ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} 的“设备”部分。
+有关查询参数、请求和响应模型以及 HTTP 状态码的信息，请参阅 [{{site.data.keyword.iot_short_notm}} API 文档![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} 的“设备”部分。
 
 
 ### 检索特定设备类型的设备
@@ -752,7 +752,7 @@ apiCli.getDeviceManagementInformation("iotsample-arduino", "00aabbccde03")
 - 检索设备错误代码
 - 添加错误代码
 
-有关查询和响应模型、响应代码以及查询参数的更多信息，请参阅 [API 文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}。
+有关查询和响应模型、响应代码以及查询参数的更多信息，请参阅 [{{site.data.keyword.iot_short_notm}} API 文档 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}。
 
 ### 获取诊断日志
 

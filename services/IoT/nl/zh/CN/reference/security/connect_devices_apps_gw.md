@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-19"
+lastupdated: "2017-04-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-01-19"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# 将应用程序、设备和网关连接到 {{site.data.keyword.iot_short_notm}}
+# 使用 API 连接应用程序、设备和网关
 {: #connect_devices_apps_gw}
 
 您可以将应用程序、设备和网关通过 MQTT 协议连接到 {{site.data.keyword.iot_full}}。还可以使用 HTTP REST API 将设备连接到 {{site.data.keyword.iot_short_notm}}。
@@ -31,7 +31,7 @@ lastupdated: "2017-01-19"
 
 ### HTTP REST API 连接 URL
 
-<pre class="pre">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 {: codeblock}
 
 **注释**

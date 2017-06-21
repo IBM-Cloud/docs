@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-03-29"
 
 ---
 
@@ -23,11 +23,6 @@ lastupdated: "2017-02-16"
 
 클라우드에서 앱을 실행할 때 로그에 액세스하기 위해 앱이 실행되는 인프라에 SSH 또는 FTP로 접속할 수 없습니다(예: 앱이 Cloud Foundry에서 실행되는 경우). 반면에 {{site.data.keyword.Bluemix_notm}}에서 사용 가능한 다른 컴퓨팅 런타임인 {{site.data.keyword.containershort}}에서 앱을 실행할 수 있으며, 이 경우 SSH로 접속하여 로그에 액세스할 수 있습니다. 컴퓨팅 런타임에 관계없이 로그에 대한 액세스는 중요하며 {{site.data.keyword.Bluemix_notm}}는 공통 경험을 제공하여 클라우드 플랫폼에서 로그를 시각화하고 분석합니다.
 
-{{site.data.keyword.Bluemix_notm}}는 Cloud Foundry 플랫폼 및 Cloud Foundry 애플리케이션에서 생성된 로그 데이터를 기록합니다. 로그에서 앱에 대해 생성된 오류, 경고 및 정보 메시지를 볼 수 있습니다. Cloud Foundry에서 로깅에 대한 자세한 정보는 [Bluemix에서 Cloud Foundry 앱에 대해 로깅](logging_cf_apps.html#logging_bluemix_cf_apps)을 참조하십시오.
-
-{{site.data.keyword.Bluemix_notm}}는 {{site.data.keyword.containershort}}에서 생성된 로그 데이터를 기록합니다. {{site.data.keyword.containershort}}의 로깅에 대한 자세한 정보는 [IBM Bluemix 컨테이너 서비스의 로깅](containers/logging_containers_ov.html#logging_containers_ov)을 참조하십시오.   
-
-
 {{site.data.keyword.Bluemix_notm}}가 제공하는 로깅 기능을 사용하여 다음을 수행할 수 있습니다.
 
 * 클라우드 리소스 및 리소스 수행과 실행 방법을 파악합니다.
@@ -40,3 +35,31 @@ lastupdated: "2017-02-16"
 * 앱에서 취약점을 식별합니다.
 * 인프라에서 문제점을 발견합니다.
 * 앱 런타임에서 문제점을 발견합니다.
+
+## CF 앱에 대한 로깅
+{: #logging_bmx_ov_cf}
+
+{{site.data.keyword.Bluemix_notm}}는 Cloud Foundry 플랫폼 및 Cloud Foundry 애플리케이션에서 생성된 로그 데이터를 기록합니다. 로그에서 앱에 대해 생성된 오류, 경고 및 정보 메시지를 볼 수 있습니다. Cloud Foundry의 로깅에 대한 자세한 정보는 [Bluemix에서 Cloud Foundry 앱에 대한 로깅](cfapps/logging_cf_apps.html#logging_bluemix_cf_apps)을 참조하십시오. 
+
+## 컨테이너에 대한 로깅
+{: #logging_bmx_ov_containers}
+
+{{site.data.keyword.Bluemix_notm}}는 {{site.data.keyword.containershort}}에서 생성된 로그 데이터를 기록합니다. {{site.data.keyword.containershort}}의 로깅에 대한 자세한 정보는 [IBM Bluemix 컨테이너 서비스의 로깅](containers/logging_containers_ov.html#logging_containers_ov)을 참조하십시오.  
+
+**참고:** {{site.data.keyword.IBM}} 관리 클라우드 인프라에 배치된 Docker 컨테이너의 {{site.data.keyword.Bluemix_notm}}에서 컨테이너 로그를 분석할 수 있습니다.
+
+## Bluemix의 로그 분석
+{: #logging_bmx_ov_ui}
+
+{{site.data.keyword.Bluemix_notm}}에서 앱에 대한 최근 로그를 보거나 실시간으로 로그를 추적할 수 있습니다.
+
+* UI를 통해 로그를 보고 필터링하고 분석할 수 있습니다. 자세한 정보는 [Bluemix 콘솔에서 로그 분석](logging_view_dashboard.html#analyzing_logs_bmx_ui)을 참조하십시오.
+
+* 로그를 프로그래밍 방식으로 관리하기 위해 명령행을 사용하여 로그를 보고 필터링하고 분석할 수 있습니다. 자세한 정보는 [CLI에서 로그 분석](logging_view_cli.html#analyzing_logs_cli)을 참조하십시오.
+
+## Kibana로 고급 로그 분석
+{: #logging_bmx_ov_kibana}
+
+{{site.data.keyword.Bluemix_notm}}에서 오픈 소스 분석 및 시각화 플랫폼인 Kibana를 사용하여 데이터를 모니터링하고 검색하고 분석하고 다양한 그래프(예: 차트와 테이블)로 시각화할 수 있습니다. 자세한 정보는 [Kibana의 고급 로그 분석](kibana4/analyzing_logs_Kibana.html#analyzing_logs_Kibana)을 참조하십시오.
+
+

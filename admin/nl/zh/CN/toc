@@ -1,15 +1,25 @@
-{: .toc}
-Cloud Foundry 搴旂敤绋嬪簭  
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
 
-    [璁剧疆甯愭埛](/docs/admin/adminpublic.html)
+{: .toc subcollection="bluemix-account" audience="platform" href="/docs/admin/adminpublic.html"} 管理帐户
+
+    {: .navgroup id="howto"}
+    {: .topicgroup}     帐户设置
         adminpublic.md
         profile.md
-        account.md
-        iamuserinv.md
-        iamusermanage.md
-        users_roles.md
-        orgs_spaces.md
-        apikeys.md
-        patterns.md
-        softlayerlink.md
     
+    softlayerlink.md
+
+    {: .topicgroup}
+    Orgs
+        orgs_spaces.md
+        manageorg.md
+        
+    notifications.md
+    {: .navgroup-end}
+
+    {: .navgroup id="learn"}
+    {: .topicgroup}      最佳实践
+        patterns.md
+        
+    {: .navgroup-end}

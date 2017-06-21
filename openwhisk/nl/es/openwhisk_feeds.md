@@ -7,7 +7,6 @@ lastupdated: "2017-04-04"
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -78,9 +77,9 @@ Se produce un protocolo de acción de canal de información similar para `wsk tr
 
 Es fácil configurar un canal de información mediante un gancho si el productor del suceso admite un recurso webhook/callback.
 
-Con este método *no es necesario* configurar ningún servicio persistente fuera de {{site.data.keyword.openwhisk_short}}. Toda la gestión de canales de información se genera de forma natural a través de las *acciones de canal de información* de {{site.data.keyword.openwhisk_short}}, que negocian directamente con una API webhook de terceros.
+Con este método *no es necesario* configurar ningún servicio persistente fuera de {{site.data.keyword.openwhisk_short}}.  Toda la gestión de canales de información se genera de forma natural a través de las *acciones de canal de información* de {{site.data.keyword.openwhisk_short}}, que negocian directamente con una API webhook de terceros.
 
-Al invocarse con el mandato `CREATE`, la acción del canal de información simplemente instala un webhook para otro servicio, solicitando al servicio remoto que PUBLIQUE notificaciones en el URL de `fireTrigger` pertinente en {{site.data.keyword.openwhisk_short}}. 
+Al invocarse con el mandato `CREATE`, la acción del canal de información simplemente instala un webhook para otro servicio, solicitando al servicio remoto que PUBLIQUE notificaciones en el URL de `fireTrigger` pertinente en {{site.data.keyword.openwhisk_short}}.
 
 El webhook debería dirigirse para enviar notificaciones a un URL como:
 

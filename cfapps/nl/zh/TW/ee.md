@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -26,6 +26,13 @@ lastupdated: "2017-01-11"
 {: #ee_start}
 
 開始之前，您必須先從 [https://console.ng.bluemix.net/ ![外部鏈結圖示](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window} 註冊 IBM ID。然後就可以登入 {{site.data.keyword.Bluemix_notm}}，並開始免費試用 30 天。{{site.data.keyword.Bluemix_notm}} 提供 2 GB 運行環境記憶體和 10 個服務實例的額度供您免費試用。
+
+
+## 使用工具鏈及 {{site.data.keyword.contdelivery_short}} 服務開發及部署應用程式
+{: #ee_cd}
+
+<a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">新增工具鏈</a>（包括 {{site.data.keyword.contdelivery_full}} 服務）至應用程式。然後，<a href="docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">使用工具鏈</a>來開發及部署應用程式。
+
 
 ## 使用 {{site.data.keyword.Bluemix_notm}} 使用者介面建立 Web 應用程式
 {: #ee_appui}
@@ -80,7 +87,7 @@ lastupdated: "2017-01-11"
 }
 ```
 
-**附註：**此環境變數是 JSON 物件的序列化，針對應用程式連結的每一個服務實例會有一個項目。每一個服務實例所提供資料的數量及類型都是服務所特有的。當您的應用程式未使用任何服務時，VCAP_SERVICES 是個空的 JSON 物件。此環境變數只適用於您將服務新增至應用程式時。
+**附註：**此環境變數是 JSON 物件的序列化，針對應用程式連結的每一個服務實例會有一個項目。每一個服務實例所提供資料的數量及類型都是服務所特有。當您的應用程式未使用任何服務時，VCAP_SERVICES 是個空的 JSON 物件。此環境變數只適用於您將服務新增至應用程式時。
 
 
 ## 使用 cf CLI 建置應用程式

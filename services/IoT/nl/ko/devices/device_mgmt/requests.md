@@ -294,7 +294,8 @@ REST API를 사용하여 펌웨어 다운로드를 시작하려면 다음에 POS
    ```
 이 응답은 다음 요청을 트리거합니다.
 2. 펌웨어 다운로드 상태 `iotdm-1/observe`에 대한 관찰 요청이 전송됩니다.
-관찰 요청은 디바이스가 펌웨어 다운로드를 시작할 준비가 되었는지 여부를 확인합니다. 다운로드를 즉시 시작할 수 있으면 `rc` 매개변수를 `200`(`Ok`)으로 설정하고 `mgmt.firmware.state` 속성을 `0`(`Idle`)으로 설정하며 `mgmt.firmware.updateStatus` 속성을 `0`(`Idle`)으로 설정하십시오. 다음 코드는 {{site.data.keyword.iot_short_notm}} 및 디바이스 간의 예제 교환입니다. 
+관찰 요청은 디바이스가 펌웨어 다운로드를 시작할 준비가 되었는지 여부를 확인합니다. 다운로드를 즉시 시작할 수 있으면 `rc` 매개변수를 `200`(`Ok`)으로 설정하고 `mgmt.firmware.state` 속성을 `0`(`Idle`)으로 설정하며 `mgmt.firmware.updateStatus` 속성을
+`0`(`Idle`)으로 설정하십시오. 다음 코드는 {{site.data.keyword.iot_short_notm}} 및 디바이스 간의 예제 교환입니다. 
    ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
 

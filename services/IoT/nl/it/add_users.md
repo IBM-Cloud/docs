@@ -30,7 +30,7 @@ Per impostazione predefinita, gli account dei membri non scadono. Quando aggiung
 Per aggiungere un membro alla tua organizzazione, avrai bisogno dell'ID IBM del membro. Per aggiungere un membro, non hai bisogno della conferma da parte del membro.
 
 Per aggiungere un solo membro alla tua organizzazione {{site.data.keyword.iot_short_notm}}:
-1. Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Members**. 
+1. Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Members**.
 2. Fai clic su **Add Members** e seleziona la scheda **Add**.
 3. Immetti l'ID IBM del membro.
 4. Seleziona un ruolo per il membro.
@@ -38,7 +38,7 @@ Per aggiungere un solo membro alla tua organizzazione {{site.data.keyword.iot_sh
 6. Fai clic su **Add**.
 
 Per aggiungere più membri contemporaneamente, devi caricare un file `.csv` che contiene l'ID IBM, il ruolo e facoltativamente la data di scadenza di ogni membro. Per informazioni, consulta [Messa a punto del tuo file CSV](#constructing-your-csv).
-1. Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Members**. 
+1. Nel dashboard {{site.data.keyword.iot_short_notm}}, vai a **Members**.
 2. Fai clic su **Add Members** e seleziona la scheda **Import**.
 3. Fai clic sui tuoi file o trascina il file `.csv` nella finestra **Upload CSV**.
 4. Seleziona un ruolo predefinito da utilizzare se non viene riconosciuto un ruolo specificato nel file CSV.
@@ -68,7 +68,7 @@ Per invitare più membri contemporaneamente, devi caricare un file `.csv` che co
 2. Fai clic su **Invite Members** e seleziona la scheda **Import**.
 3. Fai clic sui tuoi file o trascina il file `.csv` nella finestra **Upload CSV**.
 4. Seleziona un ruolo predefinito da utilizzare se non viene riconosciuto un ruolo specificato nel file CSV.
-5. Associa i numeri di colonna nel tuo file CSV all'indirizzo email, al ruolo e (facoltativo) alle voci della data di scadenza corrispondenti. 
+5. Associa i numeri di colonna nel tuo file CSV all'indirizzo email, al ruolo e (facoltativo) alle voci della data di scadenza corrispondenti.
 6. Seleziona il separatore di colonna punto e virgola o virgola che corrisponde al separatore utilizzato nel tuo file `.csv`.
 7. Fai clic su **Import** per inviare gli inviti.
 
@@ -127,7 +127,7 @@ Immetti uno dei seguenti ruoli:
 Gli utenti possono modificare il proprio ruolo, aggiungere, rimuovere o modificare una data di scadenza di accesso, oppure aggiungere o rimuovere l'accesso all'organizzazione.
 
 1. Dal tuo dashboard {{site.data.keyword.iot_short_notm}}, fai clic su **Members** dalla barra di navigazione sulla sinistra.
-2. Fai clic sull'icona **Edit** accanto all'utente che desideri modificare. 
+2. Fai clic sull'icona **Edit** accanto all'utente che desideri modificare.
 3. Apporta le modifiche desiderate all'utente.
 4. Fai clic su **Save**.
 
@@ -146,5 +146,5 @@ Gli utenti possono essere bloccati dall'accedere all'organizzazione {{site.data.
 Gli utenti possono essere rimossi completamente dall'organizzazione {{site.data.keyword.iot_short_notm}}. La rimozione degli utenti non può essere annullata e gli utenti devono essere [aggiunti alla piattaforma](#adding-new-users) per ripristinare l'accesso.
 
 1. Dal tuo dashboard {{site.data.keyword.iot_short_notm}}, fai clic su **Members** dalla barra di navigazione sulla sinistra.
-2. Fai clic sull'icona **Delete** accanto all'utente che deve essere rimosso. 
+2. Fai clic sull'icona **Delete** accanto all'utente che deve essere rimosso.
 3. Fai clic su **Delete** nella finestra di dialogo di conferma.

@@ -7,7 +7,6 @@ lastupdated: "2017-02-27"
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -266,7 +265,7 @@ wsk activation poll
   ```
   {: pre}
 
-  您應該每八秒就會看到觸發程式、規則及動作的啟動。在每次呼叫時，動作都會接收到參數 `{"name":"Mork", "place":"Ork"}`。
+  您應該每八秒就會看到觸發程式、規則及動作的啟動。在每次呼叫時，動作都會收到參數 `{"name":"Mork", "place":"Ork"}`。
 
 
 ## 建立套件

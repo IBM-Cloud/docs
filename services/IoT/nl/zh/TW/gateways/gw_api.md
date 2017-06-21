@@ -39,15 +39,18 @@ lastupdated: "2017-03-07"
 
 其中：
 
-**_orgId_**   
-- 組織名稱，必須符合主機標頭中指定的名稱。
+<dl>
+<dt>orgId</dt>  
+<dd>組織名稱，必須符合主機標頭中指定的名稱。</dd>
 
-**_gwType_**
-- 閘道的類型。
+<p></p>
+<dt>gwType</dt>  
+<dd>閘道的類型。</dd>
+<p></p>
+<dt>gwDevId</dt>  
+<dd>閘道的裝置 ID。</dd>
+</dl>
 
-**_gwDevId_**
-
-- 閘道的裝置 ID。
 
 ### Content-Type 要求標頭
 

@@ -6,7 +6,7 @@ lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -204,10 +204,10 @@ Topic: iotdm-1/response
 
 Ein Gerät verwendet eine Anforderung des Typs 'Position aktualisieren', um die Positionsdaten für ein Gerät zu verwalten. Die Metadaten zur Position eines Geräts können in {{site.data.keyword.iot_short_notm}} anhand folgender Möglichkeiten aktualisiert werden:
 
-#### Automatische Aktualisierungen der Geräteposition
+### Automatische Aktualisierungen der Geräteposition
 - Das Gerät benachrichtigt {{site.data.keyword.iot_short_notm}} über die Aktualisierung der Position. Das Gerät ruft seine Position von einem GPS-Empfänger ab und sendet eine Gerätemanagementnachricht an die {{site.data.keyword.iot_short_notm}}-Instanz, um seine Position zu aktualisieren. Anhand einer Zeitmarke wird der Zeitpunkt erfasst, an dem die Position vom GPS-Empfänger abgerufen wurde. Die Zeitmarke ist gültig, auch wenn beim Senden der Nachricht zur Aktualisierung der Position eine Verzögerung auftritt. Wenn die Zeitmarke in der Gerätemanagementnachricht ausgelassen wird, werden das Datum und die Uhrzeit des Nachrichtenempfangs verwendet, um die Metadaten zur Position zu aktualisieren.
 
-#### Manuelle Aktualisierungen der Geräteposition mithilfe der REST-API
+### Manuelle Aktualisierungen der Geräteposition mithilfe der REST-API
 - Sie können die Metadaten zur Position für ein statisches Gerät manuell festlegen, indem Sie beim Registrieren des Geräts die {{site.data.keyword.iot_short_notm}}-REST-API verwenden. Sie können die Position auch später ändern. Die Einstellung der Zeitmarke ist optional; wird sie jedoch ausgelassen, werden das aktuelle Datum und die Uhrzeit in den Metadaten zur Position des Geräts festgelegt.
 
 ### Positionsaktualisierungen, die von Geräten ausgelöst werden

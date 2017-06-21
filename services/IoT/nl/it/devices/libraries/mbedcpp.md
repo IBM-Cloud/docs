@@ -38,7 +38,7 @@ Utilizza [mBed compiler ![Icona link esterno](../../../../icons/launch-glyph.svg
 
 **Nota:** non devi installare o configurare nulla per l'esecuzione con mBed.
 
-er informazioni su come collegare un microcontroller ARM mBed NXP LPC 1768 {{site.data.keyword.iot_short_notm}}, consulta la ricetta [mBed C++ client library for IBM Watson IoT Platform ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/){: new_window}.
+Per informazioni su come collegare un microcontroller ARM mBed NXP LPC 1768 {{site.data.keyword.iot_short_notm}}, consulta la ricetta [mBed C++ client library for IBM Watson IoT Platform ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/recipes/tutorials/mbed-c-client-library-for-ibm-iot-foundation/){: new_window}.
 
 ## Constructor
 {: #constructor}
@@ -64,7 +64,7 @@ Il seguente codice di esempio descrive come un'istanza DeviceClient può interag
 
   // Imposta i parametri di connessione {{site.data.keyword.iot_short_notm}}
   char organization[11] = "quickstart";     // Per una connessione registrata sostituisci con la tua organizzazione
-  char deviceType[8] = "LPC1768";           // Per una connessione registrata sostituisci con il tuo tipo di dispositivo
+  char deviceType[8] = "LPC1768";           // Per una connessione registrata sostituisci con il tuo tipo dispositivo
   char deviceId[3] = "01";                  // Per una connessione registrata sostituisci con il tuo ID del dispositivo
 
   // Crea DeviceClient

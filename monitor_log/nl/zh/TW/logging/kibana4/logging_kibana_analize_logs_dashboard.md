@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -28,6 +28,7 @@ lastupdated: "2017-03-08"
 | Multi-cf-app 儀表板 | 此儀表板會顯示部署在相同 {{site.data.keyword.Bluemix_notm}} 空間中的所有 Cloud Foundry 應用程式的資訊。  | 
 | Multi-container 儀表板 | 此儀表板會顯示部署在相同 {{site.data.keyword.Bluemix_notm}} 空間中的所有容器的資訊。  |
 | 空間儀表板 | 此儀表板會顯示 {{site.data.keyword.Bluemix_notm}} 空間中可用的記載資料。  | 
+{: caption="表 1. 儀表板類型範例" caption-side="top"}
 
 若要將儀表板中的資料視覺化，您可以配置畫面。Kibana 包括可用來分析資訊的各種視覺化，例如表格、趨勢及直方圖。視覺化會以畫面形式新增至儀表板。您可以新增、移除及重新排列儀表板中的畫面。每一個畫面的目標都不同。部分畫面會分組成數列，以提供一個以上查詢的結果。其他畫面則會顯示文件或自訂資訊。每一個畫面都以搜尋為基礎。搜尋會定義畫面顯示的資料子集。例如，您可以配置長條圖、圓餅圖或表格，以將資料視覺化，並進行分析。  
 
@@ -43,26 +44,9 @@ lastupdated: "2017-03-08"
 | [匯入儀表板](logging_kibana_analize_logs_dashboard.html#k4_dashboard_import) | 您可以將儀表板匯入成 JSON 檔案。 |
 | [共用儀表板](logging_kibana_analize_logs_dashboard.html#k4_dashboard_share) | 您可以透過 HTML 原始檔或透過 Kibana 儀表板來共用儀表板。 |
 | [新增視覺化](logging_kibana_analize_logs_dashboard.html#k4_dashboard_add_visualization) | 您可以將現有視覺化或搜尋新增至儀表板。|
+{: caption="表 2. 使用儀表板的作業" caption-side="top"}
 
-如需 Kibana 的相關資訊，請參閱 [Kibana 使用手冊 ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}。
-
-
-
-## 建立新的 Kibana 儀表板
-{: #K4_dashboard_new}
-
-請完成下列步驟，以建立新的儀表板：
-
-1. 在「儀表板」頁面的工具列中，按一下**新建儀表板**按鈕 ![新建儀表板](images/k4_dash_new_icon.jpg "新建儀表板")。
-
-2. 新增一個以上的搜尋及視覺化。如需相關資訊，請參閱[新增搜尋或視覺化](logging_kibana_analize_logs_dashboard.html#K4_dashboard_add_visualization)。
-
-    當您新增搜尋或視覺化時，會在儀表板中新增畫面。
-
-3. 將畫面拖放在您要放置的儀表板部分。
- 
-4. 儲存儀表板，以供日後重複使用。如需相關資訊，請參閱[儲存 Kibana 儀表板](logging_kibana_analize_logs_dashboard.html#k4_dashboard_save)。
-
+如需 Kibana 的相關資訊，請參閱 [Kibana User Guide ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}。
 
 ## 新增搜尋或視覺化
 {: #k4_dashboard_add_visualization}
@@ -79,21 +63,20 @@ lastupdated: "2017-03-08"
 
     該搜尋或視覺化的畫面即會新增至儀表板。
 
+## 建立新的 Kibana 儀表板
+{: #K4_dashboard_new}
 
+請完成下列步驟，以建立新的儀表板：
 
-## 儲存 Kibana 儀表板
-{: #k4_dashboard_save}
+1. 在「儀表板」頁面的工具列中，按一下**新建儀表板**按鈕 ![新建儀表板](images/k4_dash_new_icon.jpg "新建儀表板")。
 
-完成下列步驟，以在自訂 Kibana 儀表板之後予以儲存：
+2. 新增一個以上的搜尋及視覺化。如需相關資訊，請參閱[新增搜尋或視覺化](logging_kibana_analize_logs_dashboard.html#K4_dashboard_add_visualization)。
 
-1. 在工具列中，按一下**儲存**按鈕 ![儲存儀表板](images/k4_dash_save_icon.jpg "儲存儀表板")。
+    當您新增搜尋或視覺化時，會在儀表板中新增畫面。
 
-2. 輸入儀表板的名稱。
-
-    **附註：**如果您嘗試用來儲存儀表板的名稱包含空格，將不會進行儲存。
-
-3. 按一下名稱欄位旁邊的**儲存**圖示。
-
+3. 將畫面拖放在您要放置的儀表板部分。
+ 
+4. 儲存儀表板，以供日後重複使用。如需相關資訊，請參閱[儲存 Kibana 儀表板](logging_kibana_analize_logs_dashboard.html#k4_dashboard_save)。
 
 ## 刪除 Kibana 儀表板
 {: #k4_dashboard_delete}
@@ -105,17 +88,6 @@ lastupdated: "2017-03-08"
 2. 在**視覺化**標籤中，選取您要刪除的視覺化。
 
 3. 按一下**刪除**。
-
-
-## 載入 Kibana 儀表板
-{: #k4_dashboard_reload}
-
-請完成下列步驟，以載入已儲存的儀表板：
-
-1. 在「儀表板」頁面的工具列中，按一下**載入已儲存的儀表板**按鈕 ![載入已儲存的儀表板](images/k4_dash_load_icon.jpg "載入已儲存的儀表板")。
-
-2. 選取您要載入的儀表板。 
-
 
 ## 匯出 Kibana 儀表板
 {: #k4_dashboard_export}
@@ -130,7 +102,6 @@ lastupdated: "2017-03-08"
 
 4. 儲存檔案。
 
-
 ## 匯入 Kibana 儀表板
 {: #k4_dashboard_import}
 
@@ -144,6 +115,27 @@ lastupdated: "2017-03-08"
 
 該儀表板即會新增至儀表板清單中。
 
+## 載入 Kibana 儀表板
+{: #k4_dashboard_reload}
+
+請完成下列步驟，以載入已儲存的儀表板：
+
+1. 在「儀表板」頁面的工具列中，按一下**載入已儲存的儀表板**按鈕 ![載入已儲存的儀表板](images/k4_dash_load_icon.jpg "載入已儲存的儀表板")。
+
+2. 選取您要載入的儀表板。 
+
+## 儲存 Kibana 儀表板
+{: #k4_dashboard_save}
+
+完成下列步驟，以在自訂 Kibana 儀表板之後予以儲存：
+
+1. 在工具列中，按一下**儲存**按鈕 ![儲存儀表板](images/k4_dash_save_icon.jpg "儲存儀表板")。
+
+2. 輸入儀表板的名稱。
+
+    **附註：**如果您嘗試用來儲存儀表板的名稱包含空格，將不會進行儲存。
+
+3. 按一下名稱欄位旁邊的**儲存**圖示。
 
 ## 共用 Kibana 儀表板
 {: #k4_dashboard_share}

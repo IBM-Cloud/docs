@@ -193,7 +193,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="2.0364676"
      inkscape:cx="314.054"
-     inkscape:cy="75.887352"
+     inkscape:cy="409.79888"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -456,7 +456,7 @@
        height="32.638908"
        width="109.37553"
        id="rect79371-1-6-6-9-8-7-3-5-2-2-9-1-9-6-3-1-06-1"
-       style="display:inline;fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+       style="fill:#c2edfb;fill-opacity:1;fill-rule:evenodd;stroke:none;display:inline" />
     <image
        width="31.94445"
        height="29.86112"
@@ -655,16 +655,16 @@
        y="365.35812" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-97.056808"
+       style="font-size:11.25px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:'Arial, Normal'"
+       x="-79.056808"
        y="377.45514"
        id="text6794-8-4-0"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="-97.056808"
+         x="-79.056808"
          y="377.45514"
          id="tspan43907-3">3. <tspan
-   style="-inkscape-font-specification:SimSun;font-family:SimSun"
+   style="font-family:SimSun;-inkscape-font-specification:SimSun"
    id="tspan3005">返回证书</tspan></tspan></text>
     <path
        inkscape:connector-curvature="0"
@@ -900,7 +900,7 @@
        x="131.54547"
        y="424.04794" />
     <g
-       transform="translate(159.67838,171.37583)"
+       transform="translate(151.67838,179.37583)"
        style="display:inline"
        id="g14296-5-8-8">
       <rect
@@ -909,7 +909,7 @@
          height="20.623957"
          width="101.15557"
          id="rect16242-2-1-0-3-9"
-         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.61300004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+         style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
       <text
          sodipodi:linespacing="125%"
          id="text6794-8-4-2-7"
@@ -952,19 +952,19 @@
     <text
        sodipodi:linespacing="125%"
        id="text44235"
-       y="390.30252"
-       x="131.84277"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.59894085px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+       y="400.84695"
+       x="139.42969"
+       style="font-size:11.59894085px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"
        xml:space="preserve"
        transform="scale(1.0544492,0.94836243)"><tspan
          id="tspan44239"
-         y="390.30252"
-         x="131.84277"
+         y="400.84695"
+         x="139.42969"
          sodipodi:role="line">API <tspan
-   style="-inkscape-font-specification:SimSun;font-family:SimSun"
+   style="font-family:SimSun;-inkscape-font-specification:SimSun"
    id="tspan3013">注册服务</tspan></tspan><tspan
-         y="404.80121"
-         x="131.84277"
+         y="416.57751"
+         x="139.42969"
          sodipodi:role="line"
          id="tspan11533" /></text>
     <rect
@@ -985,16 +985,16 @@
        y="216.76437" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-31.47691"
+       style="font-size:11.25px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:'Arial, Normal'"
+       x="-21.47691"
        y="193.66296"
        id="text6794"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6796"
-         x="-31.47691"
+         x="-21.47691"
          y="193.66296">1. <tspan
-   style="-inkscape-font-specification:SimSun;font-family:SimSun"
+   style="font-family:SimSun;-inkscape-font-specification:SimSun"
    id="tspan2999">请求访问权</tspan></tspan></text>
     <text
        transform="translate(68.912028,-77.428442)"
@@ -1040,22 +1040,22 @@
        y="251.18707" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-29.333654"
+       style="font-size:11.25px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:'Arial, Normal'"
+       x="-13.333654"
        y="263.28409"
        id="text6794-8-4"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6796-8-9"
-         x="-29.333654"
+         x="-13.333654"
          y="263.28409">2. <tspan
-   style="-inkscape-font-specification:SimSun;font-family:SimSun"
+   style="font-family:SimSun;-inkscape-font-specification:SimSun"
    id="tspan3001">提供身份、</tspan></tspan><tspan
          sodipodi:role="line"
-         x="-29.333654"
-         y="277.34659"
+         x="-13.333654"
+         y="278.54141"
          id="tspan43907">OpenID <tspan
-   style="-inkscape-font-specification:SimSun;font-family:SimSun"
+   style="font-family:SimSun;-inkscape-font-specification:SimSun"
    id="tspan3003">重定向</tspan></tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.61300004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
@@ -1066,16 +1066,16 @@
        y="348.22009" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-size:11.25px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:'Arial, Normal'"
        x="-47.710743"
-       y="362.28137"
+       y="366.28137"
        id="text6794-6-6"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6796-7-2"
          x="-47.710743"
-         y="362.28137">5. OAuth <tspan
-   style="-inkscape-font-specification:SimSun;font-family:SimSun"
+         y="366.28137">5. OAuth <tspan
+   style="font-family:SimSun;-inkscape-font-specification:SimSun"
    id="tspan3009">重定向</tspan></tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.61300004;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
@@ -1118,16 +1118,16 @@
          style="-inkscape-font-specification:SimSun;font-family:SimSun">连接层</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-76.819466"
+       style="font-size:11.25px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:'Arial, Normal'"
+       x="-44.819466"
        y="398.86954"
        id="text6794-9"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6796-1"
-         x="-76.819466"
+         x="-44.819466"
          y="398.86954">6. <tspan
-   style="-inkscape-font-specification:SimSun;font-family:SimSun"
+   style="font-family:SimSun;-inkscape-font-specification:SimSun"
    id="tspan3011">返回授权代码</tspan></tspan></text>
   </g>
 </svg>

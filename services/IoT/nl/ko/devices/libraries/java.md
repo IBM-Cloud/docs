@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-21"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -296,7 +296,7 @@ MQTT 외에 HTTP를 사용하여 {{site.data.keyword.iot_short_notm}}에 이벤�
 2. 공개해야 하는 이벤트를 생성하십시오.
 3. 다음 코드 샘플에 표시된 대로 이벤트 이름을 지정한 다음 `publishEventOverHTTP()` 메소드를 사용하여 이벤트를 공개하십시오.
 
-``` sourceCode
+``` 
 DeviceClient myClient = new DeviceClient(deviceProps);
 
 JsonObject event = new JsonObject();
@@ -307,7 +307,7 @@ event.addProperty("mem",  70);
 boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, ContentType.json);
 ```
 
-전체 코드를 보려면 [HttpDeviceEventPublish] 디바이스 예를 참조하십시오.
+전체 코드를 보려면, [HttpDeviceEventPublish ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")] 디바이스 예를 참조하십시오. {: new_window}
 
 특성 파일의 설정을 기반으로 `publishEventOverHTTP()` 메소드가 Quickstart 모드 또는 등록된 플로우 모드로 이벤트를 공개합니다. 특성 파일의 조직 ID를 `quickstart`로 설정한 경우 `publishEventOverHTTP()` 메소드는 이벤트를 디바이스 예제 Quickstart 서비스에 이벤트를 공개하고 일반 HTTP 형식의 이벤트를 공개합니다. 올바른 등록 조직이 특성 파일에 지정된 경우, 이벤트는 HTTPS를 통해 안전하게 공개됩니다.
 
@@ -329,7 +329,7 @@ HTTP 프로토콜은 '최대 한 번' 전달을 제공하며, 이는 MQTT 프로
 |`timestamp`   |org.joda.time.DateTime|이벤트의 날짜 및 시간입니다.|
 
 
-``` sourceCode
+```
 package com.ibm.iotf.sample.client.device;
 
 import java.util.Properties;

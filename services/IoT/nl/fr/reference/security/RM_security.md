@@ -15,7 +15,7 @@ lastupdated: "2017-03-17"
 # Gestion des risques et de la sécurité
 {: #RM_security}
 
-Vous pouvez améliorer la sécurité pour activer la création, l'application et la génération de rapports sur la sécurité de connexion des terminaux. Avec cette sécurité avancée, les certificats et l'authentification TLS (Transport Layer security) sont utilisés, en plus des ID utilisateur et des jetons utilisés par {{site.data.keyword.iot_short_notm}}, pour déterminer comment et où les terminaux se connectent à la plateforme.  Lorsque des certificats sont activés, lors de la communication entre les terminaux et le serveur, tous les terminaux ne disposant pas de certificats valides, tels que configurés dans les paramètres de sécurité, se voient refuser l'accès, même s'ils utilisent des ID utilisateur et des mots de passe valides.
+Vous pouvez améliorer la sécurité pour activer la création, l'application et la génération de rapports sur la sécurité de connexion des terminaux. Avec cette sécurité avancée, les certificats et l'authentification TLS (Transport Layer security) sont utilisés, en plus des ID utilisateur et des jetons utilisés par {{site.data.keyword.iot_short_notm}}, pour déterminer comment et où les terminaux se connectent à la plateforme. Lorsque des certificats sont activés, lors de la communication entre les terminaux et le serveur, tous les terminaux ne disposant pas de certificats valides, tels que configurés dans les paramètres de sécurité, se voient refuser l'accès, même s'ils utilisent des ID utilisateur et des mots de passe valides.
 
 ## Certificats client
 {: #certificates}
@@ -25,31 +25,31 @@ Pour configurer les certificats client et l'accès au serveur pour les terminaux
 Pour plus d'informations sur la configuration des certificats, voir [Configuration des certificats](set_up_certificates.html).
 
 ## Plans d'organisation et règles de sécurité
-Les règles de sécurité améliorées permettent aux organisations de déterminer la façon dont ils souhaitent que les terminaux se connectent et soient authentifiés sur la plateforme en utilisant des règles de connexion et des règles de liste noire et de liste blanche. Les options de règle de sécurité qui sont disponibles sur une organisation dépendent du type de plan de l'organisation, comme suit : 
+Les règles de sécurité améliorées permettent aux organisations de déterminer la façon dont ils souhaitent que les terminaux se connectent et soient authentifiés sur la plateforme en utilisant des règles de connexion et des règles de liste noire et de liste blanche. Les options de règle de sécurité qui sont disponibles sur une organisation dépendent du type de plan de l'organisation, comme suit :
 
 **Plan standard :**
-- Les opérateurs système peuvent configurer des règles de connexion à l'aide des options suivantes : 
+- Les opérateurs système peuvent configurer des règles de connexion à l'aide des options suivantes :
     - TLS facultatif 
     - TLS avec authentification par jeton
     - TLS avec authentification par jeton et par certificat client
 
 **Plan de sécurité avancée ou plan léger :** 
-- Les opérateurs système peuvent configurer des règles de connexion à l'aide des options suivantes : 
+- Les opérateurs système peuvent configurer des règles de connexion à l'aide des options suivantes :
     - TLS facultatif 
     - TLS avec authentification par jeton
     - TLS avec authentification par certificat client
     - TLS avec authentification par jeton et par certificat client
     - TLS avec certificat client ou jeton
-- Les opérateurs système peuvent configurer des listes noires ou des listes blanches. 
+- Les opérateurs système peuvent configurer des listes noires ou des listes blanches.
 
 ## Règles de connexion
 {: #connect_policy}
 
-Les règles de connexion contrôlent le mode de connexion des terminaux à la plateforme. Vous pouvez configurer des règles de connexion par défaut pour tous les types de terminal et créer des paramètres personnalisés pour des types de terminal spécifiques. Les règles peuvent être configurées pour autoriser des connexions non chiffrées, pour appliquer uniquement les connexions de sécurité de couche de transport (TLS) et pour permettre aux terminaux de s'authentifier avec des certificats côté client.
+Les règles de connexion contrôlent le mode de connexion des terminaux à la plateforme. Vous pouvez configurer des règles de connexion par défaut pour tous les types de terminaux et créer des paramètres personnalisés pour des types de terminaux spécifiques. Les règles peuvent être configurées pour autoriser des connexions non chiffrées, pour appliquer uniquement les connexions de sécurité de couche de transport (TLS) et pour permettre aux terminaux de s'authentifier avec des certificats côté client.
 
 Pour plus d'informations sur la configuration des règles de sécurité de connexion, voir [Configuration des règles de sécurité](set_up_policies.html).
 
-La sécurité de connexion peut également être configurée pour que les opérateurs système puissent utiliser leur propre certificat de serveur de messagerie au lieu du certificat par défaut fourni. L'utilisation d'un certificat de serveur de messagerie personnalisé peut être utile si les terminaux des utilisateurs seront authentifiés auprès du serveur pendant l'établissement de connexion TLS. Seuls les certificats de serveur de messagerie personnalisé qui utilisent le même domaine que le serveur de messagerie IoTP d'origine (<orgId>.messaging.internetofthings.ibmcloud.com) sont pris en charge. 
+La sécurité de connexion peut également être configurée pour que les opérateurs système puissent utiliser leur propre certificat de serveur de messagerie au lieu du certificat par défaut fourni. L'utilisation d'un certificat de serveur de messagerie personnalisé peut être utile si les terminaux des utilisateurs seront authentifiés auprès du serveur pendant l'établissement de connexion TLS. Seuls les certificats de serveur de messagerie personnalisé qui utilisent le même domaine que le serveur de messagerie IoTP d'origine (<orgId>.messaging.internetofthings.ibmcloud.com) sont pris en charge.
 
 ## Règles de liste noire et de liste blanche
 {: #wl_bl}

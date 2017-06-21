@@ -6,7 +6,7 @@ lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -204,10 +204,10 @@ Topic: iotdm-1/response
 
 裝置會使用「更新位置」要求來管理裝置的位置資料。使用下列方式可以在 {{site.data.keyword.iot_short_notm}} 中更新裝置的位置 meta 資料：
 
-#### 自動裝置位置更新
+### 自動裝置位置更新
 - 裝置會通知 {{site.data.keyword.iot_short_notm}} 有關位置更新。裝置會從 GPS 接收端擷取其位置，並將裝置管理訊息傳送至 {{site.data.keyword.iot_short_notm}} 實例來更新其位置。時間戳記會擷取從 GPS 接收端中擷取位置的時間。即使傳送位置更新訊息時發生延遲，時間戳記仍然有效。如果裝置管理訊息中省略時間戳記，則會使用訊息回執的日期和時間來更新位置 meta 資料。
 
-#### 使用 REST API 的手動裝置位置更新
+### 使用 REST API 的手動裝置位置更新
 - 登錄裝置時，您可以使用 {{site.data.keyword.iot_short_notm}} REST API 來手動設定靜態裝置的位置 meta 資料。您也可以稍後再修改位置。時間戳記設定是選用項目，但省略時，會在裝置的位置 meta 資料中設定現行日期和時間。
 
 ### 裝置所觸發的位置更新

@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-12"
+lastupdated: "2017-04-11"
 
 
 ---
@@ -34,7 +34,7 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 |內含 | [{{site.data.keyword.Bluemix_notm}} 運行環境](/docs/cfapps/runtimes.html) | 使用運行環境可快速啟動並執行您的應用程式，而不需要設定及管理機器和作業系統。您可以在「{{site.data.keyword.Bluemix_notm}} 本端」實例中使用所有 {{site.data.keyword.Bluemix_notm}} 運行環境。|
 |內含 | [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html)| 根據原則，動態增加或減少應用程式的運算能力。使用此服務，即可在「{{site.data.keyword.Bluemix}} 本端」環境中無限制地使用。|
 |選用 | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} 將 {{site.data.keyword.APIM}} 及 IBM StrongLoop 整合成單一供應項目，提供綜合性解決方案來建立、執行、管理及強制執行 API 和微服務。 |
-|選用 | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | 在「{{site.data.keyword.Bluemix_notm}} 本端」上執行 Docker 容器。容器是虛擬軟體物件，其中包含應用程式執行所需的所有元素。容器具有資源隔離及配置的優點，而且比虛擬機器（舉例來說）更容易攜帶且更具效率。如需硬體需求的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 專用及 Bluemix 本端中的 IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)。 |
+|選用 | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | 在「{{site.data.keyword.Bluemix_notm}} 本端」上執行 Docker 容器。容器是虛擬軟體物件，其中包含應用程式執行所需的所有元素。容器具有資源隔離及配置的優點，而且比虛擬機器（舉例來說）更容易攜帶且更具效率。如需硬體需求的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} 專用及 Bluemix 本端中的 IBM {{site.data.keyword.containershort}}](/docs/containers/container_ov.html#container_dl)。 |
 |選用 | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | 此服務提供記憶體內的資料網格，它支援應用程式的分散式快取情境。包含 50 GB 的記憶體內快取。 |
 | 選用（測試版） | [記載](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | 在 {{site.data.keyword.Bluemix_notm}} 使用者介面中提供 Cloud Foundry 應用程式的日誌，並在 Kibana 中提供可搜尋的日誌和儀表板。 |
 |選用 | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} 是一種服務，可用來將通知傳送至 iOS 及 Android 裝置。可以將通知目標設為所有應用程式使用者或一組使用標籤的特定使用者和裝置。您可以管理裝置、標籤及訂閱。您也可以使用 SDK（軟體開發套件）及「具象狀態傳輸 (REST)」應用程式介面 (API) 來進一步開發用戶端應用程式。 |
@@ -126,7 +126,7 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 |{{site.data.keyword.iot_short}}		|是		|是		|否|
 |{{site.data.keyword.weather_short}}		|是		|是		|是|
 |{{site.data.keyword.workloadscheduler}}	|是		|是		|是 |
-{: caption="表 4. 依地區可從 {{site.data.keyword.Bluemix_notm}} 公用聯合的服務" caption-side="top"}
+{: caption="表 4. 依地區可從 Bluemix 公用聯合的服務" caption-side="top"}
 {: #table04}
 
 **附註**：此表格不包括協力廠商服務。請檢查協力廠商服務選項的型錄。
@@ -241,7 +241,7 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 
 存取本端環境外部的來源時，Cloud Foundry 及 {{site.data.keyword.Bluemix_notm}} 應用程式可以與 SSL 檢驗憑證搭配運作。如果您提供用來簽署所檢查 SSL 串流的主要憑證，則 SSL 內容檢驗可用於您的環境。 
 
-{{site.data.keyword.Bluemix_notm}} 部署團隊會載入主要憑證，以在本端環境的部署處理程序期間啟用環境中的 SSL 檢驗。在環境設定處理程序期間啟用 SSL 檢驗，並不會新增部署的額外時間。如果起始部署期間未啟用此功能，您可以要求啟用它；不過，可能會發生額外的相關成本，而且根據您的可用維護時間範圍，可能需要兩到四天的時間才能完成。
+{{site.data.keyword.Bluemix_notm}} 部署團隊會載入主要憑證，以在本端環境的部署處理程序期間啟用環境中的 SSL 檢驗。在環境設定處理程序期間啟用 SSL 檢驗，並不會新增部署的額外時間。如果起始部署期間未啟用此功能，您可以要求啟用它；不過，可能會發生額外的相關成本，而且視您的可用維護時間範圍而定，可能需要兩到四天的時間才能完成。
 
 
 ## 設定您的 {{site.data.keyword.Bluemix_local_notm}} 實例
@@ -340,7 +340,7 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 </dd>
 </dl>
 
-您的客戶代表會與其他合作的 {{site.data.keyword.IBM_notm}} 專家一起合作，確保您隨時擁有所需的支援。您可以升級至「高階」支援層，以與您帳戶的專用「客戶成功經理 (CSM)」合作。如需不同支援層的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-support)。CSM 會完成下列類型的作業：
+您的客戶代表會與其他合作的 {{site.data.keyword.IBM_notm}} 專家一起合作，確保您隨時擁有所需的支援。您可以升級至「進階」支援層，以與您帳戶的專用「客戶成功經理 (CSM)」合作。如需不同支援層的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-support)。CSM 會完成下列類型的作業：
 
 <ul>
 <li>提供您與 IBM 之間的技術協調。</li>
@@ -394,7 +394,6 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 |檢查 OS | 檢查以確保作業系統映像檔符合規範標準。{{site.data.keyword.IBM_notm}} 提供 OS 映像檔的存取權。 | {{site.data.keyword.IBM_notm}} 及客戶皆負有責任 |
 {: caption="表 5. 初始階段作業" caption-side="top"}
 
-
 接下來是進度階段。進度階段說明您與 IBM 之間的進行中協同關係。此階段的主要目標包括下列各項：
 
 - 檢查容量，並協調進行必要調整。
@@ -432,6 +431,7 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 |回收基礎架構 | 根據公司準則，回收基礎架構。 | 客戶 |
 {: caption="表 7. 完成階段作業" caption-side="top"}
 
+
 ## {{site.data.keyword.Bluemix_local_notm}} 基礎架構需求
 {: #localinfra}
 
@@ -448,11 +448,11 @@ IBM® 使用雲端作業作為服務來監視及維護您的環境，因此您�
 <dd>
 ESXi 是一種在實體伺服器上執行的虛擬化層級，它會將處理器、記憶體、儲存空間及資源抽象化成為多個虛擬機器。請根據每個 ESXi 的實體核心計數下限為八的條件，選擇符合下列資源總計的任何組合。下列規格僅適用於 {{site.data.keyword.Bluemix_notm}} 核心運行環境。
 <ul>
-<li>32 個實體核心，每一個為 2.0 以上的 GHz</li>
-<li>512 GB 的實體 RAM</li>
-<li>總計 7.5 TB 的資料儲存庫大小
+<li>40 個實體核心，每一個為 2.0 以上的 GHz</li>
+<li>768 GB 的實體 RAM</li>
+<li>總計 10 TB 的資料儲存庫大小
 <ul>
-<li>7 TB 資料儲存庫，用來存放 {{site.data.keyword.Bluemix_notm}}</li>
+<li>9.5 TB 資料儲存庫，用來存放 {{site.data.keyword.Bluemix_notm}}</li>
 <li>500 GB 資料儲存庫，用來存放初始虛擬機器</li>
 </ul>
 </li>
@@ -461,8 +461,8 @@ ESXi 是一種在實體伺服器上執行的虛擬化層級，它會將處理器
 </dd>
 <dt>**高可用性**</dt>
 <dd>
-若要支援單一節點失效，您必須具有 n+1 個 ESXi。例如，如果使用兩台 16 個核心及 256 GB ESXi 伺服器以符合 32 個核心及 512 GB 的記憶體，則您需要三台這樣的伺服器才能支援單一節點的完整失敗。
-<p><strong>附註：</strong>為了保證資源，客戶的 VMware 管理者可能會決定要在叢集內強制執行嚴格的高可用性失效接手。如果您選擇繼續，而不使用高可用性失效接手，則可以符合最低的 32 個核心及 512 GB 資源需求。</p>
+若要支援單一節點失效，您必須具有 n+1 個 ESXi。例如，如果使用兩台 16 個核心及 256 GB ESXi 伺服器以符合 40 個核心及 768 GB 的記憶體，則您需要三台這樣的伺服器才能支援單一節點的完整失敗。
+<p><strong>附註：</strong>為了保證資源，客戶的 VMware 管理者可能會決定要在叢集內強制執行嚴格的高可用性失效接手。如果您選擇繼續，而不使用高可用性失效接手，則可以符合最低的 40 個核心及 768 GB 資源需求。</p>
 </dd>
 <dt>**網路**</dt>
 <dd>
@@ -476,7 +476,7 @@ ESXi 是一種在實體伺服器上執行的虛擬化層級，它會將處理器
 <p>**附註**：{{site.data.keyword.IBM_notm}} 可偵測到網路連線是否中斷。如果網路連線已中斷，{{site.data.keyword.IBM_notm}} 會聯絡您，並與您的網路專家一起來解決該問題。</p>
 </dd>
 <dt>**網路上行鏈路**</dt>
-<dd>使用兩個以上範圍從 1 到 10 Gbps 的介面（根據系統的預期工作負載而定）。</dd>
+<dd>使用兩個以上範圍從 1 到 10 Gbps 的介面（視系統的預期工作負載而定）。</dd>
 </dl>
 
 ### vCenter 伺服器配置
@@ -512,7 +512,7 @@ vSphere Enterprise plus（如果您計劃使用分散式虛擬交換器）</dd>
 
 ### VMware 許可權
 
-設定下列角色及許可權。延伸是針對每一個許可權設定的。如果傳播許可權，則許可權會透過物件階層向下傳遞。不過，子物件的許可權一律會置換從母項物件傳播而來的許可權。
+設定下列角色及許可權。延伸是針對每一個許可權而設定。如果傳播許可權，則許可權會透過物件階層向下傳遞。不過，子物件的許可權一律會置換從母項物件傳播而來的許可權。
 
 <dl>
 <dt>**vCenter 伺服器**</dt>
@@ -557,7 +557,7 @@ vSphere Enterprise plus（如果您計劃使用分散式虛擬交換器）</dd>
 
 #### Bluemix 本端系統選項
 
-如果您選擇透過 {{site.data.keyword.IBM_notm}} 訂購 PureApplication 硬體來管理「{{site.data.keyword.Bluemix_notm}} 本端」實例，則必須依照先前購買之規格大小來訂購另一個運算節點。您可以透過與 IBM 團隊合作的客戶成功經理訂購另一個節點，直接將更新的硬體出貨給您。交付並安裝硬體之後，IBM 會收到通知，部署團隊則會新增額外的 64 GB。根據訂購的運算節點大小，您可能會有額外的容量，可用於未來升級。在該情況下，您只需要聯絡 IBM，團隊就可以視需要新增額外 64 GB 增量的可用運算記憶體。
+如果您選擇透過 {{site.data.keyword.IBM_notm}} 訂購 PureApplication 硬體來管理「{{site.data.keyword.Bluemix_notm}} 本端」實例，則必須依照先前購買之規格大小來訂購另一個運算節點。您可以透過與 IBM 團隊合作的客戶成功經理訂購另一個節點，直接將更新的硬體出貨給您。交付並安裝硬體之後，IBM 會收到通知，部署團隊則會新增額外的 64 GB。視訂購的運算節點大小而定，您可能會有額外的容量，可用於未來升級。在該情況下，您只需要聯絡 IBM，團隊就可以視需要新增額外 64 GB 增量的可用運算記憶體。
 
 ## 維護您的本端實例
 {: #maintainlocal}
@@ -603,7 +603,7 @@ vSphere Enterprise plus（如果您計劃使用分散式虛擬交換器）</dd>
 
 ### 客戶偵測到的問題
 
-如果您識別到需要 {{site.data.keyword.IBM_notm}} 支援中心及作業中心注意的問題，則可以使用數種不同的方法來與支援中心聯絡。如需如何與支援中心聯絡的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-bluemix-support-local)。根據問題，您及（或）IBM 會一起合作來修正問題。
+如果您識別到需要 {{site.data.keyword.IBM_notm}} 支援中心及作業中心注意的問題，則可以使用數種不同的方法來與支援中心聯絡。如需如何與支援中心聯絡的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-bluemix-support-local)。視問題而定，您及（或）IBM 會一起合作來修正問題。
 
 ### IBM 偵測到的重要突發事件
 
@@ -615,7 +615,7 @@ vSphere Enterprise plus（如果您計劃使用分散式虛擬交換器）</dd>
 
 圖 2. 突發事件回應程序
 
-根據問題，您及（或）IBM 會一起合作來修正問題。如果您有關於突發事件的問題，或者需要 {{site.data.keyword.IBM_notm}} 業務代表來協助您解決問題，則可以開啟支援問題單。如需如何與支援中心聯絡的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-bluemix-support-local)。
+視問題而定，您及（或）IBM 會一起合作來修正問題。如果您有關於突發事件的問題，或者需要 {{site.data.keyword.IBM_notm}} 業務代表來協助您解決問題，則可以開啟支援問題單。如需如何與支援中心聯絡的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-bluemix-support-local)。
 
 **附註**：我們會 24 小時全年無休地監視嚴重性 1 支援問題單。其他問題單的處理時間是從星期日晚上 10:00 GMT 到星期六凌晨 12:00 GMT。如需支援問題單嚴重性以及與支援中心合作的相關資訊，請參閱<a href="/docs/support/index.html#contacting-bluemix-support-local">與支援中心聯絡</a>。
 
@@ -630,7 +630,7 @@ vSphere Enterprise plus（如果您計劃使用分散式虛擬交換器）</dd>
 ### 啟用 {{site.data.keyword.Bluemix_local_notm}} 的持續可用性
 {: #enabling}
 
-「{{site.data.keyword.Bluemix_notm}} 公用」預設會部署至多個地理位置。不過，您必須執行下列動作，才能啟用分散在全球的 {{site.data.keyword.Bluemix_local_notm}} 實例：
+依預設，「{{site.data.keyword.Bluemix_notm}} 公用」會部署至多個地理位置。不過，您必須執行下列動作，才能啟用分散在全球的 {{site.data.keyword.Bluemix_local_notm}} 實例：
 
 * 確定您的開發人員將應用程式部署至多個地區（透過手動或自動化處理程序）。選取的地區應該彼此相隔 200 公里以上，確保自然災難不會同時影響這兩個地理位置。
 * 配置廣域負載平衡器（例如 Akamai 或 Dyn），使其指向至少兩個不同地區中的應用程式。
@@ -652,7 +652,7 @@ vSphere Enterprise plus（如果您計劃使用分散式虛擬交換器）</dd>
 
 廣域負載平衡器不僅可確保持續可用性，也是災難回復的必要項目，而且它還有數個其他優點：
 
-* 預設會將使用者遞送至最近的 {{site.data.keyword.Bluemix_notm}} 地區
+* 依預設，會將使用者遞送至最近的 {{site.data.keyword.Bluemix_notm}} 地區
 * 根據效能進行遞送
 * 選擇性地將某個百分比的資料流量導向新的應用程式版本
 * 根據地區性能檢查，提供網站失效接手

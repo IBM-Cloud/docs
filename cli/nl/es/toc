@@ -1,0 +1,51 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix-cli" audience="platform" href="/docs/cli/index.html"}
+Herramientas CLI y Dev
+
+	{: .navgroup id="learn"}
+	index.md
+	[Iniciación a la interfaz de línea de mandatos de CF](https://github.com/cloudfoundry/cli#getting-started)
+	reference/bluemix_cli/index.md
+	
+	{: .topicgroup}
+	Enlaces relacionados
+	    [bx tool](http://clis.ng.bluemix.net/ui/home.html)
+	{: .navgroup-end}
+	
+	{: .navgroup id="reference"}
+	reference/bluemix_cli/bx_cli.md
+	reference/cfcommands/index.md
+	reference/cloudcli/index.md
+	
+	{: .topicgroup}
+	Plugins de CLI de Bluemix CLI
+	        plugins/auto-scaling/index.md
+		plugins/registry/index.md
+		[Servicio de contenedor (clústeres)](../containers/cs_cli_devtools.html)
+		[Servicio de contenedor (grupos escalables e individual)](../containers/container_cli_cfic.html)
+		[IBM Developer](../cloudnative/dev_cli.html)		plugins/pnp/index.md
+		[IBM SDK Generator](../cloudnative/sdk_cli.html)
+		plugins/softlayer/index.md
+		plugins/bx_vpn/index.md
+	
+	{: .topicgroup}
+	Plugins de interfaz de línea de mandatos de Cloud Foundry
+		plugins/bluemix_admin/index.md
+		plugins/dev_mode/index.md
+		plugins/vpn/index.md
+	
+	{: .topicgroup}
+	Herramientas de desarrollo integrado
+		[Kit de herramientas del desarrollador de API Connect](../services/apiconnect/apic_tutorial.html?pos=2#creating_api)
+		[Bluemix Live Sync](../develop/bluemixlive.html)
+		[Despliegue de apps con IBM Eclipse Tools for Bluemix](../manageapps/eclipsetools/eclipsetools.html)
+		[Gestión de apps de Liberty y Node.js](../manageapps/app_mng.html#app_management)
+	{: .navgroup-end}
+	
+	{: .navgroup id="howto"}
+	[Desarrollo con Eclipse Tools](../starters/deploy_eclipsetools.html)
+	[Despliegue de aplicaciones con la interfaz de línea de mandatos](../starters/install_cli.html)
+	[Carga de una app](../starters/upload_app.html)
+	{: .navgroup-end}

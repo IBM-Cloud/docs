@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -26,6 +26,13 @@ lastupdated: "2017-01-11"
 {: #ee_start}
 
 始める前に、[https://console.ng.bluemix.net/ ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://console.ng.bluemix.net/){: new_window} から登録を行って IBM ID を取得する必要があります。その後、{{site.data.keyword.Bluemix_notm}} にログインし、30 日間の無料トライアルを開始します。{{site.data.keyword.Bluemix_notm}} の無料トライアルでは、2 GB のランタイム・メモリーと 10 個のサービス・インスタンスを使用できます。
+
+
+## ツールチェーンおよび {{site.data.keyword.contdelivery_short}} サービスを使用したアプリの開発およびデプロイ
+{: #ee_cd}
+
+{{site.data.keyword.contdelivery_full}} サービスをアプリに組み込む <a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">ツールチェーンを追加します</a>。次に、<a href="docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">ツールチェーンを使用して</a>、アプリを開発しデプロイします。
+
 
 ## {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用した Web アプリの作成
 {: #ee_appui}
@@ -180,8 +187,8 @@ cf bind-service TestNode cloudant100
 
   例えば、Node.js アプリはこの情報に次のようにアクセスします。
   ```
-if (process.env.VCAP_SERVICES) {
-var env = JSON.parse(process.env.VCAP_SERVICES);
+  if (process.env.VCAP_SERVICES) {
+        var env = JSON.parse(process.env.VCAP_SERVICES);
         var cloudant = env['cloudantNoSQLDB'][0].credentials;
   } else {
         var cloudant = {

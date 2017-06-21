@@ -1,7 +1,8 @@
 ---
+
 copyright:
-  years: 2016
-lastupdated: "2016-12-09"
+  years: 2016,2017
+lastupdated: "2017-04-27"
 ---
 
 {:new_window: target="_blank"}
@@ -10,7 +11,7 @@ lastupdated: "2016-12-09"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# {{site.data.keyword.composeForPostgreSQL}} の概説
+# Compose for PostgreSQL の概説
 {: #getting-started-with-compose-for-postgreSQL}
 
 {{site.data.keyword.composeForPostgreSQL}} は、高度にカスタマイズ可能な、強力なオープン・ソースのオブジェクト関係データベースです。Postgres を使用すると、迅速で拡張が容易な開発が可能になります。C/C++、Perl、Python、TCL/TK、Delphi/Kylix、VB、PHP、ASP、Java など、使い慣れた言語で開発できます。JSON をサポートする機能が豊富なエンタープライズ・データベースを使用できるので、SQL と NoSQL の両領域のメリットが得られます。
@@ -26,32 +27,6 @@ Compose for PostgreSQL の使用を開始するには、以下の手順を実行
 
 2. {{site.data.keyword.composeForPostgreSQL}} サービスに接続します。
 
-  アプリケーションをサービスに接続するには、サービスと共に作成された資格情報を使用します。サンプル・アプリケーションでは、Node.js を使用して {{site.data.keyword.composeForPostgreSQL}} サービスに接続する方法を示します。
+  アプリケーションをサービスに接続するには、サービスと共に作成された[資格情報](./credentials.html)を使用します。サンプル・アプリケーションでは、Node.js を使用して {{site.data.keyword.composeForPostgreSQL}} サービスに接続する方法を示します。
 
   [compose-postgresql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-postgresql-helloworld-nodejs) サンプル・アプリケーションをダウンロードし、README ファイル内の指示に従ってください。そして、Bluemix 内のアプリケーション詳細ページで、**「アプリの表示 (View APP)」**をクリックして *examples* 表の内容を表示します。
-
-## 使用可能な資格情報
-
-フィールド名|説明
-----------|-----------
-`uri`|サービスに接続するときに使用する URI。スキーマ (`postgres:`)、管理者ユーザー名とパスワード、サーバーのホスト名、接続先のポート番号、データベース名、SSL 接続を有効にする "?ssl=true" が含まれます。
-`uri_cli`|データベース・インスタンスに接続する `psql` シェル・コマンド・ライン。
-`ca_certificate_base64`|アプリケーションが適切なサーバーに接続されていることを確認するために使用する自己署名証明書。これは base64 でエンコードされています。サンプル・アプリケーションで示されているように、鍵をデコードした後に使用する必要があります。
-`deployment_id`|Compose 内で作成された、サービスの内部 ID。
-`db_type`|サービスによって提供されるデータベースのタイプ。この場合は、`postgresql`。
-`name`|データベース・デプロイメント名。
-{: caption="Table 1. {{site.data.keyword.composeForPostgreSQL}} credentials" caption-side="top"}
-
-# 関連リンク
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Compose の記事](https://www.compose.com/articles/){:new_window}
-
-## チュートリアルとサンプル
-{: #samples}
-* [compose-postgresql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-postgresql-helloworld-nodejs){:new_window}
-
-## 関連リンク
-{: #general}
-* [Compose のヘルプ](https://help.compose.com/docs){:new_window}

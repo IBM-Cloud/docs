@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -375,7 +375,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-Para obtener información sobre el modelo de solicitud y de respuesta y códigos de estado HTTP, consulte la sección Configuración de la organización de la [{{site.data.keyword.iot_short_notm}} API ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Para obtener información sobre el modelo de solicitud y de respuesta y códigos de estado HTTP, consulte la sección Configuración de la organización de la [{{site.data.keyword.iot_short_notm}} API ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
 
 ## Operaciones masivas de dispositivos
@@ -383,7 +383,7 @@ Para obtener información sobre el modelo de solicitud y de respuesta y códigos
 
 Sus aplicaciones pueden utilizar operaciones masivas para obtener, añadir o eliminar varios dispositivos simultáneamente.
 
-Para obtener información sobre la lista de parámetros de consulta, el modelo de solicitud y respuesta y códigos de estado HTTP, consulte la sección 'Operaciones masivas' de la [{{site.data.keyword.iot_short_notm}} API ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/){: new_window}.
+Para obtener información sobre la lista de parámetros de consulta, el modelo de solicitud y respuesta y códigos de estado HTTP, consulte la sección 'Operaciones masivas' de la [{{site.data.keyword.iot_short_notm}} API ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
 
 ### Recuperación de información de dispositivo
@@ -600,7 +600,7 @@ except IoTFCReSTException as e:
 Las operaciones de dispositivo que están disponibles en la API incluyen el listado, la adición, la eliminación, la visualización, la actualización, la visualización de ubicación y la visualización de información de gestión de dispositivos en una organización
 de {{site.data.keyword.iot_short_notm}}.
 
-Para obtener información sobre los parámetros de consulta, el modelo de solicitud y de respuesta y los códigos de estado HTTP, consulte la sección 'Tipos de dispositivos' de la API de [{{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Para obtener información sobre los parámetros de consulta, el modelo de solicitud y de respuesta y los códigos de estado HTTP, consulte la sección 'Tipos de dispositivos' de la [documentación de la API de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
 ### Recuperación de dispositivos de un determinado tipo de dispositivo
@@ -753,7 +753,7 @@ Utilice las operaciones de diagnóstico de dispositivos para implementar las sig
 - Recuperación de códigos de error de dispositivos
 - Adición de códigos de error
 
-Para obtener más información sobre los modelos de consulta y de respuesta, los códigos de respuesta y los parámetros de consulta, consulte la documentación de la API [ ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} {{site.data.keyword.iot_short_notm}}.
+Para obtener más información sobre los modelos de consulta y de respuesta, los códigos de respuesta y los parámetros de consulta, consulte la [documentación de la API de {{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Obtener los registros de diagnóstico
 

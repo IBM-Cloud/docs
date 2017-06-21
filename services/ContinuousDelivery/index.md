@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-5-19"
 
 ---
 
@@ -22,14 +22,38 @@ After you create an instance of {{site.data.keyword.contdelivery_short}} by sele
  * To create and configure a continuous delivery toolchain from a template, in the "Starting from a toolchain template" section, click **[Start here](#starting_from_a_toolchain_template)**. The toolchain integrates tools for planning, developing, deploying pipelines, and managing your applications. You can always add or remove tools from your toolchains.
  * If you already have toolchains, in the "Starting from a toolchain template" section, click **View your toolchains**. For more information about working with toolchains, see [Using toolchains](/docs/services/ContinuousDelivery/toolchains_using.html){: new_window}.
 
-**Tip**: Pipelines are managed by toolchains. You can add a pipeline to an existing toolchain. If you create a pipeline and don't have any existing toolchains, a toolchain with a default name will be created for you. With the toolchain, you can expand the capabilities of your pipeline by integrating with other tools and services.
+**Tip**: Pipelines are managed by toolchains. You can add a pipeline to an existing toolchain. If you create a pipeline and don't have any existing toolchains, a toolchain with a default name is created for you. With the toolchain, you can expand the capabilities of your pipeline by integrating with other tools and services.
+
+##{{site.data.keyword.contdelivery_short}} overview
+{: #cd_overview}
+
+With {{site.data.keyword.contdelivery_short}}, you can build, test, and deliver applications by using DevOps practices and industry-leading tools.
+{:shortdesc}
+
+The {{site.data.keyword.contdelivery_short}} service supports your DevOps workflows:
+
+ * You can create integrated DevOps open [toolchains](/docs/services/ContinuousDelivery/toolchains_about.html){: new_window} to enable tool integrations that support your development, deployment, and operations tasks.
+
+  A toolchain is an integrated set of tools that you can use to collaboratively develop, build, deploy, test, and manage applications and make operations repeatable and easier to manage. Toolchains can include open source tools, {{site.data.keyword.Bluemix_notm}} services, such as [{{site.data.keyword.DRA_full}}](/docs/services/ContinuousDelivery/di_working.html){: new_window}, and third-party tools, such as GitHub, PagerDuty, and Slack. 
+
+ * Deliver continuously by using automated [pipelines](/docs/services/ContinuousDelivery/pipeline_about.html){: new_window}.
+
+  Automate builds, unit tests, deployments, and more. Build, test, and deploy in a repeatable way with minimal human intervention. Be ready to release into production at any time.
+
+ * Edit and push your code from anywhere by using the [web-based IDE](/docs/services/ContinuousDelivery/web_ide.html){: new_window}.
+
+  Create, edit, run, and debug, and complete source-control tasks in GitHub. Seemlessly move from editing your code to deploying it to production. 
+  
+ * Collaborate with your team and manage your source code with a [Git repository (repos) and issue tracker](/docs/services/ContinuousDelivery/git_working.html#git_working){: new_window} that is hosted by IBM and built on GitLab Community Edition.
+
+  Manage Git repos through fine-grained access controls that keep code secure. Review code and enhance collaboration through merge requests. Track issues and share ideas through the issue tracker. Document projects on the wiki system.
 
 ##Starting with a pipeline
 {: #starting_with_a_pipeline}
 
 Pipelines automate builds, deployments, and more. To get started with an automated pipeline, select a template and provide the location of your GitHub repository (repo).
 
-To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){:new_window} that is configured to deploy a Cloud Foundry application, follow these steps:
+To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/pipelines/dashboard/create){:new_window} that is configured to deploy a Cloud Foundry application, follow these steps:
 
 1. Click **Cloud Foundry**.
 1. If you want to use a different name for the pipeline, change its default name. The pipeline's name identifies it in {{site.data.keyword.Bluemix_notm}}.
@@ -57,7 +81,7 @@ To [create a pipeline ![External link icon](../../icons/launch-glyph.svg "Extern
 1. Click **Create**. The pipeline is created, configured, and displayed on the toolchain's Overview page.
  ![Pipeline card](images/cd_pipeline.png)
 
-To create an [empty pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} without any preconfigured stages:
+To create an [empty pipeline ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/pipelines/dashboard/create){: new_window} without any preconfigured stages:
 
 1. Click **Custom**.
 1. If you want to use a different name for the pipeline, change its default name. The pipeline's name identifies it in {{site.data.keyword.Bluemix_notm}}.
@@ -68,7 +92,7 @@ To create an [empty pipeline ![External link icon](../../icons/launch-glyph.svg 
 ##Starting from a toolchain template
 {: #starting_from_a_toolchain_template}
 
-To create and configure a continuous delivery toolchain from a [template ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/devops/create){: new_window}:
+To create and configure a continuous delivery toolchain from a [template ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/devops/create){: new_window}:
 
 1. On the **Create a Toolchain** page, click a toolchain template.  
 1. Review the diagram of the toolchain that you are about to create. The diagram shows each tool integration in its lifecycle phase in the toolchain.

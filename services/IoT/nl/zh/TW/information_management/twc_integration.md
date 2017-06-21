@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -22,10 +22,10 @@ The Weather Company 整合可讓您將天氣資料與現有 {{site.data.keyword.
 
 **重要事項：**只有受管理裝置才能設定自己的位置。所有未受管理裝置都必須使用 API 手動設定其位置。如需設定裝置位置的相關資訊，請參閱[更新位置要求](../../devices/device_mgmt/index.html#update-location)。
 
-### The Weather Company 的 REST API
+## The Weather Company 的 REST API
 若要存取 The Weather Company 的 REST API，請參閱 [{{site.data.keyword.iot_short_notm}} HTTP REST API ![外部鏈結圖示](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window} 文件中的「裝置位置天氣」小節。
 
-### 檢視天氣資料
+## 檢視天氣資料
 
 若要檢視針對裝置位置所擷取的天氣資料，請執行下列動作：
 1. 在**裝置**窗格中按一下該裝置。

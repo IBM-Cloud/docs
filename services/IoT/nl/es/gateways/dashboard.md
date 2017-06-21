@@ -128,11 +128,11 @@ Edge Analytics Agent (EAA) es un componente de software creado en la parte super
 Para instalar EAA en la pasarela:
 1. En el panel de control de {{site.data.keyword.iot_short}}, vaya a **Reglas**.
 2. Pulse **Descargar Edge Agent** para ir a la [Comunidad de IBM Edge Analytics ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){:new_window}.
-3. Vaya a la sección **Archivos** y descargue los directorios comprimidos adecuados para el tipo de pasarela.   
+3. Vaya a la sección **Archivos** y descargue los directorios comprimidos adecuados para el tipo de pasarela.  
 La solución Edge Analytics está disponible como SDK para dispositivos que dan soporte a Java o como DSLink para dispositivos de pasarela Cisco.
 4. Para obtener información sobre cómo instalar y configurar el componente de software EAA en la pasarela, consulte la siguiente información:
  - SDK  
-Consulte el PDF, el archivo readme y los enlaces de vídeo disponibles en la comunidad.  
+ Consulte el PDF, el archivo readme y los enlaces de vídeo disponibles en la comunidad.  
  Receta [Edge Recipe for SDK - Iniciación (SDK) ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/tutorials/getting-started-with-the-ibm-edge-analytics-sdk-in-watson-iot-platform/){:new_window}.
  - DSLink  
  Receta [Iniciación a Edge Analytics en Watson IoT Platform ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/recipes/?post_type=pnext_tutorial&p=19472){:new_window}.

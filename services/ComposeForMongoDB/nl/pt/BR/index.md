@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-09"
+  years: 2016,2017
+lastupdated: "2017-04-27"
 ---
 
 {:new_window: target="_blank"}
@@ -45,44 +45,10 @@ serviço é provisionado.  Os diversos valores de credenciais são listados na s
 
 2. Conecte-se ao seu serviço do {{site.data.keyword.composeForMongoDB}}.
 
-   Para conectar um app ao seu serviço, use as credenciais que são criadas com o
-serviço. O app de amostra demonstra como usar o Node.js para se conectar a um serviço do
+   Para conectar um app ao seu serviço, use as [credenciais](./credentials.html) que são criadas com o serviço. O app de amostra demonstra como usar o Node.js para se conectar a um serviço do
 {{site.data.keyword.composeForMongoDB}}.
 
    Faça download do app de amostra
 [compose-mongodb-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mongodb-helloworld-nodejs)
 e siga as instruções no arquivo leia-me. Em seguida, na página de detalhes de seu aplicativo
 no Bluemix, clique em **Visualizar APP**.
-
-
-## Credenciais disponíveis
-
-Campo de nome|Descrição
-----------|-----------
-`uri`|O URI a ser usado na conexão com o serviço. `uri`
-inclui o esquema (`mongodb:`), o nome do usuário
-administrativo e a senha, o nome do host do servidor, o número da porta à qual se
-conectar, o nome do banco de dados e `?ssl=true` para ativar conexões
-SSL.
-`uri_cli`|Uma linha de comando shell `mongo` que se conecta à instância de banco de dados.
-`ca_certificate_base64`|Um certificado autoassinado que é usado para
-confirmar se um app está se conectando ao servidor apropriado. O certificado é codificado
-em base64. Deve-se decodificar a chave antes de usá-la, conforme
-mostrado no aplicativo de amostra. `deployment_id`|Um identificador interno para o serviço conforme criado no Compose.
-`db_type`|O tipo de banco de dados que é oferecido pelo serviço: nesse caso, `mongodb`.
-`name`|O nome da implementação do banco de dados.
-{: caption="Table 1. {{site.data.keyword.composeForMongoDB}} credentials" caption-side="top"}
-
-# Links Relacionados
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Artigos do Compose](https://www.compose.com/articles/){:new_window}
-
-## Tutoriais e amostras
-{: #samples}
-* [compose-mongodb-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mongodb-helloworld-nodejs){:new_window}
-
-## Links Relacionados
-{: #general}
-* [Ajuda do Compose](https://help.compose.com/docs){:new_window}

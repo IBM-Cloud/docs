@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -37,17 +37,7 @@ Para ver los registros en los que está interesado o para excluir el contenido q
 * Para ver las entradas de los registros de una app Cloud Foundry que contienen palabras clave específicas, consulte [Visualización de entradas de registro que contienen determinadas palabras clave](logging_view_cli.html#partial_by_keyword_log_cli).
 
 
-## Análisis de registros del contenedor Docker desde la CLI
-{: #analyzing_container_logs_cli}
-
-Utilice el mandato `cf ic logs` para visualizar los registros de un contenedor en {{site.data.keyword.Bluemix_notm}}. Por ejemplo, puede utilizar los registros para analizar por qué un contenedor se ha detenido o para revisar la salida del contenedor.  
-
-Para ver errores de aplicación correspondientes a la app que se ejecuta en un contenedor mediante el mandato `cf ic logs`, la aplicación debe grabar sus registros en las secuencias de salida estándar (STDOUT) y de error estándar (STDERR). Si diseña la aplicación para que grabe en estas secuencias de salida estándar, podrá ver los registros a través de la línea de mandatos aunque el contenedor se haya concluido o se haya colgado. 
-
-Para obtener más información sobre el mandato `cf ic logs`, consulte [Mandato cf ic logs](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs).
-
-
-## Visualización del registro de una app Cloud Foundry
+### Visualización del registro de una app Cloud Foundry
 {: #full_log_cli}
 
 Para ver todos los registros disponibles de una app Cloud Foundry, siga estos pasos:
@@ -59,7 +49,7 @@ Para ver todos los registros disponibles de una app Cloud Foundry, siga estos pa
    <pre class="pre screen"><code>cf logs <var class="keyword varname">nombreapp</var></code></pre>
    
    
-## Visualización de las últimas entradas de registro de una app Cloud Foundry
+### Visualización de las últimas entradas de registro de una app Cloud Foundry
 {: #tailing_log_cli}
 
 Para ver los registros más recientes disponibles para una app Cloud Foundry, siga los pasos siguientes:
@@ -76,7 +66,7 @@ logs appname --recent</samp> en otra ventana de línea de mandatos para ver los
 registros en tiempo real. </div>
 
 
-## Visualización de una sección de un registro Cloud Foundry
+### Visualización de una sección de un registro Cloud Foundry
 {: #partial_log_cli}
 
 Para ver una parte de los registros disponibles para una app Cloud Foundry correspondientes a un determinado periodo de tiempo, siga los pasos siguientes:
@@ -90,7 +80,7 @@ Para ver una parte de los registros disponibles para una app Cloud Foundry corre
     Para obtener más información sobre la opción **cut**, escriba **cut --help**.
 
 
-## Visualización de las entradas de registro que contienen determinadas palabras clave
+### Visualización de las entradas de registro que contienen determinadas palabras clave
 {: #partial_by_keyword_log_cli}
 
 Para visualizar las entradas de registro que contienen determinadas palabras clave de una app Cloud Foundry, siga estos pasos:
@@ -110,7 +100,7 @@ Por ejemplo, para visualizar las entradas de registro que contienen la palabra c
 Para obtener más información sobre la opción **grep**, escriba **grep --help**.
 
 
-## Registros de aplicación de Cloud Foundry
+### Registros de aplicación de Cloud Foundry
 {: #cf_app_logs_cli}
 
 Dispone de los siguientes registros de una aplicación Cloud Foundry después de desplegarla en {{site.data.keyword.Bluemix}}:
@@ -121,9 +111,7 @@ Este archivo de registro registra sucesos informativos detallados para la depura
 
 Para generar datos en el archivo *buildpack.log* debe habilitar el rastreo del paquete de compilación mediante el mandato siguiente: `cf set-env appname JBP_LOG_LEVEL DEBUG`
    
-   
 Para ver este registro, ejecute el siguiente mandato: `cf files appname app/.buildpack-diagnostics/buildpack.log`
-
 
 
 **staging_task.log**
@@ -133,8 +121,15 @@ Este archivo de registro registra mensajes después de los principales pasos de 
 Para ver este registro, ejecute el siguiente mandato: `cf files appname logs/staging_task.log`
 
 
-
 **Nota:** Para obtener información sobre cómo habilitar el registro de aplicación, consulte [Depuración de errores de tiempo de ejecución](/docs/debug/index.html#debugging-runtime-errors).
 
+## Análisis de registros del contenedor Docker desde la CLI
+{: #analyzing_container_logs_cli}
+
+Utilice el mandato `cf ic logs` para visualizar los registros de un contenedor en {{site.data.keyword.Bluemix_notm}}. Por ejemplo, puede utilizar los registros para analizar por qué un contenedor se ha detenido o para revisar la salida del contenedor. 
+
+Para ver errores de aplicación correspondientes a la app que se ejecuta en un contenedor mediante el mandato `cf ic logs`, la aplicación debe grabar sus registros en las secuencias de salida estándar (STDOUT) y de error estándar (STDERR). Si diseña la aplicación para que grabe en estas secuencias de salida estándar, podrá ver los registros a través de la línea de mandatos aunque el contenedor se haya concluido o se haya colgado.
+
+Para obtener más información sobre el mandato `cf ic logs`, consulte [Mandato cf ic logs](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs).
 
 

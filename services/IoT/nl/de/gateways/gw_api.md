@@ -36,18 +36,20 @@ Alle Anforderungen müssen einen Berechtigungsheader enthalten. Die Basisauthent
 |Benutzername| `g/{orgId}/{gwType}/{gwDevId}`
 |Kennwort| Das Authentifizierungstoken, das beim Registrieren des Gateway-Geräts entweder automatisch generiert oder manuell angegeben wurde.
 
-
 Dabei gilt:
 
-**_orgId_**   
-- Ist der Name der Organisation und muss mit dem im Host-Header angegebenen Namen übereinstimmen.
+<dl>
+<dt>orgId</dt>  
+<dd>Der Name der Organisation, der mit dem im Host-Header angegebenen Namen übereinstimmen muss.</dd>
 
-**_gwType_**
-- Ist der Typ von Gateway.
+<p></p>
+<dt>gwType</dt>  
+<dd>Der Typ von Gateway. </dd>
+<p></p>
+<dt>gwDevId</dt>  
+<dd>Die Gerätekennung des Gateways. </dd>
+</dl>
 
-**_gwDevId_**
-
-- Ist die Gerätekennung des Gateways.
 
 ### Anforderungsheader des Typs 'Content-Type'
 

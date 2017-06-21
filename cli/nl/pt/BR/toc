@@ -6,7 +6,7 @@ Ferramentas CLI e de desenvolvimento
 
 	{: .navgroup id="learn"}
 	index.md
-	[Introdução à CLI do CF](https://github.com/cloudfoundry/cli#getting-started)
+	[Introdução à CLI CF](https://github.com/cloudfoundry/cli#getting-started)
 	reference/bluemix_cli/index.md
 	
 	{: .topicgroup}
@@ -21,11 +21,10 @@ Ferramentas CLI e de desenvolvimento
 	
 	{: .topicgroup}
 	Plug-ins da CLI do Bluemix
-		[Active Deploy](../services/ActiveDeploy/cli.html?pos=2#ad-cli-bx)
-		plugins/auto-scaling/index.md
+	        plugins/auto-scaling/index.md
 		plugins/registry/index.md
-		[Container Service (clusters)](../containers/cs_cli_devtools.html)
-		[Container Service (grupos únicos e escaláveis)](../containers/container_cli_cfic.html)
+		[Serviço de contêiner (Clusters)](../containers/cs_cli_devtools.html)
+		[Serviço de contêiner (Grupos únicos e escaláveis)](../containers/container_cli_cfic.html)
 		[IBM Developer](../cloudnative/dev_cli.html)
 		plugins/pnp/index.md
 		[IBM SDK Generator](../cloudnative/sdk_cli.html)

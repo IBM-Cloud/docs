@@ -1,0 +1,34 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="schematics" audience="compute" href="/docs/services/schematics/index.html"}
+IBM Cloud Schematics
+
+    {: .navgroup id="learn"}
+    index.md
+    schematics_overview.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [CLI plug-in](schematics_reference.html)
+    [REST API](https://us-south.schematics.bluemix.net/swagger-api/)
+    [Resources](https://ibm-bluemix.github.io/tf-ibm-docs/)
+
+    {: .topicgroup}
+    Related links
+        [Video: Tell me about Schematics](https://youtu.be/wVmhTTa44f4)
+        [Blog: Codifying the cloud](https://medium.com/@kelner/ibm-cloud-schematics-6e0f11374edf)
+        [Infrastructure as code: Terraform](https://www.terraform.io)
+        [Multi-cloud service: Cloud Automation Manager](https://console.ng.bluemix.net/docs/services/CloudAutomationManager/index.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    schematics_deploying.md
+    schematics_managing.md
+    schematics_destroying.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    ts_index.md
+    schematics_faq.md
+    {: .navgroup-end}

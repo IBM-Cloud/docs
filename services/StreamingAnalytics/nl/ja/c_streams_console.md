@@ -2,18 +2,18 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
 
-#{{site.data.keyword.streaminganalyticsshort}} コンソール
+# {{site.data.keyword.streaminganalyticsshort}} コンソール
 {: #console}
 
 {{site.data.keyword.streaminganalyticsshort}} コンソール上で、{{site.data.keyword.streamsshort}} アプリケーションを直接 {{site.data.keyword.streaminganalyticsshort}} サービス・インスタンスにサブミットすることができます。
@@ -28,3 +28,5 @@ lastupdated: "2017-02-09"
 * ユーザーが定義した環境変数に基づくインスタンス・ログの表示
 
 サービス・ダッシュボードから {{site.data.keyword.streaminganalyticsshort}} コンソールにアクセスできます。
+
+<!--The {{site.data.keyword.streaminganalyticsshort}} console is translated into the following languages: Brazilian Portuguese, French, German, Italian, Japanese, Korean, Simplified Chinese, Spanish, Traditional Chinese. Change the language setting in your browser to view the console in your preferred language. -->

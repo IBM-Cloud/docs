@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-08"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -36,6 +36,7 @@ lastupdated: "2017-03-08"
 | Metric (メトリック) | ヒット数、または数値フィールドの平均を表示する場合に使用します。 |
 | Pie chart (円グラフ) | 1 つのフィールドの各値を表示する場合に使用します。 | 
 | Vertical bar chart (垂直棒グラフ) | 時間ベースのデータおよび時間ベースでないデータが表示されます。データをグループ化する場合に使用します。 |
+{: caption="表 1. 視覚化タイプ" caption-side="top"}
 
 「Visualize」ページで、以下の任意のタスクを実行できます。
 
@@ -48,6 +49,7 @@ lastupdated: "2017-03-08"
 | [視覚化のエクスポート](logging_kibana_visualizations.html#logging_kibana_visualizations_export) | 視覚化を JSON ファイルとしてエクスポートできます。  |
 | [視覚化のインポート](logging_kibana_visualizations.html#logging_kibana_visualizations_import) | 視覚化を JSON ファイルとしてインポートできます。  |
 | [視覚化の共有](logging_kibana_visualizations.html#logging_kibana_visualizations_share) | HTML ソースまたは Kibana ダッシュボードで視覚化を共有できます。  |
+{: caption="表 2. 視覚化を操作するタスク" caption-side="top"}
 
 
 ## Kibana での照会からの視覚化の作成
@@ -85,28 +87,6 @@ lastupdated: "2017-03-08"
 8. データを分解するためのサブバケットを追加します。
 
 Kibana について詳しくは、「[Kibana User Guide ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}」を参照してください。
- 
-## 視覚化の保存
-{:#logging_kibana_visualizations_save}
-
-「Visualize」ページで視覚化を保存するには、以下のステップを実行します。
-
-1. 「Visualize」ページのツールバーで、**「Save Visualization」**ボタン ![視覚化の保存](images/k4_visualization_save_icon.jpg "視覚化の保存") をクリックします。
-
-2. 視覚化の名前を入力します。
-
-3. 「保存」をクリックします。 
-
-## 視覚化のロード
-{:#logging_kibana_visualizations_reload}
-
-保存済み視覚化をロードするには、以下のステップを実行します。
-
-1. 「Visualize」ページのツールバーで**「Load Saved Visualization」**ボタン ![保存済み視覚化のロード](images/k4_visualization_open_icon.jpg "保存済み視覚化のロード") をクリックします。
-
-2. ロードする視覚化を選択します。 
-
-
 
 ## 視覚化の削除
 {:#logging_kibana_visualizations_delete}
@@ -145,6 +125,30 @@ Kibana について詳しくは、「[Kibana User Guide ![外部リンク・ア�
 3. ファイルを選択し、**「Open」**をクリックします。
 
 視覚化が視覚化のリストに追加されます。
+
+
+ 
+## 視覚化のロード
+{:#logging_kibana_visualizations_reload}
+
+保存済み視覚化をロードするには、以下のステップを実行します。
+
+1. 「Visualize」ページのツールバーで**「Load Saved Visualization」**ボタン ![保存済み視覚化のロード](images/k4_visualization_open_icon.jpg "保存済み視覚化のロード") をクリックします。
+
+2. ロードする視覚化を選択します。 
+
+
+## 視覚化の保存
+{:#logging_kibana_visualizations_save}
+
+「Visualize」ページで視覚化を保存するには、以下のステップを実行します。
+
+1. 「Visualize」ページのツールバーで、**「Save Visualization」**ボタン ![視覚化の保存](images/k4_visualization_save_icon.jpg "視覚化の保存") をクリックします。
+
+2. 視覚化の名前を入力します。
+
+3. 「保存」をクリックします。 
+
 
 
 ## 視覚化の共有

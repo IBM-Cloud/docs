@@ -129,7 +129,7 @@ Gehen Sie wie folgt vor, um den Edge Analytics-Agenten in Ihrem Gateway zu insta
 1. Wechseln Sie im {{site.data.keyword.iot_short}}-Dashboard zu **Regeln**.
 2. Klicken Sie auf **Edge-Agenten herunterladen**, um zur [IBM Edge Analytics-Community ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=3df173af-0c21-4b9c-9fd1-e8e5561ef460&ftHelpTip=true){:new_window} zu wechseln.
 3. Navigieren Sie zum Abschnitt **Dateien** und laden Sie die passenden komprimierten Verzeichnisse für Ihren Typ von Gateway herunter.  
-Die Edge Analytics-Lösung ist als SDK für Geräte, die Java unterstützen, oder als DSLink für Cisco-Gateway-Einheiten verfügbar. 
+Die Edge Analytics-Lösung ist als SDK für Geräte, die Java unterstützen, oder als DSLink für Cisco-Gateway-Einheiten verfügbar.
 4. Informationen zur Vorgehensweise, wie die EAA-Softwarekomponente in Ihrem Gateway installiert und konfiguriert wird, finden Sie in den folgenden Informationen:
  - SDK  
  Lesen Sie die PDF- und Readme-Dateien und sehen Sie sich die verlinkten Videos an, die in der Community verfügbar sind.  

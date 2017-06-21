@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 用于 {{site.data.keyword.iot_short}} 开发的客户机库
+# 用于 {{site.data.keyword.iot_short_notm}} 开发的客户机库
 {: #iot_platform_client_lib}
 
 客户机库提供工具和文件来构建和开发代码，从而在 {{site.data.keyword.iot_full}} 上集成和连接设备及应用程序。
@@ -38,7 +38,7 @@ lastupdated: "2017-03-13"
 - [更多文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-embeddedc/blob/master/README.md){:new_window}
 
 
-## Java™
+## Java
 - [客户机库 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-java){:new_window}
 - [样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-java#samples){:new_window}
 - [更多文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-java/blob/master/README.md){:new_window}
@@ -65,7 +65,7 @@ lastupdated: "2017-03-13"
 - [样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples){:new_window}
 - [更多文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/ibm-watson-iot/iot-python/blob/master/README.rst){:new_window}
 
-## {{site.data.keyword.iot_short}} 开发入门
+## {{site.data.keyword.iot_short_notm}} 开发入门
 
 要使用可用客户机库开始开发 {{site.data.keyword.iot_short_notm}} 的代码，请参阅 {{site.data.keyword.Bluemix_notm}} 文档的以下部分：
 

@@ -14,7 +14,7 @@ lastupdated: "2017-03-06"
 {:screen: .screen}
 
 
-# 取得協助和支援
+# 取得記載的協助和支援
 {: #gettinghelp}
 
 如果您在使用 {{site.data.keyword.Bluemix}} 中的記載功能時有問題或疑問，可以檢查 {{site.data.keyword.Bluemix_notm}}，或搜尋資訊或透過討論區提問來取得協助。您也可以開啟支援問題單。

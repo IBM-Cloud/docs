@@ -54,10 +54,15 @@
 		"img": "homepage/images/WhatIsBluemix-icon.svg",
 		"href": "overview/whatisbluemix.html"
     }, {
-		"title": "アカウントのセットアップ",
-		"description": "プロファイルの更新、アカウントと消費量の通知の設定、チーム・メンバーの招待、または組織とスペースの管理を行います。",
+		"title": " アカウントの管理",
+		"description": "プロファイルの更新、アカウントと消費量の通知の設定、または組織とスペースの管理を行います。",
 		"img": "homepage/images/admin.svg",
 		"href": "admin/adminpublic.html"
+	}, {
+		"title": " ID およびアクセス権限の管理",
+		"description": "ユーザー・アクセスの管理、またはチーム・メンバーの招待を行います。",
+		"img": "homepage/images/admin.svg",
+		"href": "iam/iamusermanage.html"
 	}, {
 		"title": "CLI と開発ツール",
 		"description": "統合コマンド・ライン・インターフェースおよび CLI プラグインなどのツールにアクセスできます。",
@@ -66,7 +71,7 @@
 	}, {
 		"title": "サービス可用性",
 		"description": "サービス・タイプと可用性について説明します。",
-		"href": "services/index.html"
+		"href": "services/services_region.html"
 	}, {
 		"title": "アプリの管理",
 		"description": "Bluemix ユーザー・インターフェースのダッシュボードを使用して、アプリケーションおよびサービスの表示と管理を行うことができます。",
@@ -78,6 +83,9 @@
 		"img": "homepage/images/monitor_log.svg",
 		"href": "monitor_log/monitoringandlogging.html"
 	}, {
+		"title": "API の管理",
+		"href": "apis/management/index.html"
+	}, {
 		"title": "Bluemix のセキュリティー",
 		"description": "機能、インフラストラクチャー、運用のセキュリティーと、物理的セキュリティーを Bluemix がどのように提供するのかを理解できます。",
 		"img": "homepage/images/platform_security.svg",
@@ -88,7 +96,7 @@
 		"img": "homepage/images/hybrid.svg",
 		"href": "hybrid/index.html"
 	}, {
-		"title": "料金",
+		"title": "請求および使用量の管理",
 		"description": "計算器を使用してコストを見積もることができ、使用量詳細ビューで実際のコストを確認することができます。",
 		"img": "homepage/images/pricing.svg",
 		"href": "pricing/index.html"

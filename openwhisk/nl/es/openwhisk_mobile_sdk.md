@@ -3,7 +3,7 @@
 
 OpenWhisk proporciona un SDK móvil para dispositivos iOS y watchOS que permite a las apps activar
 fácilmente desencadenantes remotos e invocar acciones remotas. Actualmente no hay disponible una versión para Android;
-los desarrolladores de Android pueden utilizar directamente la API REST de OpenWhisk. 
+los desarrolladores de Android pueden utilizar directamente la API REST de OpenWhisk.
 
 El SDK móvil se escribe en Swift 3.0 y admite iOS 10 y releases posteriores. Puede crear el SDK móvil utilizando Xcode 8.0. Las versiones existentes Swift 2.2/Xcode 7 del SDK están disponibles hasta la 0.1.7, aunque ahora esté en desuso.
 
@@ -32,7 +32,7 @@ En la línea de mandatos, escriba `pod install`. Este mandato instala el SDK par
 
 Después de la instalación, abra el espacio de trabajo del proyecto.  Es posible que obtenga el siguiente aviso al construir:
 `Use Legacy Swift Language Version” (SWIFT_VERSION) es necesario que esté configurado correctamente para destinos que utilizan Swift. Utilice el menú [Editar > Convertir > A Current Swift Syntax…] para elegir una versión de Swift o utilizar el editor de Crear configuración para configurar los valores de compilación directamente.`
-Esto se produce si Cocoapods no actualiza la versión de Swift en el proyecto de Pods.  Para solucionar, seleccione el proyecto de Pods y el destino de OpenWhisk. Vaya a Crear configuración y cambie el valor `Use Legacy Swift Language Version` a `no`. Como alternativa, puede añadir las siguientes instrucciones posteriores a la instalación al final del Podfile:
+Esto se produce si Cocoapods no actualiza la versión de Swift en el proyecto de Pods.  Para solucionar, seleccione el proyecto de Pods y el destino de OpenWhisk.  Vaya a Crear configuración y cambie el valor `Use Legacy Swift Language Version` a `no`. Como alternativa, puede añadir las siguientes instrucciones posteriores a la instalación al final del Podfile:
 
 ```
 post_install do |installer|
@@ -67,7 +67,7 @@ para los destinos que necesite y añada las infraestructuras resultantes a su ap
 ## Instalación del ejemplo de app starter
 
 A utilizar la CLI de OpenWhisk para descargar código de ejemplo que incluya la infraestructura de
-SDK de OpenWhisk.   
+SDK de OpenWhisk.  
 
 Para instalar el ejemplo de app starter, especifique el mandato siguiente:
 ```
@@ -254,7 +254,7 @@ do {
    try whiskButtonSelfContained.setupWhiskAction("mypackage/helloConsole", credentials: credentialsConfiguration!, hasResult: false, parameters: nil, urlSession: nil)
    whiskButtonSelfContained.actionButtonCallback = { reply, error in
       if let error = error {
-       print("Oh no, error: \(error)")
+           print("Oh no, error: \(error)")
        } else {
            print("Success: \(reply)")
        }

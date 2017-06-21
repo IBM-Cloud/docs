@@ -3,11 +3,11 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-17"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -42,9 +42,11 @@ API do                     | Use para...
 ------------- | -------------
 [Administração da organização ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | Configurar uma organização (incluindo a criação e exclusão de dispositivos), verificar o uso, o status de serviço e diagnosticar problemas de conexão de dispositivo.
 [Segurança ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | Gerenciar convites do usuário e autenticação, além de autorização de usuários, chaves API e dispositivos.
-[Information Management ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  Acessar dados do evento de dispositivo, bem como obter e atualizar a localização do dispositivo e obter informações do clima para esse local.
+[Information Management ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  Acessar dados do evento de dispositivo, bem como obter e atualizar a localização do dispositivo e obter informações do clima para esse local. 
+**Nota:** as informações meteorológicas dependem da integração de dados da The Weather Company.
+[A Weather Company ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html#!/Device_Location_Weather){: new_window} | Integrar dados da The Weather Company aos dispositivos existentes.
 [Gerenciamento de dispositivo ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | Interagir com dispositivos gerenciados usando o protocolo de gerenciamento de dispositivo.
-[Sistema de mensagens ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | Publicar eventos e enviar comandos usando HTTP. **Nota:** para APIs de sistema de mensagens, use o endereço *https://<**orgId**>.messaging.internetofthings.ibmcloud.com/api/v0002*
+[Sistema de mensagens ![Ícone de link externo](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | Publicar eventos e enviar comandos usando HTTP.
 
 
 

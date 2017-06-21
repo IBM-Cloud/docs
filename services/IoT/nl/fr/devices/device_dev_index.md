@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-03"
 
 ---
 
@@ -23,7 +23,7 @@ Les terminaux publient des données sur {{site.data.keyword.iot_short_notm}} à 
 Pour plus d'informations sur les concepts clés, y compris les terminaux, voir [Concepts importants dans Watson IoT Platform](https://console.ng.bluemix.net/docs/services/IoT/iotplatform_overview.html#watsoniotplatform_importantconcepts).
 
 
-# Connexion de votre terminal à {{site.data.keyword.iot_short_notm}}
+## Connexion de votre terminal à {{site.data.keyword.iot_short_notm}}
 {: #device_connect}
 Vous pouvez connecter votre terminal à {{site.data.keyword.iot_short_notm}} à l'aide des protocoles HTTP ou MQTT. Utilisez HTTP si vous souhaitez configurer un scénario de question-réponse, comme lorsqu'une personne effectue un achat et reçoit un accusé de réception. Utilisez MQTT si vous souhaitez configurer un scénario d'événement, comme lorsqu'une personne sonne à une porte et déclenche une alerte dans un terminal mobile.
 
@@ -34,7 +34,7 @@ Si vous souhaitez connecter votre terminal sans l'enregistrer, par exemple, pour
 Pour plus d'informations sur la connexion de votre terminal à {{site.data.keyword.iot_short_notm}} à l'aide du protocole HTTP, voir [API REST HTTP pour les terminaux](https://console.ng.bluemix.net/docs/services/IoT/devices/api.html).
 Pour plus d'informations sur la connexion de votre terminal à {{site.data.keyword.iot_short_notm}} à l'aide du protocole MQTT, voir [Connectivité MQTT pour les terminaux](https://console.ng.bluemix.net/docs/services/IoT/devices/mqtt.html).
 
-# Initiation au développement de terminaux
+## Initiation au développement de terminaux
 {: #get_started}
 Si vous possédez un terminal déjà activé pour {{site.data.keyword.iot_short_notm}}, vous pouvez commencer à l'utiliser.
 
@@ -54,7 +54,7 @@ Pour plus d'informations et pour accéder à des liens vers les guides de progra
 
 Si vous ne trouvez pas le guide de programmation {{site.data.keyword.iot_short_notm}} qui vous convient, vous pouvez écrire votre propre programme et utiliser le protocole MQTT ou HTTP pour connecter votre terminal à {{site.data.keyword.iot_short_notm}}.
 
-MQTT est une norme ouverte gérée par les normes OASIS reconnues par l'ISO. Pour plus d'informations, voir[OASIS Message Queuing Telemetry Transport ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt){: new_window}.
+MQTT est une norme ouverte gérée par les normes OASIS reconnues par l'ISO. Pour plus d'informations, voir [OASIS Message Queuing Telemetry Transport ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=mqtt){: new_window}.
 
 Une grande variété de bibliothèques client MQTT est disponible pour de nombreux systèmes, y compris les environnements suivants :
 - http://www.eclipse.org/paho/

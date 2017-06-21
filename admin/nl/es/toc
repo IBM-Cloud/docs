@@ -1,15 +1,28 @@
-{: .toc}
-Cloud Foundry Apps  
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
 
-    [Setting up your account](/docs/admin/adminpublic.html)
+{: .toc subcollection="bluemix-account" audience="platform" href="/docs/admin/adminpublic.html"}
+Gestión de la cuenta
+
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    Configuración de la cuenta
         adminpublic.md
         profile.md
-        account.md
-        iamuserinv.md
-        iamusermanage.md
-        users_roles.md
-        orgs_spaces.md
-        apikeys.md
-        patterns.md
-        softlayerlink.md
     
+    softlayerlink.md
+
+    {: .topicgroup}
+    Organizaciones
+        orgs_spaces.md
+        manageorg.md
+        
+    notifications.md
+    {: .navgroup-end}
+
+    {: .navgroup id="learn"}
+    {: .topicgroup}  
+    Prácticas recomendadas
+        patterns.md
+        
+    {: .navgroup-end}

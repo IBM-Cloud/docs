@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-01-09"
+lastupdated: "2017-03-29"
 
 
 ---
@@ -15,38 +15,17 @@ lastupdated: "2017-01-09"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-<!-- staging only content beginning -->
+# Bluemix への登録
 
-# アカウントのセットアップ
-{: #account}
+{{site.data.keyword.Bluemix}} アカウントの登録には、既存の IBM ID を使用するか、新規 IBM ID を作成するか、フェデレーテッド ID を使用することができます。フェデレーテッド ID は、IBM に登録済みの会社ドメイン内の ID で、これにより、ドメインとユーザーの資格情報を使用して IBM Web アプリケーションにアクセスできます。{:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} の登録が終わったので、次は、インフラストラクチャーのプロビジョニングやアプリケーションの作成に速やかに進めるように、アカウントをセットアップする必要があります。
-{:shortdesc}
+{{site.data.keyword.Bluemix_notm}} アカウントの登録には、既存の IBM ID を使用するか、新規 IBM ID を作成するか、フェデレーテッド ID を使用することができます。フェデレーテッド ID は、IBM に登録済みの会社ドメイン内の ID で、これにより、ドメインとユーザーの資格情報を使用して IBM Web アプリケーションにアクセスできます。  
 
-最初に {{site.data.keyword.Bluemix_notm}} の使用を開始したとき、アカウント・プロファイルをセットアップできます。これには、プロファイル・イメージのアップロードが含まれます。また、アカウントの組織およびスペースをセットアップしたり、チーム・メンバーを各組織およびスペースに招待したりすることもできます。 
+お客様の会社が IBM への登録作業を完了している場合にのみ、フェデレーテッド ID で {{site.data.keyword.Bluemix_notm}} にアカウント登録できます。会社のドメインを IBM に登録すると、会社の既存のユーザー資格情報で IBM の製品やサービスにログインできるようになります。認証は、お客様の会社の ID プロバイダーによって処理されます。フェデレーテッド ID で {{site.data.keyword.Bluemix_notm}} にログインすると、お客様の会社のログイン・ページを通じたログインを求められます。会社または組織のドメインを IBM に登録するための申請、またはこのプロセスの詳細については、[IBMid Enterprise Federation Adoption Guide ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://ibm.box.com/v/IBMid-Federation-Guide){: new_window} を参照してください。フェデレーテッド ID の登録を申請する際には、IBM のサポート役 (オファリング担当者やお客様担当者など) が必要です。
 
-メニュー・バーの**「アカウント」**リンクをクリックすることで、自分が所有している各アカウントの詳細を表示できます。この詳細には、関連する請求先情報、使用量情報、メンバーのチーム・ディレクトリー、各アカウントで所有または管理しているすべての組織などがあります。 
-
-{{site.data.keyword.Bluemix_notm}} Local または {{site.data.keyword.Bluemix_notm}} Dedicated の管理者の場合、「管理」ページを使用したアカウントの管理に関する詳細について、『[{{site.data.keyword.Bluemix_notm}} Local および {{site.data.keyword.Bluemix_notm}} Dedicated の管理](/docs/admin/index.html#mng)』を参照してください。
-
-さらに、通知を登録したり、サポート・オプションを確認してヘルプの取得場所を把握したり、IBM にフィードバックを提供したりすることもできます。  
-
-- **通知** 
-  
-  {{site.data.keyword.Bluemix_notm}} プラットフォームのパブリック領域に対する保守更新、関連サービス、インシデント、セキュリティー通知、およびその他の告知について通知を受け取るように登録します。[Bluemix 状況ページ ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://ibm.biz/Bluemixstatus){: new_window} にある RSS リンクをご使用の RSS フィード・リーダーに指定して、{{site.data.keyword.Bluemix_notm}} Public に対する変更について最新情報を継続的に得ることができます。通知の設定について詳しくは、『[Bluemix 状況の表示](/docs/support/index.html#viewing-bluemix-status)』を参照してください。
-
-- **サポート・オプション** 
-  
-  使用可能なサポート・オプションを確認して、問題が発生した場合にアクセスする場所および実行する内容を把握します。サポートの選択肢について詳しくは、『[お客様サポートの利用](/docs/support/index.html#getting-customer-support)』を参照してください。
-
-- **コーディングの開始** 
-  
-  初めてのアプリケーションを作成します。**「カタログ」**に移動し、開発で使用可能な各種計算およびサービスを確認し、またコーディングを迅速に開始できるようにするために使用可能なボイラープレートおよびサンプル・アプリケーションを確認します。
-
-- **{{site.data.keyword.Bluemix_notm}} に関するフィードバックの提供** 
-  
-  製品または資料についてフィードバックを提供できます。 
-  
-  {{site.data.keyword.Bluemix_notm}} およびサービスの改善に関するアイデアを送信するには、[IBM Cloud Ideas ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://ibmcloud.ideas.aha.io){: new_window} にアクセスしてください。新しいアイデアに関するこのポータルの使用方法について詳しくは、[Think, write, submit: New ideas portal for IBM Cloud ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/10/05/think-write-submit/){: new_window} を参照してください。 
-  
-  資料に関するフィードバックを提供するには、各ページ上の**「フィードバック (Feedback)」**リンクをクリックするか、タイトルの後にある**「GitHub での編集 (Edit in GitHub)」**リンクをクリックして IBM とコラボレーションしてください。資料に関するフィードバックの提供について詳しくは、[When it comes to docs, everyone can contribute in Bluemix ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/01/13/bluemix-docs-now-open-source-on-github/){: new_window} を参照してください。
+| 登録方法 | 詳細 |    
+|-----------------|---------|
+|既存の IBM ID | IBM ID を既にお持ちの場合は、IBM の他の製品やサービスに使用する既存の資格情報で {{site.data.keyword.Bluemix_notm}} に登録します。登録の際には、電話番号の入力が必要です。 |
+|新しい IBM ID | IBM ID をまだお持ちではない場合は、その作成を選択できます。IBM ID により、1 つのログイン・ユーザー名を、お客様が使用する IBM のすべての製品やサービス ({{site.data.keyword.Bluemix_notm}} を含む) に使用することが可能になります。氏名や電話番号などの個人情報と、新しい資格情報のパスワードの入力が必要です。IBM の他の製品やサービスを使用する際に、この IBM ID でログインできます。  |
+|フェデレーテッド ID | お客様の会社が、そのドメインのユーザー資格情報を IBM に登録するための申請を完了している場合は、会社のログインに既に使用している資格情報で {{site.data.keyword.Bluemix_notm}} へのアカウント登録を行えます。登録の際には、電話番号の入力が必要です。 |
+{:caption="表 1. 登録方法" caption-side="top"}

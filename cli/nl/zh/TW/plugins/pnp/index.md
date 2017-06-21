@@ -18,7 +18,7 @@ lastupdated: "2017-01-12"
 
 專用網路對等作業 CLI 外掛程式適用於 Windows、MAC 及 Linux 作業系統。請確定您是使用適用的外掛程式。
 
-開始之前，請建立 Bluemix 空間。請確定空間中的每一個容器都有不同網路的 IP 位址。如需詳細資料，請參閱[使用您自己的專用 IP 位址](https://www.{DomainName}/docs/containers/container_security_network.html#container_cli_ips_byoip)
+開始之前，請建立 Bluemix 空間。請確定空間中的每一個容器都有不同網路的 IP 位址。如需詳細資料，請參閱[使用您自己的專用 IP 位址](https://www.{DomainName}/docs/containers/container_security.html#container_cli_ips_byoip)
 
 **附註：**在您對 Bluemix 空間使用專用網路對等作業之後，如果需要刪除該空間，請先刪除該空間中的專用網路對等作業連線。
 

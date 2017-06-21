@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-20"
 
 ---
 
@@ -95,7 +95,7 @@ Cada pasarela y cada dispositivo conectado debe tener su propia definición de c
 ## Constructores ManagedGateway
 {: #construct_managed_gateway}
 
-`ManagedGateway` es una clase Java que conecta una pasarela con {{site.data.keyword.iot_short}} como pasarela gestionada que puede realizar al menos una operación de gestión de dispositivos para sí misma o para los dispositivos conectados. Una instancia `ManagedGateway` puede se puede utilizar para realizar operaciones normales de pasarela, como por ejemplo publicar sucesos de pasarela, adjuntar sucesos de dispositivo y escuchar mandatos procedentes de aplicaciones. La instancia `ManagedGateway` es un agente de gestión de dispositivos.
+`ManagedGateway` es una clase Java que conecta una pasarela con {{site.data.keyword.iot_short}} como pasarela gestionada que puede realizar al menos una operación de gestión de dispositivos para sí misma o para los dispositivos conectados. Una instancia `ManagedGateway` también se puede utilizar para realizar operaciones normales de pasarela, como por ejemplo publicar sucesos de pasarela, adjuntar sucesos de dispositivo y escuchar mandatos procedentes de aplicaciones. La instancia `ManagedGateway` es un agente de gestión de dispositivos.
 
 En la clase `ManagedGateway` dos constructores, Constructor One y Constructor Two, dan soporte a distintos patrones del usuario.
 
@@ -231,7 +231,7 @@ System.err.println("Failed to update the location!");
 
 ### Envío de actualizaciones de ubicación de dispositivo conectado
 
-La pasarela puede invocar el método de dispositivo `updateDeviceLocation()` correspondiente para actualizar la ubicación de los dispositivos conectados. El método sobrecargado se puede utilizar para especificar el método `measuredDateTime`.  
+La pasarela puede invocar el método de dispositivo `updateDeviceLocation()` correspondiente para actualizar la ubicación de los dispositivos conectados. El método sobrecargado se puede utilizar para especificar el método `measuredDateTime`.
 
 ```java
 // actualizar la ubicación del dispositivo conectado con latitud, longitud y elevación
@@ -338,7 +338,7 @@ DeviceFirmware firmware = new DeviceFirmware.Builder().
 			name("Firmware.name").
 			url("Firmware.url").
 			verifier("Firmware.verifier").
-			state(FirmwareState.IDLE).				
+			state(FirmwareState.IDLE).
 			build();
 
 DeviceData deviceData = new DeviceData.Builder().
@@ -406,15 +406,15 @@ En el ejemplo de código siguiente se muestra una implementación de descarga de
 ```java
 public void downloadFirmware(DeviceFirmware deviceFirmware) {
 	boolean success = false;
-    URL firmwareURL = null;
-    URLConnection urlConnection = null;
+	URL firmwareURL = null;
+	URLConnection urlConnection = null;
 
 	try {
 		firmwareURL = new URL(deviceFirmware.getUrl());
-        urlConnection = firmwareURL.openConnection();
-        if(deviceFirmware.getName() != null) {
+		urlConnection = firmwareURL.openConnection();
+		if(deviceFirmware.getName() != null) {
 			downloadedFirmwareName = deviceFirmware.getName();
-        } else {
+		} else {
 			// utilizar la indicación de fecha y hora como nombre
 			downloadedFirmwareName = "firmware_" +new Date().getTime()+".deb";
 		}
@@ -424,39 +424,39 @@ public void downloadFirmware(DeviceFirmware deviceFirmware) {
 		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file.getName()));
 
 		int data = bis.read();
-        if(data != -1) {
+		if(data != -1) {
 			bos.write(data);
-            byte[] block = new byte[1024];
-            while (true) {
+			byte[] block = new byte[1024];
+			while (true) {
 				int len = bis.read(block, 0, block.length);
-                if(len != -1) {
+				if(len != -1) {
 					bos.write(block, 0, len);
-                } else {
+				} else {
 					break;
-                }
+				}
 			}
-            bos.close();
-            bis.close();
-            success = true;
-        } else {
+			bos.close();
+			bis.close();
+			success = true;
+		} else {
 			//No hay datos para leer, por lo que se establece un error
-            deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.INVALID_URI);
-        }
+			deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.INVALID_URI);
+		}
 	} catch(MalformedURLException me) {
 		// URL no válido, por lo que establezca el estado para reflejar el mismo,
         deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.INVALID_URI);
     } catch (IOException e) {
 		deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.CONNECTION_LOST);
-    } catch (OutOfMemoryError oom) {
+	} catch (OutOfMemoryError oom) {
 		deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.OUT_OF_MEMORY);
-    }
+	}
 
-    if(success == true) {
+		if(success == true) {
 		deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.SUCCESS);
-        deviceFirmware.setState(FirmwareState.DOWNLOADED);
-    } else {
+		deviceFirmware.setState(FirmwareState.DOWNLOADED);
+	} else {
 		deviceFirmware.setState(FirmwareState.IDLE);
-    }
+	}
 }
 ```
 
@@ -470,25 +470,25 @@ Una pasarela gestionada puede comprobar la integridad de la imagen de firmware d
 ```java
 private boolean verifyFirmware(File file, String verifier) throws IOException {
 	FileInputStream fis = null;
-    String md5 = null;
-    try {
+	String md5 = null;
+	try {
 		fis = new FileInputStream(file);
-        md5 = org.apache.commons.codec.digest.DigestUtils.md5Hex(fis);
-        System.out.println("Downloaded Firmware MD5 sum:: "+ md5);
-    } catch (FileNotFoundException e) {
+		md5 = org.apache.commons.codec.digest.DigestUtils.md5Hex(fis);
+		System.out.println("Downloaded Firmware MD5 sum:: "+ md5);
+	} catch (FileNotFoundException e) {
 		e.printStackTrace();
-    } catch (IOException e) {
+	} catch (IOException e) {
 		e.printStackTrace();
-    } finally {
+	} finally {
 		fis.close();
-    }
-    if(verifier.equals(md5)) {
+	}
+	if(verifier.equals(md5)) {
 		System.out.println("Firmware verification successful");
 		return true;
 	}
 	System.out.println("Download firmware checksum verification failed."
 			+ "Expected "+verifier + " found "+md5);
-    return false;
+	return false;
 }
 ```
 
@@ -509,30 +509,30 @@ El ejemplo de código siguiente muestra cómo se puede implementar una actualiza
 public void updateFirmware(DeviceFirmware deviceFirmware) {
 	try {
 		ProcessBuilder pkgInstaller = null;
-        Process p = null;
-        pkgInstaller = new ProcessBuilder("sudo", "dpkg", "-i", downloadedFirmwareName);
-        boolean success = false;
-        try {
+		Process p = null;
+		pkgInstaller = new ProcessBuilder("sudo", "dpkg", "-i", downloadedFirmwareName);
+		boolean success = false;
+		try {
 			p = pkgInstaller.start();
-            boolean status = waitForCompletion(p, 5);
-            if(status == false) {
+			boolean status = waitForCompletion(p, 5);
+			if(status == false) {
 				p.destroy();
-                deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.UNSUPPORTED_IMAGE);
-                return;
-            }
-            System.out.println("Firmware Update command "+status);
-            deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.SUCCESS);
-            deviceFirmware.setState(FirmwareState.IDLE);
-        } catch (IOException e) {
+				deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.UNSUPPORTED_IMAGE);
+				return;
+			}
+			System.out.println("Firmware Update command "+status);
+			deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.SUCCESS);
+			deviceFirmware.setState(FirmwareState.IDLE);
+		} catch (IOException e) {
 			e.printStackTrace();
-            deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.UNSUPPORTED_IMAGE);
-        } catch (InterruptedException e) {
+			deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.UNSUPPORTED_IMAGE);
+		} catch (InterruptedException e) {
 			e.printStackTrace();
-            deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.UNSUPPORTED_IMAGE);
-        }
+			deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.UNSUPPORTED_IMAGE);
+		}
 	} catch (OutOfMemoryError oom) {
 		deviceFirmware.setUpdateStatus(FirmwareUpdateStatus.OUT_OF_MEMORY);
-    }
+	}
 }
 ```
 
@@ -601,10 +601,10 @@ La implementación debe crear una hebra separada y añadir lógica para reinicia
 ```java
 public void handleReboot(DeviceAction action) {
 	ProcessBuilder processBuilder = null;
-    Process p = null;
-    processBuilder = new ProcessBuilder("sudo", "shutdown", "-r", "now");
-    boolean status = false;
-    try {
+	Process p = null;
+	processBuilder = new ProcessBuilder("sudo", "shutdown", "-r", "now");
+	boolean status = false;
+	try {
 		p = processBuilder.start();
         // espere unos 2 minutos antes de abandonar
         status = waitForCompletion(p, 2);
@@ -649,6 +649,138 @@ mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
 Para obtener más información sobre las acciones de dispositivo, consulte [Solicitudes de gestión de dispositivos ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window}.
+
+## Paquetes de ampliación de gestión de dispositivos
+{: #dme}
+
+Un paquete de ampliación de gestión de dispositivos (DME) es un documento JSON que define al menos un conjunto de acciones de gestión de dispositivos. Las acciones se pueden iniciar en uno o varios dispositivos que den soporte a estas acciones. Las acciones se inician mediante el panel de control de {{site.data.keyword.iot_short}} o mediante las API REST de gestión de dispositivos. 
+
+Para obtener más información sobre formatos de paquetes DME, consulte [Ampliación de la gestión de dispositivos](../../devices/device_mgmt/custom_actions.html).
+
+### Soporte de acciones de gestión de dispositivos personalizada
+
+Las acciones de gestión de dispositivos definidas en un paquete de ampliación se pueden iniciar en una pasarela o en dispositivos conectados que den soporte a dichas acciones. 
+
+Un dispositivo especifica los tipos de acciones a las que da soporte cuando publica una solicitud de gestión en {{site.data.keyword.iot_short}}. Para permitir que un dispositivo reciba acciones personalizadas definidas en un determinado paquete de ampliación, el dispositivo debe especificar el identificador de paquete de dicha ampliación en el objeto de soporte cuando publique una solicitud de gestión. 
+
+La pasarela puede invocar la API `manage()` con la lista de los ID de paquete para informar a {{site.data.keyword.iot_short}} de que la pasarela o el dispositivo conectado dan soporte a las acciones DME para la lista proporcionada de ID de paquete que están en la solicitud de gestión. 
+
+Se utiliza el siguiente fragmento de código para publicar una solicitud de gestión para comunicar a {{site.data.keyword.iot_short}} que esta pasarela da soporte a una acción DME: 
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendGatewayManageRequest(0, false, false, bundleIds);
+```
+
+El último parámetro especifica la acción personalizada a la que da soporte el dispositivo. 
+
+De forma similar, una pasarela puede invocar el método de dispositivo correspondiente para comunicar el soporte de la acción DME a los dispositivos conectados: 
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendDeviceManageRequest(typeId, deviceId, 0, false, false, bundleIds);
+```
+
+### Manejo de acciones de gestión de dispositivos personalizada
+
+Cuando se inicia una acción personalizada en una pasarela o dispositivo conectado a {{site.data.keyword.iot_short}}, se publica un mensaje MQTT en la pasarela. El mensaje contiene los parámetros especificados como parte de la solicitud. La pasarela debe añadir un valor CustomActionHandler para recibir y procesar el mensaje. El mensaje se devuelve como una instancia de la clase `CustomAction` que tiene las siguientes propiedades:
+
+| Propiedad     | Tipos de datos     | Descripción |
+|----------------|----------------|----------------|
+|`bundleId` |Serie | Identificador exclusivo del DME. |
+|`actionId` |Serie|La acción personalizada de la que se crea una instancia. |
+|`typeId` |Serie|El tipo de dispositivo en el que se crea la instancia de la acción personalizada. |
+|`deviceId` |Serie|El dispositivo en el que se crea la instancia de la acción personalizada. |
+|`payload` |Serie|El mensaje real que contiene la lista de parámetros en formato JSON. |
+|`reqId` |Serie|El ID de solicitud utilizado para responder a la solicitud de la acción personalizada. |
+
+El código siguiente es una implementación de ejemplo de `CustomActionHandler`:
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.ibm.iotf.client.CustomAction;
+import com.ibm.iotf.client.CustomAction.Status;
+import com.ibm.iotf.devicemgmt.CustomActionHandler;
+
+public class MyCustomActionHandler extends CustomActionHandler implements Runnable {
+
+	// Una cola que contiene y procesa los mandatos para facilitar el manejo de mensajes MQTT
+	private BlockingQueue<CustomAction> queue = new LinkedBlockingQueue<CustomAction>();
+	// Una correlación que contiene el tiempo de intervalo de publicación para cada dispositivo
+	private Map<String, Long> intervalMap = new HashMap<String, Long>();
+
+	@Override
+	public void run() {
+		while(true) {
+			CustomAction action = null;
+			try {
+				action = queue.take();
+				System.out.println(" "+action.getActionId()+ " "+action.getPayload());
+				JsonArray fields = action.getPayload().get("d").getAsJsonObject().get("fields").getAsJsonArray();
+				for(JsonElement field : fields) {
+					JsonObject fieldObj = field.getAsJsonObject();
+					if("PublishInterval".equals(fieldObj.get("field").getAsString())) {
+						long val = fieldObj.get("value").getAsLong();
+						String key = action.getTypeId() + ":" + action.getDeviceId();
+						long publishInterval = val * 1000;
+						intervalMap.put(key, publishInterval);
+						System.out.println("Updated the publish interval to "+val);
+					}
+				}
+				action.setStatus(Status.OK);
+
+			} catch (InterruptedException e) {}
+		}
+	}
+
+	public long getPublishInterval(String deviceType, String deviceId) {
+		String key = deviceType + ":" + deviceId;
+		Long val = intervalMap.get(key);
+		if(val == null) {
+			return 1000; // el valor predeterminado es 1 segundo
+		} else {
+			return val.longValue();
+		}
+	}
+
+	@Override
+	public void handleCustomAction(CustomAction action) {
+		try {
+			queue.put(action);
+			} catch (InterruptedException e) {
+		}
+
+	}
+}
+```
+
+Cuando se añade `CustomActionHandler` a la instancia `ManagedGateway`, se invoca el método `handleCustomAction()` siempre que la aplicación inicia cualquier acción personalizada.
+
+En el ejemplo de código siguiente se muestra cómo añadir `CustomActionHandler` a la instancia `ManagedGateway`. 
+
+```java
+MyCustomActionHandler handler = new MyCustomActionHandler();
+mgdGateway.addCustomActionHandler(handler);
+```
+
+Cuando la pasarela recibe el mensaje de acción personalizada, la pasarela completa la acción o responde con un código de error que indica que no puede completar la acción. La pasarela debe utilizar el método *setStatus()* para definir el estado de la acción: 
+
+```java
+action.setStatus(Status.OK);
+```
+
+Para obtener más información sobre DME, consulte [Ampliación de solicitudes de gestión de dispositivos![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")](../../devices/device_mgmt/custom_actions.html){: new_window}.
 
 ## Escucha de los cambios de atributos de dispositivos
 {: #listen_device_attributes}

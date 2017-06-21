@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-22"
+lastupdated: "2017-06-01"
 
 ---
 
@@ -10,7 +10,7 @@ lastupdated: "2017-03-22"
 {:codeblock: .codeblock}
 
 
-# Automatic configuration of bound services
+# Configure bound services
 {: #auto_config}
 
 You can bind various services to your Liberty application. Services can be container-managed, application-managed, or both, depending on what the developer wants.
@@ -50,7 +50,7 @@ As noted, some services can be application managed, or container managed. Mongo 
 
 When you bind to a container managed service, the service might require Liberty features to be configured in the featureManager stanza in the server.xml file. The Liberty buildpack updates the featureManager stanza and installs the required supporting binaries. If the service requires client driver jars, the jars are downloaded to a well-known location in the Liberty install.
 
-See the documentation for the bound service type for more details.
+See the [Opting out of service auto-configuration](#opting_out) section for more details about the bound service types.
 
 ## Generating or updating server.xml configuration stanzas
 {: #generating_or_updating_serverxml}

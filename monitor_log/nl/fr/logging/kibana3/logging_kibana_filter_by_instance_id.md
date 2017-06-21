@@ -55,11 +55,11 @@ Procédez comme suit pour afficher et filtrer vos journaux d'application Cloud F
 
 7. Ajoutez un filtre pour inclure ou exclure des informations concernant un ID d'instance d'application. 
 
-    * Pour ajouter un filtre incluant des informations sur un ID d'instance spécifique, cliquez sur l'icône en forme de **loupe** ![Icône en forme de loupe](images/logging_magnifying_glass.jpg "Icône en forme de loupe") dans la ligne instance_id du tableau.  
+    * Pour ajouter un filtre incluant des informations sur un ID d'instance spécifique, cliquez sur l'icône en forme de **loupe** ![Icône en forme de loupe](images/logging_magnifying_glass.jpg "Icône en forme de loupe") dans la ligne instance_id du tableau. 
 
     ![Condition de filtre incluant la zone instance_id](images/logging_instance_id_filter.jpg "Condition de filtre incluant la zone instance_id")
 
-     * Pour ajouter un filtre excluant des informations sur un ID d'instance spécifique, cliquez sur l'icône d'**exclusion** ![Icône d'exclusion](images/logging_exclusion_icon.png "Icône d'exclusion") dans la ligne instance_id du tableau.  
+     * Pour ajouter un filtre excluant des informations sur un ID d'instance spécifique, cliquez sur l'icône d'**exclusion** ![Icône d'exclusion](images/logging_exclusion_icon.png "Icône d'exclusion") dans la ligne instance_id du tableau. 
     
            ![Condition de filtre excluant un ID d'instance](images/logging_application_instance_id_exclude_filter.jpg "Condition de filtre excluant un ID d'instance")
     
@@ -71,4 +71,4 @@ Procédez comme suit pour afficher et filtrer vos journaux d'application Cloud F
 
     ![Sauvegarde d'un nom de tableau de bord](images/logging_save_dashboard.jpg "Sauvegarde d'un nom de tableau de bord").
 
-Vous avez créé un tableau de bord qui filtre vos entrées de journal par ID d'instance. Vous pouvez charger votre tableau de bord sauvegardé à tout moment en cliquant sur l'icône de **dossier** ![Icône de dossier](images/logging_folder.jpg "Icône de dossier") et en sélectionnant votre tableau de bord par nom.  
+Vous avez créé un tableau de bord qui filtre vos entrées de journal par ID d'instance. Vous pouvez charger votre tableau de bord sauvegardé à tout moment en cliquant sur l'icône de **dossier** ![Icône de dossier](images/logging_folder.jpg "Icône de dossier") et en sélectionnant votre tableau de bord par nom. 

@@ -14,7 +14,8 @@ lastupdated: "2017-03-15"
 
 
 # Usando o aplicativo iniciador
-Crie dispositivos simulados no app iniciador do {{site.data.keyword.iotelectronics_full}}. Experimente como um fabricante corporativo pode monitorar dispositivos conectados ao {{site.data.keyword.iot_short_notm}}. Interaja manualmente com o dispositivo simulado para acionar alertas, notificações e ações.
+Crie dispositivos simulados no aplicativo iniciador {{site.data.keyword.iotelectronics_full}}. Experimente como um fabricante corporativo pode monitorar dispositivos que estão conectados ao
+{{site.data.keyword.iot_short_notm}}. Interaja manualmente com o dispositivo simulado para acionar alertas, notificações e ações.
 {:shortdesc}
 
 

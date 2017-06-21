@@ -7,7 +7,6 @@ lastupdated: "2017-02-27"
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -111,7 +110,6 @@ lastupdated: "2017-02-27"
 
 2. パラメーターを指定せずにアクションを起動します。
 
-
   ```
   wsk action invoke --blocking --result /whisk.system/samples/greeting
   ```
@@ -125,7 +123,6 @@ lastupdated: "2017-02-27"
   パラメーターが指定されなかったため、出力は汎用メッセージです。
 
 3. パラメーターを指定してアクションを起動します。
-
 
   ```
   wsk action invoke --blocking --result /whisk.system/samples/greeting --param name Mork --param place Ork
@@ -240,7 +237,6 @@ lastupdated: "2017-02-27"
   - `trigger_payload`: 各トリガー・イベントに設定するペイロード・パラメーター値。
 
 2. 8 秒ごとに発生するトリガーを作成します。
-
 
   ```
   wsk trigger create everyEightSeconds --feed /whisk.system/alarms/alarm -p cron "*/8 * * * * *" -p trigger_payload "{\"name\":\"Mork\", \"place\":\"Ork\"}"

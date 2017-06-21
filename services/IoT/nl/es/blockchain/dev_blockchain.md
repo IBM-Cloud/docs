@@ -13,7 +13,7 @@ lastupdated: "2017-03-14"
 {:pre: .pre}
 
 
-# Desarrollo de contratos inteligentes para la integración de blockchain de {{site.data.keyword.iot_short_notm}}
+# Desarrollo de contratos inteligentes de blockchain
 {: #iotblockchain_link}
 
 Utilice {{site.data.keyword.blockchainfull}} y el entorno de desarrollo de Hyperledger para crear y probar sus propios contratos inteligentes que derivan de contratos de ejemplo proporcionados por IBM.
@@ -238,7 +238,7 @@ Para descargar los contratos de ejemplo:
 
   </ul>
   3. Despliegue el contrato en el igual.  
-Para obtener más información sobre la llamada de despliegue, consulte la [documentación de la API POST/chaincode ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#chaincode){: new_window}.  
+  Para obtener más información sobre la llamada de despliegue, consulte la [documentación de la API POST/chaincode ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/hyperledger/fabric/blob/v0.6/docs/API/CoreAPI.md#chaincode){: new_window}.  
   Utilice la siguiente información al desplegar:  
   <ul>
   <li>URL: `http://api_host:api_port_tls/chaincode`
@@ -298,7 +298,7 @@ Para obtener más información sobre la llamada de despliegue, consulte la [docu
     <li>  Temperatura: float64  
     <li>  Transportista: serie   
     </ul>  
-Para obtener más información sobre cómo correlacionar datos de dispositivos en contratos, consulte el [Ejemplo de correlación de datos ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example){: new_window} en la wiki de ejemplos de IoT Blockchain en GitHub.
+    Para obtener más información sobre cómo correlacionar datos de dispositivos en contratos, consulte el [Ejemplo de correlación de datos ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/ibm-watson-iot/blockchain-samples/wiki/Data-mapping-example){: new_window} en la wiki de ejemplos de IoT Blockchain en GitHub.
    12. En la página de resumen, verifique que la información es correcta.
    13. Los datos de dispositivos para la correlación de contrato se muestran en la página Blockchain.
 

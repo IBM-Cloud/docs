@@ -1,0 +1,28 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="DevOpsInsights" audience="service" href="/docs/services/DevOpsInsights/index.html"}
+IBM Cloud DevOps Insights
+
+  {: .navgroup id="learn"}
+    index.md
+    about_risk.md
+    about_team.md
+    about_dev.md
+    about_delivery.md
+
+  {: .topicgroup}
+    相關鏈結
+        [關於工具鏈](../ContinuousDelivery/toolchains_about.html)
+        [開始使用 Delivery Pipeline](../DeliveryPipeline/index.html)
+        [IBM Cloud Garage Method 上的 IBM Cloud DevOps Insights](https://www.ibm.com/devops/method/content/learn/tool_devops_insights/)
+  {: .navgroup-end}
+
+  {: .navgroup id="howto"}
+    risk_cd.md
+    jenkins_pipeline.md
+    risk_jenkins.md
+    uc_insights_connect_ucd.md
+    risk_policies.md
+    results.md
+  {: .navgroup-end}

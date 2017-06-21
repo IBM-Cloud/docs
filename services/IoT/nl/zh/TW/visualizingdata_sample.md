@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-06-29"
+lastupdated: "2017-03-20"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2016-06-29"
 
 - 向 {{site.data.keyword.iot_short_notm}} 組織登錄裝置。
 - 確定裝置將事件傳送至 {{site.data.keyword.iot_short_notm}}。
-- 從 Github 儲存庫[下載視覺化範例](https://github.com/ibm-messaging/iot-visualization/archive/v0.2.0.zip)，並解壓縮 .zip 檔。
+- 從 Github 儲存庫[下載視覺化範例](https://github.com/ibm-watson-iot/rickshaw4iot/archive/master.zip)，並解壓縮 .zip 檔。
 - 從 {{site.data.keyword.Bluemix_notm}} [安裝 cf 指令行工具](../../starters/install_cli.html)。
 
 ## 在 {{site.data.keyword.Bluemix_notm}} 中執行範例
@@ -106,13 +106,4 @@ http://<your_application_name>.mybluemix.net
 
 裝置事件會傳遞至 `realtimeGraph.js` 檔案，以繪製圖形。
 
-## 自訂歷程資料顯示畫面
-{: #customize_historical_display}
-
-包含歷程裝置資料之圖形視覺化程式碼的目錄為 `public/js/historian`。若要自訂圖形邏輯，可以編輯 `public/js/historian/historianGraph.js`。
-
-控制 ReST API 呼叫來收集歷程裝置資料的檔案為 `public/js/historian/historian.js`。
-
-歷程資料會傳遞至 `historianGraph.js` 檔案，以繪製圖形。
-
-如需更詳細的開發人員指引，請造訪 Github iot-visualization Wiki。
+如需更詳細的開發人員指引，請造訪 [GitHub Wiki ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-watson-iot/rickshaw4iot/wiki){:new_window}。

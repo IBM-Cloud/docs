@@ -2,10 +2,10 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -20,6 +20,7 @@ lastupdated: "2017-02-09"
 {:shortdesc}
 
 ##Internet Toolkit
+{: #internet notoc}
 
 Internet Toolkit (com.ibm.streamsx.inet) 支援一般網際網路通訊協定。此工具箱內嵌在 {{site.data.keyword.streamsshort}} 中，也提供於 {{site.data.keyword.streamsshort}} 開發環境中。
 
@@ -46,6 +47,7 @@ Internet Toolkit (com.ibm.streamsx.inet) 支援一般網際網路通訊協定。
 您可以從 [GitHub 上的 IBM Streams](https://github.com/IBMStreams){:new_window} 下載工具箱的新版本（含加強功能和其他運算子）。下載工具箱之後，請建置它（必要的話），並在 {{site.data.keyword.streamsshort}} 開發環境上安裝它。
 
 ##IoT Integration Toolkit
+{: #iot notoc}
 
 IoT Integration Toolkit (com.ibm.streamsx.iot) 提供與 {{site.data.keyword.iot_full}} 的連線功能。{{site.data.keyword.streamsshort}} 應用程式可以使用此工具箱，針對可能來自數千個裝置的所有事件（包括根據分析將指令傳送至特定裝置）提供即時分析。
 
@@ -70,8 +72,9 @@ IoT Integration Toolkit (com.ibm.streamsx.iot) 提供與 {{site.data.keyword.iot
 如需 IoT Integration Toolkit 相容運算子的相關資訊，請參閱 {{site.data.keyword.streamsshort}} 產品文件中的 [Operators: com.ibm.streamsx.iot Toolkit](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.toolkits.doc/spldoc/dita/tk$com.ibm.streamsx.iot/ix$Operator.html?lang=en){:new_window}。
 
 ##Messaging Toolkit
+{: #messaging notoc}
 
-Messaging Toolkit (com.ibm.streamsx.messaging) 專案是開放程式碼 {{site.data.keyword.streamsshort}} 工具箱專案。著重在開發運算子和函數，以協助您使用 {{site.data.keyword.streamsshort}} 與傳訊系統（例如 Kafka、JMS、XMS 和 MQTT）互動。 
+Messaging Toolkit (com.ibm.streamsx.messaging) 專案是開放程式碼 {{site.data.keyword.streamsshort}} 工具箱專案。著重在開發運算子和函數，以協助您使用 {{site.data.keyword.streamsshort}} 與傳訊系統（例如 Kafka、JMS、XMS 和 MQTT）互動。
 
 此工具箱內嵌在 {{site.data.keyword.streamsshort}} 中，也提供於 {{site.data.keyword.streamsshort}} 開發環境中。
 
@@ -94,7 +97,7 @@ Messaging Toolkit (com.ibm.streamsx.messaging) 專案是開放程式碼 {{site.d
 
 如需工具箱限制的相關資訊，請參閱 [Restrictions for the {{site.data.keyword.streamsshort}} specialized toolkits](http://www.ibm.com/support/knowledgecenter/SSCRJU_4.2.0/com.ibm.streams.install.doc/doc/ibminfospherestreams-install-toolkit-restrictions.html){:new_window}。
 
-**附註**：若要搭配使用 JMSSource、JMSSink、XMSSource、XMSSink 與 WebSphere MQ，請在開發環境中完成下列必要步驟： 
+**附註**：若要搭配使用 JMSSource、JMSSink、XMSSource、XMSSink 與 WebSphere MQ，請在開發環境中完成下列必要步驟：
 
 1. 移至 [GitHub 上的 IBMStreams](https://github.com/IBMStreams){:new_window}，並在開發環境中下載 Messaging Toolkit (com.ibm.streamsx.messaging) 3.0.0 版或更新版本。
 2. 使用 5.1.0 版或更新版本的工具箱來建置您的應用程式。

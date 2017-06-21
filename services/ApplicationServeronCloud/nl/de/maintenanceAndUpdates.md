@@ -1,8 +1,8 @@
 ---
 
-Copyright:
-  Jahre: 2015, 2016
-Letzte Aktualisierung: 28.10.2016
+copyright:
+  years: 2015, 2016
+lastupdated: "2017-02-24"
 
 ---
 
@@ -16,7 +16,7 @@ Letzte Aktualisierung: 28.10.2016
 ## Wartungsstrategie
 {: #maintenance_strategy}
 
-IBM WebSphere Application Server for Bluemix wird regelmäßig aktualisiert, sodass sichergestellt ist, dass die neuen Serviceinstanzen mit aktuellen Fixpacks und Patches erstellt werden. Die Cloud bietet eine einfache und schnelle Bereitstellung neuer Serviceinstanzen für das Middleware-Management. Es wird erwartet, dass viele Nutzer ein Upgrade auf eine neue Serviceinstanz durchführen, wenn sie eine Wartung durchführen möchten. Für Nutzer, die langfristigere Serviceinstanzen beibehalten möchten, stehen Wartungsrepositorys für die Middleware und die zugrunde liegende Betriebsgastmaschine zur Verfügung. Mit diesen Repositorys können Benutzer ihre Umgebung so warten, wie sie es lokal tun würden.
+IBM WebSphere Application Server in Bluemix wird regelmäßig aktualisiert, sodass sichergestellt ist, dass die neuen Serviceinstanzen mit aktuellen Fixpacks und Patches erstellt werden. Die Cloud bietet eine einfache und schnelle Bereitstellung neuer Serviceinstanzen für das Middleware-Management. Es wird erwartet, dass viele Nutzer ein Upgrade auf eine neue Serviceinstanz durchführen, wenn sie eine Wartung durchführen möchten. Für Nutzer, die langfristigere Serviceinstanzen beibehalten möchten, stehen Wartungsrepositorys für die Middleware und die zugrunde liegende Betriebsgastmaschine zur Verfügung. Mit diesen Repositorys können Benutzer ihre Umgebung so warten, wie sie es lokal tun würden.
 
 ## VM-Aktualisierungen
 

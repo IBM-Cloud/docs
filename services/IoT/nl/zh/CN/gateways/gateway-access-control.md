@@ -2,16 +2,18 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-20"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
 
-# 网关访问控制 (Beta)
-
-**重要信息**：此功能目前作为受限 Beta 版的一部分提供。
+# 网关访问控制
+{: #gateway-access-control}
 
 网关设备有权代表其他设备执行操作。网关资源组定义每个网关可以代表组织内的哪些设备执行操作。可以向网关分配*标准网关*角色。标准网关只能代表其资源组中的设备来发布或预订消息。
 {: #shortdesc}
@@ -30,7 +32,7 @@ lastupdated: "2017-03-16"
 PUT /authorization/devices/{deviceId}/roles
 ```
 
-有关请求模式的详细信息，请参阅 [{{site.data.keyword.iot_full}} API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}。
+有关请求模式的详细信息，请参阅 [{{site.data.keyword.iot_full}} Limited Gateway API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_authorization_devices_deviceId_roles){: new_window}。
 
 ## 向资源组添加设备以及从资源组中除去设备
 {: #devices_groups}
@@ -41,7 +43,7 @@ PUT /authorization/devices/{deviceId}/roles
  PUT /bulk/devices/{groupId}/add
 ```
 
-要向其添加设备的组必须在请求路径中指定，并且要添加的设备必须在请求主体中指定。有关请求模式和响应的更多信息，请参阅 [{{site.data.keyword.iot_short_notm}} API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}。
+要向其添加设备的组必须在请求路径中指定，并且要添加的设备必须在请求主体中指定。有关请求模式和响应的更多信息，请参阅 [{{site.data.keyword.iot_short_notm}} Limited Gateway API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_add){: new_window}。
 
 要从资源组中除去多个设备，请使用以下 API：
 
@@ -49,7 +51,7 @@ PUT /authorization/devices/{deviceId}/roles
 PUT /bulk/devices/{groupId}/remove
 ```
 
-在请求主体中指定的设备将从请求路径中指定的组中除去。有关请求模式和响应的更多信息，请参阅 [{{site.data.keyword.iot_short_notm}} API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}。
+在请求主体中指定的设备将从请求路径中指定的组中除去。有关请求模式和响应的更多信息，请参阅 [{{site.data.keyword.iot_short_notm}} Limited Gateway API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/put_bulk_devices_groupId_remove){: new_window}。
 
 ## 查找资源组
 {: #finding_groups}
@@ -68,7 +70,7 @@ GET /groups
 GET /authorization/devices/{deviceId}
 ```
 
-此 API 将返回此设备所属的资源组的唯一标识。有关此 API 的更多信息位于 [{{site.data.keyword.iot_short_notm}} API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window} 中。
+此 API 将返回此设备所属的资源组的唯一标识。有关此 API 的更多信息位于 [{{site.data.keyword.iot_short_notm}} Limited Gateway API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_authorization_devices_deviceId){: new_window} 中。
 
 
 ## 查询资源组
@@ -82,7 +84,7 @@ GET /authorization/devices/{deviceId}
 GET /bulk/devices/{groupId}
 ```
 
-此 API 将返回指定资源组的所有成员的完整属性列表。有关请求模式、响应以及如何逐页浏览结果的更多信息，请参阅 [{{site.data.keyword.iot_short_notm}} API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window}。
+此 API 将返回指定资源组的所有成员的完整属性列表。有关请求模式、响应以及如何逐页浏览结果的更多信息，请参阅 [{{site.data.keyword.iot_short_notm}} Limited Gateway API 文档 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/security-gateway-beta.html#!/Limited_Gateway/get_bulk_devices_groupId){: new_window}。
 
 要仅返回资源组中成员的唯一标识，请使用以下 API：
 
@@ -131,7 +133,7 @@ DELETE /groups/{groupId}
 有多种方式可使用 API 来检索设备属性，每个 API 会返回不同的信息。要检索连接到您 {{site.data.keyword.iot_short_notm}} 组织的所有设备的设备属性，请使用以下 API：
 
 ```
-GET /authorization/devices:
+GET /authorization/devices
 
 ```
 
@@ -148,7 +150,7 @@ GET /authorization/devices/{deviceId}
 要检索特定设备的访问控制信息，请使用以下 API：
 
 ```
-GET /authorization/devices/{deviceId}/roles:
+GET /authorization/devices/{deviceId}/roles
 ```
 
 此 API 将检索指定设备的访问控制相关信息，而不返回其他设备属性。<!-- For more information on the request schema and responses, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->
@@ -166,7 +168,7 @@ PUT /authorization/devices/{deviceId}
 要仅更新指定设备的访问控制属性，请使用以下 API：
 
 ```
-PUT /authorization/devices/{deviceId}/withroles:
+PUT /authorization/devices/{deviceId}/withroles
 ```
 
 此 API 将仅更新指定设备的访问控制属性。<!-- For more information on the request schema, see the [{{site.data.keyword.iot_short_notm}} API documentation](LINK TO CORRECT API). -->

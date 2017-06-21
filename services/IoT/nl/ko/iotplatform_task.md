@@ -140,7 +140,6 @@ IoT 디바이스에서 데이터 수신을 시작하려면 {{site.data.keyword.i
 
 디바이스 연결에 대한 자세한 정보는 기술 문서에서 [디바이스용 MQTT 연결](devices/mqtt.html)을 참조하십시오.
 
-
 [조직 관리 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} API 문서에도 필수 정보가 포함되어 있습니다. 
 
 ## 디바이스 연결에 대한 레시피

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-07"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -51,7 +51,7 @@ Pour connecter l'application mobile à votre environnement et enregistrer vos ap
 
   ![Code Quick Response de connexion.](images/iot4e_mobile_connect_QR.svg "Code Quick Response de connexion {{site.data.keyword.iotelectronics}}")
 
-5. Sur votre périphérique mobile, entrez vos données d'identification. Votre ID utilisateur et votre mot de passe ne sont pas limités en longueur. Mémorisez vos données d'identification pour les sessions ultérieures. A présent, votre périphérique mobile est enregistré dans votre environnement {{site.data.keyword.iotelectronics}}, et vous pouvez enregistrer des appareils individuels.
+5. Sur votre périphérique mobile, connectez-vous, facultativement, en utilisant vos données d'identification Facebook ou Google+. Vous pouvez également ignorer le processus de connexion et essayer l'application sans vous connecter.
 
 6. Sur votre ordinateur, accédez à une machine à laver simulée et cliquez dessus pour afficher ses données et son code Quick Response d'appareil.
 

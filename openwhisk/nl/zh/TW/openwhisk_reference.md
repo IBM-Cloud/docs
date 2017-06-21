@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
+lastupdated: "2017-04-24"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock:.codeblock}
 {:screen:.screen}
 {:pre: .pre}
@@ -92,7 +91,7 @@ lastupdated: "2017-01-04"
 
 收到呼叫要求時，系統會記錄要求，並分派啟動。
 
-系統會傳回啟動 ID（如果是非封鎖呼叫），以確認收到呼叫。請注意，如果在您接收到 HTTP 回應之前發生網路失敗或其他干擾失敗，則 {{site.data.keyword.openwhisk_short}} 可能已接受並處理要求。
+系統會傳回啟動 ID（如果是非封鎖呼叫），以確認收到呼叫。請注意，如果在您收到 HTTP 回應之前發生網路失敗或其他干擾失敗，則 {{site.data.keyword.openwhisk_short}} 可能已接受並處理要求。
 
 系統嘗試呼叫該動作一次，而導致下列四種結果的其中一種：
 - *成功*：動作呼叫已順利完成。
@@ -230,7 +229,7 @@ function main(params) {
 ### JavaScript 運行環境
 {: #openwhisk_ref_javascript_environments}
 
-在 Node.js 6.9.1 版環境中，預設會執行 JavaScript 動作。如果在建立/更新動作時明確指定值為 'nodejs:6' 的 `--kind` 旗標，則 6.9.1 環境也會用於動作。
+在 Node.js 6.9.1 版環境中，依預設會執行 JavaScript 動作。如果在建立/更新動作時明確指定值為 'nodejs:6' 的 `--kind` 旗標，則 6.9.1 環境也會用於動作。
 下列套件適用於 Node.js 6.9.1 環境：
 
 - apn 2.1.2 版
@@ -277,7 +276,7 @@ function main(params) {
 - underscore 1.8.3 版
 - uuid 3.0.0 版
 - validator 6.1.0 版
-- watson-developer-cloud 2.9.0 版
+- watson-developer-cloud 2.29.0 版
 - when 3.7.7 版
 - winston 2.3.0 版
 - ws 1.1.1 版
@@ -293,7 +292,7 @@ OpenWhisk 支援使用兩個不同的運行環境版本來執行 Python 動作�
 
 ### Python 3 動作
 
-Python 3 動作是使用 Python 3.6.1 執行的。若要使用此運行環境，請在建立或更新動作時指定 `wsk` CLI 參數 `--kind python:3`。
+Python 3 動作是使用 Python 3.6.1 來執行。若要使用此運行環境，請在建立或更新動作時指定 `wsk` CLI 參數 `--kind python:3`。
 除了 Python 3.6 標準程式庫之外，Python 動作還可以使用下列套件。
 
 - aiohttp 1.3.3 版
@@ -341,7 +340,7 @@ Python 3 動作是使用 Python 3.6.1 執行的。若要使用此運行環境，
 
 ### Python 2 動作
 
-Python 2 動作是使用 Python 2.7.12 執行的。除非您在建立或更新動作時指定 `--kind` 旗標，否則這是 Python 動作的預設運行環境。若要明確地選取此運行環境，請使用 `--kind python:2`。除了 Python 2.7 標準程式庫之外，Python 2 動作還可以使用下列套件。
+Python 2 動作是使用 Python 2.7.12 來執行。除非您在建立或更新動作時指定 `--kind` 旗標，否則這是 Python 動作的預設運行環境。若要明確地選取此運行環境，請使用 `--kind python:2`。除了 Python 2.7 標準程式庫之外，Python 2 動作還可以使用下列套件。
 
 - appdirs 1.4.3 版
 - asn1crypto 0.21.1 版
@@ -391,73 +390,14 @@ Docker 動作是在 Docker 容器中執行使用者提供的二進位檔。二�
 
 Docker 架構是建置 OpenWhisk 相容 Docker 映像檔的一種簡便方式。您可以使用 `wsk sdk install docker` CLI 指令來安裝架構。
 
-主要二進位程式必須位在容器的 `/action/exec` 中。執行檔會透過 `stdin` 接收到輸入引數，而且必須透過 `stdout` 來傳回結果。
+主要二進位程式必須位在容器的 `/action/exec` 中。執行檔會透過可解除序列化為 `JSON` 物件的單一指令行引數字串來收到輸入引數。它必須透過 `stdout`，以已序列化 `JSON` 的單行字串形式來傳回結果。
 
 透過修改 `dockerSkeleton` 中所含的 `Dockerfile`，即可包含任何編譯步驟或相依關係。
 
 ## REST API
 {: #openwhisk_ref_restapi}
+在[這裡](openwhisk_rest_api.html)可以找到 REST API 的相關資訊
 
-系統中的所有功能都可透過 REST API 來使用。其中有動作、觸發程式、規則、套件、啟動和名稱空間的集合和實體端點。
-
-以下是集合端點：
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
-
-`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span> 是 OpenWhisk API 主機名稱（例如，openwhisk.ng.bluemix.net、172.17.0.1 等）。
-
-針對 `{namespace}`，字元 `_` 可以用來指定使用者的 *預設名稱空間*（亦即，電子郵件位址）。
-
-您可以在集合端點上執行 GET 要求，以提取集合中的實體清單。
-
-每一種實體類型都有實體端點：
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
-
-
-名稱空間和啟動端點僅支援 GET 要求。動作、觸發程式、規則和套件端點可支援 GET、PUT 及 DELETE 要求。動作、觸發程式和規則的端點也可支援 POST 要求（用來呼叫動作和觸發程式，以及啟用或停用規則）。如需詳細資料，請參閱 [API 參考資料](https://new-console.{DomainName}/apidocs/98)。
-
-所有 API 都是透過 HTTP 基本鑑別進行保護。基本鑑別認證位於 `~/.wskprops` 檔案的 `AUTH` 內容中，以冒號區隔。您也可以在 [CLI 配置步驟](./index.html#openwhisk_start_configure_cli)中擷取這些認證。
-
-下列範例說明如何使用 cURL 指令來取得 `whisk.system` 名稱空間中的所有套件清單：
-
-```
-curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
-```
-{: pre}
-```
-[
-  {
-    "name": "slack",
-    "binding": false,
-    "publish": true,
-    "annotations": [
-      {
-        "key": "description",
-        "value": "Package that contains actions to interact with the Slack messaging service"
-      }
-    ],
-    "version": "0.0.9",
-    "namespace": "whisk.system"
-  },
-  ...
-]
-```
-{: screen}
-
-OpenWhisk API 支援 Web 用戶端發出的「要求/回應」呼叫。OpenWhisk 會以「跨原點資源共用」標頭來回應 `OPTIONS` 要求。目前可允許所有原點（亦即，Access-Control-Allow-Origin 為 "`*`"），而 Access-Control-Allow-Header 會產生 Authorization 和 Content-Type。
-
-**注意：**因為 OpenWhisk 目前針對每個帳戶僅支援一個金鑰，因此不建議在簡單實驗之外使用 CORS。您的金鑰需要內嵌在用戶端程式碼中，以公開顯示。請謹慎使用。
 
 ## 系統限制
 {: #openwhisk_syslimits}

@@ -61,7 +61,7 @@ Completa la seguente procedura per avviare Kibana da un browser:
 
 2. Seleziona la versione di Kibana che desideri utilizzare per analizzare i tuoi log.
     * Seleziona **Kibana 4** per lavorare con Kibana 4. Viene aperta la pagina Rileva. Per ulteriori informazioni, consulta [logging_kibana_analize_logs_interactively.html#kibana_analize_logs_interactively).
-    * Seleziona la scheda **Kibana 3** per lavorare con Kibana 3. Viene aperto il dashboard Kibana predefinito. Per ulteriori informazioni sull'utilizzo di Kibana per analizzare i tuoi log, consulta [Analisi dei log in Kibana 3 (Obsoleto)](../logging_view_kibana3.html#analyzing_logs_Kibana3). Per ulteriori informazioni sulla personalizzazione di un dashboard Kibana 3, consulta [questo post del blog ![icona link esterno](../../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/).
+    * Seleziona la scheda **Kibana 3** per lavorare con Kibana 3. Viene aperto il dashboard Kibana predefinito. Per ulteriori informazioni sull'utilizzo di Kibana per analizzare i tuoi log, consulta [Analisi dei log in Kibana 3 (Obsoleto)](../logging_view_kibana3.html#analyzing_logs_Kibana3). Per ulteriori informazioni sulla personalizzazione di un dashboard Kibana 3, consulta [questo post del blog ![Icona link esterno](../../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/).
      
         **Nota:** Kibana 3 è obsoleto.
 

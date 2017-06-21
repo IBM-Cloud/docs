@@ -35,7 +35,7 @@ de hardware
 vCPU | 19 | 57 |
 Memória | 80 GB | 240 GB |
 Armazenamento local | 2,98 TB | 8,94 TB |
-{: caption="Tabela 1. Registrando os requisitos de hardware para {{site.data.keyword.Bluemix_local_notm:}}" caption-side="top"}
+{: caption="Tabela 1. Registrando requisitos de hardware para o {{site.data.keyword.Bluemix_local_notm:}}" caption-side="top"}
 
 ## Configuração
 

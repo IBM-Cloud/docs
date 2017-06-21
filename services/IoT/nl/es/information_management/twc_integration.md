@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -22,12 +22,12 @@ La información meteorológica de The Weather Company aparece en la vista de det
 
 **Importante:** Sólo los dispositivos gestionados pueden definir sus propias ubicaciones. Todos los dispositivos no gestionados deben tener sus ubicaciones establecidas manualmente mediante la API. Para obtener más información sobre cómo configurar una ubicación de dispositivo, consulte [Solicitudes Update Location](../../devices/device_mgmt/index.html#update-location).
 
-### API REST para The Weather Company
+## API REST para The Weather Company
 Para acceder a la API REST para The Weather Company, consulte la sección sobre la extensión sobre Device Location Weather en la documentación de [{{site.data.keyword.iot_short_notm}} API REST HTTP ![icono de enlace externo](../../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Device_Location_Weather){: new_window}.
 
-### Visualización de datos meteorológicos
+## Visualización de datos meteorológicos
 
-Para ver los datos meteorológicos recuperados para una ubicación de dispositivo: 
+Para ver los datos meteorológicos recuperados para una ubicación de dispositivo:
 1. Pulse sobre el dispositivo en el panel **Dispositivos**.
 2. En la vista de dispositivos detallada, desplácese hacia abajo hasta la sección **Extensiones**.  
 Se enumerarán los siguientes datos meteorológicos:

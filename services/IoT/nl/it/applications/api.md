@@ -25,7 +25,7 @@ L'API REST HTTP {{site.data.keyword.iot_short_notm}} supporta le seguenti funzio
 
 - Richiamo informazioni sull'organizzazione
 - Operazioni sul dispositivo in blocco (elenco, aggiunta e rimozione)
-- Operazioni di tipo dispositivo (elenco, creazione, eliminazione, visualizzazione dettagli e aggiornamento)
+- Operazioni tipo dispositivo (elenco, creazione, eliminazione, visualizzazione dettagli e aggiornamento)
 - Operazioni dispositivo (elenco, creazione, eliminazione, visualizzazione dettagli, aggiornamento, visualizzazione ubicazione e visualizzazione delle informazioni di gestione)
 - Operazioni di diagnostica del dispositivo (eliminazione log, richiamo log, aggiunta informazioni log, eliminazione log, ottenimento di log specifici, annullamento di codici di errore, ottenimento di codici di errore e aggiunta di codici di errore)
 - Determinazione del problema di connessione (elenco degli eventi di log della connessione del dispositivo)

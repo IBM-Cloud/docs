@@ -27,7 +27,7 @@ Anwendung.
 Cloud Foundry unterstützt Diego, die neue Standardlaufzeitarchitektur, mit der eine Reihe von Funktionen bereitgestellt werden, die die Anwendungsentwicklungserfahrung beim Hosten und Erstellen von Cloudplattformen verbessert. Mit dieser Aktualisierung der Architektur erfolgt eine Verbesserung des Gesamtbetriebs und der Leistung der Cloud Foundry-Plattform. Die neue Architektur bietet Unterstützung für mehrere Anwendungscontainertechnologien, darunter Garden und Windows, ein SSH-Paket für direktes Anmelden beim Anwendungscontainer und weitere innovative Änderungen. Weitere Informationen zum neuen Architekturupgrade finden Sie unter [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}.
 
 
-Alle von Ihnen neu erstellten Anwendungen werden mit Diego ausgeführt. Sie müssen Ihre vorhandenen Anwendungen, die auf DEAs ausgeführt werden, in die neue Diego-Architektur migrieren. 
+Alle von Ihnen neu erstellten Anwendungen werden mit Diego ausgeführt. Sie müssen Ihre vorhandenen Anwendungen, die auf DEAs ausgeführt werden, in die neue Diego-Architektur migrieren.
 
 **Hinweis:** Die Cloud Foundry-Architektur Diego betrifft alle {{site.data.keyword.Bluemix_notm}} Public-Umgebungen für Regionen. Die Umgebungen {{site.data.keyword.Bluemix_notm}} Dedicated und {{site.data.keyword.Bluemix_notm}} Local werden zu einem späteren Zeitpunkt aktualisiert.
 
@@ -297,7 +297,7 @@ Das folgende Beispiel zeigt eine Manifestdatei für eine Node.js-Anwendung, die 
 ## Umgebungsvariablen
 {: #app_env}
 
-Umgebungsvariablen enthalten Informationen zur Umgebung einer in {{site.data.keyword.Bluemix_notm}} bereitgestellten Anwendung. Neben den Umgebungsvariablen, die von *Diego* und und Buildpacks festgelegt werden, können Sie auch anwendungsspezifische Umgebungsvariablen für Anwendungen in {{site.data.keyword.Bluemix_notm}} festlegen. 
+Umgebungsvariablen enthalten Informationen zur Umgebung einer in {{site.data.keyword.Bluemix_notm}} bereitgestellten Anwendung. Neben den Umgebungsvariablen, die von *Diego* und und Buildpacks festgelegt werden, können Sie auch anwendungsspezifische Umgebungsvariablen für Anwendungen in {{site.data.keyword.Bluemix_notm}} festlegen.
 
 Die folgenden Umgebungsvariablen einer aktiven {{site.data.keyword.Bluemix_notm}}-Anwendung können Sie mit dem Befehl **cf env** oder über die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle anzeigen:
 
@@ -353,7 +353,7 @@ Die folgenden Umgebungsvariablen einer aktiven {{site.data.keyword.Bluemix_notm}
 
 Sie haben auch Zugriff auf die vom DEA und von den Buildpacks festgelegten Umgebungsvariablen.
 
-Folgende Variablen werden von Diego definiert: 
+Folgende Variablen werden von Diego definiert:
 
 <dl>
   <dt><strong>HOME</strong></dt>
@@ -361,15 +361,15 @@ Folgende Variablen werden von Diego definiert:
   <dt><strong>MEMORY_LIMIT</strong></dt>
   <dd>Die maximale Speicherkapazität, die jede Instanz Ihrer Anwendung jeweils nutzen kann. Sie können den Wert in einer <span class="ph filepath">manifest.yml</span>-Datei der Anwendung oder bei der Push-Operation für die Anwendung in der Befehlszeile angeben.</dd>
   <dt><strong>PORT</strong></dt>
-  <dd>Der Port in Diego für die Kommunikation mit der Anwendung. Der Port wird der Anwendung zum Zeitpunkt des Staging von Diego zugeordnet. </dd>
+  <dd>Der Port in Diego für die Kommunikation mit der Anwendung. Der Port wird der Anwendung zum Zeitpunkt des Staging von Diego zugeordnet.</dd>
   <dt><strong>PWD</strong></dt>
   <dd>Das aktuelle Arbeitsverzeichnis, in dem das Buildpack ausgeführt wird.</dd>
   <dt><strong>TMPDIR</strong></dt>
   <dd>Das Verzeichnis, in dem temporäre Dateien und Staging-Dateien gespeichert werden.</dd>
   <dt><strong>USER</strong></dt>
-  <dd>Die Benutzer-ID, unter der Diego ausgeführt wird. </dd>
+  <dd>Die Benutzer-ID, unter der Diego ausgeführt wird.</dd>
   <dt><strong>VCAP_APP_HOST</strong></dt>
-  <dd>Die IP-Adresse des Diego-Hosts. </dd>
+  <dd>Die IP-Adresse des Diego-Hosts.</dd>
   <dt><strong>VCAP_APPLICATION</strong></dt>
   <dd>Eine JSON-Zeichenfolge, die Informationen zur bereitgestellten Anwendung enthält. Die Informationen umfassen den Anwendungsnamen, die URIs, die Speicherbegrenzungen, die Zeitmarke bei Erreichen des aktuellen Anwendungsstatus usw. Beispiel:
   <pre class="pre codeblock"><code>
@@ -446,9 +446,9 @@ Von Buildpacks definierte Variablen sind für jedes Buildpack unterschiedlich. I
 	  <dt><strong>IBM_JAVA_OPTIONS</strong></dt>
 	  <dd>Die Java-SDK-Optionen, die bei Ausführung der Anwendung verwendet werden sollen.</dd>
 	  <dt><strong>IBM_JAVA_COMMAND_LINE</strong></dt>
-	  <dd>Der Java-Befehl zum Starten einer Liberty-Profil-Serverinstanz in Diego. </dd>
+	  <dd>Der Java-Befehl zum Starten einer Liberty-Profil-Serverinstanz in Diego.</dd>
 	  <dt><strong>WLP_USR_DIR</strong></dt>
-	  <dd>Die Position der gemeinsam genutzten Ressourcen und Serverdefinitionen beim Starten einer Liberty-Profil-Serverinstanz in Diego. </dd>
+	  <dd>Die Position der gemeinsam genutzten Ressourcen und Serverdefinitionen beim Starten einer Liberty-Profil-Serverinstanz in Diego.</dd>
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>Die Position der generierten Ausgabe, z. B. Protokolldateien oder das Arbeitsverzeichnis einer aktiven Liberty-Profil-Serverinstanz.</dd>
 	  </dl>

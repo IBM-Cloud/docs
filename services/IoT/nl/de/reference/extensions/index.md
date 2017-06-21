@@ -367,7 +367,7 @@ Fügen Sie den SendGrid-Service zu einer Dummy-App hinzu und binden Sie ihn an s
  5. Wählen Sie den SendGrid-Service aus und klicken Sie auf **Hinzufügen**.
  6. Für die Anwendung {{site.data.keyword.sdk4nodefull}} muss nun ein erneutes Staging ausgeführt werden.
 2. Bereiten Sie die Konfiguration des {{site.data.keyword.iot_short_notm}}-Service vor.  
-{{site.data.keyword.iot_short_notm}} kann mithilfe des {{site.data.keyword.iot_short_notm}}-Dashboards oder mithilfe der {{site.data.keyword.iot_short_notm}}-API konfiguriert werden.   
+{{site.data.keyword.iot_short_notm}} kann mithilfe des {{site.data.keyword.iot_short_notm}}-Dashboards oder mithilfe der {{site.data.keyword.iot_short_notm}}-API konfiguriert werden.  
  1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard auf die Anwendung {{site.data.keyword.sdk4nodefull}}.
  2. Klicken Sie in der Navigationsleiste auf **Umgebungsvariablen**.
  3. Kopieren Sie die angezeigte JSON in eine temporäre Textdatei.  

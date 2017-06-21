@@ -1,8 +1,10 @@
 ---
+
 copyright:
-  years: 2016
-lastupdated: "2016-12-09"
+  years: 2016,2017
+lastupdated: "2017-04-27"
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -30,36 +32,8 @@ MySQL は開発者がアプリケーションに構想を描くための便利�
 
 2. {{site.data.keyword.composeForMySQL}} サービスに接続します。
 
-  アプリケーションをサービスに接続するには、サービスと共に作成された資格情報を使用します。
+  アプリケーションをサービスに接続するには、サービスと共に作成された[資格情報](./credentials.html)を使用します。
 
   [compose-mysql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mysql-helloworld-nodejs) サンプル・アプリケーションをダウンロードし、README ファイル内の指示に従ってください。その後、Bluemix コンソール内のアプリケーション詳細ページで、**「アプリの表示 (View APP)」**をクリックします。
 
   サンプル・アプリケーションでは、Node.js を使用して {{site.data.keyword.composeForMySQL}} サービスに接続する方法を示します。
-
-
-## 使用可能な資格情報
-
-フィールド名|説明
-----------|-----------
-`db_type`|サービスによって提供されるデータベースのタイプ。この場合は、`mysql`。
-`name`|データベース・デプロイメント名。
-`uri_cli`|データベース・インスタンスに接続する `mysql` シェル・コマンド・ライン。
-`ca_certificate_base64`|アプリケーションが適切なサーバーに接続されていることを確認するために使用する自己署名証明書。証明書は base64 でエンコードされています。
-`deployment_id`|Compose 内で作成された、サービスの内部 ID。
-`uri`|サービスに接続するときに使用する URI。スキーマ (`mysql:`)、管理者ユーザー名とパスワード、サーバーのホスト名、接続先のポート番号、vhost 名が含まれます。
-{: caption="Table 1. {{site.data.keyword.composeForMySQL}} credentials" caption-side="top"}
-
-
-# 関連リンク
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Compose の記事](https://www.compose.com/articles/){:new_window}
-
-## チュートリアルとサンプル
-{: #samples}
-* [compose-mysql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mysql-helloworld-nodejs){:new_window}
-
-## 関連リンク
-{: #general}
-* [Compose のヘルプ](https://help.compose.com/docs){:new_window}

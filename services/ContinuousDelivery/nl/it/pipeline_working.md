@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-6"
+lastupdated: "2017-4-28"
 
 ---
 
@@ -35,7 +35,7 @@ Esistono molti modi per creare una pipeline, incluso l'aggiunta di una pipeline 
 Completa la seguente procedura per configurare una {{site.data.keyword.deliverypipeline}} per un'applicazione esistente:
 
 1. Nel Dashboard dell'applicazione {{site.data.keyword.Bluemix_notm}}, fai clic sulla tua applicazione.
-1. Dal menu hamburger nella barra dei menu di {{site.data.keyword.Bluemix_notm}}, fai clic su **Servizi** e poi su **DevOps**.
+1. Dal menu nella barra dei menu {{site.data.keyword.Bluemix_notm}}, fai clic su **Servizi** e quindi su **DevOps**.
 1. Fai clic su **Pipeline** e seleziona **Crea una pipeline**.
 
 Per [creare una pipeline ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} configurata per distribuire un'applicazione Cloud Foundry, completa la seguente procedura:
@@ -71,6 +71,6 @@ Per creare una [pipeline vuota ![Icona link esterno](../../icons/launch-glyph.sv
 1. Se vuoi utilizzare un nome diverso per la pipeline, modifica il suo nome predefinito.
 1. Se non hai una toolchain, ne viene creata una con un nome predefinito. Se vuoi utilizzare un nome diverso per la toolchain, modifica il suo nome. Con la toolchain, puoi estendere le funzionalità della tua pipeline mediante l'integrazione con altri strumenti e servizi.
 1. Seleziona la toolchain che vuoi utilizzare o immetti un nome per la nuova toolchain da creare.
-1. Fai clic su **Crea**. Viene creata una pipeline vuota che viene rappresentata in forma di scheda nella pagina Panoramica della toolchain. 
+1. Fai clic su **Crea**. Viene creata una pipeline vuota che viene rappresentata in forma di scheda nella pagina Panoramica della toolchain.
 
 Da {{site.data.keyword.deliverypipeline}}, puoi modificare la tua configurazione, controllare lo stato delle creazioni, dell'applicazione distribuita e delle ultime distribuzioni, visualizzare i log più recenti e i dettagli di distribuzione oppure eliminare la tua pipeline.

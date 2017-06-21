@@ -131,7 +131,7 @@ esteja importando a biblioteca `web.py`:
 o arquivo `requirements.txt`, consulte [Arquivos de requisitos](https://pip.readthedocs.org/en/1.1/requirements.html). 
 	 
  2. Inclua um arquivo `Procfile` no diretório-raiz de seu app Python.
-O arquivo `Procfile` deve conter o comando inicial para seu app Python. No comando a seguir, *yourappname* é o nome de seu app Python e *PORT* é o número da porta que seu app Python deve usar para receber solicitações de usuários do app. *$PORT* é opcional. Se você não especificar PORT no comando inicial, o número da porta sob a variável de ambiente `VCAP_APP_PORT` que está dentro do app será usado. 
+ O arquivo `Procfile` deve conter o comando inicial para seu app Python. No comando a seguir, *yourappname* é o nome de seu app Python e *PORT* é o número da porta que seu app Python deve usar para receber solicitações de usuários do app. *$PORT* é opcional. Se você não especificar PORT no comando inicial, o número da porta sob a variável de ambiente `VCAP_APP_PORT` que está dentro do app será usado. 
 	```
 	web: python <yourappname>.py $PORT
 	```

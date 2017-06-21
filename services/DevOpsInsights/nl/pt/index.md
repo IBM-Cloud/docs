@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-11"
+  years: 2016, 2017
+lastupdated: "2017-04-07"
 
 ---
 
@@ -12,54 +12,53 @@ lastupdated: "2016-11-11"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Introdução ao {{site.data.keyword.DRA_short}} (Experimental)
+# Introdução ao DevOps Insights (Beta)
 {: #gettingstarted}
 
-Use o {{site.data.keyword.DRA_full}} para identificar os riscos para as suas construções e implementações.
+O {{site.data.keyword.DRA_full}} aplica análise de desenvolvedor, de equipe e de implementação a seus projetos DevOps mais ocupados. Use-o para saber quanto sua equipe é compatível com o DevOps e com as práticas do desenvolvedor, para gerenciar risco em seu código base e para aplicar normas de qualidade automaticamente em projetos de entrega contínua.
 {:shortdesc}
 
-O {{site.data.keyword.DRA_short}} agrega e analisa os resultados de testes de unidade, testes funcionais e ferramentas de cobertura de código para
-determinar se o seu código atende às políticas predefinidas em portas especificadas em seu processo de implementação. Se o seu código não atender nem exceder uma
-política, a implementação será interrompida, impedindo que as mudanças de risco sejam liberadas. É possível usar o {{site.data.keyword.DRA_short}} como uma
-rede de segurança para o seu ambiente de entrega contínua, uma forma de implementar e melhorar padrões de qualidade ao longo do tempo e uma ferramenta de visualização
-de dados para ajudá-lo a entender o funcionamento do seu projeto.
+O {{site.data.keyword.DRA_short}} inclui vários grupos de recursos:
 
-O {{site.data.keyword.DRA_short}} é uma oferta experimental e é fornecido no estado em que se encontra apenas para propósitos de desenvolvimento e experimentação. Para
-usar o {{site.data.keyword.DRA_short}}, inclua-o em qualquer cadeia de ferramentas que use o {{site.data.keyword.deliverypipeline}}.
+   * O Developer Insights fornece uma maneira abrangente de explorar a maturidade de desenvolvimento de seu projeto. É possível identificar arquivos com alta propensão a erros e obter uma visualização de conformidade do projeto com relação às práticas do desenvolvedor.
 
+   * O Team Dynamics usa a análise de codificação social para ajudá-lo a saber como sua equipe colabora e entender como ela pode trabalhar melhor.
+
+   * O Deployment Risk é como uma rede de segurança de entrega contínua. Ele analisa os resultados de testes de unidade, testes funcionais, varreduras do aplicativo e ferramentas de cobertura de código em portas especificadas em seu processo de implementação e evita a liberação de mudanças de risco.
+
+   * O Delivery Insights mostra estatísticas de implementação, métricas e outras informações sobre a instalação do IBM UrbanCode Deploy. Por exemplo, ele pode mostrar gráficos de duração da implementação, sucessos e falhas, todos classificados por ambientes agrupados logicamente. Veja [Integrando o DevOps Insights ao IBM UrbanCode Deploy](/docs/services/DevOpsInsights/uc_insights_overview.html).
+
+O {{site.data.keyword.DRA_short}} é uma integração no catálogo de cadeia de ferramentas aberta do Bluemix. Para obter mais informações sobre cadeias de ferramentas, veja [Trabalhando com cadeias de ferramentas](/docs/services/ContinuousDelivery/toolchains_working.html).
+
+Para usar o {{site.data.keyword.DRA_short}}, deve-se incluí-lo em uma cadeia de ferramentas. Muitos modelos de cadeia de ferramentas já incluem o {{site.data.keyword.DRA_short}}. Certifique-se de também [incluí-lo em sua organização do {{site.data.keyword.Bluemix_notm}} como um serviço](/docs/services/reqnsi.html) para que você possa ver informações sobre o {{site.data.keyword.DRA_short}} e acessar alguns dos modelos de cadeia de ferramentas que o incluem por meio do painel do {{site.data.keyword.Bluemix_notm}}.  
+
+## Incluindo o DevOps Insights em uma cadeia de ferramentas
 {: #catalog}
-Para acessar a UI do {{site.data.keyword.DRA_short}}, conclua as etapas a seguir a partir de uma cadeia de ferramentas existente:
 
-1. Clique no botão **Incluir uma ferramenta**.
+O {{site.data.keyword.DRA_short}} faz parte do {{site.data.keyword.contdelivery_short}}. É possível incluir o {{site.data.keyword.DRA_short}} em qualquer cadeia de ferramentas, selecionando-o no catálogo de integração de ferramenta.
+
+O {{site.data.keyword.DRA_short}} também faz parte de vários modelos da cadeia de ferramentas. Se você criar uma cadeia de ferramentas por meio de um modelo que inclui o {{site.data.keyword.DRA_short}}, certifique-se de que o {{site.data.keyword.DRA_short}} esteja configurado como **Avançado**. Em seguida, crie a cadeia de ferramentas e vá para [Usando o Insights](/docs/services/DevOpsInsights/index.html#using).
+
+Para incluir o {{site.data.keyword.DRA_short}} em uma cadeia de ferramentas:
+
+1. Clique em **Incluir uma ferramenta**.
 
 2. Clique em **{{site.data.keyword.DRA_short}}**.
 
 3. Clique em
 **Criar integração**.
 
-4. Clique no ladrilho **{{site.data.keyword.DRA_short}}**.
+O {{site.data.keyword.DRA_short}} está agora disponível na página Visão geral de sua cadeia de ferramentas. Seu repositório e o sistema de rastreamento de problemas são varridos automaticamente para dados. 
 
-5. Conclua a sua configuração com as tarefas restantes:
+## Usando o DevOps Insights
+{: #using}
 
-	1. [Configure a sua integração do {{site.data.keyword.deliverypipeline}}](./pipeline_integration.html).
-	2. Execute o pipeline e [revise os painéis do {{site.data.keyword.deliverypipeline}}](./pipeline_decision_reports.html).
-	3. [Defina políticas](./create_criteria.html) para o {{site.data.keyword.DRA_short}} gerenciar.
-	4. Execute o pipeline novamente para verificar se o seu projeto passa as suas políticas.
+Se a sua cadeia de ferramentas incluir GitHub, GitLab ou JIRA, o {{site.data.keyword.DRA_short}} fornecerá informações automaticamente sobre seu código base e equipe após alguma reunião e análise de dados iniciais. Se a sua cadeia de ferramentas não incluir nenhuma dessas integrações, inclua uma delas e, em seguida, siga estas etapas:
 
+1. Na página Visão geral da cadeia de ferramentas, clique em **{{site.data.keyword.DRA_short}}**.
 
-# Links Relacionados
-{: #rellinks}
+2. Clique em **Team Dynamics** ou **Developer Insights** e, em seguida, escolha uma categoria de dados. 
 
-## Tutoriais e amostras
-{: #samples}
+3. Explore os dados de seu projeto visualizando os painéis na categoria de dados. Se desejar saber mais sobre um gráfico ou o que você poderia fazer com suas informações, clique em **Informações** ou **Orientação**.
 
-* [Usando analítica para avisar sobre a probabilidade de
-implementações bem-sucedidas](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){:new_window}
-
-## Links Relacionados
-{: #general}
-
-* [Introdução às cadeias de ferramentas](https://new-console.ng.bluemix.net/docs/toolchains/toolchains_overview.html){:new_window}
-* [Introdução ao Delivery Pipeline](https://new-console.ng.bluemix.net/docs/services/DeliveryPipeline/index.html){:new_window}
-* [Folha de precificação do IBM Bluemix](https://new-console.ng.bluemix.net/pricing/){:new_window}
-* [Pré-requisitos do IBM Bluemix](https://developer.ibm.com/bluemix/support/?cm_mc_uid=96503159749414585876298&cm_mc_sid_50200000=1462802909#prereqs){:new_window}
+Depois de explorar o Team Dynamics e o Developer Insights, [configure o Deployment Risk](/docs/services/DevOpsInsights/insights_risk.html) para ajudá-lo a utilizar a qualidade de código. O Deployment Risk é compatível com o pipeline do {{site.data.keyword.contdelivery_short}} e o Jenkins.   

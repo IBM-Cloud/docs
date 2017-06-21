@@ -16,8 +16,8 @@ lastupdated: "2016-07-20"
 
 
 
-En algunos entornos como [Bluemix dedicado](/docs/dedicated/index.html#dedicated) y
-[Bluemix local](/docs/local/index.html#local), es posible configurar un proxy que afecte al comportamiento de la aplicación durante la etapa de transferencia y de tiempo de ejecución.
+En algunos entornos como [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) y
+[Bluemix Local](/docs/local/index.html#local), es posible configurar un proxy que afecte al comportamiento de la aplicación durante la etapa de transferencia y de tiempo de ejecución.
 
 Puede configurar la aplicación para que funcione con el proxy utilizando las variables de entorno siguiente:
   * [http_proxy](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html)

@@ -21,7 +21,7 @@ lastupdated: "2017-03-17"
 ## Benutzer hinzufügen
 {: #adding-new-users}
 
-Über die Registerkarte **Mitglieder** im Dashboard können Sie einzelne Mitglieder mithilfe der <!--Add, Invite, or Register--> Funktionen zum Hinzufügen oder Einladen hinzufügen. Sie können auch <!--add, invite, or register-->mithilfe der Importfunktion mehrere Mitglieder gleichzeitig hinzufügen oder einladen. 
+Über die Registerkarte **Mitglieder** im Dashboard können Sie einzelne Mitglieder mithilfe der <!--Add, Invite, or Register--> Funktionen zum Hinzufügen oder Einladen hinzufügen. Sie können auch <!--add, invite, or register-->mithilfe der Importfunktion mehrere Mitglieder gleichzeitig hinzufügen oder einladen.
 
 Mitgliederkonten haben standardmäßig kein Ablaufdatum. Wenn Sie Ihrer {{site.data.keyword.iot_short_notm}}-Organisation Mitglieder hinzufügen, können Sie für deren Konto optional ein Ablaufdatum festlegen.
 
@@ -118,7 +118,7 @@ Geben Sie eine der folgenden Rollen ein:
  - PD_DEVELOPER_USER
  - PD_ANALYST_USER
  - PD_READER_USER  
-Weitere Informationen zu Benutzerrollen finden Sie in [Rollen für Benutzer, Anwendungen und Gateways](roles_index.html#user_roles).
+ Weitere Informationen zu Benutzerrollen finden Sie in [Rollen für Benutzer, Anwendungen und Gateways](roles_index.html#user_roles).
 - Spalte 3: Die Unix-Zeitmarke (in Millisekunden ab 1. Januar, 1970 00:00 UTC), die dem Benutzerablaufdatum entspricht.
 
 ## Benutzer bearbeiten

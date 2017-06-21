@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-04-18"
 
 ---
 
@@ -74,7 +74,7 @@ Un certificado lo emite una entidad emisora de certificados, que lo firma digita
 
 Puede aplicar un protocolo de seguridad para proporcionar privacidad de comunicación a la aplicación a fin de impedir escuchas no autorizadas, manipulación indebida e interferencia de mensajes.
 
-Por cada organización de {{site.data.keyword.Bluemix_notm}} con un propietario de cuenta que tenga un plan de tipo Pague según uso o un plan de suscripción, tiene derecho a cuatro cargas de certificado gratuitas. Por cada organización con un propietario de cuenta que tenga una cuenta de prueba gratuita, tiene derecho a una carga de certificado gratuita.
+Por cada organización de {{site.data.keyword.Bluemix_notm}} con un propietario de cuenta que tenga un plan de tipo Pague según uso o un plan de suscripción, tiene derecho a cuatro cargas de certificado. Por cada organización con un propietario de cuenta que tenga una cuenta de prueba gratuita, debe actualizar su cuenta para cargar un certificado.
 
 Para poder cargar los certificados, debe crear una
 solicitud de firma de certificado. Consulte [Creación de solicitudes de firma de certificado](#ssl_csr).
@@ -84,13 +84,16 @@ Cuando utiliza un dominio personalizado, para servir el certificado SSL, utilice
   * US-South: secure.us-south.bluemix.net
   * EU-GB: secure.eu-gb.bluemix.net
   * AU-SYD: secure.au-syd.bluemix.net
+  * EU-DE: secure.eu-de.bluemix.net
 
 
 Para cargar un certificado para la aplicación:
 
-1. Cree una ruta o edite una ruta existente seleccionando **Editar rutas y acceso a app** en el menú de la aplicación.
+1. Vaya a su Panel de control.
 
-2. En el diálogo Editar rutas y acceso a app, pulse **Gestionar dominios**.
+2. Seleccione el nombre de la app de la que desea ver su vista de detalles.
+
+3. Seleccione el desplegable **Rutas** y, a continuación, seleccione **Gestionar dominios**.
 
 3. Para su dominio personalizado, pulse **Cargar certificado**.
 
@@ -143,4 +146,4 @@ protege mediante una contraseña.
 	  * DER (.der o .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-Para suprimir un certificado o reemplazar uno existente por otro, vaya a **Gestionar organizaciones** > **Dominios** > **Ver certificado** para gestionar los certificados.
+Para suprimir un certificado o sustituir un certificado existente con uno nuevo, vaya a **Gestionar** > **Cuenta** > **Organizaciones**. A continuación, pulse **Ver detalles** > **Editar Organización** > **Dominios** para sustituir o reemplazar un certificado para un dominio personalizado.

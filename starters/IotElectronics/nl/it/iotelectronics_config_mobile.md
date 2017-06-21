@@ -2,15 +2,16 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-04-07"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+
 
 # Utilizzo dell'applicazione mobile
 {: #iot4e_using_mobile}
@@ -18,9 +19,7 @@ lastupdated: "2017-03-10"
 Introduzione all'applicazione mobile {{site.data.keyword.iotelectronics_full}} per vedere come ricevere avvisi, inviare comandi e controllare lo stato delle tue applicazioni collegate utilizzando il tuo dispositivo mobile, come uno smartphone o un tablet.
 {:shortdesc}
 
-Prima di poter utilizzare l'applicazione mobile, devi completare le seguenti attività:
-  - Distribuire un'istanza dello starter di {{site.data.keyword.iotelectronics}} nella tua organizzazione {{site.data.keyword.Bluemix_notm}}. La distribuzione di un'istanza dello starter in automatico distribuisce le applicazioni del componente dello starter.
-  - [Abilitare la sicurezza e le comunicazioni mobili](iotelectronics_config_mca.html) configurando {{site.data.keyword.amafull}}.
+Prima di poter utilizzare l'applicazione mobile, devi distribuire un'istanza dello starter {{site.data.keyword.iotelectronics}} nella tua organizzazione {{site.data.keyword.Bluemix_notm}}. La distribuzione di un'istanza dello starter in automatico distribuisce le applicazioni del componente dello starter.
 
 Per un introduzione all'applicazione mobile, completa le seguenti attività:
 1. [Scarica l'applicazione mobile](#iot4e_downloadmobile) sul tuo dispositivo mobile.
@@ -52,7 +51,7 @@ Per collegare l'applicazione mobile al tuo ambiente e registrare i tuoi elettrod
 
   ![Codice QR di connessione.](images/iot4e_mobile_connect_QR.svg "{{site.data.keyword.iotelectronics}} Codice QR di connessione")
 
-5. Nel tuo dispositivo mobile, immetti le credenziali di accesso. I tuoi ID e password possono essere di qualsiasi lunghezza. Ricorda le tue credenziali di accesso per sessioni future. Il tuo dispositivo mobile è ora registrato nel tuo ambiente {{site.data.keyword.iotelectronics}} e sei pronto per registrare elettrodomestici individuali.
+5. Nel tuo dispositivo mobile, accedi facoltativamente utilizzando le tue credenziali Facebook o Google+. Puoi anche saltare il processo di accesso e provare l'applicazione senza accedere.
 
 6. Sul tuo computer, passa a una rondella simulata e fai clic su di essa per visualizzarne i dati e il codice QR dell'applicazione.
 

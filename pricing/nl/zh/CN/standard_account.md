@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-05-02"
 
 
 ---
@@ -18,7 +18,7 @@ lastupdated: "2017-02-09"
 # IBM {{site.data.keyword.Bluemix_notm}} 标准帐户 Beta 版 
 {: #betaintro}
 
-{{site.data.keyword.Bluemix}} 标准帐户 Beta 版引入了全新的免费帐户，其提供了一种在 {{site.data.keyword.Bluemix_notm}} Public Cloud 中工作的新方法。与 30 天 {{site.data.keyword.Bluemix_notm}} 试用版不同，标准帐户永不过期。您可以持续使用 {{site.data.keyword.Bluemix_notm}} 应用程序，而无需考虑任何时间限制。
+{{site.data.keyword.Bluemix}} 标准帐户 Beta 版引入了全新的免费帐户，其提供了一种在 {{site.data.keyword.Bluemix_notm}} Public Cloud 中工作的新方法。与 30 天 {{site.data.keyword.Bluemix_notm}} 试用帐户不同，标准帐户永不过期。您可以持续使用 {{site.data.keyword.Bluemix_notm}} 应用程序，而无需考虑任何时间限制。
 {:shortdesc}
 
 只有受到邀请才能参与标准帐户 Beta 版。在您接受邀请并创建标准帐户后，您可以邀请朋友和同事参与 Beta 版。  
@@ -35,9 +35,9 @@ lastupdated: "2017-02-09"
 | 您可以使用即将推出的更多服务，访问 Cloudant NoSQL DB 和 Internet of Things Platform 的免费 Lite 套餐。 |
 | 如果超过 10 天没有任何开发活动，那么您的应用程序将休眠。 |
 | 您的服务实例将在处于不活动状态 30 天后删除。 |
-{:caption="表 1. 标准帐户中的新增内容" caption-side="top"}
+{:caption="表 1. 标准帐户中的新增功能" caption-side="top"}
 
-|转换试用帐户时未发生更改的内容？ | 
+|转换试用帐户时哪些内容不会更改？ | 
 |-----------------|
 |帐户是免费的 -- 不需要信用卡。 |
 |Cloudant NoSQL DB 和 Internet of Things Platform 的任何 Lite 实例。上述每个服务的一个 Lite 实例可转移到您的新帐户。 |
@@ -45,9 +45,9 @@ lastupdated: "2017-02-09"
 |{{site.data.keyword.Bluemix_notm}} 支持的级别仍相同。 |
 {:caption="表 2. 未更改的内容" caption-side="top"}
 
-**注：**如果未转换试用帐户，那么您将看到一条说明原因的消息。您可能在现有试用帐户中有多个组织，或者有无法转移的应用程序。您可以采取适当的操作，然后重新尝试转换帐户。
+**注**：如果未转换试用帐户，那么您将看到一条说明原因的消息。您可能在现有试用帐户中有多个组织，或者有无法转移的应用程序。您可以采取适当的操作，然后重新尝试转换帐户。
 
-当您注册标准帐户时，您可以邀请团队成员在您的组织和空间中进行协作、查看使用情况、创建空间、更新帐户概要文件并管理组织。有关更多信息，请参阅[设置帐户](/docs/admin/adminpublic.html#account)。
+当您注册标准帐户时，您可以邀请团队成员在您的组织和空间中进行协作、查看使用情况、创建空间、更新帐户概要文件并管理组织。有关更多信息，请参阅[管理帐户](/docs/admin/adminpublic.html#account)。
 
 ## Lite 套餐
 {: #liteplans}
@@ -81,7 +81,7 @@ Lite 套餐（也在现买现付帐户中提供）构造为免费配额。您可
 
 您可以针对每个 Lite 套餐供应 1 个实例。 
 
-**注：**这些限制仅适用于标准帐户。您可以随时升级到现买现付或预订缴费帐户。您仅需要为超出免费限额的使用部分付费。有关现买现付帐户和预订帐户的更多信息，请参阅[计费方式](/docs/pricing/index.html#pay-accounts)。
+**注**：这些限制仅适用于标准帐户。您可以随时升级到现买现付或预订缴费帐户。您仅需要为超出免费限额的使用部分付费。有关现买现付帐户和预订帐户的更多信息，请参阅[帐户类型](/docs/pricing/index.html#pay-accounts)。
 
 ## 开发活动
 {: #devactivity}

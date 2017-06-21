@@ -161,7 +161,7 @@ DevOps Connect を使用して IBM UrbanCode Deploy と統合するには、以�
 ## IBM UrbanCode Deploy からのアプリの追加
 {: #compositepipeline_add_apps}
 
-DevOps Connect を使用して IBM UrbanCode Deploy を統合した組織のメンバーの場合、IBM UrbanCode Deploy でアクセスできるアプリを複合パイプラインに追加できます。インストール手順については、[IBM Bluemix DevOps Connect を使用した IBM UrbanCode Deploy との統合](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect)を参照してください。
+DevOps Connect を使用して IBM UrbanCode Deploy と統合されている組織のメンバーは、IBM UrbanCode Deploy でアクセスできるアプリを複合パイプラインに追加できます。インストール手順については、[IBM Bluemix DevOps Connect を使用した IBM UrbanCode Deploy との統合](/docs/services/ContinuousDelivery/pipeline_composites.html#compositepipeline_devops_connect)を参照してください。
 
 IBM UrbanCode Deploy に接続している組織のメンバーの場合、UrbanCode Deploy アプリを複合パイプラインに追加し、デプロイメント計画に組み込むアプリ・プロセスを選択し、アプリのデプロイメントをカスタマイズできます。
 

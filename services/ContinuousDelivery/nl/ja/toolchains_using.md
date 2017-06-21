@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-4-26"
 
 ---
 
@@ -12,8 +12,7 @@ lastupdated: "2017-3-31"
 # ツールチェーンの使用
 {: #toolchains-using}
 
-{{site.data.keyword.Bluemix}} の Public 環境と Dedicated 環境で、オープンなツールチェーンが使用可能です。ツールチェーンを使用して、日々の開発、デプロイメント、運用の作業における生産性を向上させることができます。ツールチェーンをセットアップした後、ツール統合の追加、削除、構成と、ツールチェーンへのアクセスの管理を行うことができます。{{site.data.keyword.Bluemix_notm}} Public の場合、ツールチェーンは米国南部地域でのみ利用可能です。
-{: shortdesc}
+{{site.data.keyword.Bluemix}} の Public 環境と Dedicated 環境で、オープンなツールチェーンが使用可能です。ツールチェーンを使用して、日々の開発、デプロイメント、運用の作業における生産性を向上させることができます。ツールチェーンをセットアップした後、ツール統合の追加、削除、構成と、ツールチェーンへのアクセスの管理を行うことができます。{: shortdesc}
 
 ## ツール統合の構成
 {: #configuring_a_tool_integration}

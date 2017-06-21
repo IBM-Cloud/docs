@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-  lastupdated: "2017-04-04"
+  lastupdated: "2017-04-21"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -53,7 +52,7 @@ copyright:
       return {payload: 'Hello world'};
   }
   ```
-    {: codeblock}
+  {: codeblock}
 
     JavaScript 檔可能包含其他函數。不過，依慣例，必須要有稱為 `main` 的函數，以提供動作的進入點。
 
@@ -62,7 +61,7 @@ copyright:
   ```
   wsk action create hello hello.js
   ```
-      {: pre}
+  {: pre}
   ```
   ok: created action hello
   ```
@@ -191,9 +190,7 @@ copyright:
   }
   ```
 
-    請注意，使用 `--result` 選項，只會顯示呼叫結果。
-
-
+  請注意，使用 `--result` 選項：這表示 CLI 等待呼叫完成後僅顯示結果的封鎖呼叫。為方便起見，可以在沒有自動推斷的 `--blocking` 的情況下使用此選項。
 
 ### 設定預設參數
 {: #openwhisk_binding_actions}
@@ -535,7 +532,7 @@ exports.main = myAction;
 
 建立 Python 動作的程序，與建立 JavaScript 動作的程序類似。下列各節會引導您建立及呼叫單一 Python 動作，以及將參數新增至該動作。
 
-### 建立及呼叫動作
+### 建立及呼叫 Python 動作
 {: #openwhisk_actions_python_invoke}
 
 動作只是最上層 Python 函數。例如，使用下列原始碼建立稱為 `hello.py` 的 Java 檔案：
@@ -549,7 +546,7 @@ def main(args):
 ```
 {: codeblock}
 
-Python 動作一律會使用某個字典，並產生一個字典。動作的輸入方法預設是 `main`，但可以在搭配使用 `wsk` CLI 與 `--main` 來建立動作時明確指定時，以及在建立具有任何其他動作類型的動作時明確指定時。
+Python 動作一律會使用某個字典，並產生一個字典。動作的輸入方法依預設是 `main`，但可以在搭配使用 `wsk` CLI 與 `--main` 來建立動作時明確指定時，以及在建立具有任何其他動作類型的動作時明確指定時。
 
 您可以從此函數建立稱為 `helloPython` 的 OpenWhisk 動作，如下所示：
 
@@ -571,6 +568,61 @@ wsk action invoke --blocking --result helloPython --param name World
       "greeting": "Hello World!"
   }
 ```
+
+### 將 Python 動作包裝在 zip 檔案中
+{: #openwhisk_actions_python_zip}
+
+您可以將 Python 動作及相依模組包裝在 zip 檔案中。
+包含進入點（例如，`main`）的原始檔檔名必須是 `__main__.py`。
+例如，若要建立 helper 模組稱為 `helper.py` 的動作，請先建立一個包含您原始檔的保存檔：
+
+```bash
+zip -r helloPython.zip __main__.py helper.py
+```
+{: pre}
+
+然後建立動作：
+
+
+
+```bash
+wsk action create helloPython --kind python:3 helloPython.zip
+```
+{: pre}
+
+### 使用虛擬環境將 Python 動作包裝在 zip 檔案中
+{: #openwhisk_actions_python_virtualenv}
+
+另一種包裝 Python 相依關係的方式是使用虛擬環境 (`virtualenv`)。例如，這可讓您鏈結可透過 [`pip`](https://packaging.python.org/installing/) 安裝的其他套件。
+若要確保與 OpenWhisk 容器的相容性，必須在目標環境中進行 virtualenv 內的套件安裝。
+因此，應該使用 Docker 映像檔 `openwhisk/python2action` 或 `openwhisk/python3action` 來建立您動作的 virtualenv 目錄。
+
+與基本 zip 檔案支援一樣，包含主要進入點的原始檔的名稱必須是 `__main__.py`。此外，virtualenv 目錄必須命名為 `virtualenv`。
+以下是安裝相依關係、將它們包裝在 virtualenv 中以及建立相容 OpenWhisk 動作的範例情境。
+
+
+
+1. 如果 `requirements.txt` 檔案包含要安裝的 `pip` 模組及版本，請執行下列指令來安裝相依關係，並且使用相容的 Docker 映像檔來建立 virtualenv：
+ ```bash
+ docker run --rm -v "$PWD:/tmp" openwhisk/python3action sh \
+   -c "cd tmp; virtualenv virtualenv; source virtualenv/bin/activate; pip install -r requirements.txt;"
+ ```
+ {: pre}
+
+2. 保存 virtualenv 目錄及任何其他 Python 檔案：
+ ```bash
+ zip -r helloPython.zip virtualenv __main__.py
+ ```
+ {: pre}
+
+3. 建立動作：
+  ```bash
+  wsk action create helloPython --kind python:3 helloPython.zip
+  ```
+  {: pre}
+
+雖然上述步驟是針對 Python 3.6 所顯示，但是您也可以針對 Python 2.7 進行相同步驟。
+
 
 
 ## 建立 Swift 動作
@@ -759,7 +811,7 @@ wsk action invoke --blocking --result helloJava --param name World
 
 您的程式碼會編譯成可執行的二進位檔，並內嵌在 Docker 映像檔中。二進位程式與系統互動的方式是從 `stdin` 取得輸入，並透過 `stdout` 回覆。
 
-先決條件是您必須具備 Docker Hub 帳戶。若要設定免費 Docker ID 及帳戶，請移至 [Docker Hub](https://hub.docker.com){: new_window}。
+先決條件是您必須具備 Docker Hub 帳戶。若要設定免費 Docker ID 及帳戶，請移至 [Docker Hub](https://hub.docker.com)。
 
 對於下面的指示，假設 Docker 使用者 ID 是 `janesmith`，而密碼是 `janes_password`。假設已設定 CLI，則需要三個步驟才能設定供 {{site.data.keyword.openwhisk_short}} 使用的自訂二進位檔。之後，上傳的 Docker 映像檔可以當作動作使用。
 
@@ -768,7 +820,7 @@ wsk action invoke --blocking --result helloJava --param name World
   ```
   wsk sdk install docker
   ```
-  
+  {: pre}
   ```
   Docker 架構現在安裝在現行目錄中。
   ```
@@ -776,7 +828,7 @@ wsk action invoke --blocking --result helloJava --param name World
   ```
   ls dockerSkeleton/
   ```
-
+  {: pre}
   ```
   Dockerfile      README.md       buildAndPush.sh example.c
   ```
@@ -788,7 +840,7 @@ wsk action invoke --blocking --result helloJava --param name World
   ```
   cat dockerSkeleton/example.c
   ```
-
+  {: pre}
   ```c
   #include <stdio.h>
   int main(int argc, char *argv[]) {
@@ -799,19 +851,16 @@ wsk action invoke --blocking --result helloJava --param name World
   ```
   {: codeblock}
 
-  您可以視需要修改此檔案，或者將其他程式碼及相依關係新增至 Docker 映像檔。
-  如果是後者，您可能需要在必要時調整 `Dockerfile` 以建置執行檔。
-  二進位檔必須位在 `/action/exec` 的容器內。
+  您可以視需要修改此檔案，或者將其他程式碼及相依關係新增至 Docker 映像檔。如果是後者，您可能需要在必要時調整 `Dockerfile` 以建置執行檔。二進位檔必須位在 `/action/exec` 的容器內。
 
-  執行檔會從指令行接收到單一引數。它是代表動作引數之 JSON 物件的字串序列化。程式可能會記載至 `stdout` 或 `stderr`。
-  依照慣例，輸出的最後一行「必須」是代表動作結果的字串化 JSON 物件。
+  執行檔會從指令行收到單一引數。它是代表動作引數之 JSON 物件的字串序列化。程式可能會記載至 `stdout` 或 `stderr`。依照慣例，輸出的最後一行*必須* 是代表動作結果的字串化 JSON 物件。
 
 3. 建置 Docker 映像檔，並使用提供的 Script 予以上傳。您必須先執行 `docker login` 進行鑑別，然後執行具有所選擇映像檔名稱的 Script。
 
   ```
   docker login -u janesmith -p janes_password
   ```
-
+  {: pre}
   ```
   cd dockerSkeleton
   ```
@@ -863,7 +912,9 @@ wsk action invoke --blocking --result helloJava --param name World
 ## 監看動作輸出
 {: #openwhisk_actions_polling}
 
-其他使用者可能會呼叫 {{site.data.keyword.openwhisk_short}} 動作來回應各種事件，或是作為動作序列的一部分。在這類情況下，監視呼叫可能十分有用。您可以使用 {{site.data.keyword.openwhisk_short}} CLI 來監看所呼叫動作的輸出。
+其他使用者可能會呼叫 {{site.data.keyword.openwhisk_short}} 動作來回應各種事件，或是作為動作序列的一部分。在這類情況下，監視呼叫可能十分有用。
+
+您可以使用 {{site.data.keyword.openwhisk_short}} CLI 來監看所呼叫動作的輸出。
 
 1. 從 Shell，發出下列指令：
   ```
@@ -903,7 +954,7 @@ wsk action list
 ```
 {: pre}
 
-隨著您撰寫愈多動作，此清單也會變得愈長，將相關的動作分組成[套件](./openwhisk_packages.html)可能會有所助益。若要將您的動作清單過濾為只有特定套件中的動作，您可以使用：
+隨著您撰寫愈多動作，此清單也會變得愈長，而其有助於將相關的動作分組成[套件](./openwhisk_packages.html)。若要將您的動作清單過濾為只有特定套件中的動作，您可以使用： 
 
 ```
 wsk action list [PACKAGE NAME]
@@ -914,7 +965,7 @@ wsk action list [PACKAGE NAME]
 ## 刪除動作
 {: #openwhisk_delete_action}
 
-透過刪除您不要使用的動作來進行清除。
+刪除您不要使用的動作來進行清除。
 
 1. 執行下列指令，以刪除動作：
   ```
@@ -940,9 +991,9 @@ wsk action list [PACKAGE NAME]
 
 動作環境包含執行中動作特有的數個內容。這些內容容許動作透過 REST API 以程式設計方式使用 OpenWhisk 資產，或設定在動作即將用完其分配時間預算時的內部警示。使用 OpenWhisk Docker 架構時，可以透過所有支援運行環境的系統環境來存取這些內容：Node.js、Python、Swift、Java 及 Docker 動作。
 
-* `__OW_API_HOST` 執行此動作之 OpenWhisk 部署的 API 主機
-* `__OW_API_KEY` 呼叫動作之主題的 API 金鑰，此金鑰可能是受限 API 金鑰
-* `__OW_NAMESPACE` 「啟動」的名稱空間（這可能與動作的名稱空間不同）
-* `__OW_ACTION_NAME` 執行中動作的完整名稱
-* `__OW_ACTIVATION_ID` 此執行中動作實例的啟動 ID
-* `__OW_DEADLINE` 此動作將用完其整個持續期間配額的大約時間（以新紀元毫秒測量）
+* `__OW_API_HOST`：執行此動作之 OpenWhisk 部署的 API 主機
+* `__OW_API_KEY`：呼叫動作之主題的 API 金鑰，此金鑰可能是受限 API 金鑰
+* `__OW_NAMESPACE`：*啟動* 的名稱空間（這可能與動作的名稱空間不同）
+* `__OW_ACTION_NAME`：執行中動作的完整名稱
+* `__OW_ACTIVATION_ID`：此執行中動作實例的啟動 ID
+* `__OW_DEADLINE`：此動作將用完其整個持續期間配額的大約時間（以新紀元毫秒測量）

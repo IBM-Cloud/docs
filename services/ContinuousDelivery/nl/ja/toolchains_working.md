@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-7"
+lastupdated: "2017-4-28"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-4-7"
 *ツールチェーン*は、開発、デプロイメント、運用の作業をサポートするツール統合のセットです。ツールチェーンの集合的な機能は、個々のツール統合を合わせたものより優れています。
 {: shortdesc}
 
-{{site.data.keyword.Bluemix}} の Public 環境と Dedicated 環境で、オープンなツールチェーンが使用可能です。ツールチェーンの作成方法には、テンプレートを使用する方法と、アプリから作成する方法の 2 とおりがあります。{{site.data.keyword.Bluemix_notm}} Public の場合、ツールチェーンは米国南部地域でのみ利用可能です。
+{{site.data.keyword.Bluemix}} の Public 環境と Dedicated 環境で、オープンなツールチェーンが使用可能です。ツールチェーンの作成方法には、テンプレートを使用する方法と、アプリから作成する方法の 2 とおりがあります。
 
 各ツールチェーンは特定の組織と関連付けられており、その組織のメンバーであるユーザーであればどのユーザーでも、組織に関連付けられたツールチェーンのうちの任意のツールチェーンのアクセス制御リストに追加できます。ツールチェーンのアクセス制御について詳しくは、[アクセスの管理](/docs/services/ContinuousDelivery/toolchains_using.html#managing_access){: new_window}を参照してください。ツールチェーンを作成する前に、そのツールチェーンを作成したい組織で作業していることを確認してください。作業している組織は、メニュー・バーに表示されています。別の組織に切り替えるには、メニュー・バーの組織をクリックしてから、切り替え先の組織を選択します。
 
@@ -27,7 +27,7 @@ lastupdated: "2017-4-7"
 
 1. {{site.data.keyword.Bluemix_notm}} Public を使用する場合、[{{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://console.ng.bluemix.net){:new_window} にログインします。
 1. {{site.data.keyword.Bluemix_notm}} Dedicated を使用する場合、{{site.data.keyword.Bluemix_notm}} の Dedicated 環境にログインします。
-1. ハンバーガー・メニュー (三本線のアイコン) から、**「サービス」**をクリックし、**「DevOps」**をクリックします。
+1. {{site.data.keyword.Bluemix_notm}} メニュー・バーのメニューから、**「サービス」**をクリックして、**「DevOps」**をクリックします。
 1. DevOps ダッシュボードの**「ツールチェーン」**ページで、**「ツールチェーンの作成 (Create a Toolchain)」**をクリックします。
 1. **「ツールチェーンの作成 (Create a Toolchain)」**ページで、ツールチェーン・テンプレートをクリックします。
 1. 作成しようとしているツールチェーンの図を確認します。この図は、ツールチェーン内の各ツール統合とそのライフサイクル・フェーズを示しています。

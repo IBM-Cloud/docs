@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-04-13"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -16,14 +16,14 @@ lastupdated: "2017-04-13"
 # Manage APIs
 {: #manage_apis}
 
-After you integrate your API so it is managed and monitored by the API management system, you can view and modify the API settings. If you have not integrated your API, you must integrate one by completing the procedure in [Creating APIs from {{site.data.keyword.openwhisk_short}} actions](manage_openwhisk_apis.html). 
+After you integrate your API so it is managed and monitored by the API management system, you can view and modify the API settings. If you have not integrated your API, you must integrate one by completing the procedure in [Creating APIs from {{site.data.keyword.openwhisk_short}} actions](manage_openwhisk_apis.html) or [Enabling API managed endpoints](manage_cf_apis.html). 
 
 To manage the settings for your API, complete the following steps:
 
 If you created a new API, and it is already opened in the interface, you can skip the first three steps.
 
-1. Select the API that you want to manage by selecting an action on the {{site.data.keyword.openwhisk_short}} service Dashboard, if the information for your API is not already displayed.
-2. Select the **APIs** tab, if necessary.
+1. Select the API that you want to manage from the {{site.data.keyword.Bluemix}} Dashboard or by selecting an action on the {{site.data.keyword.openwhisk_short}} service Dashboard, if the information for your API is not already displayed.
+2. Click **API Management** in the navigation, or select the **APIs** tab if it is an {{site.data.keyword.openwhisk_short}} action.
 3. Select the API that you want to manage, if necessary. When a connection is established, the following selections are available for you to view and update:
     * Summary
     * Definition
@@ -82,9 +82,9 @@ To change the settings for an API, complete the following steps:
 
 You can share APIs with other users inside or outside your {{site.data.keyword.Bluemix_notm}} organization.
 
-When you share your APIs with others, either inside or outside of your {{site.data.keyword.Bluemix_notm}} organization, you can create keys for your APIs. Each managed API supports 5 keys that can be created and assigned that API. By sending a unique key to an individual or company, you can track some statistics about how that API is used. For example, you can track the number or calls to your API by that person or company.
+When you share your APIs with others, either inside or outside of your {{site.data.keyword.Bluemix_notm}} organization, you can create keys for your APIs. Each managed API supports 5 keys that can be created and assigned that API. By sending a unique key to an individual or company, you can track some statistics about how that API is used. For example, you can track the number of calls to your API by that person or company.
 
-You can also limit the number of calls at the key ledisable a key or limit the calls from a key. This can be helpful during testing, workload balancing, monetizing, or for addressing some security situations.  
+You can also disable a key or limit the calls from a key. This can be helpful during testing, workload balancing, monetizing, or for addressing some security situations.  
 
 1. In the API management dashboard, click the **Sharing** tab.
 2. Within the "Sharing within {{site.data.keyword.Bluemix_notm}} Organization" area, select **Share API with all users in my Bluemix organization** if you want your API to be available to others with access to your {{site.data.keyword.Bluemix_notm}} organization. This must be selected to generate a key.
@@ -94,7 +94,7 @@ You can also limit the number of calls at the key ledisable a key or limit the c
 
 In the Sharing Outside of {{site.data.keyword.Bluemix_notm}} Organization section, you can share your API with users who do not have a {{site.data.keyword.Bluemix_notm}} account. This method of sharing provides a direct link to view the information about the API in the API Explorer. The API contains a button to run the API in the API Explorer view. To request a link for your API, complete the following steps:
 
-1. Within the "Sharing Outside of {{site.data.keyword.Bluemix_notm}} Organization" section. Click **Create API Key**. The Create API Key dialog box is displayed.
+1. Within the "Sharing Outside of {{site.data.keyword.Bluemix_notm}} Organization" section, click **Create API Key**. The Create API Key dialog box is displayed.
      Notice that the user has a secret that you cannot control.
 2. Provide a unique name for the API key.
 3. Select **Create key**. 

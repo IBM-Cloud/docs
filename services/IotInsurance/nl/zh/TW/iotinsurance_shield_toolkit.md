@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-27"
+lastupdated: "2017-04-25"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -63,7 +63,7 @@ var config = module.exports = {
 
 方法：POST  
 API：/shield  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shield/addShield
+https://iot4i-api-docs.mybluemix.net/#!/shield/addShield
 
 在 createShield.js 檔案中建立防護定義。下列範例顯示用來偵測漏水的簡單防護。
 
@@ -162,7 +162,7 @@ var shieldCode = {
 
 方法：POST  
 API：/user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/user/addUser
+https://iot4i-api-docs.mybluemix.net/#!/user/addUser
 
 在 createUser.js 檔案中建立使用者。下列範例顯示如何建立單一使用者。
 
@@ -197,7 +197,7 @@ var user = {
 
 方法：POST  
 API：/user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shieldassociation/addShieldAssociation
+https://iot4i-api-docs.mybluemix.net/#!/shieldassociation/addShieldAssociation
 
 在 createUserShieldAssociation.js 中，建立將防護鏈結至使用者的防護關聯。
 
@@ -219,7 +219,7 @@ var userShield = {
 
 方法：POST  
 API：/sendPayloadToMQTT  
-https://iot4i-docs-api.mybluemix.net/dist/#!/global/sendPayloadToMQTT
+https://iot4i-api-docs.mybluemix.net/#!/global/sendPayloadToMQTT
 
 您可以建立模擬的危害有效負載，以測試防護。
 

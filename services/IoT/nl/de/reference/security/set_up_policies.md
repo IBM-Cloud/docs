@@ -37,7 +37,7 @@ Sie können die Standardsicherheitsebene festlegen, die auf alle Geräte angewen
 Sie können auch über die Seite **Allgemein** unter **Einstellungen** auf die Verbindungssicherheitseinstellungen zugreifen. Klicken Sie auf **Verbindungssicherheitsrichtlinie öffnen**.
 
 ## Verbindungsrichtlinien für Standardsicherheit konfigurieren
-{: #config_connect_standard}
+{: #config_connect}
 
 Für Organisationen, die Standardsicherheit verwenden, ändern Sie die Sicherheitseinstellungen auf der Seite **Allgemein** unter **Einstellungen**. Sie können die Standardsicherheitsebene festlegen, die auf alle Geräte angewendet wird.
 

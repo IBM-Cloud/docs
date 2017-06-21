@@ -1,15 +1,17 @@
-[앱 관리](/docs/manageapps/mngapps.html)
-    mngapps.md
-    [앱에 서비스 추가](../services/reqnsi.html)
-        [새 서비스 인스턴스 요청](../services/reqnsi.html#req_instance)
-        [애플리케이션이 서비스와 상호작용하도록 구성](../services/reqnsi.html#config)
-        [외부 앱이 Bluemix 서비스를 사용하도록 설정](../services/reqnsi.html#accser_external)
-        [사용자 제공 서비스 인스턴스 작성](../services/reqnsi.html#user_provide_services)
-        [다른 지역에서 서비스 사용](../services/reqnsi.html#cross_region_service)
-        [다른 서비스에서 서비스 사용](../services/reqnsi.html#s2s_binding)
-    depapps.md
-    [단추 작성](../develop/deploy_button.html)
-        [Bluemix에 배치 프로젝트 파이프라인 공유](../develop/sharetextpipelines.html)
-        [Bluemix에 배치 iFrame 플로우 임베드](../develop/deploy_button_embed.html)
-    updapps.md
-    secapps.md
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix-manage-apps" audience="platform" href="/docs/manageapps/mngapps.html"}
+앱 관리
+
+	{: .navgroup id="learn"}
+	mngapps.md
+	{: .navgroup-end}
+	
+	{: .navgroup id="howto"}
+	[앱에 서비스 추가](../services/reqnsi.html#add_service)
+	depapps.md
+	[Bluemix에 배치 단추 작성](../develop/deploy_button.html)
+	updapps.md
+	secapps.md
+	{: .navgroup-end}

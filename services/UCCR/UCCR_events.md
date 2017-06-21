@@ -2,7 +2,12 @@
 
 copyright:
  years: 2017
+
 lastupdated: "2017-6-16"
+
+
+
+
 
 ---
 
@@ -14,7 +19,11 @@ lastupdated: "2017-6-16"
 # Managing events and tags
 {: #events_overview}
 
+
 An event represents a release-related activity that you manage with the calendar.
+
+
+
 
 A tag is a label that you can add to a release or an event. You can use tags to filter the Activities list on the Releases page. Unlike events, tags do not appear on the calendar.
 
@@ -27,11 +36,14 @@ When an event is assigned, it is represented on the calendar by an icon appropri
 Tags are assigned to releases and can be used to filter the Releases page. Assigned tags appear in Releases page but they do not appear on the calendar. You can use tags to avoid calendar clutter.
 
 ## Filtering release events and deployment plans
+
 {: #events_findFilter}
 
 The Releases page displays the releases, events, and deployment plans that are created by you and your teams. From the Releases page, you can do most release-related activities, such as creating releases and deployment plans.
 
+
 By default, the Releases page displays activities that are scheduled for the next seven days. You can filter the display by time, event, tag, and status. For example, you might restrict the display to releases that are scheduled for tomorrow. The currently selected date range is displayed on the action bar.
+
 
 To filter the Releases page by event or tag, select the event or tag in the search bar, and then press Enter.
 
@@ -56,7 +68,6 @@ To filter items by status, select one the following filters:
 <li>Select **Failed** to display deployments that have the status of Failed.</li>
 <li>Select **Complete** to display deployments that have the status of Complete.
 </li>
-</li>
 <li>Select **Archive** to display releases, events, and deployment plans saved to the archive. Archived items can be restored.
 </li>
 <li>Select **Templates** to display deployment plans that are saved as templates. You can use templates to create plans. You can revert templates to deployment plans.  
@@ -66,7 +77,11 @@ To filter items by status, select one the following filters:
 ## Using the calendar
 {: #events_calendarManage}
 
+
 You can filter the **Activities** list by selecting event icons on the calendar. Event icons are styled by category, which makes it easy to tell the event category represented. Event categories are described in the following list:
+
+
+
 
 <ul>
 <li>Release events are represented by solid-colored circles <img class="inline" src="images/event-icon-release.png"  alt="Release event icon">.</li>
@@ -102,7 +117,9 @@ To create an event, complete the following steps:
 
 1. In the Configure calendar page, click **Add event type** <img class="inline" src="images/event-add.png"  alt="Add event type"> for the event category that you want to create.
 
+
 3. In the text box, enter a name for the event.
+
 
 3. Click **Save**. You can edit and delete event tags.
 

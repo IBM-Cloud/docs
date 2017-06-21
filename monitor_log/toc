@@ -22,6 +22,10 @@ Monitoring and Logging
         monitoring/containers/monitoring_containers_ov.md
     
     {: .topicgroup}
+    Tutorials
+        logging/containers/tutorials/kibana_tutorial_1.md
+    
+    {: .topicgroup}
     Related links
         [Learn more about Kibana](https://www.elastic.co/guide/en/kibana/4.1/index.html){: new_window}
         [Apache Lucene - Query Parser Syntax](https://lucene.apache.org/core/2_9_4/queryparsersyntax.html){: new_window}
@@ -31,7 +35,8 @@ Monitoring and Logging
     {: .navgroup id="howto"}
     logging/logging_view_dashboard.md
     logging/logging_view_cli.md
-    
+    monitoring/containers/analyzing_metrics_bmx_ui.md
+        
     {: .topicgroup}
     Advanced log analysis (Kibana)
         logging/kibana4/logging_kibana_analize_logs_interactively.md
@@ -51,9 +56,9 @@ Monitoring and Logging
         
     {: .topicgroup}
     Grafana
-        monitoring/grafana/monitoring_analyzing_metrics_grafana.md
-        monitoring/grafana/monitoring_grafana.md
-        
+        monitoring/grafana/navigating_grafana.md
+        monitoring/grafana/create_grafana_dashboard.md
+                
     {: .topicgroup}
     Log analysis (Kibana 3) Deprecated
         logging/logging_view_kibana3.md

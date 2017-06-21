@@ -72,7 +72,7 @@ Static Analyzer サービスを使用するパイプラインは、通常以下�
 
     * サービス用の Bluemix のスペースと、サービスをコンテナーにバインドするアプリを、パイプラインで確認する場合は、このチェック・ボックスを選択します。サービスやバインドされたアプリが存在しない場合、パイプラインによって、このサービスの無料プランがご使用のスペースに追加されます。作成されたバインド済みアプリには、`pipeline_bridge_app` という名前が付けられます。その後、パイプラインは、pipeline_bridge_app からの資格情報を使用して、バインド済みサービスにアクセスします。
 
-    * サービスとバインド済みアプリを Bluemix のスペースで構成してある場合、または[これらの要件を手動で構成する](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window}場合は、このチェック・ボックスをクリアします。
+    * サービスとバインド済みアプリを Bluemix のスペースで構成してある場合、または[これらの要件を手動で構成する](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}場合は、このチェック・ボックスをクリアします。
 
   f. **「分析の完了を待機する時間」**フィールドで、0 から 59 分の値を入力します。デフォルト値は 5 分です。ジョブ終了時、Static Analyzer ダッシュボードの URL がコンソール・ログに記録されます。
 
@@ -153,7 +153,7 @@ To create the globalization stage and job:
 
     * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), leave this check box cleared.
+    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
 
   g. For the Globalization bundle prefix, enter a prefix for the bundle name, which is structured in this format: `<globalization_bundle_prefix>.path.to.source.file`. The pipeline job creates this Globalization bundle for you in the Globalization Pipeline service.
 
@@ -334,4 +334,4 @@ IBM Continuous Delivery Pipeline for Bluemix を使用して、Bluemix へのア
   - Docker イメージのビルド
   - Bluemix へのコンテナーのイメージのデプロイ
 
-概要について詳しくは、[Delivery Pipeline とコンテナーの概要](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window}を参照してください。
+概要について詳しくは、[Delivery Pipeline とコンテナーの概要](/docs/containers/container_integrations.html#container_pipeline_ov){: new_window}を参照してください。

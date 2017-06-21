@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-13"
+lastupdated: "2017-04-25"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -19,7 +18,7 @@ lastupdated: "2017-03-13"
 ## {{site.data.keyword.openwhisk_short}} CLI 설정 
 
 {{site.data.keyword.openwhisk_short}} 명령행 인터페이스(CLI)를 사용하여 네임스페이스 및 권한 키를 설정할 수 있습니다.
-[CLI 구성](https://new-console.{DomainName}/openwhisk/cli){: new_window}으로 이동하고 지시사항에 따라 이를 설치하십시오. 
+[CLI 구성](https://console.{DomainName}/openwhisk/cli)으로 이동하고 지시사항에 따라 이를 설치하십시오. 
 
 CLI를 사용하기 위해 구성할 두 가지 필수 특성은 다음과 같습니다.
 

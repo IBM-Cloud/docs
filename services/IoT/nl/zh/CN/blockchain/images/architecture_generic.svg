@@ -469,8 +469,8 @@
    fit-margin-left="0"
    fit-margin-right="0"
    fit-margin-bottom="0"
-   inkscape:zoom="2.72"
-   inkscape:cx="498.31007"
+   inkscape:zoom="1.2"
+   inkscape:cx="397.32069"
    inkscape:cy="173.08809"
    inkscape:window-width="1440"
    inkscape:window-height="838"
@@ -478,6 +478,7 @@
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
    inkscape:current-layer="svg5645" />
+
 
 
 
@@ -1122,6 +1123,7 @@
 
 
 
+
     image
        y=&quot;504.73132&quot;
        x=&quot;627.01056&quot;
@@ -1155,11 +1157,11 @@
      id="tspan266402" /></text>
 <text
    sodipodi:linespacing="125%"
-   y="9.4960632"
+   y="11.496063"
    x="215.65582"
    font-size="13"
    id="text56812"
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">IBM® Bluemix</text>
+   style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold">IBM® Bluemix</text>
 <g
    id="g5722"
    transform="matrix(0.10411489,0,0,0.1041149,14.523878,72.208945)"
@@ -1208,6 +1210,7 @@
      y="114.79636"
      id="tspan9810"
      style="-inkscape-font-specification:SimHei;font-family:SimHei">仪表板</tspan></text>
+
 
 
 
@@ -1327,6 +1330,7 @@
      y="154.37759"
      id="tspan5893"
      style="-inkscape-font-specification:SimHei;font-family:SimHei">代理</tspan></text>
+
 
 
 

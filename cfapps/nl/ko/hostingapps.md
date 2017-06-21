@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-05-09"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -93,12 +93,16 @@ lastupdated: "2016-05-09"
 |:------|:--------|
 |Cloud Foundry 명령행 인터페이스(cf cli)	|로컬 클라이언트에서 코드를 관리하고 Cloud Foundry 명령행 인터페이스를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 수동으로 푸시하십시오. 자세한 정보는 [앱 업로드](/docs/starters/upload_app.html)를 참조하십시오. |
 |Eclipse	|Eclipse에서 코드를 관리하고 {{site.data.keyword.Bluemix_notm}}용 IBM Eclipse 도구를 사용하여 애플리케이션을 푸시하십시오.|
-|Git 통합	|GitHub에서 코드를 관리하고 Git를 {{site.data.keyword.Bluemix_notm}}로 통합하십시오. 다른 개발자과 협업할 수 있습니다. 애플리케이션은 코드의 변경사항을 커미트할 때 {{site.data.keyword.Bluemix_notm}}에 자동으로 배치됩니다. 애플리케이션을 수동으로 푸시할 필요가 없습니다. |
-|{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|DevOps GitHub 저장소에서 코드를 관리하고 DevOps Delivery Pipeline을 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하십시오. |
+|{{site.data.keyword.contdelivery_full}} |    {{site.data.keyword.contdelivery_short}}를 사용하여 빌드, 단위 테스트, 배치 등을 자동화합니다. 풍부한 웹 기반 IDE을 통해 코드를 편집하고 푸시하십시오. 개발, 배치 및 오퍼레이션 태스크를 지원하는 도구 통합을 사용할 수 있도록 도구 체인을 작성합니다. Continuous Delivery 서비스에는 Delivery Pipeline, Eclipse Orion Web IDE, Git 저장소 및 문제 추적이 포함됩니다. 자세한 정보는 <a href="/docs/services/ContinuousDelivery/index.html#cd_getting_started">Continuous Delivery 시작하기</a>를 참조하십시오.|
 {: caption="표 1. {{site.data.keyword.Bluemix_notm}} 도구" caption-side="top"}
 
 
 Cloud Foundry 플랫폼이 애플리케이션 요구사항을 충족하지 않는 경우에는 보다 사용자 정의된 옵션으로 런타임이 설정, 구성되고 유지보수되는 VM 또는 컨테이너를 사용할 수 있습니다. 
+
+##Continuous Delivery에서 도구 체인을 사용하여 앱 개발 및 배치
+{:ht_cd}
+
+<a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">도구 체인을 앱에</a> 추가한 후에 <a href="/docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">Continuous Delivery 도구 체인 UI</a>를 사용하여 앱을 개발하고 배치하십시오. 
 
 ##cf cli를 사용하여 앱 업로드
 {: #ht_cfcli}

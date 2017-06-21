@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-20"
 
 ---
 
@@ -230,7 +230,7 @@ System.err.println("Failed to update the location!");
 
 ### 发送已连接设备的位置更新
 
-网关可以调用相应的 `updateDeviceLocation()` 设备方法来更新已连接设备的位置。重载方法可用于指定 `measuredDateTime` 方法。  
+网关可以调用相应的 `updateDeviceLocation()` 设备方法来更新已连接设备的位置。重载方法可用于指定 `measuredDateTime` 方法。
 
 ```java
 // update the location of the attached device with latitude, longitude, and elevation
@@ -648,6 +648,138 @@ mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
 有关设备操作的更多信息，请参阅[设备管理请求 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window}。
+
+## 设备管理扩展包
+{: #dme}
+
+设备管理扩展 (DME) 软件包是一种 JSON 文档，用于定义一组定制设备管理操作。可以在支持这些操作的一个或多个设备上启动这些操作。启动操作的方法是使用 {{site.data.keyword.iot_short}} 仪表板或者设备管理 REST API。
+
+有关 DME 软件包格式的更多信息，请参阅[扩展设备管理](../../devices/device_mgmt/custom_actions.html)。
+
+### 支持定制设备管理操作
+
+扩展包中定义的设备管理操作可以在支持这些操作的网关或者已连接设备上启动。
+
+设备在向 {{site.data.keyword.iot_short}} 发布管理请求时指定自己支持的操作类型。为了让设备能够接收在特定扩展包中定义的定制操作，设备必须在发布管理请求时在支持对象中指定该扩展的捆绑软件标识。
+
+网关可以使用捆绑软件标识的列表来调用 `manage()` API，以通知 {{site.data.keyword.iot_short}} 对于在管理请求中提供的捆绑软件标识列表，网关或已连接设备支持 DME 操作。
+
+以下代码片段用于发布管理请求以通知 {{site.data.keyword.iot_short}} 此网关支持 DME 操作：
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendGatewayManageRequest(0, false, false, bundleIds);
+```
+
+最后一个参数指定设备支持的定制操作。
+
+与此类似，网关可以调用相应的设备方法来告知已连接设备所支持的 DME 操作：
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendDeviceManageRequest(typeId, deviceId, 0, false, false, bundleIds);
+```
+
+### 处理定制设备管理操作
+
+在网关或已连接到 {{site.data.keyword.iot_short}} 的设备上启动定制操作时，将向该网关发布一条 MQTT 消息。该消息中包含被指定为请求一部分的参数。网关必须添加 CustomActionHandler 才能接收和处理该消息。该消息将作为 `CustomAction` 类的实例返回，并包含下列属性：
+
+| 属性     | 数据类型     | 描述 |
+|----------------|----------------|----------------|
+|`bundleId` |字符串 | DME 的唯一标识。|
+|`actionId` |字符串|被启动的定制操作。|
+|`typeId` |字符串|在其上启动定制操作的设备类型。|
+|`deviceId` |字符串|在其上启动定制操作的设备。|
+|`payload` |字符串|包含 JSON 格式参数列表的实际消息。|
+|`reqId` |字符串|用于响应定制操作请求的请求标识。|
+
+以下代码是实施 `CustomActionHandler` 的样本：
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.ibm.iotf.client.CustomAction;
+import com.ibm.iotf.client.CustomAction.Status;
+import com.ibm.iotf.devicemgmt.CustomActionHandler;
+
+public class MyCustomActionHandler extends CustomActionHandler implements Runnable {
+
+	// 用于容纳并处理命令以便顺利处理 MQTT 消息的队列
+	private BlockingQueue<CustomAction> queue = new LinkedBlockingQueue<CustomAction>();
+	// 用于容纳每个设备的发布时间间隔的映射
+	private Map<String, Long> intervalMap = new HashMap<String, Long>();
+
+	@Override
+	public void run() {
+		while(true) {
+			CustomAction action = null;
+			try {
+				action = queue.take();
+				System.out.println(" "+action.getActionId()+ " "+action.getPayload());
+				JsonArray fields = action.getPayload().get("d").getAsJsonObject().get("fields").getAsJsonArray();
+				for(JsonElement field : fields) {
+					JsonObject fieldObj = field.getAsJsonObject();
+					if("PublishInterval".equals(fieldObj.get("field").getAsString())) {
+						long val = fieldObj.get("value").getAsLong();
+						String key = action.getTypeId() + ":" + action.getDeviceId();
+						long publishInterval = val * 1000;
+						intervalMap.put(key, publishInterval);
+						System.out.println("Updated the publish interval to "+val);
+					}
+				}
+				action.setStatus(Status.OK);
+
+			} catch (InterruptedException e) {}
+		}
+	}
+
+	public long getPublishInterval(String deviceType, String deviceId) {
+		String key = deviceType + ":" + deviceId;
+		Long val = intervalMap.get(key);
+		if(val == null) {
+			return 1000; // default is 1 second
+		} else {
+			return val.longValue();
+		}
+	}
+
+	@Override
+	public void handleCustomAction(CustomAction action) {
+		try {
+			queue.put(action);
+			} catch (InterruptedException e) {
+		}
+
+	}
+}
+```
+
+将 `CustomActionHandler` 添加到 `ManagedGateway` 实例之后，只要应用程序启动了任何操作，就会调用 `handleCustomAction()` 方法。
+
+以下代码样本概述了如何将 `CustomActionHandler` 添加到 `ManagedGateway` 实例。
+
+```java
+MyCustomActionHandler handler = new MyCustomActionHandler();
+mgdGateway.addCustomActionHandler(handler);
+```
+
+网关在接收定制操作消息后，会完成该操作，或者以表明无法完成该操作的错误代码做出响应。网关必须使用 *setStatus()* 方法来设置操作状态：
+
+```java
+action.setStatus(Status.OK);
+```
+
+有关 DME 的更多信息，请参阅[扩展设备管理请求 ![外部链接图标](../../../../icons/launch-glyph.svg "外部链接图标")](../../devices/device_mgmt/custom_actions.html){: new_window}。
 
 ## 侦听设备属性更改
 {: #listen_device_attributes}

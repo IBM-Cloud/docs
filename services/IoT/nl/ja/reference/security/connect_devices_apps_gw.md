@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-19"
+lastupdated: "2017-04-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-01-19"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# {{site.data.keyword.iot_short_notm}} へのアプリケーション、デバイス、ゲートウェイの接続
+# API を使用したアプリケーション、デバイス、ゲートウェイの接続
 {: #connect_devices_apps_gw}
 
 アプリケーション、デバイス、ゲートウェイは、MQTT プロトコルを使用して {{site.data.keyword.iot_full}} に接続できます。デバイスは、HTTP REST API を使用して {{site.data.keyword.iot_short_notm}} に接続することもできます。
@@ -31,7 +31,7 @@ lastupdated: "2017-01-19"
 
 ### HTTP REST API 接続 URL
 
-<pre class="pre">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/events/<var class="keyword varname">eventId</var></code></pre>
 {: codeblock}
 
 **注**

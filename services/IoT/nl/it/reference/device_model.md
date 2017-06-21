@@ -42,11 +42,11 @@ Per ulteriori informazioni sugli identificativi e sulle descrizioni dei loro ide
 ## Tipi di dispositivo e identificativi
 {: #id_and_device_types}
 
-Ogni dispositivo collegato a {{site.data.keyword.iot_short_notm}} viene associato a un tipo di dispositivo. I tipi di dispositivo sono gruppi di dispositivi che condividono le caratteristiche o i comportamenti.
+Ogni dispositivo collegato a {{site.data.keyword.iot_short_notm}} viene associato a un tipo dispositivo. I tipi di dispositivo sono gruppi di dispositivi che condividono le caratteristiche o i comportamenti.
 
-Un tipo di dispositivo dispone di una serie di attributi. Quando un dispositivo viene aggiunto a {{site.data.keyword.iot_short_notm}}, gli attributi e i loro tipi di dispositivo vengono utilizzati come template. Se il dispositivo dispone di un valore, viene utilizzato tale valore. Se il dispositivo non dispone di un valore, viene utilizzato il valore del tipo di dispositivo. Ad esempio, il tipo di dispositivo può avere un valore per l'attributo `deviceInfo.fwVersion`, che rispecchia la versione del firmware al momento della produzione. Questo valore viene copiato dal tipo di dispositivo nei dispositivi quando vengono aggiunti. Quando viene aggiunto un dispositivo, se il valore `deviceInfo.fwVersion` già esiste, viene sovrascritto.
+Un tipo dispositivo dispone di una serie di attributi. Quando un dispositivo viene aggiunto a {{site.data.keyword.iot_short_notm}}, gli attributi e i loro tipi di dispositivo vengono utilizzati come template. Se il dispositivo dispone di un valore, viene utilizzato tale valore. Se il dispositivo non dispone di un valore, viene utilizzato il valore del tipo dispositivo. Ad esempio, il tipo dispositivo può avere un valore per l'attributo `deviceInfo.fwVersion`, che rispecchia la versione del firmware al momento della produzione. Questo valore viene copiato dal tipo dispositivo nei dispositivi quando vengono aggiunti. Quando viene aggiunto un dispositivo, se il valore `deviceInfo.fwVersion` già esiste, viene sovrascritto.
 
-Quando un attributo di un tipo di dispositivo viene aggiornato, soltanto i nuovi dispositivi registrati ereditano le modifiche effettuate al template del tipo di dispositivo.
+Quando un attributo di un tipo dispositivo viene aggiornato, soltanto i nuovi dispositivi registrati ereditano le modifiche effettuate al template del tipo dispositivo.
 
 ## Attributi
 {: #attributes}

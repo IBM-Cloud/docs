@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
   
-lastupdated: "2017-3-16"  
+lastupdated: "2017-4-10"  
 
 ---
 
@@ -14,9 +14,10 @@ lastupdated: "2017-3-16"
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock} 
 
+
+
 # {{site.data.keyword.Bluemix_notm}} 액세스 문제점 해결 
 {: #accessing}
-
 
 
 {{site.data.keyword.Bluemix}} 액세스와 관련한 일반적인 문제점으로는 사용자가 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 없거나, 계정이 보류 상태로 남아 있는 경우 등이 있습니다. 그러나 대부분의 경우 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
@@ -45,6 +46,35 @@ lastupdated: "2017-3-16"
   
 **참고:** IBM 직원의 경우 IBM ID와 인트라넷 로그인 ID는 서로 다를 수 있습니다.  
 
+
+
+<!-- begin STAGING ONLY --> 
+
+## 외부 웹 사이트 액세스 문제점
+{: #ts_bmlinkid}
+
+IBM ID에 인트라넷 ID를 연결하지 않는 한 IBM 인트라넷 ID를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인할 수 없습니다.
+
+
+{{site.data.keyword.Bluemix_notm}} 로그인 페이지에서 **인트라넷 ID로 로그인**을 선택하면 다음 오류 메시지가 표시됩니다.
+{: tsSymptoms} 
+
+`외부 웹 사이트 액세스 문제점`
+
+
+
+IBM ID에 연결되지 않은 IBM 인트라넷 ID를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인할 때 이러한 문제점이 발생합니다. IBM ID는 www.ibm.com에 로그인하는 데 사용하는 ID입니다.
+{: tsCauses}
+
+
+IBM 직원이 IBM 인트라넷 ID를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인하려면 외부 IBM ID에 인트라넷 ID를 연결해야 합니다. 두 개의 ID를 연결하려면 다음 단계를 완료하십시오.
+{: tsResolve} 
+
+  1. [Central Sign-on ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://w3-03.sso.ibm.com/tools/cso/index.jsp){: new_window} 페이지에서 **My Sign-ons**를 클릭하십시오.
+  2. My Sign-ons 페이지에서 **Link IDs**를 클릭하고 {{site.data.keyword.Bluemix_notm}} 로그인 페이지에 IBM ID와 비밀번호를 입력하십시오. 그러면 인트라넷 ID와 IBM ID가 자동으로 연결됩니다.
+  
+
+<!-- end STAGING ONLY -->
 
 
 
@@ -93,7 +123,7 @@ lastupdated: "2017-3-16"
 
 DNS 설정을 구성할 때 앱이 실행 중인 {{site.data.keyword.Bluemix_notm}} 지역의 공인 IP 주소를 지정해야 합니다. {{site.data.keyword.Bluemix_notm}} 지역의 공인 IP 주소를 가져오려면 `nslookup` 명령을 사용하십시오. 예를 들어, 명령행 창에 다음 명령을 입력할 수 있습니다. 
 ```
-nslookup mybluemix.net
+nslookup stage1.mybluemix.net
 ```
 
 
@@ -107,13 +137,13 @@ nslookup mybluemix.net
 {{site.data.keyword.Bluemix_notm}} 평가판 계정에 등록하면 {{site.data.keyword.Bluemix_notm}}에 로그인하지 못할 수 있습니다. 대신 다음 메시지가 표시됩니다.
 {: tsSymptoms}
 
-<code>사용자 계정이 보류 중입니다. 사용자 계정의 이메일 확인을 위해 최대 24시간 동안 기다려야 할 수 있습니다. 스팸 폴더도 확인하십시오. 아직 이메일 확인을 받지 못했다면, <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix 지원 <img src="../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>에 문의하십시오.</code>
+<code>사용자 계정이 보류 중입니다. 사용자 계정의 이메일 확인을 위해 최대 24시간 동안 기다려야 할 수 있습니다. 스팸 폴더도 확인하십시오. 아직 이메일 확인을 받지 못했다면, <a href="http://ibm.biz/bluemixsupport.com" target="_blank">Bluemix Support <img src="../icons/launch-glyph.svg" alt="외부 링크 아이콘"></a>에 문의하십시오.</code>
 
 
 {{site.data.keyword.Bluemix_notm}} 평가판 계정에 등록하면 확인 이메일을 받습니다. 확인 이메일에 있는 링크를 클릭하여 등록 프로세스를 완료해야 합니다.
 {: tsCauses} 
 
-확인 이메일이 사용자가 제공한 이메일 주소로 전송됩니다. 받은 편지함과 정크 메일 폴더를 확인하십시오. 확인 이메일을 받지 못한 경우 [{{site.data.keyword.Bluemix_notm}} 지원 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오.   
+확인 이메일이 사용자가 제공한 이메일 주소로 전송됩니다. 받은 편지함과 정크 메일 폴더를 확인하십시오. 확인 이메일을 수신하지 못한 경우 [{{site.data.keyword.Bluemix_notm}} 지원 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오.  
 {: tsResolve}
 
 
@@ -157,7 +187,7 @@ nslookup mybluemix.net
   
 구성원이 아니라 협업자이기 때문에 사용자를 초대할 수 없는 경우 이전 {{site.data.keyword.Bluemix_notm}} 계정을 삭제한 다음 조직의 구성원으로 참여할 수 있도록 초대를 받아야 합니다. 이전 계정을 삭제하고 구성원으로 계정에 참여하려면 다음 단계를 수행하십시오. 
 
-  1. [{{site.data.keyword.Bluemix_notm}} 지원 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport){: new_window}에 문의하여 지원 티켓을 열고 계정 삭제를 요청하십시오. 이전 계정과 연관된 데이터가 있어 이 데이터를 저장한 다음 새 계정으로 이동하려면 이메일에 이 정보를 포함시키십시오. 
+  1. [{{site.data.keyword.Bluemix_notm}} 지원 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://ibm.biz/bluemixsupport){: new_window}에 문의하여 지원 티켓을 열고 계정 삭제를 요청하십시오. 이전 계정과 연관된 데이터가 있어 이 데이터를 저장한 다음 새 계정으로 이동하려면 이메일에 이 정보를 포함시키십시오. 
   2. 계정이 삭제되면 조직 관리자 역할을 보유한 사용자가 자신을 조직 관리자로 조직에 초대하도록 하십시오. 그런 다음 초대장을 통해 {{site.data.keyword.Bluemix_notm}}에 등록하십시오. 
 
 
@@ -208,11 +238,14 @@ nslookup mybluemix.net
   * {{site.data.keyword.Bluemix_notm}}에서 로그아웃한 후 다시 로그인하십시오.
   * 브라우저의 개인용 브라우징 모드를 사용하십시오. 
   * 브라우저의 쿠키와 캐시를 지우십시오.
-  * 다른 브라우저를 사용하십시오. {{site.data.keyword.Bluemix_notm}}에서 지원하는 브라우저 버전에 대한 정보는 [{{site.data.keyword.Bluemix_notm}} 전제조건 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}을 참조하십시오. 
+  * 다른 브라우저를 사용하십시오. {{site.data.keyword.Bluemix_notm}}가 지원하는 브라우저 버전에 대한 정보는 [{{site.data.keyword.Bluemix_notm}} 전제조건 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/bluemix/support/#prereqs){: new_window}을 참조하십시오.
   * cf 명령행 인터페이스를 설치한 경우 `cf apps` 명령을 입력하여 애플리케이션이 실행 중인지 확인하십시오.
   
   
   
+  
+  
+
 
 
 
@@ -299,10 +332,9 @@ IBM Eclipse Tools for Bluemix가 실행 중인 Java의 버전을 확인하려면
 
 워크벤치 JVM이 IBM JVM 7 또는 8, 또는 Oracle JVM 8의 이전 버전인 경우에는 다음 단계를 완료하여 Oracle JVM 8로 전환하십시오.
 
-  1. Oracle JVM 8을 다운로드한 후 설치하십시오. 세부사항은 [Java SE Downloads ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}를 참조하십시오. 
+  1. Oracle JVM 8을 다운로드한 후에 이를 설치하십시오. 세부사항은 [Java SE Downloads ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}를 참조하십시오.
   2. Eclipse를 다시 시작하십시오.
   3. `eclipse.vm` 특성이 Oracle JVM 8의 새 설치를 지시하는지 확인하십시오.
-
 
   
 ## 삭제된 앱의 이름을 재사용할 수 없음
@@ -338,16 +370,12 @@ IBM Eclipse Tools for Bluemix가 실행 중인 Java의 버전을 확인하려면
 	 cf delete-route mybluemix.net -n app001
 	 ```
 
-  
-  
-  
-  
-  
-  
-  
+
+	 
+	 
+
 ## 조직에서 영역을 검색할 수 없음
 {: #ts_retrieve_space}
-
 현재 조직에 연관되어 있는 영역이 없는 경우 앱 또는 서비스를 작성할 수 없습니다.
 
 Bluemix에서 앱을 작성하려고 할 때 다음과 같은 오류 메시지가 표시됩니다.
@@ -364,8 +392,7 @@ Bluemix에서 앱을 작성하려고 할 때 다음과 같은 오류 메시지�
   * {{site.data.keyword.avatar}} 아이콘 ![아바타 아이콘](images/account_support.svg)을 클릭하여 계정 및 지원 위젯을 열고 영역을 작성할 조직을 선택한 후 **영역 작성**을 클릭하십시오. 
   * cf 명령행 인터페이스에서 `cf create-space <space_name> -o <organization_name>`을 입력하십시오.
 
-다시 시도하십시오. 이 메시지가 다시 표시되면 [Bluemix 상태 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} 페이지로 이동하여 서비스 또는 컴포넌트에 문제가 있는지 확인하십시오. 
-
+다시 시도하십시오. 이 메시지가 다시 표시되면 [Bluemix 상태 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://ibm.biz/bluemixstatus){: new_window} 페이지로 이동하여 서비스 또는 컴포넌트에 문제가 있는지 확인하십시오.
 
 
 
@@ -390,14 +417,12 @@ Bluemix에서 앱을 작성하려고 할 때 다음과 같은 오류 메시지�
 {: tsCauses}
 
   
-
 해당 권한 레벨을 확보하려면 다음 방법 중 하나를 사용하십시오. 
 {: tsResolve}
  * 개발자 역할이 있는 다른 조직과 영역을 선택하십시오. 
  * 조직 관리자에게 문의하여 사용자의 역할을 개발자 역할로 변경하거나 영역을 작성한 다음 사용자에게 개발자 역할을 지정하십시오. 세부사항은 [조직 및 영역 관리](/docs/admin/orgs_spaces.html)를 참조하십시오.
  
 
- 
 
 
 ## 권한 오류로 인해 {{site.data.keyword.Bluemix_notm}} 서비스에 액세스할 수 없음
@@ -418,7 +443,7 @@ Bluemix에서 앱을 작성하려고 할 때 다음과 같은 오류 메시지�
 ```
 process.env.VCAP_SERVICES
 ```
-다른 프로그램 언어로 사용할 수 있는 명령에 대한 자세한 정보는 [Java ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 및 [Ruby ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}를 참조하십시오.
+다른 프로그램 언어로 사용할 수 있는 명령에 대한 자세한 정보는 [Java ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 및 [Ruby ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}를 참조하십시오.
 
 
 
@@ -469,7 +494,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
 
  
 
-{{site.data.keyword.Bluemix_notm}} 서비스의 작동이 중지된 것으로 의심되는 경우에는 먼저 [{{site.data.keyword.Bluemix_notm}} 상태 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://ibm.biz/bluemixstatus){: new_window} 페이지를 확인하십시오. 다른 {{site.data.keyword.Bluemix_notm}} 지역의 서비스를 임시 해결책으로 사용할 수 있습니다. 자세한 정보는 [다른 지역에서 서비스 사용](/docs/services/reqnsi.html#cross_region_service)에서 확인할 수 있습니다. 서비스 상태가 정상이면 다음의 단계를 수행하여 문제를 해결하십시오.
+{{site.data.keyword.Bluemix_notm}} 서비스의 작동이 중지된 것으로 의심되는 경우 먼저 [{{site.data.keyword.Bluemix_notm}} 상태 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://ibm.biz/bluemixstatus){: new_window} 페이지를 확인하십시오. 다른 {{site.data.keyword.Bluemix_notm}} 지역의 서비스를 임시 해결책으로 사용할 수 있습니다. 자세한 정보는 [다른 지역에서 서비스 사용](/docs/services/reqnsi.html#cross_region_service)에서 확인할 수 있습니다. 서비스 상태가 정상이면 다음의 단계를 수행하여 문제를 해결하십시오.
 {: tsResolve}
 
   * 조치 재시도:
@@ -477,7 +502,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
 	* 다른 브라우저를 사용하십시오.
 	* 라우터, 모뎀 및 컴퓨터를 다시 부팅하십시오. 이 디바이스를 다시 부팅하면 오류 502의 원인이 되는 다양한 오류를 정리할 수 있습니다. 
   * 대기한 후 나중에 다시 시도하십시오. 일부 경우에는 인터넷 서비스 제공업체 또는 {{site.data.keyword.Bluemix_notm}} 서비스에 일시적인 문제점이 발생할 수 있습니다. 일시적인 문제점이 해결될 때까지 대기할 수 있습니다.
-  * 문제점이 계속 존재하면 {{site.data.keyword.Bluemix_notm}} 지원 센터에 문의하십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 지원에 문의 ![외부 링크 아이콘](../icons/launch-glyph.svg)](/docs/support/index.html#contacting-bluemix-support){: new_window}를 참조하십시오.  
+  * 문제점이 계속 존재하면 {{site.data.keyword.Bluemix_notm}} 지원 센터에 문의하십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 지원 센터에 문의](/docs/support/index.html#contacting-bluemix-support)를 참조하십시오. 
 
 
 
@@ -508,27 +533,20 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
     ```
 	cf push appname -p app_path -k <disk_quota>
 	```
-
 	
-	
-
-
-## Android 앱이 푸시 알림을 받을 수 없음
+## Android 앱이 {{site.data.keyword.mobilepushshort}}를 받을 수 없음
 {: #ts_push}
 
-Google이 액세스할 수 없는 특정 지역의 Android 앱은 IBM 푸시 서비스를 통해 사용자가 전송하는 알림을 수신할 수 없습니다. 이 경우에는 써드파티 서비스를 임시 해결책으로 사용할 수 있습니다.
+Google이 액세스할 수 없는 특정 지역의 Android 앱은 IBM {{site.data.keyword.mobilepushshort}} 서비스를 통해 전송하는 알림을 받을 수 없습니다. 이 경우에는 써드파티 서비스를 임시 해결책으로 사용할 수 있습니다.
 
- 
-
-Bluemix 앱을 위한 푸시 서비스를 바인딩하고 등록된 디바이스에 메시지를 전송합니다. 하지만 Android 플랫폼에서 개발된 앱이 특정 지역에서 알림을 수신할 수 없습니다.
+Bluemix 앱에 사용할 {{site.data.keyword.mobilepushshort}} 서비스를 바인딩하고 등록된 디바이스에 메시지를 전송합니다. 하지만 Android 플랫폼에서 개발된 앱이 특정 지역에서 알림을 수신할 수 없습니다.
 {: tsSymptoms}
 
- 
-IBM 푸시 서비스는 GCM(Google Cloud Messaging) 서비스를 사용하여 알림을 Android 플랫폼에서 개발되는 모바일 앱에 디스패치합니다. Android 앱이 알림을 수신하도록 설정하려면 모바일 앱이 GCM(Google Cloud Messaging) 서비스에 액세스할 수 있어야 합니댜. Android 앱이 GCM 서비스에 도달할 수 없는 지역에서는 Android 앱이 푸시 알림을 수신할 수 없습니다.
+IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Messaging) 서비스를 사용하여 Android 플랫폼에서 개발되는 모바일 앱에 알림을 디스패치합니다. Android 앱이 알림을 수신하도록 설정하려면 모바일 앱이 GCM(Google Cloud Messaging) 서비스에 액세스할 수 있어야 합니댜. Android 앱이 GCM 서비스에 도달할 수 없는 지역에서는 Android 앱이 {{site.data.keyword.mobilepushshort}}를 받을 수 없습니다.
 {: tsCauses}
 
  
-임시 해결책으로 GCM 서비스에 의존하지 않는 써드파티 서비스를 사용하십시오(예: [Pushy ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://pushy.me){: new_window}, [igetui ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://www.getui.com/){: new_window} 및 [jpush ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://www.jpush.cn/){: new_window}).
+GCM 서비스에 의존하지 않는 써드파티 서비스를 해결책으로 사용하십시오(예: [Pushy ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://pushy.me){: new_window}, [igetui ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.getui.com/){: new_window} 및 [jpush ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.jpush.cn/){: new_window}).
 {: tsResolve}
 
 
@@ -556,7 +574,7 @@ IBM 푸시 서비스는 GCM(Google Cloud Messaging) 서비스를 사용하여 �
  
   * 서비스 인스턴스를 삭제하려면 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 명령행 인터페이스를 사용할 수 있습니다.
     {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 수행하십시오.
-	  1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 삭제할 서비스를 클릭하십시오. 서비스 타일이 표시됩니다.  
+	  1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 삭제할 서비스를 클릭하십시오. 서비스 타일이 표시됩니다. 
 	  2. 서비스 타일에서 **메뉴** 아이콘을 클릭하십시오. 
 	  3. **서비스 삭제**를 클릭하십시오. 서비스 인스턴스를 삭제한 후에는 서비스 인스턴스가 바인딩되었던 애플리케이션을 다시 스테이징하라는 메시지가 표시됩니다.
     명령행 인터페이스를 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 수행하십시오.
@@ -588,18 +606,20 @@ IBM 푸시 서비스는 GCM(Google Cloud Messaging) 서비스를 사용하여 �
 {: tsResolve}
 
 ```
-cf push appname -p <app_path> -c <start_command> -b <null-buildpack>
+cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
 예:
 ```
-cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 
 ## 조직의 메모리 한계를 초과함
 {: #ts_outofmemory}
 
-평가판 계정 사용자인 경우 조직의 메모리 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 수 없습니다. 앱에서 사용하는 메모리를 줄이거나, 계정의 메모리 할당량을 늘릴 수 있습니다. 
+평가판 계정 사용자인 경우 조직의 메모리 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 수 없습니다. 앱에서 사용하는 메모리를 줄이거나, 계정의 메모리 할당량을 늘릴 수 있습니다. 평가판 계정의 최대 메모리 할당량은 2GB이며 유료 계정으로 이동해야만 늘릴 수 있습니다.
+
+
 
 
 
@@ -622,7 +642,10 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
   * 앱에서 사용하는 메모리를 줄이려면 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 cf 명령행 인터페이스를 사용하십시오.
     {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하는 경우 다음 단계를 완료하십시오.
 	  1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 애플리케이션을 선택하십시오. 앱 세부사항 페이지가 열립니다.
-	  2. 런타임 페이지에서 앱에 대한 최대 메모리 한계 또는 앱 인스턴스 수를 줄이거나 둘 다 줄일 수 있습니다.cf 명령행 인터페이스를 사용하는 경우 다음 단계를 완료하십시오.
+	  2. 런타임 페이지에서 앱에 대한 최대 메모리 한계 또는 앱 인스턴스 수를 줄이거나 둘 다 줄일 수 있습니다. 
+	  
+	cf 명령행 인터페이스를 사용하는 경우 다음 단계를 완료하십시오.
+	
 	  1. 앱에 사용 중인 메모리의 양을 확인하십시오.
 	  ```
 	  cf apps
@@ -630,7 +653,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 	     cf 앱 명령은 현재 영역에 배치된 앱을 모두 나열합니다. 각 앱의 상태도 표시됩니다.
       2. 앱에서 사용하는 메모리의 양을 줄이려면 앱 인스턴스 수 또는 최대 메모리 한계를 줄이거나 둘 다 줄이십시오.
 	  ```
-	  cf push <appname> -p <app_path> -i <instance_number> -m <memory_limit>
+	  cf push appname -p app_path -i instance_number -m memory_limit
       ```
 	  3. 변경사항이 적용되도록 앱을 다시 시작하십시오.
 
@@ -659,7 +682,7 @@ cf push appname -p <app_path> -c ./RunMeNow -b https://github.com/ryandotsmith/n
 {: tsResolve}
 
 ```
-cf push <appname> -p <app_path>
+cf push appname -p app_path
 ```
 또한 가동 중단, 예외, 연결 실패 등의 문제점을 식별하고 이러한 문제점에서 복구하도록 앱을 코딩할 수 있습니다.
 
@@ -715,9 +738,40 @@ Web IDE에서 Node.js 앱을 편집할 때 {{site.data.keyword.Bluemix_notm}} �
 path: path_to_application
    ```
   * 앱과 동일한 디렉토리에 `package.json` 파일을 작성하십시오.
-  
-  
 
+  
+  
+  
+<!-- begin STAGING ONLY --> 
+
+## Bluemix Live Sync Debug가 명령행에서 시작되지 않음
+{: #ts_no_debug}
+
+명령행을 사용하여 앱의 IBM Bluemix Live Sync 디버그 기능을 사용할 수 있지만 디버그 인터페이스에 액세스할 수 없습니다.   
+  
+ 
+
+**BLUEMIX_APP_MGMT_ENABLE** 환경 변수를 설정하여 앱의 디버그 기능을 사용으로 설정했습니다. 그러나 `app_url/bluemix-debug/manage`에서 디버그 사용자 인터페이스에 액세스할 수 없습니다.
+{: tsSymptoms}
+
+
+
+다음과 같은 상황에서는 디버그 기능을 사용할 수 없습니다.
+{: tsCauses} 
+
+  * `manifest.yml`에 명령 속성이 포함된 경우
+  * **-c** 옵션을 사용하여 앱을 {{site.data.keyword.Bluemix_notm}}에 푸시하는 경우
+
+ 
+  
+다음 옵션 중 하나를 사용하여 문제를 해결하십시오.
+{: tsResolve}
+
+  * 권장 사례는 IBM Node.js 빌드팩을 사용하여 앱을 시작하는 것입니다. 자세한 정보는 [Node.js 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치](/docs/runtimes/nodejs/index.html#nodejs_runtime) 주제의 시작 명령 절을 참조하십시오. 
+  * `manifest.yml`의 명령 속성을 command: null로 수정하거나 `-c null`을 포함하도록 푸시 명령을 편집하여 기존 앱의 명령을 사용 안함으로 설정하십시오.  
+  * **명령** 속성을 `manifest.yml`에서 제거하십시오. 그런 다음 {{site.data.keyword.Bluemix_notm}}에서 현재 앱을 삭제하고 다시 앱을 푸시하십시오. 
+  
+<!-- end STAGING ONLY -->  
   
   
 
@@ -786,11 +840,11 @@ Eclipse 도구를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix
 
   * `manifest.yml` 파일을 사용하여 애플리케이션을 배치하는 경우 host 옵션에 호스트 이름을 지정하십시오.	 
     ```
-    host: <hostname>	
+    host: host_name	
 	```
   * 명령 프롬프트에서 애플리케이션을 배치하는 경우 `cf push` 명령을 **-n** 옵션과 함께 사용하십시오. 
     ```
-    cf push <appname> -p <app_path> -n <hostname>
+    cf push appname -p app_path -n host_name
     ```
 
 
@@ -896,7 +950,7 @@ Node.js 앱을 업데이트하거나 {{site.data.keyword.Bluemix_notm}}에 배�
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-	  * [package.json ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://docs.npmjs.com/json){: new_window} 파일을 사용하십시오. 예:
+	  * [package.json ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.npmjs.com/json){: new_window} 파일을 사용하십시오. 예:
 	    ```
 		{
       ...
@@ -934,7 +988,7 @@ Node.js 앱을 업데이트하거나 {{site.data.keyword.Bluemix_notm}}에 배�
  }
     ```
 	
-Node.js 앱에 대한 추가 팁은 [Tips for Node.js Applications ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}를 참조하십시오. 	
+Node.js 앱에 대한 추가 팁은 [Node.js 애플리케이션에 대한 팁 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}을 참조하십시오.	
 
 
 
@@ -976,7 +1030,7 @@ Liberty 앱이 {{site.data.keyword.Bluemix_notm}}로 푸시되면 Liberty 빌드
 
  
 
-[git update ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://git-scm.com/docs/git-update-index){: new_window} 명령을 사용하여 각 스크립트의 권한을 실행 가능으로 변경할 수 있습니다. 예를 들어 `git update --chmod=+x script.sh`를 입력합니다.
+[git update ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://git-scm.com/docs/git-update-index){: new_window} 명령을 사용하여 각 스크립트의 권한을 실행 가능으로 변경할 수 있습니다. 예를 들어 `git update --chmod=+x script.sh`를 입력합니다.
 {: tsResolve}
 	
 	
@@ -998,7 +1052,7 @@ Liberty 앱이 {{site.data.keyword.Bluemix_notm}}로 푸시되면 Liberty 빌드
 
  
 
-이 문제점을 해결하려면 `manifest.yml` 파일을 작성해야 합니다. `manifest.yml` 파일을 작성하는 방법에 대한 자세한 정보는 [애플리케이션 Manifest](/docs/manageapps/depapps.html#appmanifest)를 참조하십시오.
+이 문제점을 해결하려면 `manifest.yml` 파일을 작성해야 합니다. `manifest.yml` 파일 작성 방법에 대한 자세한 정보는 [애플리케이션 Manifest ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/manageapps/depapps.html#appmanifest){: new_window}를 참조하십시오.
 {: tsResolve}	
 	
 
@@ -1044,7 +1098,8 @@ Meteor 앱에 대해 사용자 정의 빌드팩을 사용하려면 다음 방법
   * [Bluemix DevOps Services 프로젝트를 작성할 수 없음](#project-cannot-be-created)
   * [Git 저장소를 찾을 수 없어 DevOps Services에 복제할 수 없음](#repo-not-found)
   * [Git 저장소가 DevOps Services에 복제되었지만 앱이 {{site.data.keyword.Bluemix_notm}}에 배치되지 않음](#repo-cloned-app-not-deployed)
-단추 작성 방법에 대한 자세한 정보는 {{site.data.keyword.Bluemix_notm}}로 배치 단추 작성을 참조하십시오.
+
+단추 작성 방법에 대한 자세한 정보는 {{site.data.keyword.Bluemix_notm}}에 배치 단추 작성을 참조하십시오.
 
 ### Bluemix DevOps Services 프로젝트를 작성할 수 없음
 {: #project-cannot-be-created}
@@ -1151,7 +1206,7 @@ Git 저장소가 복제되지 않은 경우 저장소 또는 단추 스니펫 �
 	```
 	<appname> open
 	```
-
+	
 ## 실행 표시줄에서 앱 배치에 실패
 {: #deployinganappfromtherunbarfails}
 
@@ -1196,7 +1251,7 @@ Eclipse Orion {{site.data.keyword.webide}}에 실행 표시줄이 표시되지 �
 6. 상태 아이콘을 다시 확인하여 오류가 없는지 확인하십시오.
    ![오류가 없는 상태 아이콘](images/githubResolved_small.png)
 
-자세한 정보는 [Setting up GitHub for Bluemix DevOps Services projects ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/githubhooks/){: new_window}를 참조하십시오. 
+자세한 정보는 [Setting up GitHub for Bluemix DevOps Services projects ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://hub.jazz.net/docs/githubhooks/){: new_window}를 참조하십시오.
 
 
 # 계정 관리 문제점 해결
@@ -1224,7 +1279,7 @@ Eclipse Orion {{site.data.keyword.webide}}에 실행 표시줄이 표시되지 �
 
  
 
-계정을 다시 활성화하려면 [{{site.data.keyword.Bluemix_notm}} 지원 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오. 이메일에 다음 정보를 포함해야 합니다.
+계정을 다시 활성화하려면 [{{site.data.keyword.Bluemix_notm}} 지원 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://ibm.biz/bluemixsupport.com){: new_window}에 문의하십시오. 이메일에 다음 정보를 포함해야 합니다.
 {: tsResolve}
 
   * {{site.data.keyword.Bluemix_notm}}에 로그인하는 데 사용하는 IBM ID입니다.
@@ -1271,7 +1326,7 @@ Eclipse Orion {{site.data.keyword.webide}}에 실행 표시줄이 표시되지 �
 이 문제점은 한 영역 내의 서로 다른 애플리케이션에 대해 동일한 URL 라우트를 지정한 경우에 발생할 수 있습니다.
 {: tsCauses}
 
-예를 들어, myApp1 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 푸시하고 도메인을 "mynewapp.mybluemix.net"으로 설정합니다. 그런 다음 다른 myApp2 애플리케이션을 동일한 영역에 푸시하고 URL 라우트 중 하나를 "mynewapp.mybluemix.net"으로 설정하십시오. 이제 해당 라우트가 두 애플리케이션 모두에 맵핑되었습니다.
+예를 들어 myApp1 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시하고 도메인을 "mynewapp.stage1.mybluemix.net"으로 설정하십시오. 그런 다음 다른 myApp2 애플리케이션을 동일한 영역으로 푸시하고 URL 라우트 중 하나를 "mynewapp.stage1.mybluemix.net"으로 설정하십시오. 이제 해당 라우트가 두 애플리케이션 모두에 맵핑되었습니다.
 
  
 
@@ -1280,7 +1335,30 @@ Eclipse Orion {{site.data.keyword.webide}}에 실행 표시줄이 표시되지 �
   
 	
 	
+<!-- begin STAGING ONLY --> 
+	
+	
+## 관리자는 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하여 모든 조직을 볼 수 없음
+{: #ts_ui_org}
 
+관리자는 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용할 때 모든 조직을 표시하여 관리할 수 없습니다. 관리자가 속한 조직만 표시하고 관리할 수 있습니다. 
+
+ 
+
+관리자는 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하여 모든 조직을 볼 수 없습니다.
+{: tsSymptoms}
+
+ 
+
+이는 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 제한사항입니다.
+{: tsCauses}
+
+ 
+
+cf 명령행 인터페이스에서 `cf orgs`, `cf create-org`, `cf delete-org`와 같은 명령을 사용하여 모든 조직을 관리할 수 있습니다. cf 명령의 전체 목록을 보려면 `cf help`를 입력하십시오.
+{: tsResolve}
+	
+<!-- end STAGING ONLY -->
 
 
 
@@ -1306,7 +1384,7 @@ Eclipse Orion {{site.data.keyword.webide}}에 실행 표시줄이 표시되지 �
 {: tsResolve}
 
   1. 신용카드 추가 페이지에서 연락처 정보, 연락처 주소, 청구 주소 섹션에 있는 모든 필수 필드에 정보를 입력하십시오.
-  2. **IBM 이용 약관을 읽고 동의함**을 선택한 다음 **제출**을 클릭하십시오. **지불 방법** 섹션이 표시됩니다.
+  2. **IBM 이용 약관을 읽고 동의함**을 선택한 다음 **제출**을 클릭하십시오. **결제 방법** 섹션이 표시됩니다.
   3. 신용카드 번호, 카드 만기 날짜 및 카드 상의 보안 코드를 입력하십시오. 그런 다음 **제출**을 클릭하십시오.
 
 
@@ -1341,14 +1419,14 @@ IBM® Bluemix™ 런타임을 사용할 때 문제점이 발생할 수 있습니
 더 이상 사용되지 않는 컴포넌트를 로드하지 않도록 기본 제공 메커니즘이 있는 빌드팩을 사용할 수 있습니다. 두 가지 예로 다음 빌드팩이 있습니다. 
 {: tsResolve}
 
-  * [Cloud Foundry Java 빌드팩 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack){: new_window}. 최신 버전의 빌드팩을 사용하도록 이 빌드팩에는 기본 메커니즘이 포함되어 있습니다. 이 메커니즘의 작동 방식에 대한 자세한 정보는 [extending-caches.md ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}를 참조하십시오.  
-  * [Cloud Foundry Node.js 빌드팩 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. 이 빌드팩은 환경 변수를 사용하여 비슷한 기능을 수행합니다. Node.js 빌드팩이 항상 인터넷에서 노드 모듈을 다운로드하게 하려면 cf 명령행 인터페이스에서 다음 명령을 입력하십시오. 	
+  * [Cloud Foundry Java buildpack ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/cloudfoundry/java-buildpack){: new_window}. 최신 버전의 빌드팩을 사용하도록 이 빌드팩에는 기본 메커니즘이 포함되어 있습니다. 이 메커니즘의 작동 방식에 대한 자세한 정보는 [extending-caches.md ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}를 참조하십시오. 
+  * [Cloud Foundry Node.js buildpack ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}. 이 빌드팩은 환경 변수를 사용하여 비슷한 기능을 수행합니다. Node.js 빌드팩이 항상 인터넷에서 노드 모듈을 다운로드하게 하려면 cf 명령행 인터페이스에서 다음 명령을 입력하십시오. 	
   ```
   set NODE_MODULES_CACHE=false
   ```
 사용 중인 빌드팩에서 자동으로 최신 컴포넌트를 로드하는 메커니즘을 제공하지 않는 경우 수동으로 캐시 디렉토리에서 컨텐츠를 삭제하고 다음 단계를 수행하여 앱을 푸시할 수 있습니다.
-  1. 널 빌드팩의 분기를 체크아웃합니다. 예: https://github.com/ryandotsmith/null-buildpack 분기를 체크아웃하는 방법에 대한 정보는 [Git Basics - Getting a Git Repository ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}를 참조하십시오.   
-  2. `null-buildpack/bin/compile` 파일에 다음 링크를 추가하고 변경사항을 커미트합니다. 변경사항을 커미트하는 방법에 대한 정보는 [Git Basics - Recording Changes to the Repository ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}를 참조하십시오. 
+  1. 널 빌드팩의 분기를 체크아웃합니다. 예: https://github.com/ryandotsmith/null-buildpack 분기를 체크아웃하는 방법에 대한 정보는 [Git Basics - Getting a Git Repository ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}를 참조하십시오.  
+  2. `null-buildpack/bin/compile` 파일에 다음 링크를 추가하고 변경사항을 커미트합니다. 변경사항을 커미트하는 방법에 대한 정보는 [Git Basics - Recording Changes to the Repository ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}를 참조하십시오.
   ```
   rm -rfv $2/*
   ```
@@ -1383,7 +1461,7 @@ PHP 빌드팩을 사용하여 애플리케이션을 Bluemix로 푸시할 때 `NO
 
 
 
-PHP 빌드팩에서 error_log 매개변수는 로깅 레벨을 정의하는 데 사용됩니다. 기본적으로 `error_log` 매개변수의 값은 **stderr notice**입니다. 다음 예에서는 Cloud Foundry에서 제공하는 PHP 빌드팩의 `nginx-defaults.conf` 파일에 있는 기본 로깅 레벨 구성을 보여줍니다. 자세한 정보는 [cloudfoundry/php-buildpack ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}을 참조하십시오.
+PHP 빌드팩에서 error_log 매개변수는 로깅 레벨을 정의하는 데 사용됩니다. 기본적으로 `error_log` 매개변수의 값은 **stderr notice**입니다. 다음 예에서는 Cloud Foundry에서 제공하는 PHP 빌드팩의 `nginx-defaults.conf` 파일에 있는 기본 로깅 레벨 구성을 보여줍니다. 자세한 정보는 [cloudfoundry/php-buildpack ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window}을 참조하십시오.
 {: tsCauses} 
 
 ```
@@ -1402,7 +1480,7 @@ daemon off;
 error_log stderr error;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
-기본 로깅 구성을 변경하는 방법에 대한 자세한 정보는 [error_log ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}를 참조하십시오.
+기본 로깅 구성 변경 방법에 대한 자세한 정보는 [error_log ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://nginx.org/en/docs/ngx_core_module.html#error_log){: new_window}를 참조하십시오.
 	
 
 ## 써드파티 Python 라이브러리를 {{site.data.keyword.Bluemix_notm}}로 가져올 수 없음
@@ -1587,5 +1665,54 @@ Instance 4: Trace specification is set successfully
 	```
 	
 	
+<!-- begin STAGING ONLY --> 
 
+	
+## Log4js 로거 오브젝트가 Node.js 추적 팝업 창에 표시되지 않음
+{: #ts_logger}
+
+앱에서 log4js 모듈과 ibmbluemix 모듈이 모두 사용되는 경우 log4js 로거 오브젝트가 Node.js 추적 팝업 창에 표시되지 않습니다.  	
+
+ 
+앱에서 log4js, winston, ibmbluemix 모듈이 사용되는 경우 log4js 로거 오브젝트가 Node.js 추적 팝업 창에 표시되지 않습니다.
+{: tsSymptoms}
+
+
+ibmbluemix 모듈은 로그 오퍼레이션에 log4js 모듈과 winston 모듈을 사용하는 통합 API를 제공하므로 ibmbluemix 로거 오브젝트만 Node.js 추적 팝업 창에 표시됩니다. 이는 ibmbluemix, log4js, winston 로거 오브젝트에 대한 로그 레벨 설정을 서로 겹쳐쓰지 않기 위해서입니다.
+{: tsCauses}
+
+
+이는 예상된 동작입니다.
+{: tsResolve}
+
+<!-- end STAGING ONLY -->
+
+
+
+
+<!-- begin STAGING ONLY -->
+
+
+## 애플리케이션의 모든 인스턴스에 추적 설정 적용 선택란이 사용 안함으로 설정됨
+{: #ts_bunyan}
+
+Bunyan 로거 레벨이 수정되는 경우 **애플리케이션의 모든 인스턴스에 추적 설정 적용** 선택란이 선택 취소되고 Node.js 추적 팝업 창에서 사용 안함으로 설정됩니다. 
+
+
+
+Bunyan 로거 오브젝트의 레벨을 변경하면 **애플리케이션의 모든 인스턴스에 추적 설정 적용** 선택란이 선택 취소되고 Node.js 추적 팝업 창에서 사용 안함으롤 설정됩니다.
+{: tsSymptoms} 
+
+ 
+
+Bunyan 로그 레벨이 수정되는 경우 애플리케이션의 모든 인스턴스에 추적 설정을 적용할 수 없습니다. Bunyan 라이브러리에서 Bunyan 로거 오브젝트의 이름 또는 ID가 고유하지 않아도 되기 때문입니다. 애플리케이션의 로그 메시지에서 레벨을 지정하는 데 사용되는 둘 이상의 Bunyan 로거 오브젝트에서 동일한 이름 또는 ID를 사용할 수 있습니다. 그러므로 애플리케이션에 대한 추적 설정이 사용되는 경우 애플리케이션의 로그 메시지에 지정된 로그 레벨은 정확하지 않습니다.
+{: tsCauses}
+
+
+
+
+이는 예상된 동작입니다.
+{: tsResolve} 
+
+<!-- end STAGING ONLY -->
 

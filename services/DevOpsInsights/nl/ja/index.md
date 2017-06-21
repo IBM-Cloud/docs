@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-11"
+  years: 2016, 2017
+lastupdated: "2017-04-07"
 
 ---
 
@@ -12,47 +12,80 @@ lastupdated: "2016-11-11"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# {{site.data.keyword.DRA_short}} (試験用) の概説
+# DevOps Insights の概説 (ベータ)
 {: #gettingstarted}
 
-{{site.data.keyword.DRA_full}} は、ビルドやデプロイメントに対するリスクを識別するのに使用します。
+{{site.data.keyword.DRA_full}} は、開発者、チーム、デプロイメントの分析を、最も忙しい DevOps プロジェクトに適用します。
+それを使用することにより、チームが DevOps と開発者のプラクティスにどの程度準拠しているかを調べたり、コードベースのリスクを管理したり、継続的デリバリー・プロジェクトで品質基準を自動的に適用したりすることができます。
 {:shortdesc}
 
-{{site.data.keyword.DRA_short}} は、単体テスト、機能テスト、コード・カバレッジのツールからの結果を集約して分析することによって、デプロイメント・プロセス内に指定されたゲートで、ユーザーのコードが事前定義済みのポリシーを満たしているかどうかを判別します。コードがポリシーを満たしていないか、ポリシーを超えていない場合、リスクのある変更版がリリースされないように、デプロイメントが停止されます。{{site.data.keyword.DRA_short}} は、継続的デリバリー環境のセーフティー・ネット、品質規格を実装して時間の経過とともに向上させるための方法、およびプロジェクトの正常性を把握するのに役立つデータ可視化ツールとして使用できます。
+{{site.data.keyword.DRA_short}} は、いくつかの機能グループで構成されています。
 
-{{site.data.keyword.DRA_short}} は試験的オファリングで、開発と試験のみの目的で現状のまま提供されています。{{site.data.keyword.DRA_short}} を使用するには、{{site.data.keyword.deliverypipeline}} を使用するツールチェーンに追加します。
 
+   * Developer Insights には、プロジェクトの開発成熟度を検討するための包括的な方法が用意されています。
+エラーが発生しやすいファイルを識別したり、開発者プラクティスに対するプロジェクトの適合性を表示したりできます。
+
+
+   * Team Dynamics ではソーシャル・コーディング分析が使用され、これはチームのコラボレーション度を調べたり、改善点を検討したりするのに役立ちます。
+
+
+   * Deployment Risk は、継続的デリバリーの安全ネットのようなものです。
+デプロイメント・プロセス内の指定されたゲートで、単体テスト、機能テスト、アプリケーション・スキャン、コード・カバレッジ・ツールからの結果を分析し、リスクのある変更がリリースされないようにします。
+
+
+   * Delivery Insights は、IBM UrbanCode Deploy インストールに関するデプロイメントの統計やメトリックなどの情報を表示します。
+例えば、デプロイメントの期間、成功、失敗のグラフを、論理的に分類した環境別にすべてソートした状態で表示することができます。
+[「DevOps Insights と IBM UrbanCode Deploy の統合」](/docs/services/DevOpsInsights/uc_insights_overview.html)を参照してください。
+
+
+{{site.data.keyword.DRA_short}} は、Bluemix オープン・ツールチェーン・カタログ内の統合の 1 つです。
+ツールチェーンについて詳しくは、[ツールチェーンを使用した作業](/docs/services/ContinuousDelivery/toolchains_working.html)を参照してください。
+
+{{site.data.keyword.DRA_short}} を使用するには、それをツールチェーンに追加する必要があります。
+多くのツールチェーン・テンプレートには、{{site.data.keyword.DRA_short}} が既に含まれています。
+さらに、[それを {{site.data.keyword.Bluemix_notm}} org にサービスとして追加する](/docs/services/reqnsi.html)ことにより、{{site.data.keyword.DRA_short}} に関する情報を表示したり、それを含むツールチェーン・テンプレートのいくつかに {{site.data.keyword.Bluemix_notm}} ダッシュボードからアクセスしたりできるようにしてください。
+  
+
+## DevOps Insights をツールチェーンに追加する
 {: #catalog}
-{{site.data.keyword.DRA_short}} の UI にアクセスするには、既存のツールチェーンから以下のステップに従ってください。
 
-1. **「ツールの追加 (Add a Tool)」**ボタンをクリックします。
+{{site.data.keyword.DRA_short}} は {{site.data.keyword.contdelivery_short}} の一部です。
+ツール統合カタログから選択することにより、任意のツールチェーンに {{site.data.keyword.DRA_short}} を追加することができます。
+
+
+{{site.data.keyword.DRA_short}} は、多くのツールチェーン・テンプレートの一部ともなっています。
+{{site.data.keyword.DRA_short}} を含むテンプレートからツールチェーンを作成する場合、{{site.data.keyword.DRA_short}} が**「詳細」**に設定されていることを確認してください。
+その上で、ツールチェーンを作成し、[「Insights の使用」](/docs/services/DevOpsInsights/index.html#using)に進んでください。
+
+
+{{site.data.keyword.DRA_short}} をツールチェーンに追加するには、次のようにします。
+
+
+1. **「ツールの追加 (Add a Tool)」**をクリックします。
 
 2. **「{{site.data.keyword.DRA_short}}」** をクリックします。
 
 3. **「統合の作成 (Create Integration)」**をクリックします。
 
-4. **{{site.data.keyword.DRA_short}}** タイルをクリックします。
+{{site.data.keyword.DRA_short}} は、ツールチェーンの概要ページから利用できるようになりました。
+データを検索するために、リポジトリーと問題追跡システムが自動的にスキャンされます。 
 
-5. 以下の残りのタスクを行ってセットアップを完了します。
+## DevOps Insights の使用
+{: #using}
 
-	1. [{{site.data.keyword.deliverypipeline}} 統合を構成](./pipeline_integration.html)します。
-	2. パイプラインを実行し、[{{site.data.keyword.deliverypipeline}} ダッシュボードを確認](./pipeline_decision_reports.html)します。
-	3. {{site.data.keyword.DRA_short}} が管理するための[ポリシーを定義](./create_criteria.html)します。
-	4. 再度パイプラインを実行して、プロジェクトがポリシーに合格するか確認します。
+ツールチェーンに GitHub、GitLab、JIRA が含まれている場合、{{site.data.keyword.DRA_short}} は、いくらかの初期データ収集と分析の後に、コードベースについての情報を自動的に提供します。
+ツールチェーンにそれらの統合のどれも含まれていない場合は、それらのうちのいずれか 1 つを追加してから、以下の手順を実行します。
 
 
-# 関連リンク
-{: #rellinks}
+1. ツールチェーンの概要ページから、**「{{site.data.keyword.DRA_short}}」**をクリックします。
 
-## チュートリアルとサンプル
-{: #samples}
 
-* [Using analytics to advise on the likelihood of successful deployments](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){:new_window}
+2. **「Team Dynamics」**または**「Developer Insights」**をクリックしてから、データのカテゴリーを選択します。 
 
-## 関連リンク
-{: #general}
+3. そのデータ・カテゴリーの中のダッシュボードを表示することにより、プロジェクトのデータを調べます。
+グラフについて、またその情報の処理方法については、**「情報」**または**「ガイダンス」**をクリックしてください。
 
-* [ツールチェーンの概要](https://new-console.ng.bluemix.net/docs/toolchains/toolchains_overview.html){:new_window}
-* [Delivery Pipeline の概要](https://new-console.ng.bluemix.net/docs/services/DeliveryPipeline/index.html){:new_window}
-* [IBM Bluemix 料金シート](https://new-console.ng.bluemix.net/pricing/){:new_window}
-* [IBM Bluemix prerequisites](https://developer.ibm.com/bluemix/support/?cm_mc_uid=96503159749414585876298&cm_mc_sid_50200000=1462802909#prereqs){:new_window}
+
+Team Dynamics や Developer Insights について調べた後、[Deployment Risk の構成](/docs/services/DevOpsInsights/insights_risk.html)を行って、コード品質を維持強制することができます。
+Deployment Risk は、{{site.data.keyword.contdelivery_short}} パイプラインと Jenkins の両方と互換性があります。
+   

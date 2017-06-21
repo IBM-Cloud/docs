@@ -18,4 +18,4 @@ lastupdated: "2016-11-03"
 もっと多くのアプリを作成する | ビジネスをより大きく成長させる | 睡眠時間を増やす
 ---- | ---- | ----
 システム管理ではなく、楽しいこと、つまり新しいアプリの作成に集中してください。 | IBM Cloud でデータをスケーリング。 | IBM の専門家が 1 日 24 時間、週に 7 日、お客様のデータを実行し続けている間、ゆっくりお休みください。
-{: caption="Table 1. Benefits of using the Work with Data console" caption-side="top"}
+{: caption="表 1. Work with Data コンソールを使用する利点" caption-side="top"}

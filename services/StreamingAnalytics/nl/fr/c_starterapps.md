@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -25,10 +25,10 @@ Déployez et modifiez les applications de démarrage et apprenez rapidement comm
   </tr>
   <tr>
     <td colspan="3">L'application de détection d'événements est implémentée via la phase d'exécution <a href="https://console.ng.bluemix.net/catalog/starters/sdk-for-nodejs/?cm_mmc=dw-_-bluemix-_-ba-bluemix-detect-complex-events-from-data-stream-trs-_-article">{{site.data.keyword.sdk4node}}</a>.
-Elle fournit une interface utilisateur Web simple pour afficher le statut et les résultats de l'analyse. 
-L'application Node.js est liée à une instance du service {{site.data.keyword.streaminganalyticsshort}}. L'application contrôle le service via l'interface API REST {{site.data.keyword.streaminganalyticsshort}}. 
-<p>Vous pouvez exécuter l'application de démarrage sans modification. 
-Si vous souhaitez expérimenter le service plus en profondeur, vous pouvez modifier le code et renvoyer vos modifications dans l'environnement {{site.data.keyword.Bluemix_short}}.</p> 
+Elle fournit une interface utilisateur Web simple pour afficher le statut et les résultats de l'analyse.
+L'application Node.js est liée à une instance du service {{site.data.keyword.streaminganalyticsshort}}. L'application contrôle le service via l'interface API REST {{site.data.keyword.streaminganalyticsshort}}.
+<p>Vous pouvez exécuter l'application de démarrage sans modification.
+Si vous souhaitez expérimenter le service plus en profondeur, vous pouvez modifier le code et renvoyer vos modifications dans l'environnement {{site.data.keyword.Bluemix_short}}.</p>
 </td>
   </tr>
   <tr>
@@ -37,6 +37,9 @@ Si vous souhaitez expérimenter le service plus en profondeur, vous pouvez modif
     <td><a href="https://hub.jazz.net/git/streamscloud/EventDetection/" target="_blank">TELECHARGER</a></td>
   </tr>
 </table>
+
+*Tableau 1. Application exemple relative à la détection d'événements
+*
 
 <table summary="Ce tableau décrit, sur la première ligne, l'application exemple relative au trafic new-yorkais. Il inclut, sur la deuxième ligne, les éléments suivants : 1. Dans la première colonne, un lien vers les instructions de déploiement de l'application exemple. 2. Dans la deuxième colonne, un lien vers les tutoriels sur l'utilisation de l'application exemple. 3. Dans la troisième colonne, un lien pour le téléchargement direct de l'application exemple relative au trafic new-yorkais.">
   <tr>
@@ -53,3 +56,5 @@ Si vous souhaitez expérimenter le service plus en profondeur, vous pouvez modif
     <td><a href="https://hub.jazz.net/git/streamscloud/NYCTraffic/" target="_blank">TELECHARGER</a></td>
   </tr>
 </table>
+
+*Tableau 2. Application exemple relative au trafic new-yorkais*

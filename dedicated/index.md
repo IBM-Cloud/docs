@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-05-03"
+lastupdated: "2017-05-31"
 
 ---
 
@@ -41,7 +41,7 @@ In addition, there is a set of services and components that are included or opti
 | Optional | [Dedicated GitHub Enterprise](/docs/services/ghededicated/index.html) | {{site.data.keyword.ghe_long}} is the IBM Cloud-hosted and fully managed version of GitHub Enterprise that provides the social experience that developers love. This service is currently available exclusively to {{site.data.keyword.Bluemix_dedicated_notm}} environments. |
 | Optional (Beta) | [Logging](/docs/monitoringandlogging/cfapps_ml_logs_dedicated_ov.html#container_ml_logs_dedicated_ov) | Provides logs for your Cloud Foundry apps in your {{site.data.keyword.Bluemix_notm}} user interface and searchable logs and dashboards in Kibana. |
 | Optional | [{{site.data.keyword.messagehub}}](/docs/services/MessageHub/index.html#messagehub) | {{site.data.keyword.messagehub}} is a scalable, distributed, high throughput message bus to unite your on-premises and off-premises technologies. {{site.data.keyword.messagehub}} is based on Apache Kafka, which is a fast, scalable, and durable real-time messaging engine. |
-|Optional | [{{site.data.keyword.mobilepush}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepush}} is a service that you can use to send notifications to iOS and Android device. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications.|
+|Optional | [{{site.data.keyword.mobilepushshort}}](/docs/services/mobilepush/index.html) | {{site.data.keyword.mobilepushshort}} is a service that you can use to send notifications to iOS and Android device. Notifications can be targeted to all application users or to a specific set of users and devices using tags. You can administer devices, tags, and subscriptions. You can also use an SDK (software development kit) and Representational State Transfer (REST) application program interface (APIs) to further develop your client applications.|
 |Optional | [{{site.data.keyword.SecureGateway}}](/docs/services/SecureGateway/secure_gateway.html) | The {{site.data.keyword.SecureGateway}} service provides a secure way to connect {{site.data.keyword.Bluemix_notm}} applications to remote locations on-premises or in the cloud.  |
 |Optional | [{{site.data.keyword.sescashort}}](/docs/services/SessionCache/index.html#session_cache) | For increased redundancy, {{site.data.keyword.sescashort}} provides a replica of a session stored in the cache. Therefore, in the event of a brownout or outage, your client application maintains access to the session in the cache. The service supports session caching scenarios for web and mobile applications. |
 | Optional | [{{site.data.keyword.iot_short}}](/docs/services/IoT/index.html) | This service lets your apps communicate with and consume data collected by your connected devices, sensors and gateways. The base offering permits running a private version of the {{site.data.keyword.iot_short}} within the dedicated environment with a capacity of 100,000 concurrently connected devices or applications and 1.6 TB of data exchange. |
@@ -96,7 +96,7 @@ There are optional components that are available for you to purchase to scale an
 
 **Note**: {{site.data.keyword.Bluemix_dedicated_notm}} components might indicate a specific configured capacity, such as gigabytes or transactions per second. Because actual capacity in practice for any configuration of the cloud service varies depending on many factors, the actual capacity in practice might be more or less than the configured capacity.
 
-### Syndicated catalog
+## Syndicated catalog
 {: #catalogdedicated}
 
 {{site.data.keyword.Bluemix_dedicated_notm}} includes a private catalog that brings together approved services across your public, dedicated and local deployments. You can even publish and manage access to your own services through the {{site.data.keyword.Bluemix_notm}} catalog. You have the option to decide which public services meet the requirements for your business based on your data privacy and security criteria.
@@ -140,7 +140,7 @@ If you have a private instance of the service for your dedicated environment, yo
 |{{site.data.keyword.nlclassifierlshort}} 	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.personalityinsightsshort}}	|Yes		|Yes		|Yes|
 |{{site.data.keyword.pm_short}}			|Yes		|Yes		|No |
-|{{site.data.keyword.mobilepush}}		|Yes		|Yes		|Yes |
+|{{site.data.keyword.mobilepushshort}}		|Yes		|Yes		|Yes |
 |{{site.data.keyword.retrieveandrankshort}}	|Yes 		|Yes 		|Yes|
 |{{site.data.keyword.runbook_short}}		|Yes		|Yes		|Yes|
 |{{site.data.keyword.SecureGateway}}		|Yes		|Yes		|Yes |
@@ -315,7 +315,7 @@ The inception phase is used to establish the {{site.data.keyword.Bluemix_dedicat
 |Set compliance standards | Identify government, industry, and proprietary corporate standards that are required for the environment. | Customer |
 |Create security and compliance integration plan | Create security and integration plan that includes costs, scheduling, and resources that are required to achieve security compliance. | IBM |
 |Compliance plan approval | Approve the compliance plan. | Customer |
-|Create sizing for environment |  	Create environment sizing based on predefined choices that take into consideration the high availability and disaster recovery goals, as well as initial DEA and service provisioning that is necessary to support the apps created with the platform. You and IBM work together to define, for example, what databases are needed, what services are offered in the customer's syndicated catalog, and more. | IBM and customer share responsibility |
+|Create sizing for environment |  	Create environment sizing based on predefined choices that take into consideration the high availability and disaster recovery goals, as well as initial CELL and service provisioning that is necessary to support the apps created with the platform. You and IBM work together to define, for example, what databases are needed, what services are offered in the customer's syndicated catalog, and more. | IBM and customer share responsibility |
 |Select architecture | Select architecture based on predefined choices that take into account high availability and disaster recovery requirements. | IBM |
 |Define disaster recovery goals | Define the disaster recovery requirements for the environment. | Customer |
 |Create disaster recovery plan | Consult and define the disaster recovery plan. IBM creates a disaster recovery model, and consults with you where you provide feedback and approve the plan. | IBM and customer share responsibility |
@@ -324,7 +324,7 @@ The inception phase is used to establish the {{site.data.keyword.Bluemix_dedicat
 |Define escalation plan | Define the escalation plan to triage and resolve events detected from the monitoring components. | IBM |
 |Sign infrastructure, platform, and support agreements | Sign the subscription agreement including the financial terms and conditions for the environment. Sign support subscription. | Customer |
 |Procure environment | Procure compute resources, network, and storage including core and Services VLAN to host {{site.data.keyword.Bluemix_notm}}, bare metal services to host Data Power, and {{site.data.keyword.Bluemix_notm}} Firewall. Provide infrastructure to allow for VPN tunnel. | IBM |
-|Install fabric, application, and monitoring and management components | Install, configure, and verify fabric components, such as BOSH Director, Cloud Controller, Health Manager, messaging, routers, DEAs and Service providers, and the monitoring components that are defined in the escalation and problem detection plan. | IBM |
+|Install fabric, application, and monitoring and management components | Install, configure, and verify fabric components, such as BOSH Director, Cloud Controller, Health Manager, messaging, routers, CELLs and Service providers, and the monitoring components that are defined in the escalation and problem detection plan. | IBM |
 |Install and configure security components | Install and configure security components that are tied into the monitoring and escalation plan including IBM QRadar, credential vault, intrusion prevention system, IBM BigFix, and IBM Security Privileged Identity Management. | IBM |
 |Install and configure custom components |  	Install and configure custom components that reside outside the scope of the {{site.data.keyword.Bluemix_notm}} product and services. | Customer |
 |Establish initial network configuration | Establish initial network configuration including firewalls, DataPower, Fortigate, and DNS. | IBM |
@@ -474,9 +474,9 @@ In addition to enabling continuous availability, {{site.data.keyword.Bluemix_not
 These technologies include the following:
 
 <dl>
-<dt>DEA Scalability in Cloud Foundry</dt>
-<dd>A Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (DEA) <img src="../icons/launch-glyph.svg" alt="External link icon"></a> performs health checks on the apps running within it. If there is a problem with the app or the DEA itself, it deploys additional instances of the app to an alternate DEA to address the issue. For more information, see <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy <img src="../icons/launch-glyph.svg" alt="External link icon"></a>.
-<p>To ensure high availability for your applications, you need enough compute resources to balance the load, and you might also require additional compute resources to support a possible failure. If you need to scale your environment by increasing your DEA pool to be prepared for a failure or address a spike in the load for your app instances, you can work with your IBM representative to order additional DEAs and ensure that you have the appropriate hardware to support the added resources.
+<dt>CELL Scalability in Cloud Foundry</dt>
+<dd>A Cloud Foundry <a href="https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html" target="_blank">Droplet Execution Agent (CELL) <img src="../icons/launch-glyph.svg" alt="External link icon"></a> performs health checks on the apps running within it. If there is a problem with the app or the CELL itself, it deploys additional instances of the app to an alternate CELL to address the issue. For more information, see <a href="https://docs.cloudfoundry.org/concepts/high-availability.html" target="_blank">Configuring CF for High Availability with Redundancy <img src="../icons/launch-glyph.svg" alt="External link icon"></a>.
+<p>To ensure high availability for your applications, you need enough compute resources to balance the load, and you might also require additional compute resources to support a possible failure. If you need to scale your environment by increasing your CELL pool to be prepared for a failure or address a spike in the load for your app instances, you can work with your IBM representative to order additional CELLs and ensure that you have the appropriate hardware to support the added resources.
 </p>
 </dd>
 <dt>{{site.data.keyword.BluSoftlayer}} redundancy</dt>
@@ -506,13 +506,3 @@ Because protection of private data is critical, IBM needs your collaboration whe
 <li>Move a copy of your encrypted backup data off-site, just as you would for any other backup data that you manage.</li>
 <li>Provide the backup files for the IBM operator in case of any need to restore.</li>
 </ul>
-
-# rellinks
-{: rellinks}
-## general
-{: general}
-* [Discover: {{site.data.keyword.Bluemix_dedicated_notm}}](http://www.ibm.com/cloud-computing/bluemix/hybrid/dedicated/)
-* [What's new in {{site.data.keyword.Bluemix_notm}}](/docs/whatsnew/index.html)
-* [{{site.data.keyword.Bluemix_notm}} glossary](/docs/overview/glossary/index.html)
-* [Managing {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_dedicated_notm}}](/docs/admin/index.html#mng)
-* [Contacting support](/docs/support/index.html#getting-customer-support)

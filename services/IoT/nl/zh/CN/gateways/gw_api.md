@@ -38,15 +38,18 @@ lastupdated: "2017-03-07"
 
 其中：
 
-**_orgId_**   
-- 是组织名称，必须与主机头中指定的名称相匹配。
+<dl>
+<dt>orgId</dt>  
+<dd>组织名称，必须与主机头中指定的名称相匹配。</dd>
 
-**_gwType_**
-- 是网关的类型。
+<p></p>
+<dt>gwType</dt>  
+<dd>网关的类型。</dd>
+<p></p>
+<dt>gwDevId</dt>  
+<dd>是网关的设备标识。</dd>
+</dl>
 
-**_gwDevId_**
-
-- 是网关的设备标识。
 
 ### Content-Type 请求头
 

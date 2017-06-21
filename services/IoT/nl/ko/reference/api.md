@@ -3,11 +3,11 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-17"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -42,9 +42,10 @@ API                     | 용도
 ------------- | -------------
 [조직 관리 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | 조직을 구성하고(디바이스 작성 및 삭제 포함), 사용법 및 서비스 상태를 확인하고, 디바이스 연결 문제점을 진단합니다.
 [보안 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | 사용자 초대 및 인증, 사용자 권한, API 키 및 디바이스를 관리합니다.
-[정보 관리 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  디바이스 위치를 가져오고 업데이트할 뿐만 아니라 디바이스 이벤트 데이터에 액세스하고 해당 위치에 대한 날씨 정보를 가져옵니다.
+[정보 관리 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  디바이스 위치를 가져오고 업데이트할 뿐만 아니라 디바이스 이벤트 데이터에 액세스하고 해당 위치에 대한 날씨 정보를 가져옵니다. **참고:** 날씨 정보는 The Weather Company 데이터 통합에 따라 다릅니다.
+[The Weather Company ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html#!/Device_Location_Weather){: new_window} | The Weather Company의 데이터를 기존 디바이스와 통합합니다.
 [디바이스 관리 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | 디바이스 관리 프로토콜을 사용하여 관리 디바이스와 상호작용합니다.
-[메시징 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | HTTP를 사용하여 이벤트를 공개하고 명령을 전송합니다. **참고:** Messaging API의 경우, https://<**orgId**>.messaging.internetofthings.ibmcloud.com:/api/v0002 주소를 사용하십시오.
+[메시징 ![외부 링크 아이콘](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | HTTP를 사용하여 이벤트를 공개하고 명령을 전송합니다.
 
 
 

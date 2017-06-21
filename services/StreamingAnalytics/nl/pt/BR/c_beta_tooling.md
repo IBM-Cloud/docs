@@ -1,11 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2017 lastupdated: "2017-02-09"
+  years: 2015, 2017
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -16,7 +17,8 @@ copyright:
 {: #c_beta_tooling}
 
 
-Estas considerações se aplicam às ferramentas e ao ambiente usado para desenvolver seus aplicativos para o {{site.data.keyword.streaminganalyticsshort}}.{:shortdesc}
+Estas considerações se aplicam às ferramentas e ao ambiente usado para desenvolver seus aplicativos para o {{site.data.keyword.streaminganalyticsshort}}.
+{:shortdesc}
 
 
 * O {{site.data.keyword.streaminganalyticsshort}} não inclui um ambiente de desenvolvimento do {{site.data.keyword.streamsshort}}

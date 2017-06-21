@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-17"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -59,7 +59,7 @@ MQTT 인증을 사용하려면 MQTT 연결 시 사용자 이름과 비밀번호�
 
 디바이스는 다음 형식으로 이벤트 주제에 공개됩니다.
 
-<pre class="pre">iot-2/evt/<var class="keyword varname">event_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
+<pre class="pre"><code class="hljs">iot-2/evt/<var class="keyword varname">event_id</var>/fmt/<var class="keyword varname">format_string</var></code></pre>
 {: codeblock}
 
 여기서
@@ -78,7 +78,7 @@ MQTT 인증을 사용하려면 MQTT 연결 시 사용자 이름과 비밀번호�
 
 디바이스는 다음 형식으로 명령 주제를 구독합니다.
 
-<pre class="pre">iot-2/cmd/<var class="keyword varname">command_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
+<pre class="pre"><code class="hljs">iot-2/cmd/<var class="keyword varname">command_id</var>/fmt/<var class="keyword varname">format_string</var></code></pre>
 {: codeblock}
 
 여기서
@@ -126,7 +126,7 @@ iotdm-1/#
 **요청**  
 요청은 다음 코드 샘플에 표시된 대로 형식화됩니다.
 
-<pre class="pre">{  "d": {...}, "<var class="keyword varname">reqId</var>": "b53eb43e-401c-453c-b8f5-94b73290c056" }</pre>
+<pre class="pre"><code class="hljs">{  "d": {...}, "<var class="keyword varname">reqId</var>": "b53eb43e-401c-453c-b8f5-94b73290c056" }</code></pre>
 {: codeblock}
 
 여기서,

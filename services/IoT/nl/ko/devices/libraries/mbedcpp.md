@@ -260,7 +260,8 @@ ARM mBed NXP LPC 1768 마이크로 컨트롤러를 {{site.data.keyword.iot_short
 ```
 전체 샘플은 [ IBMIoTClientLibrarySample ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.mbed.org/teams/IBM_IoT/code/IBMIoTClientLibrarySample/file/e58533b6bc6b/src/Main.cpp){: new_window}을 참조하십시오.
 
-**참고:** 명령을 받으려면 `client.yield()` 함수를 주기적으로 호출해야 합니다. `client.yield()` 함수를 사용하면 디바이스가 Watson IoT Platform에서 명령을 받고 연결을 활성 상태로 유지할 수 있습니다. keepAlive 간격으로 지정된 시간 범위 동안 `client.yield()` 함수가 호출되지 않으면 플랫폼에서 보낸 모든 명령을 디바이스에서 받지 못합니다. `client.yield()` 함수에 지정된 값은 애플리케이션에 제어를 리턴하기 전에 소켓에서 데이터를 읽을 수 있는 기간(밀리초)을 지정합니다.
+**참고:** 명령을 받으려면 `client.yield()` 함수를 주기적으로 호출해야 합니다.
+`client.yield()` 함수를 사용하면 디바이스가 Watson IoT Platform에서 명령을 받고 연결을 활성 상태로 유지할 수 있습니다. keepAlive 간격으로 지정된 시간 범위 동안 `client.yield()` 함수가 호출되지 않으면 플랫폼에서 보낸 모든 명령을 디바이스에서 받지 못합니다. `client.yield()` 함수에 지정된 값은 애플리케이션에 제어를 리턴하기 전에 소켓에서 데이터를 읽을 수 있는 기간(밀리초)을 지정합니다.
 
 ## 클라이언트 연결 끊기
 {: #disconnect_client}

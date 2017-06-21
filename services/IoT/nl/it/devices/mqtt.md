@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-11-17"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -59,7 +59,7 @@ La password per ogni dispositivo è un token di autenticazione univoco che è st
 
 I dispositivi eseguono la pubblicazione degli argomenti dell'evento nel seguente formato:
 
-<pre class="pre">iot-2/evt/<var class="keyword varname">event_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
+<pre class="pre"><code class="hljs">iot-2/evt/<var class="keyword varname">event_id</var>/fmt/<var class="keyword varname">format_string</var></code></pre>
 {: codeblock}
 
 Dove
@@ -78,7 +78,7 @@ Le organizzazioni {{site.data.keyword.iot_short_notm}} non sono autorizzate a pu
 
 I dispositivi possono sottoscriversi agli argomenti del comando nel seguente formato:
 
-<pre class="pre">iot-2/cmd/<var class="keyword varname">command_id</var>/fmt/<var class="keyword varname">format_string</var></pre>
+<pre class="pre"><code class="hljs">iot-2/cmd/<var class="keyword varname">command_id</var>/fmt/<var class="keyword varname">format_string</var></code></pre>
 {: codeblock}
 
 Dove
@@ -126,7 +126,7 @@ Tutti i messaggi sono inviati nel formato JSON.
 **Richieste**  
 Le richieste sono formattate come mostrato nel seguente esempio di codice:
 
-<pre class="pre">{  "d": {...}, "<var class="keyword varname">reqId</var>": "b53eb43e-401c-453c-b8f5-94b73290c056" }</pre>
+<pre class="pre"><code class="hljs">{  "d": {...}, "<var class="keyword varname">reqId</var>": "b53eb43e-401c-453c-b8f5-94b73290c056" }</code></pre>
 {: codeblock}
 
 Dove:

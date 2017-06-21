@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -16,7 +16,7 @@ lastupdated: "2017-02-09"
 #サービス・ダッシュボード
 {: #dashboard}
 
-{{site.data.keyword.streaminganalyticsshort}} サービス・ダッシュボードから {{site.data.keyword.Bluemix_short}} サービスにアクセスできます。
+{{site.data.keyword.Bluemix_short}} サービス・ダッシュボードから {{site.data.keyword.streaminganalyticsshort}} サービスにアクセスできます。
 {:shortdesc}
 
 サービス・ダッシュボードから以下のことができます。
@@ -25,7 +25,7 @@ lastupdated: "2017-02-09"
 * サービス・インスタンスの開始と停止。
 * {{site.data.keyword.streaminganalyticsshort}} コンソールへのアクセス。
 * インスタンスが時間ごとの使用量で請求される場合、サービス・インスタンスのアプリケーション・ノードを追加または削除することによるサービス・インスタンスのサイズ変更。
-* ジョブが長時間実行されない場合にサービス・インスタンス (時間ごとの使用量で請求される) を自動的に停止するかどうかの指示。
+* 長期間ジョブが実行されない場合にサービス・インスタンス (時間ごとの使用量で請求される) を自動的に停止する必要があるかどうかの指示。
 * サービス資格情報へのアクセス。
 * スターター・アプリケーションのチュートリアルへのアクセス。
 * サービス資料およびユーザー・フォーラムへのアクセス。

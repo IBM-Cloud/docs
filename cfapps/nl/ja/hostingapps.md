@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-05-09"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -93,12 +93,17 @@ lastupdated: "2016-05-09"
 |:------|:--------|
 |Cloud Foundry コマンド・ライン・インターフェース (cf cli)	|ローカル・クライアントでコードを管理し、Cloud Foundry コマンド・ライン・インターフェースを使用してアプリケーションを手動で {{site.data.keyword.Bluemix_notm}} にプッシュします。詳しくは、『[アプリケーションのアップロード](/docs/starters/upload_app.html)』を参照してください。|
 |Eclipse	|Eclipse でコードを管理し、IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリケーションをプッシュします。|
-|Git 統合	|GitHub でコードを管理し、Git を {{site.data.keyword.Bluemix_notm}} に統合します。他の開発者と共同作業することができます。コードの変更をコミットすると、アプリケーションは自動的に {{site.data.keyword.Bluemix_notm}} にデプロイされます。アプリケーションを手動でプッシュする必要はありません。|
-|{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|DevOps GitHub リポジトリーでコードを管理し、DevOps Delivery Pipeline を使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイします。|
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} tools" caption-side="top"}
+|{{site.data.keyword.contdelivery_full}} |    {{site.data.keyword.contdelivery_short}} を使用して、ビルド、単体テスト、デプロイメントなどを自動化します。機能豊富な Web ベース IDE により、コードの編集およびプッシュを行います。開発、デプロイメント、および運用の作業をサポートするツール統合を実現するツールチェーンを作成します。Continuous Delivery サービスには、Delivery Pipeline、Eclipse Orion Web IDE、および Git Repos and Issue Tracking が含まれています。詳しくは、『<a href="/docs/services/ContinuousDelivery/index.html#cd_getting_started">Getting started with Continuous Delivery</a>』を参照してください。
+|
+{: caption="表 1. {{site.data.keyword.Bluemix_notm}} のツール" caption-side="top"}
 
 
 アプリケーションの要件が Cloud Foundry プラットフォームではサポートされない場合、カスタマイズされた追加のオプションを使用してランタイムがセットアップされ、構成され、保守される、コンテナーまたは VM を使用できます。
+
+##Continuous Delivery でのツールチェーンを使用したアプリの開発およびデプロイ
+{:ht_cd}
+
+<a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">アプリにツールチェーン</a>を追加し、<a href="/docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">Continuous Delivery ツールチェーン UI</a> を使用して、アプリの開発およびデプロイを行います。
 
 ##cf CLI を使用したアプリのアップロード
 {: #ht_cfcli}

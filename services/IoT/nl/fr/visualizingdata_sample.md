@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-06-29"
+lastupdated: "2017-03-20"
 
 ---
 
@@ -25,7 +25,7 @@ Avant de pouvoir visualiser vos données, vous devez exécuter les actions suiva
 
 - Enregistrez vos terminaux sur votre organisation {{site.data.keyword.iot_short_notm}}.
 - Assurez-vous que vos terminaux envoient des événements à {{site.data.keyword.iot_short_notm}}.
-- [Téléchargez l'exemple de visualisation](https://github.com/ibm-messaging/iot-visualization/archive/v0.2.0.zip) depuis le référentiel github et procédez à l'extraction du fichier .zip.
+- [Téléchargez l'exemple de visualisation](https://github.com/ibm-watson-iot/rickshaw4iot/archive/master.zip) depuis le référentiel github et procédez à l'extraction du fichier .zip.
 - [Installez l'outil de ligne de commande cf](../../starters/install_cli.html) à partir de {{site.data.keyword.Bluemix_notm}}.
 
 ## Exécution de l'exemple dans {{site.data.keyword.Bluemix_notm}}
@@ -106,13 +106,4 @@ Le fichier qui fait référence à la bibliothèque MQTT Paho pour l'abonnement 
 
 Les événements de terminal sont transmis au fichier `realtimeGraph.js` pour tracer le graphique.
 
-## Personnalisation de l'affichage des données historiques
-{: #customize_historical_display}
-
-Le répertoire contenant le code de visualisation graphique pour les données historiques des terminaux est `public/js/historian`. La logique de création de graphiques peut être personnalisée en éditant `public/js/historian/historianGraph.js`.
-
-Le fichier qui contrôle les appels d'API REST pour la collecte des données historiques des terminaux est `public/js/historian/historian.js`.
-
-Les données historiques sont transmises au fichier `historianGraph.js` pour tracer le graphique.
-
-Un guide de développement plus détaillé est disponible sur le wiki Github iot-visualization.
+Un guide de développement plus détaillé est disponible dans le [wiki Github ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/rickshaw4iot/wiki){:new_window}.

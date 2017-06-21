@@ -14,10 +14,11 @@ lastupdated: "2017-03-06"
 {:screen: .screen}
 
 
-# ヘルプおよびサポートの利用
+# モニターのヘルプおよびサポートの利用
 {: #gettinghelp}
 
-{{site.data.keyword.Bluemix}} でモニター機能を使用していて問題や質問がある場合は、{{site.data.keyword.Bluemix_notm}} を調べることができます。さらに、フォーラムで情報を検索したり質問を投稿したりして役立つ情報を得ることができます。サポート・チケットをオープンすることもできます。{:shortdesc}
+{{site.data.keyword.Bluemix}} でモニター機能を使用していて問題や質問がある場合は、{{site.data.keyword.Bluemix_notm}} を調べることができます。さらに、フォーラムで情報を検索したり質問を投稿したりして役立つ情報を得ることができます。サポート・チケットをオープンすることもできます。
+{:shortdesc}
 
 * [Bluemix ステータス・ページ](https://developer.ibm.com/bluemix/support/#status){:new_window}にアクセスすると、{{site.data.keyword.Bluemix_notm}} が利用可能かどうかを確認することができます。
 

@@ -31,7 +31,7 @@ Sie können Grafana auf eine beliebige der folgenden Arten starten:
 
     Sie können Grafana so starten, dass die angezeigten Daten Protokolle aus Services in einem angegebenen {{site.data.keyword.Bluemix_notm}}-Bereich aggregieren.
     
-    Weitere Informationen finden Sie unter [Zum Grafana-Dashboard über einen Web-Browser navigieren](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser). 
+    Weitere Informationen finden Sie unter [Zum Grafana-Dashboard über einen Web-Browser navigieren](monitoring_analyzing_metrics_grafana.html#launch_grafana_from_browser).
     
 Weitere Informationen zu Grafana finden Sie in der Veröffentlichung [Grafana User Guide ![Symbol für externen Link](../../../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.grafana.org/guides/getting_started/){: new_window}.
 

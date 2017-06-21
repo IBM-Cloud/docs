@@ -13,7 +13,7 @@ lastupdated: "2017-03-14"
 {:pre: .pre}
 
 
-# 针对 {{site.data.keyword.iot_short_notm}} 区块链集成开发智能合同
+# 开发区块链智能合同
 {: #iotblockchain_link}
 
 使用 {{site.data.keyword.blockchainfull}} 和 Hyperledger 开发环境可创建并测试从 IBM 提供的样本合同派生的自己的智能合同。
@@ -26,8 +26,7 @@ lastupdated: "2017-03-14"
 - {{site.data.keyword.Bluemix_notm}} 组织：
   - 启用了 IoT 区块链集成的 {{site.data.keyword.iot_short_notm}} 服务
   - {{site.data.keyword.blockchainfull_notm}} 光纤网
-  - 运行 IoT 设备模拟器的 Node-RED 应用程序
-   
+  - 运行 IoT 设备模拟器的 Node-RED 应用程序  
 
 **注：**您还可以使用本地部署的 Node-RED 环境来运行模拟器。
 

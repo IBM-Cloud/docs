@@ -73,7 +73,7 @@ Después de enlazar y configurar la aplicación {{site.data.keyword.sdk4nodefull
 2. Pulse **Extensiones** desde la barra de navegación.
 3. Pulse **Configurar** en el icono {{site.data.keyword.ssoshort}}.
 4. Especifique los datos de configuración del archivo de texto temporal en los campos clientID, secret e issuerIdentifier.
-5. Pulse **Terminado**.
+5. Pulse **Listo**.
 
 ### Configuración del {{site.data.keyword.iot_short_notm}} para {{site.data.keyword.ssoshort}} utilizando la API
 

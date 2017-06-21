@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-23"
+lastupdated: "2017-05-01"
 
 ---
 
@@ -21,7 +21,7 @@ Das Paket enthält die folgende Aktion und den folgenden Feed:
 | Entität | Typ | Parameter | Beschreibung |
 | --- | --- | --- | --- |
 | `/whisk.system/pushnotifications` | Paket | appId, appSecret  | Arbeit mit Push-Service |
-| `/whisk.system/pushnotifications/sendMessage` | Aktion | text, url, deviceIds, platforms, tagNames, gcmPayload, gcmSound, gcmCollapseKey, gcmDelayWhileIdle, gcmPriority, gcmTimeToLive, gcmSync, gcmVisibility, gcmStyleType, gcmStyleTitle, gcmStyleUrl, gcmStyleText, gcmStyleLines, apnsBadge, apnsCategory, apnsIosActionKey, apnsPayload, apnsType, apnsSound, fireFoxTitle, fireFoxIconUrl, fireFoxTimeToLive, fireFoxPayload, chromeTitle, chromeIconUrl, chromeTimeToLive, chromePayload, chromeAppExtTitle, chromeAppExtCollapseKey, chromeAppExtDelayWhileIdle, chromeAppExtIconUrl, chromeAppExtTimeToLive, chromeAppExtPayload | Push-Benachrichtigung an angegebene Geräte senden |
+| `/whisk.system/pushnotifications/sendMessage` | Aktion | text, url, deviceIds, platforms, userIds, tagNames, gcmCollapseKey, gcmCategory, gcmIcon, gcmDelayWhileIdle, gcmSync, gcmVisibility, gcmPayload, gcmPriority, gcmSound, gcmTimeToLive, gcmStyleType, gcmStyleTitle, gcmStyleUrl, gcmStyleText, gcmStyleLines, gcmLightsLedArgb, gcmLightsLedOnMs, gcmLightsLedOffMs, apnsBadge, apnsCategory, apnsIosActionKey, apnsPayload, apnsType, apnsSound, apnsTitleLocKey, apnsLocKey, apnsLaunchImage, apnsTitleLocArgs, apnsLocArgs, apnstitle, apnsSubtitle, apnsAttachmentUrl,  fireFoxTitle, fireFoxIconUrl, fireFoxTimeToLive, fireFoxPayload, safariTitle, safariUrlArgs, safariAction, chromeTitle, chromeIconUrl, chromeTimeToLive, chromePayload, chromeAppExtTitle, chromeAppExtCollapseKey, chromeAppExtDelayWhileIdle, chromeAppExtIconUrl, chromeAppExtTimeToLive, chromeAppExtPayload | Push-Benachrichtigung an angegebene Geräte senden |
 | `/whisk.system/pushnotifications/webhook` | Feed | events | Löst Auslöserereignisse für Geräteaktivitäten (Registrierung des Geräts, Rücknahme der Registrierung, Abonnement für Gerät, Beendigung des Abonnements) für den Push-Service aus |
 Es wird empfohlen, eine Paketbindung mit den Werten `appId` und `appSecret` zu erstellen. Auf diese Weise brauchen Sie diese Berechtigungsnachweise nicht jedes Mal anzugeben, wenn Sie die Aktionen im Paket aufrufen.
 
@@ -40,18 +40,18 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung.
 2. Initialisieren Sie den Push-Benachrichtigungsservice und binden Sie den Service an die Bluemix-Anwendung.
 
 3. Konfigurieren Sie die [Push Notifications-Anwendung](https://console.ng.bluemix.net/docs/services/mobilepush/index.html).
-  
+
   Notieren Sie sich die Werte für `App GUID` und `App Secret` der von Ihnen erstellten Bluemix-App.
-  
+
 4. Erstellen Sie eine Paketbindung mit den `/whisk.system/pushnotifications`.
-  
+
   ```
   wsk package bind /whisk.system/pushnotifications myPush -p appId myAppID -p appSecret myAppSecret
   ```
   {: pre}
   
 5. Prüfen Sie, ob die Paketbindung vorhanden ist.
-  
+
   ```
   wsk package list
   ```
@@ -60,44 +60,68 @@ Das folgende Beispiel zeigt die Erstellung einer Paketbindung.
   packages
   /myNamespace/myPush private binding
   ```
-  
+
 
 ## Push-Benachrichtigungen senden
 {: #openwhisk_catalog_pushnotifications_send}
 
 Von der Aktion `/whisk.system/pushnotifications/sendMessage` werden Push-Benachrichtigungen an registrierte Geräte gesendet. Die folgenden Parameter sind verfügbar:
+
 - `text`: Die Benachrichtigung, die dem Benutzer angezeigt wird. Beispiel: `-p text "Hallo, OpenWhisk sendet eine Benachrichtigung"`.
 - `url`: Eine optionale URL, die zusammen mit einem Alert gesendet werden kann. Beispiel: `-p url "https:\\www.w3.ibm.com"`.
 - `deviceIds` Die Liste der angegebenen Geräte. Beispiel: `-p deviceIds ["deviceID1"]`.
 - `platforms` Zum Senden einer Benachrichtigung an die Geräte der angegebenen Plattformen. 'A' für Apple- (iOS) Geräte und 'G' für Google- (Android) Geräte. Beispiel: `-p platforms ["A"]`.
+- `userIds` Zum Senden einer Benachrichtigung an die Geräte der angegebenen Benutzer. Beispiel:  ` -p userIds "[ \" testUser \"]" `
 - `tagNames` Zum Senden einer Benachrichtigung an die Geräte, die einen dieser Tags subskribiert haben. Beispiel: `-p tagNames "[\"tag1\"]" `.
-- `gcmPayload`: Angepasste JSON-Nutzdaten, die als Bestandteil der Benachrichtigung gesendet werden. Beispiel: `-p gcmPayload "{\"hi\":\"hello\"}"`
-- `gcmSound`: Die Audiodatei (auf einem Gerät), die abgespielt werden soll, wenn die Benachrichtigung vom Gerät empfangen wird.
+
 - `gcmCollapseKey`: Dieser Parameter gibt eine Gruppe aus Nachrichten an.
+- `gcmCategory`: Die Kategoriekennung, die für interaktive Push-Benachrichtigungen verwendet werden soll.
+- `gcmIcon`: Gibt den Namen des Symbols an, der für die Benachrichtigung angezeigt werden soll. Stellen Sie sicher, dass das Symbol bereits in der Clientanwendung enthalten ist.
 - `gcmDelayWhileIdle`: Wenn für diesen Parameter der Wert 'true' festgelegt wird, gibt dies an, dass die Nachricht erst gesendet werden darf, wenn das Gerät aktiv wird.
-- `gcmPriority`: Legt die Priorität der Nachricht fest.
-- `gcmTimeToLive`: Dieser Parameter gibt an, wie lange (in Sekunden) die Nachricht im GCM-Speicher aufbewahrt wird, wenn das Gerät offline ist.
 - `gcmSync`: Durch Nachrichtenübermittlung in der Gerätegruppe kann jede App-Instanz in einer Gruppe den aktuellen Nachrichtenstatus wiedergeben.
 - `gcmVisibility`: private/public - Die Sichtbarkeit dieser Benachrichtigung, die beeinflusst, wie und wann Benachrichtigungen auf einer sicheren gesperrten Anzeige sichtbar werden.
+- `gcmPayload`: Angepasste JSON-Nutzdaten, die als Bestandteil der Benachrichtigung gesendet werden. Beispiel: `-p gcmPayload "{\"hi\":\"hello\"}"`
+- `gcmPriority`: Legt die Priorität der Nachricht fest.
+- `gcmSound`: Die Audiodatei (auf einem Gerät), die abgespielt werden soll, wenn die Benachrichtigung vom Gerät empfangen wird.
+- `gcmTimeToLive`: Dieser Parameter gibt an, wie lange (in Sekunden) die Nachricht im GCM-Speicher aufbewahrt wird, wenn das Gerät offline ist.
 - `gcmStyleType`: Gibt den Typ von erweiterbaren Benachrichtigungen an. Mögliche Werte: `bigtext_notification`, `picture_notification`, `inbox_notification`.
 - `gcmStyleTitle`: Gibt den Titel der Benachrichtigung an. Der Titel wird angezeigt, wenn die Benachrichtigung erweitert wird. Der Titel muss für alle drei erweiterbaren Benachrichtigungstypen angegeben werden.
-- `gcmStyleUrl`: Eine URL, über die die Abbildung für die Benachrichtigung abzurufen ist. Muss für 'picture_notification' angegeben werden.
-- `gcmStyleText`: Der große Text, der nach dem Erweitern einer Benachrichtigung mit großem Text ('bigtext_notification') angezeigt werden muss. Muss für 'bigtext_notification' angegeben werden.
-- `gcmStyleLines`: Ein Array mit Zeichenfolgen, das im Posteingangsstil für eine Posteingangsbenachrichtigung ('inbox_notification') angezeigt werden soll. Muss für 'inbox_notification' angegeben werden.
+- `gcmStyleUrl`: Eine URL, über die die Abbildung für die Benachrichtigung abzurufen ist. Muss für `picture_notification` angegeben werden.
+- `gcmStyleText`: Der große Text, der nach dem Erweitern einer Benachrichtigung mit großem Text (`bigtext_notification`) angezeigt werden muss. Muss für `bigtext_notification` angegeben werden.
+- `gcmStyleLines`: Ein Array mit Zeichenfolgen, das im Posteingangsstil für eine Posteingangsbenachrichtigung (`inbox_notification`) angezeigt werden soll. Muss für `inbox_notification` angegeben werden.
+- `gcmLightsLedArgb`: Die Farbe der LED. Die Hardware versucht eine Annäherung an die optimale Einstellung.
+- `gcmLightsLedOnMs`: Die Anzahl der Millisekunden, die die LED blinkt, wenn sie an ist. Die Hardware versucht eine Annäherung an die optimale Einstellung.
+- `gcmLightsLedOffMs`: Die Anzahl der Millisekunden, die die LED blinkt, wenn sie aus ist. Die Hardware versucht eine Annäherung an die optimale Einstellung.
+
 - `apnsBadge`: Die Nummer, die als Markierung des Anwendungssymbols angezeigt werden soll.
 - `apnsCategory`: Die Kategoriekennung, die für interaktive Push-Benachrichtigungen verwendet werden soll.
 - `apnsIosActionKey`: Der Titel für den Aktionsschlüssel.
 - `apnsPayload`: Angepasste JSON-Nutzdaten, die als Bestandteil der Benachrichtigung gesendet werden.
 - `apnsType`: ['DEFAULT', 'MIXED', 'SILENT'].
 - `apnsSound`: Der Name der Audiodatei im Anwendungsbundle. Die Tonsignale dieser Datei werden als Alert abgespielt.
+- `apnsTitleLocKey`: Der Schlüssel zu einer Titelzeichenfolge in der Datei 'Localizable.strings' für die aktuelle Lokalisierung. Die Schlüsselzeichenfolge kann mit den Kennungen %@ und %n$@ formatiert werden, um die im Array `titleLocArgs` angegebenen Variablen zu verwenden.
+- `apnsLocKey`: Ein Schlüssel zu einer Zeichenfolgen für Alertnachrichten in der Datei 'Localizable.strings' für die aktuelle Lokalisierung (die durch die Sprachvorgabe des Benutzers festgelegt wird). Die Schlüsselzeichenfolge kann mit den Kennungen %@ und %n$@ formatiert werden, um die im Array `locArgs` angegebenen Variablen zu verwenden.
+- `apnsLaunchImage`: Der Name einer Imagedatei im App-Bundle mit oder ohne Dateinamenerweiterung. Das Image wird als Startimage verwendet, wenn der Benutzer die Aktionsschaltfläche antippt oder den Aktionsschieberegler bewegt.
+- `pnsTitleLocArgs`: Variablenzeichenfolgewerte, die anstelle der Formatkennungen in `title-loc-key` angezeigt werden.
+- `apnsLocArgs`: Variablenzeichenfolgewerte, die anstelle der Formatkennungen in `locKey` angezeigt werden.
+- `apnstitle`: Der Titel von Rich-Push-Benachrichtigungen (nur unterstützt ab iOS 10).
+- `apnsSubtitle`: Der Untertitel der Rich-Benachrichtigungen (nur unterstützt ab iOS 10).
+- `apnsAttachmentUrl`: Der Link zu den iOS-Benachrichtigungsmedien (Video, Audio, GIF, Images - unterstützt nur ab iOS 10).
+
 - `fireFoxTitle`: Gibt den Titel an, der für die WebPush Notification festgelegt werden soll.
 - `fireFoxIconUrl`: Die URL des Symbols, das für die WebPush Notification festgelegt werden soll.
 - `fireFoxTimeToLive`: Dieser Parameter gibt an, wie lange (in Sekunden) die Nachricht im GCM-Speicher aufbewahrt wird, wenn das Gerät offline ist.
 - `fireFoxPayload`: Angepasste JSON-Nutzdaten, die als Bestandteil der Benachrichtigung gesendet werden.
+
 - `chromeTitle`: Gibt den Titel an, der für die WebPush Notification festgelegt werden soll.
 - `chromeIconUrl`: Die URL des Symbols, das für die WebPush Notification festgelegt werden soll.
 - `chromeTimeToLive`: Dieser Parameter gibt an, wie lange (in Sekunden) die Nachricht im GCM-Speicher aufbewahrt wird, wenn das Gerät offline ist.
 - `chromePayload`: Angepasste JSON-Nutzdaten, die als Bestandteil der Benachrichtigung gesendet werden.
+
+- `safariTitle`: Gibt den Titel an, der für die Safari-Push-Benachrichtigungen festgelegt werden soll.
+- `safariUrlArgs`: Die URL-Argumente, die mit dieser Benachrichtigung verwendet werden müssen. Dies muss in Form eines JSON-Arrays bereitgestellt werden.
+- `safariAction`: Die Bezeichnung der Aktionsschaltfläche.
+
 - `chromeAppExtTitle`: Gibt den Titel an, der für die WebPush Notification festgelegt werden soll.
 - `chromeAppExtCollapseKey`: Dieser Parameter gibt eine Gruppe aus Nachrichten an.
 - `chromeAppExtDelayWhileIdle`: Wenn für diesen Parameter der Wert 'true' festgelegt wird, gibt dies an, dass die Nachricht erst gesendet werden darf, wenn das Gerät aktiv wird.
@@ -108,7 +132,7 @@ Von der Aktion `/whisk.system/pushnotifications/sendMessage` werden Push-Benachr
 Es folgt ein Beispiel für das Senden einer Push-Benachrichtigung aus dem Paket *pushnotification*.
 
 - Senden Sie eine Push-Benachrichtigung mithilfe der Aktion `sendMessage` in der Paketbindung ab, die Sie zuvor erstellt haben. Stellen Sie sicher, dass Sie `/myNamespace/myPush` durch Ihren Paketnamen ersetzen.
-  
+
   ```
   wsk action invoke /myNamespace/myPush/sendMessage --blocking --result  -p url https://example.com -p text "this is my message"  -p sound soundFileName -p deviceIds "[\"T1\",\"T2\"]"
   ```
@@ -140,7 +164,7 @@ Es folgt ein Beispiel für das Senden einer Push-Benachrichtigung aus dem Paket 
       "success": true
   }
   ```
-  
+
 
 ## Auslöserereignis für Aktivität des Push Notifications-Service aktivieren
 {: #openwhisk_catalog_pushnotifications_fire}
@@ -156,29 +180,29 @@ Die folgenden Parameter sind verfügbar:
 Das folgende Beispiel die Erstellung eines Auslösers, der jedes Mal aktiviert wird, wenn ein neues Gerät mit der Push Notifications-Serviceanwendung registriert wird.
 
 1. Erstellen Sie eine Paketbindung, die für den Push Notifications-Service (mit Werten für 'appId' und 'appSecret') konfiguriert ist.
-  
+
   ```
   wsk package bind /whisk.system/pushnotifications myNewDeviceFeed --param appID myapp --param appSecret myAppSecret --param events onDeviceRegister
   ```
   {: pre}
-  
+
 2. Erstellen Sie mithilfe des Feeds `myPush/webhook` einen Auslöser für den Ereignistyp `onDeviceRegister` des Push Notifications-Service.
-  
+
   ```
   wsk trigger create myPushTrigger --feed myPush/webhook --param events onDeviceRegister
   ```
-  {: pre}  
-  
+  {: pre}
+
 3. Sie könnten eine Regel erstellen, die jedes Mal eine Nachricht sendet, wenn ein neues Gerät registriert wird. Erstellen Sie eine neue Regel unter Verwendung der vorherigen Aktion und des vorherigen Auslösers.
-  
+
   ```
   wsk rule create --enable myRule myPushTrigger sendMessage
   ```
   {: pre}
-  
+
   Überprüfen Sie die Ergebnisse mit dem Befehl `wsk activation poll`.
 
   Registrieren Sie ein Gerät in Ihrer Bluemix-Anwendung und Sie können sehen, wie die Regel (`rule`), der Auslöser (`trigger`) und die Aktion (`action`) im openWhisk-[Dashboard] (https://console.{Domain}/openwhisk/dashboard) ausgeführt werden.
 
   Die Aktion sendet dann eine Push-Benachrichtigung.
-  
+

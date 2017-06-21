@@ -39,7 +39,7 @@ Vous pouvez configurer Kibana pour afficher sur la page *Discover* les zones sui
 | hôte | Nom de l'application ayant produit les données de journal. |
 | instance_id | ID d'instance de l'instance d'application ayant produit les données de journal. |
 | loglevel | Niveau de gravité de l'événement consigné. |
-| message | Message émis par le composant. <br> Le message varie en fonction du contexte.  |
+| message | Message émis par le composant. <br> Le message varie en fonction du contexte. |
 | message_type | Flux dans lequel le message de journal est écrit. <br> * **OUT** fait référence au flux stdout. <br> * **ERR** fait référence au flux stderr. |
 | org_id | ID unique de votre organisation {{site.data.keyword.Bluemix_notm}}. |
 | org_name | Nom de l'organisation {{site.data.keyword.Bluemix_notm}} dans laquelle votre application est constituée en préproduction. |

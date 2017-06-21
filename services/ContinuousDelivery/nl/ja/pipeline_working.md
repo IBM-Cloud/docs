@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-6"
+lastupdated: "2017-4-28"
 
 ---
 
@@ -33,7 +33,7 @@ lastupdated: "2017-4-6"
 既存のアプリケーションのために {{site.data.keyword.deliverypipeline}} をセットアップするには、次の手順を実行します。
 
 1. {{site.data.keyword.Bluemix_notm}} のアプリのダッシュボードで、アプリをクリックします。
-1. {{site.data.keyword.Bluemix_notm}} メニュー・バーのハンバーガー・メニューから、**「サービス」**をクリックして、**「DevOps」**をクリックします。
+1. {{site.data.keyword.Bluemix_notm}} メニュー・バーのメニューから、**「サービス」**をクリックして、**「DevOps」**をクリックします。
 1. **「パイプライン」**をクリックして、 **「パイプラインの作成 (Create a Pipeline)」**をクリックします。
 
 Cloud Foundry アプリケーションをデプロイするように構成された[パイプラインを作成する ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/devops/pipelines/dashboard/create){: new_window} には、以下のステップを実行します。

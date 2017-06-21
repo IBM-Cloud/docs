@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -28,6 +28,7 @@ lastupdated: "2017-03-16"
 | CF 애플리케이션   | `application_id:<app_GUID>`    |
 | 단일 Docker 컨테이너 | `instance:<instance_GUID>`    |
 | 2개의 인스턴스가 있는 컨테이너 그룹 | `instance:<instance_GUID> OR instance:<instance_GUID>` |
+{: caption="표 1. 기본 조회 검색" caption-side="top"}
 
 **참고:** 
 * {{site.data.keyword.Bluemix_notm}} UI에서 Kibana를 시작할 때마다 표시되는 데이터는 기본적으로 사전 구성된 조회에 해당하며 색인 패턴을 기반으로 합니다.
@@ -47,6 +48,7 @@ lastupdated: "2017-03-16"
 | [필드 열 제거](logging_kibana_analize_logs_interactively.html#kibana_discover_remove_fields_from_table) | 분석을 위해 보기에 필요하지 않은 경우 필드를 제거합니다. |
 | [색인화된 필드의 값별로 항목 순서 지정](logging_kibana_analize_logs_interactively.html#kibana_discover_sort_by_table) | 더 쉽게 분석하기 위해 항목을 다시 정렬합니다. |
 | [자동으로 데이터 새로 고치기](logging_kibana_analize_logs_interactively.html#kibana_discover_view_refresh_interval) | 테이블에 표시된 데이터를 최신 항목으로 새로 고칩니다. 기본적으로 새로 고치기는 **OFF**입니다. |
+{: caption="표 2. 테이블을 사용자 정의하는 태스크" caption-side="top"}
 
 <br>
 
@@ -60,7 +62,7 @@ lastupdated: "2017-03-16"
 
 * 필드 필터를 적용하여 볼 수 있는 데이터 세트를 세분화하십시오. 각 필터를 전환하고, 페이지에 고정하며, 필요한 대로 사용 또는 사용 안함으로 설정하고, 값을 포함 또는 제거하도록 구성할 수 있습니다. 자세한 정보는 [Kibana에서 로그 필터링](logging_kibana_filtering_logs.html#kibana_filtering_logs)을 참조하십시오.
 
-    **팁:** 표시될 것으로 예상하는 필드가 *필드 목록*에 없거나 나열된 필드별 돋보기 중 일부가 검색 페이지에서 사용되지 않는 경우, 설정 페이지에서 색인 패턴을 다시 고쳐 필드 목록을 다시 로드하십시오. 자세한 정보는 [필드 목록 다시 로드](logging_kibana_analize_logs_interactively.html#kibana_discover_add_reload_fields)를 참조하십시오.
+    **팁:** 표시될 것으로 예상하는 필드가 *필드 목록*에 없거나 나열된 필드별 돋보기 중 일부가 검색 페이지에서 사용되지 않는 경우, 설정 페이지에서 색인 패턴을 다시 고쳐 필드 목록을 다시 로드하십시오. 자세한 정보는 [필드 목록 다시 로드](logging_kibana_analize_logs_interactively.html#kibana_discover_view_reload_fields)를 참조하십시오.
 
     예를 들어 CF 앱의 인스턴스가 여러 개인 경우 특정 인스턴스의 데이터를 분석할 수 있습니다. 분석하려는 특정 인스턴스 ID 값의 필드 필터를 정의할 수 있습니다. 
     
@@ -78,6 +80,7 @@ lastupdated: "2017-03-16"
 | [검색 다시 로드](logging_kibana_filtering_logs.html#k4_reload_search)  | 데이터 세트를 다시 분석하기 위해 기존 검색을 업로드합니다. |
 | [검색 데이터 새로 고치기](logging_kibana_filtering_logs.html#k4_refresh_search) | 검색을 통해 표시된 데이터의 자동 새로 고치기를 구성합니다.  |
 | [검색 가져오기](logging_kibana_filtering_logs.html#k4_import_search) | 검색을 가져옵니다.  |
+{: caption="표 3. 검색에 대한 작업을 수행하는 태스크" caption-side="top"}
 
 <br>
 
@@ -88,6 +91,60 @@ lastupdated: "2017-03-16"
 자세한 정보는 [필드 데이터 통계 보기](logging_kibana_analize_logs_interactively.html#kibana_discover_view_fields_stats)를 참조하십시오.
 
 **참고:** 테이블과 히스토그램에 표시되는 데이터는 정적입니다. 최신 항목을 계속 표시하려면 새로 고치기 간격을 설정해야 합니다. 
+
+
+## 테이블에 필드 열 추가
+{: #kibana_discover_add_fields_to_table}
+
+검색 페이지에서 데이터를 분석하는 데 사용할 수 있는 테이블에는 기본적으로 다음 필드가 포함되어 있습니다.
+* **time:** 이 필드는 항목을 캡처하여 {{site.data.keyword.Bluemix_notm}}에 기록한 시간을 표시합니다.
+* **_source:** 이 필드에는 항목의 원래 데이터가 포함되어 있습니다.
+
+다음 옵션 중 하나를 선택하여 필드 열을 테이블에 추가할 수 있습니다.
+
+* 페이지에서 사용할 수 있는 필드 목록에서 필드 열을 추가하십시오.
+
+    1. 검색 페이지의 `선택한 필드` 섹션에서 필드를 식별하십시오.
+    2. 필드 목록에서 필드 위로 마우스를 이동하십시오.
+    
+        ![테이블 보기에서 필드 추가](images/k4_add_field_column_hover.jpg "테이블 보기에서 필드 추가")
+    
+    3. 필드를 추가하려면 **추가**를 클릭하십시오.
+    
+ * 확장된 항목의 테이블 보기에서 필드 열을 추가하십시오.
+
+    1. 테이블의 항목을 확장하십시오.
+    2. 테이블 보기에서 추가할 필드를 식별하십시오.
+    
+        ![테이블 보기에서 필드 추가](images/k4_add_field_column.jpg "테이블 보기에서 필드 추가")
+    
+    3. **테이블에서 열 전환** 아이콘 ![테이블에서 열 전환](images/k4_toggle_field_icon.jpg)을 클릭하십시오.
+    
+
+**참고:** 한 필드 열을 테이블에 처음으로 추가할 때 테이블에 표시되는 *_source* 필드 열이 숨겨집니다. *_source* 필드에는 각 로그 항목에 대한 각 필드 값이 표시됩니다. 테이블에 열을 추가한 다음 테이블에서 로그 항목의 다른 필드 값을 보려면 각 항목의 테이블 보기 탭 또는 JSON 탭을 보십시오.
+
+예를 들어 *application_id* 필드를 테이블에 추가하면 테이블이 변경되어 다음과 같이 표시됩니다.
+
+![새 필드를 추가한 후 테이블 보기](images/k4_add_field_filter_new_table_look.jpg "새 필드를 추가한 후 테이블 보기")
+
+
+## 자동으로 데이터 새로 고치기
+{: #kibana_discover_view_refresh_interval}
+
+{{site.data.keyword.Bluemix_notm}}에서 기본적으로 *자동으로 새로 고치기* 기간은 **OFF**로 설정되며, Kibana에서 볼 수 있는 데이터는 Kibana를 시작한 이후 지난 15분 동안의 데이터에 해당합니다. 15분은 사전 구성된 시간 필터에 해당합니다. 다른 기간을 설정하여 변경할 수 있습니다. 자세한 정보는 [시간 필터 설정](logging_kibana_set_time_filter.html#set_time_filter)을 참조하십시오.
+
+다음 단계를 완료하여 *자동으로 새로 고치기* 기간을 설정하십시오.
+
+1. 검색 페이지 메뉴 표시줄에서 시간 선택도구 ![시간 선택도구](images/k4_time_picker_icon.jpg "시간 선택도구")를 클릭하십시오.
+
+2. 자동으로 새로 고치기 단추 ![자동으로 새로 고치기 단추](images/k4_auto_refresh_icon.jpg "자동으로 새로 고치기 단추")를 선택하십시오.
+
+3. 새로 고치기 간격을 선택하십시오.
+
+    ![자동으로 새로 고치기 시간을 설정하는 옵션](images/k4_change_autorefresh.jpg "자동으로 새로 고치기 시간을 설정하는 옵션")
+
+
+일시정지 단추 ![일시정지 단추](images/k4_auto_refresh_pause_icon.jpg "일시정지")를 클릭하여 새로 고치기 간격을 일시정지할 수 있습니다. 
 
 
 ## 검색 페이지에 표시되는 데이터 식별
@@ -126,73 +183,6 @@ Kibana를 사용하여 {{site.data.keyword.Bluemix_notm}} 로그를 분석할 �
     필드 값에 따라 항목을 전환하도록 0개 이상의 필드 필터를 정의할 수 있습니다. 예를 들어 필드 필터가 사용 가능한 경우, 표시되는 항목은 해당 필드의 값이 일치하는 항목에 해당합니다.
     
 
-## 테이블에 필드 열 추가
-{: #kibana_discover_add_fields_to_table}
-
-검색 페이지에서 데이터를 분석하는 데 사용할 수 있는 테이블에는 기본적으로 다음 필드가 포함되어 있습니다.
-* **time:** 이 필드는 항목을 캡처하여 {{site.data.keyword.Bluemix_notm}}에 기록한 시간을 표시합니다.
-* **_source:** 이 필드에는 항목의 원래 데이터가 포함되어 있습니다.
-
-다음 옵션 중 하나를 선택하여 필드 열을 테이블에 추가할 수 있습니다.
-
-* 페이지에서 사용할 수 있는 필드 목록에서 필드 열을 추가하십시오.
-
-    1. 검색 페이지의 `선택한 필드` 섹션에서 필드를 식별하십시오.
-    2. 필드 목록에서 필드 위로 마우스를 이동하십시오.
-    
-        ![테이블 보기에서 필드 추가](images/k4_add_field_column_hover.jpg "테이블 보기에서 필드 추가")
-    
-    3. 필드를 추가하려면 **추가**를 클릭하십시오.
-    
- * 확장된 항목의 테이블 보기에서 필드 열을 추가하십시오.
-
-    1. 테이블의 항목을 확장하십시오.
-    2. 테이블 보기에서 추가할 필드를 식별하십시오.
-    
-        ![테이블 보기에서 필드 추가](images/k4_add_field_column.jpg "테이블 보기에서 필드 추가")
-    
-    3. **테이블에서 열 전환** 아이콘 ![테이블에서 열 전환](images/k4_toggle_field_icon.jpg)을 클릭하십시오.
-    
-
-**참고:** 한 필드 열을 테이블에 처음으로 추가할 때 테이블에 표시되는 *_source* 필드 열이 숨겨집니다. *_source* 필드에는 각 로그 항목에 대한 각 필드 값이 표시됩니다. 테이블에 열을 추가한 다음 테이블에서 로그 항목의 다른 필드 값을 보려면 각 항목의 테이블 보기 탭 또는 JSON 탭을 보십시오.
-
-예를 들어 *application_id* 필드를 테이블에 추가하면 테이블이 변경되어 다음과 같이 표시됩니다.
-
-![새 필드를 추가한 후 테이블 보기](images/k4_add_field_filter_new_table_look.jpg "새 필드를 추가한 후 테이블 보기")
-
-
-## 테이블에서 필드 열 다시 정렬
-{: #kibana_discover_rearrange_fields_in_table}
-
-테이블의 필드 열을 다시 정렬할 수 있습니다. 이동할 열의 표제 위에 마우스를 두고 **열을 왼쪽으로 이동** 단추 또는 **열을 오른쪽으로 이동** 단추를 클릭하십시오.
-<br>
-![테이블의 필드 이동](images/k4_add_field_filter_new_table_look.jpg "테이블의 필드 이동")
-
-
-## 테이블에서 필드 열 제거
-{: #kibana_discover_remove_fields_from_table}
-
-테이블에서 필드를 제거하려면 다음 단계를 완료하십시오.
-
-1. 테이블 보기에서 제거하려는 필드를 테이블에서 식별하십시오.
-2. **열 제거**를 클릭하십시오.
-    
-    ![테이블 보기에서 필드 제거](images/k4_remove_field_column.jpg)
-
-
-## 테이블의 항목 보기
-{: #kibana_discover_view_entry_in_table}
-
-테이블에서 항목 데이터를 보려면 분석할 항목의 확장 단추 ![확장 단추 아이콘](images/k4_expand_icon.jpg "확장 단추 아이콘")을 클릭하십시오. 
-
-![Kibana의 검색 페이지에 있는 테이블](images/k4_table_discover.jpg "Kibana의 검색 페이지에 있는 테이블") 	
-
-그런 다음 데이터를 보려면 다음 옵션 중 하나를 선택하십시오.
-
-* 테이블 형식으로 데이터를 보려면 **테이블**을 클릭하십시오. 분석에 사용 가능한 각 필드의 값을 테이블 형식으로 볼 수 있습니다. 필드마다 필터 단추와 전환 단추도 있습니다.
-* JSON 형식으로 데이터를 보려면 **JSON**을 클릭하십시오.
-
-
 ## 색인화된 필드의 값순으로 항목 순서 지정 
 {: #kibana_discover_sort_by_table}
 
@@ -220,23 +210,14 @@ Kibana를 사용하여 {{site.data.keyword.Bluemix_notm}} 로그를 분석할 �
 
 **참고:** 시간 필드별로 정렬하면 기본적으로 항목이 역시간 순서로 정렬됩니다. 최신 항목이 먼저 표시됩니다.
 
-## 자동으로 데이터 새로 고치기
-{: #kibana_discover_view_refresh_interval}
 
-{{site.data.keyword.Bluemix_notm}}에서 기본적으로 *자동으로 새로 고치기* 기간은 **OFF**로 설정되며, Kibana에서 볼 수 있는 데이터는 Kibana를 시작한 이후 지난 15분 동안의 데이터에 해당합니다. 15분은 사전 구성된 시간 필터에 해당합니다. 다른 기간을 설정하여 변경할 수 있습니다. 자세한 정보는 [시간 필터 설정](logging_kibana_set_time_filter.html#set_time_filter)을 참조하십시오.
+## 테이블에서 필드 열 다시 정렬
+{: #kibana_discover_rearrange_fields_in_table}
 
-다음 단계를 완료하여 *자동으로 새로 고치기* 기간을 설정하십시오.
+테이블의 필드 열을 다시 정렬할 수 있습니다. 이동할 열의 표제 위에 마우스를 두고 **열을 왼쪽으로 이동** 단추 또는 **열을 오른쪽으로 이동** 단추를 클릭하십시오.
+<br>
+![테이블의 필드 이동](images/k4_add_field_filter_new_table_look.jpg "테이블의 필드 이동")
 
-1. 검색 페이지 메뉴 표시줄에서 시간 선택도구 ![시간 선택도구](images/k4_time_picker_icon.jpg "시간 선택도구")를 클릭하십시오.
-
-2. 자동으로 새로 고치기 단추 ![자동으로 새로 고치기 단추](images/k4_auto_refresh_icon.jpg "자동으로 새로 고치기 단추")를 선택하십시오.
-
-3. 새로 고치기 간격을 선택하십시오.
-
-    ![자동으로 새로 고치기 시간을 설정하는 옵션](images/k4_change_autorefresh.jpg "자동으로 새로 고치기 시간을 설정하는 옵션")
-
-
-일시정지 단추 ![일시정지 단추](images/k4_auto_refresh_pause_icon.jpg "일시정지")를 클릭하여 새로 고치기 간격을 일시정지할 수 있습니다. 
 
 ## 필드 목록 다시 로드
 {: #kibana_discover_view_reload_fields}
@@ -252,6 +233,30 @@ Kibana를 사용하여 {{site.data.keyword.Bluemix_notm}} 로그를 분석할 �
 3. *필드 목록 다시 로드* 단추 ![필드 목록 다시 로드](images/k4_reload_field_list_icon.jpg "필드 목록 다시 로드")를 클릭하여 색인 패턴 필드를 다시 로드하십시오. 
 
 필드 목록이 새로 고쳐집니다.
+
+
+## 테이블에서 필드 열 제거
+{: #kibana_discover_remove_fields_from_table}
+
+테이블에서 필드를 제거하려면 다음 단계를 완료하십시오.
+
+1. 테이블 보기에서 제거하려는 필드를 테이블에서 식별하십시오.
+2. **열 제거**를 클릭하십시오.
+    
+    ![테이블 보기에서 필드 제거](images/k4_remove_field_column.jpg "테이블 보기에서 필드 제거")
+
+
+## 테이블의 항목 보기
+{: #kibana_discover_view_entry_in_table}
+
+테이블에서 항목 데이터를 보려면 분석할 항목의 확장 단추 ![확장 단추 아이콘](images/k4_expand_icon.jpg "확장 단추 아이콘")을 클릭하십시오. 
+
+![Kibana의 검색 페이지에 있는 테이블](images/k4_table_discover.jpg "Kibana의 검색 페이지에 있는 테이블") 	
+
+그런 다음 데이터를 보려면 다음 옵션 중 하나를 선택하십시오.
+
+* 테이블 형식으로 데이터를 보려면 **테이블**을 클릭하십시오. 분석에 사용 가능한 각 필드의 값을 테이블 형식으로 볼 수 있습니다. 필드마다 필터 단추와 전환 단추도 있습니다.
+* JSON 형식으로 데이터를 보려면 **JSON**을 클릭하십시오.
 
 ## 필드 데이터 통계 보기
 {: #kibana_discover_view_fields_stats}

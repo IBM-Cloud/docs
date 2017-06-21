@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-11-14"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-11-14"
 # Segnalazione di problemi
 {: #reporting_issues}
 
-Se riscontri dei problemi con IBM WebSphere Application Server su Bluemix, puoi ricevere assistenza utilizzando uno dei seguenti approcci:
+Se riscontri dei problemi con IBM WebSphere Application Server in Bluemix, puoi ricevere assistenza utilizzando uno dei seguenti approcci:
 
 * Aprire un ticket di supporto, attenendoti alla procedura definita nella pagina [Contatta il supporto Bluemix](/docs/support/index.html#contacting-support)
 * Poni un quesito in uno dei forum pubblici del [Supporto Bluemix](https://developer.ibm.com/bluemix/support/){: new_window}. I forum vengono monitorati attivamente e

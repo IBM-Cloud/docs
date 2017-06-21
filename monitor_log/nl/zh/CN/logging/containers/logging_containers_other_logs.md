@@ -32,7 +32,7 @@ lastupdated: "2017-03-16"
 
     显示的映像列表包括 {{site.data.keyword.IBM}} 提供的映像以及存储在专用 {{site.data.keyword.Bluemix_notm}} 注册表中的映像。 
 
-2. 定义容器。选择类型，输入容器名称，选择容器大小，然后定义其他属性，例如 IP 地址详细信息和端口。有关更多信息,请参阅[通过 {{site.data.keyword.Bluemix_notm}} UI 创建和部署单个容器](/docs/containers/container_single_ui.html)。 
+2. 定义容器。选择类型，输入容器名称，选择容器大小，然后定义其他属性，例如 IP 地址详细信息和端口。有关更多信息,请参阅[通过 {{site.data.keyword.Bluemix_notm}} UI 创建和部署单个容器](/docs/containers/container_single_ui.html#gui)。 
 
 3. 展开**高级选项**部分，并选择**添加新的环境变量**。
 
@@ -41,6 +41,7 @@ lastupdated: "2017-03-16"
     例如，添加基于最新 Liberty 映像的容器时，要分析日志文件 *dpkg.log*，请将该环境值设置为以下值：
     
     <table>
+      <caption>表 1. 日志位置样本值</caption>
       <tbody>
         <tr>
           <th align="center">变量名称</th>
@@ -72,6 +73,7 @@ lastupdated: "2017-03-16"
     可以包含 **–a** 选项以登录到 {{site.data.keyword.Bluemix_notm}} 中的特定区域。例如，下表列出了每个区域的命令：
 
     <table>
+      <caption>表 2. 每个区域的命令</caption>
       <tbody>
         <tr>
           <th align="center">区域</th>
@@ -85,11 +87,11 @@ lastupdated: "2017-03-16"
           <td align="left">英国</td>
           <td align="left">cf login -a api.eu-gb.bluemix.net</td>
         </tr>
-        <tr>
-          <td align="left">悉尼</td>
-          <td align="left">cf login -a api.au-syd.bluemix.net</td>
+	 <tr>
+          <td align="left">法兰克福</td>
+          <td align="left">cf login -a api.eu-de.bluemix.net</td>
         </tr>
-      </tbody>
+       </tbody>
     </table>
     
 
@@ -104,6 +106,7 @@ lastupdated: "2017-03-16"
     其中
     
      <table>
+      <caption>表 3. 命令选项</caption>
       <tbody>
         <tr>
           <th align="center">选项</th>

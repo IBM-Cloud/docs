@@ -3,11 +3,11 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-04-17"
 
 ---
 
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -43,10 +43,10 @@ API                     | 用于...
 [组织管理 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | 配置组织（包括创建和删除设备）、检查使用情况、提供状态服务并诊断设备连接问题。
 [安全 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | 管理用户邀请和认证，以及用户、API 密钥和设备的授权。
 [信息管理 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  访问设备事件数据，以及获取和更新设备位置并取得该位置的天气信息。
+**注：**天气信息依赖于 The Weather Company 数据集成。
+[The Weather Company ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html#!/Device_Location_Weather){: new_window} | 将 The Weather Company 的数据与现有设备集成。
 [设备管理 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | 使用设备管理协议与受管设备进行交互。
-[消息传递 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | 使用 HTTP 发布事件并发送命令。**注：**对于消息传递 API，使用地址 *https://<**orgId**>.messaging.internetofthings.ibmcloud.com/api/v0002*
-
-
+[消息传递 ![外部链接图标](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | 使用 HTTP 发布事件并发送命令。
 ## 扩展 HTTP API
 {: #api_extension}
 

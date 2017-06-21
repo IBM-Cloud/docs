@@ -13,7 +13,7 @@ lastupdated: "2017-03-14"
 {:pre: .pre}
 
 
-# Intelligente Verträge für die {{site.data.keyword.iot_short_notm}}-Blockchain-Integration entwickeln
+# Intelligente Blockchain-Verträge entwickeln
 {: #iotblockchain_link}
 
 Verwenden Sie {{site.data.keyword.blockchainfull}} und die Hyperledger-Entwicklungsumgebung zum Erstellen und Testen eigener intelligenter Verträge, die aus Beispielverträgen abgeleitet sind, die von IBM bereitgestellt wurden.

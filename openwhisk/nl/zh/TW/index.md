@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-21"
+lastupdated: "2017-04-25"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -20,7 +19,7 @@ lastupdated: "2017-02-21"
 
 這個程式設計模型是微服務、行動、IoT 及許多其他應用程式的絕配；您預設會有既有的自動擴充及負載平衡，而不需要手動配置叢集、負載平衡器、http 外掛程式等。如果您剛好是在 {{site.data.keyword.openwhisk}} 上執行，則也會有零管理的好處，意思是 IBM 會維護所有的硬體、網路及軟體。您只需要提供您要執行的程式碼，並將它交給 {{site.data.keyword.openwhisk}}。剩下的就是「魔法」。[Martin Fowler 部落格](https://martinfowler.com/articles/serverless.html)充分地介紹了無伺服器程式設計模型。
 
-您也可以取得 [Apache OpenWHisk 原始碼](https://github.com/openwhisk/openwhisk)，並自行執行系統。
+您也可以取得 [Apache OpenWhisk 原始碼](https://github.com/openwhisk/openwhisk)，並自行執行系統。
 
 如需 {{site.data.keyword.openwhisk_short}} 運作方式的詳細資料，請參閱[關於 {{site.data.keyword.openwhisk_short}}](./openwhisk_about.html)。
 
@@ -29,13 +28,13 @@ lastupdated: "2017-02-21"
 ## 在瀏覽器中開發
 {: #openwhisk_start_editor}
 
-請在[瀏覽器](https://console.{DomainName}/openwhisk/editor){: new_window}中試用 {{site.data.keyword.openwhisk_short}} 來建立動作、使用觸發程式自動化動作，以及探索公用套件。
-如需「OpenWhisk 使用者介面」的快速導覽，請造訪[進一步瞭解](https://console.{DomainName}/openwhisk/learn){: new_window}頁面。
+請在[瀏覽器](https://console.{DomainName}/openwhisk/editor)中試用 {{site.data.keyword.openwhisk_short}} 來建立動作、使用觸發程式自動化動作，以及探索公用套件。
+如需「OpenWhisk 使用者介面」的快速導覽，請造訪[進一步瞭解](https://console.{DomainName}/openwhisk/learn)頁面。
 
 ## 使用 CLI 開發
 {: #openwhisk_start_configure_cli}
 
-您可以使用 {{site.data.keyword.openwhisk_short}} 指令行介面 (CLI) 來設定名稱空間及授權金鑰。移至[配置 CLI](https://new-console.{DomainName}/openwhisk/cli){: new_window}，並遵循指示進行安裝。
+您可以使用 {{site.data.keyword.openwhisk_short}} 指令行介面 (CLI) 來設定名稱空間及授權金鑰。移至[配置 CLI](https://console.{DomainName}/openwhisk/cli)，並遵循指示進行安裝。
 
 ## 概觀
 {: #openwhisk_start_overview}
@@ -123,10 +122,10 @@ wsk action invoke hello --blocking --result --param name Fred
 ## API 參考資料
 {: #openwhisk_start_api notoc}
 * [REST API 文件](./openwhisk_reference.html#openwhisk_ref_restapi)
-* [REST API](https://new-console.{DomainName}/apidocs/98){:new_window}
+* [REST API](https://console.{DomainName}/apidocs/98)
 
 ## 相關鏈結
 {: #general notoc}
-* [探索：{{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/){:new_window}
-* [IBM developerWorks 上的 {{site.data.keyword.openwhisk_short}}](https://developer.ibm.com/openwhisk/){:new_window}
-* [Apache {{site.data.keyword.openwhisk_short}} 專案網站](http://openwhisk.org){:new_window}
+* [探索：{{site.data.keyword.openwhisk_short}}](http://www.ibm.com/cloud-computing/bluemix/openwhisk/)
+* [IBM developerWorks 上的 {{site.data.keyword.openwhisk_short}}](https://developer.ibm.com/openwhisk/)
+* [Apache {{site.data.keyword.openwhisk_short}} 專案網站](http://openwhisk.org)

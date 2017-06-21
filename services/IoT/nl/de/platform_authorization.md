@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Anwendungsverbindung
+# Anwendungen verbinden
 
 Um eine Verbindung zwischen Ihrer Anwendung und {{site.data.keyword.iot_full}} herzustellen, müssen Sie die Verbindung über API-Schlüssel und Token herstellen oder Ihre Anwendung in {{site.data.keyword.Bluemix_notm}} direkt mit {{site.data.keyword.iot_short_notm}} verbinden. Verwenden Sie das Zugriffsdashboard, um Zugriff zu erteilen.
 {:shortdesc}

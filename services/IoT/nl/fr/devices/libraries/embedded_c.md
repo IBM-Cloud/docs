@@ -22,7 +22,7 @@ Vous pouvez utiliser Embedded C pour générer et personnaliser des terminaux qu
 ## Téléchargement du client et des ressources Embedded C
 {: #embeddedc_client_download}
 
-Pour accéder aux bibliothèques et exemples client Embedded C pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iotf-embeddedc ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iotf-embeddedc){: new_window} dans GitHub et exécutez les instructions d'installation. 
+Pour accéder aux bibliothèques et exemples client Embedded C pour {{site.data.keyword.iot_short_notm}}, accédez au référentiel [iotf-embeddedc ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-messaging/iotf-embeddedc){: new_window} dans GitHub et exécutez les instructions d'installation.
 
 
 ## Dépendances

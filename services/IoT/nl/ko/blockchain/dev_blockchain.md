@@ -13,7 +13,7 @@ lastupdated: "2017-03-14"
 {:pre: .pre}
 
 
-# {{site.data.keyword.iot_short_notm}} 블록체인 통합을 위한 스마트 계약 개발
+# 블록체인 스마트 계약 개발
 {: #iotblockchain_link}
 
 {{site.data.keyword.blockchainfull}} 및 Hyperledger 개발 환경을 사용하여 IBM 제공 샘플 계약에서 파생된 자체 스마트 계약을 작성하고 테스트할 수 있습니다.
@@ -186,7 +186,8 @@ Golang 체인코드 실행 파일 양식으로 스마트 계약을 개발하고 
 2.  로컬 Hyperledger 개발 및 테스트 환경을 설정하십시오.  
 {{site.data.keyword.blockchainfull_notm}}에 배치하기 전에 자체 체인코드를 개발하고 테스트하려면 로컬 개발 환경을 설정해야 합니다. 이 환경에는 계약에 대한 체인코드를 쓰는 데 사용되는 GoLang이 포함됩니다. 
  1. 개발 환경을 설정하십시오.   
-개발 환경에는 GoLang으로 빌드된 체인코드를 사용하여 스마트 계약을 개발하는 데 필요한 도구가 포함되어 있습니다. 자세한 정보는 Hyperledger 문서의 [개발 환경 설정 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")]( https://github.com/hyperledger/fabric/blob/master/docs/source/dev-setup/devenv.rst){: new_window}을 참조하십시오. 
+개발 환경에는 GoLang으로 빌드된 체인코드를 사용하여 스마트 계약을 개발하는 데 필요한 도구가 포함되어 있습니다. 자세한 정보는 Hyperledger 문서의
+[개발 환경 설정 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")]( https://github.com/hyperledger/fabric/blob/master/docs/source/dev-setup/devenv.rst){: new_window}을 참조하십시오. 
  2. 체인코드 디버깅 환경을 설치하십시오.    
 디버깅 환경은 {{site.data.keyword.blockchainfull_notm}}에 배치하기 전에 스마트 계약을 테스트하고 디버그하는 데 필요한 도구를 제공합니다. 자세한 정보는 Hyperledger 문서의 [개발 환경에서 체인코드 작성, 빌드 및 실행 ![외부 링크 아이콘](../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Chaincode-setup.rst){: new_window}을 참조하십시오. 
  3. 개발용 네트워크를 설정하십시오.    

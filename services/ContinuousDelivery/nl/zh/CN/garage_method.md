@@ -34,7 +34,7 @@ lastupdated: "2017-4-5"
 
 以下文章提供持续交付的概念性概述。
 
-[持续交付 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window} 是一个实践，通过该实践，您构建和部署软件，以便其可以随时发布到生产。计算机科学的其中一个标志是缩短了开发和操作流程的各种周期时间。
+[持续交付 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/deliver/tool_continuous_delivery/){:new_window} 是一个可用来构建和部署软件的实践，因此可随时发布到生产。计算机科学的其中一个标志是缩短了开发和操作流程的各种周期时间。
 
 使用 [Delivery Pipeline ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/content/deliver/tool_delivery_pipeline/){:new_window}（随附于 IBM Bluemix Continuous Delivery），您可以通过一种一致且可靠的方法，将软件交付过程分成各个阶段，从而实现持续交付。目标是以最少的人为干预，自动在各个阶段执行代码。
 
@@ -43,7 +43,7 @@ lastupdated: "2017-4-5"
 
 [创建并使用第一个工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_flow){:new_window}。了解如何通过模板创建开放式工具链，并使用工具链持续交付“Hello World”应用程序。
 
-[创建并使用微型服务工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}。了解如何通过具有三个微型服务的模板创建工具链，并使用工具链持续交付“Hello World”应用程序。
+[创建并使用微服务工具链 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/devops/method/tutorials/tutorial_toolchain_microservices){:new_window}。了解如何通过具有三个微服务的模板创建工具链，并使用工具链持续交付“Hello World”应用程序。
 
 ## 持续交付课程
 {: #gm_cd_courses}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-20"
 
 ---
 
@@ -229,7 +229,7 @@ System.err.println("Failed to update the location!");
 
 ### 接続されたデバイスのロケーションの更新情報の送信
 
-ゲートウェイは、対応する `updateDeviceLocation()` デバイス・メソッドを呼び出して、接続されているデバイスのロケーションを更新できます。多重定義されたメソッドを使用して、`measuredDateTime` メソッドを指定できます。  
+ゲートウェイは、対応する `updateDeviceLocation()` デバイス・メソッドを呼び出して、接続されているデバイスのロケーションを更新できます。多重定義されたメソッドを使用して、`measuredDateTime` メソッドを指定できます。
 
 ```java
 // update the location of the attached device with latitude, longitude, and elevation
@@ -383,7 +383,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 **注**: ファームウェアのダウンロードや更新の要求を転送するゲートウェイと接続されているデバイスの両方のために 1 つだけハンドラーをライブラリーに追加する必要があります。実装では、複数のファームウェア要求を同時に処理するために、スレッドまたはスレッド・プールを作成する必要があります。
 
-スレッド・プール・ハンドラーの実装のサンプルは、[ゲトウェイ・サンプル GutHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window} にあります。
+スレッド・プル・ハンドラの実装のサンプルは、[ゲトウェイ・サンプル GutHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window} にあります。
 
 ### `downloadFirmware` のサンプル実装
 
@@ -398,7 +398,7 @@ public abstract void updateFirmware(DeviceFirmware deviceFirmware);
 
 以下のコード・サンプルは、ファームウェア・ダウンロードの実装の例を示しています。
 
-**重要:** ここに示すコード・サンプルには、スレッド・プールのセクションは含まれていません。ファームウェア・ハンドラーの完全な実装のサンプルは、[IBM Java ゲトウェイ・サンプル GitHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window} にあります。
+**重要:** ここに示すコド・サンプルには、スレッド・プルのセクションは含まれていません。ファムウェア・ハンドラの完全な実装のサンプルは、[IBM Java ゲトウェイ・サンプル GitHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window} にあります。
 
 ```java
 public void downloadFirmware(DeviceFirmware deviceFirmware) {
@@ -533,7 +533,7 @@ public void updateFirmware(DeviceFirmware deviceFirmware) {
 }
 ```
 
-コード全体は、[ゲトウェイ・サンプル GitHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window} にある `GatewayFirmwareHandlerSample` サンプルにあります。
+コド全体は、[ゲトウェイ・サンプル GitHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayFirmwareHandlerSample.java){: new_window} にある `GatewayFirmwareHandlerSample` サンプルにあります。
 
 ### ステップ 4: `ManagedGateway` へのハンドラーの追加
 
@@ -589,7 +589,7 @@ public abstract void handleReboot(DeviceAction action);
 public abstract void handleFactoryReset(DeviceAction action);
 ```
 
-**注:** デバイス・アクション要求を転送するゲートウェイと接続されているデバイスの両方のために 1 つだけハンドラーをライブラリーに追加する必要があります。実装では、複数のデバイス・アクション要求を同時に処理するために、スレッドまたはスレッド・プールを作成する必要があります。スレッド・プールを使用するハンドラー実装のサンプルは、[iot-gateway-samples GitHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window} にあります。
+**注:** デバイス・アクション要求を転送するゲトウェイと接続されているデバイスの両方のために 1 つだけハンドラをライブラリに追加する必要があります。実装では、複数のデバイス・アクション要求を同時に処理するために、スレッドまたはスレッド・プルを作成する必要があります。スレッド・プルを使用するハンドラ実装のサンプルは、[iot-gateway-samples GitHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window} にあります。
 
 ### `handleReboot` のサンプル実装
 
@@ -616,7 +616,7 @@ public void handleReboot(DeviceAction action) {
 }
 ```
 
-スレッド・プールを使用するハンドラーの実装サンプルの完全版は、[iot-gateway-samples GitHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window} にあります。
+スレッド・プルを使用するハンドラの実装サンプルの完全版は、[iot-gateway-samples GitHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/blob/master/java/advanced-gateway-sample/src/main/java/com/ibm/iotf/sample/gateway/GatewayActionHandlerSample.java){: new_window} にあります。
 
 
 ### `handleFactoryReset` のサンプル実装
@@ -646,6 +646,138 @@ mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
 デバイス・アクションについて詳しくは、[デバイス管理要求 ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window} を参照してください。
+
+## デバイス管理拡張パッケージ
+{: #dme}
+
+デバイス管理拡張 (DME) パッケージとは、一連のカスタム・デバイス管理アクションを定義した JSON 文書です。そのようなアクションをサポートしている 1 つ以上のデバイスで、アクションを開始できます。アクションを開始するには、{{site.data.keyword.iot_short}} ダッシュボードかデバイス管理 REST API を使用します。
+
+DME パッケージの形式の詳細については、[デバイス管理の拡張](../../devices/device_mgmt/custom_actions.html)を参照してください。
+
+### カスタム・デバイス管理アクションのサポート
+
+拡張パッケージで定義されたデバイス管理アクションは、それらのアクションをサポートするゲートウェイか接続先デバイスで開始できます。
+
+デバイスから {{site.data.keyword.iot_short}} に管理要求をパブリッシュする時に、デバイスがサポートするアクションのタイプを指定します。特定の拡張パッケージで定義されたカスタム・アクションをデバイスで受け取るには、デバイスで管理要求をパブリッシュする時に、その拡張のバンドル ID をサポート・オブジェクトで指定する必要があります。
+
+ゲートウェイでは、`manage()` API を呼び出す時にバンドル ID のリストを指定して、管理要求で指定されているバンドル ID のリストに対応した DME アクションがゲートウェイや接続先のデバイスでサポートされていることを、{{site.data.keyword.iot_short}} に通知できます。
+
+管理要求をパブリッシュする時に、このゲートウェイが DME アクションをサポートしているということを {{site.data.keyword.iot_short}} に伝えるためのコード・スニペットを以下に示します。
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendGatewayManageRequest(0, false, false, bundleIds);
+```
+
+最後のパラメーターでは、デバイスがサポートしているカスタム・アクションを指定します。
+
+同様に、ゲートウェイでは、対応するデバイス・メソッドを呼び出して、接続先のデバイスが DME アクションをサポートしているということを通知できます。
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendDeviceManageRequest(typeId, deviceId, 0, false, false, bundleIds);
+```
+
+### カスタム・デバイス管理アクションの処理
+
+ゲートウェイや {{site.data.keyword.iot_short}} の接続先のデバイスでカスタム・アクションを開始すると、MQTT メッセージがゲートウェイにパブリッシュされます。そのメッセージには、要求の一部として指定されたパラメーターが含まれています。ゲートウェイでは、そのメッセージを受け取って処理するために CustomActionHandler を追加する必要があります。そのメッセージは、`CustomAction` クラスのインスタンスとして返されます。そのクラスには以下のプロパティーがあります。
+
+| プロパティー     | データ・タイプ     | 説明 |
+|----------------|----------------|----------------|
+|`bundleId` |ストリング | DME の固有 ID。|
+|`actionId` |ストリング|開始されるカスタム・アクション。|
+|`typeId` |ストリング|カスタム・アクションが開始されるデバイス・タイプ。|
+|`deviceId` |ストリング|カスタム・アクションが開始されるデバイス。|
+|`payload` |ストリング|パラメーターのリストが組み込まれた JSON 形式の実際のメッセージ。|
+|`reqId` |ストリング|カスタム・アクション要求への応答で使用される要求 ID。|
+
+以下のコードは、`CustomActionHandler` のサンプル実装です。
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.ibm.iotf.client.CustomAction;
+import com.ibm.iotf.client.CustomAction.Status;
+import com.ibm.iotf.devicemgmt.CustomActionHandler;
+
+public class MyCustomActionHandler extends CustomActionHandler implements Runnable {
+
+	// A queue to hold & process the commands for smooth handling of MQTT messages
+	private BlockingQueue<CustomAction> queue = new LinkedBlockingQueue<CustomAction>();
+	// A map to hold the publish interval time for each device
+	private Map<String, Long> intervalMap = new HashMap<String, Long>();
+
+	@Override
+	public void run() {
+		while(true) {
+			CustomAction action = null;
+			try {
+				action = queue.take();
+				System.out.println(" "+action.getActionId()+ " "+action.getPayload());
+				JsonArray fields = action.getPayload().get("d").getAsJsonObject().get("fields").getAsJsonArray();
+				for(JsonElement field : fields) {
+					JsonObject fieldObj = field.getAsJsonObject();
+					if("PublishInterval".equals(fieldObj.get("field").getAsString())) {
+						long val = fieldObj.get("value").getAsLong();
+						String key = action.getTypeId() + ":" + action.getDeviceId();
+						long publishInterval = val * 1000;
+						intervalMap.put(key, publishInterval);
+						System.out.println("Updated the publish interval to "+val);
+					}
+				}
+				action.setStatus(Status.OK);
+
+			} catch (InterruptedException e) {}
+		}
+	}
+
+	public long getPublishInterval(String deviceType, String deviceId) {
+		String key = deviceType + ":" + deviceId;
+		Long val = intervalMap.get(key);
+		if(val == null) {
+			return 1000; // default is 1 second
+		} else {
+			return val.longValue();
+		}
+	}
+
+	@Override
+	public void handleCustomAction(CustomAction action) {
+		try {
+			queue.put(action);
+			} catch (InterruptedException e) {
+		}
+
+	}
+}
+```
+
+`CustomActionHandler` を `ManagedGateway` インスタンスに追加すると、アプリケーションから何らかのカスタム・アクションが開始されるたびに `handleCustomAction()` メソッドが呼び出されます。
+
+以下は、`CustomActionHandler` を `ManagedGateway` インスタンスに追加する方法を大まかに示したコード・サンプルです。
+
+```java
+MyCustomActionHandler handler = new MyCustomActionHandler();
+mgdGateway.addCustomActionHandler(handler);
+```
+
+ゲートウェイは、カスタム・アクション・メッセージを受け取ると、アクションを完了するか、アクションを完了できなかったという趣旨のエラー・コードで応答します。ゲートウェイは、*setStatus()* メソッドを使用してアクションの状況を設定しなければなりません。
+
+```java
+action.setStatus(Status.OK);
+```
+
+DME の詳細については、[デバイス管理要求の拡張![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](../../devices/device_mgmt/custom_actions.html){: new_window}を参照してください。
 
 ## デバイス属性変更の listen
 {: #listen_device_attributes}
@@ -700,7 +832,7 @@ public void propertyChange(PropertyChangeEvent evt) {
 ## サンプル
 {: #samples}
 
-ゲートウェイとゲートウェイの背後にあるデバイスを {{site.data.keyword.iot_short_notm}} インスタンスに接続するために利用できるサンプルがいくつか用意されています。これらのサンプルは {{site.data.keyword.iot_short_notm}} Java クライアント・ライブラリーを使用しており、[ゲトウェイ・サンプル GitHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window} に置かれています。
+ゲトウェイとゲトウェイの背後にあるデバイスを {{site.data.keyword.iot_short_notm}} インスタンスに接続するために利用できるサンプルがいくつか用意されています。これらのサンプルは {{site.data.keyword.iot_short_notm}} Java クライアント・ライブラリを使用しており、[ゲトウェイ・サンプル GitHub リポジトリ ![外部リンク・アイコン](../../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-messaging/iot-gateway-samples/tree/master/java/gateway-samples){: new_window} に置かれています。
 
 ## レシピ
 {: #recipes}

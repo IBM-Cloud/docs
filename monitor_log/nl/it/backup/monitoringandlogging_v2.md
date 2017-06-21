@@ -16,12 +16,12 @@ lastupdated: "2017-02-14"
 # Monitoraggio e registrazione
 {: #monitoringandlogging}
 
-{{site.data.keyword.Bluemix}} è una piattaforma di elaborazione cloud di {{site.data.keyword.IBM_notm}} progettata per la creazione, esecuzione e gestione di applicazioni e servizi.  {{site.data.keyword.Bluemix_notm}} combina la soluzione PaaS (platform as a service ) con la soluzione IaaS (infrastructure as a service). Inoltre, {{site.data.keyword.Bluemix_notm}} fornisce un ricco catalogo di servizi facilmente integrabili con PaaS e IaaS per creare rapidamente delle applicazioni di business. {{site.data.keyword.Bluemix_notm}} include servizi integrati di registrazione e monitoraggio in tutta la piattaforma.
+{{site.data.keyword.Bluemix}} è una piattaforma di elaborazione cloud di {{site.data.keyword.IBM_notm}} progettata per la creazione, esecuzione e gestione di applicazioni e servizi. {{site.data.keyword.Bluemix_notm}} combina la soluzione PaaS (platform as a service ) con la soluzione IaaS (infrastructure as a service). Inoltre, {{site.data.keyword.Bluemix_notm}} fornisce un ricco catalogo di servizi facilmente integrabili con PaaS e IaaS per creare rapidamente delle applicazioni di business. {{site.data.keyword.Bluemix_notm}} include servizi integrati di registrazione e monitoraggio in tutta la piattaforma. 
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} offre servizi di registrazione e di monitoraggio tra i diversi servizi di elaborazione, come Cloud Foundry e {{site.data.keyword.containershort}}. Puoi sviluppare, eseguire e gestire le applicazioni in qualsiasi runtime di elaborazione senza la complessità della creazione e manutenzione dell'infrastruttura che è tipicamente associata allo sviluppo e al lancio di un applicazione.  
+{{site.data.keyword.Bluemix_notm}} offre servizi di registrazione e di monitoraggio tra i diversi servizi di elaborazione, come Cloud Foundry e {{site.data.keyword.containershort}}. Puoi sviluppare, eseguire e gestire le applicazioni in qualsiasi runtime di elaborazione senza la complessità della creazione e manutenzione dell'infrastruttura che è tipicamente associata allo sviluppo e al lancio di un applicazione. 
 
-**Nota:** le funzionalità di monitoraggio e di registrazione sono disponibili nelle regioni Stati Uniti Sud e Regno Unito. 
+**Nota:** le funzionalità di monitoraggio e di registrazione sono disponibili nelle regioni Stati Uniti Sud e Regno Unito.
 
 Puoi utilizzare le funzionalità di monitoraggio in {{site.data.keyword.Bluemix_notm}} per raccogliere e misurare automaticamente le metriche chiave dal tuo ambiente e dalle tue applicazioni. Non è richiesta alcuna strumentazione speciale per raccogliere le metriche. Ad esempio, puoi utilizzare le informazioni fornite dalle metriche delle prestazioni per monitorare in che modo un servizio viene eseguito nel cloud, per individuare colli di bottiglia delle risorse e per controllare lo SLA (service level agreement). Ad esempio, quando analizzi i dati delle prestazioni di un servizio, puoi rilevare delle situazioni che possono causare un collo di bottiglia delle risorse e di conseguenza influire sullo SLA del servizio per i tuoi clienti. Adottando delle azioni tempestive, puoi prevenire situazioni che possono compromettere il tuo business.  
 
@@ -30,7 +30,7 @@ Puoi utilizzare le funzionalità di registrazione in {{site.data.keyword.Bluemix
 ## Monitoraggio delle risorse dell'infrastruttura di elaborazione
 {: #monitoring_sl_ov}
 
-Ogni server {{site.data.keyword.Bluemix_notm}} include dei report sul monitoraggio di facile lettura che sono sempre disponibili. Per ulteriori informazioni, vedi [Infrastructure Monitoring & Reporting ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/infrastructure-monitoring){: new_window}.
+Ogni server {{site.data.keyword.Bluemix_notm}} include dei report sul monitoraggio di facile lettura che sono sempre disponibili. Per ulteriori informazioni, vedi [Infrastructure Monitoring & Reporting ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud-computing/bluemix/infrastructure-monitoring){: new_window}.
 
 
 ## Monitoraggio in {{site.data.keyword.Bluemix}} per i servizi di elaborazione

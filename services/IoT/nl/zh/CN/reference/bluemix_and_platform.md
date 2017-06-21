@@ -37,9 +37,9 @@ lastupdated: "2017-03-13"
 
 {{site.data.keyword.iot_short_notm}} 提供了两种定价模型：免费和标准。
 
-### IoT Pricing Calculator
+### IoT 定价计算器
 有关可用 {{site.data.keyword.iot_short_notm}} 套餐和定价模型的更多信息：
-1. 转至 [IoT Pricing calculator ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://iot-cost-calculator.ng.bluemix.net/){: new_window}。  
+1. 转至 [IoT 定价计算器 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://iot-cost-calculator.ng.bluemix.net/){: new_window}。  
 2. 单击 Internet of Things Platform 项旁的**添加**或**配置**。
 3. 选择**定价层**，然后输入您计划交换的数据量的估算值，对云进行分析，并对边缘设备进行分析。  
 这将显示所选层和数据负载的价格估算。
@@ -56,7 +56,7 @@ lastupdated: "2017-03-13"
 ## 相关链接
 {: #general}
 
-* [IoT Pricing Calculator ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://iot-cost-calculator.ng.bluemix.net/){:new_window}
+* [IoT 定价计算器 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://iot-cost-calculator.ng.bluemix.net/){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} 安全 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} 平台安全 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
 * [{{site.data.keyword.Bluemix_notm}} 合规性 ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}

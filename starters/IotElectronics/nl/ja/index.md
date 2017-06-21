@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-12"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -22,7 +22,8 @@ lastupdated: "2017-03-15"
 {{site.data.keyword.iotelectronics}} の使用を開始するには、次のタスクを完了してください。
 
 1. {{site.data.keyword.iotelectronics}} スターター Web アプリケーションを使用して、[シミュレート電気製品を作成します](https://console.ng.bluemix.net/docs/starters/IotElectronics/iot4ecreatingappliances.html)。{{site.data.keyword.iotelectronics}} Starter 内では、デモンストレーション用のシミュレート電気製品として、洗濯機が使用されます。接続先に選択する電気製品は、どのタイプのスマート電子デバイスでもかまいません。
-2. サンプル・モバイル・アプリを[ダウンロードして接続します](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)。
+2. (オプション) {{site.data.keyword.appid_full}} を使用して、[モバイル・ログイン・オプションを構成します](https://console.ng.bluemix.net/docs/services/appid/index.html)。 モバイル・アプリに表示されるログイン画面の外観をカスタマイズできます。オプションで、ソーシャル・ログイン資格情報の使用を有効または無効にすることもできます。デフォルトでは、{{site.data.keyword.appid_short_notm}} は Facebook および Google+ による権限を許可しており、モバイル・アプリ・ユーザーは独自のソーシャル資格情報を使用することも、ログイン・プロセスをスキップして、ログインなしでアプリを試用することもできます。
+3. サンプル・モバイル・アプリを[ダウンロードして接続します](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html)。
 
 
 ## 次に行うこと

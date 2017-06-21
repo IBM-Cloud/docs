@@ -24,7 +24,7 @@ Utilisez les informations et les exemples fournis pour commencer à développer 
 ## Téléchargement du client et des ressources Python
 {: #python_client_download}
 
-Pour accéder au client Python pour {{site.data.keyword.iot_short_notm}} et aux autres ressources disponibles, accédez au référentiel [iot-python ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-python){: new_window} dans GitHub et exécutez les instructions d'installation. 
+Pour accéder au client Python pour {{site.data.keyword.iot_short_notm}} et aux autres ressources disponibles, accédez au référentiel [iot-python ![Icône de lien externe](../../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/iot-python){: new_window} dans GitHub et exécutez les instructions d'installation.
 
 ## Constructeur
 {: #constructor}

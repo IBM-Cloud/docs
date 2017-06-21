@@ -58,11 +58,11 @@ Per ulteriori informazioni sulle tabelle di analisi predefinite, consulta [Visua
 
 Le regole edge sono punti di decisione che corrispondono ai dati in tempo reale con valori di soglia predefiniti o altri dati della proprietà per attivare un'azione edge se viene riscontrata una condizione.
 
-**Importante:** prima di poter creare le regole per un tipo di dispositivo, devi creare uno schema per il tipo di dispositivo. Per informazioni, consulta [Crea schemi per il tipo di dispositivo](im_schemas.html).
+**Importante:** prima di poter creare le regole per un tipo dispositivo, devi creare uno schema per il tipo dispositivo. Per informazioni, consulta [Crea schemi per il tipo dispositivo](im_schemas.html).
 
 Per creare una regola:
 1. Nel dashboard {{site.data.keyword.iot_short}}, passa a **Rules**.
-2. Fai clic su **Create Edge Rule**, fornisci un nome e una descrizione per la regola, seleziona un tipo di dispositivo edge a cui applicare la regola e quindi fai clic su **Next**.  
+2. Fai clic su **Create Edge Rule**, fornisci un nome e una descrizione per la regola, seleziona un tipo dispositivo edge a cui applicare la regola e quindi fai clic su **Next**.  
 3. Configura la logica della regola.  
 Aggiungi una o più condizioni IF da utilizzare come trigger per la regola.  
 Puoi aggiungere condizioni in righe parallele per applicarle come condizioni OR o puoi aggiungere le condizioni in colonne sequenziali per applicarle come condizioni AND.  
@@ -203,7 +203,7 @@ Per visualizzare le informazioni sullo stato del gateway:
  `BytesOutRate` | Il numero stimato di byte del messaggio al secondo inviati da EAA a {{site.data.keyword.iot_short}} durante l'ultimo minuto.
  `BytesInCount` | Il numero di byte del messaggio che sono stati inviati da {{site.data.keyword.iot_short}} a EAA.
  `BytesInRate` | Il numero stimato di byte del messaggio al secondo che sono stati inviati da {{site.data.keyword.iot_short}} a EAA nell'ultimo minuto.
- `RuleBytesInCount` |Il numero di byte del messaggio che sono stati inviati da EAA al core del motore della regola. </br> **Nota:** se non è impostata alcuna regola per un tipo di dispositivo, i messaggi per tale tipo di dispositivo non sono inviati al core del motore della regola.
+ `RuleBytesInCount` |Il numero di byte del messaggio che sono stati inviati da EAA al core del motore della regola. </br> **Nota:** se non è impostata alcuna regola per un tipo dispositivo, i messaggi per tale tipo dispositivo non sono inviati al core del motore della regola.
  `RuleBytesInRate` | Il numero stimato di byte del messaggio al secondo inviati al core del motore della regola EAA durante l'ultimo minuto.
  `MsgOutCount` | Il numero di messaggi che sono stati inviati da EAA a {{site.data.keyword.iot_short}}.
  `MsgOutRate` | Il numero stimato di byte dei messaggi al secondo inviati da EAA a {{site.data.keyword.iot_short}} durante l'ultimo minuto.

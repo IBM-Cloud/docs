@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-12-09"
+  years: 2016,2017
+lastupdated: "2017-04-27"
 ---
 
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2016-12-09"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Einführung in {{site.data.keyword.composeForRedis}}
+# Einführung in Compose for Redis
 {: #getting-started-with-compose-for-redis}
 
 Redis ist ein speicherinterner Open-Source-Schlüssel/Wert-Speicher. Die Werte in Redis können einfache Zeichenfolgen, Hashwerte, Listen und Gruppen oder leistungsfähige Bitmapdateien, HyperLOG-Protokolle und geografisch-räumliche Indizes sein. Redis eignet sich ideal als Anwendungscache oder als Datenspeicher für schnelle Antworten. {{site.data.keyword.composeForRedis_full}} bietet Ihnen eine Konfiguration, die für hohe Verfügbarkeit und persistente Plattenspeicherung voreingestellt ist, alles mit speziellen Sicherheitsfunktionen gesichert.
@@ -27,31 +27,6 @@ Führen Sie zum Einstieg in {{site.data.keyword.composeForRedis}} die folgenden 
 
 2. Stellen Sie eine Verbindung zu Ihrem {{site.data.keyword.composeForRedis}}-Service her.
 
-  Um eine App mit Ihrem Service zu verbinden, verwenden Sie die Berechtigungsnachweise, die zusammen mit dem Service erstellt wurden. Die Beispiel-App veranschaulicht die Verwendung von Node.js zur Verbindung mit einem {{site.data.keyword.composeForRedis}}-Service.
+  Zur Herstellung einer Verbindung von einer App zu Ihrem Service verwenden Sie die [Berechtigungsnachweise](./credentials.html), die zusammen mit dem Service erstellt werden. Die Beispiel-App veranschaulicht die Verwendung von Node.js zur Verbindung mit einem {{site.data.keyword.composeForRedis}}-Service.
 
   Laden Sie die Beispiel-App [compose-redis-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-redis-helloworld-nodejs) herunter und befolgen Sie die Anweisungen in der Readme-Datei. Anschließend klicken Sie auf der Detailseite für die Anwendung in Bluemix auf **App anzeigen**.
-
-## Verfügbare Berechtigungsnachweise
-
-Feldname|Beschreibung
-----------|-----------
-`uri`|Der bei der Verbindungsherstellung zum Service zu verwendende URI, in dem Folgendes enthalten ist: das Schema (redis:), Benutzername und Kennwort des Administrators, der Hostname des Servers und die Nummer des Ports, zu dem die Verbindung hergestellt werden soll.
-`uri_cli`|Eine `redis-cli`-Befehlszeile, die eine Verbindung zur Datenbankinstanz herstellt.
-`deployment_id`|Eine interne ID für den Service, wie in Compose erstellt.
-`db_type`|Der Datenbanktyp, der vom Service angeboten wird, in diesem Fall `redis`.
-`name`|Der Name der Datenbankimplementierung.
-{: caption="Table 1. {{site.data.keyword.composeForRedis}} - Berechtigungsnachweise" caption-side="top"}
-
-# Zugehörige Links
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Compose-Artikel](https://www.compose.com/articles/){:new_window}
-
-## Lernprogramme und Beispiele
-{: #samples}
-* [compose-redis-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-redis-helloworld-nodejs){:new_window}
-
-## Zugehörige Links
-{: #general}
-* [Compose-Hilfe](https://help.compose.com/docs){:new_window}

@@ -6,7 +6,7 @@ lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -204,10 +204,10 @@ Topic: iotdm-1/response
 
 Un terminal utilise une demande Mettre à jour l'emplacement pour gérer les données d'emplacement d'un terminal. Les métadonnées d'emplacement d'un terminal peuvent être mises à jour dans {{site.data.keyword.iot_short_notm}} en procédant comme suit :
 
-#### Mises à jour d'emplacement de terminal automatiques
+### Mises à jour d'emplacement de terminal automatiques
 - Le terminal informe {{site.data.keyword.iot_short_notm}} de la mise à jour de l'emplacement. Le terminal extrait cet emplacement à partir d'un récepteur GPS et envoie un message de gestion des terminaux à l'instance {{site.data.keyword.iot_short_notm}} pour mettre à jour son emplacement. L'horodatage capture l'heure à laquelle l'emplacement a été extrait du récepteur GPS. L'horodatage est valide même si le message de mise à jour d'emplacement est envoyé avec du retard. Si l'horodatage est omis dans le message de gestion des terminaux, la date et l'heure de la réception du message sont utilisées pour mettre à jour les métadonnées d'emplacement.
 
-#### Mises à jour d'emplacement de terminal manuelles à l'aide de l'API REST
+### Mises à jour d'emplacement de terminal manuelles à l'aide de l'API REST
 - Vous pouvez définir manuellement les métadonnées d'emplacement pour un terminal statique à l'aide de l'API REST {{site.data.keyword.iot_short_notm}} lorsque le terminal est enregistré. Vous pouvez également modifier l'emplacement ultérieurement. Le paramètre d'horodatage est facultatif, mais, s'il n'est pas spécifié, la date du jour et l'heure en cours sont utilisées dans les métadonnées d'emplacement du terminal.
 
 ### Mises à jour d'emplacement déclenchées par des terminaux

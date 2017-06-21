@@ -51,7 +51,7 @@ Mediante la funzionalità di registrazione offerta da {{site.data.keyword.Bluemi
 ## Analisi dei log in Bluemix
 {: #logging_bmx_ov_ui}
 
-In {{site.data.keyword.Bluemix_notm}}, puoi visualizzare in tempo reale i log recenti riguardanti la tua applicazione o le parti finali dei log. 
+In {{site.data.keyword.Bluemix_notm}}, puoi visualizzare in tempo reale i log recenti riguardanti la tua applicazione o le parti finali dei log.
 
 * Puoi visualizzare, filtrare e analizzare i log attraverso l'interfaccia utente. Per ulteriori informazioni, vedi [Analisi dei log dalla console Bluemix](logging_view_dashboard.html#analyzing_logs_bmx_ui).
 

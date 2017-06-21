@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Connessione applicazione
+# Connessione alle applicazioni
 
 Per collegare la tua applicazione a {{site.data.keyword.iot_full}}, devi collegarla utilizzando i token o le chiavi API oppure eseguirne il bind direttamente a {{site.data.keyword.iot_short_notm}} in {{site.data.keyword.Bluemix_notm}}. Utilizza il dashboard di accesso per concedere l'accesso.
 {:shortdesc}

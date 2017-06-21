@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-20"
 
 ---
 
@@ -232,7 +232,7 @@ System.err.println("Failed to update the location!");
 
 ### Enviando atualizações de local do dispositivo conectado
 
-O gateway pode chamar o método de dispositivo `updateDeviceLocation()` correspondente para atualizar o local dos dispositivos conectados. O método sobrecarregado pode ser usado para especificar o método `measuredDateTime`.  
+O gateway pode chamar o método de dispositivo `updateDeviceLocation()` correspondente para atualizar o local dos dispositivos conectados. O método sobrecarregado pode ser usado para especificar o método `measuredDateTime`.
 
 ```java
 // update the location of the attached device with latitude, longitude, and elevation
@@ -339,7 +339,7 @@ DeviceFirmware firmware = new DeviceFirmware.Builder().
 			name("Firmware.name").
 			url("Firmware.url").
 			verifier("Firmware.verifier").
-			state(FirmwareState.IDLE).				
+			state(FirmwareState.IDLE).
 			build();
 
 DeviceData deviceData = new DeviceData.Builder().
@@ -650,6 +650,151 @@ mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
 Para obter mais informações sobre ações de dispositivo, veja [Solicitações de gerenciamento de dispositivo ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window}.
+
+## Pacotes de extensão de gerenciamento de dispositivo
+{: #dme}
+
+Um pacote de extensão de gerenciamento de dispositivo (DME) é um documento do JSON que define um conjunto de ações de gerenciamento de dispositivo customizado. 
+As ações podem ser iniciadas em um ou mais dispositivos que suportem essas ações. As ações são iniciadas usando o painel do {{site.data.keyword.iot_short}} ou
+as APIs de REST de gerenciamento de dispositivo.
+
+Para obter mais informações sobre formatos do pacote do DME, consulte [Estendendo o gerenciamento de
+dispositivo](../../devices/device_mgmt/custom_actions.html).
+
+### Suportando ações de gerenciamento de dispositivo customizadas
+
+As ações de gerenciamento de dispositivo que são definidas em um pacote de extensão podem ser iniciadas em um gateway ou em dispositivos conectados que suportem
+essas ações.
+
+Um dispositivo especifica os tipos de ações que ele suporta quando publica uma solicitação de gerenciamento no
+{{site.data.keyword.iot_short}}. Para permitir que um dispositivo receba ações customizadas que sejam definidas em um pacote de extensão específico, o
+dispositivo deverá especificar o identificador do pacote configurável da extensão no objeto de suporte ao publicar uma solicitação de gerenciamento.
+
+O gateway pode chamar a API `manage()` com a lista de IDs de pacote configurável para informar ao {{site.data.keyword.iot_short}} que o
+gateway ou o dispositivo conectado suporta ações do DME para a lista fornecida de IDs de pacote configurável que estiverem na solicitação de gerenciamento.
+
+O fragmento de código a seguir é usado para publicar uma solicitação de gerenciamento para comunicar ao {{site.data.keyword.iot_short}} que esse
+gateway suporta uma Ação do DME:
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendGatewayManageRequest(0, false, false, bundleIds);
+```
+
+O último parâmetro especifica a ação customizada que o dispositivo suporta.
+
+Da mesma forma, um gateway pode chamar o método de dispositivo correspondente para comunicar o suporte de ação do DME dos dispositivos conectados:
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendDeviceManageRequest(typeId, deviceId, 0, false, false, bundleIds);
+```
+
+### Manipulando ações de gerenciamento de dispositivo customizadas
+
+Quando uma ação customizada for iniciada em um gateway ou um dispositivo que estiver conectado ao {{site.data.keyword.iot_short}}, uma mensagem do MQTT
+será publicada no gateway. A mensagem conterá parâmetros que foram especificados como parte da solicitação. O gateway deverá incluir um CustomActionHandler para
+receber e processar a mensagem. A mensagem é retornada como uma instância da classe `CustomAction` que tem as propriedades a seguir:
+
+| Propriedade     | Tipo de Dados     | Descrição |
+|----------------|----------------|----------------|
+|`bundleId` |Seqüência de caracteres | Um identificador exclusivo para o DME.|
+|`actionId` |Seqüência de caracteres|A ação customizada que é iniciada.|
+|`typeId` |Seqüência de caracteres|O tipo de dispositivo no qual a ação customizada é iniciada.|
+|`deviceId` |Seqüência de caracteres|O dispositivo no qual a ação customizada é iniciada.|
+|`payload` |Seqüência de caracteres|A mensagem real que contém a lista de parâmetros em formato JSON.|
+|`reqId` |Seqüência de caracteres|O ID da solicitação que é usado para responder à solicitação de ação customizada.|
+
+O código a seguir é uma implementação de amostra de um `CustomActionHandler`:
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.ibm.iotf.client.CustomAction;
+import com.ibm.iotf.client.CustomAction.Status;
+import com.ibm.iotf.devicemgmt.CustomActionHandler;
+
+public class MyCustomActionHandler extends CustomActionHandler implements Runnable {
+
+	// A queue to hold & process the commands for smooth handling of MQTT messages
+	private BlockingQueue<CustomAction> queue = new LinkedBlockingQueue<CustomAction>();
+	// A map to hold the publish interval time for each device
+	private Map<String, Long> intervalMap = new HashMap<String, Long>();
+
+	@Override
+	public void run() {
+		while(true) {
+			CustomAction action = null;
+			try {
+				action = queue.take();
+				System.out.println(" "+action.getActionId()+ " "+action.getPayload());
+				JsonArray fields = action.getPayload().get("d").getAsJsonObject().get("fields").getAsJsonArray();
+				for(JsonElement field : fields) {
+					JsonObject fieldObj = field.getAsJsonObject();
+					if("PublishInterval".equals(fieldObj.get("field").getAsString())) {
+						long val = fieldObj.get("value").getAsLong();
+						String key = action.getTypeId() + ":" + action.getDeviceId();
+						long publishInterval = val * 1000;
+						intervalMap.put(key, publishInterval);
+						System.out.println("Updated the publish interval to "+val);
+					}
+				}
+				action.setStatus(Status.OK);
+
+			} catch (InterruptedException e) {}
+		}
+	}
+
+	public long getPublishInterval(String deviceType, String deviceId) {
+		String key = deviceType + ":" + deviceId;
+		Long val = intervalMap.get(key);
+		if(val == null) {
+			return 1000; // default is 1 second
+		} else {
+			return val.longValue();
+		}
+	}
+
+	@Override
+	public void handleCustomAction(CustomAction action) {
+		try {
+			queue.put(action);
+			} catch (InterruptedException e) {
+		}
+
+	}
+}
+```
+
+Quando o `CustomActionHandler` for incluído na instância `ManagedGateway`, o
+método `handleCustomAction()` será chamado sempre que qualquer ação customizada for iniciada pelo aplicativo.
+
+A amostra de código a seguir descreve como incluir o `CustomActionHandler` na instância `ManagedGateway`.
+
+```java
+MyCustomActionHandler handler = new MyCustomActionHandler();
+mgdGateway.addCustomActionHandler(handler);
+```
+
+Quando o gateway recebe a mensagem de ação customizada, o gateway conclui a ação ou responde com um código de erro que indica que ele não pode concluir a ação. O
+gateway deve usar o método *setStatus()* para configurar o status da ação:
+
+```java
+action.setStatus(Status.OK);
+```
+
+Para obter mais informações sobre o DME, veja [Estendendo solicitações de gerenciamento de
+dispositivo![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](../../devices/device_mgmt/custom_actions.html){: new_window}.
 
 ## Recebendo mudanças de atributos de dispositivo
 {: #listen_device_attributes}

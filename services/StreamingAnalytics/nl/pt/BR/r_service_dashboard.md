@@ -1,11 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2017 lastupdated: "2017-02-09"
+  years: 2015, 2017
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -15,7 +16,8 @@ copyright:
 #Painel de serviço
 {: #dashboard}
 
-É possível acessar o serviço {{site.data.keyword.streaminganalyticsshort}} por meio do painel de serviços do {{site.data.keyword.Bluemix_short}}. {:shortdesc}
+É possível acessar o serviço {{site.data.keyword.streaminganalyticsshort}} por meio do painel de serviços do {{site.data.keyword.Bluemix_short}}.
+{:shortdesc}
 
 No painel de serviços é possível:
 

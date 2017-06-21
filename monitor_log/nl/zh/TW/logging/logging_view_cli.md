@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-01"
+lastupdated: "2017-04-06"
 
 ---
 
@@ -39,17 +39,7 @@ lastupdated: "2017-03-01"
 * 若要檢視 Cloud Foundry 應用程式日誌中包含特定關鍵字的項目，請參閱[檢視包含特定關鍵字的日誌項目](logging_view_cli.html#partial_by_keyword_log_cli)。
 
 
-## 從 CLI 分析 Docker 容器日誌
-{: #analyzing_container_logs_cli}
-
-使用 `cf ic logs` 指令可顯示 {{site.data.keyword.Bluemix_notm}} 中容器的日誌。例如，您可以使用這些日誌來分析容器停止的原因，或是檢閱容器輸出。 
-
-若要透過 `cf ic logs` 指令來查看在容器中執行之應用程式的應用程式錯誤，該應用程式必須將其日誌寫入標準輸出 (STDOUT) 及標準錯誤 (STDERR) 輸出串流。如果您將應用程式設計為寫入這些標準輸出串流，即可透過指令行來檢視日誌，即使容器關閉或損毀。
-
-如需 `cf ic logs` 指令的相關資訊，請參閱 [cf ic logs 指令](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs)。
-
-
-## 檢視 Cloud Foundry 應用程式的日誌
+### 檢視 Cloud Foundry 應用程式的日誌
 {: #full_log_cli}
 
 若要查看 Cloud Foundry 應用程式所有可用的日誌，請完成下列步驟：
@@ -61,7 +51,7 @@ lastupdated: "2017-03-01"
    <pre class="pre screen"><code>cf logs <var class="keyword varname">appname</var></code></pre>
    
    
-## 檢視 Cloud Foundry 應用程式最新的日誌項目
+### 檢視 Cloud Foundry 應用程式最新的日誌項目
 {: #tailing_log_cli}
 
 若要查看 Cloud Foundry 應用程式最近的可用日誌，請完成下列步驟：
@@ -75,7 +65,7 @@ lastupdated: "2017-03-01"
 <div class="note tip"><span class="tiptitle">提示：</span>當您在某個指令行視窗中執行 <span class="keyword cmdname">cf push</span> 或 <span class="keyword cmdname">cf start</span> 指令時，即可在另一個指令行視窗中輸入 <samp class="ph codeph">cf logs appname --recent</samp>，以即時查看日誌。</div>
 
 
-## 檢視某區段的 Cloud Foundry 日誌
+### 檢視某區段的 Cloud Foundry 日誌
 {: #partial_log_cli}
 
 若要查看 Cloud Foundry 應用程式在某個時間範圍內的部分可用日誌，請完成下列步驟：
@@ -89,7 +79,7 @@ lastupdated: "2017-03-01"
     如需 **cut** 選項的相關資訊，請輸入 **cut --help**。
 
 
-## 檢視包含特定關鍵字的日誌項目
+### 檢視包含特定關鍵字的日誌項目
 {: #partial_by_keyword_log_cli}
 
 若要顯示包含 Cloud Foundry 應用程式特定關鍵字的日誌項目，請完成下列步驟：
@@ -109,14 +99,14 @@ lastupdated: "2017-03-01"
 如需 **grep** 選項的相關資訊，請鍵入 **grep --help**。
 
 
-## Cloud Foundry 應用程式日誌
+### Cloud Foundry 應用程式日誌
 {: #cf_app_logs_cli}
 
 將 Cloud Foundry 應用程式部署在 {{site.data.keyword.Bluemix}} 之後，Cloud Foundry 應用程式將會有下列日誌：
 
 **buildpack.log**
 
-此日誌檔會記錄精細的參考資訊事件，以進行除錯。您可以使用此日誌，對建置套件執行問題進行疑難排解。
+此日誌檔會記錄精細的參考事件，以進行除錯。您可以使用此日誌，對建置套件執行問題進行疑難排解。
 
 若要在 *buildpack.log* 檔案中產生資料，您必須使用下列指令來啟用建置套件追蹤：`cf set-env appname JBP_LOG_LEVEL DEBUG`
    
@@ -132,5 +122,13 @@ lastupdated: "2017-03-01"
 
 **附註：**如需如何啟用應用程式記載的相關資訊，請參閱[針對運行環境錯誤進行除錯](/docs/debug/index.html#debugging-runtime-errors)。
 
+## 從 CLI 分析 Docker 容器日誌
+{: #analyzing_container_logs_cli}
+
+使用 `cf ic logs` 指令可顯示 {{site.data.keyword.Bluemix_notm}} 中容器的日誌。例如，您可以使用這些日誌來分析容器停止的原因，或是檢閱容器輸出。 
+
+若要透過 `cf ic logs` 指令來查看在容器中執行之應用程式的應用程式錯誤，該應用程式必須將其日誌寫入標準輸出 (STDOUT) 及標準錯誤 (STDERR) 輸出串流。如果您將應用程式設計為寫入這些標準輸出串流，即可透過指令行來檢視日誌，即使容器關閉或損毀。
+
+如需 `cf ic logs` 指令的相關資訊，請參閱 [cf ic logs 指令](/docs/containers/container_cli_reference_cfic.html#container_cli_reference_cfic__logs)。
 
 

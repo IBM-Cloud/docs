@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-13"
+lastupdated: "2017-05-02"
 
 ---
 
@@ -344,7 +344,7 @@ Dans la section **Utilisation des ressources**, vous pouvez consulter les inform
 - Le temps de réponse moyen pour {{site.data.keyword.Bluemix_notm}} au cours des 10 dernières minutes, de la dernière heure et du dernier jour.
 - Le nombre moyen de transactions par seconde pour {{site.data.keyword.Bluemix_notm}} au cours des dix minutes précédentes, de l'heure précédente ou du jour précédent.
 
-#### Détails sur la mémoire, le disque et l'unité centrale
+#### Détails sur la mémoire système, le disque et l'unité centrale
 {: #resourceusagedetails}
 
 Dans la section **Utilisation des ressources**, vous pouvez afficher un récapitulatif des quantités **réservées** et **physiques** pour votre mémoire et votre disque.    
@@ -371,6 +371,13 @@ Pour des informations plus détaillées sur votre utilisation de la mémoire ré
 	<dt><strong>Physique</strong></dt>
 	<dd>La zone Physique affiche la quantité de mémoire ou d'espace disque utilisée.</dd>
 	</dl>
+
+#### Détails sur l'utilisation du service 
+{: #servicesresourceusage}
+
+L'onglet **Service** affiche l'utilisation totale du service par rapport à la capacité maximale dont vous disposez pour un service dédié. Par exemple, si vous disposez d'un service Cloudant dédié et que vous utilisez 500 Go sur une capacité de 1000 Go, un graphique indique que vous avez utilisé 50 % de votre capacité totale. La couleur du graphique change selon que vous êtes proche ou non de la limite de capacité. Le jaune indique que vous avez utilisé entre 70 % et 84 % de votre capacité et le rouge est utilisé lorsque vous avez atteint 85 % ou plus de la capacité disponible. 
+
+**Remarque** : à l'heure actuelle, il se peut que les informations sur la consommation du service ne soient pas disponibles dans tous les environnements. Cette fonction est disponible pour Cloudant, MessageHub, API Connect et Session Cache.
 
 
 ### Utilisation du compte
@@ -507,11 +514,11 @@ Vous pouvez également gérer l'ordre de priorité des packs de construction dis
 ### Enregistrement d'un courtier de services
 {: #servicebrokerui}
 
-Si vous voulez afficher un service dans votre catalogue {{site.data.keyword.Bluemix_notm}}, vous devez implémenter et enregistrer un [courtier de services ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/services/api.html){: new_window}. Une fois votre courtier enregistré, vous pouvez choisir les organisations qui peuvent accéder au service dans votre instance locale ou dédiée.
+Si vous voulez afficher un service dans votre catalogue {{site.data.keyword.Bluemix_notm}}, vous devez implémenter et enregistrer un [courtier de services ![Icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/services/api.html){: new_window}. Une fois votre courtier enregistré, vous pouvez choisir les organisations qui peuvent accéder au service dans votre instance locale ou dédiée.
 
 Les méthodes d'utilisation de votre courtier de services dépendent du nombre de services qu'il gère ou varient selon qu'il a déjà été enregistré dans {{site.data.keyword.Bluemix_notm}} ou non.
 
-- Si votre courtier de services gère un service, vous pouvez vous servir de l'interface utilisateur pour l'enregistrer après avoir implémenté l'[API de courtier de services ![icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/services/api.html){: new_window}. Voir [Enregistrement d'un courtier de services qui gère un service](index.html#registerbrokerui).
+- Si votre courtier de services gère un service, vous pouvez vous servir de l'interface utilisateur pour l'enregistrer après avoir implémenté l'[API de courtier de services ![Icône de lien externe](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/services/api.html){: new_window}. Voir [Enregistrement d'un courtier de services qui gère un service](index.html#registerbrokerui).
 - Si votre courtier de services gère plusieurs services, utilisez l'interface de ligne de commande cf avec le plug-in d'[interface de ligne de commande d'administration de {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html) (sous-commande `ba`), ou utiliser l'[API de service personnalisé](index.html#servicebrokerapi).
 - Si votre courtier de services est déjà enregistré et que vous voulez le mettre à jour ou le supprimer, utilisez l'interface de ligne de commande cf avec le plug-in d'[interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html) (sous-commande `ba`) ou utilisez l'[API de service personnalisé](index.html#servicebrokerapi).
 
@@ -522,7 +529,7 @@ Les méthodes d'utilisation de votre courtier de services dépendent du nombre d
 
 Prenez connaissance des informations suivantes et effectuez les étapes d'enregistrement de votre courtier de services :
 
-**Avant de commencer** : <a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">implémentez l'API de courtier de services Cloud Foundry <img src="../icons/launch-glyph.svg" alt="icône de lien externe"></a> pour permettre la communication entre votre service et {{site.data.keyword.Bluemix_notm}}. L'API de courtier de services est un ensemble de noeuds finaux REST consommés par {{site.data.keyword.Bluemix_notm}}.
+**Avant de commencer** : <a href="http://docs.cloudfoundry.org/services/api.html" target="_blank">implémentez l'API de courtier de services Cloud Foundry <img src="../icons/launch-glyph.svg" alt="Icône de lien externe"></a> pour permettre la communication entre votre service et {{site.data.keyword.Bluemix_notm}}. L'API de courtier de services est un ensemble de noeuds finaux REST consommés par {{site.data.keyword.Bluemix_notm}}.
 
 Lorsque vous implémentez le courtier de services, dans la réponse JSON de <code>GET /v2/catalog</code>, vous devez fournir les définitions pour vos service et vos plans de service, notamment les informations relatives au service que vous voulez afficher. Par exemple, examinez l'exemple de code JSON de la réponse du catalogue (GET) :
 
@@ -1055,8 +1062,8 @@ Les noeuds finaux de l'API REST `Admin` et les réponses JSON sont fournis sur u
 Si vous disposez des droits **Superutilisateur** ou **Utilisateurs** avec un accès **Ecriture**, vous pouvez ajouter ou retirer des utilisateurs. Vous devez disposer du droit **Superutilisateur** pour éditer les droits des autres utilisateurs.
 
 Bien que vous puissiez choisir d'utiliser d'autres outils, les outils suivants sont prérequis pour les exemples ci-après.
-* cURL, pour entrer les demandes d'API REST sous forme de commandes. cURL est un utilitaire gratuit que vous pouvez utiliser pour envoyer des demandes HTTP à un serveur et recevoir les réponses du serveur via une interface de ligne de commande. Vous pouvez le télécharger depuis le [site de téléchargement cURL ![icône de lien externe](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}.
-* Python, pour utiliser l'outil JSON de formatage de Python. Cet outil facultatif transforme le texte JSON en entrée en sortie facile à lire. Vous pouvez télécharger Python depuis le [site des téléchargements Python ![icône de lien externe](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}.
+* cURL, pour entrer les demandes d'API REST sous forme de commandes. cURL est un utilitaire gratuit que vous pouvez utiliser pour envoyer des demandes HTTP à un serveur et recevoir les réponses du serveur via une interface de ligne de commande. Vous pouvez le télécharger depuis le [site de téléchargement cURL ![Icône de lien externe](../icons/launch-glyph.svg)](http://curl.haxx.se/download.html){: new_window}.
+* Python, pour utiliser l'outil JSON de formatage de Python. Cet outil facultatif transforme le texte JSON en entrée en sortie facile à lire. Vous pouvez télécharger Python depuis le [site des téléchargements Python ![Icône de lien externe](../icons/launch-glyph.svg)](https://www.python.org/downloads){: new_window}.
 
 
 ### Liste des organisations
@@ -1241,7 +1248,8 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 <dd class="pd">Spécifie les données, dans ce cas le fichier `user.json`, à envoyer dans la demande POST au serveur HTTP.</dd>
 </dl>
 
-Voici un exemple de sortie pour cette commande :
+Voici un exemple de sortie pour
+cette commande :
 
 ```
 * Connected to localhost (127.0.0.1) port 3000 (#0)
@@ -1999,7 +2007,7 @@ Content-Type: application/json
 
 Vous pouvez gérer les utilisateurs pour votre environnement {{site.data.keyword.Bluemix_notm}} via l'interface de ligne de commande Cloud Foundry, avec le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}. Vous devez télécharger ce plug-in pour votre interface de ligne de commande Cloud Foundry.
 
-Avant de commencer, installez l'interface de ligne de commande cf. Le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}} requiert cf version 6.11.2 ou ultérieure. [Télécharger l'interface de ligne de commande Cloud Foundry ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
+Avant de commencer, installez l'interface de ligne de commande cf. Le plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}} requiert cf version 6.11.2 ou ultérieure. [Télécharger l'interface de ligne de commande Cloud Foundry ![Icône de lien externe](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
 
 **Restriction :** l'interface de ligne de commande Cloud Foundry n'est pas prise en charge par Cygwin. Utilisez-la dans une fenêtre de ligne de commande autre que Cygwin.
 

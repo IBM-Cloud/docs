@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-03"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2017-03-14"
 有关关键概念（包括设备）的更多信息，请参阅[关于 Watson IoT Platform](https://console.ng.bluemix.net/docs/services/IoT/iotplatform_overview.html#watsoniotplatform_importantconcepts)。
 
 
-# 将设备连接到 {{site.data.keyword.iot_short_notm}}
+## 将设备连接到 {{site.data.keyword.iot_short_notm}}
 {: #device_connect}
 可以使用 HTTP 或 MQTT 协议将设备连接到 {{site.data.keyword.iot_short_notm}}。如果要配置请求/响应场景（例如，有人进行采购并接收确认时），请使用 HTTP。如果要配置事件场景（例如，有人按门铃，使得移动设备触发警报时），请使用 MQTT。
 
@@ -35,7 +35,7 @@ lastupdated: "2017-03-14"
 有关使用 MQTT 协议将设备连接到 {{site.data.keyword.iot_short_notm}} 的更多信息，请参阅[设备的 MQTT 连接](https://console.ng.bluemix.net/docs/services/IoT/devices/mqtt.html)。
 
 
-# 设备开发入门
+## 设备开发入门
 {: #get_started}
 如果您有已经针对 {{site.data.keyword.iot_short_notm}} 启用的设备，那么可以直接开始使用该设备。
 

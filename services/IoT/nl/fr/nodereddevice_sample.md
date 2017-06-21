@@ -16,7 +16,7 @@ lastupdated: "2017-03-13"
 Utilisez Node-RED pour créer un simulateur de terminal et envoyer des données de terminal simulé à votre organisation {{site.data.keyword.iot_full}}.  
 {:shortdesc}
 
-Node-RED est un outil qui permet de relier des terminaux matériels, des API et des services en ligne selon des méthodes inédites et intéressantes. Pour plus d'informations, voir le site Web [Node-RED ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://nodered.org/){: new_window}.   
+Node-RED est un outil qui permet de relier des terminaux matériels, des API et des services en ligne selon des méthodes inédites et intéressantes. Pour plus d'informations, voir le site Web [Node-RED ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](http://nodered.org/){: new_window}.  
 
 Vous pouvez exécuter votre instance Node-RED dans votre propre environnement ou l'utiliser en tant qu'application {{site.data.keyword.Bluemix_notm}}. Le processus suivant inclut les instructions relatives à {{site.data.keyword.Bluemix_notm}}.
 
@@ -26,7 +26,7 @@ Pour créer et connecter le simulateur de terminal Node-RED :
    Utilisez le simulateur de terminal pour envoyer des messages de terminal MQTT à {{site.data.keyword.iot_short_notm}}. Le simulateur de terminal a simulé l'envoi de données pour un conteneur de fret à un courtier MQTT, par exemple, {{site.data.keyword.iot_short_notm}}.
     1. Connectez-vous à {{site.data.keyword.Bluemix_notm}} (https://console.ng.bluemix.net).
     2. Sélectionnez l'onglet **Catalogue**.
-    3. Localisez la section Boilerplates du catalogue de service et cliquez sur **Node-RED Starter Community BETA**. **Astuce : ** Cliquez[ici ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/catalog/starters/node-red-starter/){: new_window} pour accéder directement à la page Node-RED Starter. 
+    3. Localisez la section Boilerplates du catalogue de service et cliquez sur **Node-RED Starter Community BETA**. **Astuce : ** Cliquez[ici ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/catalog/starters/node-red-starter/){: new_window} pour accéder directement à la page Node-RED Starter.
     4. Sur la page Node-RED Starter, sélectionnez l'espace où vous souhaitez déployer Node-RED, vérifiez les sélections pour Créer une application, puis cliquez sur **Créer** pour ajouter Node-RED à votre organisation Bluemix.  
     Par exemple :  
      - Espace : dev

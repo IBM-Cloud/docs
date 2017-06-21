@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-05-09"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -95,12 +95,17 @@ lastupdated: "2016-05-09"
 |:------|:--------|
 |Cloud Foundry 指令行介面 (cf cli)	|在本端用戶端上管理您的程式碼，以及使用 Cloud Foundry 指令行介面，手動將應用程式推送至 {{site.data.keyword.Bluemix_notm}}。如需相關資訊，請參閱[上傳應用程式](/docs/starters/upload_app.html)。|
 |Eclipse	|在 Eclipse 中管理您的程式碼，並且使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 來推送應用程式。|
-|Git 整合	|在 GitHub 上管理您的程式碼，以及將 Git 整合至 {{site.data.keyword.Bluemix_notm}}。您可以與其他開發人員分工合作。確定程式碼中的變更時，會自動將您的應用程式部署至 {{site.data.keyword.Bluemix_notm}}。您不需要手動推送應用程式。|
-|{{site.data.keyword.Bluemix_notm}} DevOps Delivery Pipeline	|在 DevOps GitHub 儲存庫上管理您的程式碼，以及使用 DevOps Delivery Pipeline 將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。|
+|{{site.data.keyword.contdelivery_full}} |    使用 {{site.data.keyword.contdelivery_short}} 來自動進行建置、單元測試、部署及其他作業。透過豐富的 Web 型 IDE 編輯及推送程式碼。建立工具鏈來啟用工具整合，以支援開發、部署及操作作業。Continuous Delivery 服務包括 Delivery Pipeline、Eclipse Orion Web IDE 及 Git Repos and Issue Tracking。如需相關資訊，請參閱<a href="/docs/services/ContinuousDelivery/index.html#cd_getting_started">開始使用 Continuous Delivery</a>。
+|
 {: caption="表 1. {{site.data.keyword.Bluemix_notm}} 工具" caption-side="top"}
 
 
 如果 Cloud Foundry 平台不支援您的應用程式需求，您可以使用容器或 VM，其中已利用其他自訂的選項來設定、配置及維護運行環境。
+
+##在 Continuous Delivery 中使用工具鏈開發及部署應用程式
+{:ht_cd}
+
+將<a href="/docs/services/ContinuousDelivery/toolchains_working.html#creating_a_toolchain_from_an_app">工具鏈新增至應用程式</a>，然後使用 <a href="/docs/services/ContinuousDelivery/toolchains_using.html#toolchains-using">Continuous Delivery 工具鏈使用者介面</a>來開發及部署應用程式。
 
 ##使用 cf cli 上傳應用程式
 {: #ht_cfcli}

@@ -15,7 +15,7 @@ lastupdated: "2017-2-9"
 # {{site.data.keyword.contdelivery_short}} 문제점 해결
 {: #ts_cd}
 
-{{site.data.keyword.contdelivery_full}}의 사용에 대한 공통 문제점 해결 질문에 대한 응답을 받습니다.
+{{site.data.keyword.contdelivery_full}}의 사용에 대한 공통 문제점 해결 질문에 대한 답변을 얻습니다.
 {:shortdesc}
 
 
@@ -60,7 +60,7 @@ GitHub에 액세스할 권한이 {{site.data.keyword.Bluemix_notm}}에 없습니
 
  ![설정 실패 오류](images/tool_setup_failed.png)
  
-도구 통합을 추가하는 경우, 도구 체인은 도구 통합에 의해 표시된 도구와 통신하여 필수 자원을 프로비저닝하고 이를 도구 체인과 연관시킵니다. 설정 프로세스 중에 오류가 발생하거나 도구 체인과 도구 간의 통신이 제대로 완료되지 않은 경우, 도구 통신은 오류 상태가 됩니다.
+도구 통합을 추가하는 경우, 도구 체인은 도구 통합에 의해 표시된 도구와 통신하여 필수 리소스를 프로비저닝하고 이를 도구 체인과 연관시킵니다. 설정 프로세스 중에 오류가 발생하거나 도구 체인과 도구 간의 통신이 제대로 완료되지 않은 경우, 도구 통신은 오류 상태가 됩니다.
 {: tsCauses}
 
 도구 통합을 다시 구성하십시오.

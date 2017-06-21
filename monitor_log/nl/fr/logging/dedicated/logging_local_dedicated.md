@@ -29,7 +29,7 @@ Les applications Cloud Foundry utilisent Cloud Foundry loggregator pour surveill
 | UC virtuelle | 19 | 57 |
 | Mémoire | 80 Go | 240 Go |
 | Stockage local | 2,98 To | 8,94 To |
-{: caption="Tableau 2. Consignation de la configuration matérielle requise pour {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
+{: caption="Tableau 2. Configuration matérielle requise pour la journalisation pour {{site.data.keyword.Bluemix_local_notm}}" caption-side="top"}
 
 ## Configuration
 

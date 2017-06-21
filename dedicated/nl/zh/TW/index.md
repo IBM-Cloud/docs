@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2017-01-11"
 
 {{site.data.keyword.Bluemix_notm}} 的所有專用部署都包括下列好處及特性，而且不需額外付費：VPN、專用虛擬區域網路 (VLAN)、防火牆、與 LDAP 的連線功能、運用現有內部部署資料庫及應用程式的能力、24 小時全年無休的現場安全防護、專用硬體及標準支援。
 
-預設只能從組織網路進行專用 {{site.data.keyword.Bluemix_notm}} 實例的存取。例如，如果您需要直接從網際網路、行動裝置或專用資料庫存取 {{site.data.keyword.Bluemix_notm}} 環境，則需要使用其他網路安全元件並額外付費。
+依預設，只能從組織網路進行專用 {{site.data.keyword.Bluemix_notm}} 實例的存取。例如，如果您需要直接從網際網路、行動裝置或專用資料庫存取 {{site.data.keyword.Bluemix_notm}} 環境，則需要使用其他網路安全元件並額外付費。
 
 {{site.data.keyword.Bluemix_dedicated_notm}} 包含所有內含的 {{site.data.keyword.Bluemix_notm}} 運行環境，以及 64 GB 的運算資源記憶體。
 
@@ -34,7 +34,7 @@ lastupdated: "2017-01-11"
 |選用 | [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect/index.html) | {{site.data.keyword.apiconnect_long}} 將 {{site.data.keyword.APIM}} 及 IBM StrongLoop 整合成單一供應項目，提供綜合性解決方案來建立、執行、管理及強制執行 API 和微服務。 |
 |選用 | [{{site.data.keyword.rules_short}}](/docs/services/rules/rules.html) | {{site.data.keyword.rules_short}} 提供綜合性環境，以自動化及執行經常發生且可重複的規則型商業決策。它也可降低 IT 技能需求，讓商業使用者或開發人員，快速建立決策模型並以較低的成本進行測試。 |
 |選用 | [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant) | {{site.data.keyword.cloudant}} 提供對於始終處於開啟狀態之完整受管理 NoSQL JSON 資料層的存取。此服務與 CouchDB 相容，而且可透過方便使用的 HTTP 介面來存取，可用於行動及 Web 應用程式模型。 |
-|選用 | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | 在 {{site.data.keyword.Bluemix_dedicated_notm}} 上執行 Docker 容器。容器是虛擬軟體物件，其中包含應用程式執行所需的所有元素。容器具有資源隔離及配置的優點，而且比虛擬機器（舉例來說）更容易攜帶且更具效率。如需硬體需求的相關資訊，請參閱 [{{site.data.keyword.Bluemix_dedicated_notm}} 及 Bluemix 本端中的 IBM {{site.data.keyword.containershort}}](/docs/containers/container_dl.html)。|
+|選用 | [{{site.data.keyword.containershort}}](/docs/containers/container_index.html) | 在 {{site.data.keyword.Bluemix_dedicated_notm}} 上執行 Docker 容器。容器是虛擬軟體物件，其中包含應用程式執行所需的所有元素。容器具有資源隔離及配置的優點，而且比虛擬機器（舉例來說）更容易攜帶且更具效率。如需硬體需求的相關資訊，請參閱 [{{site.data.keyword.Bluemix_dedicated_notm}} 和 Bluemix 本端中的 IBM {{site.data.keyword.containershort}}](/docs/containers/container_ov.html#container_dl)。|
 | 選用 | [{{site.data.keyword.contdelivery_short}}](/docs/services/ContinuousDelivery/index.html) | 使用「{{site.data.keyword.contdelivery_short}} 專用」來自動進行建置、單元測試、部署及其他作業。透過豐富的 Web 型 IDE 編輯及推送程式碼。建立工具鏈來啟用工具整合，以支援開發、部署及操作作業。 |
 | 選用 | [{{site.data.keyword.dashdbshort}}](/docs/services/dashDB/dashDB.html) | IBM {{site.data.keyword.dashdbshort}} for Analytics 是完整受管理 SQL 雲端資料庫服務，最適合用於資料倉儲及分析工作負載。IBM {{site.data.keyword.dashdbshort}} for Transactions 是完整受管理 SQL 雲端資料庫服務，最適合用於一般用途、Web 應用程式及交易式工作負載。 |
 | 選用 | [{{site.data.keyword.datacshort}}](/docs/services/DataCache/index.html#data_cache) | 此服務提供記憶體內的資料網格，它支援應用程式的分散式快取情境。包含 50 GB 的記憶體內快取。 |
@@ -59,7 +59,7 @@ lastupdated: "2017-01-11"
 |專用 {{site.data.keyword.apiconnect_short}} Professional 10 萬個 API 呼叫增加 | {{site.data.keyword.apiconnect_short}} Professional 環境的延伸，每月可提供 10 萬個 API 呼叫的額外容量。 |
 |專用 {{site.data.keyword.apiconnect_short}} Enterprise 2500 萬個 API 呼叫 | 此環境允許在容量為每月 2500 萬個 API 呼叫的專用環境內，執行專用版本的 {{site.data.keyword.apiconnect_short}}，目標為整個企業的 API 專案。 |
 |專用 {{site.data.keyword.apiconnect_short}} Enterprise 10 萬個 API 呼叫增加 | {{site.data.keyword.apiconnect_short}} Enterprise 環境的延伸，每月可提供 10 萬個 API 呼叫的額外容量。 |
-|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.rules_short}} 1 百萬個規則決策 | 「規則決策」為從規則執行伺服器呼叫規則集所產生的結果。必須取得足夠的授權，才能涵蓋在計費期間執行或處理的「規則決策」總數（四捨五入至最接近的百萬位數）。此「雲端服務」所測量的「規則決策」是對規則執行伺服器進行以取得決策的呼叫。 |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.rules_short}} 1 百萬個規則決策 | 「規則決策」為從規則執行伺服器呼叫規則集所產生的結果。必須取得足夠的授權，才能涵蓋在計費期間執行或處理的「規則決策」總數（四捨五入至最接近的百萬位數）。此「雲端服務」所測量的「規則決策」是對規則執行伺服器進行以取得決策的呼叫。「雲端服務」的專用部署具有經過協議的容量，且是按照相關費用度量值來測量。{{site.data.keyword.Bluemix_dedicated_notm}} 平台上的 {{site.data.keyword.rules_short}} 服務預設空間配置是 16 GB，在其中，可以呼叫最多十個各 1 GB 的實例來執行授與的「規則決策」。如果您超出該使用限制，則必須購買額外的容量來涵蓋這項使用。 |
 |專用 {{site.data.keyword.cloudant}} 1.6 TB 容量增加 | 包括在設計容量為 1.6 TB 的專用環境內，執行專用版本的 {{site.data.keyword.cloudantfull}}。  |
 |專用 {{site.data.keyword.datacshort}} 及 {{site.data.keyword.sescashort}} 50 GB 容量增加 | 此環境允許部署及執行 {{site.data.keyword.datacshort}} 和 {{site.data.keyword.sescashort}} 實例，最多有 50 GB 的累積容量。 |
 |{{site.data.keyword.contdelivery_short}} 專用實例 | 在專用環境內執行的 {{site.data.keyword.contdelivery_short}} 的專用版本。容量取決於「{{site.data.keyword.contdelivery_short}} 專用授權使用者」授權。 |
@@ -73,7 +73,7 @@ lastupdated: "2017-01-11"
 |IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.dashdbshort}} Enterprise for Transactions High Availability 12.128.1400 | 支援「線上交易處理 (OLTP)」工作負載的專用實例，具有 128GB RAM 及 1.4 TB SSD 儲存空間來放置資料及日誌，並且包括一部額外的「待命」伺服器來取得高可用性。 |
 |{{site.data.keyword.Bluemix_dedicated_notm}} 社群服務  | 此環境允許部署及執行社群服務，每一個社群服務最多有 50 個實例。  |
 |{{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.cloudant}} 叢集實例 | 此選用元件包括您負責提供基礎架構的 3 節點叢集，以及儲存空間及運算容量（您可以根據您的特定需要來決定）。{{site.data.keyword.cloudant}} 提供對於始終處於開啟狀態之完整受管理 NoSQL JSON 資料層的存取。此服務與 CouchDB 相容，而且可透過方便使用的 HTTP 介面來存取，可用於行動及 Web 應用程式模型。 |
-|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | 提供發佈和訂閱傳訊的環境，每個分割區可提供高達 10 GB 的傳訊。訊息會保留以供使用最多 24 小時。 |
+|IBM {{site.data.keyword.Bluemix_dedicated_notm}} {{site.data.keyword.messagehub}} | 提供發佈/訂閱傳訊的環境，每個分割區可提供高達 10 GB 的傳訊，限制為 100 個分割區。 |
 |IBM Bluemix 專用 {{site.data.keyword.mobilepushshort}} | 此環境允許部署及執行每秒可接受 300 個要求的 {{site.data.keyword.mobilepushshort}} 實例。 |
 |{{site.data.keyword.iot_short}} 專用漸進式增加 | 此環境增加允許在專用環境內執行專用版本的 {{site.data.keyword.iot_short}}，其容量為 100,000 台同時連接的裝置或應用程式，以及 0.5 TB 的資料交換。 |
 |IBM {{site.data.keyword.appserver_short}} for {{site.data.keyword.Bluemix_notm}} - 專用小型| {{site.data.keyword.Bluemix_notm}} 的受管理雲端環境中的預先配置 {{site.data.keyword.appserver_short}} Liberty、Traditional Network Deployment 或 Traditional WebSphere Java EE 實例，每個月有 64 個 vCore、128GB RAM 及 1TB HDD。 |
@@ -154,7 +154,7 @@ lastupdated: "2017-01-11"
 |{{site.data.keyword.iot_short}}		|是		|是		|否|
 |{{site.data.keyword.weather_short}}		|是		|是		|是|
 |{{site.data.keyword.workloadscheduler}}	|是		|是		|是 |
-{: caption="表 4. 依地區可從 {{site.data.keyword.Bluemix_notm}} 公用聯合的服務" caption-side="top"}
+{: caption="表 4. 依地區可從 Bluemix 公用聯合的服務" caption-side="top"}
 {: #table04}
 
 **附註**：此表格不包括協力廠商服務。請檢查協力廠商服務選項的專用型錄。
@@ -283,7 +283,7 @@ IBM 讓您能使用受到密碼保護的登入方式來存取 {{site.data.keywor
 <dd>一旦環境開始運行，視需要與 IBM 支援團隊合作。這是對「管理」主控台具有「超級使用者」存取權的人員，其可核准並排定 Bluemix 環境的維護更新，而且隨時可在發生重要突發事件時予以協助。指派給這個角色的人員必須具備 Bluemix 環境的技術知識，而且其職位可以聯繫公司內對可能受到影響的區域（例如，網路或安全）具備專業技能的其他人員。</dd>
 </dl>
 
-您的客戶代表會與其他合作的 IBM 專家一起合作，確保您隨時擁有所需的支援。您可以升級至「高階」支援層，以與您帳戶的專用「客戶成功經理 (CSM)」合作。如需不同支援層的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-support)。CSM 會完成下列類型的作業：
+您的客戶代表會與其他合作的 IBM 專家一起合作，確保您隨時擁有所需的支援。您可以升級至「進階」支援層，以與您帳戶的專用「客戶成功經理 (CSM)」合作。如需不同支援層的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-support)。CSM 會完成下列類型的作業：
 
 <ul>
 <li>促成 {{site.data.keyword.Bluemix_dedicated_notm}} 環境的快速採用。</li>
@@ -318,12 +318,12 @@ IBM 讓您能使用受到密碼保護的登入方式來存取 {{site.data.keywor
 |選取架構 | 根據考慮高可用性及災難回復需求的預先定義選項來選取架構。 | IBM |
 |定義災難回復目標 | 定義環境的災難回復需求。 | 客戶 |
 |建立災難回復計劃 | 諮詢並定義災難回復計劃。IBM 會建立災難回復模型，並向您諮詢提供意見並核准計劃的位置。 | IBM 及客戶皆負有責任 |
-|建立備份及回復計劃 | 建立備份及回復計劃，以定義在現場及異地分散備份的頻率及需求。IBM 會備份光纖元件、IBM 服務中心、服務 meta 資料（包括使用者角色）等等。您要備份您負責的任何應用程式特有資料。 | IBM 及客戶皆負有責任 |
+|建立備份及回復計劃 | 建立備份及回復計劃，以定義在現場及異地分散備份的頻率及需求。IBM 會備份網狀架構元件、IBM 服務中心、服務 meta 資料（包括使用者角色）等等。您要備份您負責的任何應用程式特有資料。 | IBM 及客戶皆負有責任 |
 |識別進行事件偵測及問題判斷的工具 | 識別用於在 {{site.data.keyword.Bluemix_notm}} 平台層次進行事件偵測及問題判斷的 IBM 及協力廠商工具。 | IBM |
 |定義呈報計劃 | 定義呈報計劃來分類並解決從監視元件偵測到的事件。 | IBM |
 |簽署基礎架構、平台及支援合約 | 簽署訂閱合約（包括環境的財務條款）。簽署支援訂閱。 | 客戶 |
 |採購環境 | 採購運算資源、網路及儲存空間（包括核心及「服務 VLAN」用來管理 {{site.data.keyword.Bluemix_notm}}、裸機服務用來管理 Data Power，以及 {{site.data.keyword.Bluemix_notm}} Firewall）。提供容許 VPN 通道的基礎架構。 | IBM |
-|安裝光纖、應用程式，以及監視和管理元件 | 安裝、配置及驗證光纖元件（例如 BOSH Director、「雲端控制器」、「性能管理程式」、傳訊、路由器、DEA 及「服務提供者」），以及提升及問題偵測計劃中所定義的監視元件。 | IBM |
+|安裝網狀架構、應用程式，以及監視和管理元件 | 安裝、配置及驗證網狀架構元件（例如 BOSH Director、「雲端控制器」、「性能管理程式」、傳訊、路由器、DEA 及「服務提供者」），以及提升及問題偵測計劃中所定義的監視元件。 | IBM |
 |安裝並配置安全元件 | 安裝並配置嵌入監視及呈報計劃的安全元件（包括 IBM QRadar、認證儲存庫、侵入防禦系統、IBM BigFix 及「IBM Security 特許身分管理」）。 | IBM |
 |安裝並配置自訂元件 |  	安裝並配置位在 {{site.data.keyword.Bluemix_notm}} 產品及服務範圍外部的自訂元件。 | 客戶 |
 |建立起始網路配置 | 建立起始網路配置（包括防火牆、DataPower、Fortigate 及 DNS）。 | IBM |
@@ -406,7 +406,7 @@ IBM 會針對「狀態」頁面上每一個維護時間範圍所計劃的變更�
 
 ### 客戶偵測到的問題
 
-如果您識別到需要 IBM 支援中心及作業注意的問題，則可以使用數種不同的方法來與支援中心聯絡。如需如何與支援中心聯絡的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-bluemix-support-local)。根據問題，您及（或）IBM 會一起合作來修正問題。
+如果您識別到需要 IBM 支援中心及作業注意的問題，則可以使用數種不同的方法來與支援中心聯絡。如需如何與支援中心聯絡的相關資訊，請參閱[與支援中心聯絡](../support/index.html#contacting-bluemix-support-local)。視問題而定，您及（或）IBM 會一起合作來修正問題。
 
 ### IBM 偵測到的重要突發事件
 
@@ -418,7 +418,7 @@ IBM 會針對「狀態」頁面上每一個維護時間範圍所計劃的變更�
 
 圖 2. 突發事件回應程序
 
-根據問題，您及（或）IBM 會一起合作來修正問題。如果您有關於突發事件的問題，或者需要 IBM 業務代表來協助您解決問題，則可以開啟支援問題單。如需如何與支援中心聯絡的相關資訊，請參閱[與支援中心聯絡](/docs/support/index.html#contacting-bluemix-support-local)。
+視問題而定，您及（或）IBM 會一起合作來修正問題。如果您有關於突發事件的問題，或者需要 IBM 業務代表來協助您解決問題，則可以開啟支援問題單。如需如何與支援中心聯絡的相關資訊，請參閱[與支援中心聯絡](/docs/support/index.html#contacting-bluemix-support-local)。
 
 **附註**：我們會 24 小時全年無休地監視嚴重性 1 支援問題單。其他問題單的處理時間是從星期日晚上 10:00 GMT 到星期六凌晨 12:00 GMT。如需支援問題單嚴重性以及與支援中心合作的相關資訊，請參閱<a href="/docs/support/index.html#contacting-bluemix-support-local">與支援中心聯絡</a>。
 
@@ -434,7 +434,7 @@ IBM 會針對「狀態」頁面上每一個維護時間範圍所計劃的變更�
 ### 啟用 {{site.data.keyword.Bluemix_dedicated_notm}} 的持續可用性
 {: #enabling}
 
-「{{site.data.keyword.Bluemix_notm}} 公用」預設會部署至多個地理位置。不過，您必須執行下列動作，才能啟用分散在全球的 {{site.data.keyword.Bluemix_dedicated_notm}} 實例：
+依預設，「{{site.data.keyword.Bluemix_notm}} 公用」會部署至多個地理位置。不過，您必須執行下列動作，才能啟用分散在全球的 {{site.data.keyword.Bluemix_dedicated_notm}} 實例：
 
 * 確定您的開發人員將應用程式部署至多個地區（透過手動或自動化處理程序）。地區應該彼此相隔 200 公里以上，確保自然災難不會同時影響這兩個地理位置。
 * 配置廣域負載平衡器（例如 Akamai 或 Dyn），使其指向至少兩個不同地區中的應用程式。
@@ -456,7 +456,7 @@ IBM 會針對「狀態」頁面上每一個維護時間範圍所計劃的變更�
 
 廣域負載平衡器不僅可確保持續可用性，也是災難回復的必要項目，而且它還有數個其他優點：
 
-* 預設會將使用者遞送至最近的 {{site.data.keyword.Bluemix_notm}} 地區
+* 依預設，會將使用者遞送至最近的 {{site.data.keyword.Bluemix_notm}} 地區
 * 根據效能進行遞送
 * 選擇性地將某個百分比的資料流量導向新的應用程式版本
 * 根據地區性能檢查，提供網站失效接手

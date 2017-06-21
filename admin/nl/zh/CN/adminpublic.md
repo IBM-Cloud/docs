@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-01-09"
+lastupdated: "2017-03-29"
 
 
 ---
@@ -15,39 +15,17 @@ lastupdated: "2017-01-09"
 {:screen: .screen}
 {:new_window: target="_blank"}
 
-<!-- staging only content beginning -->
+# 注册 Bluemix
 
-# 设置帐户
-{: #account}
+您可以使用现有的 IBM 标识，通过创建新 IBM 标识或使用联合标识，来注册 {{site.data.keyword.Bluemix}} 帐户。联合标识是公司域内已向 IBM 注册的标识，因此域和用户凭证可用于访问 IBM Web 应用程序。{:shortdesc}
 
-现在，您已注册 {{site.data.keyword.Bluemix_notm}}，接下来需要设置帐户，以便可以快速开始供应基础架构或构建应用程序。
-{:shortdesc}
+您可以使用现有的 IBM 标识，通过创建新 IBM 标识或使用联合标识，来注册 {{site.data.keyword.Bluemix_notm}} 帐户。联合标识是公司域内已向 IBM 注册的标识，因此域和用户凭证可用于访问 IBM Web 应用程序。  
 
-首次开始使用 {{site.data.keyword.Bluemix_notm}} 时，您会希望设置帐户概要文件，其中包括上传个人档案图像。您还可以为帐户设置组织和空间，以及邀请团队成员加入每个组织和空间。 
+仅当您的公司已经和 IBM 合作进行注册时，联合标识才可用于注册 {{site.data.keyword.Bluemix_notm}}。通过向 IBM 注册公司域，用户可以使用现有公司用户凭证，登录到 IBM 产品和服务。公司的身份提供者随后会处理认证。当您使用联合标识登录到 {{site.data.keyword.Bluemix_notm}} 时，系统会提示您通过您公司的登录页面进行登录。有关向 IBM 请求注册公司或组织域的信息，或者有关流程的更多信息，请参阅 [IBMid Enterprise Federation Adoption Guide ![外部链接图标](../icons/launch-glyph.svg)](https://ibm.box.com/v/IBMid-Federation-Guide){: new_window}。当您请求注册联合标识时，需要 IBM 产品负责人（如产品支持者或客户支持者）。
 
-可以通过单击菜单栏中的**帐户**链接来查看您拥有的每个帐户的详细信息。这些详细信息包括关联的记帐信息、使用情况信息、成员的团队目录以及您针对每个帐户拥有或管理的所有组织。
- 
-
-如果您是 {{site.data.keyword.Bluemix_notm}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated 的管理员，请参阅[管理 {{site.data.keyword.Bluemix_notm}} Local 或 {{site.data.keyword.Bluemix_notm}} Dedicated](/docs/admin/index.html#mng)，以获取有关使用“管理”页面来管理帐户的详细信息。
-
-您可能还希望注册通知，检查支持选项，以便了解在哪里可获取帮助，或者甚至向 IBM 提供反馈。  
-
-- **通知** 
-  
-  注册以获取 {{site.data.keyword.Bluemix_notm}} 平台公共区域的维护更新通知、关联服务通知以及事件、安全通知和其他声明。您可以将 RSS 订阅源阅读器指向 [Bluemix 状态页面 ![外部链接图标](../icons/launch-glyph.svg)](http://ibm.biz/Bluemixstatus){: new_window} 上的 RSS 链接，以随时掌握 {{site.data.keyword.Bluemix_notm}} Public 的最新更改。有关设置通知的更多详细信息，请参阅[查看 Bluemix 状态](/docs/support/index.html#viewing-bluemix-status)。
-
-- **支持选项** 
-  
-  检查可用的支持选项，以便准确了解遇到任何问题时该向何处寻求帮助以及该怎么做。有关支持选项的更多详细信息，请参阅[获取客户支持](/docs/support/index.html#getting-customer-support)。
-
-- **开始编码** 
-  
-  创建第一个应用程序。转至**目录**查看可用的各种计算和服务，以了解能使您快速开始编码的样板和样本应用程序，并使用这些样板和样本应用程序进行开发。
-
-- **提供有关 {{site.data.keyword.Bluemix_notm}} 的反馈** 
-  
-  您可以提供有关产品或文档的反馈。 
-  
-  要提交针对 {{site.data.keyword.Bluemix_notm}} 和服务改进的想法，请转至 [IBM Cloud Ideas ![外部链接图标](../icons/launch-glyph.svg)](https://ibmcloud.ideas.aha.io){: new_window}。有关如何使用新构想门户网站的更多信息，请参阅 [Think, write, submit: New ideas portal for IBM Cloud ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/10/05/think-write-submit/){: new_window}。 
-  
-  要提供有关文档的反馈，请单击每个页面上的**反馈**链接，或者通过单击标题后的**在 GitHub 中编辑**链接来与我们协作。有关如何帮助改进文档的更多信息，请参阅 [When it comes to docs, everyone can contribute in Bluemix![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2016/01/13/bluemix-docs-now-open-source-on-github/){: new_window}。
+| 注册方法 | 详细信息 |    
+|-----------------|---------|
+|现有 IBM 标识 | 如果您已经具有 IBM 标识，请使用您用于其他 IBM 产品和服务的现有凭证来注册 {{site.data.keyword.Bluemix_notm}}。注册时，您需要输入电话号码。 |
+|新 IBM 标识 | 如果您没有 IBM 标识，那么您可以选择创建一个。有了 IBM 标识，您就可以使用一个登录用户名登录您所使用的所有 IBM 产品和服务，包括 {{site.data.keyword.Bluemix_notm}}。您需要输入个人信息，包括姓和名、电话号码和新凭证的密码。使用其他 IBM 产品与服务时，您可以使用此 IBM 标识进行登录。  |
+|联合 ID | 如果您的公司已请求从您的公司域向 IBM 注册用户凭证，那么您可以使用已用于您公司登录的凭证，来注册 {{site.data.keyword.Bluemix_notm}}。注册时，您需要输入电话号码。 |
+{:caption="表 1. 注册方法" caption-side="top"}

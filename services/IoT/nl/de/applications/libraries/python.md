@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -375,7 +375,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-Der Abschnitt zur Organisationskonfiguration in der [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} enthält Informationen zum Anforderungs-/Antwortmodell und zu den HTTP-Statuscodes.
+Der Abschnitt zur Organisationskonfiguration in der [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} enthält Informationen zum Anforderungs-/Antwortmodell und zu den HTTP-Statuscodes.
 
 
 ## Massenoperationen für Geräte
@@ -383,7 +383,7 @@ Der Abschnitt zur Organisationskonfiguration in der [{{site.data.keyword.iot_sho
 
 Ihre Anwendungen können mithilfe von Massenoperationen mehrere Geräte gleichzeitig abrufen, hinzufügen oder entfernen.
 
-Der Abschnitt zu den Massenoperationen in der [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/){: new_window} enthält Informationen zu der Liste der Abfrageparameter, zum Anforderungs-/Antwortmodell und zu HTTP-Statuscodes.
+Der Abschnitt zu den Massenoperationen in der [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} enthält Informationen zu der Liste der Abfrageparameter, zum Anforderungs-/Antwortmodell und zu HTTP-Statuscodes.
 
 
 ### Geräteinformationen abrufen
@@ -458,7 +458,7 @@ except IoTFCReSTException as e:
 
 Die Gerätetypen, die Sie in Ihrer Organisation erstellen, können zum Erstellen von Vorlagen für das Hinzufügen von Geräten verwendet werden. Durch Verwenden der Funktionen der {{site.data.keyword.iot_short_notm}}-API können Ihre Anwendungen Gerätetypen in Ihrer Organisation auflisten, erstellen, löschen, anzeigen oder aktualisieren.
 
-Der Abschnitt 'Gerätetypen' der Dokumentation zur [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} enthält Informationen zu Abfrageparametern, zum Anforderungs-/Antwortmodell und zu HTTP-Statuscodes. 
+Der Abschnitt 'Gerätetypen' der Dokumentation zur [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} enthält Informationen zu Abfrageparametern, zum Anforderungs-/Antwortmodell und zu HTTP-Statuscodes.
 
 
 ### Alle Gerätetypen abrufen
@@ -599,7 +599,7 @@ except IoTFCReSTException as e:
 
 Die in der API verfügbaren Geräteoperationen umfassen das Auflisten, Hinzufügen, Entfernen, Anzeigen, Aktualisieren, Anzeigen von Standorten und Anzeigen von Gerätemanagementinformationen zu Geräten in einer {{site.data.keyword.iot_short_notm}}-Organisation.
 
-Der Abschnitt über Geräte in der [{{site.data.keyword.iot_short_notm}}-API ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} enthält Informationen zu den Abfrageparametern, zum Anforderungs-/Antwortmodell und zu den HTTP-Statuscodes.
+Der Abschnitt über Geräte in der [{{site.data.keyword.iot_short_notm}}-API-Dokumentation ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} enthält Informationen zu den Abfrageparametern, zum Anforderungs-/Antwortmodell und zu den HTTP-Statuscodes.
 
 
 ### Geräte eines bestimmten Gerätetyps abrufen

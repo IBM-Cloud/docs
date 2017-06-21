@@ -34,10 +34,10 @@ lastupdated: "2017-3-16"
 
 要在部署程式碼之前找出其中的安全問題嗎？如果您將 IBM® Static Analyzer for Bluemix™ 當成管線的一部分來使用，則可以針對 Java™ 應用程式的靜態 `.war`、`.ear`、`.jar` 或 `.class` 建置二進位檔來執行自動化檢查。
 
-使用 Static Analyzer 服務的管線通常包括下列階段：
+使用 Static Analyzer 服務的管線通常包含下列階段：
 
 + 用來建置原始檔的建置階段
-+ 包括下列工作的處理階段：
++ 包含下列工作的處理階段：
   + 用來執行 Static Analyzer 服務的建置工作
   + 用來執行容器建置的建置工作
 + 用來部署容器的部署階段
@@ -71,19 +71,19 @@ lastupdated: "2017-3-16"
 
   e. 視需要，選取或清除**為我設定服務及空間**勾選框。
 
-    * 如果您要管線針對服務以及將服務連結至容器的應用程式，檢查 Bluemix 空間，請選取此勾選框。如果服務或所連結的應用程式不存在，則管線會將服務的免費方案新增至您的空間。建立的已連結應用程式命名為 `pipeline_bridge_app`。然後，管線會使用來自 pipeline_bridge_app 的認證，以存取連結的服務。
+    * 如果您要管線檢查 Bluemix 空間，尋找服務以及將服務連結至容器的應用程式，請選取此勾選框。如果服務或所連結的應用程式不存在，則管線會將服務的免費方案新增至您的空間。建立的已連結應用程式命名為 `pipeline_bridge_app`。然後，管線會使用來自 pipeline_bridge_app 的認證，以存取連結的服務。
 
-    * 如果您已在 Bluemix 空間中配置服務及連結的應用程式，或者要[手動配置這些需求](/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline){: new_window}，請清除此勾選框。
+    * 如果您已在 Bluemix 空間中配置服務及連結的應用程式，或者要[手動配置這些需求](/docs/containers/container_integrations.html#container_binding_pipeline){: new_window}，請清除此勾選框。
 
   f. 在**等待分析完成的分鐘數**欄位中，鍵入 0 - 59 分鐘的值。預設值為 5 分鐘。在工作結束時，Static Analyzer 儀表板的 URL 是在主控台日誌中。
 
      如果 Static Analyzer 掃描未在指定的時間之前完成，則工作會失敗。不過，掃描分析會繼續執行，而且您可以在 Static Analyzer 儀表板上進行檢視。Static Analyzer 掃描完成之後，如果您重新執行工作，則不會重新提交掃描要求，而且可以完成管線工作。您也可以配置在掃描結果成功時不封鎖管線。如需指示，請參閱下一步。
 
-  g. 根據此工作失敗或逾時要發生的狀況，選取或清除**如果此工作失敗，停止執行此階段**勾選框。漏洞數太高時，工作會失敗。
+  g. 視您想要在此工作失敗或逾時採取何種作法而定，選取或清除**如果此工作失敗，停止執行此階段**勾選框。漏洞數太高時，工作會失敗。
 
     * 如果您選取此勾選框，而且工作失敗，則階段中的後續工作以及後續階段不會執行。
 
-    * 如果您清除此勾選框，而且工作失敗，則階段會繼續執行，而不封鎖後續的工作及階段。例如，如果您知道報告包括許多要處理的問題，則可以配置階段繼續執行，因為掃描可能需要很長的時間。在此情況下，您可能不想要工作及階段的其餘部分只因為掃描花費太長的時間而停止。
+    * 如果您清除此勾選框，而且工作失敗，則階段會繼續執行，而不封鎖後續的工作及階段。例如，如果您知道報告包含許多要處理的問題，則可以配置階段繼續執行，因為掃描可能需要很長的時間。在此情況下，您可能不希望剩餘的工作及階段只因為掃描花費太長的時間而停止。
 
   h. 按一下**儲存**。
 
@@ -92,7 +92,7 @@ lastupdated: "2017-3-16"
 4. 如果您需要在分析完成之前再次執行處理階段，您可以重新執行。不過，在下列情況下，不會重新提交新的分析，而會使用先前的結果：
   * 當您啟動新的分析時，處理階段仍在執行中
   * 已提交針對建置的掃描
-  * 尚未執行新的來源建置
+  * 尚未執行新的原始檔建置
 
 5. 若要開始新的分析，請完成下列其中一個步驟：
   * 執行輸入至處理階段的建置階段，然後重新執行處理階段。
@@ -154,7 +154,7 @@ To create the globalization stage and job:
 
     * If you want the pipeline to check your Bluemix space for the service and an app that binds the service to the container, select this check box. If the service or bound app does not exist, the pipeline adds the free plan of the service to your space for you. The bound app that is created is named `pipeline_bridge_app`. Then, the pipeline uses the credentials from pipeline_bridge_app to access the bound services.
 
-    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](https://www.ng.bluemix.net/docs/containers/container_group_pipeline_ov.html#container_binding_pipeline), leave this check box cleared.
+    * If you configured the service and bound app in your Bluemix space already or if you want to [configure these requirements manually](/docs/containers/container_integrations.html#container_binding_pipeline), leave this check box cleared.
 
   g. For the Globalization bundle prefix, enter a prefix for the bundle name, which is structured in this format: `<globalization_bundle_prefix>.path.to.source.file`. The pipeline job creates this Globalization bundle for you in the Globalization Pipeline service.
 
@@ -226,7 +226,7 @@ For more information about using the Globalization Pipeline service from the Blu
       <li><code>info</code>：只取得參考訊息。不會傳送良好、錯誤及不明訊息。</li>
       <li><code>unknown</code>：取得所有訊息。</li></ul>
       範例：如果您設定 <code>NOTIFY_FILTER = bad</code>，則只會在「Slack 頻道」中顯示錯誤通知。</td>
-    <td>選用。決定哪些類型的訊息要傳送通知。依預設，會傳送良好及錯誤訊息，但不會傳送參考訊息。
+    <td>選用。決定哪些類型的訊息要傳送通知。根據預設值，會傳送良好及錯誤訊息，但不會傳送參考訊息。
       <ul><li><code>good</code>：成功建置結果。</li>
       <li><code>bad</code>：失敗建置結果。</li>
       <li><code>info</code>：建置程序的參考訊息。</li>
@@ -235,9 +235,9 @@ For more information about using the Globalization Pipeline service from the Blu
 
 5. 按一下**儲存**。
 
-6. 重複這些步驟，以針對包括 IBM Container Service、IBM Security Analyzer 及 IBM Globalization 工作的其他階段傳送 Slack 通知。
+6. 重複這些步驟，以針對包含 IBM Container Service、IBM Security Analyzer 及 IBM Globalization 工作的其他階段傳送 Slack 通知。
 
-Slack 中所顯示的建置通知包括專案的鏈結，有時會包括專案儀表板的鏈結。為了讓 Slack 使用者開啟這些鏈結，必須在 Bluemix 中註冊使用者，而且使用者必須是管線配置所在專案的成員。
+Slack 中所顯示的建置通知，會包含專案的鏈結，可能還會包含專案儀表板的鏈結。為了讓 Slack 使用者開啟這些鏈結，必須在 Bluemix 中註冊使用者，而且使用者必須是管線配置所在專案的成員。
 
 ## 在管線中建立建置的 HipChat 通知
 {: #deliverypipeline_hipchat}
@@ -321,7 +321,7 @@ Slack 中所顯示的建置通知包括專案的鏈結，有時會包括專案�
 
 5. 按一下**儲存**。
 
-6. 重複這些步驟，以針對包括 IBM Container Service、IBM Security Static Analyzer 及 IBM Globalization 工作的其他階段傳送 HipChat 通知。
+6. 重複這些步驟，以針對包含 IBM Container Service、IBM Security Static Analyzer 及 IBM Globalization 工作的其他階段傳送 HipChat 通知。
 
 ## 在管線中使用 Active Deploy 進行零關閉時間部署
 {: #deliverypipeline_activedeploy}
@@ -335,4 +335,4 @@ Slack 中所顯示的建置通知包括專案的鏈結，有時會包括專案�
   - 建置 Docker 映像檔
   - 將容器中的映像檔部署至 Bluemix
 
-如需開始使用的相關資訊，請參閱 [Delivery Pipeline 及容器概觀](/docs/containers/container_pipeline_ov.html#container_pipeline_ov){: new_window}。
+如需開始使用的相關資訊，請參閱 [Delivery Pipeline 及容器概觀](/docs/containers/container_integrations.html#container_pipeline_ov){: new_window}。

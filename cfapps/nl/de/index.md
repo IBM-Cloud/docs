@@ -6,7 +6,7 @@ copyright:
 
   years: 2015，2017
 
-lastupdated: "2016-04-18"
+lastupdated: "2017-05-10"
 
 ---
 
@@ -36,9 +36,7 @@ Gehen Sie wie folgt vor, um mit der Erstellung Ihrer Anwendung zu beginnen:
   3. Klicken Sie auf **Web** und befolgen Sie die Anweisungen, um einen Starter auszuwählen, einen Namen anzugeben und zu entscheiden, welchen Code Sie verwenden möchten.
   4. Nachdem Sie die Anweisungen abgeschlossen haben, klicken Sie auf **App-Übersicht anzeigen**. Die Übersichtsseite der App wird im Dashboard angezeigt.
   5. Sie können Ihrer App einen Service hinzufügen, indem Sie in der App-Übersicht in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle auf **Service oder API hinzufügen** klicken. Durchsuchen Sie den Katalog und wählen Sie Services aus oder blättern Sie zum Ende des Katalogs und klicken Sie auf **{{site.data.keyword.Bluemix_notm}} Experimental Services**, um die experimentellen Services zu durchsuchen. Sie haben auch die Möglichkeit, die Befehlszeilenschnittstelle 'cf' zu verwenden. Weitere Informationen finden Sie unter 'Optionen für das Arbeiten mit Apps'.
-  6. Klicken Sie in der Anwendungsübersicht auf 'Git hinzufügen', um Ihre Anwendungsquelle in einem Git-Repository zu speichern und ein von Git gehostetes Projekt zu erstellen. Sie können die Anwendung auch über
-{{site.data.keyword.jazzhub_title}}
-bereitstellen.
+  6. Blättern Sie auf der Übersichtsseite der App zur Karte 'Continuous Delivery' und klicken Sie auf **Aktivieren**. Die Quelle der App wird in einem Git-Repository gespeichert, was auf Bluemix gehostet wird. Außerdem wird eine offene Toochain erstellt, mit der und unter Verwendung dieses Repositorys und einer Delivery Pipeline Ihre App entwickelt und bereitgestellt wird. Weitere Informationen zum Continuous Delivery-Service finden Sie in <a href="https://console.ng.bluemix.net/docs/services/ContinuousDelivery/index.html#cd_getting_started">Einführung in Continuous Delivery</a>.
 
 **Hinweis:** Wenn ein an eine App gebundener Service abstürzt, wird die App
 möglicherweise gestoppt oder weist Fehler auf. {{site.data.keyword.Bluemix_notm}} startet die App nicht automatisch erneut, um eine Recovery für diese Probleme durchzuführen. Ziehen Sie in Betracht, die App so zu codieren, dass sie eine Recovery für Ausfallzeiten, Ausnahmen und Verbindungsfehler durchführt. Weitere Informationen finden Sie im Abschnitt, in dem beschrieben wird, dass Apps nicht automatisch neu gestartet werden.
@@ -55,8 +53,8 @@ erstellen, zu aktualisieren und zu löschen.</dd>
 <dt>{{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle</dt>
 <dd>Mit der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle können Sie Ihre Anwendung erstellen und dabei
 auswählen, welche Services und Laufzeiten kombiniert werden sollen, um Ihre geschäftsbezogenen Probleme zu lösen.</dd>
-<dt>{{site.data.keyword.jazzhub_title}}</dt>
-<dd>Verwenden Sie {{site.data.keyword.jazzhub_title}}, um eine Anwendung in der Cloud zu erstellen und in {{site.data.keyword.Bluemix_notm}} bereitzustellen. Die von {{site.data.keyword.jazzhub_title}} zur Verfügung gestellten Services umfassen 'Track & Plan' und 'Delivery Pipeline', die im {{site.data.keyword.Bluemix_notm}}-Katalog unter 'DevOps' aufgeführt sind, sowie 'Web-IDE' und 'Git Hosting'.</dd>
+<dt>{{site.data.keyword.contdelivery_full}}</dt>
+<dd>Mit {{site.data.keyword.contdelivery_short}} können Sie Builds, Komponententests, Bereitstellungen und weitere Tasks automatisieren. In der umfangreichen webbasierten IDE können Sie Code bearbeiten und mit einer Push-Operation übertragen. Durch die Erstellung von Toolchains werden Toolintegrationen ermöglicht, die Entwicklungs-, Bereitstellungs- und Betriebstasks unterstützen. Der Continuous Delivery Service enthält, Web-IDE für Eclipse Orion, Delivery Pipeline und Git-Repositorys und Issue Tracking. Weitere Informationen finden Sie unter <a href="https://console.ng.bluemix.net/docs/services/ContinuousDelivery/index.html#cd_getting_started">Einführung in Continuous Delivery</a>.</dd>
 </dl>
 
 ## Tipps

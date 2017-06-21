@@ -110,7 +110,7 @@ user3@sample.com,PD_ADMIN_USER,1489505652152
 
 Donde se utilizan las siguientes entradas de columna:  
 - Columna 1: la dirección de correo electrónico del usuario.  
-Si está añadiendo miembros, asegúrese de utilizar la dirección de correo electrónico correspondiente a un ID de IBM válido. Si está invitando a miembros, puede utilizar cualquier dirección de correo electrónico válida. 
+Si está añadiendo miembros, asegúrese de utilizar la dirección de correo electrónico correspondiente a un ID de IBM válido. Si está invitando a miembros, puede utilizar cualquier dirección de correo electrónico válida.
 - Columna 2: el rol que se asignará al usuario.  
 Especifique uno de los roles siguientes:
  - PD_ADMIN_USER

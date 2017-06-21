@@ -58,7 +58,7 @@ Si el paquete de compilación que utiliza no ofrece un mecanismo para cargar los
   cf push appname -p app_path -b <latest_buildpack>
   ```
  
-## AVISO mensajes del paquete de compilación PHP
+## Mensajes de AVISO del paquete de compilación PHP
 {: #ts_phplog}
 
 Puede que vea mensajes que contengan AVISOS procedentes de los registros. Puede detener el registro de estos mensajes cambiando el nivel de registro.	
@@ -117,7 +117,7 @@ Añada un archivo `requirements.txt` y un archivo `Procfile` al directorio raíz
 	 Para obtener más información sobre cómo configurar el archivo `requirements.txt`, consulte [Archivos de requisitos](https://pip.readthedocs.org/en/1.1/requirements.html). 
 	 
  2. Añada un archivo `Procfile` al directorio raíz de la app Python.
-El archivo `Procfile` debe contener el mandato start correspondiente a la app Python. En el mandato siguiente, *nombreapp* es el nombre de la app Python y *PORT* es el número de puerto que la app Python debe utilizar para recibir solicitudes de los usuarios de la app. *$PORT* es opcional. Si no especifica PORT en el mandato start, se utilizará el número de puerto bajo la variable de entorno `VCAP_APP_PORT` de la app. 
+ El archivo `Procfile` debe contener el mandato de inicio de la app Python. En el mandato siguiente, *nombreapp* es el nombre de la app Python, y *PUERTO* es el número de puerto que la app Python debe utilizar para recibir solicitudes de los usuarios de la app. *$PORT* es opcional. Si no especifica PORT en el mandato start, se utilizará el número de puerto bajo la variable de entorno `VCAP_APP_PORT` de la app. 
 	```
 	web: python <nombreapp>.py $PORT
 	```

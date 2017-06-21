@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-05"
+lastupdated: "2017-05-19"
 
 ---
 
@@ -24,7 +24,7 @@ or supplied as arguments when you use the view.
 To query a view,
 submit a `GET` request with the following format:
 
--   **Method**: `GET /<database>/_design/<design-doc>/_view/<view-name>`
+-   **Method**: `GET /$DATABASE/_design/$DDOC/_view/$VIEW-NAME`
 -   **Request**: None
 -   **Response**: JSON of the documents that are returned by the view
 -   **Roles permitted**: `_reader`
@@ -59,7 +59,7 @@ Argument         | Description | Optional | Type | Default | Supported values
 _Example of using HTTP to retrieve a list of the first five documents from a database, applying the user-created `by_title` view:_
 
 ```http
-GET /<database>/_design/<design-doc>/_view/by_title?limit=5 HTTP/1.1
+GET /$DATABASE/_design/$DDOC/_view/by_title?limit=5 HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 ```
@@ -69,7 +69,7 @@ _Example of using the command line to retrieve a list of the first five document
 applying the user-created `by_title` view:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/_design/$DESIGNDOCUMENT/_view/by_title?limit=5 \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_view/by_title?limit=5 \
      -H "Content-Type: application/json"
 ```
 {:codeblock}
@@ -183,79 +183,66 @@ a stale view might not return the most recent information.
 Nevertheless, a stale view returns the results of the view query quickly,
 by using an existing version of the index.
 
-## Accessing a stale view
+<div id="accessing-a-stale-view"></div>
 
-If you are prepared to accept a response that is quicker,
-but might not have the most current data,
-you can use three options :
+## View freshness
+
+By default, all index results reflect the current state of the database. Cloudant builds its indexes automatically and asynchronously in the background.
+This usually means the index is fully up-to-date 
+when you query it. If this is not the case, we call the database "stale" and the remaining updates are made when you query the index. 
+The results of your query include these updates. Cloudant builds three copies of every index in 
+alignment with the three copies of your primary data.
+
+Cloudant supplies better results and
+performance with the defaults for these parameters. If the performance of your view and your application can tolerate inconsistent results when queried with the 
+default `stale=false` setting, use `stable=false&update=false`. These settings avoid directing all queries to a single copy of 
+your index, which would, in effect, reduce some aspects of performance to a third of what it should be.
 
 Option   | Purpose                                                                                                                               | Default value
 ---------|---------------------------------------------------------------------------------------------------------------------------------------|--------------
-`stable` | Determine whether view results are obtained from a consistent or 'stable' set of shards. Possible values include `true`, and `false`. | `true`
-`stale`  | Determine whether results from a stale view are permitted.                                                                            | `false`
-`update` | Determine whether the view is updated before the results are returned. Possible values include `true`, `false` and `lazy`.            | `true`
+`stable` | Determine whether view results are obtained from a consistent or 'stable' set of shards. Possible values include `true`, and `false`. | `false`
+`stale`  | Determine whether results from a stale view are permitted. Possible values include `false`, `ok`, and `update_after`.                 | `false`
+`update` | Determine whether the view is updated before the results are returned. Possible values include `true`, `false`, and `lazy`.           | `true`
 
-The `stable` option indicates whether you would prefer to get results from a single,
-consistent set of shards.
-The default value is `false`.
-The `false` value means that all available shard replicas are queried.
-The first response that is received is the one that is used.
-The benefit is that the response is not delayed if any individual shard replica is slow to respond.
-By contrast,
-setting `stable` to `true` forces the database to use a single,
-consistent set of shards to respond to the query.
-
-The `stale` option allows the results from a stale view to be used.
-The option makes the request return immediately,
-even if the view is still building.
-If this parameter is not given,
-or the value `false` is supplied,
-a response is returned only after the view is built.
-The value `ok` allows stale views.
-The value `update_after` allows stale views,
-but updates them immediately after a response to the request is provided.
-
-The `update` option indicates whether you are prepared to accept
-view results without waiting for the view to be updated.
-The default value is `true`,
-meaning that the view is updated before results are returned.
-The `lazy` value means that the results are returned before the view is updated,
-but that the view must then be updated anyway.
+## Combining parameters
 
 When you specify `stable=true` with `update=false` or `update=lazy`,
 responses are consistent from request to request because a single,
 consistent set of shards is used to respond to the query.
-However,
-if one of those shards is heavily loaded or slow to respond,
-the response time might be adversely affected.
+However, when one of the shards is heavily loaded or slow to respond,
+the response time is adversely affected.
 
 When the default `stable=false` value applies,
-and you use either of `update=false` or `update=lazy`,
-indexes between shard replicas might not be synchronized.
-The effect would be that you might get different results,
-depending on which replicas respond first.
+and you use either `update=false` or `update=lazy`,
+indexes between shard replicas are no longer synchronized.
+The results are different based on which replica responds first. 
 
-In summary,
-if you want the quickest possible response,
-and are prepared to accept results that might not yet be synchronized,
-or are returned from the first shard replica to respond rather than your normal set of shards,
-then you might use the combination: `stable=false&update=false`.
+When you use a stale view, the results return the existing version of the data in the view index without waiting for an update. 
+The results can be different from different nodes in the cluster.
 
-Using a stale view has consequences.
-In particular,
-accessing a stale view returns the current (existing) version of the data in the view index,
-if it exists,
-without waiting for an update.
-The effect is that a stale view index result might be different from different nodes in the cluster.
+### Parameters
 
->   **Note**: Cloudant automatically and actively works to keep views up-to-date always.
-    The only time that you might notice a difference when you use the `stable` or `update` options is
-    during an indexing backlog.
+The `stable` option indicates whether you would prefer to get results from a single,
+consistent set of shards. The `false` value means that all available shard replicas are queried. Cloudant uses the first response returned. 
+The benefit is that the response is not delayed when an individual shard replica is slow to respond.
+By contrast, setting `stable=true` forces the database to use a single,
+consistent set of shards to respond to the query.
+
+The `stale` option allows the results from a stale view to be used. The option makes the request return immediately,
+even if the view is still building. If this parameter is not given, or the value `false` is supplied, a response is returned only after the view is built.
+The value `ok` allows stale views. The value `update_after` allows stale views
+but updates them immediately after a response to the request is provided.
+
+The `update` option indicates whether you are prepared to accept
+view results without waiting for the view to be updated. The default value is `true`,
+meaning that the view is updated before results are returned. The `lazy` value means that the results are returned before the view is updated,
+but that the view must then be updated anyway.
 
 ## Sorting Returned Rows
 
 The data returned by a view query are in the form of an array.
-Each element within the array is sorted by using standard [UTF-8 ![External link icon](../images/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/UTF-8){:new_window} sorting.
+Each element within the array is sorted by using standard
+[UTF-8 ![External link icon](../images/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/UTF-8){:new_window} sorting.
 The sort is applied to the key defined in the view function.
 
 The basic order of output is as follows:
@@ -276,7 +263,7 @@ You can reverse the order of the returned view information by setting the `desce
 _Example of using HTTP to request the last five records in reversed sort order:_
 
 ```http
-GET /<database>/_design/<design-doc>/_view/by_title?limit=5&descending=true HTTP/1.1
+GET /$DATABASE/_design/$DDOC/_view/by_title?limit=5&descending=true HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 ```
@@ -285,7 +272,7 @@ Content-Type: application/json
 _Example of requesting the last five records in reversed sort order, that uses the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/_design/$DESIGNDOCUMENT/_view/by_title?limit=5&descending=true \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_view/by_title?limit=5&descending=true \
      -H "Content-Type: application/json"
 ```
 {:codeblock}
@@ -366,7 +353,7 @@ Content-Type: application/json
 _Example of a query using the command line that includes `startkey` and `endkey` query arguments:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/_design/$DESIGNDOCUMENT/_view/by_ingredient?startkey="alpha"&endkey="beta" \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_view/by_ingredient?startkey="alpha"&endkey="beta" \
      -H "Content-Type: application/json"
 ```
 {:codeblock}
@@ -389,7 +376,7 @@ _Example illustrating why reversing the order of `startkey` and `endkey` might n
 that uses the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/_design/$DESIGNDOCUMENT/_view/by_ingredient?descending=true&startkey="beta"&endkey="alpha" \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_view/by_ingredient?descending=true&startkey="beta"&endkey="alpha" \
      -H "Content-Type: application/json"
 ```
 {:codeblock}
@@ -428,7 +415,7 @@ Content-Type: application/json
 _Example that uses the command line to apply correct filtering and sorting:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/_design/$DESIGNDOCUMENT/_view/by_ingredient?descending=true&startkey="egg"&endkey="carrots" \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_view/by_ingredient?descending=true&startkey="egg"&endkey="carrots" \
     -H "Content-Type: application/json"
 ```
 {:codeblock}
@@ -450,7 +437,7 @@ _Example HTTP request that returns all recipes,
 where the key for the view matches either `claret` or `clear apple juice`:_
 
 ```http
-POST /$DB/_design/$DDOC/_view/$VIEWNAME HTTP/1.1
+POST /$DATABASE/_design/$DDOC/_view/$VIEWNAME HTTP/1.1
 Content-Type: application/json
 ```
 {:codeblock}
@@ -460,7 +447,7 @@ where the key for the view matches either `claret` or `clear apple juice`,
 that uses the command line:_
 
 ```sh
-curl -X POST "https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DB/_design/$DDOC/_view/$VIEWNAME" -d @request.json
+curl -X POST "https://INDEX_NAME$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_view/$VIEWNAME" -d @request.json
 ```
 {:codeblock}
 
@@ -563,7 +550,7 @@ _Example JSON document that lists the keys to match:_
 _Example request using the command line to obtain the full content of documents that match the listed keys:_
 
 ```sh
-curl "https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DB/_design/$DDOC/_view/by_ingredient?include_docs=true"
+curl "https://INDEX_NAME$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_view/by_ingredient?include_docs=true"
     -X POST \
     -H "Content-Type: application/json" \
     -d "{ "keys" : [ "claret", "clear apple juice" ] }"
@@ -663,7 +650,7 @@ _Example (abbreviated) response, returning the full document for each recipe tha
 ## Sending several queries to a view
 
 To send several view queries in one request,
-use a `POST` request to `/$DATABASE/_design/$DESIGNDOC/_view/$VIEW`.
+use a `POST` request to `/$DATABASE/_design/$DDOC/_view/$VIEWNAME`.
 
 The request body is a JSON object that contains only the `queries` field.
 It holds an array of query objects with fields for the parameters of the query.
@@ -677,7 +664,7 @@ Each result object contains the same fields as the response to a regular view re
 _Example request using HTTP that contains several queries:_
 
 ```http
-POST /$DB/_design/$DESIGNDOC/_view/$VIEW HTTP/1.1
+POST /$DATABASE/_design/$DDOC/_view/$VIEWNAME HTTP/1.1
 Content-Type: application/json
 ```
 {:codeblock}
@@ -685,7 +672,7 @@ Content-Type: application/json
 _Example request containing several queries, that uses the command line:_
 
 ```sh
-curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DB/_design/$DESIGNDOC/_view/$VIEW -H 'Content-Type: application/json' -d @request-body.json
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_view/$VIEWNAME -H 'Content-Type: application/json' -d @request-body.json
     # where request-body.json is a file containing JSON data describing the queries
 ```
 {:codeblock}

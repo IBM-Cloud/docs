@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-26"
+lastupdated: "2017-6-1"
 
 
 
@@ -16,7 +16,7 @@ lastupdated: "2017-04-26"
 #Getting started with Track & Plan
 {: #track-plan}  
 
-If you’re an existing {{site.data.keyword.deliverypipeline}} Classic service user, you can continue to use the service until it is no longer supported on 5 July 2017.
+If you’re an existing {{site.data.keyword.trackplan}} service user, you can continue to use the service until it is no longer supported on 5 July 2017.
 {: shortdesc}
 
 **This service is being deprecated:**  All instances of this service are being deprecated. Existing instances can be used until 5 July 2017. For more information, see the [deprecation announcement blog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/04/track-plan-retirement/){: new_window}. To get the latest tools for issue tracking, use the {{site.data.keyword.contdelivery_full}} service. For upgrade instructions, see [Upgrade your DevOps Services project to a toolchain](/docs/services/ContinuousDelivery/upgrade_projects.html){: new_window}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-13"
+lastupdated: "2017-05-02"
 
 ---
 
@@ -343,7 +343,7 @@ Im Abschnitt **Ressourcennutzung** können Sie die folgenden Informationen anzei
 - Durchschnittliche Antwortzeit für {{site.data.keyword.Bluemix_notm}} über die letzten 10 Minuten, die letzte Stunde und den vergangenen Tag.
 - Durchschnittliche Transaktionen pro Sekunde für {{site.data.keyword.Bluemix_notm}} über die letzten 10 Minuten, die letzte Stunde und den vergangenen Tag.
 
-#### Details zu Speicher, Platte und CPU
+#### Details zu Systemspeicher, Platte und CPU
 {: #resourceusagedetails}
 
 Im Abschnitt **Ressourcennutzung** können Sie eine Zusammenfassung für Speicher- und Plattennutzung, unterteilt in **Reserviert** und **Physisch**, anzeigen.    
@@ -370,6 +370,13 @@ Um weitere Informationen zur physischen und reservierten Speicher- oder Plattenn
 	<dt><strong>Physisch</strong></dt>
 	<dd>Im Bereich 'Physisch' wird die Speicher- oder Plattenkapazität angezeigt, die zurzeit tatsächlich genutzt wird.</dd>
 	</dl>
+
+#### Details zur Verwendung des Service
+{: #servicesresourceusage}
+
+Die Registerkarte **Service** zeigt die Gesamtnutzung des Service in Bezug auf die maximale Kapazität gezeigt, die für einen dedizierten Service zur Verfügung steht. Wenn Sie beispielsweise einen dedizierten Cloudant-Service haben und 500 GB der Gesamtkapazität von 1000 GB verwenden, wird anhand einer Grafik gezeigt, dass Sie 50 % der Gesamtkapazität verwendet haben. Die Farbe der Grafik ändert sich in Abhängigkeit davon, wie nah Sie an der Kapazitätsgrenze sind. Gelb gibt an, dass Sie 70 bis 84 % Ihrer Kapazität verwendet haben, und Rot wird verwendet, wenn Sie 85 % oder mehr der verfügbaren Kapazität erreicht haben.
+
+**Hinweis**: Die Informationen zur Servicenutzung sind möglicherweise zu diesem Zeitpunkt nicht in allen Umgebungen vorhanden. Dieses Feature ist für Cloudant, MessageHub, API Connect und Session Cache verfügbar.
 
 
 ### Kontonutzung
@@ -2002,7 +2009,7 @@ Content-Type: application/json
 ### Benutzer mit der Befehlszeilenschnittstelle 'cf' verwalten
 {: #usingadmincli}
 
-Sie können Benutzer für Ihre {{site.data.keyword.Bluemix_notm}}-Umgebung über die Cloud Foundry-Befehlszeilenschnittstelle mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwalten. Sie müssen dieses Plug-in für Ihre Cloud Foundry-CLI herunterladen. 
+Sie können Benutzer für Ihre {{site.data.keyword.Bluemix_notm}}-Umgebung über die Cloud Foundry-Befehlszeilenschnittstelle mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in verwalten. Sie müssen dieses Plug-in für Ihre Cloud Foundry-CLI herunterladen.
 
 Vor dem Beginn müssen Sie die Befehlszeilenschnittstelle 'cf' installieren. Für das {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in ist cf Version 6.11.2 oder höher erforderlich. [Laden Sie die Cloud Foundry-Befehlszeilenschnittstelle herunter. ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}
 
@@ -2034,7 +2041,7 @@ cf install-plugin bluemix-admin-cli -r BluemixAdmin
 </li>
 </ol>
 
-Führen Sie den folgenden Befehl aus, um eine Liste der Unterbefehle anzuzeigen, die durch die installierten Plug-ins verfügbar sind: 
+Führen Sie den folgenden Befehl aus, um eine Liste der Unterbefehle anzuzeigen, die durch die installierten Plug-ins verfügbar sind:
 
 ```
 cf plugins

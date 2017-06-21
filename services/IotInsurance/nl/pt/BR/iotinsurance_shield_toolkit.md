@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-27"
+lastupdated: "2017-04-25"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -70,7 +70,7 @@ var config = module.exports = {
 
 Método: POST  
 API: /shield  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shield/addShield
+https://iot4i-api-docs.mybluemix.net/#!/shield/addShield
 
 Crie uma definição de blindagem no arquivo createShield.js.  O exemplo a seguir
 mostra uma blindagem simples que detecta um vazamento de água.
@@ -179,7 +179,7 @@ de pré-processamento poderá ser usada para converter as temperaturas para o va
 
 Método: POST  
 API: /user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/user/addUser
+https://iot4i-api-docs.mybluemix.net/#!/user/addUser
 
 Crie um usuário no arquivo createUser.js. O exemplo a seguir mostra como criar um único usuário.
 
@@ -215,7 +215,7 @@ que:
 
 Método: POST  
 API: /user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shieldassociation/addShieldAssociation
+https://iot4i-api-docs.mybluemix.net/#!/shieldassociation/addShieldAssociation
 
 Crie uma associação de blindagem que vincule a blindagem ao usuário no createUserShieldAssociation.js.
 
@@ -237,7 +237,7 @@ var userShield = {
 
 Método: POST  
 API: /sendPayloadToMQTT  
-https://iot4i-docs-api.mybluemix.net/dist/#!/global/sendPayloadToMQTT
+https://iot4i-api-docs.mybluemix.net/#!/global/sendPayloadToMQTT
 
 É possível criar uma carga útil de risco simulado para testar suas blindagens.
 
@@ -273,8 +273,8 @@ var parameters {
 ### Criando uma Promoção
 {: #create_promotion}
 
-O {{site.data.keyword.iotinsurance_short}} pode enviar promoções para o proprietário
-usando o app móvel. Crie promoções usando o arquivo createPromotion.js.
+O {{site.data.keyword.iotinsurance_short}} pode enviar promoções para o
+proprietário usando o app móvel. Crie promoções usando o arquivo createPromotion.js.
 
 O exemplo a seguir mostra como criar uma promoção para um encanador autorizado.
 

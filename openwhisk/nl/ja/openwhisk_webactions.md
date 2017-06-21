@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-  lastupdated: "2017-04-04"
+  lastupdated: "2017-04-21"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -48,11 +47,11 @@ Web アクションは、`https://{APIHOST}/api/v1/web/{QUALIFIED ACTION NAME}.{
 
 *アクションの完全修飾名には、そのアクションのパッケージ名が含まれている必要があり、指定されたパッケージ内にアクションがない場合は「default」になります。*
 
-例えば、`guest/demo/hello` などです。URI の最後の部分は`拡張子`と呼ばれ、通常は `.http` ですが、後述するように他の値も許可されます。API キーなしで Web アクション API パスを `curl` または `wget` で使用できます。ブラウザーに直接入力することも可能です。
+例えば、`guest/demo/hello` などです。API キーなしで Web アクション API パスを `curl` または `wget` で使用できます。ブラウザーに直接入力することも可能です。
 
-[https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane](https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane) を、ご使用の Web ブラウザーで開いてみてください。あるいは、次のように `curl` を介してこのアクションを起動してみてください。
+[https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane](https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane) を、ご使用の Web ブラウザーで開いてみてください。あるいは、次のように `curl` を介してこのアクションを起動してみてください。
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane
+curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane
 ```
 {: pre}
 
@@ -366,8 +365,8 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.json?name=Jane
 #### Node
 
 ```javascript
-  function main(args) {
-       decoded = new Buffer(args.__ow_body, 'base64').toString('utf-8')
+function main(args) {
+    decoded = new Buffer(args.__ow_body, 'base64').toString('utf-8')
     return {body: decoded}
 }
 ```

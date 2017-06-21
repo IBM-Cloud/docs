@@ -36,8 +36,8 @@ Puoi configurare il livello di sicurezza predefinito che viene applicato a tutti
 **Nota:**
 Puoi anche accedere alle impostazioni della sicurezza di connessione dalla pagina **General** in **Settings**. Fai clic su **Open Connection Security Policy**.
 
-## Configurazione delle politiche di connessione per la sicurezza standard 
-{: #config_connect_standard}
+## Configurazione delle politiche di connessione per la sicurezza standard
+{: #config_connect}
 
 Per le organizzazioni che utilizzano la sicurezza standard, modifica le impostazioni di sicurezza nella pagina **General** in **Settings**. Puoi configurare il livello di sicurezza predefinito che viene applicato a tutti i dispositivi.
 

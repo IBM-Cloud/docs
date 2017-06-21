@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-04-10"
 
 ---
 
@@ -157,10 +157,11 @@ Em que:
 - Outros clientes que fazem parte do aplicativo escalável devem usar o mesmo identificador de cliente.
 - O valor clean session deve ser configurado como false (0) para assinaturas não duráveis.
 
-### Assinaturas compartilhadas de durabilidade mista (Beta)
+### Assinaturas compartilhadas de durabilidade mista
 {: #shared_sub_mixed}
 
-O serviço {{site.data.keyword.iot_short_notm}} amplia a especificação do protocolo de sistema de mensagens MQTT V3.1.1 para suportar uma avaliação beta de assinaturas compartilhadas de durabilidade mista. Assinaturas compartilhadas fornecem recursos de balanceamento de carga para aplicativos. Uma assinatura compartilhada poderá ser necessária se um aplicativo corporativo de backend não puder processar o volume de mensagens que estão sendo publicadas em um espaço de tópico específico. Por exemplo, quando muitos dispositivos publicam mensagens que estão sendo processadas por um único aplicativo, pode ser necessário usar o recurso de balanceamento de carga de uma assinatura compartilhada.
+O serviço do {{site.data.keyword.iot_short_notm}} amplia a especificação de protocolo de sistema de mensagens do MQTT V3.1.1 para suportar assinaturas
+compartilhadas de durabilidade mista. Assinaturas compartilhadas fornecem recursos de balanceamento de carga para aplicativos. Uma assinatura compartilhada poderá ser necessária se um aplicativo corporativo de backend não puder processar o volume de mensagens que estão sendo publicadas em um espaço de tópico específico. Por exemplo, quando muitos dispositivos publicam mensagens que estão sendo processadas por um único aplicativo, pode ser necessário usar o recurso de balanceamento de carga de uma assinatura compartilhada.
 
 Para assinaturas compartilhadas de durabilidade mista, assegure-se de que o identificador de cliente na assinatura corresponda ao formato a seguir:
 
@@ -176,7 +177,6 @@ Em que:
    - Pontos (. )
 
 **Importante:**
-- O suporte para assinaturas compartilhadas de durabilidade mista está disponível apenas como um recurso beta. Não implemente recursos beta em aplicativos de produção.
 - O valor clean session pode ser configurado como true (1) ou false (0) em assinaturas compartilhadas de durabilidade mista.
 - Os clientes que se conectam ao instanceId usam assinaturas diferentes dos clientes que se conectam sem o instanceId. Portanto, se quiser que múltiplos clientes se conectem em uma assinatura compartilhada de durabilidade mista, será necessário especificar o instanceID em todas as assinaturas.
 

@@ -52,66 +52,48 @@ text between these comment tags.-->
 [U](#glossu)
 [V](#glossv)
 [W](#glossw)
+[Z](#glossz)
 
 <!--end letter link tags-->
 
 ## A
 {: #glossa}
 
-### token di accesso
-{: #x2113001}
+### AES
+{: #x2897512}
 
-Un valore di cui si serve l'utilizzatore per ottenere l'accesso alle risorse protette per conto dell'utente, invece di utilizzare le credenziali del provider di servizi dell'utente.
-
-### azione
-{: #x2012974}
-
-Un frammento di codice che può essere richiamato esplicitamente o eseguito in risposta a un evento. Vedi anche [feed](#x3129185), [richiama](#x2057232).
-
-### report attivo
-{: #x5074928}
-
-Un tipo di output di report che fornisce un report gestito altamente interattivo e facile da utilizzare che gli utenti possono utilizzare offline. I report attivi sono sviluppati per gli utenti business affinché possano esplorare i dati e ricavarne delle informazioni aggiuntive supplementari.
-
-### attività
-{: #x2013072}
-
-Un elemento di un processo, come un'attività, un sottoprocesso, un loop o una decisione. Le attività sono rappresentate come nodi in diagrammi di processo.
-
-### flusso di attività
-{: #x6842200}
-
-Un log di tutte le attività in un determinato spazio nel corso degli ultimi 30 giorni.
-
-### elemento di adozione
-{: #x7494374}
-
-Un elemento di lavoro di sviluppo che tiene traccia di quando le modifiche apportate da un team devono essere adottate da un altro team.
+Vedi [Advanced Encryption Standard](#x2897510).
 
 ### AES (Advanced Encryption Standard)
 {: #x2897510}
 
 Una tecnica di crittografia dei dati che migliora e sostituisce ufficialmente DES (Data Encryption Standard).
 
-### AES
-{: #x2897512}
-
-Vedi [Advanced Encryption Standard](#x2897510).
-
 ### affinità
 {: #x2149238}
 
 Due o più istanze del gruppo di contenitori in esecuzione sullo stesso nodo di rete. Vedi anche [anti-affinità](#x8888040).
 
-### sviluppo software snello
-{: #x2907651}
+### agitare
+{: #x5905152}
 
-Una metodologia di sviluppo software che si concentra sulla collaborazione e sulla qualità per produrre degli incrementi di prodotto completi a intervalli regolari, denominati iterazioni o sprint.
+Provocare un movimento che faccia sì che l'accelerometro di un dispositivo rilevi tale movimento e avvii un evento. Ad esempio, i tester e clienti possono avviare un report di errore relativo a un'applicazione agitando il proprio dispositivo.
 
 ### alias
 {: #x2000123}
 
 Un nome breve univoco e visibile pubblicamente che viene utilizzato in client desktop e di riga comandi, percorsi di repository Git e nelle funzioni di traccia e pianificazione. Per gli utenti che dispongono di un ID Jazz, tale ID è il loro alias.
+
+### ambiente di runtime
+{: #x2037566}
+
+Una serie di risorse utilizzate per eseguire un programma o un processo.
+
+
+### ambito
+{: #x2037763}
+
+Nella gestione delle identità, la serie di entità che possono essere influenzate da una politica o da un ACI (access control item).
 
 ### anti-affinità
 {: #x8888040}
@@ -128,29 +110,58 @@ Vedi [application programming interface](#x2000186).
 
 Un'applicazione di dispositivo web o mobile. Vedi anche [applicazione mobile](#x4258535), [applicazione web](#x2116500).
 
-### ID applicazione
-{: #x7909906}
-
-Un GUID assegnato a un'applicazione mobile Bluemix. Vedi anche [globally unique identifier](#x2390455). Vedi anche [{{site.data.keyword.appid_full}}](/docs/services/appid/index.html)
-
-### chiave di applicazione
-{: #x7290111}
-
-L'identificativo univoco che la tua applicazione utilizza quando notifica i dati a IBM Mobile Quality Assurance. La chiave può essere
-rigenerata in qualsiasi momento. Tuttavia, le build meno recenti che
-utilizzano una chiave applicazione meno recente non possono più
-inviare notifiche alle sessioni di IBM Mobile Quality Assurance.
-
 ### application programming interface (API)
 {: #x2000186}
 
 Un'interfaccia che consente a un programma applicativo scritto in un linguaggio di alto livello di utilizzare funzioni o dati specifici del sistema operativo oppure un altro programma.
 
-### risorsa utente
-{: #x2262995}
+### applicazione mobile (app mobile)
+{: #x4258535}
 
-Un'entità utilizzata o prodotta da un processo di sviluppo software o di sistema. Esempi di risorse utente includono progettazioni, requisiti, file di origine, piani, script,
-simulazioni, modelli, piani di test e file eseguibili binari. In un contesto HTTP, le risorse utente dispongono di un URI e sono chiamate risorse. Vedi anche [componente](#x2017871).
+Un'applicazione progettata per una piattaforma mobile. Simili
+alle applicazioni web, le applicazioni mobili forniscono delle funzioni che
+vanno oltre la visualizzazione statica di informazioni, ad esempio consentendo all'utente di filtrare notizie quasi in tempo reale. Vedi anche [applicazione](#x4281528).
+
+### applicazione web (app web)
+{: #x2116500}
+
+Un'applicazione accessibile mediante un browser web che fornisce alcune funzioni oltre alla visualizzazione statica delle informazioni, ad esempio consentendo all'utente di eseguire la query di un database. I componenti comuni di un'applicazione web
+includono pagine HTML, pagine JSP e servlet. Vedi anche [applicazione](#x4281528).
+
+### app mobile
+{: #x7636517}
+
+Vedi [applicazione mobile](#x4258535).
+
+### app web
+{: #x7636628}
+
+Vedi [applicazione web](#x2116500).
+
+### archivio dati
+{: #x2052849}
+
+Un'ubicazione (come un file, una directory o un sistema di database) dove sono memorizzati i dati.
+
+### archivio web (WAR)
+{: #x2116506}
+
+Un formato file compresso, definito dallo standard Java EE, per la memorizzazione di tutte le risorse richieste per l'installazione e l'esecuzione di un'applicazione web in un unico file.
+
+### attiva
+{: #x2239904}
+
+Consente di attivare un trigger.
+
+### attività
+{: #x2007852}
+
+Nello sviluppo snello, un elemento di lavoro che definisce un lavoro ben specifico.
+
+### attività
+{: #x2013072}
+
+Un elemento di un processo, come un'attività, un sottoprocesso, un loop o una decisione. Le attività sono rappresentate come nodi in diagrammi di processo.
 
 ### autenticazione (AuthN)
 {: #x2014567}
@@ -162,32 +173,27 @@ Il processo di convalida dell'identità di un utente o di un server.
 
 Vedi [autenticazione](#x2014567).
 
-### autorizzazione (AuthZ)
-{: #x2014653}
-
-Nella sicurezza di un computer, il diritto concesso ad un utente di comunicare con o utilizzare un sistema di computer.
-
 ### AuthZ
 {: #x7470448}
 
 Vedi [autorizzazione](#x2014653).
 
-### completamento automatico
-{: #x7344035}
+### autorità di certificazione (CA)
+{: #x2016383}
 
-Vedi [codice di completamento](#x7344030).
+Un'organizzazione o società attendibile di terze parti che emette i certificati digitali. L'autorità
+di certificazione in genere verifica l'identità dei singoli utenti a cui viene concesso il certificato univoco. Vedi anche [certificato intermedio](#x3753781), [Secure Sockets Layer](#x2038004), [radice attendibile](#x2042234).
 
+### autorizzazione (AuthZ)
+{: #x2014653}
 
-### distribuzione automatica
-{: #x7494379}
+Nella sicurezza di un computer, il diritto concesso ad un utente di comunicare con o utilizzare un sistema di computer.
 
-- Richiamare e impacchettare automaticamente l'output di build e spostare quindi tale output in un'altra ubicazione per consentire agli utenti di eseguirlo o sottoporlo a test.
-- Un processo automatizzato che richiama e impacchetta l'output di build e sposta quindi tale output in un'altra ubicazione in modo che gli utenti possano eseguirlo o sottoporlo a test.
+### azione
+{: #x2012974}
 
-### zona di disponibilità
-{: #x7018171}
+Un frammento di codice che può essere richiamato esplicitamente o eseguito in risposta a un evento. Vedi anche [feed](#x3129185), [richiama](#x2057232).
 
-Una posizione all'interno di una regione in cui è in esecuzione IBM Containers.
 
 
 ## B
@@ -198,85 +204,43 @@ Una posizione all'interno di una regione in cui è in esecuzione IBM Containers.
 
 Nello sviluppo snello, un elenco di funzioni o attività tecniche necessarie per un progetto o una release per cui il team di sviluppo esegue la valutazione e definisce la priorità per assegnare il lavoro.
 
-### immagine di base
-{: #x5366487}
+### biforcare (fork)
+{: #x2023301}
 
-Un'immagine che non ha alcuna immagine principale. Vedi anche [immagine](#x2024928), [immagine principale](#x8439210).
-
-### servizio beta
-{: #x7470455}
-
-Un servizio che non è pronto per la produzione ed è a una
-fase di sviluppo di prova. Vedi anche [servizio
-sperimentale](#x7470450).
-
-### eseguire il bind
-{: #x2000361}
-
-Stabilire una connessione tra componenti software su una rete utilizzando un protocollo concordato. Nei servizi web, l'operazione di bind si verifica quando il richiedente del servizio richiama o avvia un'interazione con il servizio al runtime utilizzando i dettagli di bind nella descrizione del servizio per individuare, contattare o richiamare il servizio.
+- In Git, una copia divergente di un repository che può essere modificata senza influenzare l'originale o senza doverlo sincronizzare con esso.
+- Per creare un repository di progetti e Git che includa tutti i contenuti di repository
+                  e la cronologia di un altro progetto.
 
 ### BLU Acceleration
 {: #x7470463}
 
 Una raccolta di tecnologie IBM DB2 progettate per operare principalmente con l'elaborazione di query di business intelligence principalmente in lettura. BLU Acceleration si articola in quattro importanti miglioramenti nella progettazione del database: elaborazione in memoria dinamica per colonne, compressione operativa, elaborazione vettoriale parallela e tralasciamento dei dati.
 
-### Distribuzione blu-verde
-{: #x7807335}
-
-Una tecnica di distribuzione che consente la fornitura continua e minimizza
-l'inattività eseguendo i due ambienti di produzione quasi identici denominati
-Blu e Verde. Mentre uno degli ambienti (ad esempio, Blu) funge da
-ambiente di produzione attivo, l'altro (ad esempio,Verde) può essere utilizzato
-per effettuare i test finali e la distribuzione. Una volta che l'applicazione viene
-distribuita in Verde, quest'ultimo diventa l'ambiente di produzione e
-Blu diventa inattivo. Vedi anche [distribuzione Red-Black](#x8439181).
-
 ### Bluemix
 {: #x7301758}
 
 Una piattaforma a standard aperti e basata sul cloud per sviluppare, gestire ed eseguire app di tutti i tipi, come ad esempio dispositivi smart, Big Data, mobili e web. Le funzionalità includono Java, lo sviluppo back-end mobile e il monitoraggio di applicazioni, oltre a funzioni dai partner di ecosistema e open source&mdash;il tutto fornito come un servizio nel cloud.
 
-### contenitore tipo
-{: #x7233930}
+### blueprint del processo
+{: #x8677871}
 
-Un template che include un'applicazione e il suo ambiente di runtime associato e i servizi predefiniti per uno specifico dominio.
-
-### illimitato
-{: #x8439189}
-
-Relativo a una piattaforma di sviluppo aperta e non proprietaria che include modelli di sviluppo cloud pubblico, cloud dedicato e cloud locale. Vedi anche [cloud dedicato](#x8439199), [cloud locale](#x8439194), [cloud pubblico](#x4585370).
+Descrizione di un processo di business che include i dettagli sulle attività del processo, come ad esempio le persone che effettuano o conoscono le attività e gli eventi cardine in cui vengono eseguite le attività.
 
 ### BPMN
 {: #x3551512}
 
 Vedi [Business Process Modeling Notation](#x3551507).
 
-### ramo
-{: #x2050278}
-
-- Un flusso per lo sviluppo isolato o parallelo.
-- Creare un flusso per lo sviluppo parallelo o isolato.
-
-### builder
-{: #x2197543}
-
-Uno strumento che crea e compila codice.
-
-### pacchetto di build
-{: #x7233925}
-
-Una raccolta di script che preparano il tuo codice all'esecuzione su Bluemix. I pacchetti di build esaminano le applicazioni distribuite e scaricano e configurano quindi le eventuali applicazioni dipendenti.
-
-### glossario di business
-{: #x4244928}
-
-Il vocabolario controllato e le informazioni aziendali associate relative alle politiche e alle regole di governance che definiscono la semantica e che, a loro volta, rivelano o agevolano le esigenze operative di business.
-
 ### BPMN (Business Process Modeling Notation)
 {: #x3551507}
 
 Una notazione grafica standard per la creazione di diagrammi dei processi di business.
 
+
+### builder
+{: #x2197543}
+
+Uno strumento che crea e compila codice.
 
 ## C
 {: #glossc}
@@ -285,6 +249,11 @@ Una notazione grafica standard per la creazione di diagrammi dei processi di bus
 {: #x2015942}
 
 Vedi [autorità di certificazione](#x2016383).
+
+### calcola
+{: #x3723424}
+
+L'infrastruttura o le risorse che servono come base per la creazione di applicazioni nel cloud.
 
 ### CBC
 {: #x2234719}
@@ -296,31 +265,47 @@ Vedi [concatenamento blocco cipher](#x2016783).
 
 Vedi [fornitura continua](#x7233913).
 
-### autorità di certificazione (CA)
-{: #x2016383}
+### certificato intermedio
+{: #x3753781}
 
-Un'organizzazione o società attendibile di terze parti che emette i certificati digitali. L'autorità
-di certificazione in genere verifica l'identità dei singoli utenti a cui viene concesso il certificato univoco. Vedi anche [certificato intermedio](#x3753781), [Secure Sockets Layer](#x2038004), [radice attendibile](#x2042234).
+Un certificato subordinato emesso dall'autorità di certificazione (CA) radice attendibile
+specificamente per emettere certificati server per l'entità finale. Il risultato è una catena di certificati che inizia dalla CA radice
+attendibile, passa per quello intermedio e termina con il certificato
+SSL emesso per l'organizzazione. Vedi anche [autorità di certificazione](#x2016383), [radice attendibile](#x2042234).
 
-### richiesta firma certificato (CSR)
-{: #x3530521}
+### chiamata API heavy
+{: #x7690468}
 
-Un messaggio elettronico inviato da un'organizzazione a un'autorità di certificazione (CA) per ottenere un certificato. La richiesta include una chiave pubblica ed è firmata con una chiave privata; la CA restituisce un certificato dopo averlo firmato con la propria chiave privata.
+Un'operazione client che scrive, elimina o inserisce dati. Le chiamate API heavy
+utilizzano una maggiore quantità di risorse rispetto alle chiamate API light perché
+influenzano i dati. Vedere anche [chiamata
+API light](#x7690463).
 
-### serie di modifiche
-{: #x2255031}
+### chiamata API light
+{: #x7690463}
 
-Un gruppo di modifiche correlate alle risorse utente in uno spazio di lavoro o in un flusso.
+Un'operazione client che si limita a leggere i dati. Le chiamate API light utilizzano
+una minore quantità di risorse rispetto alle chiamate API heavy perché eseguono una
+singola funzione. Vedi anche [chiamata API heavy](#x7690468).
+
+### chiave di applicazione
+{: #x7290111}
+
+L'identificativo univoco che la tua applicazione utilizza quando notifica i dati a IBM Mobile Quality Assurance. La chiave può essere
+rigenerata in qualsiasi momento. Tuttavia, le build meno recenti che
+utilizzano una chiave applicazione meno recente non possono più
+inviare notifiche alle sessioni di IBM Mobile Quality Assurance.
+
+### chiave privata
+{: #x2034701}
+
+Un modello algoritmico utilizzato per crittografare messaggi che possono essere decrittografati
+solo mediante la chiave pubblica corrispondente. Inoltre, la chiave privata viene utilizzata per decrittografare i messaggi crittografati con la chiave pubblica corrispondente. La chiave privata è conservata sul sistema dell'utente e protetta da password.
 
 ### CI
 {: #x2008855}
 
 Vedi [integrazione continua](#x6009572).
-
-### concatenamento blocco cipher (CBC)
-{: #x2016783}
-
-Un metodo di riduzione dei pattern ripetitivi nel testo cifrato eseguendo un'operazione OR-esclusivo su ciascun blocco di dati di 8 byte con il blocco di 8 byte crittografato precedentemente prima che venga crittografato.
 
 ### CLI
 {: #x2008863}
@@ -332,25 +317,45 @@ Vedi [interfaccia riga di comando](#x2051424).
 
 Un computer o un programma software che richiede servizi da un server. Vedi anche [host](#x2002243).
 
-### elaborazione cloud
-{: #x3877850}
+### cloud dedicato
+{: #x8439199}
 
-Una piattaforma di calcolo in cui gli utenti possono accedere ad applicazioni o risorse di elaborazione, come i servizi, da qualsiasi luogo tramite i propri dispositivi connessi. Un'interfaccia utente semplificata o una API (Application Programming Interface), o entrambe le cose, formano l'infrastruttura che supporta tali servizi in modo trasparente agli utenti.
+Un ambiente di elaborazione cloud privato che fornisce l'infrastruttura con hardware a singolo tenant. Vedi anche [illimitato](#x8439189).
 
-### portabilità cloud
-{: #x4585297}
+### cloud ibrido
+{: #x4585327}
 
-La capacità di spostare applicazioni e servizi in ambiente di elaborazione cloud pubblici o privati o da diversi provider cloud.
+Un ambiente di elaborazione cloud formato da più risorse pubbliche e
+private.
 
-### completamento del codice
-{: #x7344030}
+### cloud locale
+{: #x8439194}
 
-Una funzione di molti IDE ed editor di testo che completa in modo predittivo il contenuto (parole, frasi, tag e così via) mentre l'utente digita.
+Un ambiente di elaborazione cloud nel data center del client. Il cloud locale è in loco, fornendo latenza e sicurezza migliorate. Vedi anche [illimitato](#x8439189).
 
-### interfaccia riga di comando (CLI)
-{: #x2051424}
 
-Una interfaccia computer in cui l'input e l'output sono basati su testo.
+### cloud mobile
+{: #x4585344}
+
+Un'infrastruttura in cui l'archiviazione e l'elaborazione dei dati per le applicazioni viene scaricata da un dispositivo mobile nel cloud. Con l'elaborazione cloud mobile, le applicazioni non sono limitate a uno specifico vettore e sono invece accessibili tramite il web.
+
+### cloud privato
+{: #x4585362}
+
+Un ambiente di elaborazione cloud in cui l'accesso è limitato ai membri delle reti di aziende e partner. Vedi anche [cloud pubblico](#x4585370).
+
+### cloud pubblico
+{: #x4585370}
+
+Un ambiente di elaborazione cloud in cui l'accesso a risorse standardizzate, quali l'infrastruttura, l'hardware a più tenant e i servizi, è disponibile ai sottoscrittori in base a un criterio di pagamento basato sull'utilizzo. Vedi anche [illimitato](#x8439189), [cloud privato](#x4585362).
+
+### codice di licenza
+{: #x2804840}
+
+Un'autorizzazione che regola l'utilizzo di programmi con licenza software. I codici di licenza
+              del software devono essere installati sul sistema in cui viene aggiornato o spostato il software,
+              modificato il gruppo di processori hardware, aggiunto un ulteriore utilizzo di licenze o
+              acquistato un nuovo software che richiede i codici di licenza.
 
 ### commit (eseguire un)
 {: #x2000758}
@@ -358,36 +363,52 @@ Una interfaccia computer in cui l'input e l'output sono basati su testo.
 - Un'istantanea dello stato corrente di un progetto in un repository. La cronologia di un progetto è definita da una serie di commit.
 - Memorizzare un'istantanea dello stato corrente di un progetto.
 
+### completamento automatico
+{: #x7344035}
+
+Vedi [codice di completamento](#x7344030).
+
+
+### completamento del codice
+{: #x7344030}
+
+Una funzione di molti IDE ed editor di testo che completa in modo predittivo il contenuto (parole, frasi, tag e così via) mentre l'utente digita.
+
 ### componente
 {: #x2017871}
 
 - Nella gestione configurazione, un'unità di organizzazione per un insieme riutilizzabile di risorse utente di engineering. I componenti spesso corrispondono alle aree del progetto. All'interno di un componente esistono delle configurazioni globali. Vedi anche [risorsa utente](#x2262995).
 - Nella gestione controllo origine, un raggruppamento di risorse utente correlate in un flusso o uno spazio di lavoro repository. Un componente può contenere qualsiasi numero di cartelle e file.
 
-### calcola
-{: #x3723424}
+### concatenamento blocco cipher (CBC)
+{: #x2016783}
 
-L'infrastruttura o le risorse che servono come base per la creazione di applicazioni nel cloud.
+Un metodo di riduzione dei pattern ripetitivi nel testo cifrato eseguendo un'operazione OR-esclusivo su ciascun blocco di dati di 8 byte con il blocco di 8 byte crittografato precedentemente prima che venga crittografato.
+
+### condivisione file
+{: #x2022902}
+
+Nell'ambiente cloud IBM, un sistema di archiviazione permanente in cui gli utenti archiviano e condividono i file. In IBM Containers, gli utenti possono montare i volumi Docker sulle condivisioni file.
 
 ### contenitore
 {: #x2010901}
 
 Un costrutto di sistema che consente agli utenti di eseguire simultaneamente istanze del sistema operativo logiche separate. I contenitori utilizzano livelli di file system per ridurre al minimo le dimensioni delle immagini e promuovere il riutilizzo. Vedi anche [immagine](#x2024928), [livello](#x2028320), [registro](#x2064940).
 
-### fornitura continua (CD)
-{: #x7233913}
+### contenitore tipo
+{: #x7233930}
 
-Una pratica di sviluppo software che utilizza tecniche quali la verifica continua, l'integrazione continua, e la distribuzione continua in modo che le nuove funzioni e correzioni vengano impacchettate e distribuite rapidamente e a basso rischio per gli ambienti di test e quindi ai clienti.
+Un template che include un'applicazione e il suo ambiente di runtime associato e i servizi predefiniti per uno specifico dominio.
 
-### miglioramento continuo
-{: #x8635788}
+### controllo della sintassi
+{: #x7344042}
 
-La pratica di valutare un prodotto, servizio o processo per delle basi per garantire che sia effettivo e efficiente, e per effettuare modifiche incrementali o tutte contemporaneamente, se necessario.
+Una funzione che analizza il codice e prova a interpretarlo prima della compilazione per rilevare errori di sintassi che potrebbero causare una compilazione non corretta delle applicazioni e che informa quindi l'utente.
 
-### integrazione continua (CI)
-{: #x6009572}
+### corsia
+{: #x2263662}
 
-Una pratica di sviluppo software in cui i membri di un team integrano il loro lavoro frequentemente in modo che siano disponibili più integrazioni ogni giorno. Le integrazioni sono verificate da una generazione automatica per individuare gli errori di integrazione il più velocemente possibile.
+Una riga visivamente separata all'interno di un diagramma del flusso di processo che raggruppa tutte le attività del processo eseguite da una particolare combinazione di ruoli, risorse, unità organizzative o posizioni.
 
 ### credenziale
 {: #x2018813}
@@ -398,13 +419,6 @@ Informazioni acquisite durante l'autenticazione che descrivono un utente, associ
 {: #x2140147}
 
 Vedi [richieste di firma certificato](#x3530521).
-
-### dominio personalizzato
-{: #x5728384}
-
-La parte personalizzata dell'URL selezionata dall'utente per indirizzare le richieste all'applicazione. Il dominio personalizzato è parte integrante della rotta. Il dominio personalizzato può essere un dominio condiviso, un dominio secondario condiviso
-o un dominio e un host condivisi. Vedi anche [dominio](#x2021210), [host](#x2002243), [rotta](#x2037338), [dominio secondario](#x2040080), [Uniform Resource Locator](#x2042491).
-
 
 ## D
 {: #glossd}
@@ -420,40 +434,30 @@ eseguire funzioni continue o periodiche, come il controllo della rete.
 
 Un componente interfaccia utente che fornisce all'utente un riepilogo comprensivo di informazioni pertinenti da più origini.
 
-### origine dati
-{: #x2176124}
-
-L'origine dei dati, ad esempio un database o un file XML e le informazioni di connessione necessarie per l'accesso ai dati.
-
-### archivio dati
-{: #x2052849}
-
-Un'ubicazione (come un file, una directory o un sistema di database) dove sono memorizzati i dati.
-
 ### DEA
 {: #x2019805}
 
 Vedi [Droplet Execution Agent](#x7470348).
 
+### decisione secondaria
+{: #x7777680}
+
+Una decisione che descrive in che modo deve essere valutato un aspetto della decisione principale. La decisione principale dipende dalle decisioni secondarie. Ciascuna decisione secondaria può avere una descrizione e proprietà proprie.
+
+### DevOps
+{: #x5784896}
+
+Una metodologia software che integra lo sviluppo delle applicazioni e le operazioni IT.
+
+### diagramma del processo
+{: #x2220858}
+
+Diagramma che rappresenta il flusso di lavoro per un processo. Gli oggetti all'interno di un diagramma del processo includono attività, processi, elementi di business, risorse e decisioni.
+
 ### diagramma di decisione
 {: #x6784591}
 
 Un insieme di elementi grafici che rappresentano visivamente i dettagli di una decisione in una struttura dall'alto verso il basso con linee di dipendenza.
-
-### regola di decisione
-{: #x8677850}
-
-Una regola costituita da una o più considerazioni decisionali e una conclusione.
-
-### tabella decisionale
-{: #x2876495}
-
-Una forma di regola di business che cattura la logica di business del processo decisionale a più condizioni in una tabella in cui le righe e le colonne si intersecano per determinare l'azione appropriata. Vedi anche [serie di regole](#x3721562).
-
-### cloud dedicato
-{: #x8439199}
-
-Un ambiente di elaborazione cloud privato che fornisce l'infrastruttura con hardware a singolo tenant. Vedi anche [illimitato](#x8439189).
 
 ### difetto
 {: #x2117804}
@@ -467,15 +471,27 @@ traccia dei bug e delle relative correzioni.
 - Il processo di spostamento di un'applicazione (quale un report o un modello) in un'istanza differente. Ad esempio, i report vengono spesso creati in un ambiente di test e quindi distribuiti in produzione. Quando si distribuisce un'applicazione, questa viene esportata, trasferita ed importata.
 - Un processo che richiama l'output di una build, impacchetta l'output con le proprietà di configurazione e installa il package in un'ubicazione predefinita in modo che possa essere testato o eseguito. Vedi anche [preparare](#x2067189).
 
-### DevOps
-{: #x5784896}
+### distribuzione automatica
+{: #x7494379}
 
-Una metodologia software che integra lo sviluppo delle applicazioni e le operazioni IT.
+- Richiamare e impacchettare automaticamente l'output di build e spostare quindi tale output in un'altra ubicazione per consentire agli utenti di eseguirlo o sottoporlo a test.
+- Un processo automatizzato che richiama e impacchetta l'output di build e sposta quindi tale output in un'altra ubicazione in modo che gli utenti possano eseguirlo o sottoporlo a test.
 
-### mappa di rilevamento
-{: #x8677855}
+### Distribuzione blu-verde
+{: #x7807335}
 
-Una bozza di eventi cardine del processo e le attività in tali eventi per il brainstorming o sessioni di interviste con gli esperti dei processi.
+Una tecnica di distribuzione che consente la fornitura continua e minimizza
+l'inattività eseguendo i due ambienti di produzione quasi identici denominati
+Blu e Verde. Mentre uno degli ambienti (ad esempio, Blu) funge da
+ambiente di produzione attivo, l'altro (ad esempio,Verde) può essere utilizzato
+per effettuare i test finali e la distribuzione. Una volta che l'applicazione viene
+distribuita in Verde, quest'ultimo diventa l'ambiente di produzione e
+Blu diventa inattivo. Vedi anche [distribuzione Red-Black](#x8439181).
+
+### distribuzione Red-Black
+{: #x8439181}
+
+Una tecnica di distribuzione che determina una fornitura continua abilitando test, sviluppo e distribuzione sincronizzati. Inizialmente, lo sviluppo viene eseguito su un ambiente non attivo (Black) mentre l'ambiente attivo continua a prendere il traffico (Red). Quando viene avviata la distribuzione, entrambi gli ambienti diventano attivi (Red-Red) finché l'instradamento non viene disabilitato sull'ambiente della versione precedente che era attivo prima e quindi rimosso (Black) mentre il nuovo ambiente funge da solo ambiente attivo. Vedi anche [Distribuzione Blue-Green](#x7807335).
 
 ### dominio
 {: #x2021210}
@@ -483,6 +499,18 @@ Una bozza di eventi cardine del processo e le attività in tali eventi per il br
 Parte della gerarchia di denominazione che specifica la rotta. Ad esempio,
 esempio.com. In Bluemix, i domini sono associati alle organizzazioni. Gli oggetti di dominio
 non sono associati direttamente alle applicazioni. Vedi anche [dominio personalizzato](#x5728384), [host](#x2002243), [organizzazione](#x2032585), [rotta](#x2037338), [dominio secondario](#x2040080), [Uniform Resource Locator](#x2042491).
+
+### dominio personalizzato
+{: #x5728384}
+
+La parte personalizzata dell'URL selezionata dall'utente per indirizzare le richieste all'applicazione. Il dominio personalizzato è parte integrante della rotta. Il dominio personalizzato può essere un dominio condiviso, un dominio secondario condiviso
+o un dominio e un host condivisi. Vedi anche [dominio](#x2021210), [host](#x2002243), [rotta](#x2037338), [dominio secondario](#x2040080), [Uniform Resource Locator](#x2042491).
+
+
+### dominio secondario
+{: #x2040080}
+
+Un dominio che rappresenta una parte di un dominio più ampio. Vedi anche [dominio personalizzato](#x5728384), [dominio](#x2021210), [host](#x2002243), [rotta](#x2037338), [Uniform Resource Locator](#x2042491).
 
 ### DQM
 {: #x3744906}
@@ -516,6 +544,32 @@ l'accesso nativo alle origini dati. Ottimizza le query per affrontare la comples
 Un'iniziativa open source che offre ai fornitori di software indipendenti (ISV) e ad altri sviluppatori di strumenti una piattaforma standard su cui creare
 strumenti di sviluppo per applicazioni compatibili per il collegamento diretto.
 
+### elaborazione cloud
+{: #x3877850}
+
+Una piattaforma di calcolo in cui gli utenti possono accedere ad applicazioni o risorse di elaborazione, come i servizi, da qualsiasi luogo tramite i propri dispositivi connessi. Un'interfaccia utente semplificata o una API (Application Programming Interface), o entrambe le cose, formano l'infrastruttura che supporta tali servizi in modo trasparente agli utenti.
+
+### elemento di adozione
+{: #x7494374}
+
+Un elemento di lavoro di sviluppo che tiene traccia di quando le modifiche apportate da un team devono essere adottate da un altro team.
+
+### elemento di build di traccia
+{: #x7494456}
+
+Un elemento di lavoro di sviluppo che tiene traccia delle correzioni
+richieste dopo una build non riuscita.
+
+### elemento di lavoro
+{: #x2173032}
+
+Una risorsa utente che rappresenta una nozione generalizzata di un'attività di sviluppo, quale un'attività, un report di difetto o una richiesta di miglioramento.
+
+### elevata disponibilità (HA)
+{: #x2284708}
+
+La capacità dei servizi IT di sostenere tutte le interruzioni e continuare a fornire la funzionalità di elaborazione in base ad un livello di servizio predefinito. I tempi di inattività includono eventi pianificati, come manutenzione e backup, ed eventi non pianificati, come errori software, guasti hardware, cali di alimentazione e malfunzionamenti.
+
 ### endpoint
 {: #x2026820}
 
@@ -526,17 +580,16 @@ L'indirizzo di una API o di un servizio in un ambiente. Una API espone un endpoi
 
 In uno sviluppo snello, un elemento di lavoro che definisce un caso di utilizzo di notevoli dimensioni con una quantità di lavoro notevole o sconosciuta che viene spesso completata su diversi sprint. Gli epos possono essere divisi in storie.
 
-### gateway esclusivo
-{: #x4117682}
+### eseguire il bind
+{: #x2000361}
 
-Un gateway che crea percorsi alternativi in un flusso dei processi. Il gateway esclusivo indica il punto di deviazione nel flusso di un processo.
+Stabilire una connessione tra componenti software su una rete utilizzando un protocollo concordato. Nei servizi web, l'operazione di bind si verifica quando il richiedente del servizio richiama o avvia un'interazione con il servizio al runtime utilizzando i dettagli di bind nella descrizione del servizio per individuare, contattare o richiamare il servizio.
 
-### servizio sperimentale
-{: #x7470450}
+### evento cardine
+{: #x2118203}
 
-Un servizio che non è pronto per la produzione e che può essere rimosso dalla produzione in qualsiasi momento. Vedi anche [servizio
-beta](#x7470455).
-
+- Un evento significativo in un progetto o un processo utilizzato per determinare l'avanzamento verso degli obiettivi.
+- Una fase significativa nel processo in cui vengono eseguite una serie di attività o vengono prese delle decisioni.
 
 ## F
 {: #glossf}
@@ -551,27 +604,32 @@ Consente di unire due o più entità. Ad esempio, il dominio registrato di un'az
 
 Un pezzo di codice che configura un'origine eventi esterna per l'attivazione di eventi trigger. Vedi anche [azione](#x2012974).
 
-### condivisione file
-{: #x2022902}
+### file JAR
+{: #x2406009}
 
-Nell'ambiente cloud IBM, un sistema di archiviazione permanente in cui gli utenti archiviano e condividono i file. In IBM Containers, gli utenti possono montare i volumi Docker sulle condivisioni file.
+Un file di archivio Java.
 
-### attiva
-{: #x2239904}
+### file manifest
+{: #x2858069}
 
-Consente di attivare un trigger.
+- Un file che contiene informazioni, come ad esempio le impostazioni, le istruzioni o i metadati, sugli altri file o sulle altre risorse utente.
+- Con le applicazioni Android, il file manifest specifica le autorizzazioni e i parametri di raccolta dati per consentire ai dispositivi mobili di notificare le informazioni richieste dai tester e dai clienti. Per i clienti e i tester interni sono richiesti dei manifest differenti.
 
-### linea di flusso
-{: #x4879516}
+### file WAR
+{: #x2406005}
 
-Una linea direzionale che indica la sequenza di attività all'interno di un processo.
+Vedi [archivio web](#x2116506).
 
-### biforcare (fork)
-{: #x2023301}
 
-- In Git, una copia divergente di un repository che può essere modificata senza influenzare l'originale o senza doverlo sincronizzare con esso.
-- Per creare un repository di progetti e Git che includa tutti i contenuti di repository
-                  e la cronologia di un altro progetto.
+### flusso di attività
+{: #x6842200}
+
+Un log di tutte le attività in un determinato spazio nel corso degli ultimi 30 giorni.
+
+### fornitura continua (CD)
+{: #x7233913}
+
+Una pratica di sviluppo software che utilizza tecniche quali la verifica continua, l'integrazione continua, e la distribuzione continua in modo che le nuove funzioni e correzioni vengano impacchettate e distribuite rapidamente e a basso rischio per gli ambienti di test e quindi ai clienti.
 
 ### framework
 {: #x2023472}
@@ -588,10 +646,31 @@ un'applicazione e una funzionalità generale ed estensibile.  Un framework abili
 
 Un punto della rete utilizzato per controllare la divergenza e la convergenza dei percorsi del flusso di sequenza in un processo e in una coreografia.
 
+### gateway esclusivo
+{: #x4117682}
+
+Un gateway che crea percorsi alternativi in un flusso dei processi. Il gateway esclusivo indica il punto di deviazione nel flusso di un processo.
+
+### gateway inclusivo
+{: #x4626646}
+
+Un gateway che crea percorsi alternativi o paralleli in un flusso dei processi in cui tutte le espressioni della condizione del flusso di sequenza in uscita vengono valutate in modo indipendente.
+
+### gateway parallelo
+{: #x4118340}
+
+Un gateway che crea percorsi paralleli senza verificare le condizioni.
+
 ### GB-ora
 {: #x7470477}
 
 La quantità cumulativa di memoria (in gigabyte) in esecuzione per tutte le istanze dell'applicazione per uno specifico pacchetto di build all'ora.
+
+### gestione controllo origine (SCM, source control management)
+{: #x3579285}
+
+Un aspetto della gestione della configurazione software che
+coinvolge la gestione delle modifiche alle raccolte di file.
 
 ### Git
 {: #x7494416}
@@ -602,6 +681,11 @@ Un programma open source per la gestione del controllo origine.
 {: #x2390455}
 
 Un numero determinato algoritmicamente che identifica in modo univoco un'entità in un sistema. Vedi anche [ID applicazione](#x7909906).
+
+### glossario di business
+{: #x4244928}
+
+Il vocabolario controllato e le informazioni aziendali associate relative alle politiche e alle regole di governance che definiscono la semantica e che, a loro volta, rivelano o agevolano le esigenze operative di business.
 
 ### GUID
 {: #x2390457}
@@ -622,40 +706,16 @@ Vedi [elevata disponibilità](#x2284708).
 
 Uno scenario che si presenta senza eccezioni o condizioni di errore e comprende la sequenza di attività che vengono eseguite se tutto procede come previsto.
 
-### chiamata API heavy
-{: #x7690468}
-
-Un'operazione client che scrive, elimina o inserisce dati. Le chiamate API heavy
-utilizzano una maggiore quantità di risorse rispetto alle chiamate API light perché
-influenzano i dati. Vedere anche [chiamata
-API light](#x7690463).
-
-### elevata disponibilità (HA)
-{: #x2284708}
-
-La capacità dei servizi IT di sostenere tutte le interruzioni e continuare a fornire la funzionalità di elaborazione in base ad un livello di servizio predefinito. I tempi di inattività includono eventi pianificati, come manutenzione e backup, ed eventi non pianificati, come errori software, guasti hardware, cali di alimentazione e malfunzionamenti.
-
 ### host
 {: #x2002243}
 
 Un computer che è connesso a una rete e che fornisce un punto di accesso a tale rete. L'host può essere un client, un server o entrambi contemporaneamente. Vedi anche [client](#x2000644), [dominio personalizzato](#x5728384), [dominio](#x2021210), [rotta](#x2037338), [dominio secondario](#x2040080), [Uniform Resource Locator](#x2042491).
-
-### metodo HTTP
-{: #x2024674}
-
-Un'azione utilizzata da HTTP (Hypertext Transfer Protocol). I metodi HTTP includono GET, POST e PUT.
 
 ### HTTPS
 {: #x2193603}
 
 Vedi [Hypertext Transfer Protocol
 Secure](#x2237225).
-
-### cloud ibrido
-{: #x4585327}
-
-Un ambiente di elaborazione cloud formato da più risorse pubbliche e
-private.
 
 ### Hypertext Transfer Protocol Secure (HTTPS)
 {: #x2237225}
@@ -671,35 +731,60 @@ Un protocollo Internet utilizzato da browser e server Web per trasferire e visua
 
 Vedi [infrastructure as a service](#x4585332).
 
+### ID applicazione
+{: #x7909906}
+
+Un GUID assegnato a un'applicazione mobile Bluemix. Vedi anche [globally unique identifier](#x2390455). Vedi anche [{{site.data.keyword.appid_full}}](/docs/services/appid/index.html)
+
 ### IDE
 {: #x2115755}
 
 Vedi [integrated development environment](#x2116934).
+
+### illimitato
+{: #x8439189}
+
+Relativo a una piattaforma di sviluppo aperta e non proprietaria che include modelli di sviluppo cloud pubblico, cloud dedicato e cloud locale. Vedi anche [cloud dedicato](#x8439199), [cloud locale](#x8439194), [cloud pubblico](#x4585370).
 
 ### immagine
 {: #x2024928}
 
 Un runtime completo che può essere utilizzato per eseguire le applicazioni. Le immagini vengono utilizzate per creare contenitori e possono contenere più immagini principali (livelli). Vedi anche [immagine di base](#x5366487), [contenitore](#x2010901), [livello](#x2028320), [spazio dei nomi](#x2031005), [immagine principale](#x8439210), [repository di immagini privato](#x8439215), [registro](#x2064940).
 
+### immagine di base
+{: #x5366487}
+
+Un'immagine che non ha alcuna immagine principale. Vedi anche [immagine](#x2024928), [immagine principale](#x8439210).
+
+### immagine principale
+{: #x8439210}
+
+Un'immagine che fornisce una base per un'altra immagine. Ad esempio, Ubuntu Linux è l'immagine principale dell'immagine IBM Liberty. Vedi anche [immagine di base](#x5366487), [immagine](#x2024928).
+
 ### impedimento
 {: #x4015600}
 
 Un elemento che impedisce l'avanzamento oppure un elemento di lavoro per tenere traccia di qualcosa che impedisce l'avanzamento.
-
-### gateway inclusivo
-{: #x4626646}
-
-Un gateway che crea percorsi alternativi o paralleli in un flusso dei processi in cui tutte le espressioni della condizione del flusso di sequenza in uscita vengono valutate in modo indipendente.
 
 ### infrastructure as a service (IaaS)
 {: #x4585332}
 
 L'offerta di un'infrastruttura di computer, comprese le funzionalità server, di collegamento in rete, di data center e di archiviazione, come un servizio in outsourcing.
 
-### istanza
-{: #x2002531}
+### ingrandire
+{: #x2004442}
 
-Un'entità formata da risorse riservate per un'applicazione o un servizio specifici.
+Aumentare la capacità della piattaforma (o del sistema) aggiungendo un maggior numero di istanze di applicazioni o servizi.
+
+### in loco
+{: #x6969434}
+
+Vedi [installato in loco](#x4561212).
+
+### installato in loco (in loco)
+{: #x4561212}
+
+Relativo al software installato ed eseguito sui computer locali di un utente o un'organizzazione.
 
 ### integrated development environment (IDE)
 {: #x2116934}
@@ -711,28 +796,30 @@ Una serie di strumenti di sviluppo software, come ad esempio editor di codice so
 
 L'attività di sviluppo software in cui componenti software separati vengono uniti in un unico eseguibile.
 
-### certificato intermedio
-{: #x3753781}
+### integrazione continua (CI)
+{: #x6009572}
 
-Un certificato subordinato emesso dall'autorità di certificazione (CA) radice attendibile
-specificamente per emettere certificati server per l'entità finale. Il risultato è una catena di certificati che inizia dalla CA radice
-attendibile, passa per quello intermedio e termina con il certificato
-SSL emesso per l'organizzazione. Vedi anche [autorità di certificazione](#x2016383), [radice attendibile](#x2042234).
+Una pratica di sviluppo software in cui i membri di un team integrano il loro lavoro frequentemente in modo che siano disponibili più integrazioni ogni giorno. Le integrazioni sono verificate da una generazione automatica per individuare gli errori di integrazione il più velocemente possibile.
+
+### interfaccia riga di comando (CLI)
+{: #x2051424}
+
+Una interfaccia computer in cui l'input e l'output sono basati su testo.
 
 ### Internet delle cose (IoT)
 {: #x6714341}
 
 La rete di oggetti interconnessi che simulano una "internet" di dispositivi connettibili.
 
-### richiama
-{: #x2057232}
-
-Consente di attivare un'azione. Vedi anche [azione](#x2012974).
-
 ### IoT
 {: #x6714346}
 
 Vedi [Internet delle cose](#x6714341).
+
+### istanza
+{: #x2002531}
+
+Un'entità formata da risorse riservate per un'applicazione o un servizio specifici.
 
 ### iterazione
 {: #x2026316}
@@ -743,11 +830,6 @@ Vedi [sprint](#x6248609).
 
 ## J
 {: #glossj}
-
-### file JAR
-{: #x2406009}
-
-Un file di archivio Java.
 
 ### JavaScript Object Notation (JSON)
 {: #x3292165}
@@ -763,31 +845,23 @@ Vedi [JavaScript Object Notation](#x3292165).
 ## L
 {: #glossl}
 
-### livello
-{: #x2028320}
-
-Una versione modificata di un'immagine principale. Le immagini sono costituite da livelli, dove la versione modificata viene sovrapposta all'immagine principale per creare la nuova immagine. Vedi anche [contenitore](#x2010901), [immagine](#x2024928).
-
 ### LDAP
 {: #x2481619}
 
 Vedi [Lightweight Directory Access
 Protocol](#x2028538).
 
-### codice di licenza
-{: #x2804840}
+### libreria di preproduzione
+{: #x7290106}
 
-Un'autorizzazione che regola l'utilizzo di programmi con licenza software. I codici di licenza
-              del software devono essere installati sul sistema in cui viene aggiornato o spostato il software,
-              modificato il gruppo di processori hardware, aggiunto un ulteriore utilizzo di licenze o
-              acquistato un nuovo software che richiede i codici di licenza.
+Una raccolta di funzioni di test delle applicazioni che raccoglie i dettagli approfonditi sulle questioni e i problemi relativi a un'applicazione. Le funzioni di test identificano il dispositivo e l'utente che sta riscontrando i bug in modo che gli sviluppatori possano ottenere i log e altre informazioni per correggere i problemi. Vedi anche [modalità di preproduzione](#x7290124).
 
-### chiamata API light
-{: #x7690463}
+### libreria di produzione
+{: #x2034919}
 
-Un'operazione client che si limita a leggere i dati. Le chiamate API light utilizzano
-una minore quantità di risorse rispetto alle chiamate API heavy perché eseguono una
-singola funzione. Vedi anche [chiamata API heavy](#x7690468).
+Un sottoinsieme della libreria di preproduzione delle funzioni di test di applicazioni
+utilizzate dai clienti. I dispositivi mobili dei clienti notificano i problemi in modo anonimo. Queste funzioni raccolgono anche una quantità minore di dettagli nei log, nei dati di sessione e nei report di arresto anomalo. Vedi anche [modalità
+di produzione](#x6070975).
 
 ### Lightweight Directory Access Protocol (LDAP)
 {: #x2028538}
@@ -798,64 +872,64 @@ risorse del più complesso X.500 DAP (Directory Access Protocol). Ad esempio,
 LDAP può essere utilizzato per individuare persone, organizzazioni e altre risorse in una
 directory Internet o intranet.
 
-### cloud locale
-{: #x8439194}
+### linea di flusso
+{: #x4879516}
 
-Un ambiente di elaborazione cloud nel data center del client. Il cloud locale è in loco, fornendo latenza e sicurezza migliorate. Vedi anche [illimitato](#x8439189).
+Una linea direzionale che indica la sequenza di attività all'interno di un processo.
 
+### livello
+{: #x2028320}
+
+Una versione modificata di un'immagine principale. Le immagini sono costituite da livelli, dove la versione modificata viene sovrapposta all'immagine principale per creare la nuova immagine. Vedi anche [contenitore](#x2010901), [immagine](#x2024928).
 
 ## M
 {: #glossm}
 
-### file manifest
-{: #x2858069}
+### macchina virtuale (VM)
+{: #x2043165}
 
-- Un file che contiene informazioni, come ad esempio le impostazioni, le istruzioni o i metadati, sugli altri file o sulle altre risorse utente.
-- Con le applicazioni Android, il file manifest specifica le autorizzazioni e i parametri di raccolta dati per consentire ai dispositivi mobili di notificare le informazioni richieste dai tester e dai clienti. Per i clienti e i tester interni sono richiesti dei manifest differenti.
+Un'implementazione software di una macchina che esegue programmi come una macchina reale. Vedi anche [server virtuale](#x2455638).
+
+### mappa di rilevamento
+{: #x8677855}
+
+Una bozza di eventi cardine del processo e le attività in tali eventi per il brainstorming o sessioni di interviste con gli esperti dei processi.
 
 ### MBaaS
 {: #x7044865}
 
 Vedi [mobile backend as a service](#x7044858).
 
-### unire
-{: #x2030107}
+### metodo HTTP
+{: #x2024674}
 
-- Il commit conseguente al portare del contenuto da un altro ramo nel ramo corrente.
-- Recuperare del contenuto da un ramo e applicarlo a un altro ramo.
+Un'azione utilizzata da HTTP (Hypertext Transfer Protocol). I metodi HTTP includono GET, POST e PUT.
 
 ### microservizio
 {: #x8379238}
 
 Una serie di componenti di architettura indipendenti, piccoli, ognuno con un singolo scopo, che comunica con un'API leggera e semplificata comune.
 
-### evento cardine
-{: #x2118203}
+### miglioramento continuo
+{: #x8635788}
 
-- Un evento significativo in un progetto o un processo utilizzato per determinare l'avanzamento verso degli obiettivi.
-- Una fase significativa nel processo in cui vengono eseguite una serie di attività o vengono prese delle decisioni.
-
-### app mobile
-{: #x7636517}
-
-Vedi [applicazione mobile](#x4258535).
-
-### applicazione mobile (app mobile)
-{: #x4258535}
-
-Un'applicazione progettata per una piattaforma mobile. Simili
-alle applicazioni web, le applicazioni mobili forniscono delle funzioni che
-vanno oltre la visualizzazione statica di informazioni, ad esempio consentendo all'utente di filtrare notizie quasi in tempo reale. Vedi anche [applicazione](#x4281528).
+La pratica di valutare un prodotto, servizio o processo per delle basi per garantire che sia effettivo e efficiente, e per effettuare modifiche incrementali o tutte contemporaneamente, se necessario.
 
 ### mobile backend as a service (MBaaS)
 {: #x7044858}
 
 Un modello di elaborazione che connette applicazioni mobili ai servizi di elaborazione cloud e fornisce funzioni quali la gestione utente, le notifiche di push e l'integrazione con i social network mediante un SDK e una API unificata.
 
-### cloud mobile
-{: #x4585344}
+### modalità di preproduzione
+{: #x7290124}
 
-Un'infrastruttura in cui l'archiviazione e l'elaborazione dei dati per le applicazioni viene scaricata da un dispositivo mobile nel cloud. Con l'elaborazione cloud mobile, le applicazioni non sono limitate a uno specifico vettore e sono invece accessibili tramite il web.
+Uno stato operativo in cui i tester interni utilizzano tutte le funzioni di raccolta dati per fornire informazioni dettagliate riguardanti la modalità di funzionamento e le prestazioni di un'applicazione. Vedi anche
+[libreria di preproduzione](#x7290106).
+
+### modalità di produzione
+{: #x6070975}
+
+Uno stato operativo in cui i clienti utilizzano una serie limitata di funzioni di raccolta dati per fornire informazioni riguardanti la modalità di funzionamento e le prestazioni di un'applicazione. Vedi anche [libreria di produzione](#x2034919).
 
 ### modello
 {: #x2245601}
@@ -863,13 +937,19 @@ Un'infrastruttura in cui l'archiviazione e l'elaborazione dei dati per le applic
 Una rappresentazione fisica o di business di una struttura dei dati di una o più origini dati. Un modello descrive gli oggetti dati, la struttura e il raggruppamento, nonché le relazioni e la sicurezza. In Cognos Analytics, un modello o un suo sottoinsieme, deve essere pubblicato sul server Cognos come pacchetto, per consentire agli utenti di creare ed eseguire i report.
 
 
+### modello di processo
+{: #x2264460}
+
+Una rappresentazione di un processo di business in tempo reale. Un modello di processo di business è costituito dalle singole fasi o attività che formano il processo; contiene le condizioni da rispettare quando si verificano le fasi o le attività e identifica le risorse richieste per l'esecuzione del processo di business.
+
 ## N
 {: #glossn}
 
-### spazio dei nomi
-{: #x2031005}
+### notifica di push
+{: #x5599582}
 
-Un nome univoco che identifica il repository di immagini della tua organizzazione nel registro Bluemix. Vedi anche [immagine](#x2024928), [repository di immagini privato](#x8439215).
+Un avviso che indica una modifica o un aggiornamento visualizzato
+su un'icona dell'applicazione mobile.
 
 
 ## O
@@ -880,21 +960,19 @@ Un nome univoco che identifica il repository di immagini della tua organizzazion
 
 Un protocollo di autorizzazione basato su HTTP che fornisce alle applicazioni la possibilità di accedere a una risorsa protetta per conto del proprietario della risorsa, creando un'interazione di approvazione tra il proprietario della risorsa, il client e il server di risorse.
 
-### in loco
-{: #x6969434}
-
-Vedi [installato in loco](#x4561212).
-
-### installato in loco (in loco)
-{: #x4561212}
-
-Relativo al software installato ed eseguito sui computer locali di un utente o un'organizzazione.
-
 ### open source
 {: #x2062278}
 
 Relativo al software disponibile pubblicamente per l'uso o la modifica. Il software open source viene in genere sviluppato come collaborazione pubblica e reso disponibile liberamente, anche se il suo utilizzo
 e la sua ridistribuzione potrebbero essere soggetti a limitazioni di licenza. Linux è un noto esempio di software open source.
+
+### opinione dell'utente
+{: #x7290116}
+
+Un punteggio di classificazione dell'utente derivato dalla raccolta
+delle classificazioni delle applicazioni degli utenti dai principali
+application store online (ad esempio, iTunes). La funzione analizza tutte le classificazioni e le recensioni per generare un punteggio cumulativo delle applicazioni mobili che combina la qualità delle applicazioni, la soddisfazione degli utenti e la quantità complessiva di feedback negativi e positivi forniti dagli utenti.
+
 
 ### org
 {: #x7470494}
@@ -908,6 +986,11 @@ La metodologia di raggruppamento per gli utenti in Bluemix. Le org sono utilizza
 gestire le quote. Gli utenti in un'organizzazione condividono le quote di istanze di servizi e memoria. Vedi anche [dominio](#x2021210), [spazio](#x2039442).
 
 
+### origine dati
+{: #x2176124}
+
+L'origine dei dati, ad esempio un database o un file XML e le informazioni di connessione necessarie per l'accesso ai dati.
+
 ## P
 {: #glossp}
 
@@ -916,15 +999,10 @@ gestire le quote. Gli utenti in un'organizzazione condividono le quote di istanz
 
 Vedi [platform as a service](#x2029786).
 
-### gateway parallelo
-{: #x4118340}
+### pacchetto di build
+{: #x7233925}
 
-Un gateway che crea percorsi paralleli senza verificare le condizioni.
-
-### immagine principale
-{: #x8439210}
-
-Un'immagine che fornisce una base per un'altra immagine. Ad esempio, Ubuntu Linux è l'immagine principale dell'immagine IBM Liberty. Vedi anche [immagine di base](#x5366487), [immagine](#x2024928).
+Una raccolta di script che preparano il tuo codice all'esecuzione su Bluemix. I pacchetti di build esaminano le applicazioni distribuite e scaricano e configurano quindi le eventuali applicazioni dipendenti.
 
 ### partecipante
 {: #x2003653}
@@ -946,16 +1024,23 @@ Un servizio di distribuzione e creazione ripetibile che divide la distribuzione 
 
 L'offerta di una piattaforma di elaborazione, comprendente applicazioni, middleware ottimizzato, strumenti di sviluppo e ambienti di runtime Java e Web 2.0, in un ambiente basato sul cloud.
 
-### libreria di preproduzione
-{: #x7290106}
+### portabilità cloud
+{: #x4585297}
 
-Una raccolta di funzioni di test delle applicazioni che raccoglie i dettagli approfonditi sulle questioni e i problemi relativi a un'applicazione. Le funzioni di test identificano il dispositivo e l'utente che sta riscontrando i bug in modo che gli sviluppatori possano ottenere i log e altre informazioni per correggere i problemi. Vedi anche [modalità di preproduzione](#x7290124).
+La capacità di spostare applicazioni e servizi in ambiente di elaborazione cloud pubblici o privati o da diversi provider cloud.
 
-### modalità di preproduzione
-{: #x7290124}
+### preparare
+{: #x2067189}
 
-Uno stato operativo in cui i tester interni utilizzano tutte le funzioni di raccolta dati per fornire informazioni dettagliate riguardanti la modalità di funzionamento e le prestazioni di un'applicazione. Vedi anche
-[libreria di preproduzione](#x7290106).
+- Per contrassegnare una serie di modifiche ai file come pronte per il commit Git.
+- Un gruppo di lavori all'interno di un contesto di esecuzione condiviso che è composto da un input di origine, variabili di ambiente e un ordine di esecuzione definito.
+- Per distribuire un'applicazione, un servizio o un'istanza a un'ubicazione predefinita per l'esecuzione o il test prima della distribuzione a un ambiente di produzione. Vedi anche
+[distribuzione](#x2104544).
+
+### principalmente in lettura
+{: #x7470468}
+
+Relativo ai dati che vengono modificati in modo dinamico.
 
 ### priorità
 {: #x2090430}
@@ -963,88 +1048,30 @@ Uno stato operativo in cui i tester interni utilizzano tutte le funzioni di racc
 Nello sviluppo di software e sistemi, una classificazione assegnata ai requisiti o agli elementi di lavoro
               per determinare l'ordine in cui si interviene su di essi.
 
-### cloud privato
-{: #x4585362}
-
-Un ambiente di elaborazione cloud in cui l'accesso è limitato ai membri delle reti di aziende e partner. Vedi anche [cloud pubblico](#x4585370).
-
-### repository di immagini privato
-{: #x8439215}
-
-La combinazione del registro Bluemix di un'organizzazione e il relativo spazio dei nomi. Il repository di immagini privato viene utilizzato quando si fa riferimento a un'immagine in un comando. Vedi anche [immagine](#x2024928), [spazio dei nomi](#x2031005).
-
-### chiave privata
-{: #x2034701}
-
-Un modello algoritmico utilizzato per crittografare messaggi che possono essere decrittografati
-solo mediante la chiave pubblica corrispondente. Inoltre, la chiave privata viene utilizzata per decrittografare i messaggi crittografati con la chiave pubblica corrispondente. La chiave privata è conservata sul sistema dell'utente e protetta da password.
-
-### servizio privato
-{: #x7690456}
-
-Un servizio visibile solo ai membri di una specifica organizzazione Bluemix.
-
-### blueprint del processo
-{: #x8677871}
-
-Descrizione di un processo di business che include i dettagli sulle attività del processo, come ad esempio le persone che effettuano o conoscono le attività e gli eventi cardine in cui vengono eseguite le attività.
-
-### diagramma del processo
-{: #x2220858}
-
-Diagramma che rappresenta il flusso di lavoro per un processo. Gli oggetti all'interno di un diagramma del processo includono attività, processi, elementi di business, risorse e decisioni.
-
-### modello di processo
-{: #x2264460}
-
-Una rappresentazione di un processo di business in tempo reale. Un modello di processo di business è costituito dalle singole fasi o attività che formano il processo; contiene le condizioni da rispettare quando si verificano le fasi o le attività e identifica le risorse richieste per l'esecuzione del processo di business.
-
-### libreria di produzione
-{: #x2034919}
-
-Un sottoinsieme della libreria di preproduzione delle funzioni di test di applicazioni
-utilizzate dai clienti. I dispositivi mobili dei clienti notificano i problemi in modo anonimo. Queste funzioni raccolgono anche una quantità minore di dettagli nei log, nei dati di sessione e nei report di arresto anomalo. Vedi anche [modalità
-di produzione](#x6070975).
-
-### modalità di produzione
-{: #x6070975}
-
-Uno stato operativo in cui i clienti utilizzano una serie limitata di funzioni di raccolta dati per fornire informazioni riguardanti la modalità di funzionamento e le prestazioni di un'applicazione. Vedi anche [libreria di produzione](#x2034919).
-
 ### progetto
 {: #x2035151}
 
 Una raccolta organizzata utilizzata per raggruppare cartelle o package. I progetti vengono utilizzati per sviluppare, condividere, organizzare e gestire le versioni delle risorse correlate a un singolo impegno lavorativo.
-
-### cloud pubblico
-{: #x4585370}
-
-Un ambiente di elaborazione cloud in cui l'accesso a risorse standardizzate, quali l'infrastruttura, l'hardware a più tenant e i servizi, è disponibile ai sottoscrittori in base a un criterio di pagamento basato sull'utilizzo. Vedi anche [illimitato](#x8439189), [cloud privato](#x4585362).
 
 ### push (eseguire il)
 {: #x2035465}
 
 Inviare le informazioni da un server ad un client. Quando un server esegue il push del contenuto, la transazione viene avviata dal server e non da una richiesta da parte del client.
 
-### notifica di push
-{: #x5599582}
-
-Un avviso che indica una modifica o un aggiornamento visualizzato
-su un'icona dell'applicazione mobile.
-
-
 ## R
 {: #glossr}
 
-### principalmente in lettura
-{: #x7470468}
+### radice attendibile
+{: #x2042234}
 
-Relativo ai dati che vengono modificati in modo dinamico.
+Un certificato firmato da un'autorità di certificazione (CA) attendibile. Vedi anche [autorità di certificazione](#x2016383), [certificato intermedio](#x3753781).
 
-### distribuzione Red-Black
-{: #x8439181}
 
-Una tecnica di distribuzione che determina una fornitura continua abilitando test, sviluppo e distribuzione sincronizzati. Inizialmente, lo sviluppo viene eseguito su un ambiente non attivo (Black) mentre l'ambiente attivo continua a prendere il traffico (Red). Quando viene avviata la distribuzione, entrambi gli ambienti diventano attivi (Red-Red) finché l'instradamento non viene disabilitato sull'ambiente della versione precedente che era attivo prima e quindi rimosso (Black) mentre il nuovo ambiente funge da solo ambiente attivo. Vedi anche [Distribuzione Blue-Green](#x7807335).
+### ramo
+{: #x2050278}
+
+- Un flusso per lo sviluppo isolato o parallelo.
+- Creare un flusso per lo sviluppo parallelo o isolato.
 
 ### regione
 {: #x2091391}
@@ -1057,6 +1084,17 @@ Un territorio geografico definito. Una regione può essere una specifica area id
 Un repository pubblico o privato che contiene immagini utilizzate per creare
 contenitori. Vedi anche [contenitore](#x2010901), [immagine](#x2024928).
 
+### regola
+{: #x2037526}
+
+- Una serie di istruzioni condizionali che abilitano i sistemi di computer a identificare relazioni ed eseguire in modo conforme delle risposte automatizzate.
+- Un criterio che associa un trigger a un'azione, per cui ogni attivazione del trigger comporta la chiamata dell'azione corrispondente con l'evento trigger utilizzato come input.
+
+### regola di decisione
+{: #x8677850}
+
+Una regola costituita da una o più considerazioni decisionali e una conclusione.
+
 ### repo
 {: #x7639721}
 
@@ -1067,27 +1105,26 @@ Vedi [repository](#x2036865).
 
 Un set di dati deliberatamente disposti per comunicare informazioni di business.
 
+### report attivo
+{: #x5074928}
+
+Un tipo di output di report che fornisce un report gestito altamente interattivo e facile da utilizzare che gli utenti possono utilizzare offline. I report attivi sono sviluppati per gli utenti business affinché possano esplorare i dati e ricavarne delle informazioni aggiuntive supplementari.
+
+### repository di immagini privato
+{: #x8439215}
+
+La combinazione del registro Bluemix di un'organizzazione e il relativo spazio dei nomi. Il repository di immagini privato viene utilizzato quando si fa riferimento a un'immagine in un comando. Vedi anche [immagine](#x2024928), [spazio dei nomi](#x2031005).
+
 ### repository (repo)
 {: #x2036865}
 
 Un’area di archiviazione permanente per dati e altre risorse delle applicazioni.
-
-### spazio di lavoro repository
-{: #x3889804}
-
-Un oggetto repository che include uno o più componenti. Gli spazi di lavoro repository sono di norma utilizzati dai singoli membri del team per contenere le loro modifiche in corso. I membri del team forniscono le loro modifiche dal loro spazio di lavoro repository al flusso e accettano le modifiche da altri membri del team nel loro spazio di lavoro repository dal flusso. Ciascun spazio di lavoro repository ha un proprietario e solo il proprietario può effettuare modifiche nello spazio di lavoro. Vedi anche [spazio di lavoro](#x2096037).
 
 ### Representational State Transfer (REST)
 {: #x3220976}
 
 Uno stile di architettura software per sistemi distribuiti ipermediali come il World Wide Web. Il termine viene spesso utilizzato anche per descrivere qualsiasi interfaccia semplice
 che utilizzi XML (o YAML, JSON, testo semplice) su HTTP senza un ulteriore livello di messaggistica, come SOAP.
-
-### risorsa
-{: #x2004267}
-
-Un componente fisico o logico di cui può essere eseguito il provisioning,
-o che può essere riservato, per un'istanza di servizio o applicazione.  Esempi di risorse includono database, account e processore, memoria e i limiti di archiviazione.
 
 ### REST
 {: #x3220987}
@@ -1099,6 +1136,28 @@ Vedi [Representational State Transfer](#x3220976).
 
 Nello sviluppo snello, una riunione o un elemento di lavoro che valuta i successi e i miglioramenti necessari dopo uno sprint.
 
+### richiama
+{: #x2057232}
+
+Consente di attivare un'azione. Vedi anche [azione](#x2012974).
+
+### richiesta firma certificato (CSR)
+{: #x3530521}
+
+Un messaggio elettronico inviato da un'organizzazione a un'autorità di certificazione (CA) per ottenere un certificato. La richiesta include una chiave pubblica ed è firmata con una chiave privata; la CA restituisce un certificato dopo averlo firmato con la propria chiave privata.
+
+### risorsa
+{: #x2004267}
+
+Un componente fisico o logico di cui può essere eseguito il provisioning,
+o che può essere riservato, per un'istanza di servizio o applicazione.  Esempi di risorse includono database, account e processore, memoria e i limiti di archiviazione.
+
+### risorsa utente
+{: #x2262995}
+
+Un'entità utilizzata o prodotta da un processo di sviluppo software o di sistema. Esempi di risorse utente includono progettazioni, requisiti, file di origine, piani, script,
+simulazioni, modelli, piani di test e file eseguibili binari. In un contesto HTTP, le risorse utente dispongono di un URI e sono chiamate risorse. Vedi anche [componente](#x2017871).
+
 ### rotta
 {: #x2037338}
 
@@ -1108,12 +1167,6 @@ specificati quando si distribuisce un'applicazione. Ad esempio, nell'instradamen
 myapp è l'host ed example.com è il dominio. Una
 rotta può essere associata a una o più applicazioni. A meno che non venga specificato un dominio personalizzato,
 nell'instradamento alla tua applicazione, Bluemix utilizza un dominio condiviso predefinito. Vedi anche [dominio personalizzato](#x5728384), [dominio](#x2021210), [host](#x2002243), [dominio secondario](#x2040080), [Uniform Resource Locator](#x2042491).
-
-### regola
-{: #x2037526}
-
-- Una serie di istruzioni condizionali che abilitano i sistemi di computer a identificare relazioni ed eseguire in modo conforme delle risposte automatizzate.
-- Un criterio che associa un trigger a un'azione, per cui ogni attivazione del trigger comporta la chiamata dell'azione corrispondente con l'evento trigger utilizzato come input.
 
 ### RuleApp
 {: #x4106478}
@@ -1133,13 +1186,6 @@ applicazioni di regole di business.
 Un modulo che si integra nell'ambiente Java EE e, come tale, offre i servizi standard di
 un'applicazione per l'esecuzione, il controllo e il monitoraggio delle serie di regole contenute nelle RuleApp.
 
-### serie di regole
-{: #x3721562}
-
-Un programma per i processi decisionali che può essere elaborato da un motore
-di regole per produrre una decisione, in base ai parametri di input e di output. La logica
-decisionale viene implementata sotto forma di regole, tabelle decisionali e flussi di regole. Vedi anche [tabella decisionale](#x2876495).
-
 ### runbook
 {: #x2830619}
 
@@ -1150,12 +1196,6 @@ Una compilazione di procedure e operazioni che un operatore o amministratore di 
 
 La serie di risorse utilizzate per eseguire l'applicazione. Vedi anche [starter](#x7470511).
 
-### ambiente di runtime
-{: #x2037566}
-
-Una serie di risorse utilizzate per eseguire un programma o un processo.
-
-
 ## S
 {: #glosss}
 
@@ -1164,20 +1204,15 @@ Una serie di risorse utilizzate per eseguire un programma o un processo.
 
 Vedi [software as a service](#x4585386).
 
-### ingrandire
-{: #x2004442}
+### scala temporale
+{: #x2312511}
 
-Aumentare la capacità della piattaforma (o del sistema) aggiungendo un maggior numero di istanze di applicazioni o servizi.
+Un'area di attività in un progetto che, di norma, ha una pianificazione, dei risultati finali, dei team e un processo propri.
 
 ### SCM
 {: #x2116206}
 
 Vedi [gestione controllo origine (SCM, source control management)](#x3579285).
-
-### ambito
-{: #x2037763}
-
-Nella gestione delle identità, la serie di entità che possono essere influenzate da una politica o da un ACI (access control item).
 
 ### Scrum
 {: #x7474016}
@@ -1195,12 +1230,48 @@ Una riunione giornaliera e informale tra le parti interessate in un progetto di 
 Un protocollo di sicurezza che fornisce la privacy delle comunicazioni. Con SSL,
 le applicazioni client/server possono comunicare in un modo progettato per evitare intrusioni, manomissioni e contraffazioni dei messaggi. Vedi anche [autorità di certificazione](#x2016383).
 
+### serie di modifiche
+{: #x2255031}
+
+Un gruppo di modifiche correlate alle risorse utente in uno spazio di lavoro o in un flusso.
+
+### serie di regole
+{: #x3721562}
+
+Un programma per i processi decisionali che può essere elaborato da un motore
+di regole per produrre una decisione, in base ai parametri di input e di output. La logica
+decisionale viene implementata sotto forma di regole, tabelle decisionali e flussi di regole. Vedi anche [tabella decisionale](#x2876495).
+
+### server virtuale
+{: #x2455638}
+
+Un server che condivide le proprie risorse con altri server per supportare applicazioni. Vedi anche [macchina virtuale](#x2043165).
+
 ### servizio
 {: #x2038343}
 
 Un'estensione cloud che fornisce una funzionalità pronta per l'uso, come ad esempio
 software web, di messaggistica e database per l'esecuzione di codice o funzionalità di monitoraggio o gestione delle applicazioni. I servizi di norma non richiedono installazione o manutenzione
 e possono essere combinati per creare delle applicazioni.
+
+### servizio beta
+{: #x7470455}
+
+Un servizio che non è pronto per la produzione ed è a una
+fase di sviluppo di prova. Vedi anche [servizio
+sperimentale](#x7470450).
+
+### servizio privato
+{: #x7690456}
+
+Un servizio visibile solo ai membri di una specifica organizzazione Bluemix.
+
+### servizio sperimentale
+{: #x7470450}
+
+Un servizio che non è pronto per la produzione e che può essere rimosso dalla produzione in qualsiasi momento. Vedi anche [servizio
+beta](#x7470455).
+
 
 ### sessione
 {: #x2004539}
@@ -1212,11 +1283,6 @@ Il periodo di tempo successivo all'avvio di un'applicazione su un dispositivo mo
 
 Nello sviluppo di software e sistemi, una misurazione dell'importanza relativa a un'unità di
               lavoro, ad esempio, critica, alta, media o bassa.
-
-### agitare
-{: #x5905152}
-
-Provocare un movimento che faccia sì che l'accelerometro di un dispositivo rilevi tale movimento e avvii un evento. Ad esempio, i tester e clienti possono avviare un report di errore relativo a un'applicazione agitando il proprio dispositivo.
 
 ### single sign-on (SSO)
 {: #x2213318}
@@ -1233,18 +1299,30 @@ Un modello di distribuzione software per mezzo del quale il software, compresi p
 
 Vedi [system of record](#x6735061).
 
-### gestione controllo origine (SCM, source control management)
-{: #x3579285}
-
-Un aspetto della gestione della configurazione software che
-coinvolge la gestione delle modifiche alle raccolte di file.
-
 ### spazio
 {: #x2039442}
 
 - Un sottogruppo all'interno di un'organizzazione Bluemix. Agli utenti membri di un'organizzazione viene dato accesso a uno o più dei suoi spazi, con le autorizzazioni associate a uno specifico ruolo (come sviluppatore, responsabile o revisore). Qualsiasi membro dello spazio può visualizzare le applicazioni ma solo i membri con il ruolo di sviluppatore possono creare applicazioni e aggiungere istanze di servizio allo spazio. Le applicazioni e le istanze di servizio sono associate agli spazi. Vedere anche [organizzazione](#x2032585).
 - Un'unità organizzativa che contiene applicazioni e servizi nell'infrastruttura Cloud Foundry e può essere utilizzata per memorizzare e tenere traccia delle risorse di applicazione.
 - Un'area con controllo dell'accesso all'interno di un account in cui è possibile creare e organizzare le risorse Blueworks Live.
+
+### spazio dei nomi
+{: #x2031005}
+
+Un nome univoco che identifica il repository di immagini della tua organizzazione nel registro Bluemix. Vedi anche [immagine](#x2024928), [repository di immagini privato](#x8439215).
+
+
+### spazio di lavoro
+{: #x2096037}
+
+- In Eclipse, raccolta di progetti e altre risorse che l'utente sta attualmente sviluppando nel workbench. I metadati relativi a queste risorse si trovano in una directory
+nel file system; le risorse possono trovarsi nella stessa directory. Vedi anche [spazio di lavoro repository](#x3889804).
+- Un contesto che contiene una raccolta di risorse utente che possono essere modificate da un utente con autorizzazioni appropriate.
+
+### spazio di lavoro repository
+{: #x3889804}
+
+Un oggetto repository che include uno o più componenti. Gli spazi di lavoro repository sono di norma utilizzati dai singoli membri del team per contenere le loro modifiche in corso. I membri del team forniscono le loro modifiche dal loro spazio di lavoro repository al flusso e accettano le modifiche da altri membri del team nel loro spazio di lavoro repository dal flusso. Ciascun spazio di lavoro repository ha un proprietario e solo il proprietario può effettuare modifiche nello spazio di lavoro. Vedi anche [spazio di lavoro](#x2096037).
 
 ### sprint
 {: #x6248609}
@@ -1260,14 +1338,6 @@ Vedi [Secure Sockets Layer](#x2038004).
 {: #x3456450}
 
 Vedi [single sign-on](#x2213318).
-
-### preparare
-{: #x2067189}
-
-- Per contrassegnare una serie di modifiche ai file come pronte per il commit Git.
-- Un gruppo di lavori all'interno di un contesto di esecuzione condiviso che è composto da un input di origine, variabili di ambiente e un ordine di esecuzione definito.
-- Per distribuire un'applicazione, un servizio o un'istanza a un'ubicazione predefinita per l'esecuzione o il test prima della distribuzione a un ambiente di produzione. Vedi anche
-[distribuzione](#x2104544).
 
 ### stanza
 {: #x2094743}
@@ -1287,30 +1357,15 @@ specifico linguaggio di programmazione oppure una combinazione di codice applica
 
 Un elemento di lavoro di sviluppo che definisce parte di un caso d'uso o un contributo specifico al valore del prodotto complessivo.
 
-### decisione secondaria
-{: #x7777680}
+### sviluppo software snello
+{: #x2907651}
 
-Una decisione che descrive in che modo deve essere valutato un aspetto della decisione principale. La decisione principale dipende dalle decisioni secondarie. Ciascuna decisione secondaria può avere una descrizione e proprietà proprie.
-
-### dominio secondario
-{: #x2040080}
-
-Un dominio che rappresenta una parte di un dominio più ampio. Vedi anche [dominio personalizzato](#x5728384), [dominio](#x2021210), [host](#x2002243), [rotta](#x2037338), [Uniform Resource Locator](#x2042491).
-
-### corsia
-{: #x2263662}
-
-Una riga visivamente separata all'interno di un diagramma del flusso di processo che raggruppa tutte le attività del processo eseguite da una particolare combinazione di ruoli, risorse, unità organizzative o posizioni.
+Una metodologia di sviluppo software che si concentra sulla collaborazione e sulla qualità per produrre degli incrementi di prodotto completi a intervalli regolari, denominati iterazioni o sprint.
 
 ### symbolication
 {: #x7290136}
 
 Il processo con il quale i simboli esclusi durante la compilazione dell'applicazione vengono inseriti nelle tracce di stack per rendere le tracce leggibili per i tester e gli sviluppatori.
-
-### controllo della sintassi
-{: #x7344042}
-
-Una funzione che analizza il codice e prova a interpretarlo prima della compilazione per rilevare errori di sintassi che potrebbero causare una compilazione non corretta delle applicazioni e che informa quindi l'utente.
 
 ### system of engagement
 {: #x6528306}
@@ -1329,15 +1384,15 @@ anche [system of engagement](#x6528306).
 ## T
 {: #glosst}
 
+### tabella decisionale
+{: #x2876495}
+
+Una forma di regola di business che cattura la logica di business del processo decisionale a più condizioni in una tabella in cui le righe e le colonne si intersecano per determinare l'azione appropriata. Vedi anche [serie di regole](#x3721562).
+
 ### TAI
 {: #x2218705}
 
 Vedi [trust association interceptor](#x2239009).
-
-### attività
-{: #x2007852}
-
-Nello sviluppo snello, un elemento di lavoro che definisce un lavoro ben specifico.
 
 ### template
 {: #x2041200}
@@ -1354,21 +1409,15 @@ Relativo a un prodotto o a un servizio fornito da una società che non sia IBM.
 
 Una rappresentazione visiva di un'applicazione in esecuzione che fornisce lo stato su un dashboard.
 
-### scala temporale
-{: #x2312511}
+### token di accesso
+{: #x2113001}
 
-Un'area di attività in un progetto che, di norma, ha una pianificazione, dei risultati finali, dei team e un processo propri.
+Un valore di cui si serve l'utilizzatore per ottenere l'accesso alle risorse protette per conto dell'utente, invece di utilizzare le credenziali del provider di servizi dell'utente.
 
 ### toolchain
 {: #x2956335}
 
 Una raccolta di programmi o strumenti utilizzati per sviluppare un prodotto.
-
-### elemento di build di traccia
-{: #x7494456}
-
-Un elemento di lavoro di sviluppo che tiene traccia delle correzioni
-richieste dopo una build non riuscita.
 
 ### trigger
 {: #x2005384}
@@ -1381,12 +1430,6 @@ Un meccanismo che avvia le azioni. I trigger possono essere attivati esplicitame
 Il meccanismo con cui viene convalidata l'attendibilità nell'ambiente del prodotto per ogni
               richiesta ricevuta dal server proxy. Il metodo di convalida viene concordato dal
               server proxy e dall'intercettore.
-
-### radice attendibile
-{: #x2042234}
-
-Un certificato firmato da un'autorità di certificazione (CA) attendibile. Vedi anche [autorità di certificazione](#x2016383), [certificato intermedio](#x3753781).
-
 
 ## U
 {: #glossu}
@@ -1404,6 +1447,12 @@ Resource Locator). Generalmente, un URI descrive come accedere a una risorsa, il
 L'indirizzo univoco di una risorsa informativa, accessibile in una rete quale ad esempio Internet. L'URL include il nome abbreviato del protocollo utilizzato
 per accedere alla risorsa di informazioni e le informazioni utilizzate dal protocollo per individuare la risorsa di informazioni. Vedi anche [dominio personalizzato](#x5728384), [dominio](#x2021210), [host](#x2002243), [rotta](#x2037338), [dominio secondario](#x2040080).
 
+### unire
+{: #x2030107}
+
+- Il commit conseguente al portare del contenuto da un altro ramo nel ramo corrente.
+- Recuperare del contenuto da un ramo e applicarlo a un altro ramo.
+
 ### URI
 {: #x2116461}
 
@@ -1414,14 +1463,6 @@ Vedi [Uniform Resource Identifier](#x2116436).
 
 Vedi [Uniform Resource Locator](#x2042491).
 
-### opinione dell'utente
-{: #x7290116}
-
-Un punteggio di classificazione dell'utente derivato dalla raccolta
-delle classificazioni delle applicazioni degli utenti dai principali
-application store online (ad esempio, iTunes). La funzione analizza tutte le classificazioni e le recensioni per generare un punteggio cumulativo delle applicazioni mobili che combina la qualità delle applicazioni, la soddisfazione degli utenti e la quantità complessiva di feedback negativi e positivi forniti dagli utenti.
-
-
 ## V
 {: #glossv}
 
@@ -1430,22 +1471,12 @@ application store online (ad esempio, iTunes). La funzione analizza tutte le cla
 
 Relativo all'esistenza non fisica in sé, bensì simulata da software.
 
-### macchina virtuale (VM)
-{: #x2043165}
-
-Un'implementazione software di una macchina che esegue programmi come una macchina reale. Vedi anche [server virtuale](#x2455638).
-
 ### virtual private network (VPN)
 {: #x2043188}
 
 Un'estensione di una intranet aziendale nel framework esistente
 di una rete pubblica o privata. Una VPN garantisce che i dati inviati tra
 due endpoint della connessione restino protetti.
-
-### server virtuale
-{: #x2455638}
-
-Un server che condivide le proprie risorse con altri server per supportare applicazioni. Vedi anche [macchina virtuale](#x2043165).
 
 ### VM
 {: #x2043253}
@@ -1466,28 +1497,6 @@ Vedi [virtual private network](#x2043188).
 
 Vedi [archivio web](#x2116506).
 
-### file WAR
-{: #x2406005}
-
-Vedi [archivio web](#x2116506).
-
-
-### app web
-{: #x7636628}
-
-Vedi [applicazione web](#x2116500).
-
-### applicazione web (app web)
-{: #x2116500}
-
-Un'applicazione accessibile mediante un browser web che fornisce alcune funzioni oltre alla visualizzazione statica delle informazioni, ad esempio consentendo all'utente di eseguire la query di un database. I componenti comuni di un'applicazione web
-includono pagine HTML, pagine JSP e servlet. Vedi anche [applicazione](#x4281528).
-
-### archivio web (WAR)
-{: #x2116506}
-
-Un formato file compresso, definito dallo standard Java EE, per la memorizzazione di tutte le risorse richieste per l'installazione e l'esecuzione di un'applicazione web in un unico file.
-
 ### webhook
 {: #x8558303}
 
@@ -1498,15 +1507,12 @@ Un callback personalizzato HTTP che avvisa sul funzionamento di una pagina o app
 
 In Servizi IBM DevOps, un IDE basato sul browser per lo sviluppo web e cloud basato sulla piattaforma open source Orion da Eclipse.
 
-### elemento di lavoro
-{: #x2173032}
+## Z
+{: #glossz}
 
-Una risorsa utente che rappresenta una nozione generalizzata di un'attività di sviluppo, quale un'attività, un report di difetto o una richiesta di miglioramento.
+### zona di disponibilità
+{: #x7018171}
 
-### spazio di lavoro
-{: #x2096037}
+Una posizione all'interno di una regione in cui è in esecuzione IBM Containers.
 
-- In Eclipse, raccolta di progetti e altre risorse che l'utente sta attualmente sviluppando nel workbench. I metadati relativi a queste risorse si trovano in una directory
-nel file system; le risorse possono trovarsi nella stessa directory. Vedi anche [spazio di lavoro repository](#x3889804).
-- Un contesto che contiene una raccolta di risorse utente che possono essere modificate da un utente con autorizzazioni appropriate.
 

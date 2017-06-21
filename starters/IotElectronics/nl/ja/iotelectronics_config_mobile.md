@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-07"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -51,7 +51,7 @@ iOS または Android のモバイル・デバイス用のモバイル・アプ�
 
   ![接続 QR コード。](images/iot4e_mobile_connect_QR.svg "{{site.data.keyword.iotelectronics}} 接続 QR コード")
 
-5. モバイル・デバイスで、ログイン資格情報を入力します。ユーザー ID とパスワードの長さに制限はありません。後のセッションのために、ログイン資格情報を忘れないようにしてください。これで、モバイル・デバイスが {{site.data.keyword.iotelectronics}} 環境に登録され、各電気製品を登録できます。
+5. モバイル・デバイスで、オプションで、Facebook または Google+ の資格情報を使用して、ログインします。ログイン・プロセスをスキップして、ログインなしでアプリを試用することもできます。
 
 6. コンピューター上で、シミュレート洗濯機までスクロールし、それをクリックしてそのデータと電気製品 QR コードを表示します。
 

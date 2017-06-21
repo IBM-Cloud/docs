@@ -3,7 +3,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-20"
+lastupdated: "2017-05-22"
 
 ---
 
@@ -72,15 +72,22 @@ You can deploy your apps to different {{site.data.keyword.Bluemix_notm}} regions
 
 Figure 2. Multi-region application deployment
 
-
 ## Regions
 {: #ov_intro_reg}
 
-A {{site.data.keyword.Bluemix_notm}} region is a defined geographical territory that you can deploy your apps to. You can create apps and service instances in different regions with the same {{site.data.keyword.Bluemix_notm}} infrastructure for application management and the same usage details view for billing. You can select the region that is nearest to your customers and deploy your apps to this region to get low application latency. You can also select the region where you want to keep the application data to address security issues. When you build apps in multiple regions, if one region becomes unavailable, the apps that are in the other regions continue to run. Your resource allowance is the same for each region that you use.
+A {{site.data.keyword.Bluemix_notm}} region is a defined geographical territory that you can deploy your apps to. You can create apps and service instances in different regions with the same {{site.data.keyword.Bluemix_notm}} infrastructure for application management and the same usage details view for billing. You can deploy your apps to the region that is nearest to your customers to get low application latency. To address security issues, you can also select the region where you want to keep the application data. When you build apps in multiple regions, if one region becomes unavailable, the apps that are in the other regions continue to run. Your resource allowance is the same for each region that you use.
 
-If you use the {{site.data.keyword.Bluemix_notm}} user interface, you can switch to a different region to work with the spaces in that region. Click the user account preferences link, expand the **Region** selector, then select the region you require from the list.
+If you use the {{site.data.keyword.Bluemix_notm}} console, you are automatically shown the information for the nearest healthy geographical region. Global load balancing for the console ensures that if for some reason the nearest geographical region for you is down, your console will display the information for the next closest region. This way, you always have access to the console without having to take any action to access the information you need.
 
-If you use the cf command line interface, to connect to the {{site.data.keyword.Bluemix_notm}} region that you want to work with, use the cf api command and specify the API endpoint of the region. For example, enter the following command to connect to {{site.data.keyword.Bluemix_notm}} Europe United Kingdom region:
+Use the region selector in the console to filter your view. For example, if you are accessing your apps and services in your Dallas, US region, but you want to view your apps and services for the London region, you can use the region selector to change your view:
+
+1. Click the user account preferences link.
+2. Expand the **Region** menu.
+3. Select the region you require from the list.
+
+Filtering your view per region also enables you to quickly switch views to work with orgs, spaces, and users assigned to the different regions.
+
+If you use the cf command line interface to connect to the {{site.data.keyword.Bluemix_notm}} region that you want to work with, use the cf api command and specify the API endpoint of the region. For example, enter the following command to connect to {{site.data.keyword.Bluemix_notm}} Europe United Kingdom region:
 
 ```
 cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
@@ -88,17 +95,13 @@ cf api https://api.eu-gb.{{site.data.keyword.Bluemix_notm}}.net
 
 A unique prefix is assigned to each region. {{site.data.keyword.Bluemix_notm}} provides the following regions and region prefixes.
 
-<!-- PRODUCTION ONLY: Ensure that URLs are production URLs, not stage1-->
-
-| **Region name** | **Geographic location** | **Region prefix** | **cf API endpoint** | **UI console** |
-|-----------------|-------------------------|-------------------|---------------------|----------------|
-| US South region | Dallas, US | ng | api.ng.bluemix.net | console.ng.bluemix.net |
-| United Kingdom region | London, England | eu-gb | api.eu-gb.bluemix.net | console.eu-gb.bluemix.net |
-| Sydney region | Sydney, Australia | au-syd | api.au-syd.bluemix.net | console.au-syd.bluemix.net |
-| Germany region | Frankfurt, Germany | eu-de | api.eu-de.bluemix.net | console.eu-de.bluemix.net |
+| **Region name** | **Geographic location** | **cf API endpoint** |
+|-----------------|-------------------------|-------------------|
+| US South region | Dallas, US | api.ng.bluemix.net | 
+| United Kingdom region | London, England | api.eu-gb.bluemix.net | 
+| Sydney region | Sydney, Australia | api.au-syd.bluemix.net | 
+| Germany region | Frankfurt, Germany | api.eu-de.bluemix.net | 
 {: caption="Table 1. {{site.data.keyword.Bluemix_notm}} region list" caption-side="top"}
-
-
 
 ## {{site.data.keyword.Bluemix_notm}} resilience
 {: #resiliency}

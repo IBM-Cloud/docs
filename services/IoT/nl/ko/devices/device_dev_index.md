@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-03"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2017-03-14"
 디바이스를 포함하여 핵심 개념에 대한 자세한 정보는 [Watson IoT Platform 정보](https://console.ng.bluemix.net/docs/services/IoT/iotplatform_overview.html#watsoniotplatform_importantconcepts)를 참조하십시오. 
 
 
-# {{site.data.keyword.iot_short_notm}}에 디바이스 연결
+## {{site.data.keyword.iot_short_notm}}에 디바이스 연결
 {: #device_connect}
 HTTP 또는 MQTT 프로토콜을 사용하여 {{site.data.keyword.iot_short_notm}}에 디바이스를 연결할 수 있습니다. 요청-응답 시나리오를 구성하려면 HTTP를 사용하십시오(예: 누군가 구매를 실행하고 수신확인을 받는 경우). 이벤트 시나리오를 구성하려면 MQTT를 사용하십시오(예: 누군가 초인종을 누르면 모바일 디바이스에서 경보가 트리거되도록 하는 경우). 
 
@@ -34,7 +34,7 @@ HTTP 또는 MQTT 프로토콜을 사용하여 {{site.data.keyword.iot_short_notm
 HTTP 프로토콜을 사용하여 {{site.data.keyword.iot_short_notm}}에 디바이스 연결에 대한 자세한 정보는 [디바이스용 HTTP REST API](https://console.ng.bluemix.net/docs/services/IoT/devices/api.html)를 참조하십시오.
 MQTT 프로토콜을 사용하여 {{site.data.keyword.iot_short_notm}}에 디바이스 연결에 대한 자세한 정보는 [디바이스용 MQTT 연결](https://console.ng.bluemix.net/docs/services/IoT/devices/mqtt.html)을 참조하십시오. 
 
-# 디바이스 개발 시작하기
+## 디바이스 개발 시작하기
 {: #get_started}
 {{site.data.keyword.iot_short_notm}}에 이미 사용되는 디바이스가 있으면 간단하게 이를 사용하여 시작할 수 있습니다. 
 

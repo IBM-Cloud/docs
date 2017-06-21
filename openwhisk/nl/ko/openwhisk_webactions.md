@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-04"
+lastupdated: "2017-04-21"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -47,11 +46,11 @@ wsk action create /guest/demo/hello hello.js --web true
 
 *조치의 완전한 이름에는 해당 패키지 이름이 포함되어야 하며, 조치가 이름 지정된 패키지에 없는 경우 패키지 이름은 `default`입니다.*
 
-예는 `guest/demo/hello`입니다. 다른 값은 나중에 설명된 대로 허용되지만 URI의 마지막 파트는 일반적으로 `.http`인 `확장자`를 호출했습니다. 웹 조치 API 경로는 API 키 없이 `curl` 또는 `wget`과 함께 사용될 수 있습니다. 이 경로는 브라우저에 직접 입력할 수도 있습니다.
+예는 `guest/demo/hello`입니다. 웹 조치 API 경로는 API 키 없이 `curl` 또는 `wget`과 함께 사용될 수 있습니다. 이 경로는 브라우저에 직접 입력할 수도 있습니다.
 
-웹 브라우저에서 [https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane](https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane) 열기를 시도하십시오. 또는 `curl`을 통해 조치 호출을 시도하십시오.
+웹 브라우저에서 [https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane](https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane) 열기를 시도하십시오. 또는 `curl`을 통해 조치 호출을 시도하십시오.
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello.http?name=Jane
+curl https://openwhisk.ng.bluemix.net/api/v1/web/guest/demo/hello?name=Jane
 ```
 {: pre}
 

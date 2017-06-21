@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-06"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -50,5 +50,7 @@ El iniciador de {{site.data.keyword.iotelectronics}} utiliza el servicio de {{si
 **{{site.data.keyword.iot_full}}** permite que sus apps se comuniquen y utilicen datos recopilados por dispositivos conectados, sensores y pasarelas.
 
 **{{site.data.keyword.sdk4nodefull}}** le permite desarrollar, desplegar y escalar apps de JavaScript&reg; del lado del servidor y proporciona una mejora en el rendimiento, la seguridad y la capacidad de servicio.
+
+**{{site.data.keyword.appid_full}}** añade autenticación a sus apps web y móviles y protege sus sistemas de fondo.
 
 **App para móvil de ejemplo** le permite ver el estado de un dispositivo simulado utilizando un dispositivo móvil, como por ejemplo, un smartphone o una tablet. Descubra cómo obtener la app para móvil en [Utilización de la app para móvil](iotelectronics_config_mobile.html).

@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
+lastupdated: "2017-04-24"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock:.codeblock}
 {:screen:.screen}
 {:pre: .pre}
@@ -288,7 +287,7 @@ Node.js 6.9.1 環境では、以下のパッケージを使用できます。
 - underscore v1.8.3
 - uuid v3.0.0
 - validator v6.1.0
-- watson-developer-cloud v2.9.0
+- watson-developer-cloud v2.29.0
 - when v3.7.7
 - winston v2.3.0
 - ws v1.1.1
@@ -402,80 +401,14 @@ Docker アクションは、Docker コンテナーでユーザー提供バイナ
 
 Docker スケルトンは、OpenWhisk 互換の Docker イメージをビルドするための便利な方法です。`wsk sdk install docker` CLI コマンドでスケルトンをインストールできます。
 
-メイン・バイナリー・プログラムはコンテナー内部の `/action/exec` に置かれる必要があります。実行可能バイナリーは入力引数を `stdin` を介して受け取り、結果を `stdout` を介して返さなければなりません。
+メイン・バイナリー・プログラムはコンテナー内部の `/action/exec` に置かれる必要があります。実行可能バイナリーは、`JSON` オブジェクトとしてデシリアライズ可能な単一コマンド・ライン引数ストリングを介して、入力引数を受け取ります。また、シリアライズされた `JSON` の単一行ストリングとして、`stdout` を介して結果を返す必要があります。
 
 `dockerSkeleton` 内に含まれている `Dockerfile` を変更して、コンパイル・ステップや依存関係を組み込むこともできます。
 
 ## REST API
 {: #openwhisk_ref_restapi}
+REST API に関する情報は、[ここ](openwhisk_rest_api.html)を参照してください。
 
-システム上のすべての機能は、REST API を通じて使用可能です。アクション、トリガー、ルール
-、パッケージ、アクティベーション、および名前空間のコレクション・エン
-ドポイントとエンティティー・エンドポイントがあります。
-
-以下のコレクション・エンドポイントがあります。
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
-
-`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span> は、OpenWhisk API ホスト名 (例えば、openwhisk.ng.bluemix.net、172.17.0.1 など) です。
-
-`{namespace}` には、文字 `_` を使用して、ユーザーの *default namespace* (すなわち、E メール・アドレス) を指定できます。
-
-コレクション・エンドポイントで GET 要求を実行して、コレクションのエンティティーのリストをフェッチします。
-
-エンティティーのタイプごとに以下のエンティティー・エンドポイン
-トがあります。
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
-
-
-名前空間とアクティベーション・エンドポイントのみが GET 要求をサポートします。アクション、トリガー、ルール、およびパッケージのエンドポイントは、GET、PUT、および DELETE 要求をサポートします。アクション、トリガー、およびルールのエンドポイントも POST 要求をサポートします。これは、アクションとトリガーを起動し、ルールを使用可能または使用不可にするために使用されます。詳しくは、
-[
-『API 資料』](https://new-console.{DomainName}/apidocs/98)を参照してください。
-
-すべての API は、HTTP 基本認証で保護さ
-れています。基本認証の資格情報は `~/.wskprops` ファイルの `AUTH` プロパティーにあり、コロンで区切られています。この資格情報は、[CLI 構成手順](./index.html#openwhisk_start_configure_cli)でも
-取り出すことができます。
-
-以下は、cURL コマンドを使用して `whisk.system` 名前空間のすべてのパッケージのリストを取得する例を示しています。
-
-```
-curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
-```
-{: pre}
-```
-[
-  {
-    "name": "slack",
-    "binding": false,
-    "publish": true,
-    "annotations": [
-      {
-        "key": "description",
-        "value": "Package that contains actions to interact with the Slack messaging service"
-      }
-    ],
-    "version": "0.0.9",
-    "namespace": "whisk.system"
-  },
-  ...
-]
-```
-{: screen}
-
-OpenWhisk API は、Web クライアントからの要求/応答呼び出しをサポートします。OpenWhisk は、Cross-Origin Resource Sharing ヘッダーを使用して `OPTIONS` 要求に応答します。現在は、すべてのオリジンが許可され (すなわち、Access-Control-Allow-Origin は「`*`」)、Access-Control-Allow-Headers に許可とコンテンツ・タイプが示されます。
-
-**注意:** OpenWhisk は現在、アカウント当たり 1 つのキーしかサポートしないので、簡単な実験の範囲を超えて CORS を使用することはお勧めできません。ご使用のキーはクライアント・サイドのコードに埋め込む必要があり、公衆に表示されることになります。注意して使用してください。
 
 ## システムしきい値
 {: #openwhisk_syslimits}

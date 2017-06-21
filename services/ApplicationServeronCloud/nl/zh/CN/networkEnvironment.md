@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016
-lastupdated: "2016-10-28"
+lastupdated: "2017-02-24"
 
 ---
 
@@ -13,23 +13,23 @@ lastupdated: "2016-10-28"
 # 网络环境
 {: #networkEnvironment}
 
-供应 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 服务实例之后，您可以采取几种方式访问 VM。您可以通过安全 VPN 进行连接，以获取 SSH、传统 WebSphere 管理控制台以及应用程序对 VM 的访问权。您还可以使用公共 IP 地址将 VM 连接到互联网。
+供应 WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} 服务实例之后，您可以采取几种方式访问 VM。您可以通过安全 VPN 进行连接，以获取 SSH、传统 WebSphere 管理控制台以及应用程序对 VM 的访问权。您还可以使用公共 IP 地址将 VM 连接到互联网。
 
 下图显示这些网络路径：
 
-图 1. 使用公共 IP 的多租户网络连接的客户机视图
+图 1. 使用公共 IP 的多租户联网的客户机视图
 
-![图 1. 使用公共 IP 的多租户网络连接的客户机视图](images/wasaas_multi_tenantPublicIP.gif)
+![图 1. 使用公共 IP 的多租户联网的客户机视图](images/wasaas_multi_tenantPublicIP.gif)
 
 ## VPN 访问
 {: #vpnAccess}
 
-从 {{site.data.keyword.Bluemix_notm}} UI 的服务仪表板供应 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 服务实例之后，您可以下载 VPN 凭证并建立 OpenVPN 连接。然后，您可以通过 SSH 访问 VM。您还可以访问 Liberty 管理中心、传统 WebSphere 管理控制台和应用程序。
+从 {{site.data.keyword.Bluemix_notm}} UI 的服务仪表板供应 WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} 服务实例之后，您可以下载 VPN 凭证并建立 OpenVPN 连接。然后，您可以通过 SSH 访问 VM。您还可以访问 Liberty 管理中心、传统 WebSphere 管理控制台和应用程序。
 
 ## 公共互联网访问
 {: #publicInternetAccess}
 
-您可以选择为 WebSphere 服务器 VM 请求公共 IP 地址，方法是在 {{site.data.keyword.Bluemix_notm}} UI 的服务仪表板上单击**管理公共 IP**，并请求公共 IP 地址。此过程为此服务器保留 IP 地址。然后，单击**公开 IP** 以从互联网打开到您的 WebSphere Application Server for {{site.data.keyword.Bluemix_notm}} 服务实例的连接。
+您可以选择为 WebSphere 服务器 VM 请求公共 IP 地址，方法是在 {{site.data.keyword.Bluemix_notm}} UI 的服务仪表板上单击**管理公共 IP**，并请求公共 IP 地址。此过程为此服务器保留 IP 地址。然后，单击**公开 IP** 以打开从互联网到您的 WebSphere Application Server in {{site.data.keyword.Bluemix_notm}} 服务实例的连接。
 
 ## 公共 IP 端口
 {: #publicIPports}

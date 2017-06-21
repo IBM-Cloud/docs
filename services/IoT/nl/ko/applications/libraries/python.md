@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -375,7 +375,7 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-요청과 응답 모델 및 HTTP 상태 코드에 대한 정보는 [{{site.data.keyword.iot_short_notm}} API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}의 조직 구성 섹션을 참조하십시오. 
+요청과 응답 모델 및 HTTP 상태 코드에 대한 정보는 [{{site.data.keyword.iot_short_notm}} API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}의 조직 구성 섹션을 참조하십시오. 
 
 
 ## 벌크 디바이스 오퍼레이션
@@ -383,7 +383,7 @@ except IoTFCReSTException as e:
 
 애플리케이션은 벌크 오퍼레이션을 사용하여 여러 디바이스를 동시에 가져오고 추가하거나 제거할 수 있습니다. 
 
-조회 매개변수 목록, 요청 및 응답 모델, HTTP 상태 코드에 대한 정보는 [{{site.data.keyword.iot_short_notm}} API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/){: new_window}의 '벌크 오퍼레이션' 섹션을 참조하십시오. 
+조회 매개변수 목록, 요청 및 응답 모델, HTTP 상태 코드에 대한 정보는 [{{site.data.keyword.iot_short_notm}} API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}의 '벌크 오퍼레이션' 섹션을 참조하십시오. 
 
 
 ### 디바이스 정보 검색
@@ -432,7 +432,8 @@ except IoTFCReSTException as e:
 ### 여러 디바이스 삭제
 
 
-`deleteMultipleDevices()` 메소드를 사용하여 {{site.data.keyword.iot_short_notm}} 조직에서 여러 디바이스를 삭제할 수 있습니다. 요청은 512KB를 초과할 수 없습니다. 
+`deleteMultipleDevices()` 메소드를 사용하여 {{site.data.keyword.iot_short_notm}} 조직에서 여러 디바이스를
+삭제할 수 있습니다. 요청은 512KB를 초과할 수 없습니다. 
 
 ```python
 
@@ -597,9 +598,10 @@ except IoTFCReSTException as e:
 ## 디바이스 오퍼레이션
 {: #device_ops}
 
-API에서 사용 가능한 디바이스 오퍼레이션에는 나열, 추가, 제거, 보기, 업데이트, 위치 보기 및 {{site.data.keyword.iot_short_notm}} 조직의 디바이스에 대한 디바이스 관리 정보 보기가 포함됩니다. 
+API에서 사용 가능한 디바이스 오퍼레이션에는 나열, 추가, 제거, 보기, 업데이트, 위치 보기 및 {{site.data.keyword.iot_short_notm}} 조직의 디바이스에 대한
+디바이스 관리 정보 보기가 포함됩니다. 
 
-조회 매개변수, 요청 및 응답 모델, HTTP 상태 코드에 대한 정보는 [{{site.data.keyword.iot_short_notm}} API ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}의 '디바이스 섹션'을 참조하십시오. 
+조회 매개변수, 요청 및 응답 모델, HTTP 상태 코드에 대한 정보는 [{{site.data.keyword.iot_short_notm}} API 문서 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}의 '디바이스 섹션'을 참조하십시오. 
 
 
 ### 특성 디바이스 유형의 디바이스 검색
@@ -752,7 +754,7 @@ apiCli.getDeviceManagementInformation("iotsample-arduino", "00aabbccde03")
 - 디바이스 오류 코드 검색
 - 오류 코드 추가
 
-조회 및 응답 모델, 응답 코드 및 조회 매개변수에 대한 자세한 정보는 [API 문서 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} {{site.data.keyword.iot_short_notm}} API 문서를 참조하십시오. 
+조회 및 응답 모델, 응답 코드, 조회 매개변수에 대한 자세한 정보는 [{{site.data.keyword.iot_short_notm}} API 문서 ![외부 링크 아이콘](../../../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}를 참조하십시오. 
 
 ### 진단 로그 가져오기
 

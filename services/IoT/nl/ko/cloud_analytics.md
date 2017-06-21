@@ -174,7 +174,7 @@ IFTTT 조치를 사용하여 규칙이 트리거될 때 IFTTT 레시피를 트�
 이벤트 | Maker 이벤트의 트리거로서 구성된 이벤트 이름입니다. 서로 다른 트리거로 여러 레시피를 작성할 수 있으며, 여기서 각각의 이벤트 이름은 상이합니다.
 값 1-3 | 이러한 매개변수에서 임의의 컨텐츠를 전달할 수 있으며, 이는 IFTTT 레시피의 조치에 전달됩니다. **팁:** [변수 대체](#variable_substitution)를 사용하여 헤더에 추가 데이터를 동적으로 포함할 수 있습니다.
 
-#### 예제: IFTTT를 사용하여 Trello 카드 게시{: #iftttex}
+#### 예제: IFTTT를 사용하여 Trello 카드 게시 {: #iftttex}
 
 이 예제에서는 IFTTT를 사용하여 Trello의 서비스 요청 목록에 카드를 게시하도록 조치가 구성되어 있습니다. 
 
@@ -268,7 +268,7 @@ URL | 대상 Node-RED HTTP 입력 노드의 URL입니다.
 
 웹훅 조치를 사용하여 경보가 트리거될 때 웹훅 사용 웹 서비스에 대해 HTTP 요청을 작성할 수 있습니다. 예를 들어, 디바이스의 센서가 비정상적인 읽기를 보고하는 경우에는 웹훅을 사용하여 자산에 대한 서비스 요청을 열 수 있습니다. 
 
-예제: [웹훅을 사용하여 슬랙에 게시](#webhookex).
+예제: [웹훅을 사용하여 Slack에 게시](#webhookex).
 
 다음 매개변수는 웹훅 조치를 구성하는 데 사용됩니다. 
 
@@ -282,15 +282,15 @@ URL | 대상 웹훅 사용 서버의 URL입니다. **팁:** [변수 대체](#var
 비밀번호 | 웹 서비스에서 필요하면 포함됩니다. **중요:** 비밀번호는 일반 텍스트로 전송됩니다.
 헤더 | 헤더는 키 및 값 쌍에서 구성됩니다. **팁:** [변수 대체](#variable_substitution)를 사용하여 헤더에 추가 데이터를 동적으로 포함할 수 있습니다.
 컨텐츠 유형 | 본문의 컨텐츠 유형입니다(JSON, XML, WWW 양식 URL 인코딩 또는 일반 텍스트). OPTIONS, PATCH, PUT, POST 및 DELETE 메소드에 사용할 수 있습니다.
-본문 | 웹훅 호출의 본문입니다. OPTIONS, PATCH, PUT, POST 및 DELETE 메소드에 사용할 수 있습니다. 기본적으로, 본문 필드는 [변수 대체](#variable_substitution)에 나열된 모든 변수로 사전에 채워집니다. **중요:** 별도의 특정 필드를 본문에 포함하도록 웹훅 서버에서 요구할 수 있습니다. 예를 들어, 슬랙 웹훅에는 "텍스트" 필드가 포함되어야 합니다.    
+본문 | 웹훅 호출의 본문입니다. OPTIONS, PATCH, PUT, POST 및 DELETE 메소드에 사용할 수 있습니다. 기본적으로, 본문 필드는 [변수 대체](#variable_substitution)에 나열된 모든 변수로 사전에 채워집니다. **중요:** 별도의 특정 필드를 본문에 포함하도록 웹훅 서버에서 요구할 수 있습니다. 예를 들어, Slack 웹훅에는 "텍스트" 필드가 포함되어야 합니다.    
 
-#### 예제: 웹훅을 사용하여 슬랙에 게시
+#### 예제: 웹훅을 사용하여 Slack에 게시
 {: #webhookex}
 
-이 예제에서는 웹훅을 사용하여 #service-requests 슬랙 채널에 메시지를 게시하도록 조치가 구성되어 있습니다. 
+이 예제에서는 웹훅을 사용하여 #service-requests Slack 채널에 메시지를 게시하도록 조치가 구성되어 있습니다. 
 
-슬랙에 게시 조치를 작성하려면 다음을 수행하십시오. 
-1. 슬랙에서, 채널 #service-requests에 대한 수신 웹훅 통합을 설정하십시오. 웹훅 URL을 기록하십시오. 자세한 정보는 [Slack 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://api.slack.com/incoming-webhooks){: new_window}를 참조하십시오. 
+Slack에 게시 조치를 작성하려면 다음을 수행하십시오. 
+1. Slack에서, 채널 #service-requests에 대한 수신 웹훅 통합을 설정하십시오. 웹훅 URL을 기록하십시오. 자세한 정보는 [Slack 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://api.slack.com/incoming-webhooks){: new_window}를 참조하십시오. 
 2. {{site.data.keyword.iot_short}} 대시보드에서 **규칙 > 조치**로 이동하고 다음 매개변수를 갖는 새 조치를 작성하십시오. 
  - 이름 - `Post service request on Slack`
  - 유형 - **웹훅**
@@ -301,7 +301,7 @@ URL | 대상 웹훅 사용 서버의 URL입니다. **팁:** [변수 대체](#var
  ```json
  {"text":"*A device needs your attention*\n Time: {{timestamp}}\n {{site.data.keyword.iot_short}} instance: {{tenantId}}\n Device: {{deviceId}}\n Rule: {{ruleName}}\n Description: {{ruleDescription}}\n Condition: {{ruleCondition}}\n Raw device message: \n{{message}}"}
  ```  
-  **중요:** 슬랙 웹훅에는 최소한 "텍스트" 필드가 포함되어야 합니다. 관련 정보는 Slack 문서에서 [수신 웹훅 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks "Slack 문서"){: new_window}을 참조하십시오.
+  **중요:** Slack 웹훅에는 최소한 "텍스트" 필드가 포함되어야 합니다. 관련 정보는 Slack 문서에서 [수신 웹훅 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://api.slack.com/incoming-webhooks "Slack 문서"){: new_window}을 참조하십시오.
 11. **완료**를 클릭하여 조치를 저장하십시오. 
 
 

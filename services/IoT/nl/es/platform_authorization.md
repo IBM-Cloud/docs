@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Conexión de la aplicación
+# Conexión de aplicaciones
 
 Para conectar la aplicación a {{site.data.keyword.iot_full}}, debe conectarse utilizando las claves y las señales de la API o enlazando la aplicación directamente a {{site.data.keyword.iot_short_notm}} en {{site.data.keyword.Bluemix_notm}}. Utilice el panel de control de acceso para otorgar acceso.
 {:shortdesc}

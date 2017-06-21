@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-5-11"
+lastupdated: "2017-6-5"
 
 ---
 
@@ -16,6 +16,14 @@ lastupdated: "2017-5-11"
 
 You can upgrade your project or wait for it to be automatically upgraded. For the best experience, make sure that you meet the [prerequisites](#upgrade_prereqs) and upgrade your project as soon as possible so that you can control what your toolchain's name is and which organization it is created in.
 {: shortdesc}
+
+**Frequently asked questions**
+
+- [My JazzHub project is associated with the UK region, but my toolchain will be in the US South region. How will this work?](#faq_region)
+- [What will happen to my work items and dashboards in Track &amp; Plan when I upgrade?](#faq_tp)
+- [What will happen to my code repo when I upgrade?](#faq_repo)
+- [What will happen to my build definitions in my project when I upgrade to a toolchain?](#faq_build)
+- [I need to create an organization for my project that will be upgraded to a toolchain. I understand that I need to add a credit card to my account before I can create an organization. Will my credit card be charged?](#faq_charges)
 
 ## Toolchains
 {: #compare_toolchains}
@@ -57,6 +65,14 @@ When you start the upgrade, the pipeline stages in your project are locked. You 
 
 If your project uses a Git repo that is hosted on JazzHub, after you start the upgrade, the repo is locked to ensure the integrity of the data that is moved to the toolchain. If you revert the upgrade by deleting the toolchain, the repo on JazzHub is unlocked.
 
+For full details about how each type of repo is treated in the upgrade process, see the following table.
+
+|Project repo |Project type	|Toolchain repo |
+|:----------|:------------------------------|:------------------|
+|github.com 		|Private or public 		|The same github.com repo with {{site.data.keyword.Bluemix_notm}} Public.	|
+|hub.jazz.net/git		|Private or public 		|A new repo in {{site.data.keyword.gitrepos}} with {{site.data.keyword.Bluemix_notm}} Public.	|
+{: caption="Table 1. Project repos mapped to toolchain repos" caption-side="top"}
+
 ## Starting the upgrade process
 {: #start_upgrade}
 
@@ -71,13 +87,7 @@ To upgrade your project to a toolchain, follow these steps:
 
    For an overview of the upgrade process, read the description on that page. The toolchain will include a new pipeline that contains the same stages and jobs as the project's pipeline. In addition, the toolchain will contain a pointer to the Eclipse Orion {{site.data.keyword.webide}} that runs in {{site.data.keyword.contdelivery_short}}.
 
-   In this example, because the project uses a public repo on github.com, the toolchain will be connected to the same GitHub repo. If your project uses a Git repo that is hosted on JazzHub, the contents of that repo will be cloned to a new repo in {{site.data.keyword.gitrepos}}, which is part of {{site.data.keyword.contdelivery_short}}. For full details about how each type of repo is treated, see the following table.
-
-   |Project repo |Project type	|Toolchain repo |
-   |:----------|:------------------------------|:------------------|
-   |github.com 		|Private or public 		|The same github.com repo with {{site.data.keyword.Bluemix_notm}} Public.	|
-   |hub.jazz.net/git		|Private or public 		|A new repo in {{site.data.keyword.gitrepos}} with {{site.data.keyword.Bluemix_notm}} Public.	|
-   {: caption="Table 1. Project repos mapped to toolchain repos" caption-side="top"}
+   In this example, because the project uses a public repo on github.com, the toolchain will be connected to the same GitHub repo. If your project uses a Git repo that is hosted on JazzHub, the contents of that repo will be cloned to a new repo in {{site.data.keyword.gitrepos}}, which is part of {{site.data.keyword.contdelivery_short}}.
 
 2. To customize the toolchain, you can configure a few settings:
 
@@ -171,3 +181,54 @@ When you return to your project, the upgrade message is displayed again, and you
 {: #upgrade_troubleshoot}
 
 If you have questions or problems, go to the [support forum](https://developer.ibm.com/answers/questions/ask/?smartspace=devops-services). In your forum post, include the URLs to your {{site.data.keyword.jazzhub_short}} project and your {{site.data.keyword.contdelivery_short}} toolchain, and tag your post with the `devops-services` tag.
+   
+## Frequently asked questions
+{: #upgrade_faq}
+
+### My JazzHub project is associated with the UK region, but my toolchain will be in the US South region. How will this work?
+{: #faq_region}
+
+Projects at hub.jazz.net and toolchains are both hosted in the US South region. If your project was configured to deploy apps to a different region, such as the UK region, it will still deploy apps to that region after it is upgraded to a toolchain. Therefore, nothing is really changing with respect to where the data is hosted. Toolchains will be available in more regions in the future.
+
+### What will happen to my work items and dashboards in Track &amp; Plan when I upgrade?
+{: #faq_tp}
+
+The {{site.data.keyword.contdelivery_short}} service provides issue-tracking capabilities through {{site.data.keyword.gitrepos}}, which is hosted by IBM and based on GitLab Community Edition. {{site.data.keyword.contdelivery_short}} also supports integrations with other planning and issue-tracking tools, such as GitHub Issues and JIRA.
+
+During the upgrade process, you can choose to migrate your Track &amp; Plan work items to Git Issues. Both GitHub Issues and {{site.data.keyword.gitrepos}} provide kanban boards and issue tracking for planning. To learn more about Issue Boards, which is the kanban feature in Git Repos and Issue Tracking, see [Issue board ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git.ng.bluemix.net/help/user/project/issue_board.md){: new_window}.
+
+For customers who require the same function as the deprecated JazzHub Track &amp; Plan, a new IBM Track and Plan service on Cloud is available for purchase separately in selected countries on a per user per month basis. With this cloud service, you get full function, equivalent to Rational Team Concert&trade; contributor licenses, in a single tenant cloud subscription.
+
+This new IBM Track and Plan on Cloud service provides much richer capability than the deprecated JazzHub Track &amp; Plan, supporting process customization, project hierarchies, SAFe&reg; and many other agile and hybrid methods, and scalability to grow beyond a single project. It is based on the latest version of Rational Team Concert 6.0.3 and will be at version 6.0.4 in the next 60 days, while JazzHub Track &amp; Plan was based on Rational Team Concert 5.x. A data migration is possible to IBM Track and Plan on Cloud through additional services. You can contact [Tom Hollowell ![External link icon](../../icons/launch-glyph.svg "External link icon")](mailto:trhollow@us.ibm.com){:new_window}, Connected Products SaaS Sales Leader, for more information.
+
+For information on IBM Track and Plan on Cloud, or to buy online, visit [IBM Marketplace ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/us-en/marketplace/cloud-change-management){: new_window}.
+
+To additionally purchase Build Automation and Source Code Management, [Rational Team Concert on Cloud ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/us-en/marketplace/change-and-configuration-management/purchase#product-header-top){: new_window} is an option.  
+
+### What will happen to my code repo when I upgrade?
+{: #faq_repo}
+
+After you upgrade, your new Git service will be comparable to what you had before. If you used github.com with your JazzHub project, your toolchain will be connected to the same GitHub repo. If your JazzHub project used IBM Hosted Git, the contents of that repo will be cloned to a new repo in {{site.data.keyword.gitrepos}}, which is part of {{site.data.keyword.contdelivery_short}} and hosted by IBM.
+
+For full details about how each type of repo is treated in the upgrade process, see the following table.
+
+|Project repo |Project type	|Toolchain repo |
+|:----------|:------------------------------|:------------------|
+|github.com 		|Private or public 		|The same github.com repo with {{site.data.keyword.Bluemix_notm}} Public.	|
+|hub.jazz.net/git		|Private or public 		|A new private or public repo in {{site.data.keyword.gitrepos}} with {{site.data.keyword.Bluemix_notm}} Public.	|
+{: caption="Table 1. Project repos mapped to toolchain repos" caption-side="top"}
+
+
+### What will happen to my build definitions in my project when I upgrade to a toolchain?
+{: #faq_build}
+
+If you're building your source code by using Jazz instead of Delivery Pipeline, you must manually migrate your build definitions to Delivery Pipeline in your toolchain. 
+
+If you're using Jazz SCM as a source repo and using Delivery Pipeline to build your code, the source in Jazz SCM will be automatically moved to a Git repo. Your Delivery Pipeline configuration will remain the same except it will consume the source from the Git repo instead of the source from Jazz SCM.
+
+### I need to create an organization for my project that will be upgraded to a toolchain. I understand that I need to add a credit card to my account before I can create an organization. Will my credit card be charged?
+{: #faq_charges}
+
+As a [Pay As You Go customer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud-computing/bluemix/pricing){: new_window}, if you use any runtime, service, or component beyond the free allotments that are listed for it in the Bluemix catalog, you will be charged. For a usage estimate, see the [pricing sheet ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/?direct=classic/&cm_mc_uid=49681106114614956310454&cm_mc_sid_50200000=1495641296&cm_mc_sid_52640000=1494981898#/pricing/cloudOEPaneId=pricing&paneId=pricingSheet){: new_window}. For current pricing for Continuous Delivery, see the [Bluemix catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/continuous-delivery){: new_window}.
+
+If you're an IBM employee, internal IBM projects can be billed to departments in lieu of a personal credit card. If you need to use resources beyond the free allotments for IBM employees, create a support ticket.

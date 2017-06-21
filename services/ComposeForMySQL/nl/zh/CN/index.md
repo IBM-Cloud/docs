@@ -1,7 +1,8 @@
 ---
+
 copyright:
-  years: 2016
-lastupdated: "2016-12-09"
+  years: 2016,2017
+lastupdated: "2017-04-27"
 ---
 
 {:new_window: target="_blank"}
@@ -26,37 +27,8 @@ lastupdated: "2016-12-09"
 
 2. 连接到 {{site.data.keyword.composeForMySQL}} 服务。
 
-  要将应用程序连接到服务，请使用随服务一起创建的凭证。
+  要将应用程序连接到服务，请使用随服务一起创建的[凭证](./credentials.html)。
 
   下载 [compose-mysql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mysql-helloworld-nodejs) 样本应用程序，并遵循自述文件中的指示信息。然后，在 Bluemix 控制台中的应用程序详细信息页面中，单击**查看应用程序**。
 
   样本应用程序会示范如何使用 Node.js 连接到 {{site.data.keyword.composeForMySQL}} 服务。
-
-
-## 可用凭证
-
-字段名称|描述
-----------|-----------
-`db_type`|服务所提供的数据库类型；在本例中为 `mysql`。
-`name`|数据库部署名称。
-
-`uri_cli`|连接到数据库实例的 `mysql` shell 命令行。
-`ca_certificate_base64`|自签名证书，用于确认应用程序连接到相应的服务器。此证书是 Base64 编码。
-`deployment_id`|在 Compose 内创建的服务的内部标识。
-`uri`|连接到服务时使用的 URI，包括模式 (`mysql:`)、管理用户名和密码、服务器的主机名、要连接到的端口号和 vhost 名称。
-{: caption="Table 1. {{site.data.keyword.composeForMySQL}} credentials" caption-side="top"}
-
-
-# 相关链接
-{: #rellinks}
-
-* [Compose](https://www.compose.com){:new_window}
-* [Compose 文章](https://www.compose.com/articles/){:new_window}
-
-## 样本和教程
-{: #samples}
-* [compose-mysql-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mysql-helloworld-nodejs){:new_window}
-
-## 相关链接
-{: #general}
-* [Compose 帮助](https://help.compose.com/docs){:new_window}

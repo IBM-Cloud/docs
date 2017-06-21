@@ -10,7 +10,7 @@ lastupdated: "2016-09-06"
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Supervisión y registro de apps de Cloud Foundry
+# Supervisión y creación de registros de apps de Cloud Foundry
 {: #monitoring_logging_cloud_foundry_apps}
 
 {{site.data.keyword.Bluemix_notm}} tiene un mecanismo de registro incorporado para producir archivos de registro para las apps a medida que se ejecutan. En los registros puede ver los errores, avisos y mensajes informativos que se generan para la app. Además, también puede configurar la app para escribir mensajes de registro en el archivo de registro. Para obtener más información sobre los formatos de registro y cómo ver registros, consulte [Registro de apps que se ejecutan en Cloud Foundry](/docs/monitor_log/monitoringandlogging.html#logging_for_bluemix_apps).

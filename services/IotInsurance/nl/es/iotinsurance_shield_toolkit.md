@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-27"
+lastupdated: "2017-04-25"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -61,7 +61,7 @@ var config = module.exports = {
 
 Método: POST  
 API: /shield  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shield/addShield
+https://iot4i-api-docs.mybluemix.net/#!/shield/addShield
 
 Cree una definición de cobertura en el archivo createShield.js.  En el siguiente ejemplo se muestra una cobertura simple que detecta una fuga de agua.
 
@@ -160,7 +160,7 @@ Cada código de cobertura contiene recursos que se definen en las sentencias res
 
 Método: POST  
 API: /user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/user/addUser
+https://iot4i-api-docs.mybluemix.net/#!/user/addUser
 
 Cree un usuario en el archivo createUser.js. El siguiente ejemplo muestra cómo crear un único usuario.
 
@@ -195,7 +195,7 @@ siendo:
 
 Método: POST  
 API: /user  
-https://iot4i-docs-api.mybluemix.net/dist/#!/shieldassociation/addShieldAssociation
+https://iot4i-api-docs.mybluemix.net/#!/shieldassociation/addShieldAssociation
 
 Cree una asociación de coberturas que vincule la cobertura con el usuario en createUserShieldAssociation.js.
 
@@ -217,7 +217,7 @@ var userShield = {
 
 Método: POST  
 API: /sendPayloadToMQTT  
-https://iot4i-docs-api.mybluemix.net/dist/#!/global/sendPayloadToMQTT
+https://iot4i-api-docs.mybluemix.net/#!/global/sendPayloadToMQTT
 
 Puede crear una carga útil de riesgo simulado para probar sus coberturas.
 

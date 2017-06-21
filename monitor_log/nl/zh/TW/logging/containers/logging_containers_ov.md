@@ -14,43 +14,21 @@ lastupdated: "2017-03-16"
 {:screen: .screen}
 
 
-# 記載 IBM Bluemix Container Service
+# IBM Bluemix Container Service 的記載功能
 {: #logging_containers_ov}
 
-在 {{site.data.keyword.Bluemix}} 中，您可以透過 {{site.data.keyword.Bluemix_notm}} 儀表板、Kibana 和指令行介面來檢視、過濾及分析容器日誌。{:shortdesc}
+在 {{site.data.keyword.Bluemix}} 中，您可以透過 {{site.data.keyword.Bluemix_notm}} 儀表板、Kibana 和指令行介面來檢視、過濾及分析容器日誌。
+{:shortdesc}
 
 您可以使用搜索器，從容器外部監視及轉遞容器日誌。搜索器會將資料傳送至 {{site.data.keyword.Bluemix_notm}} 中的多方承租戶 Elasticsearch。
+
+**附註：**您可以針對在 {{site.data.keyword.IBM}} 所管理雲端基礎架構中部署的 Docker 容器，在 {{site.data.keyword.Bluemix_notm}} 中分析容器日誌。
 
 下圖顯示 {{site.data.keyword.containershort}} 記載的高階視圖：
 
 ![容器的高階元件概觀](images/logging_containers_ov.jpg "容器的高階元件概觀")
 
 當您在 {{site.data.keyword.Bluemix_notm}} 中部署該容器時，會自動啟用容器的記載功能。
-
-## 為容器收集的日誌
-{: #logging_containers_ov_logs_collected}
-
-依預設，會收集下列日誌：
-
-<table>
-  <tbody>
-    <tr>
-      <th align="center">日誌</th>
-      <th align="center">說明</th>
-    </tr>
-    <tr>
-      <td align="left" width="30%">/var/log/messages</td>
-      <td align="left" width="70%"> 依預設，Docker 訊息儲存在容器的 /var/log/messages 資料夾中。此日誌包括系統訊息。
-      </td>
-    </tr>
-    <tr>
-      <td align="left">./docker.log</td>
-      <td align="left">此日誌是 Docker 日誌。<br> Docker 日誌檔未儲存為容器內部的檔案，但仍然會予以收集。預設會收集此日誌檔，因為它是標準 Docker 使用慣例，用來公開容器的 stdout（標準輸出）及 stderr（標準錯誤）資訊。如果有任何容器處理程序列印至 stdout 或 stderr，即會收集該資訊。</td>
-     </tr>
-  </tbody>
-</table>
-
-若要收集其他日誌，請在建立容器時，新增 **LOG_LOCATIONS** 環境變數，並包含日誌檔的路徑。您可以新增多個日誌檔，以逗點將其隔開。如需相關資訊，請參閱[收集容器中的非預設日誌資料](logging_containers_other_logs.html#logging_containers_collect_data)。
 
 
 ## 分析容器日誌的方法
@@ -66,9 +44,36 @@ lastupdated: "2017-03-16"
     
     您可以使用 Kibana（一種開放程式碼分析與視覺化平台），以各種圖形（例如圖表和表格）來監視、搜尋、分析及視覺化您的資料。如需相關資訊，請參閱[在 Kibana 中分析日誌](../kibana4/logging_analyzing_logs_Kibana.html#analyzing_logs_Kibana)。
 
-* 透過 CLI 來分析日誌，以程式設計方式使用指令來管理日誌。
+* 透過 CLI 使用指令來分析日誌，從而以程式設計方式來管理日誌。
     
     您可以透過指令行介面，使用 **cf ic logs** 指令來檢視、過濾及分析日誌。如需相關資訊，請參閱[從指令行介面分析日誌](../logging_view_cli.html#analyzing_logs_cli)。
+
+## 為容器收集的日誌
+{: #logging_containers_ov_logs_collected}
+
+依預設，會收集下列日誌：
+
+<table>
+  <caption>表 1. 日誌</caption>
+  <tbody>
+    <tr>
+      <th align="center">日誌</th>
+      <th align="center">說明</th>
+    </tr>
+    <tr>
+      <td align="left" width="30%">/var/log/messages</td>
+      <td align="left" width="70%"> 依預設，Docker 訊息儲存在容器的 /var/log/messages 資料夾中。此日誌包括系統訊息。
+      </td>
+    </tr>
+    <tr>
+      <td align="left">./docker.log</td>
+      <td align="left">此日誌是 Docker 日誌。<br> Docker 日誌檔未儲存為容器內部的檔案，但仍然會予以收集。依預設，會收集此日誌檔，因為它是標準 Docker 使用慣例，用來公開容器的 stdout（標準輸出）及 stderr（標準錯誤）資訊。如果有任何容器處理程序列印至 stdout 或 stderr，即會收集該資訊。</td>
+     </tr>
+  </tbody>
+</table>
+
+若要收集其他日誌，請在建立容器時，新增 **LOG_LOCATIONS** 環境變數，並包含日誌檔的路徑。您可以新增多個日誌檔，以逗點將其隔開。如需相關資訊，請參閱[收集容器中的非預設日誌資料](logging_containers_other_logs.html#logging_containers_collect_data)。
+
 
 
 ## 日誌保留
@@ -80,5 +85,5 @@ lastupdated: "2017-03-16"
 
     您可以聯絡支援中心來增加上限。請在支援問題單中，附上增加上限要求的空間 ID、新的大小上限，以及要求的理由。
 
-* 最多 7 天可搜尋最多 7 GB 的資料。達到 7 GB 資料或在 7 天之後，日誌資料就會輪替（先進先出）。
+* 可搜尋最多 7 天、最多 7 GB 的資料。達到 7 GB 資料或在 7 天之後，日誌資料就會輪替（先進先出）。
 

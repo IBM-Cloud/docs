@@ -16,11 +16,10 @@ lastupdated: "2017-02-14"
 # Surveillance et journalisation
 {: #monitoringandlogging}
 
-{{site.data.keyword.Bluemix}} est une plateforme Cloud Computing {{site.data.keyword.IBM_notm}} permettant de générer, d'exécuter et de gérer des applications et des services. {{site.data.keyword.Bluemix_notm}} combine une plateforme sous forme de services (PaaS) à une infrastructure sous forme de services (IaaS). De plus, {{site.data.keyword.Bluemix_notm}} propose un large catalogue de services de cloud que vous pouvez intégrer facilement à la plateforme sous forme de services et à l'infrastructure sous forme de services afin de construire des applications métier rapidement. {{site.data.keyword.Bluemix_notm}} inclut des services de journalisation et de surveillance intégrés sur l'ensemble de la plateforme.
+{{site.data.keyword.Bluemix}} est une plateforme Cloud Computing {{site.data.keyword.IBM_notm}} permettant de générer, d'exécuter et de gérer des applications et des services. {{site.data.keyword.Bluemix_notm}} combine une plateforme sous forme de services (PaaS) à une infrastructure sous forme de services (IaaS). De plus, {{site.data.keyword.Bluemix_notm}} propose un large catalogue de services de cloud que vous pouvez intégrer facilement à la plateforme sous forme de services et à l'infrastructure sous forme de services afin de construire des applications métier rapidement. {{site.data.keyword.Bluemix_notm}} inclut des services de journalisation et de surveillance intégrés sur l'ensemble de la plateforme. 
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} offre des services de journalisation et de surveillance dans différents services de calcul, tels que Cloud Foundry et {{site.data.keyword.containershort}}. Vous pouvez développer, exécuter et gérer des applications dans n'importe quel contexte d'exécution de calcul sans être confronté à la complexité que représentent la création et la gestion de l'infrastructure qui est généralement liée au développement et au lancement d'une application.
- 
+{{site.data.keyword.Bluemix_notm}} offre des services de journalisation et de surveillance dans différents services de calcul, tels que Cloud Foundry et {{site.data.keyword.containershort}}. Vous pouvez développer, exécuter et gérer des applications dans n'importe quel contexte d'exécution de calcul sans être confronté à la complexité que représentent la création et la gestion de l'infrastructure qui est généralement liée au développement et au lancement d'une application. 
 
 **Remarque :** Les fonctions de surveillance et de journalisation sont disponibles dans la région du Sud des États-Unis et dans la région du Royaume-Uni.
 

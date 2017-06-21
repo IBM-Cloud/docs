@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
+lastupdated: "2017-04-24"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock:.codeblock}
 {:screen:.screen}
 {:pre: .pre}
@@ -307,7 +306,7 @@ Los paquetes siguientes están disponibles para su uso en el entorno de Node.js 
 - underscore v1.8.3
 - uuid v3.0.0
 - validator v6.1.0
-- watson-developer-cloud v2.9.0
+- watson-developer-cloud v2.29.0
 - when v3.7.7
 - winston v2.3.0
 - ws v1.1.1
@@ -319,12 +318,12 @@ Los paquetes siguientes están disponibles para su uso en el entorno de Node.js 
 ## Entornos de tiempo de ejecución Python
 {: #openwhisk_ref_python_environments}
 
-OpenWhisk da soporte a la ejecución de acciones de Python utilizando dos versiones diferentes de tiempo de ejecución. 
+OpenWhisk da soporte a la ejecución de acciones de Python utilizando dos versiones diferentes de tiempo de ejecución.
 
 ### Acciones de Python 3
 
 Las acciones de Python 3 se ejecutan utilizando Python 3.6.1. Para utilizar este tiempo de ejecución, especifique el parámetro de la CLI de `wsk` `--kind python:3` cuando cree o actualice una acción.
-Las acciones de Python pueden utilizar los paquetes siguientes, además de las bibliotecas estándares de Python 3.6. 
+Las acciones de Python pueden utilizar los paquetes siguientes, además de las bibliotecas estándares de Python 3.6.
 
 - aiohttp v1.3.3
 - appdirs v1.4.3
@@ -371,7 +370,7 @@ Las acciones de Python pueden utilizar los paquetes siguientes, además de las b
 
 ### Acciones de Python 2
 
-Las acciones de Python 2 se ejecutan utilizando Python 2.7.12. Este es el tiempo de ejecución predeterminado para las acciones de Python, a menos que especifique el distintivo `--kind` cuando cree o actualice una acción. Para seleccionar este tiempo de ejecución de forma explícita, utilice `--kind python:2`. Las acciones de Python 2 pueden utilizar los paquetes siguientes, además de las bibliotecas estándares de Python 2.7. 
+Las acciones de Python 2 se ejecutan utilizando Python 2.7.12. Este es el tiempo de ejecución predeterminado para las acciones de Python, a menos que especifique el distintivo `--kind` cuando cree o actualice una acción. Para seleccionar este tiempo de ejecución de forma explícita, utilice `--kind python:2`. Las acciones de Python 2 pueden utilizar los paquetes siguientes, además de las bibliotecas estándares de Python 2.7.
 
 - appdirs v1.4.3
 - asn1crypto v0.21.1
@@ -421,73 +420,14 @@ Las acciones Docker ejecutan un binario proporcionado por el usuario en un conte
 
 El esqueleto de Docker es una forma cómoda de crear imágenes Docker compatibles con OpenWhisk. Puede instalar el esqueleto con el mandato de CLI de `wsk sdk install docker`.
 
-El programa binario principal debe estar en `/action/exec` dentro del contenedor. El ejecutable recibe los argumentos de entrada a través de `stdin` y debe devolver un resultado a través de `stdout`.
+El programa binario principal debe estar en `/action/exec` dentro del contenedor. El ejecutable recibe los argumentos de entrada a través de una serie de argumento de línea de mandatos que se puede deserializar como un objeto `JSON`. El resultado lo debe devolver a través de `stdout` como una serie de una línea de `JSON` serializado.
 
 Puede incluir los pasos de compilación o dependencias modificando el `archivo de Docker` incluido en `dockerSkeleton`.
 
 ## API REST
 {: #openwhisk_ref_restapi}
+La información sobre la API REST la podrá encontrar [aquí](openwhisk_rest_api.html)
 
-Todas las funciones del sistema están disponibles a través de la API REST. Hay una colección y puntos finales de entidad para acciones, activadores, reglas, paquetes, activaciones y espacios de nombres.
-
-Los puntos finales de colección son:
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
-
-`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span> es el nombre de host de la API de OpenWhisk (por ejemplo, openwhisk.ng.bluemix.net, 172.17.0.1, etc.).
-
-Para `{namespace}`, se puede utilizar el carácter `_` para especificar el *espacio de nombre predeterminado* del usuario (es decir, la dirección de correo electrónico).
-
-Puede realizar una solicitud GET en los puntos finales de colección para obtener una lista de todas las entidades de la colección.
-
-Hay puntos finales de entidad para cada tipo de entidad:
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
-
-
-Los puntos finales de espacio de nombres y activación solo admiten solicitudes GET. Los puntos finales de acciones, desencadenantes, reglas y paquetes admiten solicitudes GET, PUT y DELETE. Los puntos finales de acciones, activadores y reglas también admiten solicitudes POST, que se utilizan para invocar acciones y activadores, y para habilitar o inhabilitar reglas. Consulte la [Referencia de API](https://new-console.{DomainName}/apidocs/98) para obtener información detallada.
-
-Todas las API están protegidas con autenticación HTTP básica. Las credenciales de autenticación básica se encuentran en la propiedad `AUTH` del archivo `~/.wskprops`, delimitadas por dos puntos. También puede recuperar estas credenciales en los [pasos de configuración de la CLI](./index.html#openwhisk_start_configure_cli).
-
-A continuación se muestra un ejemplo en el que se utiliza el mandato cURL para obtener la lista de todos los paquetes del espacio de nombres `whisk.system`:
-
-```
-curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
-```
-{: pre}
-```
-[
-  {
-    "name": "slack",
-    "binding": false,
-    "publish": true,
-    "annotations": [
-      {
-        "key": "description",
-        "value": "Package that contains actions to interact with the Slack messaging service"
-      }
-    ],
-    "version": "0.0.9",
-    "namespace": "whisk.system"
-  },
-  ...
-]
-```
-{: screen}
-
-La API de OpenWhisk admite llamadas solicitud-respuesta de clientes web. OpenWhisk responde a las solicitudes de `OPTIONS` con cabeceras de uso compartido de recursos de distintos orígenes. Actualmente, estos orígenes están permitidos (es decir, Access-Control-Allow-Origin es "`*`") y Access-Control-Allow-Headers produce Authorization y Content-Type.
-
-**Atención:** debido a que OpenWhisk admite en este momento únicamente una clave por cuenta, no se recomienda utilizar CORS si no es para experimentar. La clave debería incorporarse en el código del lado del cliente, haciéndola visible al público. Utilícelo con precaución.
 
 ## Límites del sistema
 {: #openwhisk_syslimits}

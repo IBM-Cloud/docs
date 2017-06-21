@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-03"
 
 ---
 
@@ -23,7 +23,7 @@ Los dispositivos publican datos en {{site.data.keyword.iot_short_notm}} mediante
 Para obtener más información sobre los conceptos clave, incluidos dispositivos, consulte [Acerca de Watson IoT Platform](https://console.ng.bluemix.net/docs/services/IoT/iotplatform_overview.html#watsoniotplatform_importantconcepts).
 
 
-# Conexión del dispositivo a {{site.data.keyword.iot_short_notm}}
+## Conexión del dispositivo a {{site.data.keyword.iot_short_notm}}
 {: #device_connect}
 Puede conectar su dispositivo a {{site.data.keyword.iot_short_notm}} mediante los protocolos HTTP o MQTT. Utilice HTTP si desea configurar un caso de ejemplo de tipo solicitud-respuesta, como por ejemplo cuando alguien realiza una compra y recibe un acuse de recibo. Utilice MQTT si desea configurar un caso de ejemplo de sucesos, como por ejemplo cuando alguien llama a un timbre y hace que se active una alerta en un dispositivo móvil.
 
@@ -34,7 +34,7 @@ Si desea conectar el dispositivo sin registrarlo, por ejemplo para ejecutar una 
 Para obtener más información sobre cómo conectar el dispositivo a {{site.data.keyword.iot_short_notm}} mediante el protocolo HTTP, consulte [API REST HTTP para dispositivos](https://console.ng.bluemix.net/docs/services/IoT/devices/api.html).
 Para obtener más información sobre cómo conectar el dispositivo a {{site.data.keyword.iot_short_notm}} mediante el protocolo MQTT, consulte [Conectividad MQTT para dispositivos](https://console.ng.bluemix.net/docs/services/IoT/devices/mqtt.html).
 
-# Cómo empezar a desarrollar dispositivos
+## Cómo empezar a desarrollar dispositivos
 {: #get_started}
 Si tiene un dispositivo que ya está listo para {{site.data.keyword.iot_short_notm}}, simplemente puede comenzar a utilizarlo.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-4"
+lastupdated: "2017-4-28"
 
 ---
 
@@ -46,6 +46,8 @@ lastupdated: "2017-4-4"
 
 {{site.data.keyword.contdelivery_short}} は、{{site.data.keyword.Bluemix_notm}} Public と {{site.data.keyword.Bluemix_notm}} Dedicated で使用可能です。ツールチェーンは、{{site.data.keyword.contdelivery_short}} を {{site.data.keyword.Bluemix_notm}} Public で使用しているか、それとも {{site.data.keyword.Bluemix_notm}} Dedicated で使用しているかによって異なります。
 
+**ヒント**: ツールチェーンは米国南部地域でのみホストされます。異なる地域にアプリをデプロイするようにツールチェーンが構成されている場合でも、アプリは前述の地域にデプロイされます。
+
 |ツールチェーン |{{site.data.keyword.Bluemix_notm}} Public	|{{site.data.keyword.Bluemix_notm}} Dedicated |
 |:----------|:------------------------------|:------------------|
 |ツール統合 		|サポートされているツール統合のリストについては、[ツール統合の構成](/docs/services/ContinuousDelivery/toolchains_integrations.html){: new_window}を参照してください。 		|使用可能なツール統合は、ご使用環境での {{site.data.keyword.contdelivery_short}} のセットアップ方法によって決まります。			|
@@ -53,7 +55,7 @@ lastupdated: "2017-4-4"
 |アプリからのツールチェーンの作成		|アプリ・スターター・コードが取り込まれた新規 GitHub リポジトリーからアプリの継続的デリバリーが構成されます。		|アプリ・スターター・コードが取り込まれた新規 GitHub または GitHub Enterprise リポジトリーからアプリの継続的デリバリーが構成されます。		|  
 |Delivery Pipeline のデプロイメント領域		|すべての {{site.data.keyword.Bluemix_notm}} Public 領域が Cloud Foundry デプロイメント・ジョブで使用可能です。 		|{{site.data.keyword.Bluemix_notm}} Dedicated 領域が使用可能です。特定の環境内での {{site.data.keyword.contdelivery_short}} のセットアップ方法に応じて、同じカスタマー・アカウント内のその他の Dedicated 領域または Local 領域も使用可能な可能性があります。		|
 |Delivery Pipeline のデプロイメント・ジョブ		|すべての[ジョブ・タイプ](/docs/services/ContinuousDelivery/pipeline_about.html#deliverypipeline_jobs)が使用可能です。		|Dedicated 環境にインストールされていない {{site.data.keyword.Bluemix_notm}} サービスに依存するジョブ・タイプは、使用可能でない可能性があります。例えば、コンテナー・ビルドとコンテナー・デプロイのジョブ・タイプは、{{site.data.keyword.Bluemix_notm}} Container サービスがインストールされていない環境では使用できない可能性があります。	|
-{: caption="Table 1. Differences between toolchains on {{site.data.keyword.Bluemix_notm}} Dedicated and {{site.data.keyword.Bluemix_notm}} Public" caption-side="top"}
+{: caption="表 1. Bluemix Dedicated と Bluemix Public のツールチェーンの違い" caption-side="top"}
 
 
 ## ツールチェーン・テンプレート
@@ -81,4 +83,4 @@ Microservices ツールチェーン・テンプレートは、Cloudant ストア
 |[Deployment Risk Analytics with GitHub and Jenkins ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevopsinsights-toolchain){:new_window}		|このツールチェーンを使用すると、継続的統合および継続的デリバリーのための Jenkins プロセスについての洞察を得ることができます。Jenkins サーバーを構成して、Jenkins によってジョブが実行されている時に {{site.data.keyword.DRA_short}} にデータを送信することができます。また、品質ゲートを実装して、ポリシーに基づいてデプロイメントをブロックすることもできます。結果は、{{site.data.keyword.DRA_short}} の「デプロイメント・リスク」ダッシュボードで見ることができます。Jenkins で使用されているソース・リポジトリーを示すように GitHub リポジトリーを構成すると、変更トレーサビリティーが使用可能になります。  		|
 |[Developer Insights and Team Dynamics with GitHub and JIRA ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fdevteaminsights-toolchain){:new_window}		|このツールチェーンを使用すると、プロジェクトの開発リスクを探り、ソーシャル・コーディング分析を使用して開発者間の対話パターンを理解することができます。GitHub のソース・コードを、GitHub の問題、JIRA の問題、またはそれら両方と併せて分析できます。Developer Insights を使用して、非常にエラーが発生しやすいファイルを識別し、プロジェクトがどのように DevOps プラクティスに従っているか確認します。Team Dynamics のソーシャル・コーディング分析は、チームが非生産的なプラクティスを修正できるように、チーム・メンバー間の対話レベルを識別します。 		|
 |[Build your own toolchain ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fopen-toolchain%2Fempty-toolchain){:new_window}		|このツールチェーンには、事前構成されたツールは含まれていません。ツールチェーンを既に熟知している場合、独自のツールチェーンをセットアップできます。 		|
-{: caption="Table 2. Toolchain templates" caption-side="top"}
+{: caption="表 2. ツールチェーン・テンプレート" caption-side="top"}

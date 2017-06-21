@@ -6,7 +6,7 @@ copyright:
 
   years: 2015, 2017
 
-lastupdated: "2017-02-14"
+lastupdated: "2017-05-15"
 
 
 ---
@@ -49,9 +49,9 @@ Depois de instalar a ferramenta cli do {{site.data.keyword.Bluemix_notm}}, o [Re
 bluemix plugin install plugin_name -r Bluemix
 ```
 
-| *{{site.data.keyword.activedeployshort}} CLI* | *{{site.data.keyword.autoscaling}} CLI* | *IBM Bluemix Container Service*  |
+| *{{site.data.keyword.autoscaling}} CLI* |  *IBM Bluemix Container Service*  |
 |-----|-----|-----|
-| Plug-in name: active-deploy <br> [View Docs](/docs/services/ActiveDeploy/cli.html#cli) | Plug-in name: auto-scaling <br> [View Docs](/docs/cli/plugins/auto-scaling/index.html) | Plug-in name: container-service  <br> [View Docs](/docs/containers/cs_cli_devtools.html) |
+| Plug-in name: auto-scaling <br> [View Docs](/docs/cli/plugins/auto-scaling/index.html) |  Plug-in name: container-service  <br> [View Docs](/docs/containers/cs_cli_devtools.html) |
 {: caption="Tabela 2. Plug-ins" caption-side="top"}
 
 |  *Peer de rede privada* | *VPN*  |
@@ -93,9 +93,9 @@ bluemix cf install-plugin plugin_name -r bluemix-cf-repo
 ```
 {: codeblock}
 
-| *Active Deploy* | *Admin Console* |
-|-----------------|-----------------|
-| Plug-in name: active-deploy <br>  [View Docs](/docs/services/ActiveDeploy/cli.html#cli) |  Plug-in name: bluemix-admin <br> [View Docs](/docs/cli/plugins/bluemix_admin/index.html) |
+| *Admin Console* |
+-----------------|
+|  Plug-in name: bluemix-admin <br> [View Docs](/docs/cli/plugins/bluemix_admin/index.html) |
 {: caption="Tabela 4. Plug-ins" caption-side="top"}
 
 | *{{site.data.keyword.IBM}} Containers for {{site.data.keyword.Bluemix_notm}}* | *VPN* |
@@ -108,8 +108,7 @@ bluemix cf install-plugin plugin_name -r bluemix-cf-repo
 
 Faça download e instale os plug-ins para integrar seus serviços do {{site.data.keyword.Bluemix_notm}} favoritos.
 
-| *{{site.data.keyword.jazzhub_short}}* | *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
-|-------------|----------|----------|----------|----------|----------|
-| [Plug-in do Eclipse Egit ![Ícone de link externo](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_egit){: new_window}  <br> [Plug-in do Eclipse do RTC ![Ícone de link externo](../icons/launch-glyph.svg)](https://hub.jazz.net/docs/reference/gitclient/#eclipse_using_rtc){: new_window} | [Plug-in do Eclipse do Liberty ![Ícone de link externo](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Plug-in do Eclipse ![Ícone de link externo](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer
-Eclipse Plug-in](../services/rules/index.html#rulov002) | [Kit de ferramentas do desenvolvedor ![Ícone de link externo](../icons/launch-glyph.svg)](https://nextstage.torolab.ibm.com/apimanagement/getting-started/ ){: new_window} | [Plug-in do Eclipse do Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html) |
+| *Liberty for Java* | *MobileFirst* | *{{site.data.keyword.rules_short}}* | *API Connect* | *Eclipse Tools for Bluemix* |
+|----------|----------|----------|----------|----------|
+| [Plug-in do Eclipse do Liberty ![Ícone de link externo](../icons/launch-glyph.svg)](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/){: new_window} | [Plug-in do Eclipse ![Ícone de link externo](../icons/launch-glyph.svg)](https://marketplace.eclipse.org/content/ibm-mobilefirst-platform-studio){: new_window} | [Rules Designer Eclipse Plug-in](../services/rules/index.html#rulov002) | [Developer Toolkit](/docs/services/apiconnect/apic_003.html#apic_001 ) | [Plug-in do Eclipse do Bluemix](/docs/manageapps/eclipsetools/eclipsetools.html) |
 {: caption="Tabela 6. Plug-ins" caption-side="top"}

@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-21"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -297,7 +297,7 @@ status = myClient.publishEvent("blink", cpuLoad , "binary", 1);
 2. 建構需要發佈的事件。
 3. 指定事件名稱，然後使用 `publishEventOverHTTP()` 方法來發佈事件，如下列程式碼範例所示：
 
-``` sourceCode
+``` 
 DeviceClient myClient = new DeviceClient(deviceProps);
 
 JsonObject event = new JsonObject();
@@ -308,7 +308,7 @@ event.addProperty("mem",  70);
 boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, ContentType.json);
 ```
 
-若要檢視整個程式碼，請參閱 [HttpDeviceEventPublish] 裝置範例。
+若要檢視整個程式碼，請參閱 [HttpDeviceEventPublish ![外部鏈結圖示](../../../../icons/launch-glyph.svg "外部鏈結圖示")] 裝置範例。{: new_window}
 
 根據內容檔中的設定，`publishEventOverHTTP()` 方法會以 Quickstart 模式或已登錄流程模式發佈事件。內容檔的組織 ID 設為 `quickstart` 時，`publishEventOverHTTP()` 方法會將事件發佈至裝置範例 Quickstart 服務，並以一般 HTTP 格式發佈事件。在內容檔中指定有效的已登錄組織時，會透過 HTTPS 安全地發佈事件。
 
@@ -330,7 +330,7 @@ HTTP 通訊協定提供「最多一次」遞送，這與 MQTT 通訊協定的「
 |`timestamp`   |org.joda.time.DateTime|事件的日期和時間。|
 
 
-``` sourceCode
+```
 package com.ibm.iotf.sample.client.device;
 
 import java.util.Properties;

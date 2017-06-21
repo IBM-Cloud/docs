@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2017-01-11"
 #Servicios
 {: #services}
 
-Puede encontrar servicios disponibles en el **Catálogo** en **Servicios** en la interfaz de usuario de {{site.data.keyword.Bluemix}}.
+Puede encontrar servicios disponibles en el **Catálogo** en **Servicios** en la consola de {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
 
@@ -43,7 +43,7 @@ Los servicios predefinidos están disponibles en {{site.data.keyword.Bluemix_not
 |Otro proveedor	|Un servicio que está proporcionado por una empresa que no es IBM.	|El soporte para servicios de terceros está proporcionado por un proveedor de servicios. Si IBM investiga un problema y se determina que el problema es un defecto de un servicio de terceros, IBM no está obligado a proporcionar un arreglo. IBM compartirá análisis con el proveedor de servicios de terceros si es necesario.|
 |Comunidad	|Un servicio que está proporcionado por una comunidad de código abierto.	|El soporte para servicios de la comunidad se proporciona a través de la Comunidad de desarrolladores de {{site.data.keyword.Bluemix_notm}}. Si IBM investiga un problema y se determina que el problema es un defecto de un servicio de comunidad, IBM no está obligado a proporcionar un arreglo.|
 |Beta	|Servicio que no está listo para producción que está en una etapa de prueba de desarrollo. Un servicio beta puede ayudar a los equipos de desarrollo y marketing a evaluar el valor de los servicios antes de que el servicio esté generalmente disponible.	|Se da soporte a los problemas que se determinen que son un defecto de un servicio beta proporcionado por IBM, aunque IBM no está obligado a proporcionar un arreglo. Además, se asignará una incidencia de problema con una gravedad de 3 o 4 cuando proceda. Para obtener información sobre la gravedad de las incidencias, consulte [Cómo obtener soporte](/docs/support/index.html#contacting-bluemix-support).|
-{: caption="Table 1. {{site.data.keyword.Bluemix_notm}} información de soporte de los servicios" caption-side="top"}
+{: caption="Tabla 1. Información de soporte para los servicios de Bluemix" caption-side="top"}
 
 
 
@@ -52,95 +52,13 @@ Los servicios predefinidos están disponibles en {{site.data.keyword.Bluemix_not
 
 Los servicios experimentales pueden no ser estables y es posible que cambien de modo que no sean compatibles con versiones anteriores. No se recomienda utilizar estos servicios en entornos de producción. El soporte para servicios experimentales se proporciona a través de la Comunidad de desarrolladores de {{site.data.keyword.Bluemix_notm}}. Si IBM investiga un problema y se determina que el problema es un defecto de servicio experimental, IBM no está obligado a proporcionar un arreglo.
 
-Para utilizar un servicio en la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, en la interfaz de línea de mandatos cf, en IBM {{site.data.keyword.Bluemix_notm}} DevOps Services o en cualquier herramienta soportada, realice los pasos siguientes:
+Para utilizar un servicio en la consola de {{site.data.keyword.Bluemix_notm}}, en la interfaz de línea de mandatos cf, en IBM {{site.data.keyword.Bluemix_notm}} DevOps Services o en cualquier herramienta soportada, realice los pasos siguientes: 
 
 1. Cree una instancia del servicio. En la mayoría de los casos, la instancia de servicio se puede crear al crear la aplicación.
 
 2. Identifique la aplicación que utiliza la nueva instancia de servicio. En el caso de app web, puede especificar más de una aplicación para utilizar la misma instancia de servicio, normalmente para uso compartido de datos.
 
 3. Escriba su propio código en la aplicación para interactuar con el servicio.
-
-##Servicios por región
-
-No todos los servicios están disponibles en cada región de {{site.data.keyword.Bluemix_notm}}. La siguiente tabla muestra los servicios proporcionados por IBM.
-
-
-
-|Servicio	|Disponible en la región EE.UU. sur	|Disponible en la región Europa Reino Unido |Disponible en la región Australiana Sídney|
-|:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.activedeployshort}}	|Sí		|Sí		|No|
-|{{site.data.keyword.alchemyapishort}} 		|Sí	   	|Sí  		|Sí|
-|{{site.data.keyword.appsecshort}}		|Sí		|No		|No|
-|{{site.data.keyword.alertnotificationshort}}|Sí		|No			|No		|
-|{{site.data.keyword.APS_DA}}			|Sí		|No		|No|
-|{{site.data.keyword.APS_MA}}			|Sí		|No		|No|
-|{{site.data.keyword.amashort}}			|Sí		|Sí		|Sí|
-|{{site.data.keyword.hadoopst}}			|Sí		|No		|No|
-|{{site.data.keyword.APIM}}			|Sí		|Sí		|No|
-|{{site.data.keyword.autoscaling}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.bigicloudst}}		|Sí		|No		|No|
-|{{site.data.keyword.blockstorageshort}}        |No             |Sí            |No |
-|{{site.data.keyword.rules_short}}		|Sí		|Sí		|No|
-|{{site.data.keyword.cloudint}}			|Sí		|Sí		|No|
-|{{site.data.keyword.cloudant}}			|Sí		|Sí		|No|
-|{{site.data.keyword.conceptexpansionshort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.conceptinsightsshort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.dashdbshort}}		|Sí		|Sí		|No|
-|{{site.data.keyword.datacshort}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.DB2OnCloud_short}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.deliverypipeline}}		|Sí		|Sí		|No|
-|{{site.data.keyword.dialogshort}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.documentconversionshort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.creshort}}			|Sí		|No		|No|
-|{{site.data.keyword.game}}			|Sí		|Sí		|Sí|
-|{{site.data.keyword.geospatialshort_Geospatial}}	|Sí	|Sí		|No|
-|{{site.data.keyword.globalizationshort}}	|Sí		|No		|No|
-|{{site.data.keyword.dataworks_short}}		|Sí		|Sí		|No|
-|{{site.data.keyword.twittershort}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.weather_short}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.IntegrationTestingshort}}	|Sí		|Sí		|No|
-|{{site.data.keyword.iot_short}}		|Sí		|No		|No|
-|{{site.data.keyword.keymanagementserviceshort}}|No		|Sí		|No|
-|{{site.data.keyword.languagetranslationshort}}	|Sí		|Sí		|No|
-|{{site.data.keyword.messagehub}}		|Sí		|Sí		|No|
-|{{site.data.keyword.messageresonanceshort}}	|Sí		|Sí		|No|
-|{{site.data.keyword.APS_MAiOS}} 		|Sí		|No		|No|
-|{{site.data.keyword.macm_short}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.mobilemam}}		|Sí		|Sí		|No|
-|{{site.data.keyword.mobiledata}}		|Sí		|Sí		|No|
-|{{site.data.keyword.manda}}			|Sí		|Sí		|No|
-|{{site.data.keyword.mqa}}			|Sí		|Sí		|No|
-|{{site.data.keyword.mql}}			|Sí		|Sí		|No|
-|{{site.data.keyword.nlclassifierlshort}} 	|Sí 		|Sí 		|Sí|
-|{{site.data.keyword.objectstorageshort}}	|Sí		|No		|No|
-|{{site.data.keyword.personalityinsightsshort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.mobilepush}}		|Sí		|Sí		|No|
-|Push para iOS 8					|Sí		|Sí		|No|
-|{{site.data.keyword.questionandanswershort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.rapidApps}}		|Sí		|Sí		|No|
-|{{site.data.keyword.relationshipextractionshort}}	|Sí	|Sí		|Sí|
-|{{site.data.keyword.retrieveandrankshort}}	|Sí 		|Sí 		|Sí|
-|{{site.data.keyword.SecureGateway}}		|Sí		|Sí		|No|
-|{{site.data.keyword.sescashort}}		|Sí		|Sí		|Sí|
-|{{site.data.keyword.ssofull}}			|Sí		|No		|No|
-|{{site.data.keyword.speechtotextshort}}	|Sí 		|Sí	 	|Sí|
-|{{site.data.keyword.sqldb}}			|Sí		|Sí		|No|
-|{{site.data.keyword.staticanalyzershort}}	|Sí		|Sí		|No|
-|{{site.data.keyword.streaminganalyticsshort}}	|Sí		|No		|No|
-|{{site.data.keyword.texttospeechshort}} 	|Sí 		|Sí	 	|Sí|
-|{{site.data.keyword.times}}			|Sí		|Sí		|No|
-|{{site.data.keyword.toneanalyzershort}} 	|Sí 		|Sí 		|Sí|
-|{{site.data.keyword.trackplan}}		|Sí		|Sí		|No|
-|{{site.data.keyword.tradeoffanalyticsshort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.visualinsightsshort}}	|Sí		|Sí		|Sí|
-|{{site.data.keyword.visualizationrenderingshort}} |Sí		|Sí		|No|
-|{{site.data.keyword.workflow}}			|Sí		|Sí		|No|
-|{{site.data.keyword.workloadscheduler}}	|Sí		|Sí		|No|
-|{{site.data.keyword.xpagesservice_short}}	|Sí		|Sí		|No|
-*Tabla 2. Disponibilidad del servicio*
-{: caption="Table 2. Service availability" caption-side="top"}
-
-
 
 # Cómo añadir un servicio a la aplicación
 {: #add_service}
@@ -166,12 +84,12 @@ También puede utilizar servicios que estén alojados en otras regiones si estos
 ## Solicitud de una nueva instancia de servicio
 {: #req_instance}
 
-Para solicitar una nueva instancia de servicio, debe utilizar la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o la interfaz de la línea de mandatos
+Para solicitar una nueva instancia de servicio, debe utilizar la consola de {{site.data.keyword.Bluemix_notm}} o la interfaz de la línea de mandatos
 cf.
 
 **Nota:** Cuando especifique el nombre de servicio, no utilice caracteres que no sean alfabéticos o caracteres numéricos, puesto que los resultados podrían ser erróneos.
 
-Si utiliza la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} para solicitar una instancia de servicio, siga los siguientes pasos:
+Si utiliza la consola de {{site.data.keyword.Bluemix_notm}} para solicitar una instancia de servicio, siga los siguientes pasos:
 
 1. En el **Catálogo** de {{site.data.keyword.Bluemix_notm}}, pulse el mosaico correspondiente al servicio que desea añadir. Se abre la página de detalles del servicio.
 

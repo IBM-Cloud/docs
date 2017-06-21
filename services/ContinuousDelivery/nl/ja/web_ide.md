@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-4-25"
+
 ---
 
 {:new_window: target="_blank"}
@@ -11,7 +12,7 @@ lastupdated: "2017-3-31"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Eclipse Orion IDE を使用したコードの編集
+# Eclipse Orion Web IDE での開発
 {: #web_ide}
 
 Eclipse Orion {{site.data.keyword.webide}} は、Web 開発を行うことのできるブラウザー・ベースの開発環境です。コンテンツ・アシスト、コード補完、エラー・チェックによる支援を利用して JavaScript、HTML、CSS での開発を行うことができます。{{site.data.keyword.webide}} は、ほとんどすべての言語に対応しており、大部分のファイル・タイプに対して構文の強調表示を提供します。ソース管理が組み込まれており、コードをローカルにデプロイしてアプリのテストとデバッグを行うことができます。
@@ -19,7 +20,7 @@ Eclipse Orion {{site.data.keyword.webide}} は、Web 開発を行うことので
 
 何よりも良い点は、{{site.data.keyword.webide}} が Web ベースであるという点です。インストールが必要なものは何もなく、保守や拡大縮小が必要なものも何もありません。インターネット接続さえあれば、どこでも開発を行うことができます。
 
-## エディターのセットアップ
+## IDE のセットアップ
 {: #editorsetup}
 
 {{site.data.keyword.webide}} はカスタマイズ可能であり、開発ニーズに合わせて、カラー・スキーム、テクニカル・ツール、および設定を選択することができます。これらの設定を表示したり変更したりするには、左側のメニューから**「設定」**アイコン<img class="inline" src="images/webide_settings_icon_light_small.png"  alt="設定アイコン">をクリックします。

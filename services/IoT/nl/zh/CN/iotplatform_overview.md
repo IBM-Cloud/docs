@@ -37,6 +37,8 @@ lastupdated: "2017-03-13"
 
 为确保安全性，无法进行跨组织通信。在两个组织之间传输数据的唯一方式是在每个组织中创建一个应用程序，用于与其他组织中的应用程序通信。
 
+**注：**{{site.data.keyword.iot_short_notm}} 组织标识不同于 [Bluemix 组织](../../docs/admin/orgs_spaces.html#orginfo)。
+
 ### 设备
 
 设备可以是连接到因特网且可将数据推送到云的任何对象。但是，设备无法直接与其他设备通信，而是接受来自应用程序的命令，并将事件发送到应用程序。{{site.data.keyword.iot_short_notm}} 中的设备通过唯一认证令牌进行标识。设备必须先进行注册，才可连接到 {{site.data.keyword.iot_short_notm}}。

@@ -37,7 +37,7 @@ Quando um advanced security plan (ASP) é usado para uma organização, um anali
 também é possível acessar as configurações de segurança de conexão da página **Geral** em **Configurações**. Clique em **Abrir política de segurança de conexão**.
 
 ## Configurando políticas de conexão para segurança padrão
-{: #config_connect_standard}
+{: #config_connect}
 
 Para organizações que usam a segurança padrão, você muda as configurações de segurança na página **Geral** em **Configurações**. É possível configurar o nível de segurança padrão que é aplicado a todos os dispositivos.
 

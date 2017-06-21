@@ -13,7 +13,7 @@ lastupdated: "2017-03-14"
 {:pre: .pre}
 
 
-# Développement de contrats intelligents pour l'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}}
+# Développement de contrats intelligents de chaîne de blocs
 {: #iotblockchain_link}
 
 Utilisez {{site.data.keyword.blockchainfull}} et l'environnement de développement Hyperledger pour créer et tester vos propres contrats intelligents à partir d'exemples de contrat fournis par IBM.
@@ -47,7 +47,7 @@ Le diagramme suivant illustre l'environnement de développement d'intégration d
 
 Découvrez le produit {{site.data.keyword.blockchainfull_notm}}, de quelle manière il est lié au concept général de chaîne de blocs et ce qu'il peut faire pour vous :
 - [{{site.data.keyword.blockchainfull_notm}} ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/blockchain/){: new_window} sur le site IBM.com.
-- [{{site.data.keyword.blockchainfull_notm}} DOCS](https://console.ng.bluemix.net/docs/services/blockchain/index.html) -  Mise en route du service {{site.data.keyword.blockchainfull_notm}}. 
+- [{{site.data.keyword.blockchainfull_notm}} DOCS](https://console.ng.bluemix.net/docs/services/blockchain/index.html) -  Mise en route du service {{site.data.keyword.blockchainfull_notm}}.
 - [{{site.data.keyword.blockchainfull_notm}} HFC SDK for Node.js avec documentation API ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/hyperledger/fabric/tree/v0.6/docs/API){: new_window} - Présentation de l'API {{site.data.keyword.blockchainfull_notm}}.
 - [{{site.data.keyword.blockchainfull_notm}} pour les développeurs ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/blockchain/for_developers.html){: new_window} - Présentation de la façon dont blockchain s'intègre dans votre environnement de développement, avec des procédures détaillées et des démonstrations et du code déployable pour s'exécuter sur {{site.data.keyword.Bluemix_notm}}.
 
@@ -136,7 +136,7 @@ L'intégration de chaîne de blocs {{site.data.keyword.iot_short_notm}} requiert
      11. Dans le tableau de bord {{site.data.keyword.iot_short_notm}}, sélectionnez **Extensions** dans barre latérale de menus.
      12. Sur la page **Extensions**, dans le titre Blockchain, cliquez sur **Configuration** ou sur l'![icône représentant un engrenage](../images/gear.png "Configure") si des matrices sont déjà liées.
      13. Dans la section Configuration de la chaîne de blocs, cliquez sur **Ajouter une matrice**, puis entrez des informations sur la matrice.
-    **Remarque :** L'intégration de chaîne de blocs doit être activée pour permettre l'ajout de matrices. Pour plus d'informations, voir [Chaîne de blocs](../reference/extensions/index.html#blockchain) dans la rubrique Intégrations de service externe. 
+    **Remarque :** L'intégration de chaîne de blocs doit être activée pour permettre l'ajout de matrices. Pour plus d'informations, voir [Chaîne de blocs](../reference/extensions/index.html#blockchain) dans la rubrique Intégrations de service externe.
     1. Dans l'onglet **Matrice**, entrez un nom permettant d'identifier la matrice dans {{site.data.keyword.iot_short_notm}}, puis cliquez sur **Suivant**.   
     2. Dans l'onglet **Homologue**, entrez les informations sur l'homologue :  
    <table>
@@ -187,11 +187,11 @@ Les contrats intelligent que vous souhaitez déployer doivent figurer dans un r�
 2.  Configurez un développement Hyperledger local et un environnement de test.  
 Pour développer et tester votre propre code en chaîne avant de le déployer sur {{site.data.keyword.blockchainfull_notm}}, vous devez configurer un environnement de développement local. Cet environnement comprend le langage GoLang que vous utilisez afin d'écrire le code en chaîne pour vos contrats.
  1. Configurez l'environnement de développement.  
- L'environnement de développement inclut les outils dont vous avez besoin pour développer vos contrats intelligents à l'aide de la génération de code en chaîne en GoLang. Pour plus d'informations, voir [Setting up the development environment ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")]( https://github.com/hyperledger/fabric/blob/master/docs/source/dev-setup/devenv.rst){: new_window} dans la documentation Hyperledger. 
+ L'environnement de développement inclut les outils dont vous avez besoin pour développer vos contrats intelligents à l'aide de la génération de code en chaîne en GoLang. Pour plus d'informations, voir [Setting up the development environment ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")]( https://github.com/hyperledger/fabric/blob/master/docs/source/dev-setup/devenv.rst){: new_window} dans la documentation Hyperledger.
  2. Installez un environnement de débogage de code en chaîne.   
- L'environnement de débogage fournit les outils dont vous avez besoin pour tester et déboguer vos contrats intelligents avant de les déployer sur {{site.data.keyword.blockchainfull_notm}}. Pour plus d'informations, voir [Writing, Building, and Running Chaincode in a Development Environment ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Chaincode-setup.rst){: new_window} dans la documentation Hyperledger. 
+ L'environnement de débogage fournit les outils dont vous avez besoin pour tester et déboguer vos contrats intelligents avant de les déployer sur {{site.data.keyword.blockchainfull_notm}}. Pour plus d'informations, voir [Writing, Building, and Running Chaincode in a Development Environment ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Chaincode-setup.rst){: new_window} dans la documentation Hyperledger.
  3. Configurez un réseau pour le développement.   
- Le réseau pour le développement fournit un environnement de type production plus strict dans lequel vous pouvez réaliser des tests finaux sur vos contrats intelligents.  Utilisez cet environnement pour réaliser des tests finaux sur les contrats testés et débogués avant de les déployer sur {{site.data.keyword.blockchainfull_notm}}. Pour plus d'informations, voir [Setting Up a Network ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Network-setup.rst){: new_window} dans la documentation Hyperledger. 
+ Le réseau pour le développement fournit un environnement de type production plus strict dans lequel vous pouvez réaliser des tests finaux sur vos contrats intelligents.  Utilisez cet environnement pour réaliser des tests finaux sur les contrats testés et débogués avant de les déployer sur {{site.data.keyword.blockchainfull_notm}}. Pour plus d'informations, voir [Setting Up a Network ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/hyperledger/fabric/blob/master/docs/source/Setup/Network-setup.rst){: new_window} dans la documentation Hyperledger.
 
 3. Facultatif : Téléchargez les exemples de contrats intelligents fournis par IBM.  
 IBM fournit un certain nombre de contrats intelligents que vous pouvez télécharger et utiliser directement en l'état ou que vous pouvez adapter aux objectifs de votre organisation.  
@@ -308,7 +308,7 @@ Pour télécharger les exemples de contrats :
 Pour tester votre contrat intelligent, effectuez un test de bout en bout en créant un  terminal dans {{site.data.keyword.iot_short_notm}}, en connectant votre terminal à {{site.data.keyword.iot_short_notm}}, en configurant IoT Blockchain pour qu'il se connecte à votre matrice de chaîne de blocs et en configurant  {{site.data.keyword.iot_short_notm}} pour qu'il mappe et stocke vos messages de terminal dans la chaîne de blocs. A l'aide de la console {{site.data.keyword.blockchainfull_notm}}, vous pouvez afficher la chaîne de blocs pour voir les données de terminal dans le grand livre. Si votre contrat prend en charge la fonction readAsset(), vous pouvez utiliser l'interface utilisateur de surveillance pour afficher votre chaîne de blocs et voir les données de terminal de votre propre scénario stockées de manière indélébile dans une chaîne de blocs.
 
 5. Configurez l'interface utilisateur de surveillance pour qu'elle se connecte à {{site.data.keyword.blockchainfull_notm}}.  
- **Astuce :** Si vous n'avez pas encore installé l'interface utilisateur de surveillance dans votre environnement local, vous pouvez l'installer dès maintenant. Suivez les instructions décrites dans le fichier Readme Monitoring UI disponible dans le répertoire GitHub [Blockchain Monitoring UI ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window}.   
+ **Astuce :** Si vous n'avez pas encore installé l'interface utilisateur de surveillance dans votre environnement local, vous pouvez l'installer dès maintenant. Suivez les instructions décrites dans le fichier Readme Monitoring UI disponible dans le répertoire GitHub [Blockchain Monitoring UI ![Icône de lien externe](../../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-watson-iot/blockchain-samples/tree/master/applications/monitoring_ui){: new_window}.  
  Accédez aux paramètres de configuration en cliquant sur le bouton **CONFIGURATION**.   
  Utilisez les informations suivantes pour vous connecter à un contrat :
 <table>

@@ -29,7 +29,7 @@ end
 從指令行鍵入 `pod install`。此指令會安裝適用於具有 watchOS 延伸的 iOS 應用程式的 SDK。使用 CocoaPods 為您的應用程式所建立的工作區檔案，在 Xcode 中開啟專案。 
 
 安裝之後，請開啟專案工作區。您可能會在建置時收到下列警告：
-`Use Legacy Swift Language Version” (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
+`Use Legacy Swift Language Version (SWIFT_VERSION) is required to be configured correctly for targets which use Swift. Use the [Edit > Convert > To Current Swift Syntax…] menu to choose a Swift version or use the Build Settings editor to configure the build setting directly.`
 如果 Cocoapods 未在 Pods 專案中更新 Swift 版本，則會導致此情況。若要修正，請選取 Pods 專案及 OpenWhisk 目標。移至「建置設定」，並將`使用舊式 Swift 語言版本`設定變更為 `no`。或者，您也可以在 Podfile 尾端新增下列後置安裝指示：
 
 ```
@@ -171,7 +171,7 @@ do {
 }
 ```
 
-SDK 預設只會傳回啟動 ID 以及所呼叫動作所產生的任何結果。若要取得整個回應物件的 meta 資料（包括 HTTP 回應狀態碼），請使用下列設定：
+依預設，SDK 只會傳回啟動 ID 以及所呼叫動作所產生的任何結果。若要取得整個回應物件的 meta 資料（包括 HTTP 回應狀態碼），請使用下列設定：
 
 ```swift
 whisk.verboseReplies = true

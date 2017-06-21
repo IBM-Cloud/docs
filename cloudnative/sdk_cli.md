@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-05-19"
 
 ---
 {:new_window: target="_blank"}
@@ -74,6 +74,12 @@ Use `bluemix sdk generate [arguments...] [command options]`.
    * `--android` - generate an Android SDK
    * `--ios` - generate an iOS Swift SDK
    * `--swift` - generate a Swift server SDK
+   * `--js` - generate a JavaScript SDK
+* `LOCATION` (required) - specifies the type for `OPENAPI_DOC_LOCATION`
+   * `-r` - remote URL
+   * `-f` - file
+   * `-a` - app that runs on {{site.data.keyword.Bluemix_notm}}
+   * `-l` - localhost URL
 * `--output "YOUR_RELATIVE_PATH"` (optional) - places the generated SDK in the directory that is specified by `YOUR_RELATIVE_PATH` (overwrites if existing SDK is present)
 * `--unzip` (optional) - extracts the generated SDK (overwrites if existing SDK artifacts are present)
 
@@ -84,14 +90,14 @@ Use `bluemix sdk generate [arguments...] [command options]`.
 To generate an SDK from a Cloud Foundry app that is running in {{site.data.keyword.Bluemix_notm}}, you can use the app's name as a parameter to the CLI. The following command uses the app's name as the `SDK_Name`.
 
 ```
-bluemix sdk generate [APP_NAME] [PLATFORM]
+bluemix sdk generate [APP_NAME] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
 To generate an SDK from a URL to an Open API definition file or a local JSON or Yaml file, use the following command.
 
 ```
-bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [Platform]
+bluemix sdk generate [OPENAPI_DOC_LOCATION] [SDK_Name] [LOCATION] [PLATFORM]
 ```
 {: codeblock}
 
@@ -115,14 +121,14 @@ Use `bluemix sdk validate [argument]`.
 To validate a Cloud Foundry app's API spec that is running in {{site.data.keyword.Bluemix_notm}}, you can use the app's name as a parameter to the CLI.
 
 ```
-bluemix sdk validate [APP_NAME]
+bluemix sdk validate [APP_NAME] [LOCATION]
 ```
 {: codeblock}
 
 To validate an SDK from the URL to an API spec document or a local JSON or Yaml file, use the following command.
 
 ```
-bluemix sdk validate [OPENAPI_DOC_LOCATION]
+bluemix sdk validate [OPENAPI_DOC_LOCATION] [LOCATION]
 ```
 {: codeblock}
 

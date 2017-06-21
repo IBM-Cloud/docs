@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-3-31"
+lastupdated: "2017-4-25"
+
 ---
 
 {:new_window: target="_blank"}
@@ -11,7 +12,7 @@ lastupdated: "2017-3-31"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Modifica del codice con Eclipse Orion IDE
+# Sviluppo con Eclipse Orion Web IDE
 {: #web_ide}
 
 Eclipse Orion {{site.data.keyword.webide}} è un ambiente di sviluppo basato sul browser in cui puoi sviluppare per il web. Puoi sviluppare in JavaScript, HTML e CSS con l'aiuto dell'assistenza del contenuto, del completamento del codice e del controllo errori. {{site.data.keyword.webide}} utilizza quasi tutti i linguaggi e offre l'evidenziazione della sintassi per molti tipi di file. Il controllo di origine è integrato e può distribuire il codice localmente per verificare ed eseguire il debug delle tue applicazioni.
@@ -19,7 +20,7 @@ Eclipse Orion {{site.data.keyword.webide}} è un ambiente di sviluppo basato sul
 
 Cosa più importante, {{site.data.keyword.webide}} si avvale della tecnologia web. Non hai nulla da installare, da mantenere e da scalare. Puoi sviluppare ovunque tu abbia una connessione a internet.
 
-## Configurazione dell'editor
+## Configurazione dell'IDE
 {: #editorsetup}
 
 {{site.data.keyword.webide}} è personalizzabile in modo che puoi scegliere gli schemi di colori, gli strumenti tecnici e le impostazioni che incontrano i tuoi bisogni di sviluppo. Per visualizzare e modificare le impostazioni, dal menu a sinistra, fai clic sull'icona **Impostazioni** <img class="inline" src="images/webide_settings_icon_light_small.png"  alt="L'icona impostazioni">.
@@ -34,7 +35,7 @@ Per impostazione predefinita, le impostazioni per lo stile dell'editor e la dime
 
 2. Fai clic su **Impostazioni dell'editor**.
 
-3. Per includere o escludere un'impostazione dal menu **Impostazioni dell'editor locali**, fai clic sulla stella accanto a ogni impostazione. 
+3. Per includere o escludere un'impostazione dal menu **Impostazioni dell'editor locali**, fai clic sulla stella accanto a ogni impostazione.
 
 ![Attiva impostazioni dell'editor](images/webide_editor_settings_toggle_light.png)
 
@@ -76,7 +77,7 @@ Per visualizzare un elenco dei tasti di scelta rapida nell'editor, premi Alt+Shi
 ## Distribuzione di un'applicazione dal tuo spazio di lavoro
 {: #deploy}
 
-1. Per distribuire la tua applicazione, dalla barra del menu, seleziona o crea una configurazione di avvio. 
+1. Per distribuire la tua applicazione, dalla barra del menu, seleziona o crea una configurazione di avvio.
 1. Fai clic sull'icona di distribuzione <img class="inline" src="images/webide_deploy_button_light_small.png"  alt="L'icona di distribuzione">. Viene distribuita un'istanza alla tua applicazione utilizzando i contenuti correnti del tuo spazio di lavoro e l'ambiente definito nella tua configurazione di avvio. 
 2. Dopo che la tua applicazione è stata distribuita, puoi utilizzare la barra di esecuzione per arrestare, riavviare o eseguire il debug della applicazione, dei log di visualizzazione o di altro.
 ![Barra di esecuzione](images/webide_runbar_light.png)    

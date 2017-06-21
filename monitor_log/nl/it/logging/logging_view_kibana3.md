@@ -56,7 +56,7 @@ Dopo aver personalizzato un dashboard, puoi scegliere una delle seguenti azioni:
 
 * Puoi incorporare il tuo dashboard in una pagina web. Perché un utente possa visualizzare un dashboard incorporato, deve avere le autorizzazioni per accedere a Kibana.
 
-Per ulteriori informazioni, consulta la documentazione [Kibana ![icona link esterno](../../icons/launch-glyph.svg "External link icon")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
+Per ulteriori informazioni, consulta la documentazione [Kibana ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 **Nota:** Kibana 4 e Kibana 3 sono supportati. Kibana 3 è obsoleto.
 
@@ -76,7 +76,7 @@ Per visualizzare i log di un'applicazione Cloud Foundry in Kibana, completa la s
 
 Se non visualizzi alcun log, modifica il selezionatore di tempo nell'intestazione.
 
-Per ulteriori informazioni sulla personalizzazione di un dashboard Kibana, consulta [questo post del blog ![icona link esterno](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} o la documentazione [Kibana ![icona link esterno](../../icons/launch-glyph.svg "External link icon")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
+Per ulteriori informazioni sulla personalizzazione di un dashboard Kibana, consulta [questo post del blog ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} o la documentazione [Kibana ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 ##  Accesso al dashboard Kibana da un browser web
 {: #launch_Kibana_from_browser}
@@ -91,7 +91,7 @@ Completa la seguente procedura per aprire un dashboard Kibana da un browser:
 
 Se non visualizzi alcun log, modifica il selezionatore di tempo nell'intestazione.
 
-Per ulteriori informazioni sulla personalizzazione di un dashboard Kibana, consulta [questo post del blog ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} o la documentazione [Kibana ![icona link esterno](../icons/launch-glyph.svg "External link icon")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
+Per ulteriori informazioni sulla personalizzazione di un dashboard Kibana, consulta [questo post del blog ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} o la documentazione [Kibana ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window}.
 
 
 

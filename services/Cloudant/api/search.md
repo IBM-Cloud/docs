@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-13"
+lastupdated: "2017-05-25"
 
 ---
 
@@ -363,7 +363,7 @@ You can test the results of analyzer tokenization by posting sample data to the 
 _Example of using HTTP to test the `keyword` analyzer:_
 
 ```http
-Host: <account>.cloudant.com
+Host: $ACCOUNT.cloudant.com
 POST /_search_analyze HTTP/1.1
 Content-Type: application/json
 {"analyzer":"keyword", "text":"ablanks@renovations.com"}
@@ -373,7 +373,7 @@ Content-Type: application/json
 _Example of using the command line to test the `keyword` analyzer:_
 
 ```sh
-curl 'https://<account>.cloudant.com/_search_analyze' -H 'Content-Type: application/json'
+curl 'https://$ACCOUNT.cloudant.com/_search_analyze' -H 'Content-Type: application/json'
 	-d '{"analyzer":"keyword", "text":"ablanks@renovations.com"}'
 ```
 {:codeblock}
@@ -392,7 +392,7 @@ _Result of testing the `keyword` analyzer:_
 _Example of using HTTP to test the `standard` analyzer:_
 
 ```http
-Host: <account>.cloudant.com
+Host: $ACCOUNT.cloudant.com
 POST /_search_analyze HTTP/1.1
 Content-Type: application/json
 {"analyzer":"standard", "text":"ablanks@renovations.com"}
@@ -402,7 +402,7 @@ Content-Type: application/json
 _Example of using the command line to test the `standard` analyzer:_
 
 ```sh
-curl 'https://<account>.cloudant.com/_search_analyze' -H 'Content-Type: application/json'
+curl 'https://$ACCOUNT.cloudant.com/_search_analyze' -H 'Content-Type: application/json'
 	-d '{"analyzer":"standard", "text":"ablanks@renovations.com"}'
 ```
 {:codeblock}
@@ -423,13 +423,13 @@ _Result of testing the `standard` analyzer:_
 
 After you create an index,
 you can query it with a `GET` request to
-`https://$USERNAME.cloudant.com/$DATABASE/_design/$DESIGN_ID/_search/$INDEX_NAME`.
+`https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_search/$INDEX_NAME`.
 Specify your search by using the `query` parameter.
 
 _Example of using HTTP to query an index:_
 
 ```http
-GET /$DATABASE/_design/$DESIGN_DOC/_search/$INDEX_NAME?include_docs=true\&query="*:*"\&limit=1 HTTP/1.1
+GET /$DATABASE/_design/$DDOC/_search/$INDEX_NAME?include_docs=true\&query="*:*"\&limit=1 HTTP/1.1
 Content-Type: application/json
 Host: account.cloudant.com
 ```
@@ -438,8 +438,7 @@ Host: account.cloudant.com
 _Example to using the command line to query an index:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/_design/$DESIGN_DOC/_search/$INDEX_NAME?include_docs=true\&query="*:*"\&limit=1 \
-	-u $USERNAME
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_search/$INDEX_NAME?include_docs=true\&query="*:*"\&limit=1 \
 ```
 {:codeblock}
 
@@ -449,7 +448,7 @@ _Example of using JavaScript to query an index:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$USERNAME+".cloudant.com");
+var account = nano("https://"+$ACCOUNT+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
 var db = account.use($DATABASE);
 
 db.search($DESIGN_ID, $SEARCH_INDEX, {
@@ -784,6 +783,16 @@ you can run a query with `~` to find terms like the search term.
 For instance,
 `look~` finds the terms `book` and `took`.
 
+> **Note**: If the lower and upper bounds of a range 
+  query are both strings that contain only numeric digits, 
+  the bounds are treated as numbers not as strings.
+  For example,
+  if you search by using the query
+  `mod_date:["20170101" TO "20171231"]`,
+  the results include documents for which `mod_date` is
+  between the numeric values 20170101 and 20171231,
+  not between the strings "20170101" and "20171231".
+
 You can alter the importance of a search term by adding `^` and a positive number.
 This alteration makes matches containing the term more or less relevant,
 proportional to the power of the boost value.
@@ -864,7 +873,7 @@ function(doc) {
 >   **Note**: To use facets,
     all the documents in the index must include all the fields that have faceting enabled.
     If your documents do not include all the fields,
-    you receive a `bad_request` error with the following reason, "Dim `field_name` does not exist."
+    you receive a `bad_request` error with the following reason, "The `field_name` does not exist."
     If each document does not contain all the fields for facets,
     create separate indexes for each field.
     If you do not create separate indexes for each field,
@@ -876,7 +885,7 @@ _Example `if` statement to verify that the required fields exist in each documen
 ```javascript
 if (typeof doc.town == "string" && typeof doc.name == "string") {
         index("town", doc.town, {facet: true});
-        index("town", doc.town, {facet: true});        
+        index("name", doc.name, {facet: true});        
     }
 ```
 {:codeblock}
@@ -1125,7 +1134,7 @@ _Example of using HTTP to search with highlighting enabled:_
 
 ```http
 GET /movies/_design/searches/_search/movies?q=movie_name:Azazel&highlight_fields=["movie_name"]&highlight_pre_tag="<b>"&highlight_post_tag="</b>"&highlights_size=30&highlights_number=2 HTTP/1.1
-HOST: <account>.cloudant.com
+HOST: $ACCOUNT.cloudant.com
 Authorization: ...
 ```
 {:codeblock}
@@ -1133,7 +1142,7 @@ Authorization: ...
 _Example of using the command line to search with highlighting enabled:_
 
 ```sh
-curl "https://$user:$password@$account.cloudant.com/movies/_design/searches/_search/movies?q=movie_name:Azazel&highlight_fields=\[\"movie_name\"\]&highlight_pre_tag=\"<b>\"&highlight_post_tag=\"</b>\"&highlights_size=30&highlights_number=2
+curl "https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com/movies/_design/searches/_search/movies?q=movie_name:Azazel&highlight_fields=\[\"movie_name\"\]&highlight_pre_tag=\"<b>\"&highlight_post_tag=\"</b>\"&highlights_size=30&highlights_number=2
 ```
 {:codeblock}
 
@@ -1157,20 +1166,20 @@ To retrieve information about a search index,
 you send a `GET` request to the `_search_info` endpoint,
 as shown in the following example.
 `DDOC` refers to the design document that contains the index,
-and `INDEX` is the name of the index.
+and `INDEX_NAME` is the name of the index.
 
 _Example of using HTTP to request search index metadata:_
 
 ```http
-GET /<DATABASE>/_design/<DDOC>/_search_info/<INDEX> HTTP/1.1
+GET /$DATABASE/_design/$DDOC/_search_info/$INDEX_NAME HTTP/1.1
 ```
 {:codeblock}
 
 _Example of using the command line to request search index metadata:_
 
 ```sh
-curl "https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_search_info/$INDEX" \
-     -X GET -u "$USERNAME:$PASSWORD"
+curl "https://$ACCOUNT.cloudant.com/$DATABASE/_design/$DDOC/_search_info/$INDEX_NAME" \
+     -X GET
 ```
 {:codeblock}
 

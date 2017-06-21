@@ -39,6 +39,9 @@ Quando se registrar com o {{site.data.keyword.iot_short_notm}}, você receberá 
 
 Para sua segurança, é impossível a comunicação entre organizações. A única maneira de transmitir dados entre duas organizações é criando um aplicativo em cada organização que irá se comunicar com os aplicativos na outra organização.
 
+**Nota:** O ID de sua organização do {{site.data.keyword.iot_short_notm}} é diferente de
+sua [organização do Bluemix](../../docs/admin/orgs_spaces.html#orginfo).
+
 ### Dispositivos
 
 Um dispositivo pode ser qualquer coisa que tenha uma conexão com a Internet e que possa enviar dados por push para a nuvem. No entanto, os dispositivos não podem se comunicar diretamente com outros dispositivos, em vez disso, os dispositivos aceitam comandos de aplicativos e enviam eventos para aplicativos. Os dispositivos no {{site.data.keyword.iot_short_notm}} são identificados por um token de autenticação exclusivo. Os dispositivos devem ser registrados antes que possam ser conectar ao {{site.data.keyword.iot_short_notm}}.

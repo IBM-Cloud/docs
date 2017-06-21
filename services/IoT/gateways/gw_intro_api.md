@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-03-21"
+lastupdated: "2017-05-24"
 
 ---
 
@@ -78,7 +78,7 @@ Where:
 
 ### Content-Type request headers
 
-A `Content-Type` request header must be provided with the request. The following table shows how the supported types are mapped to the {{site.data.keyword.iot_short_notm}} internal formats:
+A `Content-Type` request header should be provided with the request if the content is not JSON. The following table shows how the supported types are mapped to the {{site.data.keyword.iot_short_notm}} internal formats:
 
 |Content-Type header|Format in {{site.data.keyword.iot_short_notm}}|
 |:---|:---|
@@ -94,3 +94,31 @@ Similar to the MQTT quality of service "at most once" delivery service level 0, 
 For more information about the MQTT protocol and the quality of service levels for {{site.data.keyword.iot_short_notm}}, see [MQTT messaging](../reference/mqtt/index.html).
 
 For more information about managing gateway devices by using APIs, see [HTTP REST APIs for gateway devices](../gateways/gw_api.html).
+
+## Receiving commands
+{: #receive_commands}
+
+In addition to using the MQTT messaging protocol, you can also configure your gateway devices to receive commands from {{site.data.keyword.iot_short_notm}} over HTTP by using HTTP Messaging API commands. A gateway device can receive commands that are directed to devices within its associated resource group. For more information about gateway resource groups, see [Gateway Access Control (Beta)](../gateways/gateway-access-control.html).
+
+Use one of the following URLs to submit a ``POST`` request from a gateway that is connected to {{site.data.keyword.iot_short_notm}}:
+
+### Non-secure POST request
+<pre class="pre"><code class="hljs">http://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:1883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
+
+### Secure POST request
+
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">orgId</var>.messaging.internetofthings.ibmcloud.com:8883/api/v0002/device/types/<var class="keyword varname">typeId</var>/devices/<var class="keyword varname">deviceId</var>/commands/<var class="keyword varname">command</var>/request</code></pre>
+
+**Note:** Port 443, the default SSL port, can also be specified for secure HTTP API calls.
+
+You can optionally include the parameter *waitTimeSecs* in the body of the HTTP request to specify an integer that represents the maximum number of seconds to wait for a command:
+<pre class="pre"><code class="hljs">{"waitTimeSecs": 5} </code></pre>
+
+
+**Important notes:**
+- The value of *waitTimeSecs* must be an integer in the range 0 - 3600 seconds. The default value is 0.
+- To receive commands for any device type, use the "any" wildcard character (+) for the `typeId` component. If the wildcard character is used, the device type is contained in the response header field *X-deviceType*.
+- To receive commands for any device, use the "any" wildcard character (+) for the `deviceId` component. If the wildcard character is used, the device identifier is contained in the response header field *X-deviceId*.
+- To receive any command, use the "any" wildcard character (+) for the `command` component. If the wildcard character is used, the command identifier is contained in the response header field *X-commandId*.
+- If the HTTP response status code is 200, the command data is contained in the body of the response. Review the response header field *Content-Type* to find the content type.
+- If the HTTP response status code is 204, no command data is available.

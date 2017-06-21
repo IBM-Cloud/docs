@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -14,9 +14,7 @@ lastupdated: "2017-01-11"
 #Servizi
 {: #services}
 
-I servizi disponibili sono elencati nel **catalogo** sotto **Servizi**
-nell'interfaccia utente
-di {{site.data.keyword.Bluemix}}.
+I servizi disponibili sono elencati nel **Catalogo** sotto **Servizi** nella console {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
 
@@ -73,7 +71,7 @@ I servizi sperimentali potrebbero non essere stabili e possono cambiare secondo 
 e tale problema viene considerato come un difetto in un servizio sperimentale,
 IBM non è tenuto a fornire una correzione.
 
-Per utilizzare un servizio nell'interfaccia utente di {{site.data.keyword.Bluemix_notm}}, nell'interfaccia riga di comando cf, in IBM {{site.data.keyword.Bluemix_notm}} DevOps Services o in qualsiasi strumento supportato, attieniti alla seguente procedura:
+Per utilizzare un servizio nella console {{site.data.keyword.Bluemix_notm}}, nell'interfaccia riga di comando cf, in IBM {{site.data.keyword.Bluemix_notm}} DevOps Services o in qualsiasi strumento supportato, attieniti alla seguente procedura:
 
 1. Crea un'istanza del servizio. Nella maggior parte dei casi,
 l'istanza del servizio può essere creata quando crei l'applicazione.
@@ -83,89 +81,6 @@ utilizzare la stessa istanza del servizio, in genere per la condivisione dei dat
 
 3. Scrivi il codice nella tua applicazione per consentire l'integrazione con il
 servizio.
-
-##Servizi per regione
-
-Non tutti i servizi sono
-disponibili in ogni regione {{site.data.keyword.Bluemix_notm}}. La seguente tabella mostra i servizi forniti da IBM.
-
-
-
-|Servizio	|Disponibile nella regione Stati Uniti Sud	|Disponibile nella regione Europa Regno Unito |Disponibile nella regione di Sydney in Australia|
-|:----------|:------------------------------|:------------------|:------------------|
-|{{site.data.keyword.activedeployshort}}	|Sì		|Sì		|No|
-|{{site.data.keyword.alchemyapishort}} 		|Sì	   	|Sì  		|Sì|
-|{{site.data.keyword.appsecshort}}		|Sì		|No		|No|
-|{{site.data.keyword.alertnotificationshort}}|Sì		|No			|No		|
-|{{site.data.keyword.APS_DA}}			|Sì		|No		|No|
-|{{site.data.keyword.APS_MA}}			|Sì		|No		|No|
-|{{site.data.keyword.amashort}}			|Sì		|Sì		|Sì|
-|{{site.data.keyword.hadoopst}}			|Sì		|No		|No|
-|{{site.data.keyword.APIM}}			|Sì		|Sì		|No|
-|{{site.data.keyword.autoscaling}}		|Sì		|Sì		|Sì|
-|{{site.data.keyword.bigicloudst}}		|Sì		|No		|No|
-|{{site.data.keyword.blockstorageshort}}        |No             |Sì            |No |
-|{{site.data.keyword.rules_short}}		|Sì		|Sì		|No|
-|{{site.data.keyword.cloudint}}			|Sì		|Sì		|No|
-|{{site.data.keyword.cloudant}}			|Sì		|Sì		|No|
-|{{site.data.keyword.conceptexpansionshort}}	|Sì		|Sì		|Sì|
-|{{site.data.keyword.conceptinsightsshort}}	|Sì		|Sì		|Sì|
-|{{site.data.keyword.dashdbshort}}		|Sì		|Sì		|No|
-|{{site.data.keyword.datacshort}}		|Sì		|Sì		|Sì|
-|{{site.data.keyword.DB2OnCloud_short}}		|Sì		|Sì		|Sì|
-|{{site.data.keyword.deliverypipeline}}		|Sì		|Sì		|No|
-|{{site.data.keyword.dialogshort}}		|Sì		|Sì		|Sì|
-|{{site.data.keyword.documentconversionshort}}	|Sì		|Sì		|Sì|
-|{{site.data.keyword.creshort}}			|Sì		|No		|No|
-|{{site.data.keyword.game}}			|Sì		|Sì		|Sì|
-|{{site.data.keyword.geospatialshort_Geospatial}}	|Sì	|Sì		|No|
-|{{site.data.keyword.globalizationshort}}	|Sì		|No		|No|
-|{{site.data.keyword.dataworks_short}}		|Sì		|Sì		|No|
-|{{site.data.keyword.twittershort}}		|Sì		|Sì		|Sì|
-|{{site.data.keyword.weather_short}}		|Sì		|Sì		|Sì|
-|{{site.data.keyword.IntegrationTestingshort}}	|Sì		|Sì		|No|
-|{{site.data.keyword.iot_short}}		|Sì		|No		|No|
-|{{site.data.keyword.keymanagementserviceshort}}|No		|Sì		|No|
-|{{site.data.keyword.languagetranslationshort}}	|Sì		|Sì		|No|
-|{{site.data.keyword.messagehub}}		|Sì		|Sì		|No|
-|{{site.data.keyword.messageresonanceshort}}	|Sì		|Sì		|No|
-|{{site.data.keyword.APS_MAiOS}} 		|Sì		|No		|No|
-|{{site.data.keyword.macm_short}}		|Sì		|Sì		|Sì|
-|{{site.data.keyword.mobilemam}}		|Sì		|Sì		|No|
-|{{site.data.keyword.mobiledata}}		|Sì		|Sì		|No|
-|{{site.data.keyword.manda}}			|Sì		|Sì		|No|
-|{{site.data.keyword.mqa}}			|Sì		|Sì		|No|
-|{{site.data.keyword.mql}}			|Sì		|Sì		|No|
-|{{site.data.keyword.nlclassifierlshort}} 	|Sì 		|Sì 		|Sì|
-|{{site.data.keyword.objectstorageshort}}	|Sì		|No		|No|
-|{{site.data.keyword.personalityinsightsshort}}	|Sì		|Sì		|Sì|
-|{{site.data.keyword.mobilepush}}		|Sì		|Sì		|No|
-|Push for iOS 8					|Sì		|Sì		|No|
-|{{site.data.keyword.questionandanswershort}}	|Sì		|Sì		|Sì|
-|{{site.data.keyword.rapidApps}}		|Sì		|Sì		|No|
-|{{site.data.keyword.relationshipextractionshort}}	|Sì	|Sì		|Sì|
-|{{site.data.keyword.retrieveandrankshort}}	|Sì 		|Sì 		|Sì|
-|{{site.data.keyword.SecureGateway}}		|Sì		|Sì		|No|
-|{{site.data.keyword.sescashort}}		|Sì		|Sì		|Sì|
-|{{site.data.keyword.ssofull}}			|Sì		|No		|No|
-|{{site.data.keyword.speechtotextshort}}	|Sì 		|Sì	 	|Sì|
-|{{site.data.keyword.sqldb}}			|Sì		|Sì		|No|
-|{{site.data.keyword.staticanalyzershort}}	|Sì		|Sì		|No|
-|{{site.data.keyword.streaminganalyticsshort}}	|Sì		|No		|No|
-|{{site.data.keyword.texttospeechshort}} 	|Sì 		|Sì	 	|Sì|
-|{{site.data.keyword.times}}			|Sì		|Sì		|No|
-|{{site.data.keyword.toneanalyzershort}} 	|Sì 		|Sì 		|Sì|
-|{{site.data.keyword.trackplan}}		|Sì		|Sì		|No|
-|{{site.data.keyword.tradeoffanalyticsshort}}	|Sì		|Sì		|Sì|
-|{{site.data.keyword.visualinsightsshort}}	|Sì		|Sì		|Sì|
-|{{site.data.keyword.visualizationrenderingshort}} |Sì		|Sì		|No|
-|{{site.data.keyword.workflow}}			|Sì		|Sì		|No|
-|{{site.data.keyword.workloadscheduler}}	|Sì		|Sì		|No|
-|{{site.data.keyword.xpagesservice_short}}	|Sì		|Sì		|No|
-*Tabella 2. Disponibilità dei servizi*
-{: caption="Tabella 2. Disponibilità dei servizi" caption-side="top"}
-
-
 
 # Aggiunta di un servizio alla tua applicazione
 {: #add_service}
@@ -181,7 +96,7 @@ nei seguenti modi:
 
 * Dall'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Visualizza il catalogo {{site.data.keyword.Bluemix_notm}}.
 * Dall'interfaccia riga di comando cf. Utilizza il comando **cf marketplace**.
-* Dalla tua applicazione. Utilizza la [API di servizi GET /v2/services ![icona link esterno](../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
+* Dalla tua applicazione. Utilizza la [API di servizi GET /v2/services ![Icona link esterno](../icons/launch-glyph.svg)](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 Puoi selezionare il servizio di cui hai bisogno quando sviluppi le applicazioni. Dopo la tua selezione, {{site.data.keyword.Bluemix_notm}} interagisce con il servizio ed
 effettua le operazioni necessarie per eseguire il provisioning delle risorse del servizio. Il processo di provisioning può essere
@@ -201,13 +116,11 @@ esterne o gli strumenti di terze parti per utilizzare i servizi {{site.data.keyw
 ## Richiesta di una nuova istanza del servizio
 {: #req_instance}
 
-Per richiedere una nuova istanza del servizio, devi utilizzare l'interfaccia utente di {{site.data.keyword.Bluemix_notm}} oppure
-l'interfaccia riga di comando cf.
+Per richiedere una nuova istanza del servizio, devi utilizzare la console {{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando cf.
 
 **Nota:** quando specifichi il nome servizio, evita di utilizzare caratteri che non siano alfabetici o numerici; in caso contrario, i risultati potrebbero essere imprevedibili.
 
-Se utilizzi l'interfaccia utente di {{site.data.keyword.Bluemix_notm}}
-per richiedere un'istanza del servizio, completa la seguente procedura:
+Se utilizzi la console {{site.data.keyword.Bluemix_notm}} per richiedere un'istanza del servizio, completa la seguente procedura:
 
 1. Nel {{site.data.keyword.Bluemix_notm}} **Catalogo**, fai clic sul tile per il servizio che vuoi aggiungere. Viene visualizzata la pagina dei dettagli.
 

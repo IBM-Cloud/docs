@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
+lastupdated: "2017-04-24"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock:.codeblock}
 {:screen:.screen}
 {:pre: .pre}
@@ -286,7 +285,7 @@ JavaScript 조치는 기본적으로 Node.js 버전 6.9.1 환경에서 실행됩
 - underscore v1.8.3
 - uuid v3.0.0
 - validator v6.1.0
-- watson-developer-cloud v2.9.0
+- watson-developer-cloud v2.29.0
 - when v3.7.7
 - winston v2.3.0
 - ws v1.1.1
@@ -400,74 +399,14 @@ Docker 조치는 Docker 컨테이너 내의 사용자 제공 바이너리를 실
 
 Docker 스켈레톤은 OpenWhisk 호환 가능 Docker 이미지를 빌드하는 편리한 방법입니다. `wsk sdk install docker` CLI 명령을 사용하여 스켈레톤을 설치할 수 있습니다.
 
-기본 바이너리 프로그램은 컨테이너 내부(`/action/exec`)에 있어야 합니다. 실행 파일은 `stdin`을 통해 입력 인수를 수신하고 `stdout`를 통해 결과를 리턴해야 합니다.
+기본 바이너리 프로그램은 컨테이너 내부(`/action/exec`)에 있어야 합니다. 실행 파일은 `JSON` 오브젝트로 역직렬화할 수 있는 단일 명령행 인수 문자열을 통해 입력 인수를 수신합니다. `stdout`을 통해 결과를 직렬화된 `JSON`의 단일행 문자열로 리턴해야 합니다.
 
 `dockerSkeleton`에 포함된 `Dockerfile`을 수정하여 모든 컴파일 단계 또는 종속 항목을 포함시킬 수 있습니다. 
 
 ## REST API
 {: #openwhisk_ref_restapi}
+REST API에 대한 정보는 [여기서](openwhisk_rest_api.html) 찾을 수 있습니다. 
 
-REST API를 통해 시스템의 모든 기능을 사용할 수 있습니다. 조치, 트리거, 규칙, 패키지, 활성화 및 네임스페이스에 대해 콜렉션 및 엔티티 엔드포인트가 있습니다. 
-
-다음은 콜렉션 엔드포인트입니다. 
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
-
-`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span>은 OpenWhisk API 호스트 이름입니다(예: openwhisk.ng.bluemix.net, 172.17.0.1 등).
-
-`{namespace}`의 경우 `_` 문자를 사용하여 사용자의 *기본 네임스페이스*(즉,
-이메일 주소)를 지정할 수 있습니다. 
-
-콜렉션 엔드포인트에서 GET 요청을 수행하여 콜렉션에서 엔티티의 목록을 페치할 수 있습니다. 
-
-각 엔티티 유형마다 엔티티 엔드포인트가 있습니다. 
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
-
-
-네임스페이스 엔드포인트와 활성화 엔드포인트는 GET 요청만 지원합니다. 조치 엔드포인트, 트리거 엔드포인트, 규칙 엔드포인트, 패키지 엔드포인트는 GET, PUT, DELETE 요청을 지원합니다. 조치, 트리거, 규칙의 엔드포인트는 POST 요청도 지원하며 이 요청은 조치와 트리거를 호출하고 규칙을 사용 또는 사용 안함으로 설정하는 데 사용됩니다. 세부사항은 [API 참조](https://new-console.{DomainName}/apidocs/98)를 참조하십시오. 
-
-모든 API는 HTTP 기본 인증으로 보호됩니다. 기본 인증 신임 정보는 `~/.wskprops` 파일의 `AUTH` 특성에 있으며 콜론으로 구분됩니다. [CLI 구성 단계](./index.html#openwhisk_start_configure_cli)에서 이 신임 정보를 검색할 수도 있습니다. 
-
-다음은 cURL 명령을 사용하여 `whisk.system` 네임스페이스에서 모든 패키지의 목록을 가져오는 예제입니다. 
-
-```
-curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
-```
-{: pre}
-```
-[
-  {
-    "name": "slack",
-    "binding": false,
-    "publish": true,
-    "annotations": [
-      {
-        "key": "description",
-        "value": "Package that contains actions to interact with the Slack messaging service"
-      }
-    ],
-    "version": "0.0.9",
-    "namespace": "whisk.system"
-  },
-  ...
-]
-```
-{: screen}
-
-OpenWhisk API는 웹 클라이언트에서 요청-응답 호출을 지원합니다. OpenWhisk는 교차-원본 리소스 공유 헤더가 포함된 `OPTIONS` 요청에 응답합니다. 현재 모든 원본이 허용되며(즉, 액세스-제어-허용-원본이 "`*`"임) 액세스-제어-허용-헤더가 권한과 컨텐츠-유형을 산출합니다. 
-
-**주의:** 현재 OpenWhisk에서는 계정마다 하나의 키만 지원하므로 단순 시범을 넘어 CORS를 사용하지 않는 것이 좋습니다. 사용자의 키는 클라이언트 측 코드에 임베드되어 공용으로 표시되어야 합니다. 사용 시 주의하십시오. 
 
 ## 시스템 한계
 {: #openwhisk_syslimits}

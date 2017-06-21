@@ -58,7 +58,7 @@ If your toolchain includes GitHub, GitLab, or JIRA, {{site.data.keyword.DRA_shor
 
 1. From your toolchain's Overview page, click **{{site.data.keyword.DRA_short}}**.
 
-2. From the left navigation, click **Team Dynamics** or **Developer Insights** and then choose a data category.
+2. Click **Team Dynamics** or **Developer Insights** and then choose a data category.
 
 3. Explore your project's data by viewing the dashboards in the data category. If you want to know more about a graph or what you might do with its information, click **Information** or **Guidance**.
 

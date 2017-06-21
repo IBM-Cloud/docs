@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-19"
+lastupdated: "2017-04-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-01-19"
 {:codeblock:.codeblock}
 {:pre: .pre}
 
-# Anwendungen, Geräte und Gateways mit {{site.data.keyword.iot_short_notm}} verbinden
+# Anwendungen, Geräte und Gateways mithilfe der API verbinden
 {: #connect_devices_apps_gw}
 
 Anwendungen, Geräte und Gateways können über das MQTT-Protokoll eine Verbindung zu {{site.data.keyword.iot_full}} herstellen. Sie können auch die HTTP-REST-API verwenden, um Geräte mit {{site.data.keyword.iot_short_notm}} zu verbinden.
@@ -31,7 +31,7 @@ Zum Herstellen von Verbindungen zwischen Geräte-, Anwendungs- und Gateway-Clien
 
 ### Verbindungs-URL für HTTP-REST-API
 
-<pre class="pre">https://<var class="keyword varname">Organisations-ID</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></pre>
+<pre class="pre"><code class="hljs">https://<var class="keyword varname">Organisations-ID</var>.internetofthings.ibmcloud.com/api/v0002/device/types/<var class="keyword varname">Typ-ID</var>/devices/<var class="keyword varname">Geräte-ID</var>/events/<var class="keyword varname">Ereignis-ID</var></code></pre>
 {: codeblock}
 
 **Hinweise**

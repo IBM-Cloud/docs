@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -45,9 +45,9 @@ Para enviar una solicitud `POST` desde un dispositivo conectado a {{site.data.ke
 
 **Notas importantes:**
 - Solo puede enviar sucesos de dispositivo de pasarela mediante la mensajería HTTP. Utilice el protocolo de mensajería MQTT para enviar solicitudes para otras características de gestión de dispositivos de pasarela y de control.
-- Las conexiones HTTP solo se pueden reutilizar para publicar sucesos para el mismo dispositivo porque la cabecera HTTP de autorización no se puede cambiar.
 - El puerto 443, el puerto SSL predeterminado, también se puede especificar para llamadas de API HTTP seguras.
-- Si a una pasarela no se le ha asignado el rol *Pasarela estándar*, puede publicar sucesos en nombre de cualquiera de los dispositivos de la organización. Asigne el rol *Pasarela estándar* si quiere comprobar los niveles de autorización del dispositivo y registrar automáticamente su dispositivo. **Nota:** este comportamiento está sujeto a cambios.
+- Si a una pasarela no se le ha asignado el rol *Pasarela estándar*, puede publicar sucesos en nombre de cualquiera de los dispositivos de la organización. Si el dispositivo que está conectado a la pasarela no está registrado, la pasarela automáticamente registra ese dispositivo.
+- Asigne el rol *Pasarela estándar* si quiere comprobar los niveles de autorización del dispositivo.
 
 Para obtener más información sobre el rol de las pasarelas y los grupos de recursos, consulte [Control de acceso de pasarela (Beta)](../gateways/gateway-access-control.html).
 
@@ -60,7 +60,6 @@ Todas las solicitudes deben incluir una cabecera de autorización. La autenticac
 |Nombre de usuario| `g/{orgId}/{gwType}/{gwDevId}` o `g-{orgId}-{gwType}-{gwDevId}`
 |Contraseña| La señal de autenticación que se ha generado automáticamente o que se ha especificado manualmente al registrar el dispositivo de pasarela.
 
-
 Donde:
 
 <dl>
@@ -69,11 +68,11 @@ Donde:
 
 <p></p>
 <dt>gwType</dt>  
-<dd>El tipo de pasarela.</dd>
-<dd>Si utiliza un guión "-" como delimitador en el nombre de usuario, este valor no debe incluir un guión.</dd>
+<dd>El tipo de pasarela. </dd>
+<dd>Si utiliza un guión "-" como delimitador en el nombre de usuario, este valor no debe incluir un guión. </dd>
 <p></p>
 <dt>gwDevId</dt>  
-<dd>El identificador de dispositivo de la pasarela.</dd>
+<dd>El identificador de dispositivo de la pasarela. </dd>
 </dl>
 
 
@@ -94,4 +93,4 @@ De forma parecida a la calidad de servicio MQTT "at most once" del servicio de e
 
 Para obtener más información sobre el protocolo MQTT y la calidad de los niveles de servicio para {{site.data.keyword.iot_short_notm}}, consulte [Mensajería MQTT](../reference/mqtt/index.html).
 
-Para obtener más información sobre la gestión de dispositivos de pasarela mediante interfaces de programación de aplicaciones, consulte [API REST HTTP para dispositivos de pasarela](../gateways/gw_api.html).
+Para obtener más información sobre la gestión de dispositivos de pasarela mediante API, consulte [API REST HTTP para dispositivos de pasarela](../gateways/gw_api.html).

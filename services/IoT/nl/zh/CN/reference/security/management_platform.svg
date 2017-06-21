@@ -14,13 +14,20 @@
    viewBox="0 0 478.78044 300.92281"
    id="svg5645"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.47 r22583"
    sodipodi:docname="management_platform.svg"
    inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
      id="defs5647">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 150.46141 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="478.7804 : 150.46141 : 1"
+       inkscape:persp3d-origin="239.3902 : 100.30761 : 1"
+       id="perspective278" />
     <marker
        style="overflow:visible"
        id="TriangleOutM"
@@ -712,8 +719,8 @@
      inkscape:current-layer="layer1"
      showgrid="false"
      units="in"
-     inkscape:window-width="1280"
-     inkscape:window-height="667"
+     inkscape:window-width="1440"
+     inkscape:window-height="838"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -915,7 +922,9 @@
          sodipodi:role="line"
          x="42.015415"
          y="464.11569"
-         id="tspan8202">IoT 设备</tspan><tspan
+         id="tspan8202">IoT <tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3086">设备</tspan></tspan><tspan
          sodipodi:role="line"
          x="42.015415"
          y="477.86569"
@@ -945,11 +954,15 @@
          id="tspan44239-7"
          y="480.93506"
          x="288.40372"
-         sodipodi:role="line">REST 和 </tspan><tspan
+         sodipodi:role="line">REST <tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3100">和 </tspan></tspan><tspan
          y="494.68506"
          x="288.40372"
          sodipodi:role="line"
-         id="tspan7973">实时 API</tspan><tspan
+         id="tspan7973"><tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3102">实时</tspan> API</tspan><tspan
          y="508.43506"
          x="288.40372"
          sodipodi:role="line"
@@ -977,7 +990,9 @@
          sodipodi:role="line"
          x="40.151447"
          y="391.96463"
-         id="tspan8202-7">IoT 网关</tspan><tspan
+         id="tspan8202-7">IoT <tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3084">网关</tspan></tspan><tspan
          sodipodi:role="line"
          x="40.151447"
          y="405.71463"
@@ -1038,10 +1053,14 @@
          id="flowPara7065" /></flowRoot>    <text
        sodipodi:linespacing="125%"
        y="599.23334"
-       x="149.24741"
+       x="153.24741"
        font-size="11"
        id="text66184"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">因特网</text>
+       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial">
+      <tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:SimHei;-inkscape-font-specification:SimHei"
+         id="tspan3096">因特网</tspan>
+    </text>
     <path
        inkscape:connector-curvature="0"
        id="path13593"
@@ -1074,7 +1093,8 @@
          sodipodi:role="line"
          x="299.71616"
          y="620.01544"
-         id="tspan9810">仪表板</tspan></text>
+         id="tspan9810"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">仪表板</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path11965"
@@ -1118,7 +1138,8 @@
          sodipodi:role="line"
          x="43.057407"
          y="536.01312"
-         id="tspan6913-6">应用程序</tspan></text>
+         id="tspan6913-6"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">应用程序</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path8199"
@@ -1163,21 +1184,24 @@
              cy="200.3"
              cx="389.39999"
              stroke-miterlimit="10"
-             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none" />
+             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 407.99999,200.3 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.27249,0 -18.6,-8.3275 -18.6,-18.6 0,-10.27249 8.32751,-18.6 18.6,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
           <circle
              id="circle5299"
              r="18.6"
              cy="200.3"
              cx="250"
              stroke-miterlimit="10"
-             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none" />
+             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 268.6,200.3 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.27249 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
           <circle
              id="circle5301"
              r="18.6"
              cy="200.3"
              cx="110.6"
              stroke-miterlimit="10"
-             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none" />
+             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 129.2,200.3 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.600002,-8.3275 -18.600002,-18.6 0,-10.27249 8.327502,-18.6 18.600002,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
         </g>
         <g
            id="g5303"
@@ -1188,14 +1212,16 @@
              cy="299.70001"
              cx="389.39999"
              stroke-miterlimit="10"
-             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none" />
+             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 407.99999,299.70001 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.27249,0 -18.6,-8.3275 -18.6,-18.6 0,-10.27249 8.32751,-18.6 18.6,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
           <circle
              id="circle5307"
              r="18.6"
              cy="299.70001"
              cx="250"
              stroke-miterlimit="10"
-             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none" />
+             style="fill:none;stroke:#ffffff;stroke-width:12.54810333;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 268.6,299.70001 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.27249 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
         </g>
       </g>
       <line
@@ -1395,21 +1421,24 @@
          cy="110.6"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 407.6,110.6 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.2725 8.3275,-18.600002 18.6,-18.600002 10.2725,0 18.6,8.327502 18.6,18.600002 z" />
       <circle
          id="circle5230-5-6"
          r="18.6"
          cy="250"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 407.6,250 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.2725 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.3275 18.6,18.6 z" />
       <circle
          id="circle5232-6-1"
          r="18.6"
          cy="389.39999"
          cx="389"
          stroke-miterlimit="10"
-         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:9.79398155;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 407.6,389.39999 c 0,10.2725 -8.3275,18.6 -18.6,18.6 -10.2725,0 -18.6,-8.3275 -18.6,-18.6 0,-10.27249 8.3275,-18.6 18.6,-18.6 10.2725,0 18.6,8.32751 18.6,18.6 z" />
     </g>
     <flowRoot
        xml:space="preserve"
@@ -1447,19 +1476,25 @@
          x="-27.538048"
          y="590.55298"
          style="font-size:12.50000191px"
-         id="tspan4687-8">使用 <tspan
-   style="font-weight:bold"
-   id="tspan5838">API 密钥</tspan></tspan><tspan
+         id="tspan4687-8"><tspan
+           style="-inkscape-font-specification:SimHei;font-family:SimHei"
+           id="tspan3088">使用</tspan><tspan
+           style="font-weight:bold"
+           id="tspan5838"> API <tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3090">密钥</tspan></tspan></tspan><tspan
          sodipodi:role="line"
          x="-27.538048"
          y="606.17798"
-         style="font-size:12.50000191px"
+         style="font-size:12.50000191px;font-family:SimHei;-inkscape-font-specification:SimHei"
          id="tspan5834">执行已认证的 </tspan><tspan
          sodipodi:role="line"
          x="-27.538048"
          y="621.80298"
          style="font-size:12.50000191px"
-         id="tspan11042">REST 调用</tspan><tspan
+         id="tspan11042">REST <tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3094">调用</tspan></tspan><tspan
          sodipodi:role="line"
          x="-27.538048"
          y="637.42798"
@@ -1472,18 +1507,24 @@
          id="tspan5832" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans-serif"
        x="231.09512"
-       y="639.76343"
+       y="637.76343"
        id="text4681"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          x="231.09512"
-         y="639.76343"
+         y="637.76343"
          style="font-size:12.50000191px"
-         id="tspan4687">通过 IBM 标识<tspan
-   style="font-weight:bold"
-   id="tspan5809">认证</tspan>。</tspan></text>
+         id="tspan4687"><tspan
+   style="font-family:SimHei;-inkscape-font-specification:SimHei"
+   id="tspan3104">通过</tspan> IBM <tspan
+   style="font-family:SimHei;-inkscape-font-specification:SimHei"
+   id="tspan3106">标识</tspan><tspan
+   style="font-weight:bold;font-family:SimHei;-inkscape-font-specification:SimHei"
+   id="tspan5809">认证</tspan><tspan
+   style="font-family:SimHei;-inkscape-font-specification:SimHei"
+   id="tspan3108">。</tspan></tspan></text>
     <g
        id="g11065"
        transform="translate(246.68159,543.97041)">
@@ -1578,7 +1619,9 @@
          sodipodi:role="line"
          id="tspan3626"
          x="278.90833"
-         y="434.47974">组织：q1bc3a</tspan><tspan
+         y="434.47974"><tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3098">组织：</tspan>q1bc3a</tspan><tspan
          sodipodi:role="line"
          id="tspan3628"
          x="278.90833"

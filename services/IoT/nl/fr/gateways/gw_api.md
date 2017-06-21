@@ -36,18 +36,20 @@ Toutes les demandes doivent inclure un en-tête d'autorisation. L'authentificati
 |Nom d'utilisateur| `g/{orgId}/{gwType}/{gwDevId}`
 |Mot de passe| Jeton d'authentification qui a été généré automatiquement ou que vous avez spécifié manuellement lors de l'enregistrement du terminal de passerelle.
 
-
 où :
 
-**_orgId_**   
-- Est le nom de l'organisation, qui doit correspondre au nom qui est spécifié dans l'en-tête d'hôte. 
+<dl>
+<dt>orgId</dt>  
+<dd>Nom de l'organisation, qui doit correspondre au nom qui est spécifié dans l'en-tête d'hôte.</dd>
 
-**_gwType_**
-- Est le type de passerelle. 
+<p></p>
+<dt>gwType</dt>  
+<dd>Type de passerelle. </dd>
+<p></p>
+<dt>gwDevId</dt>  
+<dd>Identificateur de terminal de passerelle. </dd>
+</dl>
 
-**_gwDevId_**
-
-- Est l'identificateur de terminal de passerelle. 
 
 ### En-têtes de demande Content-Type
 

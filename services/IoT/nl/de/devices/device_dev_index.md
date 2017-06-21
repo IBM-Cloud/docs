@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-03"
 
 ---
 
@@ -23,7 +23,7 @@ Geräte publizieren Daten mithilfe von Ereignissen an {{site.data.keyword.iot_sh
 Weitere Informationen zu wichtigen Konzepten, einschließlich Geräten, finden Sie in [Informationen zu Watson IoT Platform](https://console.ng.bluemix.net/docs/services/IoT/iotplatform_overview.html#watsoniotplatform_importantconcepts).
 
 
-# Gerät mit {{site.data.keyword.iot_short_notm}} verbinden
+## Gerät mit {{site.data.keyword.iot_short_notm}} verbinden
 {: #device_connect}
 Sie können Ihr Gerät unter Verwendung von HTTP- oder MQTT-Protokollen mit {{site.data.keyword.iot_short_notm}} verbinden. Verwenden Sie das HTTP-Protokoll, wenn Sie ein Anforderung/Antwort-Szenario konfigurieren möchten (z. B. wenn ein Kunde einen Kauf tätigt und eine Bestätigung erhält). Verwenden Sie das MQTT-Protokoll, wenn Sie ein Ereignisszenario konfigurieren möchten (z. B. wenn jemand an einer Tür klingelt und damit einen Alert auf einem mobilen Gerät auslöst).
 
@@ -34,7 +34,7 @@ Wenn Sie Ihr Gerät verbinden möchten, ohne es zu registrieren (z. B. um einen 
 Weitere Informationen zum Verbinden Ihres Geräts mit {{site.data.keyword.iot_short_notm}} unter Verwendung des HTTP-Protokolls finden Sie in [HTTP-REST-API für Geräte](https://console.ng.bluemix.net/docs/services/IoT/devices/api.html).
 Weitere Informationen zum Verbinden Ihres Geräts mit {{site.data.keyword.iot_short_notm}} unter Verwendung des MQTT-Protokolls finden Sie in [MQTT-Konnektivität für Geräte](https://console.ng.bluemix.net/docs/services/IoT/devices/mqtt.html).
 
-# Einführung in die Entwicklung von Geräten
+## Einführung in die Entwicklung von Geräten
 {: #get_started}
 Wenn Sie über ein Gerät verfügen, das bereits für {{site.data.keyword.iot_short_notm}} aktiviert ist, können Sie das Gerät sofort verwenden.
 

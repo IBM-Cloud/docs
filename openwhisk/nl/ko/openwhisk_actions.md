@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-  lastupdated: "2017-04-04"
+lastupdated: "2017-04-21"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
@@ -53,7 +52,7 @@ copyright:
       return {payload: 'Hello world'};
   }
   ```
-    {: codeblock}
+  {: codeblock}
 
   JavaScript 파일은 추가 기능을 포함할 수 있습니다. 그러나 편의상 `main`을 호출하는 함수는 조치에 대한 시작점을 제공하기 위해 존재해야 합니다.
 
@@ -62,7 +61,7 @@ copyright:
   ```
   wsk action create hello hello.js
   ```
-      {: pre}
+  {: pre}
   ```
   ok: created action hello
   ```
@@ -192,7 +191,8 @@ copyright:
   }
   ```
 
-  호출 결과만 표시하려면 `--result` 옵션을 사용하십시오. 
+  `--result` 옵션 사용 주목: 이 옵션은 CLI가 활성화가 완료되기를 기다린 다음 결과만 표시하는
+  블로킹 호출을 포함합니다. 편의를 위해 이 옵션은 자동으로 추정되는 `--blocking` 없이 사용할 수 있습니다.
 
 ### 기본 매개변수 설정
 {: #openwhisk_binding_actions}
@@ -424,8 +424,7 @@ exports.main = myAction;
 ```
 {: codeblock}
 
-조치는 `exports.main`을 통해 표시됨에 유의하십시오. 조치 핸들러가 오브젝트(또는 오브젝트의 `Promise`) 채택 및 리턴의 일반적인 시그니처를 따르는 한 조치 핸들러는 자체적으로 이름을 지정할 수 있습니다.
-Node.js 규칙에 따라, 이 파일을 `index.js`로 이름 지정하거나 package.json에서 `main` 특성으로 선호하는 파일 이름을 지정해야 합니다.
+조치는 `exports.main`을 통해 표시됨에 유의하십시오. 조치 핸들러가 오브젝트(또는 오브젝트의 `Promise`) 채택 및 리턴의 일반적인 시그니처를 따르는 한 조치 핸들러는 자체적으로 이름을 지정할 수 있습니다. Node.js 규칙에 따라, 이 파일을 `index.js`로 이름 지정하거나 package.json에서 `main` 특성으로 선호하는 파일 이름을 지정해야 합니다.
 
 이 패키지에서 OpenWhisk 조치를 작성하려면 다음을 수행하십시오.
 
@@ -541,7 +540,7 @@ Node.js 규칙에 따라, 이 파일을 `index.js`로 이름 지정하거나 pac
 
 Python 조치 작성 프로세스는 JavaScript 조치 작성 프로세스와 유사합니다. 다음 절에서는 단일 Python 조치를 작성하고 호출하며 해당 조치에 매개변수를 추가하는 방법에 대해 안내합니다. 
 
-### 조치 작성 및 호출
+### Python 조치 작성 및 호출
 {: #openwhisk_actions_python_invoke}
 
 간단히 말해 조치는 최상위 레벨 Python 함수입니다. 예를 들어, 다음과 같은 소스 코드가 있는 `hello.py`라는 파일을 작성하십시오.
@@ -557,8 +556,7 @@ def main(args):
 
 Python 조치에서는 항상 사전을 이용하고 사전을 생성합니다. 조치의 입력 메소드는 기본적으로 `main`이지만, 다른 조치 유형과 함께 `--main`을 사용하여 `wsk` CLI와 조치를 작성할 때 명시적으로 지정할 수 있습니다. 
 
-다음과 같이 이 함수에서 `helloPython`이라는 OpenWhisk 조치를 작성할 수
-있습니다. 
+다음과 같이 이 함수에서 `helloPython`이라는 OpenWhisk 조치를 작성할 수 있습니다. 
 
 ```
 wsk action create helloPython hello.py
@@ -579,6 +577,61 @@ wsk action invoke --blocking --result helloPython --param name World
   }
 ```
 
+### Python 조치를 Zip 파일에 패키징
+{: #openwhisk_actions_python_zip}
+
+Python 조치 및 종속 모듈을 Zip 파일에 패키징할 수 있습니다.
+시작점(예: `main`)이 포함된 소스 파일의 파일 이름은 `__main__.py`여야 합니다.
+`helper.py`라고 하는 헬퍼 모듈로 조치를 작성하려면 우선 소스 파일이 포함된 아카이브를 작성하십시오. 
+
+```bash
+zip -r helloPython.zip __main__.py helper.py
+```
+{: pre}
+
+그런 다음 조치를 작성하십시오.
+
+
+
+```bash
+wsk action create helloPython --kind python:3 helloPython.zip
+```
+{: pre}
+
+### 가상 환경의 Python 조치를 Zip 파일에 패키징
+{: #openwhisk_actions_python_virtualenv}
+
+Python 종속 항목을 패키징하는 다른 방법은 가상 환경(`virtualenv`)을 사용하는 것입니다. 이를 사용하면 예를 들어 [`pip`](https://packaging.python.org/installing/)를 통해 설치할 수 있는 추가 패키지를 링크할 수 있습니다.
+OpenWhisk 컨테이너와의 호환성을 확인하려면 대상 환경에서 virtualenv 내 설치 패키징을 수행해야 합니다.
+따라서 Docker 이미지 `openwhisk/python2action` 또는 `openwhisk/python3action`을 사용하여 조치에 대한 virtualenv 디렉토리를 작성해야 합니다. 
+
+기본 zip 파일 지원에서와 마찬가지로, 기본 시작점이 포함된 소스 파일의 이름은 `__main__.py`여야 합니다. 또한 virtualenv 디렉토리의 이름은 `virtualenv`로 지정되어야 합니다.
+다음은 종속 항목 설치, 이 설치를 virtualenv에 패키징, 호환 가능한 OpenWhisk 조치 작성을 위한 시나리오 예입니다.
+
+
+
+1. 설치할 `pip` 모듈 및 버전이 포함된 `requirements.txt` 파일이 제공되면, 다음을 실행하여 종속 항목을 설치하고 호환 가능한 Docker 이미지를 사용하여 virtualenv를 작성하십시오. 
+ ```bash
+ docker run --rm -v "$PWD:/tmp" openwhisk/python3action sh \
+   -c "cd tmp; virtualenv virtualenv; source virtualenv/bin/activate; pip install -r requirements.txt;"
+ ```
+ {: pre}
+
+2. virtualenv 디렉토리 및 추가 Python 파일을 아카이브하십시오. 
+ ```bash
+ zip -r helloPython.zip virtualenv __main__.py
+ ```
+ {: pre}
+
+3. 조치를 작성하십시오.
+  ```bash
+  wsk action create helloPython --kind python:3 helloPython.zip
+  ```
+  {: pre}
+
+Python 3.6의 경우 위의 단계가 표시되면 Python 2.7의 경우와 동일하게 수행할 수 있습니다.
+
+
 
 ## Swift 조치 작성
 
@@ -593,9 +646,9 @@ Swift 조치 작성 프로세스는 JavaScript 조치 작성 프로세스와 유
 ```swift
 func main(args: [String:Any]) -> [String:Any] {
     if let name = args["name"] as? String {
-          return [ "greeting" : "Hello \(name)!" ]
+        return [ "greeting" : "Hello \(name)!" ]
     } else {
-return [ "greeting" : "Hello stranger!" ]
+        return [ "greeting" : "Hello stranger!" ]
     }
 }
 ```
@@ -632,28 +685,34 @@ wsk action invoke --blocking --result helloSwift --param name World
 사용합니다. 이러한 최신 릴리스가 항상 안정적인 것은 아닙니다. 또한 {{site.data.keyword.openwhisk_short}}와
 함께 사용되는 Swift의 버전이 XCode on MacOS의 안정적인 릴리스의 Swift 버전과 일치하지 않을 수 있습니다.
 
-### 조치를 Swift 실행 파일로 패키징
+### 조치를 Swift 실행 파일로서 패키징
 {: #openwhisk_actions_swift_zip}
 
-OpenWhisk Swift 조치를 Swift 소스 파일을 사용하여 작성하는 경우 조치를 실행하기 전에 바이너리로 컴파일해야 합니다. 완료되면 조치를 보관하는 컨테이너가 제거될 때까지 조치에 대한 후속 호출 속도가 훨씬 빠릅니다. 이 지연은 콜드 스타트 지연이라고 합니다.
+Swift 소스 파일로 OpenWhisk Swift 조치를 작성하는 경우, 이는 조치가 실행되기 전에 바이너리로 컴파일되어야 합니다. 완료되면 조치를 보관하는 컨테이너가 제거될 때까지 조치에 대한 후속 호출 속도가 훨씬 빠릅니다. 이 지연은 콜드 스타트 지연이라고 합니다.
+
+
 
 콜드 스타트 지연을 방지하려면 Swift 파일을 바이너리로 컴파일한 다음 zip 파일로 OpenWhisk에 업로드할 수 있습니다. OpenWhisk 스캐폴딩(scaffolding)이 필요할 때 바이너리를 작성하는 가장 쉬운 방법은 파일이 실행되는 동일한 환경 내에 빌드하는 것입니다. 단계는 다음과 같습니다.
 
-- 대화식 Swift 조치 컨테이너를 실행하십시오.
+
+
+- 대화식 Swift 조치 컨테이너를 실행하십시오. 
 ```
 docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
 ```
 {: pre}
 
-    이렇게 하면 Docker 컨테이너의 bash 쉘에 들어가게 됩니다. 쉘에서 다음 명령을 실행하십시오.
+    그러면 Docker 컨테이너 내의 bash 쉘로 이동됩니다. 쉘에서 다음 명령을 실행하십시오.
 
 
-- 편의를 위해 zip을 설치하여 바이너리 패키징
+
+- 바이너리를 패키징하기 위해 편의상 zip 설치
   ```
   apt-get install -y zip
   ```
   {: pre}
 - 소스 코드 복사 및 빌드 준비
+  
   ```
   cp /owexec/hello.swift /swift3Action/spm-build/main.swift 
   ```
@@ -667,11 +726,13 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   ```
   {: pre}
 - zBuild 및 링크
+  
   ```
   /swift3Action/spm-build/swiftbuildandlink.sh
   ```
   {: pre}
 - zip 아카이브 작성
+  
   ```
   cd /swift3Action/spm-build
   ```
@@ -684,24 +745,26 @@ docker run --rm -it -v "$(pwd):/owexec" openwhisk/swift3action bash
   exit
   ```
   {: pre}
-hello.swift와 동일한 디렉토리에 hello.zip을 작성했습니다.
+이는 hello.swift와 동일한 디렉토리에 hello.zip을 작성했습니다.
 -조치 이름 helloSwifty로 OpenWhisk에 업로드하십시오.
   ```
   wsk action update helloSwiftly hello.zip --kind swift:3
   ```
   {: pre}
-- 얼마나 빠른지 확인하려면 다음을 실행하십시오. 
+- 얼마나 빠른지 확인하려면 다음을 실행하십시오.
+   
   ```
   wsk action invoke helloSwiftly --blocking
   ``` 
   {: pre}
 
-조치를 실행하는 데 걸리는 시간은 "duration" 특성에 있고, hello 조치의 컴파일 단계와 실행하는 데 걸리는 시간과 비교합니다.
+조치를 실행하는 데 걸리는 시간은 "duration" 특성에 있으며, 이는 hello 조치의 컴파일 단계에서 실행하는 데 걸리는 시간과 비교됩니다. 
 
 ## Java 조치 작성
 {: #openwhisk_actions_java}
 
-Java 조치 작성 프로세스는 JavaScript 및 Swift 조치 작성 프로세스와 유사합니다. 다음 절에서는 단일 Java 조치를 작성하고 호출하여 해당 조치에 매개변수를 추가하는 방법에 대해 안내합니다.
+Java 조치 작성 프로세스는 JavaScript 및 Swift 조치 작성 프로세스와 유사합니다.
+다음 절에서는 단일 Java 조치를 작성하고 호출하여 해당 조치에 매개변수를 추가하는 방법에 대해 안내합니다.
 
 Java 파일을 컴파일, 테스트 및 아카이브하려면 [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)이 로컬에 설치되어 있어야 합니다. 
 
@@ -743,21 +806,15 @@ jar cvf hello.jar Hello.class
 
 **참고:** [google-gson](https://github.com/google/gson)은 Java 파일을 컴파일할 때 Java CLASSPATH에 있어야 합니다.
 
-다음과 같이 이 JAR 파일에서 `helloJava`라는 OpenWhisk 조치를
-작성할 수 있습니다.
+다음과 같이 이 JAR 파일에서 `helloJava`라는 OpenWhisk 조치를 작성할 수 있습니다.
 
 ```
 wsk action create helloJava hello.jar --main Hello
 ```
 
-명령행과 `.jar` 소스 파일을 사용하는 경우
-Java 조치를 작성하도록 지정할 필요가 없습니다. 도구가
-파일 확장자에서 이를 판별합니다. 
+명령행과 `.jar` 소스 파일을 사용하는 경우 Java 조치를 작성하도록 지정할 필요가 없습니다. 도구가 파일 확장자에서 이를 판별합니다. 
 
-`--main`을 사용하여 기본 클래스의 이름을 지정해야 합니다. 적합한 기본 클래스는
-위에 설명된 대로 정적 `main` 메소드를 구현하는 클래스입니다. 클래스가
-기본 패키지에 없는 경우 완전한 Java 클래스
-이름(예: `--main com.example.MyMain`)을 사용하십시오. 
+`--main`을 사용하여 기본 클래스의 이름을 지정해야 합니다. 적합한 기본 클래스는 위에 설명된 대로 정적 `main` 메소드를 구현하는 클래스입니다. 클래스가 기본 패키지에 없는 경우에는 완전한 Java 클래스 이름(예: `--main com.example.MyMain`)을 사용하십시오. 
 
 Java 조치에 대한 조치 호출은 Swift 및 JavaScript 조치에 대한 조치 호출과 동일합니다. 
 
@@ -776,17 +833,16 @@ wsk action invoke --blocking --result helloJava --param name World
 
 {{site.data.keyword.openwhisk_short}} Docker 조치를 사용하면 사용자의 조치를 어떤 언어로든 작성할 수 있습니다.
 
-사용자의 코드가 실행 가능 바이너리로 컴파일되어 Docker 이미지에 임베드됩니다. 바이너리 프로그램은 `stdin`에서 입력을 가져와서 `stdout`을 통해 응답함으로써 시스템과 상호작용합니다.
+사용자의 코드가 실행 가능 바이너리로 컴파일되어 Docker 이미지에 임베드됩니다. 2진 프로그램은 `stdin`에서 입력을 가져와서 `stdout`을 통해 응답함으로써 시스템과 상호작용합니다.
 
-전제조건으로, Docker 허브 계정이 있어야 합니다. 무료 Docker ID 및 계정을 설정하려면 [Docker 허브](https://hub.docker.com){: new_window}로 이동하십시오.
+전제조건으로, Docker 허브 계정이 있어야 합니다. 무료 Docker ID 및 계정을 설정하려면 [Docker 허브](https://hub.docker.com)로 이동하십시오.
 
-다음 지시사항에서는 Docker 사용자 ID가 `janesmith`이고 비밀번호가 `janes_password`라고 가정합니다. CLI가 이미 설정되었다고 가정하면, {{site.data.keyword.openwhisk_short}}에서 사용할 사용자 정의 바이너리를 설정하는 데 세 단계가 필요합니다. 그런 다음 업로드된 Docker 이미지가 조치로 사용될 수 있습니다.
+다음 지시사항에서는 Docker 사용자 ID가 `janesmith`이고 비밀번호가 `janes_password`라고 가정합니다. CLI가 이미 설정되었다고 가정하면, {{site.data.keyword.openwhisk_short}}에서 사용할 사용자 정의 2진을 설정하는 데 세 단계가 필요합니다. 그런 다음 업로드된 Docker 이미지가 조치로 사용될 수 있습니다.
 
 1. Docker 스켈레톤을 다운로드하십시오. 다음과 같이 CLI를 사용하여 다운로드할 수 있습니다.
 
   ```
   wsk sdk install docker
-  ```
   ```
   {: pre}
   ```
@@ -801,11 +857,11 @@ wsk action invoke --blocking --result helloJava --param name World
   Dockerfile      README.md       buildAndPush.sh example.c
   ```
 
-스켈레톤은 사용자 정의 바이너리 형식으로 사용자의 코드를 삽입할 수 있는 Docker 컨테이너 템플리트입니다.
+  스켈레톤은 사용자 정의 바이너리 형식으로 사용자의 코드를 삽입할 수 있는 Docker 컨테이너 템플리트입니다.
 
-2. 블랙박스 스켈레톤에 사용자 정의 바이너리를 설정하십시오. 스켈레톤은 사용할 수 있는 C 프로그램을 이미 포함하고 있습니다.
+2. 블랙박스 스켈레톤에서 사용자 정의 바이너리를 설정하십시오. 스켈레톤은 사용할 수 있는 C 프로그램을 이미 포함하고 있습니다.
 
-```
+  ```
   cat dockerSkeleton/example.c
   ```
   {: pre}
@@ -820,12 +876,12 @@ wsk action invoke --blocking --result helloJava --param name World
   {: codeblock}
 
   필요에 따라 이 파일을 수정하거나 Docker 이미지에 추가 코드 및 종속 항목을 추가할 수 있습니다.
-  후자의 경우 실행 파일을 빌드하기 위해 필요한 대로 `Dockerfile`을 수정해야 할 수도 있습니다.
-  바이너리는 컨테이너 내부(`/action/exec`)에 있어야 합니다.
+  후자의 경우, 실행 파일을 빌드하기 위해 필요에 따라 `Dockerfile`을 수정해야 할 수도 있습니다.
+  바이너리는 컨테이너 내부(`/action/exec`)에 있어야 합니다. 
 
   실행 파일은 명령행에서 단일 변수를 수신합니다. 이는 조치에 대한 인수를 나타내는 JSON
-  오브젝트의 문자열 직렬화입니다. 프로그램에서 `stdout` 또는 `stderr`에 로그할 수 있습니다.
-  관례상 출력의 마지막 행은 _반드시_ 조치의 결과를 나타내는 문자열로 변환된 JSON 오브젝트여야 합니다.
+  오브젝트의 문자열 직렬화입니다. 프로그램은 `stdout` 또는 `stderr`에 로그할 수 있습니다.
+  관례상 출력의 마지막 행은 *반드시* 조치의 결과를 나타내는 문자열로 변환된 JSON 오브젝트여야 합니다. 
 
 3. Docker 이미지를 빌드하고 제공된 스크립트를 사용하여 이를 업로드하십시오. 먼저 `docker login`을 실행하여 인증한 다음 선택된 이미지 이름을 사용하여 스크립트를 실행하십시오.
 
@@ -838,12 +894,14 @@ wsk action invoke --blocking --result helloJava --param name World
   ```
   {: pre}
   ```
-./buildAndPush.sh janesmith/blackboxdemo
+  ./buildAndPush.sh janesmith/blackboxdemo
   ```
   {: pre}
 
   example.c 파일의 일부는 Docker 이미지 빌드 프로세스의 일부로 컴파일되므로 사용자 시스템에서 C 컴파일이 필요하지 않습니다.
-  실제로 호환 가능한 호스트 시스템에서 바이너리를 컴파일하지 않는 경우 형식이 일치하지 않기 때문에 컨테이너 내에서 실행되지 않을 수 있습니다. 이제 Docker 컨테이너를 {{site.data.keyword.openwhisk_short}} 조치로 사용할 수 있습니다.
+  실제로 호환 가능한 호스트 시스템에서 바이너리를 컴파일하지 않는 경우 형식이 일치하지 않기 때문에 컨테이너 내에서 실행되지 않을 수 있습니다. 
+
+  Docker 컨테이너는 이제 {{site.data.keyword.openwhisk_short}} 조치로 사용될 수 있습니다. 
 
   ```
   wsk action create --docker example janesmith/blackboxdemo
@@ -851,7 +909,7 @@ wsk action invoke --blocking --result helloJava --param name World
   {: pre}
 
   조치를 작성할 때 `--docker`의 사용에 주의하십시오. 현재 모든 Docker 이미지는 Docker 허브에 호스팅되는 것으로 가정합니다.
-  이 조치는 다른 {{site.data.keyword.openwhisk_short}} 조치로 호출할 수 있습니다.
+  이 조치는 다른 {{site.data.keyword.openwhisk_short}} 조치로서 호출할 수 있습니다. 
 
   ```
   wsk action invoke --blocking --result example --param payload Rey
@@ -866,7 +924,7 @@ wsk action invoke --blocking --result helloJava --param name World
   }
   ```
 
-Docker 조치를 업데이트하려면 buildAndPush.sh를 실행하여 Docker 허브에 최신 이미지로 업로드하십시오. 이에 따라 다음에 시스템이 사용자의 조치에 대한 코드를 실행할 때 새 Docker 이미지를 가져올 수 있습니다.
+  Docker 조치를 업데이트하려면 buildAndPush.sh를 실행하여 Docker 허브에 최신 이미지로 업로드하십시오. 이에 따라 다음에 시스템이 사용자의 조치에 대한 코드를 실행할 때 새 Docker 이미지를 가져올 수 있습니다.
   웜(warm) 컨테이너가 없는 경우 새 호출은 새 Docker 이미지를 사용합니다.
   하지만 이전 버전의 Docker 이미지를 사용하는 웜(warm) 컨테이너가 있는 경우, `wsk action update`를 실행하지 않는 한 새 호출은 계속해서 이 이미지를 사용합니다. wsk 조치 업데이트는 새 호출에 대해 새 Docker 이미지를 가져오는 docker pull을 실행하도록 시스템에 지시합니다.
 
@@ -889,15 +947,15 @@ Docker 조치를 업데이트하려면 buildAndPush.sh를 실행하여 Docker �
 
 {{site.data.keyword.openwhisk_short}} CLI를 사용하여 조치가 호출될 때 조치의 출력을 감시할 수 있습니다.
 
-1. 쉘에서 다음 명령을 실행하십시오.
+1. 쉘에서 다음 명령 실행:
   ```
   wsk activation poll
   ```
   {: pre}
 
-  이 명령은 활성화부터 계속 로그를 검사하는 폴링 루프를 시작합니다.
+  이 명령은 활성화부터 계속해서 로그를 검사하는 폴링 루프를 시작합니다.
 
-2. 다른 창으로 전환하여 조치를 수행합니다.
+2. 다른 창으로 전환하여 조치 호출:
 
   ```
   wsk action invoke /whisk.system/samples/helloWorld --param payload Bob
@@ -907,27 +965,27 @@ Docker 조치를 업데이트하려면 buildAndPush.sh를 실행하여 Docker �
   ok: invoked /whisk.system/samples/helloWorld with id 7331f9b9e2044d85afd219b12c0f1491
   ```
 
-3. 폴링 창에서 활성화 로그인을 관찰합니다.
+3. 폴링 창에서 활성화 로그 관찰:
 
   ```
   Activation: helloWorld (7331f9b9e2044d85afd219b12c0f1491)
     2016-02-11T16:46:56.842065025Z stdout: hello bob!
   ```
 
-이와 유사하게 폴링 유틸리티를 실행할 때마다 OpenWhisk에서 사용자를 위해 실행 중인 모든 조치에 대한 실시간 로그를 볼 수 있습니다.
+  이와 유사하게 폴링 유틸리티를 실행할 때마다 OpenWhisk에서 사용자를 위해 실행 중인 모든 조치에 대한 실시간 로그를 볼 수 있습니다.
 
 
 ## 조치 나열
 {: #openwhisk_listing_actions}
 
-다음을 사용하여 작성한 모든 조치를 나열할 수 있습니다.
+다음을 사용하여 작성된 모든 조치를 나열할 수 있습니다.
 
 ```
 wsk action list
 ```
 {: pre}
 
-추가 조치를 작성하면 이 목록이 더 길어지며 관련 조치를 [패키지](./openwhisk_packages.html)로 그룹화하는 데 도움이 될 수 있습니다. 특정 패키지 내 조치에 대해 조치 목록을 필터링하기 위해 다음을 수행할 수 있습니다.
+추가 목록을 작성하면 이 목록이 길어지며 관련 조치를 [패키지](./openwhisk_packages.html)로 그룹화하는 데 도움이 될 수 있습니다. 특정 패키지 내 조치에 대해 조치 목록을 필터링하기 위해 다음을 수행할 수 있습니다. 
 
 ```
 wsk action list [PACKAGE NAME]
@@ -959,19 +1017,18 @@ wsk action list [PACKAGE NAME]
   ```
   {: pre}
 
-## 조치 본문의 조치 메타데이터에 액세스
+## 조치 본문 내 조치 메타데이터에 액세스
 {: #openwhisk_action_metadata}
 
 조치 환경에는 실행 중인 조치에 특정한 여러 특성이 포함되어 있습니다.
-이러한 특성을 사용하면
-REST API를 통해 조치가 프로그래밍 방식으로 OpenWhisk 자산과 연동되게 하거나
+이러한 특성을 사용하면 REST API를 통해 조치가 프로그래밍 방식으로 OpenWhisk 자산과 연동되게 하거나
 조치가 할당된 시간을 다 사용하려는 경우 내부 알림이 생성되도록 설정할 수 있습니다.
 OpenWhisk Docker 스켈레톤을 사용 중인 경우 Node.js, Python, Swift, Java 및 Docker 조치와 같이
 지원되는 모든 런타임용 시스템 환경을 통해 특성을 액세스할 수 있습니다.
 
-* `__OW_API_HOST` 이 조치를 실행 중인 OpenWhisk 배치의 API 호스트입니다.
-* `__OW_API_KEY` 조치를 호출하는 주체의 API 키입니다. 이 키는 제한된 API 키일 수 있습니다.
-* `__OW_NAMESPACE` _activation_의 네임스페이스입니다(조치의 네임스페이스와 같지 않을 수 있음).
-* `__OW_ACTION_NAME` 실행 중인 조치의 완전한 이름입니다.
-* `__OW_ACTIVATION_ID` 이 실행 조치 인스턴스의 활성화 ID입니다.
-* `__OW_DEADLINE` 이 조치가 전체 지속 기간 할당량을 이용하는 대략적인 시간(epoch 밀리초로 측정)입니다.
+* `__OW_API_HOST` 이 조치를 실행 중인 OpenWhisk 배치의 API 호스트
+* `__OW_API_KEY` 조치를 호출하는 주체의 API 키이며, 이 키는 제한된 API 키임
+* `__OW_NAMESPACE` *활성화*를 위한 네임스페이스(이는 조치의 네임스페이스와 다를 수 있음)
+* `__OW_ACTION_NAME` 실행 중인 조치의 완전한 이름
+* `__OW_ACTIVATION_ID` 이 실행 중인 조치 인스턴스의 활성화 ID
+* `__OW_DEADLINE` 이 조치가 전체 지속 기간 할당량을 이용하는 대략적인 시간(epoch 밀리초로 측정됨)

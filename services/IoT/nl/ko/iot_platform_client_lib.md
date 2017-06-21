@@ -12,7 +12,7 @@ lastupdated: "2017-03-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# {{site.data.keyword.iot_short}} 개발용 클라이언트 라이브러리
+# {{site.data.keyword.iot_short_notm}} 개발용 클라이언트 라이브러리
 {: #iot_platform_client_lib}
 
 클라이언트 라이브러리에서는 {{site.data.keyword.iot_full}}에서 디바이스와 애플리케이션을 통합하고 연결하기 위한 코드를 빌드하고 개발하는 데 필요한 도구와 파일을 제공합니다.
@@ -38,7 +38,7 @@ lastupdated: "2017-03-13"
 - [추가 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-embeddedc/blob/master/README.md){:new_window}
 
 
-## Java™
+## Java
 - [클라이언트 라이브러리 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-java){:new_window}
 - [샘플 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-java#samples){:new_window}
 - [추가 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-java/blob/master/README.md){:new_window}
@@ -65,7 +65,7 @@ lastupdated: "2017-03-13"
 - [샘플 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-python/tree/master/samples){:new_window}
 - [추가 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/ibm-watson-iot/iot-python/blob/master/README.rst){:new_window}
 
-## {{site.data.keyword.iot_short}} 개발 시작하기
+## {{site.data.keyword.iot_short_notm}} 개발 시작하기
 
 사용 가능한 클라이언트 라이브러리를 사용하여 {{site.data.keyword.iot_short_notm}}의 코드 개발을 시작하려면 {{site.data.keyword.Bluemix_notm}} 문서의 다음 섹션을 참조하십시오.
 

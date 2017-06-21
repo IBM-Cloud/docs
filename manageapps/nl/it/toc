@@ -9,7 +9,7 @@ Gestione delle applicazioni
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
-	[Aggiunta di un servizio alla tua applicazione](../services/reqnsi.html)
+	[Aggiunta di un servizio alla tua applicazione](../services/reqnsi.html#add_service)
 	depapps.md
 	[Creazione di un pulsante Distribuisci a Bluemix](../develop/deploy_button.html)
 	updapps.md

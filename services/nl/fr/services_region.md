@@ -3,7 +3,7 @@
 copyright:
 
   years: 2015, 2017
-lastupdated: "2017-04-03"
+lastupdated: "2017-05-16"
 
 ---
 
@@ -51,6 +51,7 @@ service est disponible à l'achat dans une région, il se peut qu'il soit héber
 |{{site.data.keyword.composeForRethinkDB}} | Hébergé à Dallas, aux Etats-Unis | Hébergé à Londres, au Royaume-Uni | Hébergé à Sydney, en Australie | Hébergé à Francfort, Allemagne |
 |{{site.data.keyword.composeForScyllaDB}} | Hébergé à Dallas, aux Etats-Unis | Hébergé à Londres, au Royaume-Uni | Hébergé à Sydney, en Australie | Hébergé à Francfort, Allemagne |
 |{{site.data.keyword.conceptinsightsshort}}	| Hébergé à Dallas, aux Etats-Unis	| Hébergé à Dallas, aux Etats-Unis	| Hébergé à Dallas, aux Etats-Unis | Indisponible dans la région |
+|{{site.data.keyword.contdelivery_short}} | Hébergé à Dallas, aux Etats-Unis | Indisponible dans la région | Indisponible dans la région | Indisponible dans la région |
 |{{site.data.keyword.dashdbshort}} | Hébergé à Dallas, aux Etats-Unis | Hébergé à Londres, au Royaume-Uni | Hébergé à Sydney | Hébergé à Francfort, Allemagne |
 |{{site.data.keyword.datacshort}}	| Hébergé à Dallas, aux Etats-Unis	| Hébergé à Londres, au Royaume-Uni	| Hébergé à Sydney, en Australie | Indisponible dans la région |
 |{{site.data.keyword.DB2OnCloud_short}}	| Hébergé à Dallas, aux Etats-Unis	| Hébergé à Dallas, aux Etats-Unis	| Hébergé à Sydney, en Australie | Indisponible dans la région |

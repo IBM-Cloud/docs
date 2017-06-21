@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2017
 
-lastupdated: "2017-02-16"
+lastupdated: "2017-02-22"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-02-16"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Kibana でのログの分析
+# Kibana 3 でのログの分析 (非推奨)
 {: #analyzing_logs_Kibana3}
 
 {{site.data.keyword.Bluemix}} では、分析および視覚化のためのオープン・ソース・プラットフォームである Kibana を使用して、さまざまなグラフ (図表や表など) でデータのモニター、検索、分析、および視覚化を行うことができます。高機能な分析タスクを実行するには、Kibana を使用してください。
@@ -25,7 +25,7 @@ Kibana は以下のどの方法でも起動できます。
 
     Kibana では特定の CF アプリのログをその特定のアプリに応じて起動できます。
     
-    ダッシュボードに表示されるデータをフィルター操作するために使用される照会によって、Cloud Foundry アプリケーションのログ項目が取り出されます。Kibana ダッシュボードにデフォルトで表示されるログ情報は、単一の Cloud Foundry アプリケーションとそのすべてのインスタンスに関連するすべてです。詳しくは、『[{{site.data.keyword.Bluemix}} ダッシュボードから Kibana ダッシュボードへの移動](logging_view_kibana3.html#launch_Kibana_from_bluemix)』を参照してください。
+    ダッシュボードに表示されるデータをフィルター操作するために使用される照会によって、Cloud Foundry アプリケーションのログ項目が取り出されます。Kibana ダッシュボードにデフォルトで表示されるログ情報は、単一の Cloud Foundry アプリケーションとそのすべてのインスタンスに関連するすべてです。詳しくは、『[Bluemix ダッシュボードから Kibana ダッシュボードへの移動](logging_view_kibana3.html#launch_Kibana_from_bluemix)』を参照してください。
 
 * ブラウザーの直接リンクから
 
@@ -56,7 +56,7 @@ Kibana ダッシュボードで表示されるデータは、照会によって�
 
 * ダッシュボードを Web ページに埋め込むことができます。埋め込まれたダッシュボードを表示するユーザーは、Kibana にアクセスする許可を持っている必要があります。
 
-詳しくは、[Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) の資料を参照してください。
+詳しくは、[Kibana ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window} の資料を参照してください。
 
 **注:** Kibana 4 および Kibana 3 がサポートされています。Kibana 3 は推奨されません。
 
@@ -76,7 +76,7 @@ Cloud Foundry アプリケーションのログを Kibana で表示するには�
 
 ログが何も表示されない場合は、ヘッダーにあるタイム・ピッカーを調整してください。
 
-Kibana ダッシュボードのカスタマイズについて詳しくは、[このブログ投稿](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/)または [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) の資料を参照してください。
+Kibana ダッシュボードのカスタマイズについて詳しくは、[このブログ投稿![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} または [Kibana ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window} の資料を参照してください。
 
 ##  Web ブラウザーから Kibana ダッシュボードへの移動
 {: #launch_Kibana_from_browser}
@@ -91,7 +91,7 @@ Kibana ダッシュボードのカスタマイズについて詳しくは、[こ
 
 ログが何も表示されない場合は、ヘッダーにあるタイム・ピッカーを調整してください。
 
-Kibana ダッシュボードのカスタマイズについて詳しくは、[このブログ投稿](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/)または [Kibana](https://www.elastic.co/guide/en/kibana/current/index.html) の資料を参照してください。
+Kibana ダッシュボードのカスタマイズについて詳しくは、[このブログ投稿![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2015/09/creating-custom-kibana-dashboard-in-bluemix/){: new_window} または [Kibana ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.elastic.co/guide/en/kibana/current/index.html){: new_window} の資料を参照してください。
 
 
 

@@ -76,7 +76,7 @@ Si tiene problemas o preguntas al utilizar {{site.data.keyword.iot_short_notm}},
 
 Al utilizar los foros para formular una pregunta, etiquete la pregunta para que la vean los equipos de desarrollo de {{site.data.keyword.Bluemix_notm}}.
 
-* Si tiene preguntas técnicas sobre el desarrollo o el despliegue de una app con {{site.data.keyword.iot_short_notm}}, publique su pregunta en [Desbordamiento de pila ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} y etiquete la pregunta con "ibm-bluemix" y "watson-iot".
+* Si tiene preguntas técnicas sobre el desarrollo o el despliegue de una app con {{site.data.keyword.iot_short_notm}}, publique su pregunta en [Stack Overflow ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://stackoverflow.com/search?q=watson-iot+ibm-bluemix){:new_window} y etiquete la pregunta con "ibm-bluemix" y "watson-iot".
 <!--Insert the appropriate dW Answers tag for your service for <service_keyword> in URL below:  -->
 * Para formular preguntas sobre las instrucciones del servicio y cómo empezar, utilice el foro [dW Answers de IBM developerWorks ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/answers/topics/watson-iot/?smartspace=bluemix){:new_window}. Incluya las etiquetas "watson-iot" y "bluemix".
 

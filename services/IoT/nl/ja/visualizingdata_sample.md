@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-06-29"
+lastupdated: "2017-03-20"
 
 ---
 
@@ -25,7 +25,7 @@ lastupdated: "2016-06-29"
 
 - デバイスを {{site.data.keyword.iot_short_notm}} 組織に登録する。
 - デバイスがイベントを {{site.data.keyword.iot_short_notm}} に送信していることを確認する。
-- GitHub リポジトリーから[視覚化サンプルをダウンロード](https://github.com/ibm-messaging/iot-visualization/archive/v0.2.0.zip)し、.zip ファイルを解凍します。
+- GitHub リポジトリーから[視覚化サンプルをダウンロード](https://github.com/ibm-watson-iot/rickshaw4iot/archive/master.zip)し、.zip ファイルを解凍します。
 - {{site.data.keyword.Bluemix_notm}} から [cf コマンド・ライン・ツールをインストール](../../starters/install_cli.html)します。
 
 ## {{site.data.keyword.Bluemix_notm}} でのサンプルの実行
@@ -106,13 +106,4 @@ Paho MQTT ライブラリーを参照してデバイス・トピックへのサ�
 
 デバイス・イベントは `realtimeGraph.js` ファイルに渡されて、グラフがプロットされます。
 
-## 履歴データ表示のカスタマイズ
-{: #customize_historical_display}
-
-履歴デバイス・データのグラフィック視覚化コードがあるディレクトリーは `public/js/historian` です。グラフ作成ロジックは、`public/js/historian/historianGraph.js` を編集してカスタマイズできます。
-
-履歴デバイス・データを収集する REST API 呼び出しを制御するファイルは `public/js/historian/historian.js` です。
-
-履歴データは `historianGraph.js` ファイルに渡されて、グラフがプロットされます。
-
-より詳細な開発者向けガイドを Github iot-visualization wiki から入手できます。
+より詳細な開発者向けガイドを [Github wiki ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-watson-iot/rickshaw4iot/wiki){:new_window} から入手できます。

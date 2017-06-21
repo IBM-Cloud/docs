@@ -1,11 +1,12 @@
 ---
 
 copyright:
-  years: 2015, 2017 lastupdated: "2017-02-09"
+  years: 2015, 2017
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
@@ -16,7 +17,8 @@ copyright:
 {: #c_other_operators}
 
 Outros operadores, incluindo os operadores do kit de ferramentas que você desenvolveu para suas próprias necessidades, podem ser compatíveis com o
-{{site.data.keyword.streaminganalyticsshort}}.{:shortdesc}
+{{site.data.keyword.streaminganalyticsshort}}.
+{:shortdesc}
 
 Os kits de ferramentas devem atender aos critérios a seguir para serem compatíveis com o {{site.data.keyword.streaminganalyticsshort}}:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-20"
 
 ---
 
@@ -231,7 +231,7 @@ System.err.println("Failed to update the location!");
 
 ### Senden von Positionsaktualisierungen für angeschlossene Geräte
 
-Das Gateway kann die entsprechende Methode `updateDeviceLocation()` für Geräte aufrufen, um die Position der angeschlossenen Geräte zu aktualisieren. Die überladene Methode kann verwendet werden, um die Methode `measuredDateTime` anzugeben.  
+Das Gateway kann die entsprechende Methode `updateDeviceLocation()` für Geräte aufrufen, um die Position der angeschlossenen Geräte zu aktualisieren. Die überladene Methode kann verwendet werden, um die Methode `measuredDateTime` anzugeben.
 
 ```java
 // Position des angeschlossenen Geräts mit Längengrad, Breitengrad und Höhe aktualisieren.
@@ -338,7 +338,7 @@ DeviceFirmware firmware = new DeviceFirmware.Builder().
 			name("Firmware.name").
 			url("Firmware.url").
 			verifier("Firmware.verifier").
-			state(FirmwareState.IDLE).				
+			state(FirmwareState.IDLE).
 			build();
 
 DeviceData deviceData = new DeviceData.Builder().
@@ -649,6 +649,138 @@ mgdGateway.addDeviceActionHandler(actionHandler);
 ```
 
 Weitere Informationen zu Geräteaktionen finden Sie in [Gerätemanagementanforderungen ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](../../devices/device_mgmt/requests.html#/device-actions-reboot#device-actions-reboot){: new_window}.
+
+## Erweiterungspakete für das Gerätemanagement
+{: #dme}
+
+Ein Paket mit Gerätemanagementerweiterungen (Device Management Extensions, DME) ist ein JSON-Dokument, das eine Reihe von angepassten Gerätemanagementaktionen definiert. Die Aktionen können auf einem oder mehr Geräten initialisiert werden, die diese Aktionen unterstützen. Die Aktionen werden unter Verwendung des {{site.data.keyword.iot_short}}-Dashboards oder der Gerätemanagement-REST-APIs initialisiert. 
+
+Weitere Informationen zu DME-Paketformaten finden Sie in [Gerätemanagement erweitern](../../devices/device_mgmt/custom_actions.html). 
+
+### Unterstützung für angepasste Gerätemanagementaktionen bereitstellen
+
+Gerätemanagementaktionen, die in einem Erweiterungspaket definiert sind, können auf einem Gateway oder verbundenen Geräten initiiert werden, die diese Aktionen unterstützen. 
+
+Ein Gerät gibt die Aktionstypen an, die es unterstützt, wenn es eine Managementanforderung an {{site.data.keyword.iot_short}} publiziert. Um einem Gerät die Möglichkeit zu geben, angepasste Aktionen zu empfangen, die in einem bestimmten Erweiterungspaket definiert sind, muss das Gerät die Bundle-ID dieser Erweiterung beim Publizieren eines Managementobjekts im Objekt 'supports' angeben. 
+
+Das Gateway kann die API `manage()` mit der Liste der Bundle-IDs aufrufen, um {{site.data.keyword.iot_short}} mitzuteilen, dass das Gateway oder das verbundene Gerät DME-Aktionen für die angegebene Liste von Bundle-IDs in der Managementanforderung unterstützt. 
+
+Das folgende Code-Snippet wird zum Publizierung einer Managementanforderung verwendet, um {{site.data.keyword.iot_short}} mitzuteilen, dass dieses Gateway eine DME-Aktion unterstützt: 
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendGatewayManageRequest(0, false, false, bundleIds);
+```
+
+Der letzte Parameter gibt die angepasste Aktion an, die das Gerät unterstützt. 
+
+Auf ähnliche Weise kann ein Gateway die entsprechende Gerätemethode aufrufen, um die DME-Aktionsunterstützung der angeschlossenen Geräten zu kommunizieren: 
+
+```java
+List<String> bundleIds = new ArrayList<String>();
+bundleIds.add("example-dme-actions-v1");
+
+mgdGateway.sendDeviceManageRequest(typeId, deviceId, 0, false, false, bundleIds);
+```
+
+### Angepasste Gerätemanagementaktionen bearbeiten
+
+Wenn auf einem Gateway oder Gerät, das an {{site.data.keyword.iot_short}} angeschlossen ist, eine angepasste Aktion initiiert wird, wird eine MQTT-Nachricht an das Gateway publiziert. Die Nachricht enthält Parameter, die als Bestandteil der Anforderung angegeben wurden. Das Gateway muss einen 'CustomActionHandler' hinzufügen, um die Nachricht empfangen und verarbeiten zu können. Die Nachricht wird als eine Instanz der Klasse `CustomAction` zurückgegeben, die folgende Eigenschaften hat: 
+
+| Eigenschaft     | Datentyp     | Beschreibung |
+|----------------|----------------|----------------|
+|`bundleId` |Zeichenfolge | Eine eindeutige ID für die DME. |
+|`actionId` |Zeichenfolge|Die angepasste Aktion, die initialisiert wird. |
+|`typeId` |Zeichenfolge|Der Gerätetyp, auf dem die angepasste Aktion initiiert wird. |
+|`deviceId` |Zeichenfolge|Das Gerät, auf dem die angepasste Aktion initiiert wird. |
+|`payload` |Zeichenfolge|Die Nachricht, die die Parameterliste im JSON-Format enthält. |
+|`reqId` |Zeichenfolge|Die Anforderungs-ID, die verwendet wird, um auf die Anforderung der angepassten Aktion zu antworten. |
+
+Der folgende Code ist eine Beispielimplementierung eines `CustomActionHandler`: 
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.ibm.iotf.client.CustomAction;
+import com.ibm.iotf.client.CustomAction.Status;
+import com.ibm.iotf.devicemgmt.CustomActionHandler;
+
+public class MyCustomActionHandler extends CustomActionHandler implements Runnable {
+
+	// Eine Warteschlange, die die Befehle für eine reibungslose Verarbeitung von MQTT-Nachrichten enthält und handhabt
+	private BlockingQueue<CustomAction> queue = new LinkedBlockingQueue<CustomAction>();
+	// Eine Map, die das Publizierungsintervall für jedes Gerät enthält
+	private Map<String, Long> intervalMap = new HashMap<String, Long>();
+
+	@Override
+	public void run() {
+		while(true) {
+			CustomAction action = null;
+			try {
+				action = queue.take();
+				System.out.println(" "+action.getActionId()+ " "+action.getPayload());
+				JsonArray fields = action.getPayload().get("d").getAsJsonObject().get("fields").getAsJsonArray();
+				for(JsonElement field : fields) {
+					JsonObject fieldObj = field.getAsJsonObject();
+					if("PublishInterval".equals(fieldObj.get("field").getAsString())) {
+						long val = fieldObj.get("value").getAsLong();
+						String key = action.getTypeId() + ":" + action.getDeviceId();
+						long publishInterval = val * 1000;
+						intervalMap.put(key, publishInterval);
+						System.out.println("Updated the publish interval to "+val);
+					}
+				}
+				action.setStatus(Status.OK);
+
+			} catch (InterruptedException e) {}
+		}
+	}
+
+	public long getPublishInterval(String deviceType, String deviceId) {
+		String key = deviceType + ":" + deviceId;
+		Long val = intervalMap.get(key);
+		if(val == null) {
+			return 1000; // default is 1 second
+		} else {
+			return val.longValue();
+		}
+	}
+
+	@Override
+	public void handleCustomAction(CustomAction action) {
+		try {
+			queue.put(action);
+			} catch (InterruptedException e) {
+		}
+
+	}
+}
+```
+
+Wenn der `CustomActionHandler` zur `ManagedGateway`-Instanz hinzugefügt wird, wird die Methode `handleCustomAction()` immer aufgerufen, wenn eine angepasste Aktion von der Anwendung initiiert wird. 
+
+Das folgende Codebeispiel zeigt, wie der `CustomActionHandler` zur `ManagedGateway`-Instanz hinzugefügt wird. 
+
+```java
+MyCustomActionHandler handler = new MyCustomActionHandler();
+mgdGateway.addCustomActionHandler(handler);
+```
+
+Wenn das Gateway die Nachricht der angepassten Aktion empfängt, führt es die Aktion entweder aus oder es antwortet mit einem Fehlercode, mit dem angegeben wird, dass die Aktion zurzeit nicht ausgeführt werden kann. Das Gateway muss die Methode *setStatus()* verwenden, um den Status der Aktion festzulegen: 
+
+```java
+action.setStatus(Status.OK);
+```
+
+Weitere Informationen zur DME finden Sie in [Gerätemanagementanforderungen erweitern ![Symbol für externen Link](../../../../icons/launch-glyph.svg "Symbol für externen Link")](../../devices/device_mgmt/custom_actions.html){: new_window}. 
 
 ## Empfangsbereitschaft für Geräteattributänderungen
 {: #listen_device_attributes}

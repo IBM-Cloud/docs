@@ -13,7 +13,7 @@ lastupdated: "2017-03-07"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# API REST HTTP per dispositivi gateway 
+# API REST HTTP per dispositivi gateway
 {: #api_link}
 
 
@@ -29,7 +29,7 @@ Per informazioni sulla sicurezza client e su come collegare i client ai disposit
 
 ### Autenticazione
 
-Tutte le richieste devono includere un'intestazione di autorizzazione. L'autenticazione di base è l'unico metodo supportato. Quando un dispositivo effettua una richiesta HTTP utilizzando l'API REST HTTP {{site.data.keyword.iot_short_notm}}, sono necessarie le seguenti credenziali: 
+Tutte le richieste devono includere un'intestazione di autorizzazione. L'autenticazione di base è l'unico metodo supportato. Quando un dispositivo effettua una richiesta HTTP utilizzando l'API REST HTTP {{site.data.keyword.iot_short_notm}}, sono necessarie le seguenti credenziali:
 
 |Credenziale|Input richiesto|
 |:---|:---|
@@ -38,15 +38,18 @@ Tutte le richieste devono includere un'intestazione di autorizzazione. L'autenti
 
 dove:
 
-**_orgId_**   
-- È il nome dell'organizzazione, che deve corrispondere al nome specificato nell'intestazione host.
+<dl>
+<dt>orgId</dt>  
+<dd>Il nome dell'organizzazione, che deve corrispondere al nome specificato nell'intestazione host.</dd>
 
-**_gwType_**
-- È il tipo di gateway.
+<p></p>
+<dt>gwType</dt>  
+<dd>Il tipo del gateway. </dd>
+<p></p>
+<dt>gwDevId</dt>  
+<dd>L'identificativo del dispositivo del gateway. </dd>
+</dl>
 
-**_gwDevId_**
-
-- È l'identificativo del dispositivo del gateway.
 
 ### Intestazioni richiesta per tipo di contenuto
 

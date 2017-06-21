@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-04-10"
 
 ---
 
@@ -157,10 +157,10 @@ Donde:
 - Otros clientes que forman parte de la aplicación escalable deben utilizar el mismo ID de cliente.
 - El valor de la sesión limpia debe estar establecido en false (0) para las suscripciones no duraderas.
 
-### Suscripciones compartidas de duración mixta (Beta)
+### Suscripciones compartidas de duración mixta
 {: #shared_sub_mixed}
 
-El servicio de {{site.data.keyword.iot_short_notm}} amplía la especificación de protocolo de mensajería MQTT V3.1.1 para dar soporte a una versión beta de prueba de suscripciones compartidas de duración mixta. Las suscripciones compartidas proporcionan funciones de equilibrio de carga para aplicaciones. Es posible que una suscripción compartida sea necesaria si una aplicación de empresa de programa de fondo no puede procesar el volumen de mensajes que se van a publicar en un espacio de tema específico. Por ejemplo, cuando muchos dispositivos publican mensajes que está procesando una única aplicación, es posible que sea necesario utilizar la función de equilibrio de carga de una suscripción compartida.
+El servicio de {{site.data.keyword.iot_short_notm}} amplía la especificación de protocolo de mensajería MQTT V3.1.1 para dar soporte a suscripciones compartidas de duración mixta. Las suscripciones compartidas proporcionan funciones de equilibrio de carga para aplicaciones. Es posible que una suscripción compartida sea necesaria si una aplicación de empresa de programa de fondo no puede procesar el volumen de mensajes que se van a publicar en un espacio de tema específico. Por ejemplo, cuando muchos dispositivos publican mensajes que está procesando una única aplicación, es posible que sea necesario utilizar la función de equilibrio de carga de una suscripción compartida.
 
 Para las suscripciones compartidas de duración mixta, asegúrese de que el ID de cliente de la suscripción coincida con el formato siguiente:
 
@@ -176,7 +176,6 @@ Donde:
    - Puntos ( . )
 
 **Importante:**
-- El soporte para suscripciones compartidas de duración mixta solo está disponible como característica beta. No implemente características beta en aplicaciones de producción.
 - El valor de sesión limpia se puede establecer en true (1) o false (0) en las suscripciones compartidas de duración mixta.
 - Los clientes que se conectan con instanceId utilizan diferentes suscripciones a las que se pueden conectar los clientes sin instanceId. Por lo tanto, si desea que varios clientes se conecten a una suscripción compartida de duración mixta, tiene que especificar instanceId en todas las suscripciones.
 

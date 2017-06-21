@@ -24,7 +24,7 @@ Par exemple, vous pouvez créer une règle garantissant que lorsque le terminal 
 {: #byb}
 Assurez-vous que les propriétés de terminal que vous souhaitez utiliser comme conditions dans vos règles ont été mappées à des schémas. Pour plus d'informations, voir [Connexion de terminaux](iotplatform_task.html) et [Création de schémas](im_schemas.html).
 
-En outre, consultez la recette [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} pour comprendre les règles et les actions utilisées dans Cloud Analytics. 
+En outre, consultez la recette [Using Rules and Actions with {{site.data.keyword.iot_short}} Cloud Analytics ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/recipes/tutorials/using-rules-and-actions-with-ibm-watson-iot-platform-cloud-analytics/){: new_window} pour comprendre les règles et les actions utilisées dans Cloud Analytics.
 
 ## Gestion des règles et des actions  
 {: #managing_rules}
@@ -160,7 +160,7 @@ Pour créer l'action Envoyer un courrier électronique :
 ### IFTTT  
 {: #ifttt}
 
-Utilisez l'action IFTTT pour déclencher une recette IFTTT lorsqu'une règle est déclenchée. Pour plus d'informations sur le déclenchement d'actions, telles que les recettes IFTTT, voir l'article [Maker Channel ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://ifttt.com/maker){: new_window} sur le site IFTTT. 
+Utilisez l'action IFTTT pour déclencher une recette IFTTT lorsqu'une règle est déclenchée. Pour plus d'informations sur le déclenchement d'actions, telles que les recettes IFTTT, voir l'article [Maker Channel ![Icône de lien externe](../../icons/launch-glyph.svg "External link icon")](https://ifttt.com/maker){: new_window} sur le site IFTTT.
 
 Exemple : [Utiliser IFTTT pour publier une carte Trello](#iftttex).
 

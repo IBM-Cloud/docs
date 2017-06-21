@@ -77,23 +77,3 @@ Gli scudi sono eseguiti nel motore di analisi {{site.data.keyword.iotinsurance_s
 Il motore delle azioni determina le azioni da intraprendere in base alle informazioni specificate nello scudo.
 
 Puoi creare nuovi scudi in JavaScript utilizzando l'API {{site.data.keyword.iotinsurance_short}}.
-
-
-
-# Link correlati
-{: #rellinks}
-
-## Esercitazioni ed esempi
-{: #samples}
-* [Sample mobile app code on GitHub ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/ibm-watson-iot/ioti-mobile){:new_window}
-
-## Riferimento API
-{: #api}
-* [{{site.data.keyword.iotinsurance_short}} API ![icona link esterno](../../icons/launch-glyph.svg)](https://iot4i-api-docs.mybluemix.net/){:new_window}
-* [{{site.data.keyword.iotinsurance_short}} API Examples ![icona link esterno](../../icons/launch-glyph.svg)](https://github.com/IBM-Bluemix/iot4i-api-examples-nodejs/#iot-for-insurance-api-examples){:new_window}
-
-## Link correlati
-{: #general}
-* [Documentazione {{site.data.keyword.iot_full}}](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [Developer support forum ![icona link esterno](../../icons/launch-glyph.svg)](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=%2B[iot]%20%2B[bluemix]){:new_window}
-* [Stack overflow support forum ![icona link esterno](../../icons/launch-glyph.svg)](http://stackoverflow.com/questions/tagged/ibm-bluemix){:new_window}

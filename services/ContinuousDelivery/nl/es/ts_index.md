@@ -28,7 +28,7 @@ No está autorizado con GitHub.
 Si tiene está autorizado por {{site.data.keyword.Bluemix_notm}} para acceder a la cuenta de GitHub, puede producirse uno de estos problemas:
 {: tsSymptoms}
 
- * Cuando intente añadir la integración de herramientas de GitHub a la cadena de herramientas, la integración de herramientas no se añade. 
+ * Cuando intente añadir la integración de herramientas de GitHub a la cadena de herramientas, la integración de herramientas no se añade.
  * El conducto no se ejecuta automáticamente cuando se envían cambios en el repositorio de GitHub o GitHub Enterprise.
 
 {{site.data.keyword.Bluemix_notm}} no está autorizado para acceder a GitHub.  
@@ -37,11 +37,11 @@ Si tiene está autorizado por {{site.data.keyword.Bluemix_notm}} para acceder a 
 Si configura la integración de esta herramienta de GitHub mientras crea la cadena de herramientas, siga estos pasos:
 {: tsResolve}
  
-  1. En la sección Integraciones configurables, pulse **GitHub**.  
-  1. Si está creando la cadena de herramientas en {{site.data.keyword.Bluemix_notm}} Público y no ha autorizado a {{site.data.keyword.Bluemix_notm}} acceso a GitHub, pulse **Autorizar** para ir al sitio web de GitHub.  
+  1. En la sección Integraciones configurables, pulse **GitHub**. 
+  1. Si está creando la cadena de herramientas en {{site.data.keyword.Bluemix_notm}} Público y no ha autorizado a {{site.data.keyword.Bluemix_notm}} acceso a GitHub, pulse **Autorizar** para ir al sitio web de GitHub. 
   1. Si no tiene ninguna sesión de GitHub activa, se le solicitará que inicie sesión. Pulse **Autorizar aplicación** para permitir que {{site.data.keyword.Bluemix_notm}} acceda a su cuenta de GitHub. Si tiene una sesión activa de GitHub pero no ha introducido recientemente su contraseña, es posible que se le solicite que introduzca la contraseña de GitHub para confirmarla.
   
-Si ya tiene una cadena de herramientas, actualice la configuración de la integración de herramientas de GitHub: 
+Si ya tiene una cadena de herramientas, actualice la configuración de la integración de herramientas de GitHub:
 
  1. En el panel de control de DevOps, en la página **Cadenas de herramientas**, pulse sobre la cadena de herramientas para abrir la página Visión general correspondiente. Si lo prefiere, en la página Visión general de la app, tarjeta Entrega continua, pulse **Ver cadena de herramientas** y, a continuación, **Visión general**.
  1. En la tarjeta GitHub, pulse el menú y pulse **Configurar**.
@@ -70,6 +70,5 @@ Vuelva a configurar la integración de herramientas:
 
  ![Botón Volver a configurar](images/tool_reconfigure.png)
  
-1. Asegúrese de utilizar parámetros de configuración válidos. Si el error está causado por una configuración no válida, se muestra un mensaje de error; por ejemplo, `La integración se ha podido configurar. Compruebe la configuración y vuelva a intentarlo.
-Razón: api_key:fakeKey no válido`. Actualice los valores de la integración de herramientas y pulse **Guardar integración**.
+1. Asegúrese de utilizar parámetros de configuración válidos. Si el error está causado por una configuración no válida, se muestra un mensaje de error; por ejemplo, `La integración se ha podido configurar. Compruebe la configuración y vuelva a intentarlo. Razón: api_key:fakeKey no válido`. Actualice los valores de la integración de herramientas y pulse **Guardar integración**.
 1. Si el error está causado por un problema de comunicación, pulse **Guardar integración** para intentarlo de nuevo.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-4-12"
+lastupdated: "2017-4-26"
 
 ---
 
@@ -16,8 +16,6 @@ lastupdated: "2017-4-12"
 
 開発、デプロイメント、および運用の作業をサポートするツール統合をオープン・ツールチェーンの作成時に構成するか、ツール統合を追加および構成して既存のツールチェーンをカスタマイズすることができます。  
 {:shortdesc}
-
-**重要**: {{site.data.keyword.Bluemix_notm}} Public では、ツールチェーンは米国南部地域でのみ利用できます。
 
 ツールチェーンで追加および構成できるツール統合は、{{site.data.keyword.Bluemix_notm}} Public または {{site.data.keyword.Bluemix_notm}} Dedicated のどちらを使用しているかによって異なります。{{site.data.keyword.Bluemix_notm}} Dedicated でツールチェーンを使用している場合、利用できるツール統合は、特定の環境で {{site.data.keyword.contdelivery_full}} がどのように設定されたかに応じて異なります。
 
@@ -40,7 +38,8 @@ lastupdated: "2017-4-12"
 |PagerDuty			|はい		|はい		|
 |Sauce Labs		|はい		|いいえ		|
 |Slack			|はい		|はい		|
-{: caption="Table 1. Tool integrations available for toolchains on {{site.data.keyword.Bluemix_notm}} Public and Dedicated" caption-side="top"}
+|SonarQube			|はい		|いいえ		|
+{: caption="表 1. Bluemix Public および Dedicated でツールチェーンに使用可能なツール統合" caption-side="top"}
 
 **ヒント:** {{site.data.keyword.Bluemix_notm}} Public でソース・コードでの開発を開始する場合は、{{site.data.keyword.deliverypipeline}} を構成する前に GitHub ツール統合または Git Repos and Issue Tracking ツール統合を構成してください。{{site.data.keyword.Bluemix_notm}} Dedicated でコードでの開発を開始する場合は、{{site.data.keyword.deliverypipeline}} を構成する前に {{site.data.keyword.ghe_short}} ツール統合を構成します。
 
@@ -183,7 +182,7 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 
 1. **「保存」**をクリックします。パイプラインが実行されると、このビルド・ジョブは Artifactory ツール統合からの構成情報を使用して Maven リポジトリーに接続します。
 
-詳しくは、「[Artifactory ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/code/tool_artifactory/){: new_window}」を参照してください。
+詳しくは、「[Artifactory ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/deliver/tool_artifactory/){: new_window}」を参照してください。
 
 
 ## Availability Monitoring の追加
@@ -195,7 +194,7 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 
 アプリをビルドするときに、アプリの正常性をテスト、モニター、および改善するために、{{site.data.keyword.prf_hubshort}} ツール統合を追加します。
 
-1. 既存のツールチェーンにこのツール統合を追加する場合は、DevOps ダッシュボードの「ツールチェーン」ページでそのツールチェーンをクリックして、そのツールチェーンの「概要」ページを開きます。あるいは、アプリの「概要」ページの「継続的デリバリー」カードで、**「ツールチェーンの表示」**をクリックし、**「概要」**をクリックします。
+1. DevOps ダッシュボードの「ツールチェーン」ページで、{{site.data.keyword.prf_hubshort}} を追加するツールチェーンをクリックします。あるいは、アプリの「概要」ページの「継続的デリバリー」カードで、**「ツールチェーンの表示」**をクリックし、**「概要」**をクリックします。
 
  a. **「ツールの追加 (Add a Tool)」**をクリックします。
 
@@ -216,7 +215,7 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 
 信頼できる運用正常性、サービス品質、および継続的改善という目標を DevOps チームが達成するのを助けるために、Cloud Event Management をツールチェーンに追加します。
 
-1. DevOps ダッシュボードの「ツールチェーン」ページで、Cloud Event Management を追加するツールチェーンをクリックします。あるいは、アプリの「概要」ページの「継続的デリバリー」カードで、**「ツールチェーンの表示」**をクリックし、**「概要」**をクリックします。
+1. DevOps ダッシュボードから、**「ツールチェーン」**をクリックします。Cloud Event Management を追加するツールチェーンをクリックします。あるいは、アプリの「概要」ページの「継続的デリバリー」カードで、**「ツールチェーンの表示」**をクリックし、**「概要」**をクリックします。
 
  a. **「ツールの追加 (Add a Tool)」**をクリックします。
 
@@ -230,6 +229,8 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
  * 問題の通知をユーザーがいつ受け取るのかを決定するポリシーを作成するには、**「{{site.data.keyword.alertnotificationshort}}」**をクリックします。
 
  * Cloud Event Management で運用手順書のカタログを管理するには、**「Runbook Automation」**をクリックします。
+
+詳しくは、[Cloud Event Management ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/manage/tool_cloud_event_mgt/){: new_window} を参照してください。
 
 
 ## Delivery Pipeline の構成
@@ -251,9 +252,11 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 1. **「統合の作成 (Create Integration)」**をクリックして、{{site.data.keyword.deliverypipeline}} をツールチェーンに追加します。
 1. **「{{site.data.keyword.deliverypipeline}}」**をクリックして、パイプラインを表示し、構成します。パイプラインの構成の基本を確認するには、『[パイプラインのビルドとデプロイ](/docs/services/ContinuousDelivery/pipeline_build_deploy.html){: new_window}』を参照してください。
 
-  **ヒント:** GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリー に変更をプッシュするとパイプラインがトリガーされるようにしたい場合、パイプラインのステージを定義する前に、ツールチェーン用に GitHub、{{site.data.keyword.ghe_short}}、または Git Repos and Issue Tracking を構成する必要があります。パイプラインのステージには、リポジトリーの Git URL が必要です。各パイプライン・ステージは、ツールチェーンと関連付けられた、GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーのうち 1 つのみを参照できます。GitHub の構成手順については、[GitHub](#github) のセクションを参照してください。Dedicated {{site.data.keyword.ghe_short}} の構成方法については、『[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated/index.html){: new_window}』を参照してください。Git Repos and Issue Tracking の構成方法については、[Git Repos and Issue Tracking](##gitbluemix) のセクションを参照してください。    
+  **ヒント:** GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーにコミットがプッシュされるとパイプラインが自動的に実行されるようにしたい場合は、以下のステップを実行します。
 
-  **注:** GitHub リポジトリーまたは GitHub Enterprise リポジトリーに対する管理特権をお持ちでない場合、または、リンクしようとしている Git Repos and Issue Tracking リポジトリーに対する Master または Owner 特権をお持ちでない場合、Web フックを使用できないことが原因で統合は制限されます。リポジトリーにコミットがプッシュされたときにパイプラインが自動的にトリガーされるようにするには、Web フックが必要です。Web フックがない場合、パイプラインを手動で開始する必要があります。
+   a. パイプラインのステージを定義する前に、ツールチェーン用に GitHub、{{site.data.keyword.ghe_short}}、または Git Repos and Issue Tracking を構成します。パイプラインのステージには、リポジトリーの Git URL が必要です。各パイプライン・ステージは、ツールチェーンと関連付けられた、GitHub リポジトリー、{{site.data.keyword.ghe_short}} リポジトリー、または Git リポジトリーのうち 1 つのみを参照できます。GitHub の構成手順については、[GitHub](#github) のセクションを参照してください。Dedicated {{site.data.keyword.ghe_short}} の構成方法については、『[{{site.data.keyword.ghe_long}} 概説](/docs/services/ghededicated/index.html){: new_window}』を参照してください。Git Repos and Issue Tracking の構成方法については、[Git Repos and Issue Tracking](##gitbluemix) のセクションを参照してください。
+
+   b. Web フックを使用します。Web フックを使用しない場合、パイプラインは手動でのみ実行できます。GitHub リポジトリーまたは {{site.data.keyword.ghe_short}} リポジトリーにリンクする場合に Web フックを使用するには、管理特権が必要です。Git Repos and Issue Tracking リポジトリーにリンクするには、Master または Owner 特権が必要です。
 
 1. オプション: {{site.data.keyword.Bluemix_notm}} Public でツールチェーンを使用していて、Sauce Labs でアプリのテストを実行したい場合、{{site.data.keyword.deliverypipeline}} を構成して Sauce Labs テスト・ジョブを追加します。テスト・ジョブの構成手順については、『[パイプラインに SauceLabs テスト・ジョブを構成する](#config_saucelabs)』セクションを参照してください。
 
@@ -286,7 +289,7 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 
   b. サービス・インスタンスでは、ツールチェーンに Sauce Labs を構成したときに使用した Sauce Labs のユーザー名を選択します。
 
-   **ヒント**: ツールチェーンで Sauce Labs を構成したときに使用したユーザー名とアクセス・キーを確認するには、**「構成」**をクリックします。
+   **ヒント**: ツールチェーン用に Sauce Labs を構成したときに使用したユーザー名およびアクセス・キーを表示するには、**「構成」**をクリックします。
 
   c. **「テスト実行コマンド (Test Execution Command)」**フィールドに、テストに必要な依存関係をインストールしてテストを実行するコマンドを入力します。例えば、Node.js アプリの場合、次のようなコマンドを入力します。
      ```
@@ -310,6 +313,7 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 
 {{site.data.keyword.DRA_short}} を追加し、デプロイメントをモニタリングしてリリース前にリスクを洗い出すことで、{{site.data.keyword.Bluemix_notm}} のコードの品質を維持し、向上させることができます。
 
+1. ツールチェーン作成時にこのツール統合を構成する場合は、「構成可能な統合 (Configurable Integrations)」セクションで**「{{site.data.keyword.DRA_short}}」**をクリックします。
 1. 既存のツールチェーンにこのツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**ページでそのツールチェーンをクリックして「概要」ページを開きます。あるいは、アプリの「概要」ページの「継続的デリバリー」カードで、**「ツールチェーンの表示」**をクリックし、**「概要」**をクリックします。
 
  a. **「ツールの追加 (Add a Tool)」**をクリックします。
@@ -327,15 +331,16 @@ DevOps 処理中の問題に関する通知を受け取るように {{site.data.
 
 Eclipse Orion {{site.data.keyword.webide}} は、ソース管理タスクを作成、編集、実行、デバッグ、完了できる Web ベースの統合環境です。編集から実行、送信、そしてデプロイまで、シームレスに行うことができます。
 
- **注意**: このツール統合は、事前構成されています。構成パラメーターは不要で、再構成することはできません。
+ **注**: このツール統合は事前構成済みです。構成パラメーターは不要で、再構成することはできません。
 
 ソース管理タスクを完了するには、次の手順で Eclipse Orion {{site.data.keyword.webide}} ツール統合を追加します。
 
+1. ツールチェーン作成時にこのツール統合を構成する場合は、「構成可能な統合 (Configurable Integrations)」セクションで**「Eclipse Orion {{site.data.keyword.webide}}」**をクリックします。
 1. 既存のツールチェーンにこのツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**ページでそのツールチェーンをクリックして「概要」ページを開きます。あるいは、アプリの「概要」ページの「継続的デリバリー」カードで、**「ツールチェーンの表示」**をクリックし、**「概要」**をクリックします。
 
  a. **「ツールの追加 (Add a Tool)」**をクリックします。
 
- b. 「ツール統合」セクションで、**「Eclipse Orion Web IDE」**をクリックします。
+ b. 「ツール統合」セクションで、**「Eclipse Orion {{site.data.keyword.webide}}」**をクリックします。
 
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. **「Eclipse Orion {{site.data.keyword.webide}}」**をクリックします。ワークスペースに GitHub または {{site.data.keyword.ghe_short}} のリポジトリーが事前に取り込まれています。現行のツールチェーンと関連付けられているリポジトリーは強調表示されます。
@@ -343,10 +348,10 @@ Eclipse Orion {{site.data.keyword.webide}} は、ソース管理タスクを作�
 詳しくは、『[ Eclipse Orion {{site.data.keyword.webide}} によるコードの編集](/docs/services/ContinuousDelivery/web_ide.html){: new_window}』および [Eclipse Orion {{site.data.keyword.webide}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/code/tool_eclipse_orion_web_ide/){: new_window} を参照してください。
 
 
-## Git Repos and Issue Tracking (試験段階) の構成
+## Git Repos and Issue Tracking (ベータ) の構成
 {: #gitbluemix}
 
-Git Repos and Issue Tracking ツール統合は、GitLab Community Edition (Git リポジトリー用の Web ベースのホスティング・サービス) をベースにしています。リポジトリーのローカルとリモートの両方のコピーを持つことができます。詳しくは、[Git Repos and Issue Tracking (試験段階) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/help){:new_window} を参照してください。
+Git Repos and Issue Tracking ツール統合は、GitLab Community Edition (Git リポジトリー用の Web ベースのホスティング・サービス) をベースにしています。リポジトリーのローカルとリモートの両方のコピーを持つことができます。詳しくは、[Git Repos and Issue Tracking ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git.ng.bluemix.net/help){:new_window} を参照してください。
 
 ツールチェーンの作成時に Git Repos and Issue Tracking を構成する場合は、以下のステップを実行します。    
 
@@ -371,7 +376,7 @@ Git Repos and Issue Tracking ツール統合は、GitLab Community Edition (Git 
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. 作業対象の Git リポジトリーのカードをクリックします。プロジェクト概要のページが開きます。    
 
-**注:** リンクしようとしているリポジトリーに対する Master または Owner 特権をお持ちでない場合、Web フックを使用できないことが原因で統合は制限されます。リポジトリーにコミットがプッシュされたときにパイプラインが自動的にトリガーされるようにするには、Web フックが必要です。Web フックがない場合、パイプラインを手動で開始する必要があります。
+**注:** リンクしようとしているリポジトリーに対する Master または Owner 特権をお持ちでない場合、Web フックを使用できないので統合は制限されます。リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。Web フックがない場合、パイプラインを手動で開始する必要があります。
 
 
 ## GitHub and Issues の構成
@@ -410,11 +415,11 @@ GitHub を構成して、クラウドでソース・コードを管理します�
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. 作業対象の GitHub リポジトリーのカードをクリックします。GitHub の Web サイトが開きます。そこでリポジトリーの内容を表示できます。
 
-  **ヒント**:  Eclipse Orion {{site.data.keyword.webide}} の統合されたソース・コード管理ツールを使用して、GitHub リポジトリーを編集し、ワークスペースからアプリをデプロイできます。
+  **ヒント**: Eclipse Orion {{site.data.keyword.webide}} の統合ソース・コード管理ツールを使用して、GitHub リポジトリーを編集し、ワークスペースからアプリをデプロイすることができます。
 
 1. GitHub Issues を使用可能にした場合、**「GitHub Issues」**をクリックして開きます。ツールチェーンに複数の GitHub リポジトリーが含まれれている場合でも、GitHub Issues のこのインスタンスをツールチェーン全体に使用できます。    
 
-**注:** リンクしようとしているリポジトリーに対する管理特権をお持ちでない場合、Web フックを使用できないことが原因で統合は制限されます。リポジトリーにコミットがプッシュされたときにパイプラインが自動的にトリガーされるようにするには、Web フックが必要です。Web フックがない場合、パイプラインを手動で開始する必要があります。
+**注:** リンクしようとしているリポジトリーに対する管理特権をお持ちでない場合、Web フックを使用できないので統合は制限されます。リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。Web フックがない場合、パイプラインを手動で開始する必要があります。
 
 詳しくは、[GitHub ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/code/tool_github/){: new_window} および [GitHub Issues ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/think/tool_github_issues/){: new_window} を参照してください。
 
@@ -456,11 +461,11 @@ GitHub を構成して、クラウドでソース・コードを管理します�
 1. **「統合の作成 (Create Integration)」**をクリックします。
 1. 作業対象の {{site.data.keyword.ghe_short}} リポジトリーのカードをクリックします。会社の {{site.data.keyword.ghe_short}} リポジトリーが開きます。
 
-  **ヒント**:  Eclipse Orion {{site.data.keyword.webide}} の統合されたソース・コード管理ツールを使用して、{{site.data.keyword.ghe_short}} リポジトリーを編集し、ワークスペースからアプリをデプロイできます。
+  **ヒント**: Eclipse Orion {{site.data.keyword.webide}} の統合ソース・コード管理ツールを使用して、{{site.data.keyword.ghe_short}} リポジトリーを編集し、ワークスペースからアプリをデプロイすることができます。
 
 1. GitHub Issues を使用可能にした場合、**「GitHub Issues」**をクリックします。ツールチェーンに複数の GitHub リポジトリーが含まれれている場合でも、GitHub Issues のこのインスタンスをツールチェーン全体に使用できます。    
 
-**注:** リンクしようとしているリポジトリーに対する管理特権をお持ちでない場合、Web フックを使用できないことが原因で統合は制限されます。リポジトリーにコミットがプッシュされたときにパイプラインが自動的にトリガーされるようにするには、Web フックが必要です。Web フックがない場合、パイプラインを手動で開始する必要があります。
+**注:** リンクしようとしているリポジトリーに対する管理特権をお持ちでない場合、Web フックを使用できないので統合は制限されます。リポジトリーにコミットがプッシュされたときにパイプラインが自動的に実行されるようにするには、Web フックが必要です。Web フックがない場合、パイプラインを手動で開始する必要があります。
 
 
 ## Jenkins の構成
@@ -468,7 +473,7 @@ GitHub を構成して、クラウドでソース・コードを管理します�
 
 Jenkins は、ソフトウェアを継続的にビルドおよびテストする、サーバー・ベースのオープン・ソースのツールであり、継続的統合および継続的デリバリーの履行をサポートします。
 
-**重要**: Jenkins ツール統合を作成する前に、Jenkins サーバーがなければなりません。
+**重要**: Jenkins ツール統合を作成する前に、Jenkins サーバーを用意する必要があります。
 
 Jenkins ツール統合を使用すれば、Jenkins ジョブ通知をツールチェーン内の他のツール (Slack や PagerDuty など) に送信できます。デプロイメントでコードをトレースするために、デプロイメント・メッセージを Git コミットや関連 Git/JIRA 問題に追加できます。また、デプロイメントを「ツールチェーン接続」ページに表示することもできます。テスト結果を {{site.data.keyword.DRA_short}} に送信し、自動化された品質ゲートを追加し、デプロイメント・リスクをトラッキングすることができます。
 
@@ -494,7 +499,7 @@ Jenkins ツール統合を使用すれば、Jenkins ジョブ通知をツール�
 
   * Linux または Docker: `cf install-plugin https://icd.ng.bluemix.net/icd_linux_amd64`
 
- c. DevOps Insights および Notifications 用の IBM Cloud DevOps Jenkins プラグインをインストールおよび構成します。詳しくは、『[プラグインのインストールおよび構成](/docs/services/DevOpsInsights/insights_risk.html#integrate_jenkins){: new_window}』を参照してください。
+ c. DevOps Insights および Notifications 用の IBM Cloud DevOps Jenkins プラグインをインストールおよび構成します。詳しくは、[プラグインのインストールおよび構成](/docs/services/DevOpsInsights/insights_risk.html#integrate_jenkins){: new_window}を参照してください。
 
  d. ツールチェーンに通知を送信するようにしたいジョブごとに、以下のステップを実行します。
 
@@ -520,7 +525,7 @@ Jenkins ツール統合を使用すれば、Jenkins ジョブ通知をツール�
   * `CF_CREDS_USR` ユーザー名変数および `CF_CREDS_PSW` パスワード変数を使用して、Cloud Foundry CLI のバインディングを構成します。
  ![Cloud Foundry CLI バインディング](images/jenkins_config_bindings.png)  
 
-  * **「ビルド (Build)」**フィールドに以下のコマンドを入力することによって、ログインし、IBM Cloud DevOps Cloud Foundry プラグインを使用してアプリケーション・デプロイ可能マッピングを、Git コミット追跡可能性を有効にしてツールチェーンに送信します。
+  * **「ビルド (Build)」**フィールドに以下のコマンドを入力してログインし、IBM Cloud DevOps Cloud Foundry プラグインを使用してアプリケーション・デプロイ可能マッピングを、Git コミット追跡可能性を有効にしてツールチェーンに送信します。
  ![ビルド・コマンド](images/jenkins_build_commands.png)    
 
   * **「ビルド (Build)」**フィールドに `cf icd --create-connection $ICD_WEBHOOK_URL $CF_APP` コマンドを入力して、アプリケーション・デプロイ可能マッピングをツールチェーンに送信します。    
@@ -648,7 +653,6 @@ JIRA は、ユーザーのソフトウェアに関連する問題およびバグ
      npm publish --registry "${NPM_RELEASE_URL}"
      ```
   **ヒント:** レジストリーへの接続に使用した URL およびユーザー資格情報は、Nexus ツール統合の構成設定で見つけることができます。
-
   e. ビルド・ジョブが Nexus レジストリーへのパブリッシュを行い、かつ、ノード・モジュール・バージョンのフォーマットが `x.y.z-SNAPSHOT.w` である場合、**「スナップショット・モジュール・バージョンのインクリメント (Increment snapshot module version)」**チェック・ボックスにチェック・マークを付けます。ビルド・ジョブは、モジュール・バージョンを自動的に更新した後で、Nexus レジストリーにパブリッシュします。ビルド・ジョブは、npm レジストリーおよびローカル `package.json` ファイルから最高バージョンのモジュールを選択し、semver を使用してモジュール・バージョンを増やします。ビルド・ジョブは、変更を SCM リポジトリーに配信しません。
 
 1. **「保存」**をクリックします。パイプラインが実行されると、このビルド・ジョブは Nexus ツール統合からの構成情報を使用して npm レジストリーに接続します。
@@ -678,10 +682,9 @@ JIRA は、ユーザーのソフトウェアに関連する問題およびバグ
      mvn -DaltDeploymentRepository="snapshots::default::${MAVEN_SNAPSHOT_URL}" deploy
      ```
   **ヒント:** レジストリーへの接続に使用した URL およびユーザー資格情報は、Nexus ツール統合の構成設定で見つけることができます。
-
 1. **「保存」**をクリックします。パイプラインが実行されると、このビルド・ジョブは Nexus ツール統合からの構成情報を使用して Maven リポジトリーに接続します。
 
-詳しくは、[Nexus ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/code/tool_nexus/){: new_window} を参照してください。
+詳しくは、[Nexus ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/deliver/tool_nexus/){: new_window} を参照してください。
 
 
 ## カスタム・ツール (その他のツール) の構成
@@ -691,7 +694,6 @@ JIRA は、ユーザーのソフトウェアに関連する問題およびバグ
 
 カスタム・ツールを構成して、ツールチェーン内の他のツールとともに機能し、チームで使用できるようにします。
 
-1. ツールチェーン作成時にこのツール統合を構成する場合は、「構成可能な統合 (Configurable Integrations)」セクションで**「その他のツール (Other Tool)」**をクリックします。
 1. 既存のツールチェーンにこのツール統合を追加する場合は、DevOps ダッシュボードの**「ツールチェーン」**ページでそのツールチェーンをクリックして「概要」ページを開きます。あるいは、アプリの「概要」ページの「継続的デリバリー」カードで、**「ツールチェーンの表示」**をクリックし、**「概要」**をクリックします。
 
  a. **「ツールの追加 (Add a Tool)」**をクリックします。
@@ -759,13 +761,13 @@ Sauce Labs は、機能単体テストを実行します。{{site.data.keyword.d
 
  **ヒント**: Sauce Labs テスト・ジョブを {{site.data.keyword.deliverypipeline}} に追加した場合、サービス・インスタンスを選択できます。
 
-詳しくは、「[Sauce Labs ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/code/tool_sauce_labs/){: new_window}」を参照してください。
+詳しくは、「[Sauce Labs ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/deliver/tool_sauce_labs/){: new_window}」を参照してください。
 
 
 ## Slack の構成
 {: #slack}
 
-**重要**: パブリック Slack チャネルに投稿された通知は、チーム全員が見ることができます。投稿したコンテンツの責任は投稿者が負うことに注意してください。
+**重要**: パブリック Slack チャネルに送信される通知は、チームの全員が見ることができます。投稿したコンテンツの責任は投稿者が負うことに注意してください。
 
 Slack は、クラウド・ベースのリアルタイムでのメッセージングおよび通知のシステムです。Slack が提供する永続的なチャットは、E メールの代わりに使用できる対話性に優れたチームのコラボレーション手段になります。
 専用チャネルまたは作業に直接関連する一連のチャネルで、チームと連絡を取ることができます。さらに、2 人以上のメンバー間で、チャネルやダイレクト・メッセージを使用して、ファイルとイメージを共有することもできます。ダイレクト・メッセージとチャネルでの通信は、検索できるように保存されます。
@@ -781,9 +783,9 @@ Slack は、クラウド・ベースのリアルタイムでのメッセージ�
 
 1. 着信 Web フックとして Slack によって生成された Slack Web フック URL を入力します。Slack チャネルがツール統合からツールチェーンに関する通知を受け取るためには Slack Web フック URL が必要です。Web フックを作成または確認する方法については、[Incoming Webhooks ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://api.slack.com/incoming-webhooks){: new_window} を参照してください。
 
- **ヒント:** Slack チャネルがツール統合からツールチェーンについての通知を受け取るために API キーを使用していた場合、代わりに Web フックを使用するように構成を更新する必要があります。
+ **ヒント:** Slack チャネルがツール統合からツールチェーンについての通知を受け取れるようにするために API キーを使用している場合は、代わりに Web フックを使用するように構成を更新する必要があります。
 
-1. 通知を送信する Slack チャネルの名前を入力します。このチャネルは既に存在していなければならず、Slack チームでアクティブである必要があります。
+1. 通知を送信する Slack チャネルの名前を入力します。このチャネルは存在していなければならず、Slack チームでアクティブである必要があります。
 1. Slack チームの URL ホスト名を入力します。これは、チーム URL 内の `.slack.com` の前にある語または句です。例えば、チーム URL が `https://team.slack.com` の場合、ホスト名は `team` です。
 1. **「統合の作成 (Create Integration)」**をクリックします。
 
@@ -792,3 +794,29 @@ Slack は、クラウド・ベースのリアルタイムでのメッセージ�
 1. **「Slack」**をクリックします。構成した Slack チャネルでツールチェーンのアクティビティーをすべて表示できます。
 
 詳しくは、[Slack ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/culture/tool_slack/){: new_window} を参照してください。
+
+
+## SonarQube の構成
+{: #sonarqube}
+
+SonarQube は、ソース・コードの全体的な正常性と品質の概要を提供し、新しいコード内で見つかった問題を強調表示します。コード・アナライザーは、20 を超えるコーディング言語において、NULL ポインター間接参照などの注意を要するバグ、論理エラー、リソース・リークを検出します。
+
+以下のようにして、ソース・コードの品質を継続的に分析および測定するように SonarQube を構成します。
+
+1. DevOps ダッシュボードから、**「ツールチェーン」**をクリックします。SonarQube を追加するツールチェーンをクリックします。あるいは、アプリの「概要」ページの「継続的デリバリー」カードで、**「ツールチェーンの表示」**をクリックします。次に、**「概要」**をクリックします。  
+
+ a. **「ツールの追加 (Add a Tool)」**をクリックします。
+
+ b. 「ツール統合 (Tool Integrations)」セクションで**「SonarQube」**をクリックします。
+
+1. SonarQube ツール統合のこのインスタンスの名前を入力します。
+1. ツールチェーンから SonarQube カードをクリックしたときに開くようにしたい SonarQube インスタンスの URL を入力します。
+1. オプション: SonarQube サーバーへの接続に使用するユーザー名を入力します。
+
+ **ヒント:** ユーザー名の指定が必要なのは、SonarQube サーバーへの接続にパスワードを使用する場合のみです。接続に認証トークンを使用する場合は、このフィールドを空のままにしてください。
+
+1. SonarQube サーバーへの接続に使用するパスワードまたは認証トークンを入力します。
+1. **「統合の作成 (Create Integration)」**をクリックします。
+1. ツールチェーンから**「SonarQube」**をクリックして、接続する SonarQube インスタンスのダッシュボードを表示します。
+
+詳しくは、[SonarQube ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/devops/method/content/learn/tool_sonarqube/){: new_window} を参照してください。

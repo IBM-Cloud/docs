@@ -6,7 +6,7 @@ lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -30,7 +30,7 @@ Il protocollo di gestione del dispositivo è creato con il protocollo di messagg
 
 ### Il ciclo di vita di gestione del dispositivo
 
-1. Un dispositivo e il suo tipo di dispositivo associato vengono creati in {{site.data.keyword.iot_short_notm}} utilizzando il dashboard o l'API REST.
+1. Un dispositivo e il suo tipo dispositivo associato vengono creati in {{site.data.keyword.iot_short_notm}} utilizzando il dashboard o l'API REST.
 2. Un dispositivo si collega a {{site.data.keyword.iot_short_notm}} e utilizza l'operazione **dispositivi gestiti** per diventare un dispositivo gestito.
 3. Puoi visualizzare e modificare i metadati per un dispositivo utilizzando le operazioni del dispositivo. Queste operazioni - ad esempio le operazioni di aggiornamento firmware e riavvio dispositivo - sono descritte nella documentazione 'Modello dispositivo'. Per ulteriori informazioni sul modello di dispositivo, consulta [Modello dispositivo](https://console.ng.bluemix.net/docs/services/IoT/reference/device_model.html).
 4. Un dispositivo può comunicare gli aggiornamenti sulla sua ubicazione, le informazioni di diagnostica e i codici di errore utilizzando il protocollo di gestione del dispositivo.
@@ -204,10 +204,10 @@ Topic: iotdm-1/response
 
 Un dispositivo utilizza una richiesta di aggiornamento dell'ubicazione per gestire i dati di ubicazione di un dispositivo. I metadati di ubicazione di un dispositivo possono essere aggiornati in {{site.data.keyword.iot_short_notm}} nei seguenti modi:
 
-#### Aggiornamenti dell'ubicazione del dispositivo automatici
+### Aggiornamenti dell'ubicazione del dispositivo automatici
 - Il dispositivo invia notifiche a {{site.data.keyword.iot_short_notm}} sull'aggiornamento dell'ubicazione. Il dispositivo richiama la propria ubicazione da un ricevitore GPS e invia un messaggio di gestione del dispositivo all'istanza {{site.data.keyword.iot_short_notm}} per aggiornare la propria ubicazione. La data/ora acquisisce l'ora in cui è stata richiamata l'ubicazione dal ricevitore GPS. La data/ora è valida anche se è presente un ritardo nell'invio del messaggio di aggiornamento dell'ubicazione. Se la data/ora viene omessa dal messaggio di aggiornamento del dispositivo, vengono utilizzate la data e l'ora del messaggio ricevuto per aggiornare i metadati dell'ubicazione.
 
-#### Aggiornamenti dell'ubciazione del dispositivo manuali utilizzando l'API REST
+### Aggiornamenti dell'ubciazione del dispositivo manuali utilizzando l'API REST
 - Puoi impostare i metadati dell'ubicazione manualmente per un dispositivo statico utilizzando l'API REST {{site.data.keyword.iot_short_notm}} quando viene registrato il dispositivo. Puoi anche modificare l'ubicazione successivamente. L'impostazione di data/ora è facoltativa, ma quando omessa, vengono impostate la data e l'ora correnti nei metadati del dispositivo.
 
 ### Aggiornamenti dell'ubicazione attivati dai dispositivi

@@ -2,18 +2,18 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-04-13"
 
 ---
 
-<!-- Attribute definitions --> 
+<!-- Attribute definitions -->
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:pre: .pre}
 
-#Console {{site.data.keyword.streaminganalyticsshort}}
+# Console {{site.data.keyword.streaminganalyticsshort}}
 {: #console}
 
 Sur la console {{site.data.keyword.streaminganalyticsshort}}, vous pouvez soumettre vos applications {{site.data.keyword.streamsshort}} directement dans l'instance de service {{site.data.keyword.streaminganalyticsshort}}.
@@ -28,3 +28,5 @@ Utilisez la console {{site.data.keyword.streaminganalyticsshort}} pour surveille
 * Affichage de vos journaux d'instance reposant sur les variables d'environnement que vous avez définies
 
 Vous pouvez accéder à la console {{site.data.keyword.streaminganalyticsshort}} depuis le tableau de bord du service.
+
+<!--The {{site.data.keyword.streaminganalyticsshort}} console is translated into the following languages: Brazilian Portuguese, French, German, Italian, Japanese, Korean, Simplified Chinese, Spanish, Traditional Chinese. Change the language setting in your browser to view the console in your preferred language. -->

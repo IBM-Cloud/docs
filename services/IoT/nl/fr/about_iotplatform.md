@@ -9,7 +9,7 @@ lastupdated: "2016-10-19"
 {:new_window: target="blank"}
 {:shortdesc: .shortdesc}
 
-# A propose d'{{site.data.keyword.iot_full}}
+# A propos d'{{site.data.keyword.iot_full}}
 {: #about_iotplatform}
 
 {{site.data.keyword.iot_short_notm}} contient des fonctionnalités qui vous permettent de vous connecter rapidement et en toute sécurité à Internet of Things. A l'aide de {{site.data.keyword.iot_short_notm}}, vous pouvez déployer des applications, collecter, stocker et visualiser des données de terminal et exécuter des analyses sur des données de terminal en temps réel ou stockées.

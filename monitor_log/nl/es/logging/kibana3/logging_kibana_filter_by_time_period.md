@@ -14,7 +14,6 @@ lastupdated: "2017-02-06"
 
 
 # Filtrado de registros de apps de Cloud Foundry por tiempo en Kibana
-<!-- for example, Uploading your data -->
 {: #logging_kibana_time_filter}
 
 
@@ -30,12 +29,12 @@ Lleve a cabo las tareas siguientes para ver y filtrar los registros de la app de
     
     Se muestran los registros de la app.
 
-2. Acceda al panel de control de Kibana de la app. Para ello, pulse **Vista avanzada** ![Enlace de vista avanzada](images/logging_advanced_view.jpg). Se visualiza el panel de control de Kibana.
+2. Acceso al panel de control de Kibana para su app. Pulse **Vista avanzada** ![Enlace Vista avanzada](images/logging_advanced_view.jpg "Enlace Vista avanzada"). Se visualiza el panel de control de Kibana.
 
 
-3. En el panel de control de Kibana, pulse **Filtro de tiempo**; ![filtro de tiempo de Kibana](images/logging_kibana_time_filter.jpg); luego seleccione **Personalizado** en el menú desplegable. Se visualiza la ventana siguiente:
+3. En el panel de control de Kibana, pulse **Filtro de tiempo**; ![Filtro de tiempo de Kibana](images/logging_kibana_time_filter.jpg "Filtro de tiempo de Kibana") y, a continuación, seleccione **Personalizado** en el menú desplegable. Se visualiza la ventana siguiente:
 
-    ![Filtro de tiempo personalizado en el panel de control de Kibana](images/logging_custom_time_filter.jpg)
+    ![Filtro de tiempo personalizado en el panel de control de Kibana](images/logging_custom_time_filter.jpg "Filtro de tiempo personalizado en el panel de control de Kibana")
 
 4. Pulse los campos **Desde** y **Hasta** para editar la hora inicial y final del filtro. 
     

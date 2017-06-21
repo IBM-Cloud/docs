@@ -1,7 +1,28 @@
-[OpenWhisk 入门](/docs/openwhisk/index.html)
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="openwhisk" audience="compute" href="/docs/openwhisk/index.html}
+IBM OpenWhisk
+
+    {: .navgroup id="learn"}
     index.md
-    openwhisk_cli.md
     openwhisk_about.md
+
+    {: .topicgroup}
+    相关链接
+        [发现：OpenWhisk](http://www.ibm.com/cloud-computing/bluemix/openwhisk/)
+        [IBM developerWorks 上的 OpenWhisk](https://developer.ibm.com/openwhisk/)
+        [Apache OpenWhisk 项目 Web 站点](http://openwhisk.org)
+        [Bluemix 中的本机 API 管理](https://console.ng.bluemix.net/docs/apis/management/index.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [REST API 文档](./openwhisk_rest_api.html)
+    [REST API 参考](https://console.ng.bluemix.net/apidocs/98)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    openwhisk_cli.md
     openwhisk_use_cases.md
     openwhisk_actions.md
     openwhisk_triggers_rules.md
@@ -27,5 +48,4 @@
     openwhisk_websocket.md
     openwhisk_goserverless.md
     openwhisk_compare.md
-
-
+    {: .navgroup-end}

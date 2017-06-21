@@ -6,7 +6,7 @@ lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -204,10 +204,10 @@ Tema: iotdm-1/response
 
 Un dispositivo utiliza una solicitud Update Location para gestionar los datos de la ubicación para un dispositivo. Los metadatos de ubicación para un dispositivo pueden actualizarse en {{site.data.keyword.iot_short_notm}} de las siguientes maneras:
 
-#### Actualizaciones automáticas de la ubicación de dispositivo
+### Actualizaciones automáticas de la ubicación de dispositivo
 - El dispositivo notifica a {{site.data.keyword.iot_short_notm}} sobre la actualización de la ubicación. El dispositivo recupera su ubicación de un receptor GPS y envía un mensaje de gestión de dispositivos a la instancia de {{site.data.keyword.iot_short_notm}} para actualizar su ubicación. La indicación de fecha y hora captura la hora a la que se ha recuperado la ubicación desde el receptor GPS. La indicación de fecha y hora es válida aunque haya un retraso en el envío del mensaje de actualización de la ubicación. Si se omite la indicación de fecha y hora del mensaje de gestión de dispositivos, la fecha y hora de la recepción del mensaje se utiliza para actualizar los metadatos de ubicación.
 
-#### Actualizaciones manuales de ubicación de dispositivos utilizando la API REST
+### Actualizaciones manuales de ubicación de dispositivos utilizando la API REST
 - Puede establecer manualmente los metadatos de ubicación para un dispositivo estático utilizando la API REST de {{site.data.keyword.iot_short_notm}} cuando el dispositivo esté registrado. También puede modificar la ubicación más adelante. El valor de indicación de fecha y hora es opcional, pero cuando se omite, la fecha y hora actuales se establece en los metadatos de ubicación para el dispositivo.
 
 ### Actualizaciones de ubicación desencadenadas por dispositivos

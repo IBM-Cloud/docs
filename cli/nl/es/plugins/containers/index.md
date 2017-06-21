@@ -303,7 +303,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
 | CCS_BIND_APP=*&lt;nombre_app&gt;*       | Enlazar un servicio con un contenedor. Utilice la variable de entorno `CCS_BIND_APP` para enlazar una app con un contenedor. La app se enlaza al servicio de destino y actúa como un puente que permite a {{site.data.keyword.Bluemix_notm}} aportar la información de `VCAP_SERVICES` de la app del puente a la instancia de contenedor en ejecución. Para obtener más información sobre la creación de una app de puente, consulte [Enlazar un servicio a un contenedor](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;nombre_instancia_servicio1&gt;*,*&lt;nombre_instancia_servicio2&gt;* | Para enlazar un servicio de Bluemix directamente a un contenedor sin utilizar una app puente, utilice CCS_BIND_SRV. Este enlace permite a Bluemix inyectar la información de VCAP_SERVICES en la instancia del contenedor de ejecución. Para proporcionar una lista de varios servicios de Bluemix, inclúyalos como parte de la misma variable de entorno. |
 | LOG_LOCATIONS=*&lt;vía_al_archivo&gt;* | Añadir un archivo de registro para supervisar en el contenedor. Incluir la variable de entorno de `LOG_LOCATIONS` con una vía de acceso al archivo de registro. |
-{: caption="Table 2. Commonly used environment variables" caption-side="top"}
+{: caption="Tabla 2. Variables de entorno utilizadas habitualmente" caption-side="top"}
 
  <dl>
    <dt>--env-file <i>ENVIRONMENT_VARIABLE_FILE</i> (opcional)</dt>
@@ -1127,7 +1127,7 @@ bluemix ic run [-p PORT|--publish PORT] [-P] [-m MEMORY|--memory MEMORY] [-e ENV
 | CCS_BIND_APP=*&lt;nombre_app&gt;*       | Enlazar un servicio con un contenedor. Utilice la variable de entorno `CCS_BIND_APP` para enlazar una app con un contenedor. La app se enlaza al servicio de destino y actúa como un puente que permite a {{site.data.keyword.Bluemix_notm}} aportar la información de `VCAP_SERVICES` de la app del puente a la instancia de contenedor en ejecución. Para obtener más información sobre la creación de una app de puente, consulte [Enlazar un servicio a un contenedor](../../../containers/container_integrations_binding.html){: new_window}. |
 | CCS_BIND_SRV=*&lt;nombre_instancia_servicio1&gt;*,*&lt;nombre_instancia_servicio2&gt;* | Para enlazar un servicio de Bluemix directamente a un contenedor sin utilizar una app puente, utilice CCS_BIND_SRV. Este enlace permite a Bluemix inyectar la información de VCAP_SERVICES en la instancia del contenedor de ejecución. Para proporcionar una lista de varios servicios de Bluemix, inclúyalos como parte de la misma variable de entorno. |
 | LOG_LOCATIONS=*&lt;vía_al_archivo&gt;* | Añadir un archivo de registro para supervisar en el contenedor. Incluir la variable de entorno de `LOG_LOCATIONS` con una vía de acceso al archivo de registro. |
-{: caption="Table 3. Commonly used environment variables" caption-side="top"}
+{: caption="Tabla 3. Variables de entorno utilizadas habitualmente" caption-side="top"}
 
 
    <dl>

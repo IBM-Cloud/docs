@@ -21,8 +21,7 @@ CLI- und Dev-Tools
 	
 	{: .topicgroup}
 	Plug-ins für Bluemix CLI
-		[Active Deploy](../services/ActiveDeploy/cli.html?pos=2#ad-cli-bx)
-		plugins/auto-scaling/index.md
+	        plugins/auto-scaling/index.md
 		plugins/registry/index.md
 		[Container-Service (Cluster)](../containers/cs_cli_devtools.html)
 		[Container-Service (einzelne und skalierbare Gruppen)](../containers/container_cli_cfic.html)

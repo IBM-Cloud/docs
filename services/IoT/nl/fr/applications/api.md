@@ -25,7 +25,7 @@ L'API REST HTTP {{site.data.keyword.iot_short_notm}} prend en charge les fonctio
 
 - Extraction des informations d'organisation
 - Opérations globales sur les terminaux (affichage de liste, ajout et retrait)
-- Opérations relatives aux types de terminal (affichage de liste, création, suppression, affichage des détails et mise à jour)
+- Opérations relatives aux types de terminaux (affichage de liste, création, suppression, affichage des détails et mise à jour)
 - Opérations sur les terminaux (affichage de liste, ajout, retrait, affichage des détails, mise à jour, affichage d'emplacement et affichage des informations de gestion)
 - Opérations de diagnostic d'un terminal (effacement de journaux, extraction de journaux, ajout d'informations de journal, suppression de journaux, obtention de journaux spécifiques, effacement de codes d'erreur, obtention de codes d'erreur de terminal et ajout de codes d'erreur)
 - Identification des erreurs de connexion (affichage de la liste des événements du journal des connexions d'un terminal)

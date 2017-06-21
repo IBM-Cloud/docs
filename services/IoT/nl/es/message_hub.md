@@ -44,7 +44,7 @@ Todos los servicios disponibles de {{site.data.keyword.messagehub}} del mismo es
  **Nota:** Un suceso puede coincidir con varias reglas de envío y se pueden reenviar a varios temas de {{site.data.keyword.messagehub}}.
  4. Opcional: Configurar temas.  
  Para crear los temas con más de las dos particiones predeterminadas, puede especificar la configuración de partición.
- 5. Pulse **Terminado**.
+ 5. Pulse **Listo**.
 5. Pulse en **Autorizar**.
 6. En el recuadro de diálogo Autorización, pulse **Confirmar**.
 

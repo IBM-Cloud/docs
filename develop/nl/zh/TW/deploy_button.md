@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-2-21"
+lastupdated: "2017-4-24"
 
 ---
 
@@ -65,19 +65,24 @@ lastupdated: "2017-2-21"
 <li> 複製並修改下列其中一個 Snippet 範本，並包含公用 Git 儲存庫。
 <p></p>
 <p>
-<strong>提示</strong>：如果想要為 DevOps Services 專案指定建置輸入，請將分支參數新增至 Git URL。當您新增分支參數時，原始公用 Git 儲存庫（包括其所有分支）會複製到新的專用 DevOps Services 專案（含新的 Git 儲存庫）。指定的 Git 分支會設為建置工作的輸入。如果未指定分支，則依預設，建置工作的輸入會設為主分支。</p>
+<strong>提示</strong>：您可以將分支參數新增至 Git URL，以指定要使用的分支。如果您未指定分支，則依預設會使用主要分支。
+</p>
 <ul>
 <li>HTML：<p>
 預設主要分支：
 </p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="部署至 Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 <p>
 指定的 Git 分支：
 </p>
 <pre class="codeblock">
+<code class="hljs">
 &lt;a href="https://bluemix.net/deploy?repository=&lt;git_repository_URL&gt;&branch=&lt;git_branch>" # [required]&gt;&lt;img src="https://bluemix.net/deploy/button.png" alt="部署至 Bluemix"&gt;&lt;/a&gt;
+</code>
 </pre>
 </li>
 <li>Markdown：
@@ -85,12 +90,16 @@ lastupdated: "2017-2-21"
 預設主要分支：
 </p>
 <pre class="codeblock">
-[&excl;[部署至 Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
+<code class="hljs">
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> # [required]&rpar;
+</code>
 </pre>
 <p>指定的 Git 分支：
 </p>
 <pre class="codeblock">
-[&excl;[部署至 Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
+<code class="hljs"
+[&excl;[Deploy to Bluemix]&lpar;https://bluemix.net/deploy/button.png&rpar;]&lpar;https://bluemix.net/deploy?repository=&lt;git_repository_URL> &branch=&lt;git_branch&gt; # [required]&rpar;
+</code>
 </pre>
 </li>
 </ul>
@@ -159,7 +168,7 @@ lastupdated: "2017-2-21"
 </pre>
    </li>
    </ul>
-	<li> 如果應用程式必須先進行建置才能部署，則您必須在儲存庫中併入建置檔。如果在儲存庫的根目錄中偵測到建置 Script 檔，則會在部署之前觸發程式碼的自動建置。
+	<li> 如果應用程式必須先進行建置才能部署，則您必須在儲存庫中包含建置檔。如果在儲存庫的根目錄中偵測到建置 Script 檔，則會在部署之前觸發程式碼的自動建置。
 	
 	支援的建置器：<ul>
 		<li> <a class="xref" href="http://ant.apache.org/manual/using.html" target="_blank" title="（在新分頁或視窗中開啟）">Ant：<img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a> /<code>build.xml</code>，可將輸出建置至 <code>./output/</code> 資料夾</li>
@@ -178,9 +187,9 @@ lastupdated: "2017-2-21"
 <li>在專案的根目錄中，建立 <code>.bluemix</code> 目錄。</li>
 <li>將 <code>pipeline.yml</code> 檔案上傳至 <code>.bluemix</code> 儲存庫。</li>
 </ol> </li>
-	<li>若要使用 <strong>IBM Containers</strong> 在容器中部署應用程式，則必須在儲存庫的根目錄中併入 Dockerfile，以及在 <code>.bluemix</code> 目錄中併入 <code>pipeline.yml</code> 檔案。
+	<li>若要使用 <strong>IBM Containers</strong> 在容器中部署應用程式，則必須在儲存庫的根目錄中包含 Dockerfile，以及在 <code>.bluemix</code> 目錄中包含 <code>pipeline.yml</code> 檔案。
 	<ul>
-	    <li>Dockerfile 用來作為應用程式的一種建置 Script。如果在儲存庫中偵測到 Dockerfile，則會先自動將應用程式建置至映像檔，再將它部署於容器中。如果必須先建置應用程式本身，再將應用程式建置成映像檔，請併入應用程式的建置 Script 以及 Dockerfile（如前所述）。</li>
+	    <li>Dockerfile 用來作為應用程式的一種建置 Script。如果在儲存庫中偵測到 Dockerfile，則會先自動將應用程式建置至映像檔，再將它部署於容器中。如果必須先建置應用程式本身，再將應用程式建置成映像檔，請包含應用程式的建置 Script 以及 Dockerfile（如前所述）。</li>
 	    <li> 若要進一步瞭解如何建立 Dockerfile，請參閱 <a class="xref" href="https://docs.docker.com/reference/builder/" target="_blank" title="（在新分頁或視窗中開啟）">Docker 文件 <img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a>。</li>
 	    <li>您可以手動建立 <code>pipeline.yml</code> 檔案，或從現有 DevOps Services 專案中產生檔案。若要手動建立專用於容器的 <code>pipeline.yml</code>，<a class="xref" href="https://github.com/Puquios/" target="_blank" title="（在新分頁或視窗中開啟）">請參閱 GitHub 中的範例 <img class="image" src="../icons/launch-glyph.svg" alt="外部鏈結圖示"/></a>。</li>
         </ul>
@@ -189,4 +198,4 @@ lastupdated: "2017-2-21"
  </ul>
 </ul>
 
-如需疑難排解說明，請參閱[「部署至 Bluemix」按鈕未部署應用程式](/docs/troubleshoot/index.html#deploytobluemixbuttondoesntdeployanapp){:new_window}。	
+如需疑難排解說明，請參閱[「部署至 Bluemix」按鈕未部署應用程式](/docs/troubleshoot/ts_apps.html#ts_deploybutton){:new_window}。	

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-04-18"
+lastupdated: "2017-05-30"
 
 ---
 
@@ -119,7 +119,7 @@ To create an email or webhook subscription from the **Notification Subscriptions
 | To | Enter the email address or addresses using a comma-separated list for the recipients of the email notification. Expand the "cc" or "bcc" options to copy others on the email. This is a required field. |
 {: caption="Table 4. Fields for email notification subscriptions about maintenance updates or incidents" caption-side="top"}
 
-Threshold data is collected once every 6 hours. A notification is sent only once when the value crosses the threshold value you set. If you chose ascending, a new notification is not sent unless the value drops below the threshold and then increases above the threshold again. Likewise, if you chose descending, you are notified only if the value rises above the threshold you set and then drops below the threshold again. 
+Threshold data is collected once every 6 hours. A notification is sent only once when the value crosses the threshold value you set. If you chose ascending, a new notification is not sent unless the value drops below the threshold and then increases above the threshold again. Likewise, if you chose descending, you are notified only if the value rises above the threshold you set and then drops below the threshold again.
 
 If you don't want to wait 6 hours for the notification to be sent when the threshold is met, after completing the fields on the form you can click **Save and Test** to receive a test notification with sample data.  
 
@@ -169,7 +169,7 @@ An Organization Quota threshold notification includes only the organizations tha
 | URL | Enter the URL to connect to your web service. |
 {: caption="Table 6. Form fields for a webhook notification subscription about thresholds" caption-side="top"}
 
-Threshold data is collected once every 6 hours. A notification is sent only once when the value crosses the threshold value you set. A new notification is not sent unless the value drops below the threshold, if you chose ascending, and then increases above the threshold again. Likewise, if you chose descending, you are only notified again if the value rises above the threshold you set and then drops below the threshold again. 
+Threshold data is collected once every 6 hours. A notification is sent only once when the value crosses the threshold value you set. A new notification is not sent unless the value drops below the threshold, if you chose ascending, and then increases above the threshold again. Likewise, if you chose descending, you are only notified again if the value rises above the threshold you set and then drops below the threshold again.
 
 If you don't want to wait 6 hours for the notification to be sent when the threshold is met, after you complete the fields on the form, you can click **Save and Test** to save and test the notification with sample data.
 
@@ -190,6 +190,7 @@ An Organization Quota threshold notification includes only the organizations tha
 | {{region}} | Affected region | Maintenance update and incident |
 | {{status}} | Status of the update | Maintenance update |
 | {{type}} | Update or incident | Maintenance update and incident |
+| {{workitem}} | Work item number | Maintenance update and incident |
 {: caption="Table 7. Maintenance and incident payload section values" caption-side="top"}
 
 
@@ -241,7 +242,7 @@ You are required to set a minimum of 12 available hours in a week for a minimum 
 
 1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending &gt; Manage Availability**.
 2. Expand the **Manage Available Update Windows** section.
-3. Click **Add new** ![Add new](images/add-new.png).
+3. Click **Add new**.
 4. Set your first availability window by selecting the frequency, duration, and start time for the window.
 5. Optional: Select **Mark as preferred**, if you'd like to set your recurring availability window as a preferred time for deployments to be scheduled. Preferred windows are given priority, when possible.
 6. Click **Submit**.
@@ -256,7 +257,7 @@ You are required to set a minimum of 12 available hours in a week for a minimum 
 
 1. Go to **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending &gt; Manage Availability**.
 2. Expand the **Manage Unavailable Update Windows** section.
-3. Click **Add new** ![Add new](images/add-new.png).
+3. Click **Add new**.
 4. Set your unavailable window by selecting the frequency, duration, and start time for the window.
 5. Click **Submit**.
 
@@ -346,7 +347,6 @@ In the **Resource Usage** section, you can view the following information:
 {{site.data.keyword.Bluemix_notm}} over the past 10
 minutes, hour, and day.
 
-
 #### System Memory, Disk, and CPU details
 {: #resourceusagedetails}
 
@@ -374,13 +374,14 @@ To see more detailed information about your physical and reserved memory or disk
 	<dt><strong>Physical</strong></dt>
 	<dd>The Physical area shows the amount of memory or disk space that is actually being used.</dd>
 	</dl>
-	
+
 #### Service usage details
 {: #servicesresourceusage}
 
 The **Service** tab shows the total service usage in relation to the maximum capacity that you have for a dedicated service. For example, if you have a dedicated Cloudant service, and you are using 500 GB of your 1000 GB capacity, then you see a graphic showing that you have used 50% of your total capacity. The color of the graphic changes based on how close you are to the capacity limit. Yellow is shown when you have used 70% to 84% of your capacity, and red is used when you have reached 85% or more of the available capacity.
 
 **Note**: Service consumption information may not be available in all environments at this time. This feature is available for Cloudant, MessageHub, API Connect, and Session Cache.
+
 
 
 ### Account usage
@@ -439,43 +440,40 @@ For more information about viewing usage per org, adjusting quota plans, and man
 ### Reports
 {: #oc_report}
 
-You can view security reports and logs, such as DataPower&trade;, firewall, and login audit, for your {{site.data.keyword.Bluemix_notm}} instance. To view reports and logs, click **ADMINISTRATION &gt; REPORTS AND LOGS**.
+You can view security reports and logs, such as DataPower&trade;, firewall, and login audit reports, for your {{site.data.keyword.Bluemix_notm}} instance. To view reports and logs, click **ADMINISTRATION &gt; REPORTS AND LOGS**.
 
-Select from the following options:
+You can do the following tasks from the Reports and Logs tile:
 
-- You can select start and end dates from the fields to filter which reports and logs are
-displayed.
-- You can expand and view various reports from the navigation pane.
-- You can search within your collection of reports and logs. The search applies to report
-names as well as text content that is contained within the reports and logs. You can also choose to
-filter your search by **Administration Events**, **DataPower Reports**, **Firewall**, and **Login Audit**.
-- When displaying a report or log, you can click the ![Download](images/icon_download.png) 
-icon to download the report.
+- Select start and end dates from the fields to filter which reports and logs are displayed.
+- View your list of requested reports and currently available reports.
+- Search within your collection of reports and logs. The search applies to report names as well as text content that is contained within the reports and logs. You can also choose to filter your search by the category.
+- Download a report by clicking the ![Download](images/icon_download.png) icon to download the report.
+- Request a report to be generated, if you have write access for the reports permission. You can choose from the following six categories for generating a report on demand: Admin Console User Management, {{site.data.keyword.Bluemix_notm}} Platform Administration, Firewall Denies, Firewall Logins, Login Server Login, and Operating System Login. You can request reports for data that is up to 90 days old.
+
+**Note**: The request a report feature might not be available in all environments at this time.
 
 The following table shows the list of security reports that are generated for {{site.data.keyword.Bluemix_notm}} Local and {{site.data.keyword.Bluemix_notm}} Dedicated. Most reports are generated on a daily basis. However, the encryption and key management events reports are generated monthly. All reports are retained for 90 days in the administration console for your retrieval. After that 90 days, the reports are available offline per request from {{site.data.keyword.Bluemix_notm}} for 9 months. In total, reports are available for retrieval for up to 1 year.
 
 
 {: #ld_table9}
 
-| **Category** | **Report** | **Description** |      
-|-----------------|-------------------|---------------------|
-| Firewall | Firewall logins | Events related to administrator login to the Vyatta firewall devices. |
-| Firewall | Firewall denies | Events generated by the Vyatta firewall devices when a request to access is denied according to the firewall rules that are in place. |
-| {{site.data.keyword.Bluemix_notm}} administrator login events | {{site.data.keyword.Bluemix_notm}} administrators login | Events generated by the operating system when an administrator starts an SSH session on every {{site.data.keyword.Bluemix_notm}} system. |
-| {{site.data.keyword.Bluemix_notm}} application developer login events | {{site.data.keyword.Bluemix_notm}} application developers login | Events generated by the {{site.data.keyword.Bluemix_notm}} platform login component when a {{site.data.keyword.Bluemix_notm}} platform user starts a session by using the command line, the REST APIs, or the {{site.data.keyword.Bluemix_notm}} user interface. |
-| {{site.data.keyword.Bluemix_notm}} administrator administrative events | {{site.data.keyword.Bluemix_notm}} administrators operating system administrative events | Events generated by the operating system when an administrator performs action within a current working session. |
-| {{site.data.keyword.Bluemix_notm}} application developer administrative events | {{site.data.keyword.Bluemix_notm}} (Cloud Foundry) administrative events | Events related to operations performed by the {{site.data.keyword.Bluemix_notm}} platform user by using the command line, the REST APIs, or the {{site.data.keyword.Bluemix_notm}} user interface. |
-| {{site.data.keyword.Bluemix_notm}} administrator database administrative events | Database administrative events | Events related to operations performed by a database administrator on the {{site.data.keyword.Bluemix_notm}} internal databases. |
-| Administration events | User management events | Events related to user management actions performed on the Administration page. |
-| Administration events | Catalog | Events related to services Catalog changes. |
-| Administration events | Security reports management events | Events related to security reports management actions performed on the Administration page. |
-| Access reviews | Access reviews report | Reviews for privileged accesses. |
-| Change management | Management of software changes | Change management activity. |
-| Key management | Management of custom SSL certificates | Custom SSL certifications that were uploaded and stored. |
-| Encryption | Data-in-transit encryption | Data-in-transit encryption that is configured. |
-| Anti-virus | Anti-virus scan report | Anti-virus software that is in place. |
-| Software fix management | Patch application report | Software fixes that were applied. |
-| Security incident management | Security incident remediation report | Evidence of security incidents for security incident management. |
+| **Report** | **Description** |      
+|-------------------|---------------------|
+| [Firewall logins](/docs/hybrid/reports.html#firewalllogins) | Events related to administrator login to the Vyatta firewall devices. |
+| [Firewall denies](/docs/hybrid/reports.html#firewalldenies) | Events generated by the Vyatta firewall devices when a request to access is denied according to the firewall rules that are in place. |
+| {{site.data.keyword.Bluemix_notm}} [administrators login](/docs/hybrid/reports.html#oslogin) | Events generated by the operating system when an administrator starts an SSH session on every {{site.data.keyword.Bluemix_notm}} system. |
+| {{site.data.keyword.Bluemix_notm}} [application developers login](/docs/hybrid/reports.html#loginserverlogins) | Events generated by the {{site.data.keyword.Bluemix_notm}} platform login component when a {{site.data.keyword.Bluemix_notm}} platform user starts a session by using the command line, the REST APIs, or the {{site.data.keyword.Bluemix_notm}} user interface. |
+| {{site.data.keyword.Bluemix_notm}} [operating system administration](/docs/hybrid/reports.html#osadmin)  | Events generated by the operating system when an administrator performs action within a current working session. |
+| {{site.data.keyword.Bluemix_notm}} [(Cloud Foundry) platform administration](/docs/hybrid/reports.html#platformadmin) | Events related to operations performed by the {{site.data.keyword.Bluemix_notm}} platform user by using the command line, the REST APIs, or the {{site.data.keyword.Bluemix_notm}} user interface. |
+| [Internal database administration](/docs/hybrid/reports.html#dbadmin) | Events related to operations performed by a database administrator on the {{site.data.keyword.Bluemix_notm}} internal databases. |
+| [User management](/docs/hybrid/reports.html#acusermgmt) | Events related to user management actions performed on the Administration page. |
+| [Catalog management](/docs/hybrid/reports.html#catalogmgmt) | Events related to services Catalog changes. |
+| [Security reports management](/docs/hybrid/reports.html#securityreportsmgmt) | Events related to security reports management actions performed on the Administration page. |
+| [Access reviews](/docs/hybrid/reports.html#securityreportsmgmt) | Reviews for privileged accesses. |
+| Management of software changes | Change management activity. |
+| [Key certificate management](/docs/hybrid/reports.html#keymgmt) | Key certificate management operations. |
+| [System notifications](/docs/hybrid/reports.html#systemnotifications) | Events related to configure the software update deployment windows or notification subscriptions. |
+
 {: caption="Table 9. Security report list" caption-side="top"}
 
 ## Viewing status
@@ -833,7 +831,7 @@ A quota represents the resource limits for the organizations in your environment
 <ol>
 <li>Click the bar in the chart for the organization that you want to edit in the Organization memory usage section, or select the name of the org from the Organization List section. From the Organization Information page, you can rename the organization and add or remove managers.
 <p><strong>Note</strong>: If you select a quota plan that is not sufficient for the current usage for the organization, you receive a message.</p></li>
-<li>Click <strong>Cloud Foundry</strong> or <strong>Containers</strong>.  By default, the Cloud Foundry quota page opens. 
+<li>Click <strong>Cloud Foundry</strong> or <strong>Containers</strong>.  By default, the Cloud Foundry quota page opens.
 <ul>
 <li>From the Cloud Foundry page, you can select a plan and view the quota details for the following resources:
 <ul>
@@ -882,7 +880,7 @@ In the Organization List section, you can view all organizations in the
 
 - To edit the name of the org and add or remove managers, click the name for the organization in
 	the list and follow the prompts on the screen.
-- To view information about a specific user of the organization you are viewing, click the user name to display User Information. You can then click the organization name to return to view Organization Information. 
+- To view information about a specific user of the organization you are viewing, click the user name to display User Information. You can then click the organization name to return to view Organization Information.
 
 ## Managing users and permissions
 {: #oc_useradmin}
@@ -960,8 +958,8 @@ Depending on your **Read** or **Write** access for the users' permissions, you c
 
     1. To add a user to an org, select the user name from the table to access the **Edit User** page. Then, use the search field to locate an org, select the org from the list, and click **Save**.
     2. To remove a user from an org, select the user name from the table to access the **Edit User** page. Then, click ![Remove](images/icon_remove.svg) for the org from which you want to remove the user, and click **Save**.
-    
-* To view information about the organization the user is assigned to, click the organization name to display Organization Information. You can then click the user name to return to view User Information. 
+
+* To view information about the organization the user is assigned to, click the organization name to display Organization Information. You can then click the user name to return to view User Information.
 
 ### Permissions
 {: #permissions}
@@ -980,12 +978,12 @@ Users can be assigned the following permissions with specific access levels (rea
 | Users | Users with **Users** permission can be assigned the access to **Read** (view) the list of users or **Write** (add or remove) users. This permission doesn't allow you to set permissions for other users. Write access allows the user to add new users to the environment, delete users from the environment, and add existing users to organizations that already exist within the environment. In addition, **Write** access allows the user to add new organizations, delete organizations, and edit the users within the organizations. |
 {: caption="Table 14. Permissions" caption-side="top"}
 
-## Using REST APIs 
+## Using REST APIs
 {: #auth_adminapi}
 
 To use the REST API commands, you first need to autheticate. To generate and support sessions, you can use cURL commands to accomplish the following tasks:
 
-* [Loggin in to the Admin Console](#auth_loginapi) 
+* [Loggin in to the Admin Console](#auth_loginapi)
 * [Storing your user ID and password](#auth_setuidpw)
 * [Storing cookies](#auth_apistorecook)
 * [Reusing cookies](#auth_apireusecook)
@@ -993,9 +991,9 @@ To use the REST API commands, you first need to autheticate. To generate and sup
 ### Logging in to the Admin Console
 {: #auth_loginapi}
 
-Before you can run any `Admin` API requests, you must log in to the Admin Console. 
+Before you can run any `Admin` API requests, you must log in to the Admin Console.
 
-To log in to the Admin Console, you can use basic access authentication on the 
+To log in to the Admin Console, you can use basic access authentication on the
 `https://console.<region>.bluemix.net/login` endpoint. The server returns a cookie with your
 session. You use that cookie for all operations with the Admin Console.
 
@@ -1041,8 +1039,8 @@ You can also store your user ID and password so that you don't have to enter it 
 To set up your log in information in a separate file and then call the file so that you don't have to re-enter it for each authentication request, use the `--netrc` option provided by the cURL command.
 
 To use the `--netrc` option with cURL first create a file in the home directory of the user in one of the following ways:
-* On a Unix system, create a file named .netrc 
-* On a Windows system, create a file named _netrc. 
+* On a Unix system, create a file named .netrc
+* On a Windows system, create a file named _netrc.
 
 In the file, enter the following information:
 
@@ -1361,12 +1359,12 @@ command:
  ```
 {: screen}
 
-## API for metrics (experimental)
+## API for metrics
 {: #envappmetricsapi}
 
 You can use three experimental APIs to gather metrics about your environment or applications. These APIs return an array of data points for the metrics that you requested over the time that you specified.
 
-The Metrics APIs that are described in the following sections can be accessed from the region-specific endpoint, for example: 
+The Metrics APIs that are described in the following sections can be accessed from the region-specific endpoint, for example:
 
 `https://console.<region>.bluemix.net/admin/metrics`
 {: codeblock}
@@ -1376,13 +1374,14 @@ The Metrics APIs that are described in the following sections can be accessed fr
 1. A user can make up to 200 API requests for metrics an hour.
 2. Each API request returns up to 200 data points per request. If more data is available, a URL is provided in the response for loading the next set of data.
 3. Each API request requires a user to have at least Basic Access to the Administration Console.  Additional permissions might be required, as specified below.
+4. Data are available up to 6 months back from the time the API request is made.
 
-## Gathering metrics about your environment 
+## Gathering metrics about your environment
 
 You can use the experimental environment API to gather high-level environment information over a time period that you specify. Available data points within the time that you specify are returned. Data is recorded approximately every hour. If, for example, you requested six hours of CPU data for the environment, the response would include CPU data for each of the six requested hours.
 
 
-### Environment endpoints 
+### Environment endpoints
 
 You can use the following endpoint to invoke this API command:  `/api/v1/env`
 
@@ -1416,7 +1415,7 @@ curl -b ./cookies.txt --header "Accept: application/json" https://console.<regio
 The following sections provide the data format.
 
  * To gather data records about your memory usage, use the following data format:
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1501,7 +1500,7 @@ The following sections provide the data format.
 {: screen}
 
  * To gather data records about your disk usage, use the following data format:
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1586,7 +1585,7 @@ The following sections provide the data format.
 {: screen}
 
  * To gather data records about your CPU usage, use the following data format:
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1640,7 +1639,7 @@ The following sections provide the data format.
 {: screen}
 
  * To gather data records about your network, use the following data format:
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1692,7 +1691,7 @@ The following sections provide the data format.
 {: screen}
 
 * To gather data records about your quota usage, use the following data format:
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1712,7 +1711,7 @@ The following sections provide the data format.
 {: screen}
 
 * To gather data records about your applications, use the following data format:
- 
+
 ```
 {
   "sample_time": 1477494000000,
@@ -1743,7 +1742,7 @@ Data is recorded for all organizations approximately every hour. A request for a
 
 To reduce the amount of information that is returned for each data sample in the requested time period, you can specify a count option. Using the previous example and adding a count option of 5 returns 30 records that represent the top 5 organizations by memory for each data sample.
 
-### Organizations endpoints 
+### Organizations endpoints
 
 You can use the following endpoints to invoke this API command:
 * `/api/v1/org/memory/physical`
@@ -1754,7 +1753,7 @@ You can use the following endpoints to invoke this API command:
 **Note**: One of the following permissions are required to access these endpoints: **User Read**, **User Write**, or **Superuser**
 
 ### Organizations query parameters
- 
+
 Use the following query parameters to gather metrics for your organizations:
 
 <dl class="parml">
@@ -1795,10 +1794,10 @@ Data is recorded for all applications approximately every hour. A request for a 
 
 To reduce the amount of information that is returned for each data sample in the requested time period, you can specify a count option. Using the previous example and adding a count option of 5 returns 30 records that represent the top 5 applications by CPU for each data sample.
 
-### Applications endpoints 
+### Applications endpoints
 
 You can use the following endpoints to invoke this API command:
-* `/api/v1/app/cpu/physical` 
+* `/api/v1/app/cpu/physical`
 * `/api/v1/app/memory/physical`
 * `/api/v1/app/memory/reserved`
 * `/api/v1/app/disk/physical`
@@ -1807,7 +1806,7 @@ You can use the following endpoints to invoke this API command:
 **Note**: One of the following permissions are required to access these endpoints: **User Read**, **User Write**, or **Superuser**
 
 ### Applications query parameters
- 
+
 Use the following query parameters to gather metrics for your applications:
 
 <dl class="parml">

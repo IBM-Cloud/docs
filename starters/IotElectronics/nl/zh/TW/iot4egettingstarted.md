@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-15"
+lastupdated: "2017-04-07"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
@@ -29,7 +29,8 @@ lastupdated: "2017-03-15"
 若要開始使用，請完成下列作業：
 
 1. 使用 {{site.data.keyword.iotelectronics}} 入門範本 Web 應用程式，以[建立模擬應用裝置](iot4ecreatingappliances.html)。會使用洗衣機作為 {{site.data.keyword.iotelectronics}} 入門範本內的模擬應用裝置，來進行示範。您選擇連接的應用裝置可以是任何類型的智慧型電子裝置。
-2. [下載及連接](iotelectronics_config_mobile.html)範例行動應用程式。
+2. （選用性）[使用 {{site.data.keyword.appid_full}} 配置行動登入選項](https://console.ng.bluemix.net/docs/services/appid/index.html)。您可以自訂行動應用程式中呈現的登入畫面外觀。您也可以選擇性地啟用或停用社交登入認證的使用。根據預設值，{{site.data.keyword.appid_short_notm}} 會啟用 Facebook 和 Google+ 授權，行動應用程式使用者可以使用自己的社交認證，或者他們可以跳過登入處理程序，試用應用程式而不登入。
+3. [下載及連接](iotelectronics_config_mobile.html)範例行動應用程式。
 
 
 ## 下一步為何？
@@ -39,23 +40,3 @@ lastupdated: "2017-03-15"
 - [探索範例行動應用程式](iotelectronics_config_mobile.html)，體驗應用裝置擁有者如何登錄其應用裝置，以及與應用裝置進行互動。
 - 在 {{site.data.keyword.iot_short_notm}} 中[探索及管理](iotelectronics_dashboard.html)已登錄應用裝置的資料。
 - [探索 API ![外部鏈結圖示](../../icons/launch-glyph.svg)](http://ibmiotforelectronics.mybluemix.net/public/iot4eregistrationapi.html){:new_window}，以查看如何自訂及展開您自己的 {{site.data.keyword.iotelectronics}} 應用程式。
-
-# 相關鏈結
-{: #rellinks}
-<!-- Related Links last updated 23 October 2016 - new API source -->
-## API 文件
-{: #api}
-* [{{site.data.keyword.iotelectronics}} API ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://broker-uss-iot4e.electronics.internetofthings.ibmcloud.com/public/iot4eregistrationapi.html){:new_window}
-* [{{site.data.keyword.iot_short}} API ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://developer.ibm.com/iotfoundation/recipes/api-documentation/){:new_window}
-* [IBM Watson IoT Service Health Dashboard ![外部鏈結圖示](../../icons/launch-glyph.svg)](https://status.internetofthings.ibmcloud.com){: new_window}
-
-## 元件
-{: #general}
-
-* [{{site.data.keyword.iotelectronics}} 文件](iotelectronics_overview.html){:new_window}
-* [{{site.data.keyword.iot_full}} 文件](https://console.ng.bluemix.net/docs/services/IoT/index.html){:new_window}
-* [{{site.data.keyword.sdk4nodefull}} 文件](https://console.ng.bluemix.net/docs/runtimes/nodejs/index.html#nodejs_runtime){:new_window}
-
-## 範例
-{: #samples}
-* [範例行動應用程式](https://console.ng.bluemix.net/docs/starters/IotElectronics/iotelectronics_config_mobile.html){:new_window}

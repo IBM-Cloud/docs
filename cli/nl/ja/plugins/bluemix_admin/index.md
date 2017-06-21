@@ -38,7 +38,7 @@ CF コマンド・ライン・インターフェースをインストール後�
 <li>{{site.data.keyword.Bluemix_notm}} 管理プラグイン・リポジトリーを追加するには、以下のコマンドを実行します。
 <br/><br/>
 <code>
-cf add-plugin-repo BluemixAdmin http://plugins.ng.bluemix.net
+cf add-plugin-repo BluemixAdmin https://console.&lt;subdomain&gt;.bluemix.net/cli
 </code><br/><br/>
 </li>
 <li>{{site.data.keyword.Bluemix_notm}} 管理

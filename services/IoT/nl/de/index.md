@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-17"
+lastupdated: "2017-05-03"
 
 ---
 
@@ -62,23 +62,3 @@ Weitere Informationen finden Sie in den folgenden Abschnitten:
 - Lesen Sie die [Dokumentation für Anwendungsentwickler](applications/api.html) und die [{{site.data.keyword.iot_short_notm}}-API-Dokumentation](reference/api.html).
 - Lesen Sie die [{{site.data.keyword.iot_short_notm}}-Clientbibliotheken](iot_platform_client_lib.html), die Tools und Dateien zum Erstellen und Entwickeln von Code für die Integration und das Verbinden Ihrer Geräte und Anwendungen bereitstellen.
 - [{{site.data.keyword.cloudantfull}}-Service](cloudant_connector.html) mit Ihrer {{site.data.keyword.iot_short_notm}}-Instanz verbinden, um Langzeitdaten zum Gerät zu speichern.
-
-
-
-
-# Zugehörige Links
-{: #rellinks}
-* [IBM Watson IoT Service Health Dashboard](https://status.internetofthings.ibmcloud.com){:new_window}
-
-## Lernprogramme und Beispiele
-{: #samples}
-* [Anleitungen zum Verbinden Ihrer Geräte ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/category/internet-of-things-iot/){:new_window}
-* [{{site.data.keyword.iot_short_notm}} Play-Organisation ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://play.internetofthings.ibmcloud.com/){:new_window}
-* [Intel Galileo mit {{site.data.keyword.iot_short_notm}} verbinden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/connect-an-intel-galileo-to-the-internet-of-things-foundation-connect/){:new_window}
-* [ARM® mbed™ IoT Starter Kit verbinden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/arm-mbed-iot-starter-kit-part-1/){:new_window}
-* [Raspberry Pi mit {{site.data.keyword.iot_short_notm}} verbinden ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/recipes/tutorials/raspberry-pi-4/){:new_window}
-
-## API-Referenz
-{: #api}
-* [{{site.data.keyword.iot_short_notm}}-API-Dokumentation](../reference/api.html)
-* [Entwicklerdokumentation](developer_doc_overview.html)

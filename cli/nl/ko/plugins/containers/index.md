@@ -309,7 +309,7 @@ NMENT_VARIABLE_FILE] [-P false|true] [--volume] [--min MIN_INSTANCE_COUNT] [--ma
    <dd> 파일에서 환경 변수를 가져오며 여기서 ENVFILE은 로컬 디렉토리에 있는 파일의 경로입니다. 파일의 모든 행은 하나의 키=값 쌍을 나타냅니다. </dd>
    <dt>--volume <i>VOLUME</i>:<i>CONTAINER_PATH</i>[:ro] (선택사항)</dt>
    <dd><i>VolumeId:ContainerPath[:ro]</i> 형식의 세부사항을 지정하여 컨테이너에 볼륨을 첨부합니다.
-<ul>
+   <ul>
    <li><i>VOLUME</i>: 볼륨 ID 또는 이름입니다.</li>
    <li><i>CONTAINER_PATH</i>: 컨테이너의 볼륨에 대한 절대 경로입니다. </li>
    <li>ro: 선택사항입니다. <i>ro</i>를 지정하면 기본값 "읽기/쓰기"가 아닌 "읽기 전용"으로 볼륨이 설정됩니다. </li></ul>
@@ -894,7 +894,7 @@ bluemix ic reprovision [--force|-f] [ENVIRONMENT_NAME]
 ```
 <strong>명령 옵션</strong>:
 
-<dl>
+   <dl>
    <dt>--force|-f(선택사항)</dt>
    <dd>Bluemix 영역에서 IBM Containers 서비스를 다시 작성하도록 강제 실행합니다. </dd>
    <dt><i>AVAILABILITY_ZONE</i>(선택사항)</dt>

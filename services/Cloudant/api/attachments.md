@@ -45,7 +45,7 @@ include the attachment as an '[inline](#inline)' component of the JSON content.
 
 To create a new attachment on an existing document,
 or to update an attachment on a document,
-make a PUT request with the document's latest `_rev` to `https://$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID/$ATTACHMENT`.
+make a PUT request with the document's latest `_rev` to `https://$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID/$ATTACHMENT`.
 The attachment's [content type ![External link icon](../images/launch-glyph.svg "External link icon")](http://en.wikipedia.org/wiki/Internet_media_type#List_of_common_media_types){:new_window}
 must be specified using the `Content-Type` header.
 The `$ATTACHMENT` value is the name by which the attachment is associated with the document.
@@ -64,7 +64,7 @@ Content-Type: $$ATTACHMENT_MIME_TYPE
 _Example instruction for creating or updating an attachment, using the command line:_
 
 ```sh
-curl https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID/$ATTACHMENT?rev=$REV \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID/$ATTACHMENT?rev=$REV \
 	 -X PUT \
 	 -H "Content-Type: $ATTACHMENT_MIME_TYPE" \
 	 --data-binary @$ATTACHMENT_FILEPATH
@@ -78,7 +78,7 @@ _Example instruction for creating or updating an attachment, using Javascript:_
 ```javascript
 var nano = require('nano');
 var fs = require('fs');
-var account = nano("https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com");
+var account = nano("https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com");
 var db = account.use($DATABASE);
 fs.readFile($FILEPATH, function (err, data) {
 	if (!err) {
@@ -116,7 +116,7 @@ _Example response:_
 ## Read
 
 To retrieve an attachment,
-make a `GET` request to `https://$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID/$ATTACHMENT`.
+make a `GET` request to `https://$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID/$ATTACHMENT`.
 The body of the response is the raw content of the attachment.
 
 _Example of reading an attachment, using HTTP:_
@@ -129,8 +129,8 @@ GET /$DATABASE/$DOCUMENT_ID/$ATTACHMENT HTTP/1.1
 _Example of reading an attachment, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID/$ATTACHMENT \
-	 -u $USERNAME >blob_content.dat
+curl https://$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID/$ATTACHMENT \
+	 -u $ACCOUNT blob_content.dat
 # store the response content into a file for further processing.
 ```
 {:codeblock}
@@ -141,7 +141,7 @@ _Example of reading an attachment, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com");
+var account = nano("https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com");
 var db = account.use($DATABASE);
 db.attachment.get($DOCUMENT_ID, $FILENAME, function (err, body) {
 	if (!err) {
@@ -157,7 +157,7 @@ db.attachment.get($DOCUMENT_ID, $FILENAME, function (err, body) {
 
 To delete an attachment,
 make a `DELETE` request with the document's latest `_rev`
-to `https://$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID/$ATTACHMENT`.
+to `https://$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID/$ATTACHMENT`.
 If you do not supply the latest `_rev`,
 the response is a [409 error](http.html#409).
 
@@ -171,8 +171,8 @@ DELETE /$DATABASE/$DOCUMENT_ID/$ATTACHMENT?rev=$REV HTTP/1.1
 _Example of deleting an attachment, using the command line:_
 
 ```sh
-curl https://$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID/$ATTACHMENT?rev=$REV \
-	-u $USERNAME \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID/$ATTACHMENT?rev=$REV \
+	-u $ACCOUNT \
 	-X DELETE
 ```
 {:codeblock}
@@ -183,7 +183,7 @@ _Example of deleting an attachment, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://$USERNAME:$PASSWORD@$USERNAME.cloudant.com");
+var account = nano("https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com");
 var db = account.use($DATABASE);
 db.attachment.destroy($DOCUMENT_ID, $FILENAME, $REV, function (err, body) {
 	if (!err) {

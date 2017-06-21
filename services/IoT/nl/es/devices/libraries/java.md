@@ -2,11 +2,11 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-03-21"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -296,7 +296,7 @@ Además de utilizar MQTT, también puede configurar los dispositivos para public
 2. Construir un suceso que debe publicarse.
 3. Especificar el nombre de archivo y, a continuación, publicar el suceso utilizando el método `publishEventOverHTTP()`, como se muestra en el ejemplo de código siguiente:
 
-``` sourceCode
+``` 
 DeviceClient myClient = new DeviceClient(deviceProps);
 
 JsonObject event = new JsonObject();
@@ -307,7 +307,7 @@ event.addProperty("mem",  70);
 boolean response  = myClient.api().publishDeviceEventOverHTTP("blink", event, ContentType.json);
 ```
 
-Para ver todo el código, consulte el ejemplo de dispositivo [HttpDeviceEventPublish].
+Para ver todo el código, consulte el ejemplo de dispositivo [HttpDeviceEventPublish ![Icono de enlace externo](../../../../icons/launch-glyph.svg "Icono de enlace externo")].{: new_window}
 
 En función de los valores del archivo de propiedades, el método `publishEventOverHTTP()` publica el suceso en modalidad de Inicio rápido o en modalidad de flujo registrado. Cuando el ID de organización en el archivo de propiedades se establece en `quickstart`, el método `publishEventOverHTTP()` publica el suceso en el servicio de inicio rápido de ejemplo del dispositivo y publica el suceso en formato HTTP sin formato. Cuando se especifica una organización registrada válida en el archivo de propiedades, los sucesos se publicarán de forma segura mediante HTTPS.
 
@@ -329,7 +329,7 @@ Los mensajes se devuelven como una instancia de la clase `Command`, que contiene
 |`timestamp`   |org.joda.time.DateTime|La fecha y hora del suceso.|
 
 
-``` sourceCode
+```
 package com.ibm.iotf.sample.client.device;
 
 import java.util.Properties;
@@ -345,7 +345,7 @@ import com.ibm.iotf.client.device.DeviceClient;
 //Implemente la clase CommandCallback para proporcionar la forma en que desea que se maneje el mandato
 class MyNewCommandCallback implements CommandCallback, Runnable {
 
-    // Una cola para retener & procesar los mandatos para el manejo sencillo de mensajes MQTT
+    // Una cola para retener y procesar los mandatos para el manejo sencillo de mensajes MQTT
     private BlockingQueue<Command> queue = new LinkedBlockingQueue<Command>();
 
     /**

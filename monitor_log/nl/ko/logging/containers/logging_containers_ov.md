@@ -23,11 +23,31 @@ lastupdated: "2017-03-16"
 크롤러를 사용하여 컨테이너 외부에서 컨테이너 로그를 모니터하고 전달합니다. 데이터는 크롤러가
 {{site.data.keyword.Bluemix_notm}}의 다중 테넌트 Elasticsearch에 전달합니다.
 
+**참고:** {{site.data.keyword.IBM}} 관리 클라우드 인프라에 배치된 Docker 컨테이너의 {{site.data.keyword.Bluemix_notm}}에서 컨테이너 로그를 분석할 수 있습니다.
+
 다음 그림은 {{site.data.keyword.containershort}} 로깅의 상위 레벨 보기를 보여줍니다.
 
 ![컨테이너의 상위 레벨 컴포넌트 개요](images/logging_containers_ov.jpg "컨테이너의 상위 레벨 컴포넌트 개요")
 
 {{site.data.keyword.Bluemix_notm}}에서 컨테이너를 배치할 때 해당 컨테이너의 로깅이 자동으로 사용됩니다.
+
+
+## 컨테이너 로그를 분석하는 방법
+{: #logging_containers_ov_methods}
+ 
+다음 방법 중 하나를 선택하여 컨테이너의 로그를 분석할 수 있습니다.
+
+* {{site.data.keyword.Bluemix_notm}}에서 로그를 분석하고 컨테이너의 최근 활동을 보십시오.
+    
+    각 컨테이너에 사용 가능한 **모니터링 및 로그** 탭을 통해 로그를 보고 필터링하며 분석할 수 있습니다. 자세한 정보는 [Bluemix 대시보드에서 로그 분석](../logging_view_dashboard.html#analyzing_logs_bmx_ui)을 참조하십시오.
+    
+* Kibana에서 로그를 분석하여 고급 분석 태스크를 수행하십시오.
+    
+    오픈 소스 분석 및 시각화 플랫폼인 Kibana를 사용하여 데이터를 모니터링하고 검색하고 분석하고 다양한 그래프(예: 차트와 테이블)로 시각화할 수 있습니다. 자세한 정보는 [Kibana에서 로그 분석](../kibana4/logging_analyzing_logs_Kibana.html#analyzing_logs_Kibana)을 참조하십시오.
+
+* CLI를 통해 로그를 분석하여 명령을 통해 프로그래밍 방식으로 로그를 관리하십시오.
+    
+    **cf ic logs** 명령을 사용하여 명령행 인터페이스를 통해 로그를 보고 필터링하고 분석할 수 있습니다. 자세한 정보는 [명령행 인터페이스에서 로그 분석](../logging_view_cli.html#analyzing_logs_cli)을 참조하십시오.
 
 ## 컨테이너에 대해 수집된 로그
 {: #logging_containers_ov_logs_collected}
@@ -35,6 +55,7 @@ lastupdated: "2017-03-16"
 기본적으로 다음 로그가 수집됩니다.
 
 <table>
+  <caption>표 1. 로그</caption>
   <tbody>
     <tr>
       <th align="center">로그</th>
@@ -55,23 +76,6 @@ lastupdated: "2017-03-16"
 
 추가 로그를 수집하려면 컨테이너를 작성할 때 로그 파일의 경로와 함께 **LOG_LOCATIONS** 환경 변수를 추가하십시오. 여러 로그 파일을 쉼표로 구분하여 추가할 수 있습니다. 자세한 정보는 [컨테이너에서 기본이 아닌 로그 데이터 수집](logging_containers_other_logs.html#logging_containers_collect_data)을 참조하십시오.
 
-
-## 컨테이너 로그를 분석하는 방법
-{: #logging_containers_ov_methods}
- 
-다음 방법 중 하나를 선택하여 컨테이너의 로그를 분석할 수 있습니다.
-
-* {{site.data.keyword.Bluemix_notm}}에서 로그를 분석하고 컨테이너의 최근 활동을 보십시오.
-    
-    각 컨테이너에 사용 가능한 **모니터링 및 로그** 탭을 통해 로그를 보고 필터링하며 분석할 수 있습니다. 자세한 정보는 [Bluemix 대시보드에서 로그 분석](../logging_view_dashboard.html#analyzing_logs_bmx_ui)을 참조하십시오.
-    
-* Kibana에서 로그를 분석하여 고급 분석 태스크를 수행하십시오.
-    
-    오픈 소스 분석 및 시각화 플랫폼인 Kibana를 사용하여 데이터를 모니터링하고 검색하고 분석하고 다양한 그래프(예: 차트와 테이블)로 시각화할 수 있습니다. 자세한 정보는 [Kibana에서 로그 분석](../kibana4/logging_analyzing_logs_Kibana.html#analyzing_logs_Kibana)을 참조하십시오.
-
-* CLI를 통해 로그를 분석하여 명령을 통해 프로그래밍 방식으로 로그를 관리하십시오.
-    
-    **cf ic logs** 명령을 사용하여 명령행 인터페이스를 통해 로그를 보고 필터링하고 분석할 수 있습니다. 자세한 정보는 [명령행 인터페이스에서 로그 분석](../logging_view_cli.html#analyzing_logs_cli)을 참조하십시오.
 
 
 ## 로그 보유

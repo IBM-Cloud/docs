@@ -1,0 +1,16 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="compose-for-rethinkdb" audience="service" href="/docs/services/ComposeForRethinkDB/index.html"}
+Compose For RethinkDB
+
+	{: .navgroup id="learn"}
+	index.md
+	credentials.md
+
+	{: .topicgroup }
+	相關鏈結
+		[範例 Node.js 應用程式](https://github.com/IBM-Bluemix/compose-rethinkdb-helloworld-nodejs)
+		[Compose 說明](https://help.compose.com)
+		[Compose 文章](https://www.compose.com/articles/)
+	{: .navgroup-end}

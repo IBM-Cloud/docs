@@ -52,7 +52,7 @@ Para probar la app para móvil de ejemplo, realice las siguientes tareas:
     2. Pulse el nombre de cuenta de su ID de desarrollador para establecer confianza para su ID de desarrollador.
     3. Cuando se le solicite, confirme que el ID de desarrollador es fiable.
 
-## Habilitación de notificaciones push para la app para móvil.
+## Habilitación de notificaciones push para la app para móvil
 {: #iot4i_pushNotification}
 
 Realice las siguientes tareas para habilitar las notificaciones push para su dispositivo móvil. Debe tener una cuenta válida de desarrollador de Apple para utilizar el servicio de notificación push.

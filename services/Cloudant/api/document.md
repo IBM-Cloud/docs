@@ -120,7 +120,7 @@ Content-Type: application/json
 _Creating a document by using the command line:_
 
 ```sh
-curl https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/$DATABASE \
+curl https://$ACCOUNT.cloudant.com/$DATABASE \
 	-X POST \
 	-H "Content-Type: application/json" \
 	-d "$JSON"
@@ -133,7 +133,7 @@ _Creating a document, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
+var account = nano("https://"+$ACCOUNT+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
 var db = account.use($DATABASE);
 
 db.insert($JSON, function (err, body, headers) {
@@ -218,7 +218,7 @@ GET /$DATABASE/$DOCUMENT_ID HTTP/1.1
 _Example of retrieving a document by using the command line:_
 
 ```sh
-curl https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID
+curl https://$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID
 ```
 {:codeblock}
 
@@ -228,7 +228,7 @@ _Example of retrieving a document, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
+var account = nano("https://"+$ACCOUNT+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
 var db = account.use($DATABASE);
 
 db.get($JSON._id, function (err, body, headers) {
@@ -291,7 +291,7 @@ by using the `include_docs` option.
 ## Update
 
 To update a document,
-send a `PUT` request with the updated JSON content *and* the most recent `_rev` value
+send a `PUT` request with the updated JSON content *and* the latest `_rev` value
 to `https://$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID`.
 You can also use this `PUT` method to create a document,
 in which case you do not need to supply the most recent `_rev` value.
@@ -317,7 +317,7 @@ _Example of using the command line to update a document, :_
 
 ```sh
 # make sure $JSON contains the correct `_rev` value!
-curl https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID \
 	-X PUT \
 	-H "Content-Type: application/json" \
 	-d "$JSON"
@@ -330,7 +330,7 @@ _Example of updating a document, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
+var account = nano("https://"+$ACCOUNT+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
 var db = account.use($DATABASE);
 
 // make sure $JSON contains the correct `_rev` value!
@@ -414,7 +414,7 @@ _Example of using the command line to delete a document:_
 
 ```sh
 # make sure $JSON contains the correct `_rev` value!
-curl https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID?rev=$REV -X DELETE
+curl https://$ACCOUNT.cloudant.com/$DATABASE/$DOCUMENT_ID?rev=$REV -X DELETE
 ```
 {:codeblock}
 
@@ -424,7 +424,7 @@ _Example of a delete request, using Javascript:_
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://"+$USERNAME+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
+var account = nano("https://"+$ACCOUNT+":"+$PASSWORD+"@"+$ACCOUNT+".cloudant.com");
 var db = account.use($DATABASE);
 
 // make sure $JSON contains the correct `_rev` value!
@@ -673,7 +673,7 @@ Content-Type: application/json
 _Example of using the command line to create, update, or delete multiple documents:_
 
 ```sh
-curl https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com/$DATABASE/_bulk_docs \
+curl https://$ACCOUNT.cloudant.com/$DATABASE/_bulk_docs \
 	-X POST \
 	-H "Content-Type: application/json" \
 	-d "$JSON"
@@ -686,7 +686,7 @@ _Example request to create, update, or delete multiple documents, using Javascri
 
 ```javascript
 var nano = require('nano');
-var account = nano("https://$USERNAME:$PASSWORD@$ACCOUNT.cloudant.com");
+var account = nano("https://$ACCOUNT:$PASSWORD@$ACCOUNT.cloudant.com");
 var db = account.use($DATABASE);
 
 db.bulk($JSON, function (err, body) {
@@ -743,18 +743,21 @@ _Example response from a bulk request:_
 
 ```json
 [
-	{
-		"id": "96f898f0-f6ff-4a9b-aac4-503992f31b01",
-		"rev": "2-ff7b85665c4c297838963c80ecf481a3"
-	},
-	{
-		"id": "5a049246-179f-42ad-87ac-8f080426c17c",
-		"rev": "2-9d5401898196997853b5ac4163857a29"
-	},
-	{
-		"id": "d1f61e66-7708-4da6-aa05-7cbc33b44b7e",
-		"rev": "2-cbdef49ef3ddc127eff86350844a6108"
-	}
+    {
+    "ok":true,
+    "id":"96f898f0-f6ff-4a9b-aac4-503992f31b01",
+    "rev":"1-54dd23d6a630d0d75c2c5d4ef894454e"
+    },
+    {
+    "ok":true,
+    "id":"5a049246-179f-42ad-87ac-8f080426c17c",
+    "rev":"1-0cde94a828df5cdc0943a10f3f36e7e5"
+    },
+    {
+    "ok":true,
+    "id":"d1f61e66-7708-4da6-aa05-7cbc33b44b7e",
+    "rev":"1-a2b6e5dac4e0447e7049c8c540b309d6"
+    }
 ]
 ```
 {:codeblock}
@@ -835,18 +838,16 @@ _Example response content after successful bulk insert of three documents:_
 
 ```json
 [
-	{
-		"id": "96f898f0-f6ff-4a9b-aac4-503992f31b01",
-		"rev": "1-54dd23d6a630d0d75c2c5d4ef894454e"
-	},
-	{
-		"id": "5a049246-179f-42ad-87ac-8f080426c17c",
-		"rev": "1-0cde94a828df5cdc0943a10f3f36e7e5"
-	},
-	{
-		"id": "d1f61e66-7708-4da6-aa05-7cbc33b44b7e",
-		"rev": "1-a2b6e5dac4e0447e7049c8c540b309d6"
-	}
+  {
+    "ok": true,
+    "id": "id1",
+    "rev": "2-402c81fee7ae6e723ff08bb166703a50"
+  },
+  {
+    "id": "id2",
+    "error": "conflict",
+    "reason": "Document update conflict."
+  }
 ]
 ```
 {:codeblock}
@@ -921,20 +922,23 @@ with the new revision and ID information.
 
 _Example JSON structure that is returned after bulk update:_
 
-```json
+```json                              
 [
-	{
-		"id": "96f898f0-f6ff-4a9b-aac4-503992f31b01",
-		"rev": "2-ff7b85665c4c297838963c80ecf481a3"
-	},
-	{
-		"id": "5a049246-179f-42ad-87ac-8f080426c17c",
-		"rev": "2-9d5401898196997853b5ac4163857a29"
-	},
-	{
-		"id": "d1f61e66-7708-4da6-aa05-7cbc33b44b7e",
-		"rev": "2-cbdef49ef3ddc127eff86350844a6108"
-	}
+    {
+        "ok":true,
+        "id":"96f898f0-f6ff-4a9b-aac4-503992f31b01",
+        "rev":"2-ff7b85665c4c297838963c80ecf481a3"  
+    },
+    {
+        "ok":true,
+        "id":"5a049246-179f-42ad-87ac-8f080426c17c",
+        "rev":"2-9d5401898196997853b5ac4163857a29"
+    },
+    {
+        "ok":true,
+        "id":"d1f61e66-7708-4da6-aa05-7cbc33b44b7e",
+        "rev":"2-cbdef49ef3ddc127eff86350844a6108"
+    }
 ]
 ```
 {:codeblock}

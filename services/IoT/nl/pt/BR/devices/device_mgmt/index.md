@@ -6,7 +6,7 @@ lastupdated: "2017-03-14"
 
 ---
 
-{:new_window: target="_blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -204,10 +204,10 @@ Topic: iotdm-1/response
 
 Um dispositivo usa uma solicitação Atualizar localização para gerenciar os dados da localização de um dispositivo. Os metadados de localização de um dispositivo podem ser atualizados no{{site.data.keyword.iot_short_notm}} das maneiras a seguir:
 
-#### Atualizações automáticas de localização do dispositivo
+### Atualizações automáticas de localização do dispositivo
 - O dispositivo notifica o {{site.data.keyword.iot_short_notm}} sobre a atualização da localização. O dispositivo recupera sua localização de um receptor de GPS (sistema de posicionamento global) e envia uma mensagem de gerenciamento de dispositivo para a instância do {{site.data.keyword.iot_short_notm}} para atualizar sua localização. O registro de data e hora captura o horário em que a localização foi recuperada do receptor de GPS (sistema de posicionamento global). O registro de data e hora será válido mesmo se houver um atraso no envio da mensagem de atualização da localização. Se o registro de data e hora for omitido da mensagem de gerenciamento de dispositivo, a data e hora de recebimento da mensagem serão usadas para atualizar os metadados de localização.
 
-#### Atualizações manuais de localização do dispositivo usando a API (interface de programação de aplicativos) REST
+### Atualizações manuais de localização do dispositivo usando a API (interface de programação de aplicativos) REST
 - É possível configurar manualmente os metadados de localização para um dispositivo estático usando a API (interface de programação de aplicativos) REST do {{site.data.keyword.iot_short_notm}} quando o dispositivo for registrado. Também é possível modificar a localização posteriormente. A configuração do registro de data e hora é opcional, mas quando omitida, a data e hora atuais são configuradas nos metadados de localização do dispositivo.
 
 ### Atualizações de localização que são acionadas por dispositivos

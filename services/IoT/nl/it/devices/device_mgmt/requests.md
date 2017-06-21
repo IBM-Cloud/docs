@@ -180,7 +180,7 @@ Topic: iotdevice-1/response
 
 Il livello di firmware noto di un dispositivo viene archiviato nell'attributo `deviceInfo.fwVersion`. Gli attributi `mgmt.firmware` sono utilizzati per eseguire l'aggiornamento firmware e osservarne lo stato.
 
-**Importante:** il dispositivo gestito deve supportare l'osservazione dell'attributo `mgmt.firmware` per supportare le azioni firmware. 
+**Importante:** il dispositivo gestito deve supportare l'osservazione dell'attributo `mgmt.firmware` per supportare le azioni firmware.
 
 Il processo di aggiornamento firmware è diviso in azioni distinte:
 - Scaricamento del firmware
@@ -190,8 +190,8 @@ Lo stato di ogni azione firmware viene archiviato in un attributo diverso del di
 
  |Valore |Stato  | Spiegazione |
  |:---|:---|:---|
- |0  | In sospeso        | Il dispositivo non sta scaricando il firmware.  |  
- |1  | Scaricamento in corso | Il dispositivo sta scaricando il firmware.  |
+ |0  | In sospeso        | Il dispositivo non sta scaricando il firmware. |  
+ |1  | Scaricamento in corso | Il dispositivo sta scaricando il firmware. |
  |2  | Scaricamento completato  | Il dispositivo ha scaricato correttamente un aggiornamento firmware ed è pronto per installarlo. |
 
 
@@ -220,7 +220,7 @@ Vengono fornite le seguenti informazioni:
 
 - L'azione `firmware/download`
 - Un elenco di dispositivi per ricevere l'immagine, con un massimo di 5000 dispositivi
-- L'URI per l'immagine del firmware (facoltativo) 
+- L'URI per l'immagine del firmware (facoltativo)
 - La stringa di verifica per convalidare l'immagine (facoltativo)
 - Nome del firmware (facoltativo)
 - Versione del firmware (facoltativo)
@@ -258,7 +258,7 @@ Il server di gestione del dispositivo in {{site.data.keyword.iot_short_notm}} ut
 
 1. Una richiesta di aggiornamento dei dettagli del firmware viene inviata nell'argomento `iotdm-1/device/update`.
 La richiesta di aggiornamento consente la convalida del dispositivo se il firmware richiesto è diverso dal firmware correntemente installato. Se esiste una differenza, imposta il parametro `rc` su `204`, che viene convertito nello stato `Changed`.  
-Il seguente esempio mostra quale messaggio attendere dal precedente invio della richiesta di scaricamento del firmware di esempio e quale risposta viene inviata quando viene individuata una differenza: 
+Il seguente esempio mostra quale messaggio attendere dal precedente invio della richiesta di scaricamento del firmware di esempio e quale risposta viene inviata quando viene individuata una differenza:
 ```
    Incoming request from the {{site.data.keyword.iot_short_notm}}:
 
@@ -429,7 +429,7 @@ Le seguenti informazioni sono utili per la gestione degli errori:
 - Se il tentativo di scaricamento del firmware fallisce, imposta il parametro `rc` su `500` e facoltativamente di conseguenza il parametro `message`.
 - Se lo scaricamento del firmware non è supportato, imposta il parametro `rc` su `500` e facoltativamente di conseguenza il parametro `message`.
 - Quando una richiesta di esecuzione viene ricevuta dal dispositivo, modifica l'attributo `mgmt.firmware.state` da `0` (In sospeso) in `1` (Scaricamento in corso).
-- Quando lo scaricamento è stato completato correttamente, imposta l'attributo `mgmt.firmware.state` su `2` (Scaricamento completato). 
+- Quando lo scaricamento è stato completato correttamente, imposta l'attributo `mgmt.firmware.state` su `2` (Scaricamento completato).
 - Se si verifica un errore durante lo scaricamento, imposta l'attributo `mgmt.firmware.state` su `0` (In sospeso) e l'attributo `mgmt.firmware.updateStatus` su uno dei seguenti valori di stato dell'errore:
   - 2 (Memoria insufficiente)
   - 3 (Connessione persa)
@@ -446,8 +446,8 @@ L'installazione del firmware scaricato viene avviata mediante l'API REST immette
 Vengono fornite le seguenti informazioni:
 
 - L'azione `firmware/update`
-- L'elenco di dispositivi per ricevere l'immagine, tutti dello stesso tipo di dispositivo.
-- L'URI per l'immagine del firmware (facoltativo) 
+- L'elenco di dispositivi per ricevere l'immagine, tutti dello stesso tipo dispositivo.
+- L'URI per l'immagine del firmware (facoltativo)
 - La stringa di verifica per convalidare l'immagine (facoltativo)
 - Nome del firmware (facoltativo)
 - Versione del firmware (facoltativo)

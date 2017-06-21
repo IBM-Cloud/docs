@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2016-06-29"
+lastupdated: "2017-03-20"
 
 ---
 
@@ -25,7 +25,7 @@ Bevor Sie Ihre Daten visualisieren können, müssen Sie folgende Aktionen ausfü
 
 - Registrieren Sie Ihre Geräte für Ihre {{site.data.keyword.iot_short_notm}}-Organisation.
 - Stellen Sie sicher, dass Ihre Geräte Ereignisse an {{site.data.keyword.iot_short_notm}} senden.
-- [Laden Sie das Visualisierungsbeispiel](https://github.com/ibm-messaging/iot-visualization/archive/v0.2.0.zip) vom Github-Repository herunter und extrahieren Sie die ZIP-Datei.
+- [Laden Sie das Visualisierungsbeispiel](https://github.com/ibm-watson-iot/rickshaw4iot/archive/master.zip) vom Github-Repository herunter und extrahieren Sie die ZIP-Datei.
 - [Installieren Sie das Befehlszeilentool 'cf'](../../starters/install_cli.html) von {{site.data.keyword.Bluemix_notm}}.
 
 ## Beispiel in {{site.data.keyword.Bluemix_notm}} ausführen
@@ -106,13 +106,4 @@ Die Datei, die auf die Paho-MQTT-Bibliothek verweist, um Gerätetopics zu subskr
 
 Geräteereignisse werden an die Datei `realtimeGraph.js` gesendet, um das Diagramm grafisch darzustellen.
 
-## Anzeige von archivierten Daten anpassen
-{: #customize_historical_display}
-
-Das Verzeichnis, das den Code für die grafische Visualisierung für archivierte Gerätedaten enthält, lautet `public/js/historian`. Die Logik für die grafische Darstellung kann durch Bearbeiten von `public/js/historian/historianGraph.js` angepasst werden.
-
-Die Datei, die REST-API-Anrufe steuert, um archivierte Gerätedaten zu erfassen, lautet `public/js/historian/historian.js`.
-
-Archivierte Daten werden an die Datei `historianGraph.js` übergeben, um das Diagramm darzustellen.
-
-Ein detailliertes Handbuch für Entwickler steht über das GitHub-Wiki 'iot-visualization' bereit.
+Ein detallierteres Entwicklerhandbuch ist über das [Github-Wiki ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-watson-iot/rickshaw4iot/wiki){:new_window} verfügbar.

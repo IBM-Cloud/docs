@@ -51,7 +51,7 @@ Para conectar el servicio de Jasper a la organización de {{site.data.keyword.io
   2. En la página **Extensiones**, pulse **Añadir ampliación**.
   3. Pulse **Añadir** junto a Jasper.
   4. Especifique su nombre de usuario, contraseña, clave de acceso e ID de dominio de Jasper.
-  5. Pulse **Terminado**.
+  5. Pulse **Listo**.
 
 2. Configurar los dispositivos
 Puede configurar los dispositivos que están conectados a la organización de {{site.data.keyword.iot_short_notm}} y a la cuenta de Jasper para que muestren datos desde Jasper en el panel de instrumentos de {{site.data.keyword.iot_short_notm}}.  
@@ -104,7 +104,7 @@ Para configurar la plataforma de {{site.data.keyword.iot_short_notm}}, lleve a c
   2. En la página **Extensiones**, pulse **Añadir ampliación**.
   3. Pulse **Añadir** junto a AT&T.
   4. Especifique su nombre de usuario, contraseña, clave de acceso e ID de dominio de AT&T.
-  5. Pulse **Terminado**.
+  5. Pulse **Listo**.
 
 Para conectar la organización de {{site.data.keyword.iot_short_notm}} con la cuenta de AT&T, hay dos etapas de configuración que debe realizar en primer lugar. Complete la configuración de organización y, a continuación, configure los dispositivos.
 
@@ -143,7 +143,7 @@ El conector ARM mbed le permite conectar el dispositivo ARM mbed a su {{site.dat
   3. Pulse **Añadir** junto a la extensión de conector de ARM mbed.
   4. Especifique su clave de acceso e ID de dominio de ARM mbed. Puede encontrarlos mediante el portal de ARM mbed en https://connector.mbed.com.
   5. Compruebe que las credenciales sean correctas pulsando el botón **Comprobar conexión**.
-  6. Pulse **Terminado**.
+  6. Pulse **Listo**.
 
 ### Formato de carga útil
 
@@ -233,7 +233,7 @@ Para habilitar la extensión de Orange:
 2. En la página **Extensiones**, pulse **Añadir ampliación**.
 3. Pulse **Añadir** junto a la extensión de Orange.
 4. Especifique el nombre de usuario y la contraseña de Orange.
-6. Pulse **Terminado**.
+6. Pulse **Listo**.
 
 Una vez que se haya habilitado la extensión de Orange, se debe configurar cada dispositivo con una tarjeta SIM de Orange para que visualice datos de la SIM de Orange.
 
@@ -334,9 +334,9 @@ Se pueden añadir usuarios a {{site.data.keyword.iot_short_notm}} mediante invit
 
 Para utilizar la característica de invitación de correo electrónico, debe configurarse una extensión de correo electrónico para utilizar el servicio en línea SendGrid o el servicio SMTP (Simple Mail Transfer Protocol). La extensión también puede utilizar la aplicación SendGrid {{site.data.keyword.Bluemix_notm}}.
 
-### Servicio en línea SendGrid 
+### Servicio en línea SendGrid
 
-Para configurar la extensión de correo electrónico para utilizar con el servicio en línea SendGrid, siga estos pasos: 
+Para configurar la extensión de correo electrónico para utilizar con el servicio en línea SendGrid, siga estos pasos:
 
 1. Recupere la clave de API autorizada de su cuenta en línea de SendGrid.
 2. En el panel de control de {{site.data.keyword.iot_short_notm}}, pulse **Extensiones** en la barra de navegación.
@@ -389,4 +389,4 @@ El {{site.data.keyword.iot_short_notm}} puede configurarse mediante el panel de 
  3. Pulse **Configurar** en el icono **Correo electrónico**.
  4. Seleccione **SendGrid con nombre de usuario**.
  5. Especifique los datos de configuración del archivo de texto temporal.
- 6. Pulse **Terminado**.
+ 6. Pulse **Listo**.

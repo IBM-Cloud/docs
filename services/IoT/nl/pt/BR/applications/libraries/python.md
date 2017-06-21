@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-14"
+lastupdated: "2017-04-04"
 
 ---
 
@@ -375,7 +375,8 @@ except IoTFCReSTException as e:
     print("ERROR [" + e.httpcode + "] " + e.message)
 ```
 
-Para obter informações sobre o modelo de solicitação e de resposta e sobre os códigos de status HTTP, veja a seção Configuração da organização da API do [{{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Para obter informações sobre o modelo de solicitação e de resposta, além dos códigos de
+status HTTP, consulte a seção Configuração da organização da [API {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
 
 ## Operações do dispositivo em massa
@@ -383,7 +384,7 @@ Para obter informações sobre o modelo de solicitação e de resposta e sobre o
 
 Seus aplicativos podem usar operações em massa para obter, incluir ou remover diversos dispositivos simultaneamente.
 
-Para obter informações sobre a lista de parâmetros de consulta, o modelo de solicitação e de resposta e os códigos de status HTTP, veja a seção 'Operações em massa' da API do [{{site.data.keyword.iot_short_notm}} API ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html#!/Bulk_Operations/){: new_window}.
+Para obter informações sobre a lista de parâmetros de consulta, o modelo de solicitação e de resposta e os códigos de status HTTP, veja a seção 'Operações em massa' da API do [{{site.data.keyword.iot_short_notm}} API ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window}.
 
 
 ### Recuperando Informações sobre o Dispositivo
@@ -599,7 +600,8 @@ except IoTFCReSTException as e:
 
 As operações do dispositivo disponibilizadas na API (interface de programação de aplicativos) incluem listar, incluir, remover, visualizar, atualizar, visualizar localização e visualizar informações de gerenciamento do dispositivo em uma organização do {{site.data.keyword.iot_short_notm}}.
 
-Para obter informações sobre os parâmetros de consulta, o modelo de solicitação e de resposta e os códigos de status HTTP, veja a 'Seção Dispositivo' da API do [{{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
+Para obter informações sobre os parâmetros de consulta, sobre o modelo de solicitação e de resposta
+e sobre os códigos de status HTTP, consulte a 'seção Dispositivo' da [documentação da API {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 
 ### Recuperando dispositivos de um tipo de dispositivo específico
@@ -752,7 +754,8 @@ Use as operações de diagnóstico do dispositivo para implementar as tarefas de
 - Recuperando códigos de erro do dispositivo
 - Incluindo códigos de erro
 
-Para obter mais informações sobre os modelos de consulta e de resposta, os códigos de resposta e os parâmetros de consulta, veja a [documentação da API ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window} documentação da API do {{site.data.keyword.iot_short_notm}}.
+Para obter mais informações sobre modelos de consulta e de resposta, sobre códigos de resposta e
+sobre parâmetros de consulta, veja a [documentação da API {{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../../../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.internetofthings.ibmcloud.com/swagger/v0002.html){: new_window}.
 
 ### Obter logs de diagnóstico
 

@@ -1,15 +1,17 @@
-[管理應用程式](/docs/manageapps/mngapps.html)
-    mngapps.md
-    [將服務新增至您的應用程式](../services/reqnsi.html)
-        [要求新的服務實例](../services/reqnsi.html#req_instance)
-        [配置應用程式以與服務互動](../services/reqnsi.html#config)
-        [讓外部應用程式能使用 Bluemix 服務](../services/reqnsi.html#accser_external)
-        [建立使用者提供的服務實例](../services/reqnsi.html#user_provide_services)
-        [在另一個地區中使用服務](../services/reqnsi.html#cross_region_service)
-        [在另一個服務中使用服務](../services/reqnsi.html#s2s_binding)
-    depapps.md
-    [建立按鈕](../develop/deploy_button.html)
-        [共用部署至 Bluemix 專案管線](../develop/sharetextpipelines.html)
-        [內嵌部署至 iFrame 流程](../develop/deploy_button_embed.html)
-    updapps.md
-    secapps.md
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="bluemix-manage-apps" audience="platform" href="/docs/manageapps/mngapps.html"}
+管理應用程式
+
+	{: .navgroup id="learn"}
+	mngapps.md
+	{: .navgroup-end}
+	
+	{: .navgroup id="howto"}
+	[將服務新增至您的應用程式](../services/reqnsi.html#add_service)
+	depapps.md
+	[建立部署至 Bluemix 按鈕](../develop/deploy_button.html)
+	updapps.md
+	secapps.md
+	{: .navgroup-end}

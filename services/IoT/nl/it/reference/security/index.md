@@ -73,7 +73,7 @@ I dispositivi si collegano utilizzando un ID client o il token di autenticazione
 
 Per ulteriori informazioni sui requisiti della suite chipher e TLS, consulta la sezione [TLS requirements](connect_devices_apps_gw.html#tls_requirements)  nella documentazione `Application, device, and gateway connections to Watson IoT Platform`.
 
-Puoi utilizzare i certificati e le politiche di sicurezza per migliorare la sicurezza della connessione del dispositivo. Le politiche di sicurezza possono essre impostate per consentire le connessioni non crittografate, per definire solo le connessioni TLS (transport layer security) e per consentire ai dispositivi di autenticarsi con i certificati lato client. È possibile utilizzare le blacklist per specificare i dispositivi a cui non è consentito collegarsi o le whitelist che possono essere utilizzate per consentire il collegamento a dispositivi specifici. Per ulteriori informazioni sulla sicurezza avanzata, vedi [Gestione della sicurezza e del rischio](RM_security.html).
+Puoi utilizzare i certificati e le politiche di sicurezza per migliorare la sicurezza della connessione del dispositivo. Le politiche di sicurezza possono essere impostate per consentire le connessioni non crittografate, per definire solo le connessioni TLS (transport layer security) e per consentire ai dispositivi di autenticarsi con i certificati lato client. È possibile utilizzare le blacklist per specificare i dispositivi a cui non è consentito collegarsi o le whitelist che possono essere utilizzate per consentire il collegamento a dispositivi specifici. Per ulteriori informazioni sulla sicurezza avanzata, vedi [Gestione della sicurezza e del rischio](RM_security.html).
 
 ## Come preveniamo la perdita dei dati tra i dispositivi IoT?
 {: #prevent-leak-devices}
@@ -107,7 +107,7 @@ Lo spazio argomenti in cui operano i dispositivi e le applicazioni ha come ambit
 {: #general}
 * [Introduzione a {{site.data.keyword.iot_short_notm}}](https://console.ng.bluemix.net/docs/services/IoT/index.html)
 * [{{site.data.keyword.Bluemix_notm}} security ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/docs/security/index.html#security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} platform security ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
-* [{{site.data.keyword.Bluemix_notm}} compliance](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
-* [{{site.data.keyword.BluSoftlayer}} security ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](http://www.softlayer.com/security){:new_window}
+* [Sicurezza della piattaforma {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/docs/security/index.html#platform-security){:new_window}
+* [Conformità {{site.data.keyword.Bluemix_notm}} ](https://console.ng.bluemix.net/docs/security/index.html#compliance){:new_window}
+* [Sicurezza {{site.data.keyword.BluSoftlayer}} ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](http://www.softlayer.com/security){:new_window}
 * [{{site.data.keyword.BluSoftlayer}} compliance ![Icona link esterno](../../../../icons/launch-glyph.svg "Icona link esterno")](http://www.softlayer.com/compliance){:new_window}

@@ -28,6 +28,11 @@
     "href": "containers/container_index.html",
     "category_id": "compute"
   }, {
+    "title": "IBM Cloud Schematics",
+    "img": "homepage/images/schematics_icon.svg",
+    "href": "services/schematics/index.html",
+    "category_id": "compute"
+  },{
     "title": "Analytics for Apache Spark Starter",
     "img": "homepage/images/Bluemix-logo.svg",
     "href": "starters/AnalyticsApacheSpark/index.html",
@@ -93,6 +98,11 @@
     "href": "services/WorkWithData/index.html",
     "category_id": "data"
   }, {
+    "type": "extra",
+    "title": "Working with Toolchains",
+    "href": "services/ContinuousDelivery/toolchains_working.html",
+    "category_id": "devops"
+  },{
     "type": "extra",
     "title": "Dedicated GitHub Enterprise",
     "href": "services/ghededicated/index.html",

@@ -5,7 +5,7 @@
 copyright:
 
   years: 2016, 2017
-lastupdated: "2017-02-09"
+lastupdated: "2017-05-02"
 
 
 ---
@@ -35,7 +35,7 @@ Puede que se pregunte sobre qué diferencia hay entre la cuenta Estándar y la c
 | Puede acceder a planes Lite gratuitos para Cloudant NoSQL DB y a la Plataforma Internet de las cosas con más servicios gratuitos disponibles muy pronto. |
 | Sus aplicaciones entrarán en suspensión si no hay actividad de desarrollo durante 10 días. |
 | Las instancias de servicio se suprimirán tras 30 días de inactividad. |
-{:caption="Table 1. What's new in a Standard account" caption-side="top"}
+{:caption="Tabla 1. Novedades en una cuenta estándar" caption-side="top"}
 
 |¿Qué es lo que no cambia cuando se convierte una cuenta de prueba? | 
 |-----------------|
@@ -43,12 +43,11 @@ Puede que se pregunte sobre qué diferencia hay entre la cuenta Estándar y la c
 |Cualquier instancia Lite de Cloudant NoSQL DB y de la Plataforma Internet de las cosas. Se puede transferir a su nueva cuenta una instancia de Lite para cada uno de estos servicios. |
 |Los valores de acceso de su organización, espacios y miembros de equipo asociados siguen siendo los mismos. Se puede transferir una organización a su cuenta nueva. |
 |El nivel de soporte de {{site.data.keyword.Bluemix_notm}} sigue siendo el mismo. |
-{:caption="Table 2. What's not changing" caption-side="top"}
+{:caption="Tabla 2. Qué es lo que no cambia" caption-side="top"}
 
-**Nota:** Si la cuenta de prueba no se convierte, verá un mensaje que le dirá el motivo. Puede que tenga más de una organización en la cuenta de prueba existente o apps que no se puedan transferir. Puede realizar la acción apropiada y volver a intentar convertir la cuenta.
+**Nota**: Si la cuenta de prueba no se convierte, verá un mensaje que le dirá el motivo. Puede que tenga más de una organización en la cuenta de prueba existente o apps que no se puedan transferir. Puede realizar la acción apropiada y volver a intentar convertir la cuenta.
 
-Cuando se haya registrado para una cuenta Estándar, puede invitar a los miembros del equipo a colaborar en su organización y espacios, a ver su uso, a crear espacios, a actualizar el perfil de la cuenta y a gestionar su organización. Para obtener más información,
-consulte [Configuración de la cuenta](/docs/admin/adminpublic.html#account).
+Cuando se haya registrado para una cuenta Estándar, puede invitar a los miembros del equipo a colaborar en su organización y espacios, a ver su uso, a crear espacios, a actualizar el perfil de la cuenta y a gestionar su organización. Para obtener más información, consulte [Gestión de la cuenta](/docs/admin/adminpublic.html#account).
 
 ## Planes de Lite
 {: #liteplans}
@@ -82,7 +81,7 @@ Cuando se alcancen los límites de la cuota, se detendrá la aplicación o se in
 
 Puede suministrar 1 instancia por plan de Lite. 
 
-**Nota:** Estas limitaciones se aplican únicamente a la cuenta Estándar. Puede actualizar a una cuenta de pago según uso o de facturación por suscripción en cualquier momento. Pague sólo lo que utilice más allá de las concesiones gratuitas. Para obtener más información sobre las cuentas Pago según uso y Suscripción, consulte [Cómo se le factura](/docs/pricing/index.html#pay-accounts).
+**Nota**: Estas limitaciones se aplican únicamente a la cuenta Estándar.  Puede actualizar a una cuenta de pago según uso o de facturación por suscripción en cualquier momento. Pague sólo lo que utilice más allá de las concesiones gratuitas. Para obtener más información sobre las cuentas Pago según uso y Suscripción, consulte [Tipos de cuenta](/docs/pricing/index.html#pay-accounts). 
 
 ## Actividad de desarrollo
 {: #devactivity}
@@ -106,7 +105,7 @@ Para ayudar a los usuarios de la cuenta Estándar a gestionar mejor sus recursos
   * cf enable-ssh
   * cf disable-ssh
 
- **Nota** Si la app ya tiene habilitado ssh, los mandatos `cf enable-ssh` y `cf disable-sh` no reactivarán la app. 
+ **Nota**: Si la app ya tiene habilitado ssh, los mandatos `cf enable-ssh` y `cf disable-sh` no reactivarán la app. 
 
  * Los servicios del plan de Lite se suprimirán si no hay ninguna actividad en ellos durante 30 días. Entonces, no tendrá que suprimir las instancias inactivas cuando desee crear una nueva instancia. En este momento, sólo está utilizando esta característica el servicio de la Plataforma Internet de las cosas. 
  

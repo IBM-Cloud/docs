@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-04-11"
 ---
 
 
@@ -25,7 +25,7 @@ lastupdated: "2017-01-11"
 Cloud Foundry 支援 Diego，Diego 是新的預設運行環境架構，可提供一組功能來增強用於管理及建構雲端平台的應用程式開發體驗。此架構更新可改善 Cloud Foundry 平台的整體作業及效能。新的架構支援數個應用程式容器技術（包括 Garden 及 Windows）、一個容許直接登入應用程式容器的 SSH 套件，以及其他創新變更。如需最新架構升級的相關資訊，請參閱 [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![外部鏈結圖示](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}。
 
 
-您建立的所有新應用程式都會在 Diego 上執行，而且您必須開始將 DEA 上執行的現有應用程式移轉至新的 Diego 架構。
+您建立的所有新應用程式都會在 Diego 上執行，而且您必須將 DEA 上執行的現有應用程式移轉至新的 Diego 架構。
 
 **附註**：Cloud Foundry Diego 架構會影響所有「{{site.data.keyword.Bluemix_notm}} 公用」地區環境。「{{site.data.keyword.Bluemix_notm}} 專用」及「{{site.data.keyword.Bluemix_notm}} 本端」環境則會在稍晚的日期更新。
 
@@ -264,7 +264,7 @@ cf push -f appManifest.yml
 ## 環境變數
 {: #app_env}
 
-環境變數包含 {{site.data.keyword.Bluemix_notm}} 上已部署應用程式的環境資訊。除了 *Droplet Execution Agent (DEA)* 及建置套件所設定的環境變數之外，您還可以設定 {{site.data.keyword.Bluemix_notm}} 上應用程式的應用程式特有環境變數。
+環境變數包含 {{site.data.keyword.Bluemix_notm}} 上已部署應用程式的環境資訊。除了 *Diego* 及建置套件所設定的環境變數之外，您還可以設定 {{site.data.keyword.Bluemix_notm}} 上應用程式的應用程式特有環境變數。
 
 您可以使用 **cf env** 指令或從 {{site.data.keyword.Bluemix_notm}} 使用者介面，檢視執行中 {{site.data.keyword.Bluemix_notm}} 應用程式的下列環境變數：
 
@@ -319,7 +319,7 @@ cf push -f appManifest.yml
 
 您也可以存取 DEA 及建置套件所設定的環境變數。
 
-下列變數透過 DEA 定義：
+下列變數透過 Diego 定義：
 
 <dl>
   <dt><strong>HOME</strong></dt>
@@ -327,15 +327,15 @@ cf push -f appManifest.yml
   <dt><strong>MEMORY_LIMIT</strong></dt>
   <dd>每一個應用程式實例可使用的記憶體量上限。您可以在應用程式 <span class="ph filepath">manifest.yml</span> 檔案中指定值，或在推送應用程式時在指令行中指定值。</dd>
   <dt><strong>PORT</strong></dt>
-  <dd>DEA 上與應用程式通訊所使用的埠。DEA 會在編譯打包時配置埠給應用程式。</dd>
+  <dd>Diego 上與應用程式通訊所使用的埠。Diego 會在編譯打包時將埠配置給應用程式。</dd>
   <dt><strong>PWD</strong></dt>
   <dd>執行建置套件的現行工作目錄。</dd>
   <dt><strong>TMPDIR</strong></dt>
   <dd>儲存暫存檔及編譯打包檔的目錄。</dd>
   <dt><strong>USER</strong></dt>
-  <dd>用來執行 DEA 的使用者 ID。</dd>
+  <dd>用來執行 Diego 的使用者 ID。</dd>
   <dt><strong>VCAP_APP_HOST</strong></dt>
-  <dd>DEA 主機的 IP 位址。</dd>
+  <dd>Diego 主機的 IP 位址。</dd>
   <dt><strong>VCAP_APPLICATION</strong></dt>
   <dd>JSON 字串，包含已部署應用程式的相關資訊。此資訊包括應用程式名稱、URI、記憶體限制、應用程式達到其現行狀態的時間戳記等等。例如：
   <pre class="pre codeblock"><code>
@@ -412,9 +412,9 @@ cf push -f appManifest.yml
 	  <dt><strong>IBM_JAVA_OPTIONS</strong></dt>
 	  <dd>要在執行應用程式時使用的 Java SDK 選項。</dd>
 	  <dt><strong>IBM_JAVA_COMMAND_LINE</strong></dt>
-	  <dd>在 DEA 中啟動 Liberty 設定檔伺服器實例的 Java 指令。</dd>
+	  <dd>在 Diego 中啟動 Liberty 設定檔伺服器實例的 Java 指令。</dd>
 	  <dt><strong>WLP_USR_DIR</strong></dt>
-	  <dd>在 DEA 中啟動 Liberty 設定檔伺服器實例時，共用資源及伺服器定義的位置。</dd>
+	  <dd>在 Diego 中啟動 Liberty 設定檔伺服器實例時，共用資源及伺服器定義的位置。</dd>
 	  <dt><strong>WLP_OUTPUT_DIR</strong></dt>
 	  <dd>所產生輸出的位置，例如執行中 Liberty 設定檔伺服器實例的日誌檔及工作目錄。</dd>
 	  </dl>

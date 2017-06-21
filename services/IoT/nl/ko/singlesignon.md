@@ -17,8 +17,7 @@ lastupdated: "2017-03-13"
 {{site.data.keyword.iot_full}}에 대한 대체 사용자 인증 제공자를 지원하도록 {{site.data.keyword.ssofull}} 서비스를 구성할 수 있습니다.
 {: .shortdesc}
 
-{{site.data.keyword.ssoshort}}는 SAML 2.0, IBM Cloud Directory, 소셜 제공업체(Facebook, LinkedIn, Google+) 및 Github를 지원합니다.
-{{site.data.keyword.Bluemix_notm}} SSO 서비스에 대한 자세한 정보는 [싱글 사인온 시작하기 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/SingleSignOn/index.html){:new_window}를 참조하십시오. 
+{{site.data.keyword.ssoshort}}는 SAML 2.0, IBM Cloud Directory, 소셜 제공업체(Facebook, LinkedIn, Google+) 및 Github를 지원합니다. {{site.data.keyword.Bluemix_notm}} SSO 서비스에 대한 자세한 정보는 [싱글 사인온 시작하기 ![외부 링크 아이콘](../../icons/launch-glyph.svg)](https://console.{DomainName}/docs/services/SingleSignOn/index.html){:new_window}를 참조하십시오. 
 
 ## {{site.data.keyword.ssoshort}} 설정
 
@@ -37,7 +36,8 @@ lastupdated: "2017-03-13"
 4. 이제 {{site.data.keyword.sdk4nodefull}} 애플리케이션을 다시 스테이징해야 합니다.
 5. {{site.data.keyword.Bluemix_notm}} 대시보드에서 {{site.data.keyword.sdk4nodefull}} 애플리케이션을 클릭하십시오.
 6. {{site.data.keyword.ssoshort}} 서비스를 선택하고 **통합**을 클릭하십시오.
-7. Return-to-URL `https://<orgid>.internetofthings.ibmcloud.com/get-ibmsso-access-token`을 입력하십시오. 여기서 `<orgid>`는 {{site.data.keyword.iot_short_notm}} 조직 ID입니다.
+7. Return-to-URL `https://<orgid>.internetofthings.ibmcloud.com/get-ibmsso-access-token`을 입력하십시오.
+여기서 `<orgid>`는 {{site.data.keyword.iot_short_notm}} 조직 ID입니다.
 
 ## {{site.data.keyword.ssoshort}}에 대한 {{site.data.keyword.iot_short_notm}} 구성
 

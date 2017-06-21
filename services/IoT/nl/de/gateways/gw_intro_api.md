@@ -2,7 +2,7 @@
 
 copyright:
  years: 2015, 2017
-lastupdated: "2017-03-16"
+lastupdated: "2017-03-21"
 
 ---
 
@@ -45,9 +45,9 @@ Verwenden Sie eine der folgenden URLs, um eine `POST`-Anforderung von einem Ger�
 
 **Wichtige Hinweise:**
 - Sie können Gateway-Geräteereignisse nur mithilfe von HTTP-Messaging übergeben. Verwenden Sie das MQTT-Nachrichtenprotokoll, um Anforderungen nach anderen Gateway-Gerätemanagement- und Steuerfunktionen zu übergeben.
-- HTTP-Verbindungen können nur wiederverwendet werden, um Ereignisse für dasselbe Gerät zu publizieren, da der HTTP-Header für die Berechtigung nicht geändert werden kann.
 - Port 443, der SSL-Standardport, kann auch für sichere HTTP-API-Aufrufe angegeben werden.
-- Falls einem Gateway nicht die Rolle *Standardgateway* zugewiesen ist, kann es Ereignisse im Namen aller Geräte in der Organisation publizieren. Weisen Sie die Rolle *Standardgateway* zu, wenn Sie Geräteberechtigungsstufen prüfen und Ihr Gerät automatisch registrieren möchten. **Hinweis:** Dieses Verhalten kann sich ändern.
+- Falls einem Gateway nicht die Rolle *Standardgateway* zugewiesen ist, kann es Ereignisse im Namen aller Geräte in der Organisation publizieren. Falls das mit dem Gateway verbundene Gerät nicht registriert ist, führt das Gateway automatisch eine Registrierung für dieses Gerät durch.
+- Weisen Sie die Rolle *Standardgateway* zu, wenn Sie Geräteberechtigungsstufen prüfen möchten.
 
 Weitere Informationen zur Rolle von Gateways und Ressourcengruppen finden Sie in [Gateway Access Control (Beta)](../gateways/gateway-access-control.html).
 
@@ -60,7 +60,6 @@ Alle Anforderungen müssen einen Berechtigungsheader enthalten. Die Basisauthent
 |Benutzername| `g/{orgId}/{gwType}/{gwDevId}` or `g-{orgId}-{gwType}-{gwDevId}`
 |Kennwort| Das Authentifizierungstoken, das beim Registrieren des Gateway-Geräts entweder automatisch generiert oder manuell angegeben wurde.
 
-
 Dabei gilt:
 
 <dl>
@@ -69,11 +68,11 @@ Dabei gilt:
 
 <p></p>
 <dt>gwType</dt>  
-<dd>Der Typ von Gateway.</dd>
+<dd>Der Typ von Gateway. </dd>
 <dd>Wenn Sie Bindestriche ("-") als Trennzeichen im Benutzernamen verwenden, darf dieser Wert keinen Bindestrich enthalten. </dd>
 <p></p>
 <dt>gwDevId</dt>  
-<dd>Die Gerätekennung des Gateways.</dd>
+<dd>Die Gerätekennung des Gateways. </dd>
 </dl>
 
 

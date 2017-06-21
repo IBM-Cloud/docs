@@ -174,5 +174,5 @@ Esse pipeline é mostrado no diagrama conceitual a seguir:
 
 Os estágios tomam suas entradas dos repositórios e das tarefas de construção e as
 tarefas dentro de um estágio são executadas de maneira sequencial e independente umas das
-outras. No pipeline de exemplo, os estágios serão executados sequencialmente, ainda que
-os estágios de Teste e Produção tomem a saída do estágio de construção como suas entradas.
+outras. No pipeline de exemplo, os estágios são executados sequencialmente, mesmo que os
+estágios de Teste e Produção assumam a saída do estágio de Construção como sua entrada.

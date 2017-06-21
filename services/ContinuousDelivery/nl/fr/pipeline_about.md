@@ -118,7 +118,7 @@ Pour utiliser les arguments de commande `cf push`, ouvrez les paramètres de con
 Un pipeline simple peut contenir trois étapes :
 
 1. Une étape de génération qui compile et exécute des processus de génération sur une application.
-2. Une étape de test qui déploie une instance de l'application puis exécute des tests dessus.
+2. Une étape de test qui déploie une instance de l'application puis exécute des tests sur cette instance.
 3. Une étape de production qui déploie une instance de production de l'application testée.
 
 Ce pipeline est affiché dans le diagramme conceptuel suivant :
@@ -127,4 +127,5 @@ Ce pipeline est affiché dans le diagramme conceptuel suivant :
 
 *Modèle conceptuel d'un pipeline composé de trois étapes*
 
-Les étapes prennent leur entrée dans des référentiels et des travaux de génération et les travaux au sein d'une étape s'exécutent de façon séquentielle et indépendamment les uns des autres. Dans l'exemple de pipeline, les étapes s'exécutent de façon séquentielle, même si les étapes de test et de production prennent toutes les deux la sortie de l'étape de génération comme entrée.
+Les étapes prennent leur entrée dans des référentiels et des travaux de génération et les travaux au sein d'une étape s'exécutent de façon séquentielle et indépendamment les uns des autres. Dans
+l'exemple de pipeline, les étapes s'exécutent de manière séquentielle, même si les étapes de test et de production utilisent la sortie de l'étape de génération comme entrée.

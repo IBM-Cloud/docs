@@ -132,8 +132,8 @@ Python 應用程式的配置資訊遺失。
 {: tsCauses}
 
  * 應用程式不是 Java&trade; Web 應用程式。Runtime Management Utilities (RMU) 只支援使用 Liberty 建置套件所部署的 Web 應用程式。
- * 應用程式不是使用內嵌的 Liberty 建置套件所部署的。
- * 應用程式是使用舊版 Liberty 建置套件所部署的的。
+ * 應用程式不是使用內嵌的 Liberty 建置套件所部署。
+ * 應用程式是使用舊版 Liberty 建置套件所部署。
 
 如果問題是舊版 Liberty 建置套件所造成，請在 {{site.data.keyword.Bluemix_notm}} 中重新部署應用程式。否則，您可以將下列用戶端應用程式日誌檔提供給支援團隊：
 {: tsResolve} 

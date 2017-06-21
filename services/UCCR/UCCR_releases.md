@@ -18,18 +18,23 @@ A release is a container for deployment plans, events, and tags.
 
 {:shortdesc}
 
+
 Typically, a release contains deployment plans and events that are related in some business-meaningful way. For example, the deployment plans might represent the phases in a software development lifecycle, such as development, QA, and production. An event might represent a blackout that affects the release.
 
+
 If you add events to a release, you can use the calendar to filter the Releases page to display releases and deployment plans.
+
 
 ## Creating releases
 {: #releases_create}
 
 To create a release, complete the following steps:
 
+
 1. On the Releases page, click **Create release**.
 
 1. In the Create release window, in the **Name** field, enter a name for the release. A name is required.
+
 
 3. In the **Team** list, select a team to manage the release. You can add deployment plans from other teams to the release event, not just the team owned by the team that manages the release. All the teams that you belong to are available. A team is required.
 
@@ -37,9 +42,11 @@ To create a release, complete the following steps:
 
 3. In the **End Time** field, select the ending date and time.
 
+
 3. In the **Tags** list, select an event or tag. You can select multiple items.  If you want the event to appear on the calendar, [select an event that is created on the Configure Calendar page](UCCR_events.html#events_tagCreate).
 
 1. Optionally, you can create a tag by typing the tag name in **Tags** field. Tags that you create with the Create release window are not displayed on the calendar, which can prevent calendar clutter.
+
 
 5. Click **Save**.
 
@@ -69,7 +76,9 @@ To add existing deployment plans to a release, complete the following steps:
 
 The Release Detail page displays the deployment plans that belong to the release. To manage a release or the deployment plans that belong to it, open the Release Detail page, and then complete one of the following tasks:
 <ul>
+
 <li>Click **Edit** to modify the release definition. With this option, you can add events and tags to the release event.
+
 </li>
 <li>Select **Edit this plan** to edit a deployment plan. The Edit Deployment Plan window is displayed.
 </li>
@@ -78,8 +87,10 @@ The Release Detail page displays the deployment plans that belong to the release
 <li>Select **Copy this plan** to copy a deployment plan. A copy of the selected plan is added to the release.</li>
 <li>Select **Remove from release** to remove the deployment plan from the release. Plans that are removed a release are not deleted and can be added to another release.
 </li>
+
 </li>
 <li>Select **Archive this plan** to move the deployment plan to the archive. Archived plans can be restored.
+
 </li>
 </ul>
 
@@ -108,4 +119,6 @@ To restore an archived release, compete these steps:
 
 2. In the list of archived releases, click the **Restore** action for the release.
 
+
 A restored release retains all of its original deployment plans.
+

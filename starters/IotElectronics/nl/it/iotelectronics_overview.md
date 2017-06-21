@@ -2,16 +2,15 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-10"
+lastupdated: "2017-04-06"
 ---
 
 <!-- Common attributes used in the template are defined as follows: -->
-{:new_window: target="blank"}
+{:new_window: target="\_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-
 
 # Informazioni su {{site.data.keyword.iotelectronics}}
 {: #iotelectronics_about}
@@ -44,16 +43,14 @@ Il contenitore tipo starter distribuisce la soluzione {{site.data.keyword.iotele
 
 ![{{site.data.keyword.iotelectronics}} Architettura. Questo diagramma è illustrato nel corpo principale dell'argomento.](images/IoT4E_architecture.svg "{{site.data.keyword.iotelectronics}} architettura")
 
-Lo starter {{site.data.keyword.iotelectronics}} utilizza le API e il servizio {{site.data.keyword.iotelectronics}} per il collegamento a {{site.data.keyword.iot_short_notm}}. L'applicazione starter e l'applicazione mobile di esempio comunicano con il servizio {{site.data.keyword.iotelectronics}} e sono collegati tra loro da {{site.data.keyword.amafull}}. I seguenti componenti sono inclusi nello starter:
+Lo starter {{site.data.keyword.iotelectronics}} utilizza le API e il servizio {{site.data.keyword.iotelectronics}} per il collegamento a {{site.data.keyword.iot_short_notm}}. L'applicazione starter e l'applicazione mobile di esempio comunicano con il servizio {{site.data.keyword.iotelectronics}}. I seguenti componenti sono inclusi nello starter:
 
 **Il servizio {{site.data.keyword.iotelectronics}}** supporta le notifiche e la registrazione dell'elettrodomestico e dell'utente.
 
 **{{site.data.keyword.iot_full}}** permette alle tue applicazioni di comunicare e utilizzare i dati raccolti dai tuoi elettrodomestici, sensori e gateway collegati.
 
-<!-- **{{site.data.keyword.iotrtinsights_full}}** enables you to enrich and monitor data from your appliances, visualize what's happening now, and respond to emerging conditions by using automated actions. -->
-
-**{{site.data.keyword.amafull}}** abilita gli utenti delle applicazioni mobili ad accedere utilizzando gli account social esistenti e verifica che le comunicazioni con i sistemi di backend siano sicure.
-
 **{{site.data.keyword.sdk4nodefull}}** ti abilita a sviluppare, distribuire e ridimensionare le applicazioni JavaScript&reg; lato server e fornisce utilità, sicurezza e prestazioni avanzate.
+
+**{{site.data.keyword.appid_full}}** aggiunge l'autenticazione alle tue applicazioni web e mobile e protegge i tuoi sistemi di backend.
 
 **Applicazione mobile di esempio** ti permette di visualizzare lo stato e comunicare con un'applicazione simulata utilizzando il tuo telefono mobile. Scopri come ottenere l'applicazione mobile in [Utilizzo dell'applicazione mobile](iotelectronics_config_mobile.html).

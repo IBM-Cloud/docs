@@ -37,6 +37,8 @@ Wenn Sie sich bei {{site.data.keyword.iot_short_notm}} registrieren, erhalten Si
 
 Aus Gründen Ihrer Sicherheit ist es unmöglich, zwischen Organisationen zu kommunizieren. Die einzige Möglichkeit, Daten zwischen zwei Organisationen zu übertragen, besteht darin, innerhalb jeder der Organisationen eine Anwendung zu erstellen, die mit Anwendungen in der anderen Organisation kommuniziert.
 
+**Hinweis:** Ihre {{site.data.keyword.iot_short_notm}}-Organisations-ID unterscheidet sich von Ihrer [Bluemix-Organisation](../../docs/admin/orgs_spaces.html#orginfo). 
+
 ### Geräte
 
 Ein Gerät kann alles sein, das eine Verbindung zum Internet hat und das für Daten eine Push-Operation in die Cloud durchführen kann. Geräte können jedoch nicht direkt mit anderen Geräten kommunizieren, stattdessen akzeptieren Geräte Befehle von Anwendungen und senden Ereignisse an Anwendungen. Geräte in {{site.data.keyword.iot_short_notm}} werden durch ein eindeutiges Authentifizierungstoken angegeben. Geräte müssen registriert werden, bevor für sie eine Verbindung zu {{site.data.keyword.iot_short_notm}} hergestellt werden kann.

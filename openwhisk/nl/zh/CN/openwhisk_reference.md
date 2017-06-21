@@ -2,12 +2,11 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-04"
+lastupdated: "2017-04-24"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:codeblock:.codeblock}
 {:screen:.screen}
 {:pre: .pre}
@@ -277,7 +276,7 @@ JavaScript 操作缺省情况下在 Node.js V6.9.1 环境中执行。如果在�
 - underscore v1.8.3
 - uuid v3.0.0
 - validator v6.1.0
-- watson-developer-cloud v2.9.0
+- watson-developer-cloud v2.29.0
 - when v3.7.7
 - winston v2.3.0
 - ws v1.1.1
@@ -391,73 +390,14 @@ Docker 操作在 Docker 容器中运行用户提供的二进制文件。该二�
 
 通过 Docker 框架，可以方便地构建兼容 OpenWhisk 的 Docker 映像。可以使用 `wsk sdk install docker` CLI 命令安装该框架。
 
-主二进制程序必须位于容器内的 `/action/exec` 中。可执行文件通过 `stdin` 接收输入自变量，并且必须通过 `stdout` 返回结果。
+主二进制程序必须位于容器内的 `/action/exec` 中。可执行文件通过可以反序列化为 `JSON` 对象的单个命令行自变量字符串来接收输入自变量。该文件必须通过 `stdout` 以单行序列化 `JSON` 字符串形式返回结果。
 
 您可以通过修改 `dockerSkeleton` 中包含的 `Dockerfile` 来包含任何编译步骤或依赖关系。
 
 ## REST API
 {: #openwhisk_ref_restapi}
+有关 REST API 的信息位于[此处](openwhisk_rest_api.html)
 
-通过 REST API，可以使用系统中的所有功能。操作、触发器、规则、包、激活和名称空间具有集合和实体端点。
-
-以下是集合端点：
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations`
-
-`openwhisk.`<span class="keyword" data-hd-keyref="DomainName">DomainName</span> 是 OpenWhisk API 主机名（例如，openwhisk.ng.bluemix.net、172.17.0.1 等）。
-
-对于 `{namespace}`，可以使用字符 `_` 来指定用户的 *缺省名称空间*（即电子邮件地址）。
-
-您可以在集合端点上执行 GET 请求，以访存集合中的实体列表。
-
-每一个实体类型都具有实体端点：
-
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/actions/[{packageName}/]{actionName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/triggers/{triggerName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/rules/{ruleName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/packages/{packageName}`
-- `https://`openwhisk.<span class="keyword" data-hd-keyref="DomainName">DomainName</span>`/api/v1/namespaces/{namespace}/activations/{activationName}`
-
-
-名称空间和激活端点仅支持 GET 请求。操作、触发器、规则和包端点支持 GET、PUT 和 DELETE 请求。操作、触发器和规则的端点还支持 POST 请求，其用于调用操作和触发器，以及启用或禁用规则。有关详细信息，请参阅 [API参考](https://new-console.{DomainName}/apidocs/98)。
-
-所有 API 都通过 HTTP 基本认证进行保护。基本认证凭证位于 `~/.wskprops` 文件的 `AUTH` 属性中，以冒号分隔。您还可以在 [CLI 配置步骤](./index.html#openwhisk_start_configure_cli)中，对这些凭证进行检索。
-
-以下示例使用 cURL 命令，获取 `whisk.system` 名称空间中所有包的列表：
-
-```
-curl -u USERNAME:PASSWORD https://openwhisk.ng.bluemix.net/api/v1/namespaces/whisk.system/packages
-```
-{: pre}
-```
-[
-  {
-    "name": "slack",
-    "binding": false,
-    "publish": true,
-    "annotations": [
-      {
-        "key": "description",
-        "value": "Package that contains actions to interact with the Slack messaging service"
-      }
-    ],
-    "version": "0.0.9",
-    "namespace": "whisk.system"
-  },
-  ...
-]
-```
-{: screen}
-
-OpenWhisk API 支持 Web 客户端的请求-响应调用。OpenWhisk 使用 Cross-Origin Resource Sharing 头来响应 `OPTIONS` 请求。目前，允许所有源（即 Access-Control-Allow-Origin 为 "`*`"）且 Access-Control-Allow-Headers 会产生 Authorization 和 Content-Type。
-
-**注意：**由于 OpenWhisk 目前仅支持每个帐户一个密钥，因此建议除了简单的试验之外，不要使用 CORS。密钥需要嵌入客户端代码中，这会使公众都能够看到密钥。请谨慎使用。
 
 ## 系统限制
 {: #openwhisk_syslimits}

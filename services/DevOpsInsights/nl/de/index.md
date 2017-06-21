@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016
-lastupdated: "2016-11-11"
+  years: 2016, 2017
+lastupdated: "2017-04-07"
 
 ---
 
@@ -12,47 +12,52 @@ lastupdated: "2016-11-11"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Einführung in {{site.data.keyword.DRA_short}} (Experimentell)
+# Einführung in DevOps Insights (Beta)
 {: #gettingstarted}
 
-Mit {{site.data.keyword.DRA_full}} können Sie Risiken für Ihre Builds und Bereitstellungen ermitteln.
+{{site.data.keyword.DRA_full}} wendet Analysen für Entwickler, Teams und die Bereitstellung auf Ihre wichtigsten DevOps-Projekte an. Mithilfe dieser Komponente können Sie ermitteln, wie konform Ihr Team mit DevOps und Entwicklerverfahren arbeitet. Außerdem ist sie ideal für das Risikomanagement Ihrer Codebasis und die automatische Durchsetzung von Qualitätsstandards in Continuous Delivery-Projekten.
 {:shortdesc}
 
-{{site.data.keyword.DRA_short}} aggregiert und analysiert die Ergebnisse aus Komponententests, Funktionstests und Codeabdeckungstools, um zu bestimmen, ob Ihr Code den vordefinierten Richtlinien bei angegebenen Gates in Ihrem Bereitstellungsprozess entspricht. Entspricht Ihr Code keiner Richtlinie oder überschreitet Ihr Code eine Richtlinie, wird die Bereitstellung angehalten; dadurch wird verhindert, dass sicherheitsbedenkliche Änderungen freigegeben werden. Sie können {{site.data.keyword.DRA_short}} als Sicherheitsnetz für Ihre Continuous Delivery-Umgebung, als Möglichkeit der Implementierung und Verbesserung der Qualitätsstandards über einen Zeitraum hinweg sowie als Datenvisualisierungstool für Informationen zum Projektstatus verwenden.
+{{site.data.keyword.DRA_short}} umfasst mehrere verschiedene Leistungsmerkmale:
 
-Bei {{site.data.keyword.DRA_short}} handelt es sich um ein experimentelles Angebot und wird auf As-is-Basis nur zu Entwicklungs- und Versuchszwecken bereitgestellt. Für die Verwendung von {{site.data.keyword.DRA_short}} müssen Sie diese Komponente zu einer beliebigen Toolchain hinzufügen, die mit der {{site.data.keyword.deliverypipeline}} arbeitet.
+   * Mit Developer Insights können Sie den Entwicklungsstand (Reife) Ihres Projekts umfassend untersuchen. Sie können fehlerträchtige Dateien ermitteln und eine Konformitätsansicht des Projekts im Hinblick auf die Entwicklerverfahren erhalten.
 
+   * Team Dynamics verwendet soziale Codeanalysen, mit denen Sie feststellen können, wie gut Ihr Team zusammenarbeitet und wie diese Zusammenarbeit noch verbessert werden kann.
+
+   * Deployment Risk ist wie ein Sicherheitsnetz für Continuous Delivery. Die Komponente analysiert die Ergebnisse aus Komponententests, Funktionstests, Anwendungsscans und Codeabdeckungstools an bestimmten Gates in Ihrem Entwicklungsprozess und verhindert, dass riskante Änderungen freigegeben werden.
+
+   * Mit Delivery Insights können Sie Bereitstellungsstatistiken, Metriken und weitere Informationen zu Ihrer IBM UrbanCode Deploy-Installation anzeigen. Beispielsweise können Diagramme über den Bereitstellungszeitraum, über erfolgreiche und fehlgeschlagene Bereitstellungen angezeigt werden, die alle nach logisch gruppierten Umgebungen sortiert sind. Weitere Informationen finden Sie in [Integration von DevOps Insights mit IBM UrbanCode Deploy](/docs/services/DevOpsInsights/uc_insights_overview.html).
+
+Bei {{site.data.keyword.DRA_short}} handelt es sich um eine Integration mit dem offenen Toolchain-Katalog von Bluemix. Weitere Informationen zu Toolchains finden Sie in [Arbeiten mit Toolchains](/docs/services/ContinuousDelivery/toolchains_working.html).
+
+Um {{site.data.keyword.DRA_short}} verwenden zu können, müssen Sie die Komponente zu einer Toolchain hinzufügen. Viele Toolchain-Vorlagen enthalten bereits {{site.data.keyword.DRA_short}}. [Fügen Sie die Komponenten außerdem unbedingt zu Ihrer {{site.data.keyword.Bluemix_notm}}-Organisation als Service hinzu](/docs/services/reqnsi.html), damit Sie Informationen zu {{site.data.keyword.DRA_short}} anzeigen und über das {{site.data.keyword.Bluemix_notm}}-Dashboard auf einige der Toolchain-Vorlagen zugreifen können, die {{site.data.keyword.DRA_short}} enthalten.  
+
+## DevOps Insights zu einer Toolchain hinzufügen
 {: #catalog}
-Führen Sie für den Zugriff auf die Benutzerschnittstelle von {{site.data.keyword.DRA_short}} die folgenden Schritte in einer vorhandenen Toolchain aus:
 
-1. Klicken Sie auf die Schaltfläche **Tool hinzufügen**.
+{{site.data.keyword.DRA_short}} ist eine Komponente von {{site.data.keyword.contdelivery_short}}. Sie können {{site.data.keyword.DRA_short}} zu jeder Toolchain hinzufügen, indem Sie die Komponente aus dem Toolintegrationskatalog auswählen.
+
+{{site.data.keyword.DRA_short}} ist zudem in vielen Toolchain-Vorlagen enthalten. Wenn Sie eine Toolchain aus einer Vorlage erstellen, die {{site.data.keyword.DRA_short}} enthält, stellen Sie sicher, dass {{site.data.keyword.DRA_short}} auf **Erweitert** gesetzt ist. Erstellen Sie dann die Toolchain und fahren Sie mit dem Abschnitt [Insights verwenden](/docs/services/DevOpsInsights/index.html#using) fort.
+
+Führen Sie die folgenden Schritte aus, um {{site.data.keyword.DRA_short}} zu einer Toolchain hinzuzufügen:
+
+1. Klicken Sie auf **Tool hinzufügen**.
 
 2. Klicken Sie auf **{{site.data.keyword.DRA_short}}**.
 
 3. Klicken Sie auf **Integration erstellen**.
 
-4. Klicken Sie auf die Kachel für **{{site.data.keyword.DRA_short}}**.
+{{site.data.keyword.DRA_short}} ist nun auf der Übersichtsseite Ihrer Toolchain verfügbar. Das Repository und das Problemverfolgungssystem werden automatisch nach Daten durchsucht.  
 
-5. Vervollständigen Sie Ihr Setup mit den verbliebenen Tasks:
+## DevOps Insights verwenden
+{: #using}
 
-	1. [Konfigurieren Sie Ihre {{site.data.keyword.deliverypipeline}}-Integration](./pipeline_integration.html).
-	2. Führen Sie die Pipeline aus und [überprüfen Sie die {{site.data.keyword.deliverypipeline}}-Dashboards](./pipeline_decision_reports.html).
-	3. [Definieren Sie Richtlinien](./create_criteria.html) für die {{site.data.keyword.DRA_short}}-Verwaltung.
-	4. Führen Sie die Pipeline erneut aus, um zu prüfen, ob Ihr Projekt Ihre Richtlinien berücksichtigt.
+Wenn Ihre Toolchain GitHub, GitLab oder JIRA enthält, stellt Ihnen {{site.data.keyword.DRA_short}} automatisch nach einer anfänglichen Datenerfassung und -analyse Informationen zu Ihrer Codebasis und Ihrem Team bereit. Wenn Ihre Toolchain keine dieser Integrationen umfasst, fügen Sie eine dieser Integrationen hinzu und führen Sie dann die folgenden Schritte aus:
 
+1. Klicken Sie auf der Übersichtsseite der Toolchain auf **{{site.data.keyword.DRA_short}}**.
 
-# Zugehörige Links
-{: #rellinks}
+2. Klicken Sie auf **Team Dynamics** oder **Developer Insights** und wählen Sie dann eine Datenkategorie aus. 
 
-## Lernprogramme und Beispiele
-{: #samples}
+3. Untersuchen Sie die Projektdaten, indem Sie die Dashboards in der Datenkategorie anzeigen. Wenn Sie mehr über ein Diagramm oder darüber wissen möchten, wie Sie die darin enthaltenen Informationen verarbeiten sollen, klicken Sie auf **Informationen** oder **Anweisungen**.
 
-* [Wahrscheinlichkeit erfolgreicher Bereitstellungen mithilfe von Analysen feststellen](https://www.ibm.com/devops/method/content/deliver/tool_deployment_risk_analytics/){:new_window}
-
-## Zugehörige Links
-{: #general}
-
-* [Einführung in Toolchains](https://new-console.ng.bluemix.net/docs/toolchains/toolchains_overview.html){:new_window}
-* [Einführung in Delivery Pipeline](https://new-console.ng.bluemix.net/docs/services/DeliveryPipeline/index.html){:new_window}
-* [IBM Bluemix-Preisstruktur](https://new-console.ng.bluemix.net/pricing/){:new_window}
-* [IBM Bluemix - Voraussetzungen](https://developer.ibm.com/bluemix/support/?cm_mc_uid=96503159749414585876298&cm_mc_sid_50200000=1462802909#prereqs){:new_window}
+Nachdem Sie Team Dynamics und Developer Insights untersucht haben, [konfigurieren Sie Deployment Risk](/docs/services/DevOpsInsights/insights_risk.html), um Codequalität durchsetzen zu können. Deployment Risk ist sowohl mit der {{site.data.keyword.contdelivery_short}} Pipeline als auch mit Jenkins kompatibel.   

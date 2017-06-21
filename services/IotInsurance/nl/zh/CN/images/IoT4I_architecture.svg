@@ -15,13 +15,20 @@
    viewBox="0 0 872.61179 839.4334"
    id="svg5645"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.47 r22583"
    sodipodi:docname="IoT4I_architecture.svg"
    inkscape:export-filename="C:\Users\IBM_ADMIN\GitHub\IoT\Blockchain-DOCS\iotblockchain_scratch\images\architecture_contracts.png"
    inkscape:export-xdpi="299.98132"
    inkscape:export-ydpi="299.98132">
   <defs
      id="defs5647">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 419.71674 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="872.61169 : 419.71674 : 1"
+       inkscape:persp3d-origin="436.30585 : 279.81116 : 1"
+       id="perspective317" />
     <marker
        style="overflow:visible"
        id="TriangleInM-17-4-6"
@@ -450,17 +457,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0182338"
-     inkscape:cx="399.22199"
-     inkscape:cy="208.17774"
+     inkscape:zoom="1.2"
+     inkscape:cx="497.74115"
+     inkscape:cy="181.71055"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1920"
-     inkscape:window-height="1019"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-width="1440"
+     inkscape:window-height="838"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      fit-margin-top="35.2"
      fit-margin-left="0.2"
@@ -581,7 +588,7 @@
            y="643.62872"
            x="666.55725"
            sodipodi:role="line"
-           style="text-align:center;text-anchor:middle">连接到</tspan><tspan
+           style="text-align:center;text-anchor:middle;-inkscape-font-specification:SimHei;font-family:SimHei">连接到</tspan><tspan
            id="tspan4751"
            y="657.37872"
            x="668.08264"
@@ -591,7 +598,7 @@
            y="671.12872"
            x="666.55725"
            sodipodi:role="line"
-           style="text-align:center;text-anchor:middle">的智能住宅或传感器</tspan></text>
+           style="text-align:center;text-anchor:middle;-inkscape-font-specification:SimHei;font-family:SimHei">的智能住宅或传感器</tspan></text>
     </g>
     <text
        xml:space="preserve"
@@ -952,7 +959,8 @@
            id="tspan6702"
            y="440.01978"
            x="152.57745"
-           sodipodi:role="line">样本移动应用程序</tspan></text>
+           sodipodi:role="line"
+           style="-inkscape-font-specification:SimHei;font-family:SimHei">样本移动应用程序</tspan></text>
     </g>
     <g
        id="g4803"
@@ -986,7 +994,8 @@
          cy="399.09073"
          cx="55.324764"
          style="display:inline;fill:#dcf5ff"
-         transform="translate(68.91203,-77.428426)" />
+         transform="translate(68.91203,-77.428426)"
+         d="m 56.355799,399.09073 c 0,0.44695 -0.46161,0.80928 -1.031035,0.80928 -0.569424,0 -1.031034,-0.36233 -1.031034,-0.80928 0,-0.44696 0.46161,-0.80929 1.031034,-0.80929 0.569425,0 1.031035,0.36233 1.031035,0.80929 z" />
       <polygon
          transform="matrix(1.7183909,0,0,1.3488077,103.95977,297.51862)"
          style="display:inline;opacity:0.18999999;fill:#474747"
@@ -1021,9 +1030,13 @@
            id="tspan4784"
            y="322.86343"
            x="141.48183"
-           sodipodi:role="line">Service（<tspan
+           sodipodi:role="line">Service<tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3123">（</tspan><tspan
    id="tspan4420"
-   style="fill:#f40000;fill-opacity:1">已弃用</tspan>）</tspan></text>
+   style="fill:#f40000;fill-opacity:1;-inkscape-font-specification:SimHei;font-family:SimHei">已弃用</tspan><tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3125">）</tspan></tspan></text>
     </g>
     <g
        id="g4829"
@@ -1060,11 +1073,12 @@
            id="tspan6702-1"
            y="566.17621"
            x="190.8436"
-           sodipodi:role="line">投保人</tspan><tspan
+           sodipodi:role="line"
+           style="-inkscape-font-specification:SimHei;font-family:SimHei">投保人</tspan><tspan
            y="579.92621"
            x="189.31821"
            sodipodi:role="line"
-           id="tspan4740"></tspan></text>
+           id="tspan4740" /></text>
     </g>
     <text
        sodipodi:linespacing="125%"
@@ -1076,25 +1090,28 @@
          y="-38.583305"
          x="551.91132"
          sodipodi:role="line"
-         style="font-size:11.25000095px;text-align:center;text-anchor:middle"
+         style="font-size:11.25000095000000000px;text-align:center;text-anchor:middle;-inkscape-font-specification:SimHei;font-family:SimHei"
          id="tspan7345-7-3-0">保险公司</tspan><tspan
          id="tspan22328"
          y="-24.520803"
          x="551.91132"
          sodipodi:role="line"
-         style="font-size:11.25000095px;text-align:center;text-anchor:middle">操作员</tspan><tspan
+         style="font-size:11.25000095000000000px;text-align:center;text-anchor:middle;-inkscape-font-specification:SimHei;font-family:SimHei">操作员</tspan><tspan
          y="-10.458303"
          x="551.91132"
          sodipodi:role="line"
-         id="tspan7318-8-6-0" /><tspan
+         id="tspan7318-8-6-0"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei" /><tspan
          y="3.6041977"
          x="551.91132"
          sodipodi:role="line"
-         id="tspan7312-8-7-6" /><tspan
+         id="tspan7312-8-7-6"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei" /><tspan
          y="17.666698"
          x="551.91132"
          sodipodi:role="line"
-         id="tspan6445-3-9-6-2-1-1-7-0" /></text>
+         id="tspan6445-3-9-6-2-1-1-7-0"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei" /></text>
     <text
        sodipodi:linespacing="125%"
        y="22.053659"
@@ -1191,7 +1208,8 @@
            id="tspan7488-1"
            sodipodi:role="line"
            x="368.0589"
-           y="293.78586">操作引擎</tspan></text>
+           y="293.78586"
+           style="-inkscape-font-specification:SimHei;font-family:SimHei">操作引擎</tspan></text>
     </g>
     <g
        id="g4580">
@@ -1257,7 +1275,8 @@
            id="tspan7488-14"
            sodipodi:role="line"
            x="815.0509"
-           y="201.40816">聚集器</tspan></text>
+           y="201.40816"
+           style="-inkscape-font-specification:SimHei;font-family:SimHei">聚集器</tspan></text>
     </g>
     <g
        id="g4597">
@@ -1323,7 +1342,8 @@
            id="tspan7488-4"
            sodipodi:role="line"
            x="815.98218"
-           y="307.86221">保障引擎</tspan></text>
+           y="307.86221"
+           style="-inkscape-font-specification:SimHei;font-family:SimHei">保障引擎</tspan></text>
     </g>
     <g
        id="g4876"
@@ -1539,8 +1559,9 @@
          sodipodi:role="line"
          x="344.34195"
          y="556.04736"
-         id="tspan4572">（<tspan
-   style="fill:#f60000;fill-opacity:1"
+         id="tspan4572"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">（<tspan
+   style="fill:#f60000;fill-opacity:1;-inkscape-font-specification:SimHei;font-family:SimHei"
    id="tspan4574">可选</tspan>）</tspan></text>
     <text
        xml:space="preserve"
@@ -1561,11 +1582,11 @@
        id="text44235-7-3-6-4-0-2-7-0-4"
        sodipodi:linespacing="125%"><tspan
          id="tspan7345-7-3-0-8"
-         style="font-size:11.25000095px;text-align:center;text-anchor:middle"
+         style="font-size:11.25000095000000000px;text-align:center;text-anchor:middle;-inkscape-font-specification:SimHei;font-family:SimHei"
          sodipodi:role="line"
          x="667.75934"
          y="-38.583294">保险公司</tspan><tspan
-         style="font-size:11.25000095px;text-align:center;text-anchor:middle"
+         style="font-size:11.25000095000000000px;text-align:center;text-anchor:middle;-inkscape-font-specification:SimHei;font-family:SimHei"
          sodipodi:role="line"
          x="666.19928"
          y="-24.520792"
@@ -1573,15 +1594,18 @@
          id="tspan7318-8-6-0-4"
          sodipodi:role="line"
          x="666.19928"
-         y="-10.458292" /><tspan
+         y="-10.458292"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei" /><tspan
          id="tspan7312-8-7-6-3"
          sodipodi:role="line"
          x="666.19928"
-         y="3.6042092" /><tspan
+         y="3.6042092"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei" /><tspan
          id="tspan6445-3-9-6-2-1-1-7-0-3"
          sodipodi:role="line"
          x="666.19928"
-         y="17.66671" /></text>
+         y="17.66671"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei" /></text>
     <g
        id="g4852"
        transform="translate(58.000001,98.000002)">
@@ -1618,17 +1642,17 @@
            y="566.17621"
            x="608.23999"
            sodipodi:role="line"
-           style="text-align:center;text-anchor:middle">通过云服务连接的</tspan><tspan
+           style="text-align:center;text-anchor:middle;-inkscape-font-specification:SimHei;font-family:SimHei">通过云服务连接的</tspan><tspan
            y="579.92621"
            x="608.23999"
            sodipodi:role="line"
            id="tspan12969"
-           style="text-align:center;text-anchor:middle">智能住宅和传感器</tspan><tspan
+           style="text-align:center;text-anchor:middle;-inkscape-font-specification:SimHei;font-family:SimHei">智能住宅和传感器</tspan><tspan
            y="593.67621"
            x="608.23999"
            sodipodi:role="line"
            id="tspan12971"
-           style="text-align:center;text-anchor:middle"></tspan></text>
+           style="text-align:center;text-anchor:middle;-inkscape-font-specification:SimHei;font-family:SimHei" /></text>
     </g>
     <g
        id="g4624">
@@ -1688,7 +1712,8 @@
            id="tspan7488"
            sodipodi:role="line"
            x="578.42261"
-           y="100.67422">仪表板</tspan></text>
+           y="100.67422"
+           style="-inkscape-font-specification:SimHei;font-family:SimHei">仪表板</tspan></text>
     </g>
     <g
        id="g4929"
@@ -1840,8 +1865,11 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1">
         <tspan
            id="tspan10749"
-           style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;white-space:normal;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.00000012;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate">Watson™ IoT 平台</tspan>
-    </text>
+           style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.25000095px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;white-space:normal;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.00000012;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate">Watson™ IoT <tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
+   id="tspan3127">平台</tspan>
+</tspan>
+      </text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
@@ -1871,11 +1899,14 @@
            id="tspan5792"
            y="231.90544"
            x="575.04333"
-           sodipodi:role="line">Watson IoT 平台</tspan><tspan
+           sodipodi:role="line">Watson IoT <tspan
+   style="-inkscape-font-specification:SimHei;font-family:SimHei"
+   id="tspan3129">平台</tspan></tspan><tspan
            id="tspan9810"
            y="245.65544"
            x="575.04333"
-           sodipodi:role="line">仪表板</tspan></text>
+           sodipodi:role="line"
+           style="-inkscape-font-specification:SimHei;font-family:SimHei">仪表板</tspan></text>
     </g>
     <text
        xml:space="preserve"
@@ -1913,6 +1944,7 @@
          sodipodi:role="line"
          x="808.39111"
          y="650.59137"
-         id="tspan4622">数据</tspan></text>
+         id="tspan4622"
+         style="-inkscape-font-specification:SimHei;font-family:SimHei">数据</tspan></text>
   </g>
 </svg>
