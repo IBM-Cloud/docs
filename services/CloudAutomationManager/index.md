@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-27"
+lastupdated: "2017-06-21"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -40,7 +40,7 @@ The short description section should include one to two sentences describing why
 Examples: -->
 
 
-Use IBM Cloud Automation Manager in Bluemix to create and edit templates that implement common business patterns and to deploy them in your cloud environment. After they are deployed, you can manage and access the instances from the Cloud Automation Manager service.
+Use IBM Cloud Automation Manager to create and edit templates and services that implement common business patterns and to deploy them in your cloud environment. After they are deployed, you can manage and access the instances from the Cloud Automation Manager service.
 {:shortdesc}
 
 <!-- If overview content is required, do not include it here. Put it in a separate "## About" section below the task section. -->
@@ -56,17 +56,16 @@ The task section includes steps to integrate the service into the app.
 <!-- You can include an optional prerequisites paragraph for any prerequisites to be met before integrating the service. For example: -->
 
 <!-- Include a sentence to briefly introduce the steps. Examples: -->
+You can use the Cloud Automation Manager service in Bluemix or you can install the beta version of Cloud Automation Manager Local that allows you to work with services in addition to templates. For information about installing Cloud Automation Manager Local (Beta), see [Planning the installation](/docs/services/CloudAutomationManager/cam_planning.html).
 
-After you add the Cloud Automation Manager service from the Bluemix catalog, to get started with the service, create and deploy a template to your cloud provider. The following cloud providers are supported:
- - IBM Cloud
- - Amazon EC2
- - vSphere (Beta)
-
-<!-- Note that before you can use the Cloud Automation Manager service to deploy templates to the IBM Cloud infrastructure (SoftLayer), you may need to upgrade and unify your Bluemix and SoftLayer accounts. For more information, see [Upgrading and unifying Bluemix and SoftLayer billing accounts](https://console.{DomainName}/docs/admin/softlayerlink.html){:new_window}. -->
-
-<!-- Note that you can deploy templates to IBM Cloud infrastructures only within the region, organization, and space to which you are logged in. -->
-
-Complete the following steps:
+<p>After you added the Cloud Automation Manager service from the Bluemix catalog or you installed Cloud Automation Manager Local (Beta), to get started with the service, create and deploy a template or a service to your cloud provider. The following cloud providers are supported:
+<ul><li>IBM Cloud</li>
+<li>Amazon EC2</li>
+<li>VMware vSphere</li>
+<li>VMware NSXv (only for Local version)</li>
+</ul></p>
+ 
+To get started with Cloud Automation Manager in Bluemix, complete the following steps:
 
 <!-- Use ordered list markup for the step section. For code examples:
 - use three backticks ahead of and after the example (```)
@@ -75,9 +74,21 @@ Complete the following steps:
 - For non-copyable output snippet, include {: screen} following the last set of backticks.
  -->
 
-1. Click **Cloud Connections** to set a connection to the cloud provider where you want to deploy your template. For information about creating a connection, see [Managing connections](https://console.{DomainName}/docs/services/CloudAutomationManager/cam_managing_connections.html).
-2. Click **Template Library** to create and deploy a template from scratch or deploy one of the pre-built templates. For information about deploying a template, see [Deploying a template](https://console.{DomainName}/docs/services/CloudAutomationManager/cam_deploying.html).
-3. Click **Deployed Instances** to view the deployed instance details and perform actions on the related resources. For more information, see [Viewing instance details](https://console.{DomainName}/docs/services/CloudAutomationManager/cam_instance_details.html).
+1. Click **Cloud Connections** to set a connection to the cloud provider where you want to deploy your template. For information about creating a connection, see [Managing connections](/docs/services/CloudAutomationManager/cam_managing_connections.html).
+2. Click **Template Library** to create and deploy a template from scratch or deploy one of the pre-built templates. For information about deploying a template, see [Deploying a template](/docs/services/CloudAutomationManager/cam_deploying.html).
+3. Click **Deployed Instances** to view the deployed instance details and perform actions on the related resources. For more information, see [Viewing template instance details](/docs/services/CloudAutomationManager/cam_instance_details.html).
+
+To get started with Cloud Automation Manager Local (Beta), complete the following steps:
+
+1. Access the Cloud Automation Manager user interface by entering the following URL in your browser:
+ ```
+ https://<CAM_master_node_IP_address>:30000/
+ ```
+2. Click the menu icon in the in the upper-left corner of the window to display the navigation bar.
+3. Click **Cloud Connections** to set a connection to the cloud provider where you want to deploy your template. For information about creating a connection, see [Managing connections](/docs/services/CloudAutomationManager/cam_managing_connections.html).
+4. Click **Library > Services** to create and publish a service. For more information, see [Creating and publishing a service](/docs/services/CloudAutomationManager/cam_creating_service.html).
+5. Click **Catalog** to order a service. For more information, see [Ordering a service](/docs/services/CloudAutomationManager/cam_ordering_services.html).
+6. Click **Deployed Instances > Service Instances** to view the deployed instance details and perform actions on the related resources. For more information, see [Viewing service instance details](/docs/services/CloudAutomationManager/cam_view_service_details.html).
 
 <!-- Related links section: REQUIRED.
 Related links display in the upper right of the getting started page.

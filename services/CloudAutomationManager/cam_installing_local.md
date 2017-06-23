@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-19"
+lastupdated: "2017-05-19"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -23,28 +23,28 @@ lastupdated: "2017-06-19"
 <!-- Additional task topic: OPTIONAL
 This is the template for additional task topics that are needed beyond the basic tasks in the getting started index.md.  As needed, other task topics can be included, with titles such as "Configuring x", "Administering y", "Managing z", etc. This topic is a peer of the getting started index.md in the <servicename>.ditamap. This topic can have one level of children and they also can be referenced in <servicename>.ditamap -->
 
-# Viewing template instance details
+# Installing Cloud Automation Manager Local
 <!-- for example, Uploading your data -->
-{: #cam_viewing_instance_details}
+{: #cam_installing_local}
 <!-- Provide an appropriate ID above -->
 
 <!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
-After you deploy a template, you can view the related instance details and perform actions on the related resources.
+Install Kubernetes and then install Cloud Automation Manager on top of Kubernetes Cluster. 
+
 {:shortdesc}
 
-To view the template instance details, follow these steps:
+1. [Install Kubernetes](/docs/services/CloudAutomationManager/cam_install_k8.html).
+2. [Install Cloud Automation Manager on Kubernetes cluster](/docs/services/CloudAutomationManager/cam_install_cam.html).
 
-<!-- Use ordered list markup for the step section. Include code examples as needed. -->
-1. Click **Deployed Instances**.
-2. Click the instance for which you want to see the details. The **Overview** tab of the instance is displayed.
- 
-    From the **Overview** tab, you can see the instance status, the instance information, and the related resource details.
+Before you install Kubernetes and Cloud Automation Manager, consider the following points:
 
-    For each related resource, you can access the console (if existing) and eventually perform the actions listed by clicking the menu in the **ACTIONS** column.
- 
-    **Note:** To access the KVM console in the SoftLayer Customer Portal, you must follow the procedure described in [Access the KVM Console](https://knowledgelayer.softlayer.com/procedure/access-kvm-console){:new_window}.
-    
-    From the **Log File** tab, you can view or download the instance logs and you can also access the template from which the instance was deployed. 
- 
-
+- Network File System is encrypted out of the box and no encryption is provided by Cloud Automation Manager. 
+- Firewall must be disabled for all master and worker nodes. If you enable the firewall, Cloud Automation Manager throws an error. 
+- Upgrade, update, backup, and restore are not available in this beta release.
+- Kubernetes is available along with the product, but Cloud Automation Manager does not provide support for Kubernetes. There are HTTP downloads from Kubernetes site. 
+- Kubernetes require access to internet during deployment. 
+- You must have root access for all master and worker nodes for Kubernetes deployment.
+- You must have sudo access for Cloud Automation Manager deployment. 
+- You must have a minimum of one master and two worker nodes. 
+- You must have either a local or corporate LDAP. 

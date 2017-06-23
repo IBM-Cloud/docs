@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-24"
+lastupdated: "2017-06-22"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -36,13 +36,12 @@ IBM Cloud Automation Manager is a cloud management solution for deploying cloud 
 
 <p>Blueprints are cloud resource templates with additional software configuration controls that enable automated configuration of highly individualized, fit-for-purpose application environments with no programming required.</p>-->
 
-<p>The Cloud Automation Manager service uses open source Terraform to manage and deliver cloud infrastructure as code. Cloud infrastructure delivered as code is reusable, able to be placed under version control, shared across distributed teams, and it can be used to easily replicate environments. The Cloud Automation Manager content library comes pre-populated with sample templates to help you get started quickly. Use the sample templates as is or customize them as needed.</p>
+<p>Cloud Automation Manager uses open source Terraform to manage and deliver cloud infrastructure as code. Cloud infrastructure delivered as code is reusable, able to be placed under version control, shared across distributed teams, and it can be used to easily replicate environments. The Cloud Automation Manager content library comes pre-populated with sample templates to help you get started quickly. Use the sample templates as is or customize them as needed.</p>
 
-<p>With the Cloud Automation Manager service, you can provision cloud infrastructure and accelerate application delivery into IBM Cloud, Amazon EC2, and VMware vSphere cloud environments with a single user experience.</p>
+<p>With Cloud Automation Manager, you can provision cloud infrastructure and accelerate application delivery into IBM Cloud, Amazon EC2, VMware vSphere, and VMware NSXv cloud environments with a single user experience.</p>
 
 <p>You can spend more time building applications and less time building environments when cloud infrastructure is delivered with automation. You are able to get started fast with pre-built infrastructure from the Cloud Automation Manager library.</p>
 
-<p>The Cloud Automation Manager service supports the infrastructure resources that are supported by SoftLayer. For information about the SoftLayer resources, see <a href="https://github.com/softlayer/terraform-provider-softlayer/tree/master/docs/resources" target="_blank">https://github.com/softlayer/terraform-provider-softlayer/tree/master/docs/resources</a>. The only difference between the infrastructure resources and the SoftLayer resources is the actual name of the resource type, where `softlayer` is replaced by `ibmcloud_infra`. For example the `softlayer_ssh_key` resource in SoftLayer is the `ibmcloud_infra_ssh_key` resource in the IBM Cloud infrastructure. </p>
 
 <!-- ## Concept title
 {: #cam_concept} -->

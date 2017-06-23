@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-24"
+lastupdated: "2017-06-22"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -35,6 +35,8 @@ In order for Cloud Automation Manager to access your IBM Cloud environment, you 
 
 In the **SoftLayer User Name** and **SoftLayer API Key** fields, specify respectively the **API Username** and the **Authentication Key** values specified in the **API Access Information** section in the Edit User Profile panel displayed by clicking your user name in the SoftLayer Customer Portal.
 
-<!-- For more information about creating AWS access keys, see [Creating, Modifying, and Viewing Access Keys (AWS Management Console)](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey){:new_window}. -->
+Cloud Automation Manager supports the infrastructure resources that are supported by SoftLayer. For information about the SoftLayer resources, see <a href="https://github.com/softlayer/terraform-provider-softlayer/tree/master/docs/resources" target="_blank">https://github.com/softlayer/terraform-provider-softlayer/tree/master/docs/resources</a>. The only difference between the infrastructure resources and the SoftLayer resources is the actual name of the resource type, where `softlayer` is replaced by `ibmcloud_infra`. For example the `softlayer_ssh_key` resource in SoftLayer is the `ibmcloud_infra_ssh_key` resource in the IBM Cloud infrastructure.
+
+
 
 

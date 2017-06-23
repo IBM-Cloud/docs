@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-19"
+lastupdated: "2017-06-23"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -23,28 +23,19 @@ lastupdated: "2017-06-19"
 <!-- Additional task topic: OPTIONAL
 This is the template for additional task topics that are needed beyond the basic tasks in the getting started index.md.  As needed, other task topics can be included, with titles such as "Configuring x", "Administering y", "Managing z", etc. This topic is a peer of the getting started index.md in the <servicename>.ditamap. This topic can have one level of children and they also can be referenced in <servicename>.ditamap -->
 
-# Viewing template instance details
+# Configuring an NSXv connection (Local)
 <!-- for example, Uploading your data -->
-{: #cam_viewing_instance_details}
+{: #cam_creating_nsx_connection}
 <!-- Provide an appropriate ID above -->
 
 <!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
-After you deploy a template, you can view the related instance details and perform actions on the related resources.
+In order for Cloud Automation Manager to access your NSX environment, you must provide the IP address of the NSX manager and the user credentials to access it. 
 {:shortdesc}
 
-To view the template instance details, follow these steps:
+## What to do next
 
-<!-- Use ordered list markup for the step section. Include code examples as needed. -->
-1. Click **Deployed Instances**.
-2. Click the instance for which you want to see the details. The **Overview** tab of the instance is displayed.
- 
-    From the **Overview** tab, you can see the instance status, the instance information, and the related resource details.
+Deploy an NSXv template. The NSXv templates are saved to your local directory. See [Importing starter pack templates](cam_post_install.html#cam_starter_pack_configure) for details on how to import the templates to your local directory. For information about using the templates, see [Creating a template](cam_creating_template.html#creating-a-template) and [Deploying a template](cam_deploying_local.html#deploying-a-template).
 
-    For each related resource, you can access the console (if existing) and eventually perform the actions listed by clicking the menu in the **ACTIONS** column.
- 
-    **Note:** To access the KVM console in the SoftLayer Customer Portal, you must follow the procedure described in [Access the KVM Console](https://knowledgelayer.softlayer.com/procedure/access-kvm-console){:new_window}.
-    
-    From the **Log File** tab, you can view or download the instance logs and you can also access the template from which the instance was deployed. 
- 
+For information about the available resources, see [NSXv Terraform Provider and Resource Documentation](https://github.com/IBM-tfproviders/terraform-provider-nsxv/wiki/NSXv-Terraform-Provider-and-Resource-Documentation){:new_window}. 
 

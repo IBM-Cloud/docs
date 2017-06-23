@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-19"
+lastupdated: "2017-06-22"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -23,28 +23,27 @@ lastupdated: "2017-06-19"
 <!-- Additional task topic: OPTIONAL
 This is the template for additional task topics that are needed beyond the basic tasks in the getting started index.md.  As needed, other task topics can be included, with titles such as "Configuring x", "Administering y", "Managing z", etc. This topic is a peer of the getting started index.md in the <servicename>.ditamap. This topic can have one level of children and they also can be referenced in <servicename>.ditamap -->
 
-# Viewing template instance details
+# Terminating a service instance
 <!-- for example, Uploading your data -->
-{: #cam_viewing_instance_details}
+{: #cam_delete_service_instance}
 <!-- Provide an appropriate ID above -->
 
 <!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
-After you deploy a template, you can view the related instance details and perform actions on the related resources.
+You can terminate a service instance from the deployed service instances.
 {:shortdesc}
 
-To view the template instance details, follow these steps:
+**Note:** You can terminate only instances related to the services that you ordered.
+
+To terminate a service instance, follow these steps:
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
-1. Click **Deployed Instances**.
-2. Click the instance for which you want to see the details. The **Overview** tab of the instance is displayed.
- 
-    From the **Overview** tab, you can see the instance status, the instance information, and the related resource details.
 
-    For each related resource, you can access the console (if existing) and eventually perform the actions listed by clicking the menu in the **ACTIONS** column.
- 
-    **Note:** To access the KVM console in the SoftLayer Customer Portal, you must follow the procedure described in [Access the KVM Console](https://knowledgelayer.softlayer.com/procedure/access-kvm-console){:new_window}.
+1. In the left-side navigation bar, click **Deployed Instances > Services**.
+2. In the service instance list, click the actions menu on the right of the instance that you want to delete. The action list is displayed.
+3. Click **Terminate**. 
+4. In the Terminate Service confirmation window, click **Terminate**. 
+
+    The template instance related to this service instance is destroyed. For information about deleting template instances, see [Deleting a template instance](/docs/services/CloudAutomationManager/cam_delete_instance_local.html).
     
-    From the **Log File** tab, you can view or download the instance logs and you can also access the template from which the instance was deployed. 
- 
-
+    The status of the service instance is changed to `Terminated` and the service instance is deleted from the list in 24 hours.

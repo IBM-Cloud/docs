@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-19"
+lastupdated: "2017-06-23"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -23,28 +23,19 @@ lastupdated: "2017-06-19"
 <!-- Additional task topic: OPTIONAL
 This is the template for additional task topics that are needed beyond the basic tasks in the getting started index.md.  As needed, other task topics can be included, with titles such as "Configuring x", "Administering y", "Managing z", etc. This topic is a peer of the getting started index.md in the <servicename>.ditamap. This topic can have one level of children and they also can be referenced in <servicename>.ditamap -->
 
-# Viewing template instance details
+# Uninstalling Cloud Automation Manager
 <!-- for example, Uploading your data -->
-{: #cam_viewing_instance_details}
+{: #cam_local_uninstall}
 <!-- Provide an appropriate ID above -->
 
 <!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
-After you deploy a template, you can view the related instance details and perform actions on the related resources.
+If required, you can uninstall IBM Cloud Automation Manager by using the steps described in this section.  
 {:shortdesc}
 
-To view the template instance details, follow these steps:
+1. As a sudo user, run the `CAM-delete.sh` command to delete the entire deployment from all master and worker nodes.
 
-<!-- Use ordered list markup for the step section. Include code examples as needed. -->
-1. Click **Deployed Instances**.
-2. Click the instance for which you want to see the details. The **Overview** tab of the instance is displayed.
- 
-    From the **Overview** tab, you can see the instance status, the instance information, and the related resource details.
-
-    For each related resource, you can access the console (if existing) and eventually perform the actions listed by clicking the menu in the **ACTIONS** column.
- 
-    **Note:** To access the KVM console in the SoftLayer Customer Portal, you must follow the procedure described in [Access the KVM Console](https://knowledgelayer.softlayer.com/procedure/access-kvm-console){:new_window}.
+    **Note:** The command deletes replication controller, Services, Pods, persistent volume, persistent volume clam, and namespace.
     
-    From the **Log File** tab, you can view or download the instance logs and you can also access the template from which the instance was deployed. 
- 
+2. Optionally, go to NFS server and manually remove the persistant MongoDB data and logs. The `CAM-delete.sh` command does not remove them as they may be needed for any future analysis. 
 

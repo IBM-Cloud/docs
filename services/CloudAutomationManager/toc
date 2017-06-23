@@ -19,13 +19,54 @@ Cloud Automation Manager
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    {: .topicgroup}
+    Installing (Local)
+        cam_planning.md
+        cam_install_k8_common.md
+            cam_install_k8.md
+            cam_install_k8_single.md
+        cam_install_cam.md
+        cam_post_install.md
+        cam_local_uninstall.md
+        cam_local_ports.md
+        cam_local_troubleshoot.md
+
     cam_managing_connections.md
         cam_creating_ibm_cloud_connection.md
         cam_creating_aws_connection.md
         cam_creating_vsphere_connection.md
-    cam_deploying.md
-    cam_instance_details.md
-    cam_delete_instance.md
+        cam_creating_nsx_connection.md
+
+
+    {: .topicgroup}
+    Managing templates (Bluemix)
+        cam_deploying.md
+        cam_instance_details.md
+        cam_delete_instance.md
+
+    {: .topicgroup}
+    Managing templates (Local)
+        cam_creating_template.md
+        cam_deploying_local.md
+        cam_instance_details_local.md
+        cam_delete_instance_local.md
+
+    {: .topicgroup}
+    Managing categories (Local)
+        cam_creating_category.md
+        cam_rearraging_category.md
+
+    {: .topicgroup}
+    Managing services (Local)
+        cam_creating_service.md
+        cam_editing_service_file.md
+
+    cam_ordering_services.md
+
+    {: .topicgroup}
+    Managing service instances (Local)
+        cam_view_service_details.md
+        cam_delete_service_instance.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

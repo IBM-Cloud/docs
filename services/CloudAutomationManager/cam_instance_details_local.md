@@ -36,7 +36,7 @@ After you deploy a template, you can view the related instance details and perfo
 To view the template instance details, follow these steps:
 
 <!-- Use ordered list markup for the step section. Include code examples as needed. -->
-1. Click **Deployed Instances**.
+1. In the left-side navigation bar, click **Deployed Instances > Templates**.
 2. Click the instance for which you want to see the details. The **Overview** tab of the instance is displayed.
  
     From the **Overview** tab, you can see the instance status, the instance information, and the related resource details.

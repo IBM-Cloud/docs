@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-24"
+lastupdated: "2017-06-23"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -30,17 +30,28 @@ This is the template for additional task topics that are needed beyond the basic
 
 <!-- The short description section should include a sentence describing why this task is needed. For search engine optimization, include the service long name and "Bluemix". For example: -->
 
-In order for Cloud Automation Manager to access your vSphere environment, you must provide the IP address or host name of the vCenter server and the user credentials to access it. 
+In order for Cloud Automation Manager to access your vSphere environment, you must provide the IP address or host name of the vCenter server and the user credentials to access it. Cloud Automation Manager supports vCenter version 6.0 or later.
 {:shortdesc}
 
-Because of current product limitations, note that:
+[For Bluemix version only:] Because of current product limitations, note that:
 - The IP address of the vCenter server must be a public IP address and not the internal IP address behind your VPN.
 - When you create a template to be deployed to a vSphere cloud provider, ensure to specify the following parameter in the `provider` section:
- ```
- provider "vsphere" {
-   allow_unverified_ssl = true
- }
- ```
 
-For more information about vSphere, see the [VMware vSphere 6.5 Documentation Center](https://pubs.vmware.com/vsphere-65/index.jsp){:new_window}.
+    ```
+    provider "vsphere" {
+      allow_unverified_ssl = true
+    }
+    ```
+
+For more information about vSphere, see the [VMware vSphere 6.0 Documentation Center](https://pubs.vmware.com/vsphere-60/index.jsp){:new_window}.
+
+## What to do next
+
+Deploy a vSphere template: 
+
+* [For Bluemix version:] See [Deploying a template](cam_deploying.html#deploying-a-template) for details.
+
+* [For Local version:] The vSphere templates are saved to your local directory. See [Importing starter pack templates](cam_post_install.html#cam_starter_pack_configure) for details on how to import the templates to your local directory. To use the templates, see [Creating a template](cam_creating_template.html#creating-a-template) and [Deploying a template](cam_deploying_local.html#deploying-a-template). 
+
+For information about the available resources, see [VMware vSphere Provider and Resource Documentation](https://github.com/IBM-tfproviders/terraform-provider-vsphere/wiki/VMware-vSphere-Provider-and-Resource-Documentation).
 
