@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-23"
+lastupdated: "2017-06-26"
 
 ---
 
@@ -155,7 +155,7 @@ Where:
 **Important:**
 - The client ID must start with an uppercase **A** character to be correctly designated as a scalable application by {{site.data.keyword.iot_short_notm}}.
 - Other clients that are part of the scalable application must use the same client ID.
-- The clean session value must be set to false (0) durable subscriptions.
+- The clean session value must be set to false (0) for durable subscriptions, or to true (1) for non-durable subscriptions.
 
 ### Mixed-durability shared subscriptions
 {: #shared_sub_mixed}
