@@ -16,6 +16,7 @@ Managing identity and access
     {: .topicgroup}
     API keys
         apikeys.md
+        token_service_examples.md
     {: .navgroup-end}
 
     
