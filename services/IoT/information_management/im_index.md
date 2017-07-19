@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-04-25"
+lastupdated: "2017-07-11"
 
 ---
 
@@ -15,10 +15,15 @@ lastupdated: "2017-04-25"
 # Using interfaces to map device data (Beta)
 {: #im_index}
 
-Application interfaces extend the [device type](#resources) concept to better control the data that flows through {{site.data.keyword.iot_short_notm}} and to provide a device-agnostic view of IoT data.
-{:shortdesc}
+******************************************************************************************************************************************
+**Important:** Please note that the information management Beta is now closed as we work towards the delivery of an updated and generally available version of this functionality.
 
-**Important:** The interface mapping feature is a beta feature. Ongoing beta updates as well as the final release might include changes that are incompatible with the current version. It is strongly recommended that beta features are not used in production applications until the final release. To receive additional information and provide feedback on this beta, you can [register for the Information Management Beta program ![External link icon](../../../icons/launch-glyph.svg)](https://www.ibm.com/software/support/trial/cst/forms/nomination.wss?id=7050){:new_window}.
+The device state functionality of this Beta is now generally available as part of the Data Management feature.  For more information, see [Introduction to data management](../GA_information_management/ga_im_device_twin.html). Please note that there are changes to the HTTP REST APIs and the configuration steps.
+
+The device aggregation functionality of this Beta is not part of the current release but will be generally available soon in a future update.
+******************************************************************************************************************************************
+
+Application interfaces extend the [device type](#resources) concept to better control the data that flows through {{site.data.keyword.iot_short_notm}} and to provide a device-agnostic view of IoT data.
 
 
 ## Overview
@@ -36,9 +41,6 @@ By using application interfaces, you can:
 
 Some common use cases for application interfaces include:
 - Providing your application developers consistent interfaces to access event-driven device data in a REST-like manner.
-- Normalizing data from devices of different makes or models that publish data in different formats.
-- Combining event data from several different device types to model any given IoT thing.
-- Modifying and converting data formats to fit your application model.  
 
 For interfaces API documentation (beta), see [{{site.data.keyword.iot_short_notm}} HTTP REST API  ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002-beta/info-mgmt-beta.html){: new_window}.   
 
