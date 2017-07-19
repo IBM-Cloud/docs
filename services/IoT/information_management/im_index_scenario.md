@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-05-15"
+lastupdated: "2017-07-11"
 
 ---
 
@@ -15,6 +15,14 @@ lastupdated: "2017-05-15"
 
 # Application interface scenario 1 (Beta)
 {: #scenario}
+
+******************************************************************************************************************************************
+**Important:** Please note that the information management Beta is now closed as we work towards the delivery of an updated and generally available version of this functionality.
+
+The device state functionality of this Beta is now generally available as part of the Data Management feature.  For more information, see [Introduction to data management](../GA_information_management/ga_im_device_twin.html). Please note that there are changes to the HTTP REST APIs and the configuration steps.
+
+The device aggregation functionality of this Beta is not part of the current release but will be generally available soon in a future update.
+******************************************************************************************************************************************
 
 Use the following information to create a scenario in which two temperature sensors publish events to {{site.data.keyword.iot_short_notm}}. One sensor measures temperature in degrees Celsius. The other sensor measures temperature in degrees Fahrenheit. These readings are mapped to a single temperature reading that is in degrees Celsius. When a new temperature reading is published by these devices, the value of the property associated with the device state is changed.
 
@@ -32,17 +40,6 @@ One device is called *TemperatureSensor1*. This device publishes temperature eve
   “t” : 34.5
 }
 ```
-
-**Note:** The event identifier is *tevt*. This identifier is required when you add a temperature event of this type to the physical interface and when you define mappings to map a property associated with an inbound event of this type to a property in your application interface. In this scenario, the property defined in the application interface is called **temperature**.
-
-The other device is called *TemperatureSensor2*. This device publishes temperature events that are measured in degrees Fahrenheit. The temperature event is published on the topic `iot-2/evt/tempevt/fmt/json` and has the following example payload:
-```
-{
-  “temp” : 72.55
-}
-```
-
-**Note:** The event identifier is *tempevt*. This identifier is required when you add a temperature event of this type to the physical interface and when you define mappings to map a property associated with an inbound event of this type to a property in your application interface. In this scenario, the property defined in the application interface is called **temperature**.
 
 An application interface is also configured. This application interface represents the state for devices of this type in the following structure:
 ```
