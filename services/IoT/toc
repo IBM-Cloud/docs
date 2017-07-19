@@ -67,6 +67,13 @@ Internet of Things Platform
         reference/security/connect_devices_apps_gw.md
 
     {: .topicgroup}
+    Managing data in Watson IoT Platform
+        GA_information_management/ga_im_device_twin.md
+        GA_information_management/ga_im_definitions.md
+        GA_information_management/ga_im_example.md
+        GA_information_management/ga_im_index_scenario.md
+        
+    {: .topicgroup}
     Managing Watson IoT Platform
         reference/extensions/index.md
         cloudant_connector.md
