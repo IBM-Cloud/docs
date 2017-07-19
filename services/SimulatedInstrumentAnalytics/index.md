@@ -34,7 +34,7 @@ You must install cURL before you can use the service.
 ```
 {
   "accessToken": "<api-key>",
-  "uri": "https://fss-analytics.stage1.mybluemix.net/"
+  "uri": "<service-url>"
 }
 ```
 
