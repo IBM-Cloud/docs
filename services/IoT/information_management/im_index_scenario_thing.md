@@ -2,7 +2,7 @@
 
 copyright:
 years: 2016, 2017
-lastupdated: "2017-05-15"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -14,6 +14,14 @@ lastupdated: "2017-05-15"
 
 # Application interface scenario 2 (Beta)
 {: #scenario}
+
+******************************************************************************************************************************************
+**Important:** Please note that the information management Beta is now closed as we work towards the delivery of an updated and generally available version of this functionality.
+
+The device state functionality of this Beta is now generally available as part of the Data Management feature.  For more information, see [Introduction to data management](../GA_information_management/ga_im_device_twin.html). Please note that there are changes to the HTTP REST APIs and the configuration steps.
+
+The device aggregation functionality of this Beta is not part of the current release but will be generally available soon in a future update.
+******************************************************************************************************************************************
 
 The application interface is used to remove the requirement for the application to understand how a device or thing is configured. For example, you might measure the temperature of a room by using a single device, or you might calculate the room temperature by taking the average reading of a number of devices. The application requires information on the state of a room or rooms, one component of which is a temperature property. It does not matter how the temperature value that is received by the application is calculated.
 
@@ -29,15 +37,6 @@ This scenario builds on the previous [Application interface scenario 1](im_index
 Before you continue, make sure that you:
 - Use the same {{site.data.keyword.iot_short_notm}} organization instance and an API key or token for that organization. For more information about API keys and tokens, see [HTTP REST API for applications](../applications/api.html#authentication).
 - Created two application interfaces, one for a temperature sensor and one for a humidity sensor. For information about configuring an application interface for a temperature sensor, see [Device type application interface scenario](../information_management/im_index_scenario).
-
-## About this task
-{: #about}
-
-In {{site.data.keyword.iot_short_notm}}, a thing can consist of a number of devices and things. A thing type defines how instances of a thing are composed. An application interface can be
-associated with a thing type. This association defines the structure of the state that is generated for a thing type instance. Mappings are used to define how properties from the aggregated
-devices and things are mapped to properties on a thing state.
-
-In this scenario, two temperature sensors and two humidity sensors publish events to {{site.data.keyword.iot_short_notm}}. One temperature sensor and one humidity sensor are in meeting room 1 of an office block. The other temperature and humidity sensor are in meeting room 2.
 
 ![Mapping between temperature and humidity thing and an application on {{site.data.keyword.iot_short_notm}}.](images/Information Management Thing example scenario.svg "Mapping between multiple environmental sensors in one room and an application on {{site.data.keyword.iot_short_notm}}")
 
