@@ -3,7 +3,7 @@
 copyright:
 
 years: 2017
-lastupdated: "2017-05-15"
+lastupdated: "2017-07-19"
 
 ---
 
@@ -42,9 +42,9 @@ API                     | Use to ...
 ------------- | -------------
 [Organization Administration ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/orgAdmin.html){: new_window} | Configure an organization (including creating and deleting devices), check usage, service status and diagnose device connection problems.
 [Security ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/security.html){: new_window} | Manage user invitations and authentication, and authorization of users, API keys and devices.
-[Information Management ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  Access device event data, as well as get and update device location and obtain weather information for that location. **Note:** Weather information is dependent on The Weather Company data integration.
+[Information Management ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/info-mgmt.html){: new_window} |  Access device event data, as well as get and update device location and obtain weather information for that location. 
+[Data Management  ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/state-mgmt.html){: new_window}   |   Organize and integrate data coming in to and going out of {{site.data.keyword.iot_short_notm}}.
 [Device Management ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/deviceMgmt.html){: new_window} | Interact with managed devices by using the device management protocol.
-[Messaging ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/http-messaging.html){: new_window}   | Publish events and send commands by using HTTP.
 [Risk Management ![External link icon](../../../icons/launch-glyph.svg)](https://docs.internetofthings.ibmcloud.com/apis/swagger/v0002/riskmgmt.html){: new_window}   | Manage the Risk Management policies and reports.
 
 ## Extension HTTP APIs
