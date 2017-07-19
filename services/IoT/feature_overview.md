@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-01-12"
+lastupdated: "2017-06-29"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-01-12"
 The {{site.data.keyword.iot_full}} is built on the following key areas:
 
   1. Connect - Connect devices and develop applications.
-  2. Information Management - Store and review device data and integrate your {{site.data.keyword.iot_short_notm}} with other services.
+  2. Information Management - Store, normalize, transform, and review device data and integrate your {{site.data.keyword.iot_short_notm}} with other services.
   3. Analytics - Visualize real-time device data by using the {{site.data.keyword.iot_short_notm}} dashboard.
   4. Risk Management - Configure secure connectivity and architecture with access control for users and applications.
 
@@ -41,7 +41,6 @@ Extensions and service integration enable both external services and user-define
 
 ---
 
-## Information Management
 {: #information_management}
 
 {{site.data.keyword.iot_short_notm}} Information Management controls the data that is sent by devices after it reaches your {{site.data.keyword.iot_short_notm}} service. Information management includes data storage and transformation.
