@@ -174,7 +174,7 @@ You can use the [List models ![External link icon](../../icons/launch-glyph.svg 
 ## Next steps
 {: #next-steps}
 
-- Learn how to [customize ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/doc/language-translator/customizing.html) {{site.data.keyword.languagetranslatorshort}} to work for your use case{: new_window}.
+- Learn how to [customize ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/doc/language-translator/customizing.html){: new_window} {{site.data.keyword.languagetranslatorshort}} to work for your use case.
 - Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/natural-language-classifier/api/){:new_window}.
 - Interact with the API in the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/natural-language-classifier-v1){:new_window}.
 - Look at the [Node.js sample app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/language-translator-nodejs){:new_window} for an example web app.
