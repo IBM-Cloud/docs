@@ -5,7 +5,7 @@
 copyright:
 
   years: 2015，2017
-lastupdated: "2017-01-20"  
+lastupdated: "2017-08-09"  
  
 
 ---
@@ -28,6 +28,7 @@ In {{site.data.keyword.Bluemix_notm}}, you can automatically manage your applica
   * [Manage {{site.data.keyword.autoscaling}} service through RESTful API](#RESTAPI)
   * [Manage {{site.data.keyword.autoscaling}} service through {{site.data.keyword.autoscaling}} CLI](#CLI)
   * [Policy fields for the {{site.data.keyword.autoscaling}} service](#policy_fields)
+  * [Supported metric type for the {{site.data.keyword.autoscaling}} service](#metric_types)
   * [Error messages](#err_msg)
 
 ## Using the {{site.data.keyword.autoscaling}} service in {{site.data.keyword.Bluemix_notm}}
@@ -35,10 +36,11 @@ In {{site.data.keyword.Bluemix_notm}}, you can automatically manage your applica
 
 To use the {{site.data.keyword.autoscaling}} service, complete the following steps:
 
-1. On {{site.data.keyword.Bluemix_notm}}  Dashboard, click *Add a service or API*, and then select the {{site.data.keyword.autoscaling}} service from the DevOps section in the service catalog. A new window is displayed to present an overview of the {{site.data.keyword.autoscaling}} service.
-2. Select the application that you want to bind the {{site.data.keyword.autoscaling}} service to, and click *Create*. <br/>
-*Remember:* You can bind only ONE {{site.data.keyword.autoscaling}} service to an application. If the application is already bound with another {{site.data.keyword.autoscaling}} service, do not select the application in this step. Otherwise, you will get the CWSCV2004E error.<br/>The Restage Application window is displayed.
-3. In the Restage Application window, click *Restage* to restage your application before you use the new {{site.data.keyword.autoscaling}} service that you just added. <br/><ul><li>For Liberty application, the {{site.data.keyword.autoscaling}} is auto-configured and ready for use after the application restage.</li> <li>For Node.js or Swift applications, you must update your application code to enable the {{site.data.keyword.autoscaling}} service before pushing the application to {{site.data.keyword.Bluemix_notm}}. See [Configuring Node.js apps with the {{site.data.keyword.autoscaling}} service](index.html#node-asagent) or [Configuring Swift apps with the {{site.data.keyword.autoscaling}} service](index.html#swift-asagent) for more details.</ul><br/> 
+1. On {{site.data.keyword.Bluemix_notm}} Dashboard, click *Add a service or API*, and then select the {{site.data.keyword.autoscaling}} service from the `DevOps` section in the service catalog. A new window is displayed to present an overview of the {{site.data.keyword.autoscaling}} service.
+2. Select the application that you want to bind the {{site.data.keyword.autoscaling}} service to, and click *Create*.  Then the Restage Application window is displayed.<br/>
+*Note:*  
+You can bind **only ONE** {{site.data.keyword.autoscaling}} service to an application. If the application is already bound with another {{site.data.keyword.autoscaling}} service, do not select the application in this step. Otherwise, you will get the CWSCV2004E error.
+3. In the Restage Application window, click *Restage* to restage your application before you use the new {{site.data.keyword.autoscaling}} service that you just added. <br/><ul><li> For Liberty application, the {{site.data.keyword.autoscaling}} is auto-configured and ready for use after the application restage.</li> <li>For Node.js or Swift applications, you must update your application code to enable the {{site.data.keyword.autoscaling}} service before pushing the application to {{site.data.keyword.Bluemix_notm}}. Refer to <ul><li> [Configuring Node.js apps with the {{site.data.keyword.autoscaling}} service](index.html#node-asagent) </li> <li>[Configuring Swift apps with the {{site.data.keyword.autoscaling}} service](index.html#swift-asagent)</li></ul></ul> 
 After restaging application is completed, you can start to configure the {{site.data.keyword.autoscaling}} service for your application.
 4. To configure the {{site.data.keyword.autoscaling}} for an application, in the {{site.data.keyword.Bluemix_notm}} user interface, click your application that the {{site.data.keyword.autoscaling}} service is bound to.
 5. In the services section on the Dashboard, click the *Auto-Scaling* icon.
@@ -47,13 +49,18 @@ After restaging application is completed, you can start to configure the {{site.
 Now you can configure the {{site.data.keyword.autoscaling}} policy, see the metric statistics, or view the scaling history for the application.
 <dl>
 <dt>Policy Configuration</dt>
-<dd>Use this section to create or edit the scaling rules to specify the conditions in which certain scaling activities are to be triggered.<ul>
+<dd>
+Use this section to create or edit the scaling rules to specify the conditions in which certain scaling activities are to be triggered.
+<ul>
 <li> For Liberty for Java™ applications, you can define scaling rules for Heap, Memory, Response Time, and Throughput.
 <li> For Node.js applications, you can define scaling rules for Heap, Memory, and Throughput.
 <li> For Swift applications, you can define scaling rules for Memory, Throughput and Response Time.
-<li> For Ruby applications, you can define scaling rules for Memory.</ul>
-*Note:* You can define multiple scaling rules for more than one metric type. However, the {{site.data.keyword.autoscaling}} service does not detect conflicts between scaling policies. When you define the scaling policy, you must ensure that multiple scaling rules do not conflict with one another. Otherwise, you might see the total instance number fluctuates because the application scales in 1 minute and scales out the next.<br/><br/>
+<li> For Other applications, you can define scaling rules for Memory.
+<br/> *Note:* You can define multiple scaling rules for more than one metric type. However, the {{site.data.keyword.autoscaling}} service does not detect conflicts between scaling policies. When you define the scaling policy, you must ensure that multiple scaling rules do not conflict with one another. Otherwise, you might see the total instance number fluctuates because the application scales in 1 minute and scales out the next.
+</ul>
+
 If the workload of your application changes dramatically during the peak time and the spare time, you can create a scaling schedule to handle the different scaling requirements for different time periods. Use the Minimum Instance Count parameter that is specified in a schedule to define the baseline of the application instance number, while dynamic scaling rules still apply to the schedule to trigger the scaling in and scaling out actions.</dd>
+
 <dt>Metric Statistics</dt>
 <dd>Displays the metric statistics for the instances of your application. You can see the average statistics and select specific instance to see its statistic.</dd>
 <dt>Scaling History</dt>
@@ -61,6 +68,7 @@ If the workload of your application changes dramatically during the peak time an
 <li> Past Week: Displays the scaling history for the past week.
 <li> Past Month: Displays the scaling history for the past month.
 <li> Custom Range: You can set the time period.</ul>
+
 *Note:* You can filter the history record by selecting Scaling Status or Scaling In/Out.</dd>
 </dl>
 
@@ -70,20 +78,21 @@ If the workload of your application changes dramatically during the peak time an
 
 To enable the {{site.data.keyword.autoscaling}} service with your Node.js apps, besides service provision and binding steps, you need to complete the following steps as well before pushing the app to {{site.data.keyword.Bluemix_notm}}.
 1. Enable `blumix-autoscaling-agent` in your application.
-  + Update the package.json to create a dependency entry for `blumix-autoscaling-agent`. For example:<br/> 
+  + Update the package.json to create a dependency entry for *blumix-autoscaling-agent*. For example:<br/> 
   `"dependencies": {
     "bluemix-autoscaling-agent": "*"
-  }`.<br/>
-2. Start `blumix-autoscaling-agent` with your application.
-There are two ways to start the agent.
-  + The first way is to update the package.json file, adding `"start": "node -r bluemix-autoscaling-agent  app.js"` to the `scripts` section. For example:<br/>
+  }`
+2. Start *blumix-autoscaling-agent* with your application.
+There are two ways to start the agent. Either works. 
+  + The first way is to update the package.json file by adding `"start": "node -r bluemix-autoscaling-agent  app.js"` to *script* section. For example:<br/>
   ```
   "scripts": {
     "start": "node -r bluemix-autoscaling-agent app.js"
   }
   ```
-  + The second way is to update your main file to add the agent declaration `var as_agent = require('bluemix-autoscaling-agent');`. In this way, please note that you must call `require('bluemix-autoscaling-agent');` before the require statements for any npm modules you want to monitor. `bluemix-autoscaling-agent` must be initialized first so that it can instrument modules for monitoring as they are loaded.<br/>
-  The following code snippet shows a complete entry js file with the auto-scaling agent declaration.<br/>
+  + The second way is to update your main file to add the agent declaration `var as_agent = require('bluemix-autoscaling-agent');` <br/>
+  *Note:* `bluemix-autoscaling-agent` must be initialized prior to the npm modules you want to monitor, so you must call `require('bluemix-autoscaling-agent');` **prior to** the other `require` statements. <br/>
+  The following code snippet shows a complete entry js file with the auto-scaling agent declaration.<br/> 
   ```
   var agent = require('bluemix-autoscaling-agent');
   var http = require('http');
@@ -93,11 +102,16 @@ There are two ways to start the agent.
     }).listen(process.env.PORT || 3000);
   console.log('App is listening on port 3000');
   ```
-You can choose either of the two ways.<br/>
 
-3. (Optional) Set heap limit within the `scripts` section based on the memory that you allocate for your app, for example `"start": "node --max-old-space-size=600 app.js"`. .<br/>*Note:* Set a value for `max-old-space-size` if you want to trigger scaling based on heap usage. If the value is not set when you start your application, the default Node.js heap limit 1.4GB is used regardless how much memory your app is allocated, which might lead to improper auto-scaling decisions.<br/>
+3. (Optional) Set heap limit if you want to trigger scaling based on heap usage. Update package.json to define `max-old-space-size` based on the memory that you allocate for your app. <br/> For example: 
+  `
+  "scripts": {
+    "start": "node --max-old-space-size=600 app.js"
+  }
+  `
+<br/> If the value is not set when you start your application, the default Node.js heap limit 1.4GB is used as the maximum heap size regardless how much memory your app is allocated, which might lead to improper auto-scaling decisions.<br/>
 
-  A full sample of package.json:
+A full sample of package.json:
   ```
   {
     "name": "Your-App",
@@ -219,59 +233,22 @@ import SwiftMetricsBluemix
 
 {{site.data.keyword.autoscaling}} RESTful API provides an alternative way to manage {{site.data.keyword.autoscaling}} service beside the Bluemix UI, and it also supports the scaling data retrieval and analysis. It provides similar functionalities, such as Creating a Policy and Getting the Scaling History, as in the {{site.data.keyword.Bluemix_notm}} UI with API .
 
-To use the {{site.data.keyword.autoscaling}} RESTful API to manage the {{site.data.keyword.autoscaling}} service, complete the following prerequisites: Bind the {{site.data.keyword.autoscaling}} service with your application as specified in previous section, acquire the `AccessToken`, the URL of {{site.data.keyword.autoscaling}} API server and the `app_id` of the application that you want to scale in or out:
+Before using the {{site.data.keyword.autoscaling}} RESTful API to manage the {{site.data.keyword.autoscaling}} service, please complete below prerequisites with this guide:
+* Bind the {{site.data.keyword.autoscaling}} service with your application as described in previous section.
+* Acquire the `AccessToken`
+<br/>The user must provide a valid `AccessToken` obtained through CloudFoundry UAA procedure when invoke {{site.data.keyword.autoscaling}} service RESTful API. After a successful login with command line, the `AccessToken` can be obtained by either approach:
+  <ul>
+    <li> Command `cf oauth-token`</li>
+  <li>Grab the `AccessToken` field from file `~/.cf/config.json` </li>
+    </ul>
+   *Note:*  The `AccessToken` may expired after a period. If you get a 401 Unauthorized response for REST API request again, you need to repeat above steps to refresh `AccessToken`. 
+  
+* Get endpoint of {{site.data.keyword.autoscaling}} API server <br/>
 
-1. For security purpose, in each request header of {{site.data.keyword.autoscaling}} RESTful API, a proper `AccessToken` obtained through CloudFoundry UAA procedure must be provided in the `Authorization` header to indicate required validation of the request. Failing to comply with this `AccessToken` results in a 401 Unauthorized response. There are two ways you can get this `AccessToken` after you install the Cloud Foundry command line tool and logged into the {{site.data.keyword.Bluemix_notm}}:<ul><li>you can obtain this token through `cf oauth-token` command:
+You can obtain the endpoint of {{site.data.keyword.autoscaling}} API server by checking the environment variable of `VCAP_SERVICE`  -> {{site.data.keyword.autoscaling}} service  ->  `api_url` 
 ```
-   > cf oauth-token
-   Getting OAuth token...
-   OK
-
-     bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNjIzMGE1YS1mNzE3LTQ0YjItOWM3Yi1kNGJkYThhZGU0NjkiLCJzdWIiOiI4OGViNjM2My1hMjkzLTRlZTItYWQ1MS0yOGVkMTZmZjMwNzQiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiLCJvcGVuaWQiXSwiY2xpZW50X2lkIjoiY2YiLCJjaWQiOiJjZiIsImF6cCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6Ijg4ZWI2MzYzLWEyOTMtNGVlMi1hZDUxLTI4ZWQxNmZmMzA3NCIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Imtqa29uZ2tqQGNuLmlibS5jb20iLCJlbWFpbCI6Imtqa29uZ2tqQGNuLmlibS5jb20iLCJyZXZfc2lnIjoiZDhlNGY0MDIiLCJpYXQiOjE0NTU2MDc1NDUsImV4cCI6MTQ1NTY1MDc0NSwiaXNzIjoiaHR0cHM6Ly91YWEuc3RhZ2UxLm5nLmJsdWVtaXgubmV0L29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCIsImNmIiwib3BlbmlkIl19.nrzsEAZmGXNOWjX8r5Xf7U8Hj5-CE1rtHg8_C-jZKSk
-```
- The returned long string begins with “bearer” is the AccessToken that can be used in the request of {{site.data.keyword.autoscaling}} RESTful API. If you encounter errors such as “Command not found”, you can update your Cloud Foundry command line tool to a newer version.</li><li>You can also find this AccessToken in the home directory. After you logged into {{site.data.keyword.Bluemix_notm}} from the command line interface, a `.cf` folder is created in your home folder, where you can find a JSON file name `config.json`  that contains a list of the environment information of your current logging, such as organization, space, authentication endpoint and version. You can locate an entry `AccessToken` in the file as the following : 
-```
-   >cat ~/.cf/config.json
- {
-  "ConfigVersion": 3,
-  "Target": "https://api.ng.bluemix.net",
-  "ApiVersion": "2.40.0",
-  "AuthorizationEndpoint": "https://login.ng.bluemix.net/UAALoginServerWAR",
-  "LoggregatorEndPoint": "wss://loggregator.ng.bluemix.net:443",
-  "DopplerEndPoint": "wss://doppler.ng.bluemix.net:443",
-  "UaaEndpoint": "https://uaa.ng.bluemix.net",
-  "RoutingApiEndpoint": "https://api.ng.bluemix.net/routing",
-  "AccessToken": "bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNjIzMGE1YS1mNzE3LTQ0YjItOWM3Yi1kNGJkYThhZGU0NjkiLCJzdWIiOiI4OGViNjM2My1hMjkzLTRlZTItYWQ1MS0yOGVkMTZmZjMwNzQiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiLCJvcGVuaWQiXSwiY2xpZW50X2lkIjoiY2YiLCJjaWQiOiJjZiIsImF6cCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6Ijg4ZWI2MzYzLWEyOTMtNGVlMi1hZDUxLTI4ZWQxNmZmMzA3NCIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6Imtqa29uZ2tqQGNuLmlibS5jb20iLCJlbWFpbCI6Imtqa29uZ2tqQGNuLmlibS5jb20iLCJyZXZfc2lnIjoiZDhlNGY0MDIiLCJpYXQiOjE0NTU2MDc1NDUsImV4cCI6MTQ1NTY1MDc0NSwiaXNzIjoiaHR0cHM6Ly91YWEuc3RhZ2UxLm5nLmJsdWVtaXgubmV0L29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCIsImNmIiwib3BlbmlkIl19.nrzsEAZmGXNOWjX8r5Xf7U8Hj5-CE1rtHg8_C-jZKSk",
-  "SSHOAuthClient": "ssh-proxy",
- .....
- }
-```
-The `AccessToken` in the `config.json` only valid for a period of time. If you get a 401 Unauthorized response for REST API request, you might have to login in again from the command line interface to refresh the file and get the new `AcessToken`. </li></ul>
- 
-2.  You can obtain the URL of {{site.data.keyword.autoscaling}} API server by checking the `VCAP_SERVICE` environment variable after you bind your application with the {{site.data.keyword.autoscaling}} service. In the `VCAP_SERVICE`, you can find the {{site.data.keyword.autoscaling}} service section, and the `api_url` is the URL of API server that your application is bound with. You need this API server URL to connect to {{site.data.keyword.autoscaling}} RESTful API service:
-```
-    {
-      "Auto-Scaling": [
-      {
-         "name": "Auto-Scaling-iw",
-         "label": "Auto-Scaling",
-         "plan": "free",
-         "credentials": {
-            "agentUsername": "agent",
-            "api_url": "https://ScalingAPI.ng.bluemix.net",
-            "service_id": "3f42b7ff-d939-4ff2-9a55-cb09cef9ab9e",
-            "app_id": "2287f442-a7f3-4799-8919-d3908c386fa3",
-            "url": "https://Scaling3.ng.bluemix.net",
-            "agentPassword": "0cddf80b-37e1-4cfd-b648-83a6c8wee69f"
-         }
-      }
-     ]
-   }
-``` 
-Note that this url can also be found through the `cf env APPNAME` command:
-```
-   > cf env Hello
-   Getting env variables for app Hello in org OE_Runtimes_SVT / space RT_SVT as Alice...
+   > cf env "Your-App"
+   Getting env variables for app Your-App in org Your-Org / space Your-Space as ...
    OK
 
    System-Provided:
@@ -280,69 +257,54 @@ Note that this url can also be found through the `cf env APPNAME` command:
      "Auto-Scaling": [
      {
       "credentials": {
-       "agentPassword": "b626b064-7d26-417a-b954-41c6d3cb5200",
+       "agentPassword": "....",
        "agentUsername": "agent",
        "api_url": "https://ScalingAPI.ng.bluemix.net",
        "app_id": "aa8d19b6-eceb-4b6e-b034-926a87e98a51",
        "service_id": "8f482f78-58d8-493c-829b-635e4cbfd817",
        "url": "https://Scaling.ng.bluemix.net"
       },
-      "label": "Auto-Scaling",
-      "name": "ScalingService",
-      "plan": "free",
-      "tags": [
-       "bluemix_extensions",
-       "ibm_created",
-       "dev_ops"
-      ]
+    ...
      }
    ...
 ```  
-3.  You can get the `app_id` from the `VCAP_SERVICES` enviroment variable, or just run the `cf app APPNAME --guid` command:
 
+* Get the `app_id` of the application that you want to scale in or out with 
+ the `cf app APPNAME --guid` command:
 ```
-   > cf app Hello --guid
+   > cf app Your-App --guid
    aa8d19b6-eceb-4b6e-b034-926a87e98a51
-   > 
 ```
+{{site.data.keyword.autoscaling}} service RESTful API document explain the details API definition:  [Rest API of IBM {{site.data.keyword.autoscaling}} for {{site.data.keyword.Bluemix_notm}}](https://new-console.stage1.ng.bluemix.net/apidocs/48){:new_window}.
 
-With all the above prerequisites, you can now make REST API request by using the RestClient add-on in browser or just through some tool like `curl`. 
-
-With REST Client Add-on, like those for Firefox or Chrome, you can trigger REST request to {{site.data.keyword.autoscaling}} API server to execute your command. You just supply these add-on with the URL of the REST API, method and headers that are required by this REST API, and the parameters in the body part. For more details about each API, see [Rest API of IBM {{site.data.keyword.autoscaling}} for {{site.data.keyword.Bluemix_notm}}](https://new-console.ng.bluemix.net/apidocs/48){:new_window}.
-
-With tools like `curl`, you can manage the {{site.data.keyword.autoscaling}} service within a script as following:    
+A sample script to invoke {{site.data.keyword.autoscaling}} service RESTful API with *curl*:
 ```
-    cf login -a http://api.ng.bluemix.net -u Alice -p pa55w0rd --skip-ssl-validation
-    accessToken=$(cf oauth-token | grep bearer | sed -e s/bearer/Bearer/g)
-    API_url=$(cf env Hello | grep "api_url" | awk '{print $2}' | cut -d "," -f1 | cut -d "\"" -f2 )
-    policyJson="./policy.json"
-    appId=$(cf app Hello --guid)
+cf login -a http://api.ng.bluemix.net -u Your-UserName -p Your-Password --skip-ssl-validation
 
-    echo  -e "\nCreate scaling policy using API :"
-    createPolicyUrl="${API_url}/v1/autoscaler/apps/${appId}/policy"
-    curl_cmd="curl $createPolicyUrl -X 'PUT' -H 'Content-Type:application/json'  -H 'Accept:application/json' -H 'Authorization:$accessToken' --data-binary @${policyJson} -s -o response.txt -w '%{http_code}\n'"
-    eval status_code=$($curl_cmd)
-    if [[ $status_code -eq 201 ]]; then
-         echo "looks good"
-    else
-         echo "error happens"
-         exit 255
-    fi
+accessToken=$(cf oauth-token)
+API_url=$(cf env Your-App | grep "api_url" | awk '{print $2}' | sed -e "s/[\",]//g")
+appId=$(cf app Your-App --guid)
+policyJson="./policy.json"
+
+echo "Create scaling policy using API :"
+createPolicyUrl="${API_url}/v1/autoscaler/apps/${appId}/policy"
+    
+curl $createPolicyUrl -X 'PUT' -H 'Content-Type:application/json' -H 'Accept:application/json'  -H "Authorization:$accessToken" --data-binary @${policyJson} 
 ```
 
 ## Manage {{site.data.keyword.autoscaling}} service through {{site.data.keyword.autoscaling}} CLI 
 {: #CLI}
 
-The {{site.data.keyword.autoscaling}} CLI provides similar functionality as {{site.data.keyword.autoscaling}} RESTful API but in a more friendly way to configure {{site.data.keyword.autoscaling}} service. With {{site.data.keyword.autoscaling}} CLI you do not have to  care about the details in {{site.data.keyword.autoscaling}} RESTful API, such as `AccessToken` and URL of API server. All you need is just following the step by step directions that the CLI provides. For more details about how to install and use {{site.data.keyword.autoscaling}} CLI, see [{{site.data.keyword.autoscaling}} CLI](../../cli/plugins/auto-scaling/index.html){:new_window}
-
-
+The {{site.data.keyword.autoscaling}} CLI provides similar functionality as {{site.data.keyword.autoscaling}} RESTful API but in a more friendly way to configure {{site.data.keyword.autoscaling}} service. <br/>
+For more details about how to install and use {{site.data.keyword.autoscaling}} CLI, see [{{site.data.keyword.autoscaling}} CLI](../../cli/plugins/auto-scaling/index.html){:new_window}
 
 ## Policy fields for the {{site.data.keyword.autoscaling}} service
 {: #policy_fields}
 
 | Field name  | Description |
 |-------------|----------------------|
-|*Allowable maixmum instance count* | The maximum number of the application instance that can be started. If the current number of the application instances equals this value, the {{site.data.keyword.autoscaling}} service does not scale out the application any more. Default minimum instance count The minimum number of the application instance that can be started. If the number of the instances equals this value, the {{site.data.keyword.autoscaling}} service dose not scale in the application any more. |
+|*Minimum Instance Count* |  The minimum number of instances that can be started. If the number of the instances equals this value, the {{site.data.keyword.autoscaling}} service dose not scale in the application any more. |
+|*Maximum instance count* | The maximum number of the application instance that can be started. If the current number of the application instances equals this value, the {{site.data.keyword.autoscaling}} service does not scale out the application any more. |
 | *Metric Type* |   The supported metric types that can be monitored. For more information, see Table 2. |
 | *Scale Out* |   Specifies the threshold that triggers a scaling out action and how many instances are increased when the scaling out action is triggered. |
 | *Scale In* |  Specifies a threshold that triggers a scaling in action and how many instances are decreased when the scaling in action is triggered. |
@@ -354,25 +316,48 @@ The {{site.data.keyword.autoscaling}} CLI provides similar functionality as {{si
 | *Start Time*  | The start time of a recurring schedule. |
 | *End Time*    | The end time of a recurring schedule. |
 | *Repeat On* | The day in a week when a recurring schedule applies. |
-| *Minimum Instance Count* |  The minimum number of instances that can be started for the application during the specified time period in the schedule. |
 | *Start Date&Time* | The start date and time of the schedule set up on a specific date. |
 | *End Date&Time* | The end date and time of the schedule set up on a specific date.  |
+
 {: caption="Table 1. Policy fields in the scaling policy" caption-side="top"}
 
-| Metric name | Description | Supported application type |
+## Supported metric type for the {{site.data.keyword.autoscaling}} service
+{: #metric_types}
+<br/>{{site.data.keyword.autoscaling}} service collects the runtime metrics for a Cloud Foundry application from the following data sources: 
+* "Memory" metric collected from Cloud Foundry:  <br>
+Cloud Foudry computes the memory usage from the "memory.stat" of cgroup with the formula below: <br>
+`memory_usge = total_rss + total_cache - total_inactive_file`
+   * total_cache:  memory used for page chache
+   * total_rss:    memory resident in main memory (RAM)
+   * total_inactive_file:  file-backed memory on inactive LRU list
+
+* Metrics collected by Auto-Scaling data collector: <br/>
+  * "Memory" metric:   
+  {{site.data.keyword.autoscaling}} data collector grabs container memory usage with the [rss](https://en.wikipedia.org/wiki/Resident_set_size) value in file */proc/{pid}/stat*: <br/> 
+  `memory_usage = RSS (total memory actually held in RAM for a process)`
+  * "Heap" metric:
+    * Lierty Java Runtime: Heap size that is used for current JVM.
+    * Node.js : Heap size that is used for current V8 runtime.
+  * "Response time" metric :  
+  Aggregated the total elapsed time of all processed requests occurred in a specific window (aka *report interval*) , and take the average value as `response time`. 
+  * "Throughput" metric:  
+  The number of the processed requests per second.
+
+### Metric types mapping for different runtimes:
+| Metric name | Data Source | Supported Runtime type |
 |-------------|----------------------| ------------------- |
-| *Heap* |     The usage percentage of the heap memory.        | Liberty for Java (with IBM JDK), Node.js SDK |
-| *Memory*   | The usage percentage of the memory.     |  All |
-| *Throughput* | The number of the processed requests per second.| Liberty for Java (with IBM JDK), Node.js SDK, Swift (with Kitura) |
-| *Response time* |    The response time of the processed requests.    | Liberty for Java (with IBM JDK), Swift (with Kitura)|
+| *Heap* |   Auto-Scaling data collector    | Liberty for Java , Node.js SDK |
+| *Throughput* |  Auto-Scaling data collector| Liberty for Java , Node.js SDK, Swift (with Kitura) |
+| *Response time* |   Auto-Scaling data collector | Liberty for Java , Swift (with Kitura)|
+| *Memory*   | Auto-Scaling data collector   |  Liberty for Java , Node.js SDK, Swift (with Kitura)  |
+| *Memory*   | Cloud Foundry   |  Runtimes other than Liberty for Java , Node.js SDK and Swift (with Kitura) |
 
+{: caption="Table 2. Supported metric types" caption-side="top"}
 
-{: caption="Table 2. Supported metric names" caption-side="top"}
-
-*Limitation:* To collect {{site.data.keyword.autoscaling}} metrics data, your application must be deployed as Liberty webapp so that measuring HTTP/HTTPS requests will be processed via Liberty web container.
+*Note::* 
+* To collect Response time/Throughput metrics data on Liberty for Java, your application must be deployed as Liberty web application so that measuring HTTP/HTTPS requests will be processed via Liberty web container.<br>
 For example, if you run a Spring Boot application as a "Main-Classs" app, the Liberty buildpack only provides java environment for you, and the app actually runs in the Spring embedded Tomcat container, thus no metrics data will be collected by the Auto-Scaling service. You must run your app as a Liberty WAR in order to work with Auto-Scaling service.<br/> 
-*Limitation:* For Liberty application, only IBM JDK is supported for {{site.data.keyword.autoscaling}}.<br/> 
-*Limitation:* For Swift application, only Kitura framework is supported for {{site.data.keyword.autoscaling}}.<br/> 
+* For Swift application, only Kitura framework is supported for {{site.data.keyword.autoscaling}}.<br/> 
 
 ## Error messages
 {: #err_msg}
@@ -462,4 +447,3 @@ Contact the Cloud Administrator for more information.
 * [{{site.data.keyword.autoscaling}} CLI](../../cli/plugins/auto-scaling/index.html){:new_window}
 * [{{site.data.keyword.autoscaling}} agent for Node.js](https://www.npmjs.com/package/bluemix-autoscaling-agent){:new_window}
 * [Swift Application Metrics](https://github.com/RuntimeTools/SwiftMetrics){:new_window}
-
