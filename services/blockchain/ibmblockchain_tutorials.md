@@ -105,7 +105,7 @@ To install the Hyperledger Fabric v0.5 codebase, use the following git clone com
 ```
 # Create the parent directories on your GOPATH
 mkdir -p $GOPATH/src/github.com/hyperledger
-cd $GOAPTH/src/github.com/hyperledger
+cd $GOPATH/src/github.com/hyperledger
 
 # Clone the appropriate release codebase into $GOPATH/src/github.com/hyperledger/fabric
 # Note that the v0.5 release is a branch of the repository.  It is defined below after the -b argument
