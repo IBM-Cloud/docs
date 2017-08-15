@@ -1,9 +1,0 @@
-{:navgroup: .navgroup}
-{:topicgroup: .topicgroup}
-
-{: .toc}
-Support client
-
-    {: .navgroup id="help"}
-    index.md
-    {: .navgroup-end}

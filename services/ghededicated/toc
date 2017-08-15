@@ -1,9 +1,0 @@
-{:navgroup: .navgroup}
-{:topicgroup: .topicgroup}
-
-{: .toc subcollection="ghededicated" audience="service" href="/docs/services/ghededicated/index.html"}
-Bluemix Dedicated for GitHub Enterprise
-
-  {: .navgroup id="howto"}
-    index.md
-  {: .navgroup-end}

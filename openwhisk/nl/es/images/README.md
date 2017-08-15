@@ -1,1 +1,0 @@
-Esta carpeta contiene imágenes aprobadas del logotipo de OpenWhisk que incluyen el símbolo de marca registrada (TM), que indica que el proyecto OpenWhisk se ha ajustado para registrar el logotipo de OpenWhisk. 

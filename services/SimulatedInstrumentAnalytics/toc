@@ -1,9 +1,0 @@
-{:navgroup: .navgroup}
-{:topicgroup: .topicgroup}
-
-{: .toc subcollection="SimulatedInstrumentAnalytics" audience="service" href="/docs/services/SimulatedInstrumentAnalytics/index.html"}
-Simulated Instrument Analytics
-
-    {: .navgroup id="learn"}
-    index.md
-    {: .navgroup-end}

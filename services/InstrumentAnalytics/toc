@@ -1,9 +1,0 @@
-{:navgroup: .navgroup}
-{:topicgroup: .topicgroup}
-
-{: .toc subcollection="InstrumentAnalytics" audience="service" href="/docs/services/InstrumentAnalytics/index.html"}
-Instrument Analytics
-
-    {: .navgroup id="learn"}
-    index.md
-    {: .navgroup-end}
